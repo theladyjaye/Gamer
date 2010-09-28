@@ -1,5 +1,5 @@
 module.exports = { 
-	host:{name:"gamer", 
+	host:{name:"hazgame.com", 
 	      port:7331
 	     },
 	database:{catalog:"gamer",
