@@ -1,6 +1,6 @@
 module.exports = { 
 	host:{name:"gamer", 
-	      port:80
+	      port:7331
 	     },
 	database:{catalog:"gamer",
 	          host: "localhost",
