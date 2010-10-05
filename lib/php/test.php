@@ -2,21 +2,19 @@
 session_start();
 require 'GMRClient.php';
 $client = new GMRClient('12345');
-$games  = null;
-
-print_r($client->matchesForUser('bpuglisi'));
-
-//$games = $client->gamesForPlatform(GMRPlatform::kXbox360, $_GET['page']);
-//$games = $client->gamesForPlatform(GMRPlatform::kXbox360);
-
-/*
-foreach($games->games as $game)
-{
-	echo <<<HTML
-	<div>
-		<div>$game->label</div>
-	</div>
-HTML;
-}
-*/
 ?>
+
+<h2>Schedules Matched for bpuglisi</h2>
+<pre>
+<?php print_r($client->matchesForUser('bpuglisi')); ?>
+</pre>
+
+<h2>Games for XBox 360 <span style="color:#00cc00">Page 1</span></h2>
+<pre>
+<?php print_r($client->gamesForPlatform(GMRPlatform::kXbox360));?>
+</pre>
+
+<h2>Games for XBox 360 <span style="color:#00cc00">Page 2</span></h2>
+<pre>
+<?php print_r($client->gamesForPlatform(GMRPlatform::kXbox360, "game/halo-reach"));?>
+</pre>
