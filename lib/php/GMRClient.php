@@ -25,6 +25,9 @@ final class GMRClient
 		
 		$session = &$this->session();
 		
+		// so this is lame but required. we need to know what the first game is for a platform
+		// the plus side is we are caching it in the session so it should not be needed on subsequent calls
+		
 		if($session[$kGamesForPlaform][$platform] == null)
 		{
 			$first = $this->request->execute(array('path'          => '/games/'.$platform,
