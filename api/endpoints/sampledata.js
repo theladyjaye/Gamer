@@ -5,7 +5,9 @@ var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
     sys         = require('sys'),
 	spawn       = require('child_process').spawn,
 	Game        = require('../data/game'),
-	Match       = require('../data/match');
+	Match       = require('../data/match'),
+	Token       = require('../data/token')
+	;
 	
 exports.endpoints = function(app)
 {
@@ -41,6 +43,10 @@ function initialize(req, res, next)
 	var twoHoursFromNow          = now.getTime() + (2 * hour);
 	var sixHoursFromNow          = now.getTime() + (6 * hour);
 	
+	
+	var t1                = new Token();
+	    t1.user           = "system";
+	    t1.setId('12345');
 	
 	var g1                = new Game();
 	    g1.label          = "Halo:Reach";
@@ -149,6 +155,8 @@ function initialize(req, res, next)
 	    m7.maxPlayers     = 4;
 	    m7.players.push(m7.created_by);
 
+	
+	db.saveDoc(t1);
 	
 	db.saveDoc(g1);
 	db.saveDoc(g2);
