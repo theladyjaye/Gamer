@@ -10,7 +10,7 @@ require dirname(__FILE__) . '/GMRPlatform.php';
 final class GMRClient
 {
 	private $request;
-	const kPageLimit  = 4; // limit is 2, but we add 1 so we know the startkey of the next page. Hint: it's the 3rd result
+	const kPageLimit  = 3; // limit is 2, but we add 1 so we know the startkey of the next page. Hint: it's the 3rd result
 	const kSessionKey = "GamerAPI";
 	
 	public function __construct($key)
