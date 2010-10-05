@@ -2,20 +2,21 @@ require.paths.unshift("/usr/local/lib/node");
 
 var connect     = require('connect'),
     environment = require('./system/environment'),
-    api_auth    = require('./libs/api-auth.js'),
+    auth        = require('./libs/api-auth'),
     games       = require('./endpoints/games'),
+    matches     = require('./endpoints/matches')
     main        = require('./endpoints/default'),
-    sampledata  = require('./endpoints/sampledata')
+    sampledata  = require('./endpoints/sampledata');
 
 
 var server  = connect.createServer(
-	api_auth,
+	auth.access,
 	connect.logger({ buffer: true })
 );
 
 var vhost = connect.vhost(environment.host.name, server);
-
 server.use("/games/", connect.router(games.endpoints));
+server.use("/matches/", connect.router(matches.endpoints));
 server.use("/sampledata/", connect.router(sampledata.endpoints));
 
 

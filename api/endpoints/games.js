@@ -1,12 +1,10 @@
 var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
     environment = require('../system/environment'),
     client      = couchdb.createClient(environment.database.port, environment.database.host),
-    db          = client.db(environment.database.catalog),
-    querystring = require('querystring');
+    db          = client.db(environment.database.catalog);
 
 exports.endpoints = function(app)
 {
-
 	app.get('/:platform', getGamesForPlatform);
 }
 

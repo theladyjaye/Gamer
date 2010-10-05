@@ -18,6 +18,14 @@ final class GMRClient
 		$this->request = new GMRRequest($key);
 	}
 	
+	public function matchesForUser($user_id)
+	{
+		$response = $this->request->execute(array('path'          => '/matches/scheduled/'.$user_id,
+		                                          'method'        => 'GET'));
+		
+		return json_decode($response);
+	}
+	
 	public function gamesForPlatform($platform, $startwith=null)
 	{
 		static $kPreviousPageGameKey = 'kPreviousPageGameKey';

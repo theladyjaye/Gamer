@@ -13,8 +13,8 @@ final class GMRRequest
 	
 	public function execute($options)
 	{
-		$headers = array('Authorization' => 'OAuth '.$this->key,
-		                 'Accepts'       => 'application/json');
+		$headers = array('Authorization: OAuth '.$this->key,
+		                 'Accept: application/json');
 		$data    = null;
 		$request = curl_init();
 		
