@@ -1,16 +1,24 @@
 var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
     environment = require('../system/environment'),
     client      = couchdb.createClient(environment.database.port, environment.database.host),
-    db          = client.db(environment.database.catalog);
+    db          = client.db(environment.database.catalog),
+    querystring = require('querystring');
 
 exports.endpoints = function(app)
 {
-	app.get('/', getGames);
+
+	app.get('/:platform', getGamesForPlatform);
 }
 
-function getGames(req, res, next)
+function getGamesForPlatform(req, res, next)
 {
-	db.view("application", "games", null, function(error, data)
+	var query     = require('url').parse(req.url, true).query;
+	var platform  = req.params.platform;
+	var limit     = typeof query.limit     == 'undefined' ? 10   : query.limit;
+	var startwith = typeof query.startwith == 'undefined' ? null : query.startwith;
+	
+
+	db.view("application", "games-platform", {"startkey":[req.params.platform, startwith], "endkey":[req.params.platform, {}], "limit":limit}, function(error, data)
 	{
 		if(error == null)
 		{
@@ -26,6 +34,8 @@ function getGames(req, res, next)
 		{
 			//{ error: 'not_found', reason: 'missing' }
 			next({"ok":false, "message":error.error + " - " + error.reason});
+			
 		}
 	});
 }
+

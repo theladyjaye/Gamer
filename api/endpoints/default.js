@@ -5,9 +5,10 @@ exports.defaultResponse = function(req, res, next)
 
 exports.renderResponse = function(err, req, res, next)
 {
+
 	if(err)
 		data = err;
-	
+		
 	var out  = JSON.stringify(data);
 		res.writeHead(200, {
 			'Content-Type': 'text/html',
