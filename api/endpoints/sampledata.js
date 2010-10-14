@@ -172,6 +172,18 @@ function initialize(req, res, next)
 		m8.scheduled_time = new Date(fifteenMinutesFromNow);
 		m8.maxPlayers     = 6;
 		m8.players.push(m8.created_by);
+		
+
+	var m9                = new Match();
+	    m9.availability   = 'public';
+	    m9.created_by     = 'lucy';
+	    m9.label          = "Lorem ipsum dolor sit amet";
+	    m9.game.id        = g1._id;
+	    m9.game.label     = g1.label;
+	    m9.game.platform  = g1.platforms[0];
+	    m9.scheduled_time = new Date(thirtyMinutesFromNow);
+	    m9.maxPlayers     = 16;
+	    m9.players.push(m9.created_by);
 
 	db.saveDoc(t1);
 	
@@ -190,6 +202,7 @@ function initialize(req, res, next)
 	db.saveDoc(m6);
 	db.saveDoc(m7);
 	db.saveDoc(m8);
+	db.saveDoc(m9);
 	
 	next({"ok":true, "message":"done"});
 }
