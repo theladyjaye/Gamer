@@ -18,6 +18,13 @@ final class GMRClient
 		$this->request = new GMRRequest($key);
 	}
 	
+	/**
+	 * Gets matches for a given user
+	 *
+	 * @param string $user_id 
+	 * @return object
+	 * @author Adam Venturella
+	 */
 	public function matchesForUser($user_id)
 	{
 		$response = $this->request->execute(array('path'          => '/matches/scheduled/'.$user_id,
@@ -26,7 +33,15 @@ final class GMRClient
 		return json_decode($response);
 	}
 	
-	public function scheduledMatchesForPlatformAndTimeframe($platform, $timeframe='now') // now is within the next hour
+	/**
+	 * Get Scheduled Matches For a Platform Starting within a given timeframe
+	 *
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $timeframe valid timeframes are: "hour", "30min", "15min"
+	 * @return object
+	 * @author Adam Venturella
+	 */
+	public function scheduledMatchesForPlatformAndTimeframe($platform, $timeframe='hour')
 	{
 		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$timeframe,
 		                                          'method'        => 'GET'));
@@ -38,7 +53,37 @@ final class GMRClient
 		return $data;
 	}
 	
+	/**
+	 * Get the scheduled games, for a specific title, starting within a timeframe.  
+	 * Like scheduledMatchesForPlatformAndTimeframe, only filtered by the game.
+	 *
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $game game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+	 * @param string $timeframe valid timeframes are: "hour", "30min", "15min"
+	 * @return object
+	 * @author Adam Venturella
+	 */
 	
+	public function scheduledMatchesForPlatformAndGameAndTimeframe($platform, $game, $timeframe='hour')
+	{
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game.'/'.$timeframe,
+		                                          'method'        => 'GET'));
+		
+		
+		
+		
+		$data  = json_decode($response);
+		return $data;
+	}
+	
+	/**
+	 * List of games for a given platform. Page limit is defined by GMRClient::kPageLimit
+	 *
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $startwith  represent the key of the game to start the next result set from
+	 * @return object
+	 * @author Adam Venturella
+	 */
 	public function gamesForPlatform($platform, $startwith=null)
 	{
 		static $kPreviousPageGameKey = 'kPreviousPageGameKey';

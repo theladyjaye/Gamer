@@ -3,6 +3,7 @@ session_start();
 require 'GMRClient.php';
 $client = new GMRClient('12345');
 ?>
+
 <h2>Schedules Matched for bpuglisi</h2>
 <pre>
 	<?php print_r($client->matchesForUser('bpuglisi')); ?>
@@ -24,15 +25,22 @@ $client = new GMRClient('12345');
 
 <hr>
 
-<h2>Scheduled Matches for XBox 360 Starting in the <span style="color:#00cc00">next hour</span></h2>
+<h2>Scheduled Matches for XBox 360 Starting in the <span style="color:#00cc00">next 15 minutes</span></h2>
 <pre>
-	<?php print_r($client->scheduledMatchesForPlatformAndTimeframe(GMRPlatform::kXbox360, "now"));?>
+	<?php print_r($client->scheduledMatchesForPlatformAndTimeframe(GMRPlatform::kXbox360, "15min"));?>
 </pre>
 
 <hr>
 
 <h2>Scheduled Matches for PS3 Starting in the <span style="color:#00cc00">next hour</span></h2>
 <pre>
-	<?php print_r($client->scheduledMatchesForPlatformAndTimeframe(GMRPlatform::kPlaystation3, "now"));?>
+	<?php print_r($client->scheduledMatchesForPlatformAndTimeframe(GMRPlatform::kPlaystation3, "hour"));?>
+</pre>
+
+<hr>
+
+<h2>Scheduled Matches for Halo Reach on the XBox 360 Starting in the <span style="color:#00cc00">next 30 minutes</span></h2>
+<pre>
+	<?php print_r($client->scheduledMatchesForPlatformAndGameAndTimeframe(GMRPlatform::kXbox360, "halo-reach", "30min"));?>
 </pre>
 

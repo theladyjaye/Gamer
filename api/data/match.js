@@ -1,13 +1,13 @@
 module.exports = function()
 {
-	this.created_on     = new Date();
-	this.created_by     = null;
+	
+	this.game           = {"id":null, "label":null, "platform":null}
 	this.label          = null;
-	this.title          = null;
 	this.availability   = "public";
 	this.scheduled_time = null;
-	this.platform       = null;
 	this.maxPlayers     = 12;
 	this.players        = [];
+	this.created_on     = new Date();
+	this.created_by     = null;
 	this.type           = "match";
 }

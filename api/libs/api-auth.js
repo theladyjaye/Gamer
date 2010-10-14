@@ -24,7 +24,10 @@ exports.access = function (req, res, next)
 	}
 	else
 	{
-		next();
+		// the whole API requires authorization.
+		// uncomment this line if you want to debug without a token present.
+		next({"ok":false, "message":"unauthorized_client"});
+		//next();
 	}
 }
 
