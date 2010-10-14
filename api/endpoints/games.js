@@ -1,7 +1,8 @@
 var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
     environment = require('../system/environment'),
     client      = couchdb.createClient(environment.database.port, environment.database.host),
-    db          = client.db(environment.database.catalog);
+    db          = client.db(environment.database.catalog),
+    Errors      = require('../data/error');
 
 exports.endpoints = function(app)
 {
@@ -31,7 +32,7 @@ function getGamesForPlatform(req, res, next)
 		else
 		{
 			//{ error: 'not_found', reason: 'missing' }
-			next({"ok":false, "message":error.error + " - " + error.reason});
+			next({"ok":false, "message":Errors.unknown_error.message});
 			
 		}
 	});

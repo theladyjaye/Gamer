@@ -5,4 +5,5 @@ module.exports = function()
 	this.type           = "game";
 	this.platforms      = [];
 	this.modes          = [];
+	this.maxPlayers     = 24;
 }
