@@ -27,6 +27,7 @@ function createMatch(req, res, next)
 		
 		/*
 			TODO ensure that the scheduled time does not occurr in the past?
+			and that it is a valid Date...
 		*/
 		if(typeof fields.scheduled_time == "undefined" )
 		{
