@@ -26,6 +26,19 @@ final class GMRClient
 		return json_decode($response);
 	}
 	
+	public function scheduledMatchesForPlatformAndTimeframe($platform, $timeframe='now') // now is within the next hour
+	{
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$timeframe,
+		                                          'method'        => 'GET'));
+		
+		
+		
+		
+		$data     = json_decode($response);
+		return $data;
+	}
+	
+	
 	public function gamesForPlatform($platform, $startwith=null)
 	{
 		static $kPreviousPageGameKey = 'kPreviousPageGameKey';
