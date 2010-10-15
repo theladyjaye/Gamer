@@ -45,7 +45,7 @@ final class GMRClient
 		                                                                   'label'          => $label),
 		                                          'method'        => 'POST'));
 		
-		$data     = json_decode($response);
+		$data = json_decode($response);
 		
 		if($data->ok)
 			return $data->match;
@@ -89,7 +89,7 @@ final class GMRClient
 		
 		
 		
-		$data     = json_decode($response);
+		$data = json_decode($response);
 		
 		if($data->ok)
 			return $data;
@@ -116,7 +116,7 @@ final class GMRClient
 		
 		
 		
-		$data  = json_decode($response);
+		$data = json_decode($response);
 		
 		if($data->ok)
 			return $data;

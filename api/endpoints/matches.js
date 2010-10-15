@@ -14,6 +14,7 @@ exports.endpoints = function(app)
 	app.get('/:platform/:timeframe', getScheduledMatchesForPlatformAndTimeframe);
 	
 	//app.post('/join/:match', joinMatch);
+	//app.post('/leave/:match', joinMatch);
 	//app.del('/cancel/:match', cancelMatch);
 	app.post('/create', createMatch); 
 	
