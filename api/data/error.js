@@ -5,6 +5,7 @@ module.exports = {
 	"unknown_game"       :{"code":404, "message":"unknown_game"},
 	"unknown_platform"   :{"code":400, "message":"unknown_platform"},
 	"unknown_error"      :{"code":400, "message":"unknown_error"},
+	"unknown_user"       :{"code":400, "message":"unknown_user"},
 	"schedule_time"      :{"code":400, "message":"invalid_schedule_time"},
 	"create_match"       :{"code":400, "message":"unable_to_create_match"}
 }

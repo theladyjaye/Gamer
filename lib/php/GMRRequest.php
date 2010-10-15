@@ -15,7 +15,7 @@ final class GMRRequest
 	{
 		$headers = array('Authorization: OAuth '.$this->key,
 		                 'Accept: application/json');
-		$data    = null;
+		
 		$request = curl_init();
 		
 		$url = self::kDomain.$options['path'];
@@ -32,7 +32,12 @@ final class GMRRequest
 		{
 			case 'POST':
 				curl_setopt($request, CURLOPT_POST, true);
-				curl_setopt($request, CURLOPT_POSTFIELDS, $data);
+				
+				if(isset($options['data']))
+				{
+					$data = is_array($options['data']) ? http_build_query($options['data']) : $options['data'];
+					curl_setopt($request, CURLOPT_POSTFIELDS, $data);
+				}
 				break;
 		}
 		

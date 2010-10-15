@@ -29,9 +29,22 @@ function createMatch(req, res, next)
 			TODO ensure that the scheduled time does not occurr in the past?
 			and that it is a valid Date...
 		*/
+		if(req.access_token.user == "system" && typeof fields.username == "undefined")
+		{
+			next({"ok":false, "message":Errors.unknown_user.message});
+			return;
+		}
+		
+		if(fields.username.length < 4)
+		{
+			next({"ok":false, "message":Errors.unknown_user.message});
+			return;
+		}
+		
 		if(typeof fields.scheduled_time == "undefined" )
 		{
 			next({"ok":false, "message":Errors.schedule_time.message});
+			return;
 		}
 		else
 		{
@@ -43,7 +56,7 @@ function createMatch(req, res, next)
 						next({"ok":false, "message":Errors.unknown_platform.message});
 
 					var match                = new Match();
-						match.created_by     = req.access_token.user;
+						match.created_by     = req.access_token.user == "system" ? fields.username : req.access_token.user;
 						match.label          = fields.label;
 						match.game.id        = game._id;
 					    match.game.label     = game.label;
@@ -52,6 +65,7 @@ function createMatch(req, res, next)
 						match.maxPlayers     = fields.maxPlayers <= game.maxPlayers ? fields.maxPlayers : game.maxPlayers;
 						match.scheduled_time = new Date(fields.scheduled_time); 
 						match.players        = [match.created_by];
+
 
 						/*
 							TODO if fields.players is an array with players in it, we need

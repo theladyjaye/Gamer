@@ -19,6 +19,41 @@ final class GMRClient
 	}
 	
 	/**
+	 * Create a new match
+	 *
+	 * @param string $owner username of the person creating this game.  This will be the match owner
+	 * @param DateTime $scheduled_time when is this match scheduled
+	 * @param string $game_id game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $availability public | private
+	 * @param string $maxPlayers max players for this game
+	 * @param string $label any extra description information
+	 * @return string id of the match created
+	 * @author Adam Venturella
+	 */
+	public function createMatch($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $label=null)
+	{
+		$scheduled_time->setTimezone(new DateTimeZone('UTC'));
+		
+		$response = $this->request->execute(array('path'          => '/matches/create',
+		                                          'data'          => array('username'       => $owner,
+		                                                                   'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time)
+		                                                                   'game'           => $game_id,
+		                                                                   'platform'       => $platform,
+		                                                                   'availability'   => $availability,
+		                                                                   'maxPlayers'     => $maxPlayers,
+		                                                                   'label'          => $label),
+		                                          'method'        => 'POST'));
+		
+		$data     = json_decode($response);
+		
+		if($data->ok)
+			return $data->match;
+
+		return false;
+	}
+	
+	/**
 	 * Gets matches for a given user
 	 *
 	 * @param string $user_id 
@@ -30,7 +65,12 @@ final class GMRClient
 		$response = $this->request->execute(array('path'          => '/matches/scheduled/'.$user_id,
 		                                          'method'        => 'GET'));
 		
-		return json_decode($response);
+		$data = json_decode($response);
+		
+		if($data->ok)
+			return $data;
+			
+		return false;
 	}
 	
 	/**
@@ -50,7 +90,11 @@ final class GMRClient
 		
 		
 		$data     = json_decode($response);
-		return $data;
+		
+		if($data->ok)
+			return $data;
+		
+		return false;
 	}
 	
 	/**
@@ -73,7 +117,11 @@ final class GMRClient
 		
 		
 		$data  = json_decode($response);
-		return $data;
+		
+		if($data->ok)
+			return $data;
+			
+		return false;
 	}
 	
 	/**

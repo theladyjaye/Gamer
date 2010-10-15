@@ -4,6 +4,17 @@ require 'GMRClient.php';
 $client = new GMRClient('12345');
 ?>
 
+<h2>Create New Match, Owned By: <span style="color:#00cc00">aventurella</span></h2>
+<pre>
+<?php 
+
+$date = new DateTime('now');
+echo $client->createMatch('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, 'extra information - optional');
+?>
+</pre>
+
+<hr>
+
 <h2>Schedules Matched for bpuglisi</h2>
 <pre>
 	<?php print_r($client->matchesForUser('bpuglisi')); ?>
