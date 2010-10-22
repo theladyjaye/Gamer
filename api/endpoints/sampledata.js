@@ -42,7 +42,6 @@ function initialize(req, res, next)
 	var twoHoursFromNow          = now.getTime() + (2 * hour);
 	var sixHoursFromNow          = now.getTime() + (6 * hour);
 	
-	
 	var t1                = new Token();
 	    t1.user           = "system";
 	    t1.setId('12345');

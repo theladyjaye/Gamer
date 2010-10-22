@@ -9,7 +9,8 @@ $client = new GMRClient('12345');
 <?php 
 
 $date = new DateTime('now');
-echo $client->createMatch('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, 'extra information - optional');
+$players = array('bpuglisi', 'psyduck', 'robofish'); // robofish is an invalid username, just testing to make sure it is not included.
+echo $client->createMatch('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, $players, 'extra information - optional');
 ?>
 </pre>
 

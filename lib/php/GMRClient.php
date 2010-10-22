@@ -31,18 +31,17 @@ final class GMRClient
 	 * @return string id of the match created
 	 * @author Adam Venturella
 	 */
-	public function createMatch($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $label=null)
+	public function createMatch($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
 	{
 		$scheduled_time->setTimezone(new DateTimeZone('UTC'));
 		
-		$response = $this->request->execute(array('path'          => '/matches/create',
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id,
 		                                          'data'          => array('username'       => $owner,
-		                                                                   'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time)
-		                                                                   'game'           => $game_id,
-		                                                                   'platform'       => $platform,
+		                                                                   'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time) compatible with JavaScript
 		                                                                   'availability'   => $availability,
 		                                                                   'maxPlayers'     => $maxPlayers,
-		                                                                   'label'          => $label),
+		                                                                   'label'          => $label,
+		                                                                   'players'        => $invited_players),
 		                                          'method'        => 'POST'));
 		
 		$data = json_decode($response);

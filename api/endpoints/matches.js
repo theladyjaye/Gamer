@@ -1,10 +1,13 @@
-var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
-    environment = require('../system/environment'),
-    client      = couchdb.createClient(environment.database.port, environment.database.host),
-    db          = client.db(environment.database.catalog),
-    auth        = require('../libs/api-auth'),
-    Errors      = require('../data/error'),
-    Match       = require('../data/match');
+var couchdb        = require('../libs/node-couchdb/lib/couchdb'),
+    environment    = require('../system/environment'),
+    client         = couchdb.createClient(environment.database.port, environment.database.host),
+    db             = client.db(environment.database.catalog),
+    auth           = require('../libs/api-auth'),
+    Errors         = require('../data/error'),
+    Match          = require('../data/match'),
+    Platform       = require('../data/Platform'),
+	PlayersInArray = require('../data/queries/PlayersInArray');
+
 
 
 exports.endpoints = function(app)
@@ -16,7 +19,7 @@ exports.endpoints = function(app)
 	//app.post('/join/:match', joinMatch);
 	//app.post('/leave/:match', joinMatch);
 	//app.del('/cancel/:match', cancelMatch);
-	app.post('/create', createMatch); 
+	app.post('/:platform/:game', createMatch); 
 	
 }
 
@@ -24,12 +27,21 @@ function createMatch(req, res, next)
 {
 	if(typeof req.form != undefined)
 	{
-		var fields = req.form.fields;
+		var fields    = req.form.fields;
+		var platform  = req.params.platform;
+		var game      = req.params.game;
 		
 		/*
 			TODO ensure that the scheduled time does not occurr in the past?
 			and that it is a valid Date...
 		*/
+		
+		if(typeof Platform[platform] == "undefined")
+		{
+			next({"ok":false, "message":Errors.unknown_platform.message});
+			return;
+		}
+		
 		if(req.access_token.user == "system" && typeof fields.username == "undefined")
 		{
 			next({"ok":false, "message":Errors.unknown_user.message});
@@ -49,58 +61,76 @@ function createMatch(req, res, next)
 		}
 		else
 		{
-			db.getDoc(encodeURIComponent('game/' + fields.game), function(error, game)
+			db.getDoc(encodeURIComponent('game/' + game), function(error, game)
 			{
 				if(error == null)
 				{
-					if(game.platforms.filter( function(element, index, array){ return element == fields.platform; })[0] == null)
+					// is the requested platform available for this game?
+					// eg: is the request for Halo Reach on Playstation 3? this would be invalid
+					if(game.platforms.filter( function(element, index, array){ return element == platform; })[0] == null)
+					{
 						next({"ok":false, "message":Errors.unknown_platform.message});
+						return;
+					}
 
 					var match                = new Match();
 						match.created_by     = req.access_token.user == "system" ? fields.username : req.access_token.user;
 						match.label          = fields.label;
 						match.game.id        = game._id;
 					    match.game.label     = game.label;
-						match.game.platform  = fields.platform;
+						match.game.platform  = platform;
 						match.availability   = fields.availability == "private" ? "private" : "public";
 						match.maxPlayers     = fields.maxPlayers <= game.maxPlayers ? fields.maxPlayers : game.maxPlayers;
 						match.scheduled_time = new Date(fields.scheduled_time); 
 						match.players        = [match.created_by];
-
-
-						/*
-							TODO if fields.players is an array with players in it, we need
-							to add those players and send them emails or notifications that
-							they have been invited into a game.  we should also validate that 
-							the players in the array are all real players prior to adding them
-							into the match.
-
-							!!! Maybe we make "invite/<token>" tokens and save those per player and send them 
-							their notification to confirm if they would like to join. I like this
-							idea better. !!!
-
-							Right now we are just going to save the match, nothing doing about additional 
-							players.
-
-							We might also consider doing some checking to see if this match conflicts 
-							with another game the creator is already in.
-						*/
-
-						db.saveDoc(match, function(error, data)
+						
+					/*
+						We might also consider doing some checking to see if this match conflicts 
+						with another game the creator is already in.
+					*/
+					
+					var players = null;
+					
+					if(typeof fields.players != "undefined" && typeof fields.players == "object")
+					{
+						players = [];
+						
+						for (key in fields.players)
+							players.push(fields.players[key]);
+					}
+					else if(Array.isArray(fields.players))
+					{
+						players = fields.players;
+					}
+						
+					if(players)
+					{
+						var playersQuery  = new PlayersInArray(players);
+						playersQuery.execute(function(err, rows, fields)
 						{
-							if(error == null)
+							var invitation = {"game":game.label,
+								              "host":match.created_by,
+								              "platform":Platform[platform].label,
+								              "date":match.scheduled_time,
+								              "players":[]
+								              }
+							
+							rows.forEach(function(row)
 							{
-								// Send the invites here?
-								// the creating user does not need to wait for the invites
-								// to be generated and sent.
-
-								next({"ok":true, "match":data.id});
-							}
-							else
-							{
-								next({"ok":false, "message":Errors.create_match.message})
-							}
+								if(row.username != match.created_by)
+								{
+									invitation.players.push(row);
+									match.players.push(row.username)
+								}
+							});
+							
+							finalizeMatch(match, next, invitation);
 						});
+					}
+					else
+					{
+						finalizeMatch(match, next);
+					}
 				}
 				else
 				{
@@ -113,6 +143,37 @@ function createMatch(req, res, next)
 	{
 		next({"ok":false, "message":Errors.unknown_error.message});
 	}
+}
+
+function finalizeMatch(match, next, invitation)
+{
+	db.saveDoc(match, function(error, data)
+	{
+		if(error == null)
+		{
+			next({"ok":true, "match":data.id});
+			
+			if(invitation)
+			{
+				var Invite = require('../data/Invite');
+				invitation.players.forEach(function(player)
+				{
+					var invite           = new Invite();
+					invite.game          = invitation.game;
+					invite.date          = invitation.date;
+					invite.username_from = invitation.host;
+					invite.username_to   = player.username;
+					invite.email_to      = player.email;
+					invite.platform      = invitation.platform;
+					invite.send();
+				});
+			}
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.create_match.message})
+		}
+	});
 }
 
 function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)

@@ -1,4 +1,4 @@
-// http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+// http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html - should we go this route?
 module.exports = {
 	"unauthorized_client":{"code":401, "message":"unauthorized_client"},
 	"not_implemented"    :{"code":404, "message":"not_implemented"},

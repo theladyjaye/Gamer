@@ -11,7 +11,7 @@ exports.renderResponse = function(err, req, res, next)
 		
 	var out  = JSON.stringify(data);
 		res.writeHead(200, {
-			'Content-Type': 'text/html',
+			'Content-Type': 'text/json',
 			'Content-Length': out.length
 		});
 		res.end(out, 'utf8');
