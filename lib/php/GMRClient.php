@@ -105,9 +105,6 @@ final class GMRClient
 		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$timeframe,
 		                                          'method'        => 'GET'));
 		
-		
-		
-		
 		$data = json_decode($response);
 		
 		if($data->ok)
@@ -131,9 +128,6 @@ final class GMRClient
 	{
 		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game.'/'.$timeframe,
 		                                          'method'        => 'GET'));
-		
-		
-		
 		
 		$data = json_decode($response);
 		
