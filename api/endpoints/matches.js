@@ -16,16 +16,76 @@ exports.endpoints = function(app)
 	app.get('/:platform/:game/:timeframe', getScheduledMatchesForGameAndPlatformAndTimeframe);
 	app.get('/:platform/:timeframe', getScheduledMatchesForPlatformAndTimeframe);
 	
-	//app.post('/join/:match', joinMatch);
 	//app.post('/leave/:match', joinMatch);
 	//app.del('/cancel/:match', cancelMatch);
 	app.post('/:platform/:game', createMatch); 
+	app.post('/:platform/:game/:match_id', joinMatch); 
+	
+}
+
+function joinMatch(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game;
+	var match_id  = req.params.match_id;
+	var username  = null;
+	
+	if(req.access_token.user == "system" && typeof req.form != "undefined" )
+	{
+		if(typeof req.form.fields.username != "undefined")
+			username = req.form.fields.username;
+		else
+			next({"ok":false, "message":Errors.unknown_user.message});
+	}
+	else
+	{
+		username = req.access_token.user
+	}
+	
+	db.getDoc(match_id, function(error, match)
+	{
+		if(error == null)
+		{
+			if(match.players.indexOf(username) == -1)
+			{
+				match.players.push(username);
+				
+				db.saveDoc(match, function(error, data)
+				{
+					if(error == null)
+					{
+						next({"ok":true});
+						
+						/*
+							TODO Notify the matches created_by that someone
+							has joined.
+						*/
+					}
+					else
+					{
+						next({"ok":false, "message":Errors.update_match.message})
+					}
+				});
+				
+			}
+			else
+			{
+				next({"ok":true});
+			}
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unknown_match.message});
+		}
+	});
+	
+	
 	
 }
 
 function createMatch(req, res, next)
 {
-	if(typeof req.form != undefined)
+	if(typeof req.form != "undefined")
 	{
 		var fields    = req.form.fields;
 		var platform  = req.params.platform;
