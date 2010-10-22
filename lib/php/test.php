@@ -9,12 +9,21 @@ $client = new GMRClient('12345');
 <?php 
 
 $date = new DateTime('now');
-$players = array('bpuglisi', 'psyduck', 'robofish'); // robofish is an invalid username, just testing to make sure it is not included.
-echo $client->createMatch('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, $players, 'extra information - optional');
+$players = array('psyduck', 'robofish'); // robofish is an invalid username, just testing to make sure it is not included.
+$created_match_id =  $client->matchCreate('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, $players, 'extra information - optional');
+echo $created_match_id;
 ?>
 </pre>
 
 <hr>
+
+<h2><span style="color:#00cc00">bpuglisi</span> Join Match <?php echo $created_match_id ?></h2>
+<pre>
+<?php
+	$result =  $client->matchJoin('bpuglisi', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	echo $result ? 'Success' : 'Failed';
+?>
+</pre>
 
 <h2>Schedules Matched for bpuglisi</h2>
 <pre>

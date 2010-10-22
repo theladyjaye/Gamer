@@ -10,7 +10,7 @@
 	their notification to confirm if they would like to LEAVE. I like this
 	idea better. !!!
 */
-var Invite = function()
+var Notification = function()
 {
 	this.email_to      = null;
 	this.username_to   = null;
@@ -18,18 +18,18 @@ var Invite = function()
 	this.platform      = null;
 	this.game          = null;
 	this.date          = null;
-	this.type          = "invite";
+	this.type          = "notification";
 }
 
-Invite.prototype.send = function()
+Notification.prototype.send = function()
 {
-	console.log("Inviting: "+this.username_to);
+	console.log("Notifying: "+this.username_to);
 	console.log("@email: "+this.email_to);
-	console.log("from: "+this.username_from);
-	console.log("for game: "+this.game);
+	console.log("that: "+this.username_from);
+	console.log("has joined game: "+this.game);
 	console.log("on platform: "+this.platform);
 	console.log("@time: "+this.date);
 	console.log("\n\n");
 }
 
-module.exports = Invite;
+module.exports = Notification;

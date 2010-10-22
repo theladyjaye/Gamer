@@ -19,6 +19,26 @@ final class GMRClient
 	}
 	
 	/**
+	 * Join and existing match
+	 *
+	 * @param string $username name of the user joining the game
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+	 * @param string $match_id the hash representing the match to join
+	 * @return bool
+	 * @author Adam Venturella
+	 */
+	public function matchJoin($username, $platform, $game_id, $match_id)
+	{
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id,
+		                                          'data'          => array('username' => $username),
+		                                          'method'        => 'POST'));
+		
+		$data = json_decode($response);
+		return $data->ok;
+	}
+	
+	/**
 	 * Create a new match
 	 *
 	 * @param string $owner username of the person creating this game.  This will be the match owner
@@ -31,7 +51,7 @@ final class GMRClient
 	 * @return string id of the match created
 	 * @author Adam Venturella
 	 */
-	public function createMatch($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
+	public function matchCreate($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
 	{
 		$scheduled_time->setTimezone(new DateTimeZone('UTC'));
 		

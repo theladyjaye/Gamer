@@ -56,17 +56,28 @@ function joinMatch(req, res, next)
 					{
 						next({"ok":true});
 						
-						/*
-							TODO Notify the matches created_by that someone
-							has joined.
-						*/
+						var playersQuery  = new PlayersInArray([match.created_by, username]);
+						playersQuery.execute(function(err, rows, fields)
+						{
+							if(rows.length == 2)
+							{
+								var Notification                  = require('../data/Notification');
+								var currentNotification           = new Notification();
+								currentNotification.email_to      = rows[0].email;
+								currentNotification.username_to   = rows[0].username
+								currentNotification.username_from = rows[1].username;
+								currentNotification.platform      = Platform[match.game.platform].label;
+								currentNotification.game          = match.game.label;
+								currentNotification.date          = match.scheduled_time;
+								currentNotification.send();
+							}
+						});
 					}
 					else
 					{
 						next({"ok":false, "message":Errors.update_match.message})
 					}
 				});
-				
 			}
 			else
 			{
