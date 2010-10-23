@@ -32,12 +32,16 @@ final class GMRRequest
 		{
 			case 'POST':
 				curl_setopt($request, CURLOPT_POST, true);
+				$data = null;
 				
 				if(isset($options['data']))
-				{
 					$data = is_array($options['data']) ? http_build_query($options['data']) : $options['data'];
-					curl_setopt($request, CURLOPT_POSTFIELDS, $data);
-				}
+				
+				curl_setopt($request, CURLOPT_POSTFIELDS, $data);
+				break;
+			
+			case 'DELETE':
+				curl_setopt($request, CURLOPT_CUSTOMREQUEST, 'DELETE');
 				break;
 		}
 		

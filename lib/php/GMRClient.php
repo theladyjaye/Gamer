@@ -19,6 +19,27 @@ final class GMRClient
 	}
 	
 	/**
+	 * Leave or cancel an existing match
+	 * if the user leaving the match is the creator of the match
+	 * the match will be cancelled.
+	 *
+	 * @param string $username name of the user joining the game
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+	 * @param string $match_id the hash representing the match to join
+	 * @return bool
+	 * @author Adam Venturella
+	 */
+	public function matchLeave($username, $platform, $game_id, $match_id)
+	{
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$username,
+		                                          'method'        => 'DELETE'));
+		
+		$data = json_decode($response);
+		return $data->ok;
+	}
+	
+	/**
 	 * Join and existing match
 	 *
 	 * @param string $username name of the user joining the game
@@ -30,8 +51,7 @@ final class GMRClient
 	 */
 	public function matchJoin($username, $platform, $game_id, $match_id)
 	{
-		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id,
-		                                          'data'          => array('username' => $username),
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$username,
 		                                          'method'        => 'POST'));
 		
 		$data = json_decode($response);

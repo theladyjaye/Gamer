@@ -16,30 +16,121 @@ exports.endpoints = function(app)
 	app.get('/:platform/:game/:timeframe', getScheduledMatchesForGameAndPlatformAndTimeframe);
 	app.get('/:platform/:timeframe', getScheduledMatchesForPlatformAndTimeframe);
 	
-	//app.post('/leave/:match', joinMatch);
-	//app.del('/cancel/:match', cancelMatch);
-	app.post('/:platform/:game', createMatch); 
-	app.post('/:platform/:game/:match_id', joinMatch); 
+	app.post('/:platform/:game', createMatch);
+	app.post('/:platform/:game/:match_id/:username', joinMatch);
+	app.del('/:platform/:game/:match_id/:username', leaveMatch);
 	
+}
+
+function leaveMatch(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game;
+	var match_id  = req.params.match_id;
+	var username  = req.params.username;
+	
+	db.getDoc(match_id, function(error, match)
+	{
+		if(error == null)
+		{
+			if(req.access_token.user != "system")
+			{
+				if((req.access_token.user != username) || (req.access_token.user != match.created_by))
+				{
+					next({"ok":false, "message":Errors.unauthorized_client.message});
+					return;
+				}
+			}
+			
+			if(match.created_by == username)
+			{
+				// remove the whole match
+				db.removeDoc(match._id, match._rev, function(error, data)
+				{
+					if(error == null)
+					{
+						next({"ok":true});
+						
+						var playersQuery  = new PlayersInArray(match.players.slice(1));
+						playersQuery.execute(function(err, rows, fields)
+						{
+							rows.forEach(function(player)
+							{
+								var NotificationCancel            = require('../data/NotificationCancel');
+								var currentNotification           = new NotificationCancel();
+								currentNotification.email_to      = player.email;
+								currentNotification.username_to   = player.username
+								currentNotification.username_from = match.created_by;
+								currentNotification.platform      = Platform[match.game.platform].label;
+								currentNotification.game          = match.game.label;
+								currentNotification.date          = match.scheduled_time;
+								currentNotification.send();
+							});
+						});
+					}
+					else
+					{
+						next({"ok":false, "message":Errors.update_match.message})
+					}
+				});
+			}
+			else
+			{
+				match.players = match.players.filter( function(element, index, array){ return element != username; });
+				
+				db.saveDoc(match, function(error, data)
+				{
+					if(error == null)
+					{
+						next({"ok":true});
+
+						// should we notify the owner that someone has left?
+						
+						/*var playersQuery  = new PlayersInArray([match.created_by, username]);
+						playersQuery.execute(function(err, rows, fields)
+						{
+							if(rows.length == 2)
+							{
+								var Notification                  = require('../data/Notification');
+								var currentNotification           = new Notification();
+								currentNotification.email_to      = rows[0].email;
+								currentNotification.username_to   = rows[0].username
+								currentNotification.username_from = rows[1].username;
+								currentNotification.platform      = Platform[match.game.platform].label;
+								currentNotification.game          = match.game.label;
+								currentNotification.date          = match.scheduled_time;
+								currentNotification.send();
+							}
+						});*/
+					}
+					else
+					{
+						next({"ok":false, "message":Errors.update_match.message})
+					}
+				});
+			}
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unknown_match.message});
+		}
+	});
 }
 
 function joinMatch(req, res, next)
 {
 	var platform  = req.params.platform;
 	var game      = req.params.game;
+	var username  = req.params.username;
 	var match_id  = req.params.match_id;
-	var username  = null;
 	
-	if(req.access_token.user == "system" && typeof req.form != "undefined" )
+	if(req.access_token.user != "system")
 	{
-		if(typeof req.form.fields.username != "undefined")
-			username = req.form.fields.username;
-		else
-			next({"ok":false, "message":Errors.unknown_user.message});
-	}
-	else
-	{
-		username = req.access_token.user
+		if(req.access_token.user != username)
+		{
+			next({"ok":false, "message":Errors.unauthorized_client.message});
+			return;
+		}
 	}
 	
 	db.getDoc(match_id, function(error, match)
@@ -61,8 +152,8 @@ function joinMatch(req, res, next)
 						{
 							if(rows.length == 2)
 							{
-								var Notification                  = require('../data/Notification');
-								var currentNotification           = new Notification();
+								var NotificationJoin              = require('../data/NotificationJoin');
+								var currentNotification           = new NotificationJoin();
 								currentNotification.email_to      = rows[0].email;
 								currentNotification.username_to   = rows[0].username
 								currentNotification.username_from = rows[1].username;

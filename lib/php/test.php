@@ -25,6 +25,28 @@ echo $created_match_id;
 ?>
 </pre>
 
+<hr>
+
+<h2><span style="color:#00cc00">bpuglisi</span> Leave Match <?php echo $created_match_id ?></h2>
+<pre>
+<?php
+	$result =  $client->matchLeave('bpuglisi', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	echo $result ? 'Success' : 'Failed';
+?>
+</pre>
+
+<hr>
+
+<h2><span style="color:#00cc00">aventurella</span> Leave Match <?php echo $created_match_id ?> (should remove the match all together)</h2>
+<pre>
+<?php
+	$result =  $client->matchLeave('aventurella', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	echo $result ? 'Success' : 'Failed';
+?>
+</pre>
+
+<hr>
+
 <h2>Schedules Matched for bpuglisi</h2>
 <pre>
 	<?php print_r($client->matchesForUser('bpuglisi')); ?>
