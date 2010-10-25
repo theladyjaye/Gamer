@@ -2,6 +2,8 @@
 
 abstract class GMRService
 {
+	protected $session;
+	
 	public static function unauthorized()
 	{
 		header($_SERVER['SERVER_PROTOCOL']." 401 Unauthorized");
@@ -27,7 +29,6 @@ abstract class GMRService
 		}
 		
 		$this->routeRequest();
-		
 	}
 	
 	public function verifyAuthorization()
@@ -63,7 +64,8 @@ abstract class GMRService
 		
 		if(method_exists($this, $action))
 		{
-			$arguments = isset($_GET['arguments']) ? $_GET['arguments'] : null;
+			$this->initialize();
+			$arguments     = isset($_GET['arguments']) ? $_GET['arguments'] : null;
 			
 			if($arguments && count($arguments))
 			{
@@ -79,6 +81,11 @@ abstract class GMRService
 		{
 			GMRService::not_found();
 		}
+	}
+	
+	protected function initialize()
+	{
+		$this->session = GMRSession::sharedSession();
 	}
 }
 ?>

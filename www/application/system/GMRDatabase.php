@@ -21,7 +21,7 @@ class GMRDatabase
 		
 		if(!$connection)
 		{
-			$configuration = YSSConfiguration::standardConfiguration();
+			$configuration = GMRConfiguration::standardConfiguration();
 			$connection =  new mysqli($configuration['database.sql.host'], 
 				                      $configuration['database.sql.username'],
 				                      $configuration['database.sql.password'],

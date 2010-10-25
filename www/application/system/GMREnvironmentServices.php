@@ -4,6 +4,7 @@ require "GMRConfiguration.php";
 require "GMRDatabase.php";
 require "GMRSession.php";
 require "GMRService.php";
+require "GMRSecurity.php";
 
 require GMRApplication::basePath().'/application/data/GMRCurrentUser.php';
 

@@ -15,4 +15,16 @@ RewriteBase /
 #Header unset ETag  
 #FileETag None
 
+# sinatra routing is the da-bomb... PHP doesn't really do that
+# and it would be a waste to try as mod_rewrite can get us there, 
+# admittedly in a less pretty way, but why re-invent the wheel
+
+RewriteCond %{REQUEST_METHOD} ^POST [NC]
+RewriteCond %{REQUEST_URI} ^/accounts [NC]
 RewriteRule accounts/(login|logout|register) /application/services/accounts-open.php?action=$1 [L] 
+RewriteRule accounts/(reset)/(.+) /application/services/accounts-open.php?action=$1&arguments[]=$2 [L] 
+
+# send any unknown request to a generic handler
+RewriteCond %{REQUEST_METHOD} ^GET|POST|PUT|DELETE [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule  .* /application/services/default.php?action=general [L]
