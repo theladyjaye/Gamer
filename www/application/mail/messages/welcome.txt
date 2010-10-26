@@ -1,0 +1,5 @@
+Welcome To HazGame
+
+You Just Signed up!
+
+Verify your account: http://hazgame.com/accounts/verify/{token}

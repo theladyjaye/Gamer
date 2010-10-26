@@ -16,8 +16,30 @@ class GMRAccountsOpenService extends GMRService
 {
 	public function logout()
 	{
+		$response     = new stdClass();
+		$response->ok = true;
+		
 		$this->session->destroy();
-		header('Location: /');
+		echo json_encode($response);
+	}
+	
+	public function verify($token)
+	{
+		require GMRApplication::basePath().'/application/data/GMRUserVerification.php';
+		
+		$response     = new stdClass();
+		$response->ok = false;
+		
+		if(GMRUserVerification::verify($token))
+		{
+			$response->ok = true;
+		}
+		else
+		{
+			$response->message = 'invalid_token';
+		}
+		
+		echo json_encode($response);
 	}
 	
 	public function register()
@@ -82,9 +104,10 @@ class GMRAccountsOpenService extends GMRService
 				
 				$user               = $user->save();
 				
+				require GMRApplication::basePath().'/application/data/GMRUserVerification.php';
+				
 				// the token comes back, we are not currently doing anything with it.
-				// are we going to verify users? Do it here
-				//$token = GMRUserVerification::welcome($user);
+				$token = GMRUserVerification::welcome($user);
 				
 				$response->ok = true;
 			}
@@ -127,7 +150,7 @@ class GMRAccountsOpenService extends GMRService
 			{
 				$password = GMRSecurity::hash($input->password);
 				
-				if($password == $user->password)
+				if($user->active == 1 && $password == $user->password)
 				{
 					$currentUser            = new GMRCurrentUser();
 					$currentUser->id        = $user->id;

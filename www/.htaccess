@@ -19,10 +19,16 @@ RewriteBase /
 # and it would be a waste to try as mod_rewrite can get us there, 
 # admittedly in a less pretty way, but why re-invent the wheel
 
-RewriteCond %{REQUEST_METHOD} ^POST [NC]
+RewriteCond %{REQUEST_METHOD} ^POST [NC,OR]
+RewriteCond %{HTTP:X-HTTP-Method-Override} ^POST [NC]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]
-RewriteRule accounts/(login|logout|register) /application/services/accounts-open.php?action=$1 [L] 
-RewriteRule accounts/(reset)/(.+) /application/services/accounts-open.php?action=$1&arguments[]=$2 [L] 
+RewriteRule accounts/(login|logout|register|verify) /application/services/accounts-open.php?action=$1 [L] 
+RewriteRule accounts/reset/(.+) /application/services/accounts-open.php?action=reset&arguments[]=$1 [L] 
+
+RewriteCond %{REQUEST_METHOD} ^GET [NC,OR]
+RewriteCond %{REQUEST_URI} ^/accounts [NC]
+RewriteRule accounts/verify/([a-z0-9]{32}) /application/services/accounts-open.php?action=verify&arguments[]=$1 [L]
+
 
 # send any unknown request to a generic handler
 RewriteCond %{REQUEST_METHOD} ^GET|POST|PUT|DELETE [NC]
