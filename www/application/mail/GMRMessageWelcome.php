@@ -2,8 +2,8 @@
 class GMRMessageWelcome extends GMRMessage
 {
 	protected $subject = 'Welcome to HazGame';
-	protected $text    = '/application/mail/messages/welcome.txt';
-	protected $html    = '/application/mail/messages/welcome.html';
+	protected $text    = '/application/mail/messages/accountWelcome.txt';
+	protected $html    = '/application/mail/messages/accountWelcome.html';
 	
 	private $token;
 	

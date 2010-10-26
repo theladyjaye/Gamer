@@ -206,19 +206,17 @@ class GMRAccountsOpenService extends GMRService
 			
 			if($user)
 			{
-				/*
-					TODO Send this email.
-				*/
-				
-				//require GMRApplication::basePath().'/application/mail/GMRMessagePasswordReset.php';
+				require GMRApplication::basePath().'/application/libs/axismundi/display/AMDisplayObject.php';
+				require GMRApplication::basePath().'/application/mail/GMRMessage.php';
+				require GMRApplication::basePath().'/application/mail/GMRMessagePasswordReset.php';
 				
 				$newPassword    = GMRSecurity::generate_password();
 				$user->password = GMRSecurity::hash($newPassword);
 				$user->save();
 				
-				//$message           = new GMRMessagePasswordReset($user->email);
-				//$message->password = $newPassword;
-				//$message->send();
+				$message           = new GMRMessagePasswordReset($user->email);
+				$message->password = $newPassword;
+				$message->send();
 			}
 		}
 		
