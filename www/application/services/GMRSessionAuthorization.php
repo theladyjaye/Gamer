@@ -9,7 +9,7 @@ class GMRSessionAuthorization implements IGMRServiceAuthorizationDelegate
 		if($session->currentUser)
 			$result = true;
 		
-		return false;//$result;
+		return $result;
 	}
 }
 ?>
