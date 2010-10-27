@@ -22,6 +22,14 @@ class GMRAccountsOpenService extends GMRService
 		$this->session->destroy();
 		echo json_encode($response);
 	}
+	/**
+	 * Verify a user account
+	 * GET /accounts/verify/{token}
+	 *
+	 * @param string $token 
+	 * @return void
+	 * @author Adam Venturella
+	 */
 	
 	public function verify($token)
 	{
@@ -42,6 +50,22 @@ class GMRAccountsOpenService extends GMRService
 		echo json_encode($response);
 	}
 	
+	/**
+	 * Register a new User Account.  Will send a notification
+	 * to the provided email address to verify the account.
+	 * POST /accounts/register
+	 *
+	 * Form Vars (application/x-www-form-urlencoded)
+	 * firstname
+	 * lastname
+	 * email
+	 * username
+	 * password
+	 * password_verify
+	 *
+	 * @return void
+	 * @author Adam Venturella
+	 */
 	public function register()
 	{
 		$response     = new stdClass();
@@ -120,6 +144,18 @@ class GMRAccountsOpenService extends GMRService
 		echo json_encode($response);
 	}
 	
+	/**
+	 * Log in to hazgame.com
+	 * 
+	 * POST /accounts/login
+	 * 
+	 * Form Vars (application/x-www-form-urlencoded)
+	 * username
+	 * password
+	 *
+	 * @return void
+	 * @author Adam Venturella
+	 */
 	public function login()
 	{
 		$is_email     = false;
@@ -186,6 +222,16 @@ class GMRAccountsOpenService extends GMRService
 		echo json_encode($response);
 	}
 	
+	/**
+	 * Reset a user password for a given email
+	 *
+	 * POST /accounts/reset/{email}
+	 * 
+	 *
+	 * @param string $email 
+	 * @return void
+	 * @author Adam Venturella
+	 */
 	public function reset($email)
 	{
 		// always returing {ok:true} here no matter what $email or $domain is given
