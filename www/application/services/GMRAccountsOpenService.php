@@ -1,27 +1,30 @@
 <?php
-	
-require '../system/GMREnvironmentServices.php';
-
-require GMRApplication::basePath().'/application/libs/axismundi/forms/AMForm.php';
-require GMRApplication::basePath().'/application/libs/axismundi/data/AMQuery.php';
-require GMRApplication::basePath().'/application/libs/axismundi/forms/validators/AMPatternValidator.php';
-require GMRApplication::basePath().'/application/libs/axismundi/forms/validators/AMInputValidator.php';
-require GMRApplication::basePath().'/application/libs/axismundi/forms/validators/AMEmailValidator.php';
-require GMRApplication::basePath().'/application/libs/axismundi/forms/validators/AMMatchValidator.php';
-require GMRApplication::basePath().'/application/libs/axismundi/forms/validators/AMErrorValidator.php';
-
-require GMRApplication::basePath().'/application/data/GMRUser.php';
-
-class GMRAccountsOpenService extends GMRService
+class GMRAccountsOpenService extends GMRAbstractService
 {
+	private $session;
+	
+	public function __construct()
+	{
+		$this->session = GMRSession::sharedSession();
+	}
+	
+	/**
+	 * Logout
+	 * GET /accounts/logout
+	 *
+	 * @return void
+	 * @author Adam Venturella
+	 */
 	public function logout()
 	{
 		$response     = new stdClass();
 		$response->ok = true;
 		
 		$this->session->destroy();
-		echo json_encode($response);
+		//echo json_encode($response);
+		return $response;
 	}
+	
 	/**
 	 * Verify a user account
 	 * GET /accounts/verify/{token}
@@ -30,7 +33,6 @@ class GMRAccountsOpenService extends GMRService
 	 * @return void
 	 * @author Adam Venturella
 	 */
-	
 	public function verify($token)
 	{
 		require GMRApplication::basePath().'/application/data/GMRUserVerification.php';
@@ -47,7 +49,8 @@ class GMRAccountsOpenService extends GMRService
 			$response->message = 'invalid_token';
 		}
 		
-		echo json_encode($response);
+		return $response;
+		//echo json_encode($response);
 	}
 	
 	/**
@@ -141,7 +144,8 @@ class GMRAccountsOpenService extends GMRService
 			$this->hydrateErrors($input, $response);
 		}
 
-		echo json_encode($response);
+		return $response;
+		//echo json_encode($response);
 	}
 	
 	/**
@@ -218,8 +222,8 @@ class GMRAccountsOpenService extends GMRService
 		{
 			$this->hydrateErrors($input, $response);
 		}
-		
-		echo json_encode($response);
+		return $response;
+		//echo json_encode($response);
 	}
 	
 	/**
@@ -266,8 +270,8 @@ class GMRAccountsOpenService extends GMRService
 			}
 		}
 		
-		echo json_encode($response);
+		return $response;
+		//echo json_encode($response);
 	}
 }
-new GMRAccountsOpenService();
 ?>

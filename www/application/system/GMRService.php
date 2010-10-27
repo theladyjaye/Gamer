@@ -1,8 +1,9 @@
 <?php
 
-abstract class GMRService
+class GMRService
 {
-	protected $session;
+	public $requiresAuthorization  = false;
+	protected $delegate;
 	
 	public static function unauthorized()
 	{
@@ -16,9 +17,12 @@ abstract class GMRService
 		exit;
 	}
 	
-	protected $requiresAuthorization  = false;
+	public function __construct($delegate)
+	{
+		$this->delegate = $delegate;
+	}
 	
-	public function __construct()
+	public function start()
 	{
 		if($this->requiresAuthorization)
 		{
@@ -42,39 +46,23 @@ abstract class GMRService
 		return $result;
 	}
 	
-	protected function hydrateErrors(&$input, &$response)
-	{
-		$response->errors = array();
-		
-		foreach($input->validators as $validator)
-		{
-			if(!$validator->isValid)
-			{
-				$error = new stdClass();
-				$error->key = $validator->key;
-				$error->message = $validator->message;
-				$response->errors[] = $error;
-			}
-		}
-	}
-	
 	protected function routeRequest()
 	{
-		$action = $_GET['action'];
+		$action    = $_GET['action'];
+		$response  =  null;
 		
-		if(method_exists($this, $action))
+		if(method_exists($this->delegate, $action))
 		{
-			$this->initialize();
-			$arguments     = isset($_GET['arguments']) ? $_GET['arguments'] : null;
+			$arguments = isset($_GET['arguments']) ? $_GET['arguments'] : null;
 			
 			if($arguments && count($arguments))
 			{
 				$arguments = array_map("rawurldecode", $arguments);
-				call_user_func_array(array($this, $action), $arguments);
+				$this->renderResponse(call_user_func_array(array($this->delegate, $action), $arguments));
 			}
 			else
 			{
-				call_user_func(array($this, $action));
+				$this->renderResponse(call_user_func(array($this->delegate, $action)));
 			}
 		}
 		else
@@ -83,9 +71,9 @@ abstract class GMRService
 		}
 	}
 	
-	protected function initialize()
+	protected function renderResponse($object)
 	{
-		$this->session = GMRSession::sharedSession();
+		echo json_encode($object);
 	}
 }
 ?>
