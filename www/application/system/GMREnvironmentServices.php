@@ -4,11 +4,10 @@ require "GMRConfiguration.php";
 require "GMRDatabase.php";
 require "GMRSession.php";
 require "GMRService.php";
+require "IGMRServiceAuthorizationDelegate.php";
 require "GMRSecurity.php";
 
 require GMRApplication::basePath().'/application/data/GMRCurrentUser.php';
-
-
 
 /*
 	TODO Before production needs to set the Zend Framework path in the ini manually so we don't need this call:

@@ -16,7 +16,8 @@ require GMRApplication::basePath().'/application/services/GMRAccountsOpenService
 
 $delegate = new GMRAccountsOpenService();
 $service  = new GMRService($delegate);
-$service->requiresAuthentication = false;
+
+$service->requiresAuthorization = false; 
 $service->start();
 
 ?>

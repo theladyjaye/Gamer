@@ -4,6 +4,7 @@ class GMRService
 {
 	public $requiresAuthorization  = false;
 	protected $delegate;
+	protected $authenticationDelegate;
 	
 	public static function unauthorized()
 	{
@@ -35,13 +36,21 @@ class GMRService
 		$this->routeRequest();
 	}
 	
+	public function setAuthorizationDelegate(IGMRServiceAuthorizationDelegate $delegate)
+	{
+		$this->authenticationDelegate = $delegate;
+	}
+	
 	public function verifyAuthorization()
 	{
 		$result  = false;
-		$session = GMRSession::sharedSession();
+		if(!$this->authenticationDelegate)
+		{
+			throw new Exception('Authorization required, but no IGMRServiceAuthorizationDelegate provided');
+			exit;
+		}
 		
-		if($session->currentUser)
-			$result = true;
+		$result = $this->authenticationDelegate->isAuthorized();
 		
 		return $result;
 	}
