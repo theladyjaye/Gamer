@@ -1,6 +1,13 @@
 <?php
 abstract class GMRAbstractService
 {
+	protected $session;
+	
+	public function __construct()
+	{
+		$this->session = GMRSession::sharedSession();
+	}
+	
 	protected function hydrateErrors(&$input, &$response)
 	{
 		$response->errors = array();

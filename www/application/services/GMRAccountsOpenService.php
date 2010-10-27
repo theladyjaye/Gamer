@@ -1,13 +1,6 @@
 <?php
 class GMRAccountsOpenService extends GMRAbstractService
 {
-	private $session;
-	
-	public function __construct()
-	{
-		$this->session = GMRSession::sharedSession();
-	}
-	
 	/**
 	 * Logout
 	 * GET /accounts/logout
