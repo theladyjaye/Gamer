@@ -327,6 +327,37 @@
 			D7DB93971280B91F00D6C442 /* PBXTextBookmark */ = D7DB93971280B91F00D6C442 /* PBXTextBookmark */;
 			D7DB93981280B91F00D6C442 /* PBXTextBookmark */ = D7DB93981280B91F00D6C442 /* PBXTextBookmark */;
 			D7DB93991280B92800D6C442 /* PBXTextBookmark */ = D7DB93991280B92800D6C442 /* PBXTextBookmark */;
+			D7DB939A1280BA1D00D6C442 /* PBXTextBookmark */ = D7DB939A1280BA1D00D6C442 /* PBXTextBookmark */;
+			D7DB939D1280BB0B00D6C442 /* PBXTextBookmark */ = D7DB939D1280BB0B00D6C442 /* PBXTextBookmark */;
+			D7DB939E1280BB0B00D6C442 /* PBXTextBookmark */ = D7DB939E1280BB0B00D6C442 /* PBXTextBookmark */;
+			D7DB939F1280BB0B00D6C442 /* PBXTextBookmark */ = D7DB939F1280BB0B00D6C442 /* PBXTextBookmark */;
+			D7DB93A01280BB0B00D6C442 /* PBXTextBookmark */ = D7DB93A01280BB0B00D6C442 /* PBXTextBookmark */;
+			D7DB93A51280BB3700D6C442 /* PBXTextBookmark */ = D7DB93A51280BB3700D6C442 /* PBXTextBookmark */;
+			D7DB93A61280BB3700D6C442 /* PBXTextBookmark */ = D7DB93A61280BB3700D6C442 /* PBXTextBookmark */;
+			D7DB93A71280BB3700D6C442 /* PBXTextBookmark */ = D7DB93A71280BB3700D6C442 /* PBXTextBookmark */;
+			D7DB93AA1280BE6E00D6C442 /* PBXTextBookmark */ = D7DB93AA1280BE6E00D6C442 /* PBXTextBookmark */;
+			D7DB93AB1280BE6E00D6C442 /* PBXTextBookmark */ = D7DB93AB1280BE6E00D6C442 /* PBXTextBookmark */;
+			D7DB93AC1280BE6E00D6C442 /* PBXTextBookmark */ = D7DB93AC1280BE6E00D6C442 /* PBXTextBookmark */;
+			D7DB93AD1280C27B00D6C442 /* PBXTextBookmark */ = D7DB93AD1280C27B00D6C442 /* PBXTextBookmark */;
+			D7DB93AE1280C27B00D6C442 /* PBXTextBookmark */ = D7DB93AE1280C27B00D6C442 /* PBXTextBookmark */;
+			D7DB93AF1280C27B00D6C442 /* PBXTextBookmark */ = D7DB93AF1280C27B00D6C442 /* PBXTextBookmark */;
+			D7DB93B01280C27B00D6C442 /* PBXTextBookmark */ = D7DB93B01280C27B00D6C442 /* PBXTextBookmark */;
+			D7DB93B11280C2F700D6C442 /* PBXTextBookmark */ = D7DB93B11280C2F700D6C442 /* PBXTextBookmark */;
+			D7DB93B21280C2F700D6C442 /* PBXTextBookmark */ = D7DB93B21280C2F700D6C442 /* PBXTextBookmark */;
+			D7DB93B31280C2F700D6C442 /* PBXTextBookmark */ = D7DB93B31280C2F700D6C442 /* PBXTextBookmark */;
+			D7DB93B41280C2F700D6C442 /* PBXTextBookmark */ = D7DB93B41280C2F700D6C442 /* PBXTextBookmark */;
+			D7DB93B51280C30E00D6C442 /* PBXTextBookmark */ = D7DB93B51280C30E00D6C442 /* PBXTextBookmark */;
+			D7DB93B61280C30E00D6C442 /* PBXTextBookmark */ = D7DB93B61280C30E00D6C442 /* PBXTextBookmark */;
+			D7DB93B71280C30E00D6C442 /* PBXTextBookmark */ = D7DB93B71280C30E00D6C442 /* PBXTextBookmark */;
+			D7DB93B81280C30E00D6C442 /* PBXTextBookmark */ = D7DB93B81280C30E00D6C442 /* PBXTextBookmark */;
+			D7DB93BB1280C37100D6C442 /* PBXTextBookmark */ = D7DB93BB1280C37100D6C442 /* PBXTextBookmark */;
+			D7DB93BC1280C37100D6C442 /* PBXTextBookmark */ = D7DB93BC1280C37100D6C442 /* PBXTextBookmark */;
+			D7DB93BD1280C37100D6C442 /* PBXTextBookmark */ = D7DB93BD1280C37100D6C442 /* PBXTextBookmark */;
+			D7DB93C21280C39100D6C442 /* PBXTextBookmark */ = D7DB93C21280C39100D6C442 /* PBXTextBookmark */;
+			D7DB93C31280C39100D6C442 /* PBXTextBookmark */ = D7DB93C31280C39100D6C442 /* PBXTextBookmark */;
+			D7DB93C41280C39100D6C442 /* PBXTextBookmark */ = D7DB93C41280C39100D6C442 /* PBXTextBookmark */;
+			D7DB93C51280C39F00D6C442 /* PBXTextBookmark */ = D7DB93C51280C39F00D6C442 /* PBXTextBookmark */;
+			D7DB93C61280C3AD00D6C442 /* PBXTextBookmark */ = D7DB93C61280C3AD00D6C442 /* PBXTextBookmark */;
 			D7DDD83E127FDD6D00C29265 = D7DDD83E127FDD6D00C29265 /* PBXTextBookmark */;
 			D7DDD850127FDE1500C29265 = D7DDD850127FDE1500C29265 /* PBXTextBookmark */;
 			D7DDD851127FDE1500C29265 = D7DDD851127FDE1500C29265 /* PBXTextBookmark */;
@@ -447,7 +478,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 908;
 		vrLoc = 392;
@@ -467,7 +498,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 53";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 904;
 		vrLoc = 392;
@@ -477,7 +508,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1308;
 		vrLoc = 29;
@@ -487,7 +518,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 923;
 		vrLoc = 442;
@@ -497,7 +528,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 57";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 442;
@@ -507,7 +538,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 59";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 921;
 		vrLoc = 442;
@@ -517,7 +548,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 56";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 932;
 		vrLoc = 442;
@@ -527,7 +558,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 442;
@@ -537,7 +568,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 883;
 		vrLoc = 579;
@@ -547,7 +578,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 577;
@@ -557,7 +588,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 577;
@@ -577,7 +608,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 40";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1241;
 		vrLoc = 85;
@@ -587,7 +618,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 928;
 		vrLoc = 577;
@@ -597,7 +628,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 577;
@@ -607,7 +638,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 968;
 		vrLoc = 577;
@@ -617,7 +648,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 933;
 		vrLoc = 577;
@@ -627,7 +658,7 @@
 		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
 		name = "GMRClient.h: 27";
 		rLen = 0;
-		rLoc = 480;
+		rLoc = 483;
 		rType = 0;
 		vrLen = 590;
 		vrLoc = 0;
@@ -637,7 +668,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 47";
 		rLen = 0;
-		rLoc = 937;
+		rLoc = 940;
 		rType = 0;
 		vrLen = 969;
 		vrLoc = 577;
@@ -647,7 +678,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1224;
 		vrLoc = 187;
@@ -667,7 +698,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 0;
@@ -677,7 +708,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 65";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 291;
@@ -697,7 +728,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 659;
@@ -707,7 +738,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 61";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 659;
@@ -727,7 +758,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 55";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1030;
 		vrLoc = 675;
@@ -737,7 +768,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 61";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 532;
@@ -757,7 +788,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 61";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 532;
@@ -767,7 +798,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 80";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 2748;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 836;
@@ -807,7 +838,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 997;
 		vrLoc = 836;
@@ -817,7 +848,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 81";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 2748;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 890;
@@ -857,7 +888,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 81";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 2748;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 890;
@@ -867,7 +898,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 78";
 		rLen = 0;
-		rLoc = 1514;
+		rLoc = 2747;
 		rType = 0;
 		vrLen = 1290;
 		vrLoc = 580;
@@ -877,7 +908,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 81";
 		rLen = 0;
-		rLoc = 1515;
+		rLoc = 2748;
 		rType = 0;
 		vrLen = 989;
 		vrLoc = 675;
@@ -887,7 +918,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 64";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 977;
 		vrLoc = 749;
@@ -897,7 +928,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 61";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 891;
@@ -907,7 +938,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 66";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 891;
@@ -917,7 +948,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 66";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1079;
 		vrLoc = 891;
@@ -987,7 +1018,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 66";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1080;
 		vrLoc = 890;
@@ -997,7 +1028,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 890;
@@ -1007,7 +1038,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 48";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1097;
 		vrLoc = 781;
@@ -1017,7 +1048,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1099;
 		vrLoc = 781;
@@ -1027,7 +1058,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 62";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 781;
@@ -1037,7 +1068,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 60";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 781;
@@ -1057,7 +1088,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 43";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1307;
 		vrLoc = 144;
@@ -1077,7 +1108,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 60";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 781;
@@ -1087,7 +1118,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 63";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 781;
@@ -1097,7 +1128,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 63";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 1091;
 		vrLoc = 781;
@@ -1107,7 +1138,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 781;
@@ -1117,7 +1148,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 63";
 		rLen = 0;
-		rLoc = 1448;
+		rLoc = 1451;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 781;
@@ -1127,7 +1158,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 781;
@@ -1153,7 +1184,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 49";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 781;
@@ -1163,7 +1194,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 48";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 1201;
 		vrLoc = 781;
@@ -1173,7 +1204,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 57";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 781;
@@ -1183,7 +1214,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 62";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 781;
@@ -1223,7 +1254,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 62";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 779;
@@ -1233,7 +1264,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 901;
 		vrLoc = 580;
@@ -1243,7 +1274,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 860;
 		vrLoc = 580;
@@ -1283,7 +1314,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 860;
 		vrLoc = 579;
@@ -1323,7 +1354,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 40";
 		rLen = 0;
-		rLoc = 1210;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 1159;
 		vrLoc = 147;
@@ -1333,7 +1364,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 40";
 		rLen = 0;
-		rLoc = 1210;
+		rLoc = 1213;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 144;
@@ -1363,7 +1394,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 55";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 630;
@@ -1403,7 +1434,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 55";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 628;
@@ -1413,7 +1444,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 40";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 144;
@@ -1436,7 +1467,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 39";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 144;
@@ -1586,7 +1617,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 39";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1270;
 		vrLoc = 39;
@@ -1596,7 +1627,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 39";
 		rLen = 0;
-		rLoc = 1189;
+		rLoc = 1192;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 39;
@@ -1616,7 +1647,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 53";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 683;
 		vrLoc = 626;
@@ -1680,7 +1711,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 47";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 3;
@@ -1690,7 +1721,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 47";
 		rLen = 0;
-		rLoc = 1072;
+		rLoc = 1075;
 		rType = 0;
 		vrLen = 1053;
 		vrLoc = 3;
@@ -1700,7 +1731,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 47";
 		rLen = 0;
-		rLoc = 1072;
+		rLoc = 1075;
 		rType = 0;
 		vrLen = 1053;
 		vrLoc = 3;
@@ -1710,7 +1741,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 47";
 		rLen = 0;
-		rLoc = 1072;
+		rLoc = 1075;
 		rType = 0;
 		vrLen = 1095;
 		vrLoc = 3;
@@ -1846,7 +1877,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 53";
 		rLen = 0;
-		rLoc = 1363;
+		rLoc = 1366;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 486;
@@ -1856,7 +1887,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 48";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 486;
@@ -1866,7 +1897,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1310;
+		rLoc = 1313;
 		rType = 0;
 		vrLen = 869;
 		vrLoc = 486;
@@ -1916,7 +1947,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1310;
+		rLoc = 1313;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 436;
@@ -1926,7 +1957,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1262;
+		rLoc = 1265;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 436;
@@ -1936,7 +1967,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1238;
+		rLoc = 1241;
 		rType = 0;
 		vrLen = 927;
 		vrLoc = 436;
@@ -1946,7 +1977,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 1252;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 436;
@@ -1996,7 +2027,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1249;
+		rLoc = 1252;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 436;
@@ -2006,7 +2037,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1159;
+		rLoc = 1162;
 		rType = 0;
 		vrLen = 983;
 		vrLoc = 436;
@@ -2016,7 +2047,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1166;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 436;
@@ -2026,7 +2057,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1166;
 		rType = 0;
 		vrLen = 1036;
 		vrLoc = 436;
@@ -2046,7 +2077,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1214;
+		rLoc = 1217;
 		rType = 0;
 		vrLen = 1086;
 		vrLoc = 386;
@@ -2056,7 +2087,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 386;
@@ -2066,7 +2097,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 386;
@@ -2106,7 +2137,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1100;
+		rLoc = 1103;
 		rType = 0;
 		vrLen = 1109;
 		vrLoc = 345;
@@ -2116,7 +2147,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1251;
+		rLoc = 1254;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 345;
@@ -2126,7 +2157,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1168;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 345;
@@ -2136,7 +2167,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1166;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 345;
@@ -2146,7 +2177,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 58";
 		rLen = 0;
-		rLoc = 1447;
+		rLoc = 1450;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 345;
@@ -2156,7 +2187,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 0;
-		rLoc = 1142;
+		rLoc = 1145;
 		rType = 0;
 		vrLen = 1158;
 		vrLoc = 345;
@@ -2166,7 +2197,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1288;
+		rLoc = 1291;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 345;
@@ -2176,7 +2207,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1166;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 345;
@@ -2368,7 +2399,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1168;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 345;
@@ -2418,7 +2449,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 53";
 		rLen = 0;
-		rLoc = 1262;
+		rLoc = 1265;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 345;
@@ -2428,7 +2459,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 51";
 		rLen = 0;
-		rLoc = 1163;
+		rLoc = 1166;
 		rType = 0;
 		vrLen = 1137;
 		vrLoc = 345;
@@ -2438,7 +2469,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 52";
 		rLen = 0;
-		rLoc = 1275;
+		rLoc = 1278;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 345;
@@ -2811,7 +2842,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 48";
 		rLen = 0;
-		rLoc = 939;
+		rLoc = 942;
 		rType = 0;
 		vrLen = 946;
 		vrLoc = 544;
@@ -2831,7 +2862,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 39";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1341;
 		vrLoc = 0;
@@ -2841,7 +2872,7 @@
 		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
 		name = "InitializationTests.m: 38";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1176;
 		rType = 0;
 		vrLen = 1295;
 		vrLoc = 0;
@@ -2983,7 +3014,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 50";
 		rLen = 28;
-		rLoc = 1111;
+		rLoc = 1114;
 		rType = 0;
 		vrLen = 964;
 		vrLoc = 526;
@@ -2993,7 +3024,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1247;
+		rLoc = 1250;
 		rType = 0;
 		vrLen = 994;
 		vrLoc = 526;
@@ -3003,7 +3034,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1274;
 		rType = 0;
 		vrLen = 992;
 		vrLoc = 526;
@@ -3013,7 +3044,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1274;
 		rType = 0;
 		vrLen = 1032;
 		vrLoc = 486;
@@ -3153,7 +3184,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 54";
 		rLen = 0;
-		rLoc = 1271;
+		rLoc = 1274;
 		rType = 0;
 		vrLen = 1449;
 		vrLoc = 75;
@@ -3177,6 +3208,316 @@
 		rType = 0;
 		vrLen = 1514;
 		vrLoc = 0;
+	};
+	D7DB939A1280BA1D00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 64";
+		rLen = 0;
+		rLoc = 2725;
+		rType = 0;
+		vrLen = 1485;
+		vrLoc = 32;
+	};
+	D7DB939D1280BB0B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 48";
+		rLen = 12;
+		rLoc = 906;
+		rType = 0;
+		vrLen = 1488;
+		vrLoc = 32;
+	};
+	D7DB939E1280BB0B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
+		name = "GMRClient.h: 24";
+		rLen = 0;
+		rLoc = 461;
+		rType = 0;
+		vrLen = 492;
+		vrLoc = 0;
+	};
+	D7DB939F1280BB0B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 18";
+		rLen = 0;
+		rLoc = 367;
+		rType = 0;
+		vrLen = 1295;
+		vrLoc = 0;
+	};
+	D7DB93A01280BB0B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 39";
+		rLen = 0;
+		rLoc = 1269;
+		rType = 0;
+		vrLen = 1298;
+		vrLoc = 0;
+	};
+	D7DB93A51280BB3700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 37";
+		rLen = 0;
+		rLoc = 1151;
+		rType = 0;
+		vrLen = 1298;
+		vrLoc = 0;
+	};
+	D7DB93A61280BB3700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 48";
+		rLen = 12;
+		rLoc = 906;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 544;
+	};
+	D7DB93A71280BB3700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 56";
+		rLen = 0;
+		rLoc = 1324;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 544;
+	};
+	D7DB93AA1280BE6E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
+		name = "GMRClient.h: 25";
+		rLen = 0;
+		rLoc = 805;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 0;
+	};
+	D7DB93AB1280BE6E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 62";
+		rLen = 159;
+		rLoc = 2070;
+		rType = 0;
+		vrLen = 1777;
+		vrLoc = 160;
+	};
+	D7DB93AC1280BE6E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 61";
+		rLen = 0;
+		rLoc = 2069;
+		rType = 0;
+		vrLen = 1805;
+		vrLoc = 345;
+	};
+	D7DB93AD1280C27B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 62";
+		rLen = 159;
+		rLoc = 2070;
+		rType = 0;
+		vrLen = 1805;
+		vrLoc = 345;
+	};
+	D7DB93AE1280C27B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
+		name = "GMRClient.h: 25";
+		rLen = 0;
+		rLoc = 805;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 0;
+	};
+	D7DB93AF1280C27B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 37";
+		rLen = 0;
+		rLoc = 1151;
+		rType = 0;
+		vrLen = 1298;
+		vrLoc = 0;
+	};
+	D7DB93B01280C27B00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 47";
+		rLen = 0;
+		rLoc = 1703;
+		rType = 0;
+		vrLen = 1595;
+		vrLoc = 0;
+	};
+	D7DB93B11280C2F700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
+		name = "GMRClient.h: 26";
+		rLen = 0;
+		rLoc = 804;
+		rType = 0;
+		vrLen = 813;
+		vrLoc = 0;
+	};
+	D7DB93B21280C2F700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 71";
+		rLen = 0;
+		rLoc = 1939;
+		rType = 0;
+		vrLen = 2116;
+		vrLoc = 656;
+	};
+	D7DB93B31280C2F700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 47";
+		rLen = 0;
+		rLoc = 1703;
+		rType = 0;
+		vrLen = 1595;
+		vrLoc = 0;
+	};
+	D7DB93B41280C2F700D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 48";
+		rLen = 0;
+		rLoc = 1427;
+		rType = 0;
+		vrLen = 1891;
+		vrLoc = 0;
+	};
+	D7DB93B51280C30E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 50";
+		rLen = 0;
+		rLoc = 1495;
+		rType = 0;
+		vrLen = 1891;
+		vrLoc = 0;
+	};
+	D7DB93B61280C30E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */;
+		name = "GMRClient.h: 26";
+		rLen = 0;
+		rLoc = 804;
+		rType = 0;
+		vrLen = 813;
+		vrLoc = 0;
+	};
+	D7DB93B71280C30E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 61";
+		rLen = 0;
+		rLoc = 1454;
+		rType = 0;
+		vrLen = 2118;
+		vrLoc = 653;
+	};
+	D7DB93B81280C30E00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 65";
+		rLen = 0;
+		rLoc = 1692;
+		rType = 0;
+		vrLen = 2117;
+		vrLoc = 653;
+	};
+	D7DB93BB1280C37100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 61";
+		rLen = 0;
+		rLoc = 1774;
+		rType = 0;
+		vrLen = 1895;
+		vrLoc = 0;
+	};
+	D7DB93BC1280C37100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 69";
+		rLen = 0;
+		rLoc = 1810;
+		rType = 0;
+		vrLen = 2116;
+		vrLoc = 656;
+	};
+	D7DB93BD1280C37100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 66";
+		rLen = 0;
+		rLoc = 1774;
+		rType = 0;
+		vrLen = 1576;
+		vrLoc = 656;
+	};
+	D7DB93C21280C39100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 62";
+		rLen = 9;
+		rLoc = 1463;
+		rType = 0;
+		vrLen = 1576;
+		vrLoc = 656;
+	};
+	D7DB93C31280C39100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 61";
+		rLen = 0;
+		rLoc = 1774;
+		rType = 0;
+		vrLen = 1505;
+		vrLoc = 390;
+	};
+	D7DB93C41280C39100D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 45";
+		rLen = 0;
+		rLoc = 1333;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 390;
+	};
+	D7DB93C51280C39F00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 44";
+		rLen = 0;
+		rLoc = 1314;
+		rType = 0;
+		vrLen = 1502;
+		vrLoc = 392;
+	};
+	D7DB93C61280C3AD00D6C442 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 47";
+		rLen = 0;
+		rLoc = 1397;
+		rType = 0;
+		vrLen = 1502;
+		vrLoc = 392;
 	};
 	D7DDD78C127FD39A00C29265 /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -3207,23 +3548,23 @@
 	};
 	D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1310, 598}}";
-			sepNavSelRange = "{367, 0}";
-			sepNavVisRange = "{0, 1295}";
+			sepNavIntBoundsRect = "{{0, 0}, {1310, 884}}";
+			sepNavSelRange = "{1397, 0}";
+			sepNavVisRange = "{392, 1502}";
 		};
 	};
 	D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1310, 587}}";
-			sepNavSelRange = "{238, 0}";
-			sepNavVisRange = "{0, 489}";
+			sepNavIntBoundsRect = "{{0, 0}, {1310, 863}}";
+			sepNavSelRange = "{804, 0}";
+			sepNavVisRange = "{0, 813}";
 		};
 	};
 	D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1310, 923}}";
-			sepNavSelRange = "{266, 0}";
-			sepNavVisRange = "{0, 1514}";
+			sepNavIntBoundsRect = "{{0, 0}, {1310, 1248}}";
+			sepNavSelRange = "{1463, 9}";
+			sepNavVisRange = "{656, 1576}";
 		};
 	};
 	D7DDD83E127FDD6D00C29265 /* PBXTextBookmark */ = {
@@ -3295,7 +3636,7 @@
 		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
 		name = "GMRClient.m: 49";
 		rLen = 5;
-		rLoc = 1515;
+		rLoc = 2748;
 		rType = 0;
 		vrLen = 857;
 		vrLoc = 137;

@@ -294,8 +294,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>27</integer>
-									<integer>26</integer>
+									<integer>4</integer>
+									<integer>2</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -334,7 +335,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRClient.m</string>
+								<string>InitializationTests.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -342,11 +343,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRClient.m</string>
+										<string>InitializationTests.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7DB93991280B92800D6C442</string>
+										<string>D7DB93C61280C3AD00D6C442</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -359,14 +360,14 @@
 											<string>D7DB92F61280AF3800D6C442</string>
 											<string>D7DB93391280B2D200D6C442</string>
 											<string>D7DB93481280B33700D6C442</string>
-											<string>D7DB934A1280B33700D6C442</string>
 											<string>D7DB936F1280B49200D6C442</string>
 											<string>D7DB93701280B49200D6C442</string>
 											<string>D7DB93721280B49200D6C442</string>
 											<string>D7DB93851280B5D200D6C442</string>
-											<string>D7DB938A1280B5EF00D6C442</string>
 											<string>D7DB93961280B91F00D6C442</string>
-											<string>D7DB93971280B91F00D6C442</string>
+											<string>D7DB93B61280C30E00D6C442</string>
+											<string>D7DB93C21280C39100D6C442</string>
+											<string>D7DB93C31280C39100D6C442</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -380,18 +381,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1371, 920}}</string>
+								<string>{{0, 0}, {1371, 644}}</string>
 								<key>RubberWindowFrame</key>
 								<string>16 62 1664 966 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>920pt</string>
+							<string>644pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>276pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -459,7 +460,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1371, -27}}</string>
+										<string>{{10, 27}, {1371, 249}}</string>
 										<key>RubberWindowFrame</key>
 										<string>16 62 1664 966 0 0 1680 1028 </string>
 									</dict>
@@ -666,7 +667,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>310425896.11266297</real>
+	<real>310428589.52988499</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>

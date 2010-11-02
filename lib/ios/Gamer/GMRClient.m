@@ -45,7 +45,7 @@ static NSArray * platformStrings;
 }
 
 
-- (void)gamesForPlatform:(GMRPlatform)platform withBlock:(GMRCallback)callback
+- (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"GET";
 	NSString*     path   = [NSString stringWithFormat:@"/games/%@", [self stringForPlatform:platform]];
@@ -59,9 +59,41 @@ static NSArray * platformStrings;
 		   }];
 }
 
+- (void)matchJoin:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
+{
+	NSString*     method = @"POST";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
+							gameId,
+							matchId,
+							username];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(NSString * response){
+			   NSLog(@"Join 1: %@", response);
+			   callback([self stringForPlatform:GMRPlatformXBox360]);
+		   }];
+	
+}
+
+- (void)matchLeave:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
+{
+	NSString*     method = @"DELETE";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
+							gameId,
+							matchId,
+							username];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(NSString * response){
+			   NSLog(@"Leave 1: %@", response);
+			   callback([self stringForPlatform:GMRPlatformXBox360]);
+		   }];
+	
+}
+
 - (void)dealloc
 {
-	[apiRequest release];
+	apiRequest = nil;
 	[super dealloc];
 }
 

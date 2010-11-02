@@ -34,10 +34,32 @@
 
 - (void)testGamesForPlatform
 {
-	[client gamesForPlatform:GMRPlatformXBox360 withBlock:^(NSString * response)
+	[client gamesForPlatform:GMRPlatformXBox360 withCallback:^(NSString * response)
 	{
 		STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
 	}];
+}
+
+- (void)testMatchJoin
+{
+	[client matchJoin:@"bpuglsi" 
+			  platform:GMRPlatformXBox360 
+				gameId:@"halo-reach" 
+			   matchId:@"afd59a" withCallback:^(NSString * response)
+	 {
+		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+	 }];
+}
+
+- (void)testMatchLeave
+{
+	[client matchLeave:@"bpuglsi" 
+			  platform:GMRPlatformXBox360 
+				gameId:@"halo-reach" 
+			   matchId:@"afd59a" withCallback:^(NSString * response)
+	 {
+		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+	 }];
 }
 
 
