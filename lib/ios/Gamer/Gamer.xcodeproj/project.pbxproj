@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* Gamer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D7DB90A41280837D00D6C442 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */; };
+		D7DB90A51280837D00D6C442 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */; };
+		D7DB90A61280837D00D6C442 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90961280837D00D6C442 /* ASICacheDelegate.h */; };
+		D7DB90A71280837D00D6C442 /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90971280837D00D6C442 /* ASIDownloadCache.h */; };
+		D7DB90A81280837D00D6C442 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90981280837D00D6C442 /* ASIDownloadCache.m */; };
+		D7DB90A91280837D00D6C442 /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90991280837D00D6C442 /* ASIFormDataRequest.h */; };
+		D7DB90AA1280837D00D6C442 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB909A1280837D00D6C442 /* ASIFormDataRequest.m */; };
+		D7DB90AB1280837D00D6C442 /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB909B1280837D00D6C442 /* ASIHTTPRequest.h */; };
+		D7DB90AC1280837D00D6C442 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB909C1280837D00D6C442 /* ASIHTTPRequest.m */; };
+		D7DB90AD1280837D00D6C442 /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB909D1280837D00D6C442 /* ASIHTTPRequestConfig.h */; };
+		D7DB90AE1280837D00D6C442 /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB909E1280837D00D6C442 /* ASIHTTPRequestDelegate.h */; };
+		D7DB90AF1280837D00D6C442 /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB909F1280837D00D6C442 /* ASIInputStream.h */; };
+		D7DB90B01280837D00D6C442 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90A01280837D00D6C442 /* ASIInputStream.m */; };
+		D7DB90B11280837D00D6C442 /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90A11280837D00D6C442 /* ASINetworkQueue.h */; };
+		D7DB90B21280837D00D6C442 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90A21280837D00D6C442 /* ASINetworkQueue.m */; };
+		D7DB90B31280837D00D6C442 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90A31280837D00D6C442 /* ASIProgressDelegate.h */; };
+		D7DB90BA128083C900D6C442 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90B8128083C900D6C442 /* Reachability.h */; };
+		D7DB90BB128083C900D6C442 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90B9128083C900D6C442 /* Reachability.m */; };
+		D7DB90BE1280851D00D6C442 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
+		D7DB91331280879200D6C442 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
+		D7DB91341280879C00D6C442 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
+		D7DB9135128087A500D6C442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
+		D7DB9136128087B200D6C442 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
+		D7DB9138128087BF00D6C442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
+		D7DB913B128087FB00D6C442 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
+		D7DB913C128087FB00D6C442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
+		D7DB913D128087FB00D6C442 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
+		D7DB913E128087FB00D6C442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
+		D7DB913F128087FB00D6C442 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
+		D7DB914A1280886300D6C442 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
+		D7DB914B1280886300D6C442 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
+		D7DB914C1280886300D6C442 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
+		D7DB914D1280886300D6C442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
+		D7DB914E1280886300D6C442 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
+		D7DB92671280A1FC00D6C442 /* GMRRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB92651280A1FC00D6C442 /* GMRRequest.h */; };
+		D7DB92681280A1FC00D6C442 /* GMRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB92661280A1FC00D6C442 /* GMRRequest.m */; };
+		D7DB927C1280A74D00D6C442 /* GMRTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB927B1280A74D00D6C442 /* GMRTypes.h */; };
+		D7DB93331280B14000D6C442 /* GMRUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB93311280B14000D6C442 /* GMRUtils.h */; };
+		D7DB93341280B14000D6C442 /* GMRUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB93321280B14000D6C442 /* GMRUtils.m */; };
+		D7DDD79B127FD3BA00C29265 /* Gamer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */; };
+		D7DDD79E127FD3BA00C29265 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D7DDD7AE127FD42400C29265 /* InitializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */; };
+		D7DDD7B9127FD49100C29265 /* GMRClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DDD7B7127FD49100C29265 /* GMRClient.h */; };
+		D7DDD7BA127FD49100C29265 /* GMRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */; };
+		D7DDD810127FDB4A00C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
+		D7DDD81D127FDBC800C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7DB93921280B91900D6C442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DB908F1280832500D6C442 /* ASIHttp */;
+			remoteInfo = ASIHttp;
+		};
+		D7DDD7F0127FD9F200C29265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DDD792127FD3A100C29265;
+			remoteInfo = GamerTests;
+		};
+		D7DDD819127FDBB700C29265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Gamer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DB90901280832500D6C442 /* libASIHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASIHttp.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		D7DB90961280837D00D6C442 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		D7DB90971280837D00D6C442 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		D7DB90981280837D00D6C442 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		D7DB90991280837D00D6C442 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		D7DB909A1280837D00D6C442 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		D7DB909B1280837D00D6C442 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		D7DB909C1280837D00D6C442 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		D7DB909D1280837D00D6C442 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		D7DB909E1280837D00D6C442 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		D7DB909F1280837D00D6C442 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		D7DB90A01280837D00D6C442 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		D7DB90A11280837D00D6C442 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		D7DB90A21280837D00D6C442 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		D7DB90A31280837D00D6C442 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		D7DB90B8128083C900D6C442 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		D7DB90B9128083C900D6C442 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		D7DB90D7128086B100D6C442 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		D7DB92651280A1FC00D6C442 /* GMRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRRequest.h; sourceTree = "<group>"; };
+		D7DB92661280A1FC00D6C442 /* GMRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRRequest.m; sourceTree = "<group>"; };
+		D7DB927B1280A74D00D6C442 /* GMRTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRTypes.h; sourceTree = "<group>"; };
+		D7DB93311280B14000D6C442 /* GMRUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRUtils.h; sourceTree = "<group>"; };
+		D7DB93321280B14000D6C442 /* GMRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRUtils.m; sourceTree = "<group>"; };
+		D7DDD793127FD3A100C29265 /* GamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamerTests-Info.plist"; sourceTree = "<group>"; };
+		D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamerTesting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DDD7AC127FD42400C29265 /* InitializationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializationTests.h; sourceTree = "<group>"; };
+		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
+		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
+		D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRClient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				D7DB90BE1280851D00D6C442 /* libASIHttp.a in Frameworks */,
+				D7DB91331280879200D6C442 /* CFNetwork.framework in Frameworks */,
+				D7DB91341280879C00D6C442 /* MobileCoreServices.framework in Frameworks */,
+				D7DB9135128087A500D6C442 /* SystemConfiguration.framework in Frameworks */,
+				D7DB9136128087B200D6C442 /* libz.1.2.3.dylib in Frameworks */,
+				D7DB9138128087BF00D6C442 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DB908E1280832500D6C442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DDD790127FD3A100C29265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DDD810127FDB4A00C29265 /* libGamer.a in Frameworks */,
+				D7DB914A1280886300D6C442 /* CFNetwork.framework in Frameworks */,
+				D7DB914B1280886300D6C442 /* CoreGraphics.framework in Frameworks */,
+				D7DB914C1280886300D6C442 /* MobileCoreServices.framework in Frameworks */,
+				D7DB914D1280886300D6C442 /* SystemConfiguration.framework in Frameworks */,
+				D7DB914E1280886300D6C442 /* libz.1.2.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DDD79D127FD3BA00C29265 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DDD79E127FD3BA00C29265 /* Foundation.framework in Frameworks */,
+				D7DDD81D127FDBC800C29265 /* libGamer.a in Frameworks */,
+				D7DB913B128087FB00D6C442 /* CFNetwork.framework in Frameworks */,
+				D7DB913C128087FB00D6C442 /* CoreGraphics.framework in Frameworks */,
+				D7DB913D128087FB00D6C442 /* MobileCoreServices.framework in Frameworks */,
+				D7DB913E128087FB00D6C442 /* SystemConfiguration.framework in Frameworks */,
+				D7DB913F128087FB00D6C442 /* libz.1.2.3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libGamer.a */,
+				D7DDD793127FD3A100C29265 /* GamerTests.octest */,
+				D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */,
+				D7DB90901280832500D6C442 /* libASIHttp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Gamer */ = {
+			isa = PBXGroup;
+			children = (
+				D7DDD885127FDFCB00C29265 /* ASIHttp */,
+				D7DDD7AB127FD40200C29265 /* Tests */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */,
+				D7DB90D7128086B100D6C442 /* CFNetwork.framework */,
+				D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */,
+				D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */,
+				D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */,
+				D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */,
+			);
+			name = Gamer;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7DDD7B7127FD49100C29265 /* GMRClient.h */,
+				D7DDD7B8127FD49100C29265 /* GMRClient.m */,
+				D7DB92651280A1FC00D6C442 /* GMRRequest.h */,
+				D7DB92661280A1FC00D6C442 /* GMRRequest.m */,
+				D7DB927B1280A74D00D6C442 /* GMRTypes.h */,
+				D7DB93311280B14000D6C442 /* GMRUtils.h */,
+				D7DB93321280B14000D6C442 /* GMRUtils.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D7DB90B71280839900D6C442 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB90B8128083C900D6C442 /* Reachability.h */,
+				D7DB90B9128083C900D6C442 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		D7DDD7AB127FD40200C29265 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D7DDD7AC127FD42400C29265 /* InitializationTests.h */,
+				D7DDD7AD127FD42400C29265 /* InitializationTests.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		D7DDD885127FDFCB00C29265 /* ASIHttp */ = {
+			isa = PBXGroup;
+			children = (
+				D7DB90B71280839900D6C442 /* Reachability */,
+				D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */,
+				D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */,
+				D7DB90961280837D00D6C442 /* ASICacheDelegate.h */,
+				D7DB90971280837D00D6C442 /* ASIDownloadCache.h */,
+				D7DB90981280837D00D6C442 /* ASIDownloadCache.m */,
+				D7DB90991280837D00D6C442 /* ASIFormDataRequest.h */,
+				D7DB909A1280837D00D6C442 /* ASIFormDataRequest.m */,
+				D7DB909B1280837D00D6C442 /* ASIHTTPRequest.h */,
+				D7DB909C1280837D00D6C442 /* ASIHTTPRequest.m */,
+				D7DB909D1280837D00D6C442 /* ASIHTTPRequestConfig.h */,
+				D7DB909E1280837D00D6C442 /* ASIHTTPRequestDelegate.h */,
+				D7DB909F1280837D00D6C442 /* ASIInputStream.h */,
+				D7DB90A01280837D00D6C442 /* ASIInputStream.m */,
+				D7DB90A11280837D00D6C442 /* ASINetworkQueue.h */,
+				D7DB90A21280837D00D6C442 /* ASINetworkQueue.m */,
+				D7DB90A31280837D00D6C442 /* ASIProgressDelegate.h */,
+			);
+			name = ASIHttp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* Gamer_Prefix.pch in Headers */,
+				D7DDD7B9127FD49100C29265 /* GMRClient.h in Headers */,
+				D7DB92671280A1FC00D6C442 /* GMRRequest.h in Headers */,
+				D7DB927C1280A74D00D6C442 /* GMRTypes.h in Headers */,
+				D7DB93331280B14000D6C442 /* GMRUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DB908C1280832500D6C442 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DB90A41280837D00D6C442 /* ASIAuthenticationDialog.h in Headers */,
+				D7DB90A61280837D00D6C442 /* ASICacheDelegate.h in Headers */,
+				D7DB90A71280837D00D6C442 /* ASIDownloadCache.h in Headers */,
+				D7DB90A91280837D00D6C442 /* ASIFormDataRequest.h in Headers */,
+				D7DB90AB1280837D00D6C442 /* ASIHTTPRequest.h in Headers */,
+				D7DB90AD1280837D00D6C442 /* ASIHTTPRequestConfig.h in Headers */,
+				D7DB90AE1280837D00D6C442 /* ASIHTTPRequestDelegate.h in Headers */,
+				D7DB90AF1280837D00D6C442 /* ASIInputStream.h in Headers */,
+				D7DB90B11280837D00D6C442 /* ASINetworkQueue.h in Headers */,
+				D7DB90B31280837D00D6C442 /* ASIProgressDelegate.h in Headers */,
+				D7DB90BA128083C900D6C442 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DDD79A127FD3BA00C29265 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DDD79B127FD3BA00C29265 /* Gamer_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* Gamer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Gamer" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7DB93931280B91900D6C442 /* PBXTargetDependency */,
+			);
+			name = Gamer;
+			productName = Gamer;
+			productReference = D2AAC07E0554694100DB518D /* libGamer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7DB908F1280832500D6C442 /* ASIHttp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DB90931280835000D6C442 /* Build configuration list for PBXNativeTarget "ASIHttp" */;
+			buildPhases = (
+				D7DB908C1280832500D6C442 /* Headers */,
+				D7DB908D1280832500D6C442 /* Sources */,
+				D7DB908E1280832500D6C442 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ASIHttp;
+			productName = ASIHttp;
+			productReference = D7DB90901280832500D6C442 /* libASIHttp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D7DDD792127FD3A100C29265 /* GamerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DDD798127FD3A200C29265 /* Build configuration list for PBXNativeTarget "GamerTests" */;
+			buildPhases = (
+				D7DDD78E127FD3A100C29265 /* Resources */,
+				D7DDD78F127FD3A100C29265 /* Sources */,
+				D7DDD790127FD3A100C29265 /* Frameworks */,
+				D7DDD791127FD3A100C29265 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GamerTests;
+			productName = GamerTests;
+			productReference = D7DDD793127FD3A100C29265 /* GamerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D7DDD799127FD3BA00C29265 /* GamerTesting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DDD79F127FD3BA00C29265 /* Build configuration list for PBXNativeTarget "GamerTesting" */;
+			buildPhases = (
+				D7DDD79A127FD3BA00C29265 /* Headers */,
+				D7DDD79C127FD3BA00C29265 /* Sources */,
+				D7DDD79D127FD3BA00C29265 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7DDD81A127FDBB700C29265 /* PBXTargetDependency */,
+				D7DDD7F1127FD9F200C29265 /* PBXTargetDependency */,
+			);
+			name = GamerTesting;
+			productName = Gamer;
+			productReference = D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Gamer" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* Gamer */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* Gamer */,
+				D7DDD792127FD3A100C29265 /* GamerTests */,
+				D7DDD799127FD3BA00C29265 /* GamerTesting */,
+				D7DB908F1280832500D6C442 /* ASIHttp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7DDD78E127FD3A100C29265 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7DDD791127FD3A100C29265 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DDD7BA127FD49100C29265 /* GMRClient.m in Sources */,
+				D7DB92681280A1FC00D6C442 /* GMRRequest.m in Sources */,
+				D7DB93341280B14000D6C442 /* GMRUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DB908D1280832500D6C442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DB90A51280837D00D6C442 /* ASIAuthenticationDialog.m in Sources */,
+				D7DB90A81280837D00D6C442 /* ASIDownloadCache.m in Sources */,
+				D7DB90AA1280837D00D6C442 /* ASIFormDataRequest.m in Sources */,
+				D7DB90AC1280837D00D6C442 /* ASIHTTPRequest.m in Sources */,
+				D7DB90B01280837D00D6C442 /* ASIInputStream.m in Sources */,
+				D7DB90B21280837D00D6C442 /* ASINetworkQueue.m in Sources */,
+				D7DB90BB128083C900D6C442 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DDD78F127FD3A100C29265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DDD7AE127FD42400C29265 /* InitializationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7DDD79C127FD3BA00C29265 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7DB93931280B91900D6C442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DB908F1280832500D6C442 /* ASIHttp */;
+			targetProxy = D7DB93921280B91900D6C442 /* PBXContainerItemProxy */;
+		};
+		D7DDD7F1127FD9F200C29265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DDD792127FD3A100C29265 /* GamerTests */;
+			targetProxy = D7DDD7F0127FD9F200C29265 /* PBXContainerItemProxy */;
+		};
+		D7DDD81A127FDBB700C29265 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* Gamer */;
+			targetProxy = D7DDD819127FDBB700C29265 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/Gamer.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Gamer;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Gamer.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Gamer;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D7DB90911280832600D6C442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PREBINDING = NO;
+				PRODUCT_NAME = ASIHttp;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D7DB90921280832600D6C442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = ASIHttp;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		D7DDD796127FD3A200C29265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "GamerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GamerTests;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D7DDD797127FD3A200C29265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "GamerTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = GamerTests;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		D7DDD7A0127FD3BA00C29265 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/Gamer.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = GamerTesting;
+			};
+			name = Debug;
+		};
+		D7DDD7A1127FD3BA00C29265 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Gamer.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Gamer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Gamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Gamer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DB90931280835000D6C442 /* Build configuration list for PBXNativeTarget "ASIHttp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DB90911280832600D6C442 /* Debug */,
+				D7DB90921280832600D6C442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DDD798127FD3A200C29265 /* Build configuration list for PBXNativeTarget "GamerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DDD796127FD3A200C29265 /* Debug */,
+				D7DDD797127FD3A200C29265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DDD79F127FD3BA00C29265 /* Build configuration list for PBXNativeTarget "GamerTesting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DDD7A0127FD3BA00C29265 /* Debug */,
+				D7DDD7A1127FD3BA00C29265 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
