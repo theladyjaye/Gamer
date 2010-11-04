@@ -7,6 +7,39 @@ var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
 exports.endpoints = function(app)
 {
 	app.get('/:platform', getGamesForPlatform);
+	app.get('/:platform/search/:game', searchGamesForPlatform);
+}
+
+function searchGamesForPlatform(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game.toLowerCase();
+	
+	db.view("application", "games-search-by-name", {"include_docs":true, "startkey":[platform, game], "endkey":[platform, game + "\u9999"]}, function(error, data)
+	{
+		if(error == null)
+		{
+			results    = [];
+			var unique = {};
+			
+			data.rows.forEach(function(row)
+			{
+				if(typeof unique[row.doc._id] == "undefined")
+				{
+					results.push({"id":row.doc._id, "label":row.doc.label});
+					unique[row.doc._id] = true;
+				}
+			});
+			
+			unique = null;
+			next({"ok":true, "games":results});
+		}
+		else
+		{
+			console.log(error);
+			next({"ok":false, "message":Errors.unknown_error.message});
+		}
+	});
 }
 
 function getGamesForPlatform(req, res, next)

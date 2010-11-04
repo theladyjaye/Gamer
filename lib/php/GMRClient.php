@@ -157,6 +157,19 @@ final class GMRClient
 		return false;
 	}
 	
+	public function searchPlatformForGames($platform, $query)
+	{
+		$response = $this->request->execute(array('path'          => '/games/'.$platform.'/search/'.$query,
+		                                          'method'        => 'GET'));
+		
+		$data = json_decode($response);
+		
+		if($data->ok)
+			return $data;
+			
+		return false;
+	}
+	
 	/**
 	 * List of games for a given platform. Page limit is defined by GMRClient::kPageLimit
 	 *

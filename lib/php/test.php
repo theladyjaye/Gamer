@@ -51,6 +51,14 @@ echo $created_match_id;
 <pre>
 	<?php print_r($client->matchesForUser('bpuglisi')); ?>
 </pre>
+
+<hr>
+<h2>Search For Game "red" Within Platform Xbox 360</h2>
+<pre>
+	
+	<?php print_r($client->searchPlatformForGames(GMRPlatform::kXbox360, "red"));?>
+</pre>
+
 <hr>
 
 <h2>Games for XBox 360 <span style="color:#00cc00">Page 1</span></h2>

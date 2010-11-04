@@ -44,29 +44,32 @@ function leaveMatch(req, res, next)
 			
 			if(match.created_by == username)
 			{
-				// remove the whole match
+				// remove the whole match - owner is canceling it
 				db.removeDoc(match._id, match._rev, function(error, data)
 				{
 					if(error == null)
 					{
 						next({"ok":true});
 						
-						var playersQuery  = new PlayersInArray(match.players.slice(1));
-						playersQuery.execute(function(err, rows, fields)
+						if(match.players.length > 1)
 						{
-							rows.forEach(function(player)
+							var playersQuery  = new PlayersInArray(match.players.slice(1));
+							playersQuery.execute(function(err, rows, fields)
 							{
-								var NotificationCancel            = require('../data/NotificationCancel');
-								var currentNotification           = new NotificationCancel();
-								currentNotification.email_to      = player.email;
-								currentNotification.username_to   = player.username
-								currentNotification.username_from = match.created_by;
-								currentNotification.platform      = Platform[match.game.platform].label;
-								currentNotification.game          = match.game.label;
-								currentNotification.date          = match.scheduled_time;
-								currentNotification.send();
+								rows.forEach(function(player)
+								{
+									var NotificationCancel            = require('../data/NotificationCancel');
+									var currentNotification           = new NotificationCancel();
+									currentNotification.email_to      = player.email;
+									currentNotification.username_to   = player.username
+									currentNotification.username_from = match.created_by;
+									currentNotification.platform      = Platform[match.game.platform].label;
+									currentNotification.game          = match.game.label;
+									currentNotification.date          = match.scheduled_time;
+									currentNotification.send();
+								});
 							});
-						});
+						}
 					}
 					else
 					{

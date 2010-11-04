@@ -117,6 +117,9 @@
 			D70A7C031283371D0097DEEB /* XCBuildMessageTextBookmark */ = D70A7C031283371D0097DEEB /* XCBuildMessageTextBookmark */;
 			D70A7C041283371D0097DEEB /* PBXTextBookmark */ = D70A7C041283371D0097DEEB /* PBXTextBookmark */;
 			D70A7C051283374C0097DEEB /* PBXTextBookmark */ = D70A7C051283374C0097DEEB /* PBXTextBookmark */;
+			D70A7C06128337A90097DEEB /* PBXTextBookmark */ = D70A7C06128337A90097DEEB /* PBXTextBookmark */;
+			D70A7C07128337A90097DEEB /* PBXTextBookmark */ = D70A7C07128337A90097DEEB /* PBXTextBookmark */;
+			D70A7C08128337A90097DEEB /* PBXTextBookmark */ = D70A7C08128337A90097DEEB /* PBXTextBookmark */;
 			D7B7288512824A0600419F60 = D7B7288512824A0600419F60 /* PBXTextBookmark */;
 			D7B7288612824A0600419F60 = D7B7288612824A0600419F60 /* PBXTextBookmark */;
 			D7B7288712824A0600419F60 = D7B7288712824A0600419F60 /* PBXTextBookmark */;
@@ -741,6 +744,36 @@
 		vrLen = 1812;
 		vrLoc = 30;
 	};
+	D70A7C06128337A90097DEEB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DB92661280A1FC00D6C442 /* GMRRequest.m */;
+		name = "GMRRequest.m: 45";
+		rLen = 0;
+		rLoc = 1368;
+		rType = 0;
+		vrLen = 1812;
+		vrLoc = 30;
+	};
+	D70A7C07128337A90097DEEB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 48";
+		rLen = 0;
+		rLoc = 1409;
+		rType = 0;
+		vrLen = 2007;
+		vrLoc = 0;
+	};
+	D70A7C08128337A90097DEEB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7AD127FD42400C29265 /* InitializationTests.m */;
+		name = "InitializationTests.m: 32";
+		rLen = 0;
+		rLoc = 991;
+		rType = 0;
+		vrLen = 2007;
+		vrLoc = 0;
+	};
 	D7B7280A128226E700419F60 /* YAJL */ = {
 		activeExec = 0;
 	};
@@ -1195,8 +1228,8 @@
 	D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1310, 949}}";
-			sepNavSelRange = "{1409, 0}";
-			sepNavVisRange = "{42, 1401}";
+			sepNavSelRange = "{991, 0}";
+			sepNavVisRange = "{0, 2007}";
 		};
 	};
 	D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {
