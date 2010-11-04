@@ -53,9 +53,9 @@ static NSArray * platformStrings;
 	
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", query, @"query", nil] 
-		   withCallback:^(NSString * response){
+		   withCallback:^(BOOL ok, NSDictionary * response){
 			   NSLog(@"gamesForPlatform 1: %@", response);
-			   callback([self stringForPlatform:GMRPlatformXBox360]);
+			   callback(ok, response);
 		   }];
 }
 
@@ -68,9 +68,9 @@ static NSArray * platformStrings;
 							username];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
-		   withCallback:^(NSString * response){
+		   withCallback:^(BOOL ok, NSDictionary * response){
 			   NSLog(@"Join 1: %@", response);
-			   callback([self stringForPlatform:GMRPlatformXBox360]);
+			   callback(ok, response);
 		   }];
 	
 }
@@ -84,9 +84,9 @@ static NSArray * platformStrings;
 							username];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
-		   withCallback:^(NSString * response){
+		   withCallback:^(BOOL ok, NSDictionary * response){
 			   NSLog(@"Leave 1: %@", response);
-			   callback([self stringForPlatform:GMRPlatformXBox360]);
+			   callback(ok, response);
 		   }];
 	
 }

@@ -34,9 +34,14 @@
 
 - (void)testGamesForPlatform
 {
-	[client gamesForPlatform:GMRPlatformXBox360 withCallback:^(NSString * response)
+	[client gamesForPlatform:GMRPlatformXBox360 withCallback:^(BOOL ok, NSDictionary * response)
 	{
-		STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+		if(ok)
+			NSLog(@"OOOOOOOOOOOK!");
+		else 
+			NSLog(@"ER-ROARRRRRRRRRRRRRR!");
+
+		//STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
 	}];
 }
 
@@ -45,7 +50,7 @@
 	[client matchJoin:@"bpuglsi" 
 			  platform:GMRPlatformXBox360 
 				gameId:@"halo-reach" 
-			   matchId:@"afd59a" withCallback:^(NSString * response)
+			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
 	 {
 		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
 	 }];
@@ -56,7 +61,7 @@
 	[client matchLeave:@"bpuglsi" 
 			  platform:GMRPlatformXBox360 
 				gameId:@"halo-reach" 
-			   matchId:@"afd59a" withCallback:^(NSString * response)
+			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
 	 {
 		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
 	 }];

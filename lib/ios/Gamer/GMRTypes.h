@@ -14,4 +14,4 @@ enum {
 	GMRPlatformPC
 };
 typedef NSUInteger GMRPlatform;
-typedef void (^GMRCallback)(NSString *);
+typedef void (^GMRCallback)(BOOL, NSDictionary *);

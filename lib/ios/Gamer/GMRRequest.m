@@ -10,6 +10,7 @@
 #import "GMRTypes.h"
 #import "GMRUtils.h"
 #import "ASIHTTPRequest.h"
+#import "YAJLDocument.h"
 
 
 #define API_DOMAIN @"http://hazgame.com:7331"
@@ -43,7 +44,15 @@
 		[request setRequestMethod:[options valueForKey:@"method"]];
 		[request startSynchronous];
 		
-		callback([request responseString]);
+		NSError * error = nil;
+		YAJLDocument * json = [[[YAJLDocument alloc] initWithData:[request responseData] 
+													   parserOptions:YAJLParserOptionsNone 
+															   error:&error] autorelease];		
+		if(error)
+			NSLog(@"ER-ROAR!");
+		
+		
+		callback([[json.root objectForKey:@"ok"] boolValue], (NSDictionary *)json.root);
 	}];
 	
 #if GAMER_TESTING
