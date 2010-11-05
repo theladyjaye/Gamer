@@ -6,6 +6,12 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+enum{
+	GMRMatchAvailabliltyPublic,
+	GMRMatchAvailabliltyPrivate,
+};
+typedef NSUInteger GMRMatchAvailablilty;
+
 enum {
 	GMRPlatformXBox360,
 	GMRPlatformWii,
@@ -14,4 +20,5 @@ enum {
 	GMRPlatformPC
 };
 typedef NSUInteger GMRPlatform;
+
 typedef void (^GMRCallback)(BOOL, NSDictionary *);

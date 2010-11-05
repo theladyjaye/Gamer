@@ -213,7 +213,7 @@ function createMatch(req, res, next)
 			return;
 		}
 		
-		if(fields.username.length < 4)
+		if(req.access_token.user == "system" && fields.username.length < 4)
 		{
 			next({"ok":false, "message":Errors.unknown_user.message});
 			return;

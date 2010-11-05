@@ -70,6 +70,32 @@ static NSArray * platformStrings;
 		   }];
 }
 
+- (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform) availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger) invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label
+{
+	/*
+	 public function matchCreate($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
+	 {
+	 $scheduled_time->setTimezone(new DateTimeZone('UTC'));
+	 
+	 $response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id,
+	 'data'          => array('username'       => $owner,
+	 'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time) compatible with JavaScript
+	 'availability'   => $availability,
+	 'maxPlayers'     => $maxPlayers,
+	 'label'          => $label,
+	 'players'        => $invited_players),
+	 'method'        => 'POST'));
+	 
+	 $data = json_decode($response);
+	 
+	 if($data->ok)
+	 return $data->match;
+	 
+	 return false;
+	 }
+	 */
+}
+
 - (void)matchJoin:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"POST";
@@ -80,7 +106,6 @@ static NSArray * platformStrings;
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
-			   NSLog(@"Join 1: %@", response);
 			   callback(ok, response);
 		   }];
 	
@@ -96,7 +121,6 @@ static NSArray * platformStrings;
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
-			   NSLog(@"Leave 1: %@", response);
 			   callback(ok, response);
 		   }];
 	
