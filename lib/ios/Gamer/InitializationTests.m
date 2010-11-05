@@ -36,13 +36,28 @@
 {
 	[client gamesForPlatform:GMRPlatformXBox360 withCallback:^(BOOL ok, NSDictionary * response)
 	{
-		if(ok)
-			NSLog(@"OOOOOOOOOOOK!");
-		else 
-			NSLog(@"ER-ROARRRRRRRRRRRRRR!");
-
-		//STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+		NSArray * games = [response objectForKey:@"games"];
+		
+		STAssertTrue(ok, @"Api Returned false for: gamesForPlatform:withCallback:");
+		STAssertTrue([games count] == 3, [NSString stringWithFormat:@"Expected 3 Games Returned, got %i", [games count]]);
 	}];
+}
+
+- (void)testSearchPlatformForGame
+{
+	[client searchPlatform:GMRPlatformPC forGame:@"STARCRAFT" withCallback:^(BOOL ok, NSDictionary * response)
+	{
+		NSArray * games = [response objectForKey:@"games"];
+		NSString * label;
+		
+		STAssertTrue(ok, @"Api Returned false for: searchPlatform:forGame:withCallback:");
+		STAssertTrue([games count] == 1, [NSString stringWithFormat:@"Expected 1 Game Returned, got %i", [games count]]);
+		
+		label = [[games objectAtIndex:0] objectForKey:@"label"];
+		
+		STAssertTrue([label isEqualToString:@"Starcraft 2"], [NSString stringWithFormat:@"Expected 'Starcraft 2' got %@", label]);
+	}];
+	
 }
 
 - (void)testMatchJoin

@@ -26,6 +26,7 @@
 
 - (void)testPlatformStrings;
 - (void)testGamesForPlatform;
+- (void)testSearchPlatformForGame;
 
 
 @end

@@ -44,6 +44,18 @@ static NSArray * platformStrings;
 	return [platformStrings objectAtIndex:platform];
 }
 
+- (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback
+{
+	NSString*     method = @"GET";
+	NSString*     path   = [NSString stringWithFormat:@"/games/%@/search/%@", [self stringForPlatform:platform], query];
+	
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+	
+}
 
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback
 {
@@ -54,7 +66,6 @@ static NSArray * platformStrings;
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", query, @"query", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
-			   NSLog(@"gamesForPlatform 1: %@", response);
 			   callback(ok, response);
 		   }];
 }
