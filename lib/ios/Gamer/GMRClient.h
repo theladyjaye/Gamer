@@ -16,13 +16,13 @@
 @interface GMRClient : NSObject
 {
 	GMRRequest * apiRequest;
+	NSString * username;
 }
 
+@property(nonatomic, copy) NSString * username;
+@property(nonatomic, assign) NSString * apiKey;
 
-- (GMRClient *)initWithKey:(NSString *)key;
-
-- (NSString *)apiKey;
-- (void)setApiKey:(NSString *)value;
+- (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name;
 
 - (NSString *)stringForPlatform:(GMRPlatform)platform;
 
@@ -32,8 +32,8 @@
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback;
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform) availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger) invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label;
-- (void)matchJoin:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;
-- (void)matchLeave:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;
+- (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;
+- (void)matchLeave:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;
 
 
 @end

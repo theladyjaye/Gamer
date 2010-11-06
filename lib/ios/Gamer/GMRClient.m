@@ -13,6 +13,8 @@
 static NSArray * platformStrings;
 
 @implementation GMRClient
+@synthesize username;
+@dynamic apiKey;
 
 +(void)initialize
 {
@@ -37,17 +39,19 @@ static NSArray * platformStrings;
 	return self;
 }
 
-- (GMRClient *)initWithKey:(NSString *)key
+- (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name
 {
 	self = [self init];
 	
 	if(self)
 	{
 		apiRequest.key = key;
+		username = [name copy];
 	}
 	
 	return self;
 }
+
 
 - (NSString *)apiKey
 {
@@ -59,16 +63,17 @@ static NSArray * platformStrings;
 	apiRequest.key = value;
 }
 
+
 - (NSString *)stringForPlatform:(GMRPlatform)platform
 {
 	return [platformStrings objectAtIndex:platform];
 }
 
-- (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback
+- (void)authenticateUser:(NSString *)name password:(NSString *)password withCallback:(GMRCallback)callback
 {
 	NSString*      method = @"POST";
 	NSString*      path   = @"http://hazgame.com/accounts/login";
-	NSDictionary * data  = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", password, @"password", nil];
+	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:name, @"username", password, @"password", nil];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
 		   withCallback:^(BOOL ok, NSDictionary * response){
@@ -141,7 +146,7 @@ static NSArray * platformStrings;
 	 */
 }
 
-- (void)matchJoin:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
+- (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"POST";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
@@ -156,7 +161,7 @@ static NSArray * platformStrings;
 	
 }
 
-- (void)matchLeave:(NSString *)username platform:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
+- (void)matchLeave:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"DELETE";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
@@ -173,7 +178,11 @@ static NSArray * platformStrings;
 
 - (void)dealloc
 {
+	self.username = nil;
+	
+	[apiRequest release];
 	apiRequest = nil;
+	
 	[super dealloc];
 }
 

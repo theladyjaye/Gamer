@@ -51,9 +51,10 @@ static GMRClient * client;
 		STAssertTrue(ok, [NSString stringWithFormat:@"Could not authenticate user %@ with password %@", USERNAME, PASSWORD]);
 		STAssertTrue([token isEqualToString:API_KEY], [NSString stringWithFormat:@"Expected token %@ got:%@", API_KEY, token]);
 		
-		[client setApiKey:token];
+		client.apiKey   = token;
+		client.username = USERNAME;
 		
-		STAssertTrue([[client apiKey] isEqualToString:token], [NSString stringWithFormat:@"Expected client token %@ got:%@", token, [client apiKey]]);
+		STAssertTrue([client.apiKey isEqualToString:token], [NSString stringWithFormat:@"Expected client token %@ got:%@", token, client.apiKey]);
 	}];
 }
 
@@ -98,8 +99,7 @@ static GMRClient * client;
 
 - (void)testMatchJoin
 {
-	[client matchJoin:@"bpuglsi" 
-			  platform:GMRPlatformXBox360 
+	[client matchJoin:GMRPlatformXBox360 
 				gameId:@"halo-reach" 
 			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
 	 {
@@ -109,8 +109,7 @@ static GMRClient * client;
 
 - (void)testMatchLeave
 {
-	[client matchLeave:@"bpuglsi" 
-			  platform:GMRPlatformXBox360 
+	[client matchLeave:GMRPlatformXBox360 
 				gameId:@"halo-reach" 
 			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
 	 {
