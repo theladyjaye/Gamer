@@ -28,9 +28,11 @@
 - (void)testSearchPlatformForGame;
 - (void)testGamesForPlatform;
 - (void)testMatch1Create;
-- (void)testMatch2Join;
-- (void)testMatch3Leave;
-- (void)testMatch4Cancel;
+- (void)testMatch2Scheduled;
+- (void)testMatch3Join;
+- (void)testMatch4Leave;
+- (void)testMatch5Cancel;
+- (void)testMatch6Scheduled; // we check scheduled twice because we create a match and then cancel a match, need to make sure the scheduled quantity is correct
 
 
 @end

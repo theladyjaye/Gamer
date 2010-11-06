@@ -120,6 +120,16 @@ static NSArray * platformStrings;
 		   }];
 }
 
+- (void)matchesScheduled:(GMRCallback)callback
+{
+	NSString*     method = @"GET";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/scheduled/%@", username];
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+}
+
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
 {
 	NSString * time;

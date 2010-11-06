@@ -19,6 +19,8 @@
 #define API_KEY_USER_1 @"359390f17f9ce566c7248b8b111ab4f8"
 #define API_KEY_USER_2 @"0d266a3aed2466c265c0aa401b073cd7"
 
+#define USER_1_SCHEDULED_MATCHES 4
+
 
 static GMRClient * client;
 static NSString * kCreatedMatchId1;
@@ -124,7 +126,17 @@ static NSString * kCreatedMatchId1;
 		   }];
 }
 
-- (void)testMatch2Join
+- (void)testMatch2Scheduled
+{
+	[client matchesScheduled:^(BOOL ok, NSDictionary * response){
+		NSArray * matches = [response objectForKey:@"matches"];
+		
+		STAssertTrue(ok, @"Unable to get Scheduled Matches");
+		STAssertTrue([matches count] == (USER_1_SCHEDULED_MATCHES + 1), [NSString stringWithFormat:@"Expected %i scheduled matches got %i", (USER_1_SCHEDULED_MATCHES + 1), [matches count]]);
+	}];
+}
+
+- (void)testMatch3Join
 {
 	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_2 andName:USER_2];
 	
@@ -138,7 +150,7 @@ static NSString * kCreatedMatchId1;
 	 }];
 }
 
-- (void)testMatch3Leave
+- (void)testMatch4Leave
 {
 	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_2 andName:USER_2];
 	NSLog(@"Leaving Match: %@", kCreatedMatchId1);
@@ -153,7 +165,7 @@ static NSString * kCreatedMatchId1;
 	 }];
 }
 
-- (void)testMatch4Cancel
+- (void)testMatch5Cancel
 {
 	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_1 andName:USER_1];
 	[gmrClient matchLeave:GMRPlatformXBox360 
@@ -164,6 +176,16 @@ static NSString * kCreatedMatchId1;
 		 STAssertTrue(ok, @"Unable to cancel match");
 		 [gmrClient release];
 	 }];
+}
+
+- (void)testMatch6Scheduled
+{
+	[client matchesScheduled:^(BOOL ok, NSDictionary * response){
+		NSArray * matches = [response objectForKey:@"matches"];
+		
+		STAssertTrue(ok, @"Unable to get Scheduled Matches");
+		STAssertTrue([matches count] == USER_1_SCHEDULED_MATCHES, [NSString stringWithFormat:@"Expected %i scheduled matches got %i", USER_1_SCHEDULED_MATCHES, [matches count]]);
+	}];
 }
 
 

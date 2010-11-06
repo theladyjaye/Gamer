@@ -346,7 +346,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D71C11EB1285ED3F00126EDC</string>
+										<string>D71C120B1285F11000126EDC</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -372,13 +372,13 @@
 											<string>D70A7C4212838CBA0097DEEB</string>
 											<string>D75B1757128520F3004C7DB8</string>
 											<string>D71C11191285D26900126EDC</string>
-											<string>D71C111A1285D26900126EDC</string>
 											<string>D71C11791285E35100126EDC</string>
 											<string>D71C11911285E47A00126EDC</string>
 											<string>D71C119A1285E4B500126EDC</string>
-											<string>D71C11D31285EA4B00126EDC</string>
-											<string>D71C11E81285ED2C00126EDC</string>
-											<string>D71C11E91285ED2C00126EDC</string>
+											<string>D71C11EF1285EE3100126EDC</string>
+											<string>D71C11F91285EF8500126EDC</string>
+											<string>D71C12001285F08000126EDC</string>
+											<string>D71C12011285F08000126EDC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -392,18 +392,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1371, 920}}</string>
+								<string>{{0, 0}, {1371, 644}}</string>
 								<key>RubberWindowFrame</key>
 								<string>16 62 1664 966 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>920pt</string>
+							<string>644pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>276pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -471,7 +471,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1371, -27}}</string>
+										<string>{{10, 27}, {1371, 249}}</string>
 										<key>RubberWindowFrame</key>
 										<string>16 62 1664 966 0 0 1680 1028 </string>
 									</dict>
@@ -678,7 +678,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>310766910.99804699</real>
+	<real>310767888.55046898</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
