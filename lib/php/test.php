@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'GMRClient.php';
-$client = new GMRClient('12345');
+$client = new GMRClient('a35dec05633be98c00ebc27a46f54365');
 ?>
 
 <h2>Create New Match, Owned By: <span style="color:#00cc00">aventurella</span></h2>

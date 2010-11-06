@@ -9,5 +9,3 @@ function getVersion(req, res, next)
 {
 	next({"ok":true, "name":environment.api.name, "version":environment.api.version});
 }
-
-
