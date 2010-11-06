@@ -120,30 +120,40 @@ static NSArray * platformStrings;
 		   }];
 }
 
-- (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform) availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger) invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label
+- (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
 {
-	/*
-	 public function matchCreate($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
-	 {
-	 $scheduled_time->setTimezone(new DateTimeZone('UTC'));
-	 
-	 $response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id,
-	 'data'          => array('username'       => $owner,
-	 'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time) compatible with JavaScript
-	 'availability'   => $availability,
-	 'maxPlayers'     => $maxPlayers,
-	 'label'          => $label,
-	 'players'        => $invited_players),
-	 'method'        => 'POST'));
-	 
-	 $data = json_decode($response);
-	 
-	 if($data->ok)
-	 return $data->match;
-	 
-	 return false;
-	 }
-	 */
+	NSString * time;
+	NSString * availabilityString  = (availability == GMRMatchAvailabliltyPublic) ? @"public" : @"private";
+	NSLocale * enUSPOSIXLocale     = [[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease];
+	NSTimeZone * utc               = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	
+	// JSON format: 2010-11-06T18:18:19.658Z we are leaving off fractions of a second
+	// if you need it the format would be:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"
+	dateFormatter.dateFormat = @"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'";
+    [dateFormatter setTimeZone:utc];
+	[dateFormatter setLocale:enUSPOSIXLocale];
+	
+	
+    time = [dateFormatter stringFromDate:scheduledTime];
+    
+	[dateFormatter release];
+	
+	NSString*     method = @"POST";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [self stringForPlatform:platform], gameId];
+	
+	// send urlencoded array for invitedPlayers as "players"
+	NSDictionary* data   = [NSDictionary dictionaryWithObjectsAndKeys:
+							time,                                          @"scheduled_time",
+							availabilityString,                            @"availability", 
+							[NSString stringWithFormat:@"%u", maxPlayers], @"maxPlayers",
+							label,                                         @"label", 
+							invitedPlayers,                                @"players", nil];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
 }
 
 - (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback

@@ -11,10 +11,17 @@
 
 #define USERNAME @"aventurella"
 #define PASSWORD @"12345"
-#define API_KEY  @"359390f17f9ce566c7248b8b111ab4f8"
 #define VERSION  @"0.2"
+#define GAME_ID  @"halo-reach"
+
+#define USER_1   @"aventurella"
+#define USER_2   @"bpuglisi"
+#define API_KEY_USER_1 @"359390f17f9ce566c7248b8b111ab4f8"
+#define API_KEY_USER_2 @"0d266a3aed2466c265c0aa401b073cd7"
+
 
 static GMRClient * client;
+static NSString * kCreatedMatchId1;
 
 @implementation InitializationTests
 
@@ -49,9 +56,9 @@ static GMRClient * client;
 		NSString * token = [response objectForKey:@"token"];
 		
 		STAssertTrue(ok, [NSString stringWithFormat:@"Could not authenticate user %@ with password %@", USERNAME, PASSWORD]);
-		STAssertTrue([token isEqualToString:API_KEY], [NSString stringWithFormat:@"Expected token %@ got:%@", API_KEY, token]);
+		STAssertTrue([token isEqualToString:API_KEY_USER_1], [NSString stringWithFormat:@"Expected token %@ got:%@", API_KEY_USER_1, token]);
 		
-		client.apiKey   = token;
+		client.apiKey   = API_KEY_USER_1;
 		client.username = USERNAME;
 		
 		STAssertTrue([client.apiKey isEqualToString:token], [NSString stringWithFormat:@"Expected client token %@ got:%@", token, client.apiKey]);
@@ -97,23 +104,65 @@ static GMRClient * client;
 	
 }
 
-- (void)testMatchJoin
+- (void)testMatch1Create
 {
-	[client matchJoin:GMRPlatformXBox360 
-				gameId:@"halo-reach" 
-			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
+	NSDate * date = [NSDate dateWithTimeIntervalSinceNow:1800];
+	
+	[client matchCreate:date 
+				 gameId:GAME_ID 
+			   platform:GMRPlatformXBox360 
+		   availability:GMRMatchAvailabliltyPublic 
+			 maxPlayers:4
+		 invitedPlayers:nil//[NSArray arrayWithObjects:USER_2, nil]
+				  label:@"My first iPhone test game"
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   STAssertTrue(ok, @"Unable to create match");
+			   
+			   kCreatedMatchId1 = [response objectForKey:@"match"];
+			   [kCreatedMatchId1 retain];
+			   NSLog(@"Created Game: %@", kCreatedMatchId1);
+		   }];
+}
+
+- (void)testMatch2Join
+{
+	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_2 andName:USER_2];
+	
+	[gmrClient matchJoin:GMRPlatformXBox360 
+				gameId:GAME_ID 
+			   matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
 	 {
-		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+		 STAssertTrue(ok, @"Unable to join match");
+		 NSLog(@"Joined Game Response %@", response);
+		 [gmrClient release];
 	 }];
 }
 
-- (void)testMatchLeave
+- (void)testMatch3Leave
 {
-	[client matchLeave:GMRPlatformXBox360 
-				gameId:@"halo-reach" 
-			   matchId:@"afd59a" withCallback:^(BOOL ok, NSDictionary * response)
+	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_2 andName:USER_2];
+	NSLog(@"Leaving Match: %@", kCreatedMatchId1);
+	
+	[gmrClient matchLeave:GMRPlatformXBox360 
+				gameId:GAME_ID 
+			   matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
 	 {
-		 //STAssertTrue(response == @"xbox360", [NSString stringWithFormat:@"Expected xbox360 got %@", response]);
+		 NSLog(@"Leave Response %@", response);
+		 STAssertTrue(ok, @"Unable to leave match");
+		 [gmrClient release];
+	 }];
+}
+
+- (void)testMatch4Cancel
+{
+	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_1 andName:USER_1];
+	[gmrClient matchLeave:GMRPlatformXBox360 
+				   gameId:GAME_ID
+				  matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
+	 {
+		 NSLog(@"Cancel Response %@", response);
+		 STAssertTrue(ok, @"Unable to cancel match");
+		 [gmrClient release];
 	 }];
 }
 

@@ -16,11 +16,26 @@
 +(NSString *)formEncodedStringFromDictionary:(NSDictionary *)value
 {
 	NSMutableArray* arguments = [NSMutableArray arrayWithCapacity:[value count]];
+	
 	for (NSString* key in value)
 	{
-		[arguments addObject:[NSString stringWithFormat:@"%@=%@",
-							  [GMRUtils formEncodedStringFromString:key],
-							  [GMRUtils formEncodedStringFromString:[[value objectForKey:key] description]]]];
+		if([[value objectForKey:key] isKindOfClass:[NSArray class]])
+		{
+			NSArray * arrayParam = (NSArray *)[value objectForKey:key];
+			
+			for(NSString * item in arrayParam)
+			{
+				[arguments addObject:[NSString stringWithFormat:@"%@[]=%@",
+									  [GMRUtils formEncodedStringFromString:key],
+									  [GMRUtils formEncodedStringFromString:item]]];
+			}
+		}
+		else 
+		{
+			[arguments addObject:[NSString stringWithFormat:@"%@=%@",
+								  [GMRUtils formEncodedStringFromString:key],
+								  [GMRUtils formEncodedStringFromString:[[value objectForKey:key] description]]]];
+		}
 	}
 	
 	return [arguments componentsJoinedByString:@"&"];

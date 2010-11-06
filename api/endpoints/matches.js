@@ -35,7 +35,7 @@ function leaveMatch(req, res, next)
 		{
 			if(req.access_token.user != "system")
 			{
-				if((req.access_token.user != username) || (req.access_token.user != match.created_by))
+				if((req.access_token.user != username) && (req.access_token.user != match.created_by))
 				{
 					next({"ok":false, "message":Errors.unauthorized_client.message});
 					return;

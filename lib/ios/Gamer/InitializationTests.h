@@ -23,10 +23,14 @@
 //- (void) testMath;              // simple standalone test
 
 - (void)testPlatformStrings;
-- (void)testGamesForPlatform;
-- (void)testSearchPlatformForGame;
 - (void)testAuthenticateUser;
 - (void)testVersion;
+- (void)testSearchPlatformForGame;
+- (void)testGamesForPlatform;
+- (void)testMatch1Create;
+- (void)testMatch2Join;
+- (void)testMatch3Leave;
+- (void)testMatch4Cancel;
 
 
 @end

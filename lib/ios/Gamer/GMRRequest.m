@@ -61,6 +61,7 @@
 			if(data)
 			{
 				NSMutableData * postBody = [NSMutableData data];
+				
 				[postBody appendData:[[GMRUtils formEncodedStringFromDictionary:data] dataUsingEncoding:NSUTF8StringEncoding]];
 				
 				[request addRequestHeader:@"Content-Type"    value:@"application/x-www-form-urlencoded"];
