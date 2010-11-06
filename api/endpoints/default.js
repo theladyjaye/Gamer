@@ -1,6 +1,7 @@
 exports.defaultResponse = function(req, res, next)
 {
-	next({"ok":true, "message":"Welcome to Gamer", "version":"0.1"});
+	var environment = require('../system/environment');
+	next({"ok":true, "message":"Welcome to " + environment.api.name, "version":environment.api.version});
 }
 
 exports.renderResponse = function(err, req, res, next)

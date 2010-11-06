@@ -9,18 +9,29 @@
 #import "InitializationTests.h"
 #import "GMRClient.h"
 
+#define USERNAME @"aventurella"
+#define PASSWORD @"12345"
+#define API_KEY  @"359390f17f9ce566c7248b8b111ab4f8"
+#define VERSION  @"0.2"
+
+static GMRClient * client;
+
 @implementation InitializationTests
 
 
 - (void) setUp 
 {
-	client = [[GMRClient alloc] initWithKey:@"12345"];
-	STAssertNotNil(client, @"Could not create GMRClient.");
+	if(!client)
+	{
+		client = [[GMRClient alloc] init];
+		STAssertNotNil(client, @"Could not create GMRClient.");
+	}
 }
 
 - (void) tearDown 
 {
-	[client release];
+	//NSLog(@"tearDown");
+	//[client release];
 }
 	
 - (void)testPlatformStrings
@@ -31,6 +42,31 @@
 	STAssertTrue(@"playstation2" == [client stringForPlatform:GMRPlatformPlaystation2], @"GMRPlatformPlaystation2 does not equal playstation2");
 	STAssertTrue(@"pc" == [client stringForPlatform:GMRPlatformPC], @"GMRPlatformPC does not equal pc");
 }
+
+- (void)testAuthenticateUser
+{
+	[client authenticateUser:USERNAME password:PASSWORD withCallback:^(BOOL ok, NSDictionary * response){
+		NSString * token = [response objectForKey:@"token"];
+		
+		STAssertTrue(ok, [NSString stringWithFormat:@"Could not authenticate user %@ with password %@", USERNAME, PASSWORD]);
+		STAssertTrue([token isEqualToString:API_KEY], [NSString stringWithFormat:@"Expected token %@ got:%@", API_KEY, token]);
+		
+		[client setApiKey:token];
+		
+		STAssertTrue([[client apiKey] isEqualToString:token], [NSString stringWithFormat:@"Expected client token %@ got:%@", token, [client apiKey]]);
+	}];
+}
+
+- (void)testVersion
+{
+	[client version:^(BOOL ok, NSDictionary * response){
+		
+		NSString * version = [response objectForKey:@"version"];
+		STAssertTrue(ok, @"Could not access version endpoint");
+		STAssertTrue([version isEqualToString:VERSION], [NSString stringWithFormat:@"Invalid version. Expecting %@ got %@", VERSION, version]);
+	}];
+}
+
 
 - (void)testGamesForPlatform
 {

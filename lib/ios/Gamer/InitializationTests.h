@@ -13,12 +13,10 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
-#import "GMRClient.h"
-//#import "application_headers" as required
+//#import "GMRClient.h"
 
 @interface InitializationTests : SenTestCase 
 {
-	GMRClient * client;
 }
 
 
@@ -27,6 +25,8 @@
 - (void)testPlatformStrings;
 - (void)testGamesForPlatform;
 - (void)testSearchPlatformForGame;
+- (void)testAuthenticateUser;
+- (void)testVersion;
 
 
 @end

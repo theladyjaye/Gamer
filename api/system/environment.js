@@ -1,5 +1,8 @@
 module.exports = { 
 	
+	api:{version: "0.2",
+	    name:"Gamer"},
+	
 	host:{name:"hazgame.com", 
 	      port:7331
 	     },

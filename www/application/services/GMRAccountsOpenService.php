@@ -120,6 +120,7 @@ class GMRAccountsOpenService extends GMRAbstractService
 				$user->email        = $input->email;
 				$user->firstname    = $input->firstname;
 				$user->lastname     = $input->lastname;
+				$user->token        = GMRSecurity::generate_token(uniqid(true));
 				$user->password     = GMRSecurity::hash($input->password);
 				
 				$user               = $user->save();
@@ -175,6 +176,8 @@ class GMRAccountsOpenService extends GMRAbstractService
 			$input->addValidator(new AMPatternValidator('username', AMValidator::kRequired, '/^[\w\d]{4,}$/', "Invalid username.  Expecting minimum 4 characters. Must be composed of letters, numbers or _"));
 		}
 		
+		
+		
 		if($input->isValid)
 		{
 			$user = $is_email ? GMRUser::userWithEmail($input->username) : GMRUser::userWithUsername($input->username);
@@ -185,17 +188,25 @@ class GMRAccountsOpenService extends GMRAbstractService
 				
 				if($user->active == 1 && $password == $user->password)
 				{
-					$currentUser            = new GMRCurrentUser();
-					$currentUser->id        = $user->id;
-					$currentUser->firstname = $user->firstname;
-					$currentUser->lastname  = $user->lastname;
-					$currentUser->username  = $user->username;
-					$currentUser->email     = $user->email;
-					
-					$this->session->currentUser = $currentUser;
-					
-					$response->ok     = true;
-					$response->user   = $currentUser;
+					if(GMRApplication::isMobileClient())
+					{
+						$response->ok     = true;
+						$response->token  = $user->token;
+					}
+					else
+					{
+						$currentUser            = new GMRCurrentUser();
+						$currentUser->id        = $user->id;
+						$currentUser->firstname = $user->firstname;
+						$currentUser->lastname  = $user->lastname;
+						$currentUser->username  = $user->username;
+						$currentUser->email     = $user->email;
+
+						$this->session->currentUser = $currentUser;
+
+						$response->ok     = true;
+						$response->user   = $currentUser;
+					}
 				}
 				else
 				{

@@ -35,6 +35,11 @@ class GMRApplication
 		return $date->format(DateTime::ISO8601);
 	}
 	
+	public static function isMobileClient()
+	{
+		return $_SERVER['HTTP_USER_AGENT'] == 'HazGame Mobile';
+	}
+	
 	public function startSession()
 	{
 		session_set_cookie_params(0, '/', '.'.GMRConfiguration::applicationDomain(), false);

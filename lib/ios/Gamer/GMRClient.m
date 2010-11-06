@@ -25,24 +25,69 @@ static NSArray * platformStrings;
 	[platformStrings retain];
 }
 
-- (GMRClient *)initWithKey:(NSString *)key
+- (id)init
 {
 	self = [super init];
 	
 	if(self)
 	{
-		apiRequest     = [[GMRRequest alloc] init];
+		apiRequest = [[GMRRequest alloc] init];
+	}
+	
+	return self;
+}
+
+- (GMRClient *)initWithKey:(NSString *)key
+{
+	self = [self init];
+	
+	if(self)
+	{
 		apiRequest.key = key;
 	}
 	
 	return self;
 }
 
+- (NSString *)apiKey
+{
+	return apiRequest.key;
+}
+
+- (void)setApiKey:(NSString *)value
+{
+	apiRequest.key = value;
+}
 
 - (NSString *)stringForPlatform:(GMRPlatform)platform
 {
 	return [platformStrings objectAtIndex:platform];
 }
+
+- (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback
+{
+	NSString*      method = @"POST";
+	NSString*      path   = @"http://hazgame.com/accounts/login";
+	NSDictionary * data  = [NSDictionary dictionaryWithObjectsAndKeys:username, @"username", password, @"password", nil];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+	
+}
+
+- (void)version:(GMRCallback)callback
+{
+	NSString*     method = @"GET";
+	NSString*     path   = @"/system/version";
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+}
+
 
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback
 {

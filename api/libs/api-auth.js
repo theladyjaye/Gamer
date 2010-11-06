@@ -7,33 +7,42 @@ var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
 
 exports.access = function (req, res, next)
 {
-	if(typeof req.headers.authorization != "undefined")
+	if(req.headers["content-length"] > 0)
 	{
-		if(req.headers["content-length"] > 0)
+		var form = new formidable.IncomingForm();
+		
+		form.parse(req, function(err, fields, files) 
 		{
-			var form = new formidable.IncomingForm();
-			
-			form.parse(req, function(err, fields, files) 
+			if(err == null)
 			{
-				if(err == null)
-				{
-					req.form = {"fields":fields, "files":files};
-					hydrateToken(req, next);
-				}
-				else
-				{
-					next({"ok":false, "message":Errors.unknown_error.message});
-				}
-			});
-		}
-		else
-		{
-			hydrateToken(req, next);
-		}
+				req.form = {"fields":fields, "files":files};
+				
+				authorizeAction(req, next);
+			}
+			else
+			{
+				next({"ok":false, "message":Errors.unknown_error.message});
+			}
+		});
 	}
 	else
 	{
-		// the whole API requires authorization.
+		authorizeAction(req, next)
+	}
+}
+
+function authorizeAction(req, next)
+{
+	if(typeof req.headers.authorization != "undefined")
+	{
+		hydrateToken(req, next);
+	}
+	else
+	{
+		/*
+			TODO Enable security on the API here for testing/launch
+		*/
+		// the whole API requires authorization. except when you are authorizing
 		// uncomment this line if you want to debug without a token present.
 		// next({"ok":false, "message":Errors.unauthorized_client.message});
 		next();
@@ -44,12 +53,14 @@ function hydrateToken(req, next)
 {
 	var token = req.headers.authorization.split(' ')[1];
 	
-	db.getDoc(encodeURIComponent('token/' + token), function(error, data)
+	var TokenAuthenticate = require('../data/queries/TokenAuthenticate');
+	var authenticate = new TokenAuthenticate(token);
+	
+	authenticate.execute(function(err, rows, fields)
 	{
-		if(error == null)
+		if(err == null && rows.length == 1)
 		{
-			req.access_token = data;
-			//formHandler(req, next);
+			req.access_token = {"user":rows[0].username}
 			next();
 		}
 		else

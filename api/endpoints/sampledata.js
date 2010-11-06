@@ -46,6 +46,14 @@ function initialize(req, res, next)
 	    t1.user           = "system";
 	    t1.setId('12345');
 	
+	var t2                = new Token();
+	    t2.user           = "aventurella";
+	    t2.setId('123456');
+	
+	var t3                = new Token();
+	    t3.user           = "bpuglisi";
+	    t3.setId('1234567');
+	
 	var g1                = new Game();
 	    g1.label          = "Halo:Reach";
 	    g1._id            = "game/halo-reach";
@@ -190,6 +198,8 @@ function initialize(req, res, next)
 	    m9.players.push(m9.created_by);
 
 	db.saveDoc(t1);
+	db.saveDoc(t2);
+	db.saveDoc(t3);
 	
 	db.saveDoc(g1);
 	db.saveDoc(g2);

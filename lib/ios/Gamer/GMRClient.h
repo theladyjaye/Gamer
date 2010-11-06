@@ -20,7 +20,15 @@
 
 
 - (GMRClient *)initWithKey:(NSString *)key;
+
+- (NSString *)apiKey;
+- (void)setApiKey:(NSString *)value;
+
 - (NSString *)stringForPlatform:(GMRPlatform)platform;
+
+- (void)version:(GMRCallback)callback;
+- (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback;
+
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback;
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform) availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger) invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label;

@@ -14,6 +14,8 @@
 
 
 #define API_DOMAIN @"http://hazgame.com:7331"
+#define USER_AGENT @"HazGame Mobile"
+
 #define GAMER_TESTING 1
 
 @implementation GMRRequest
@@ -25,11 +27,20 @@
 	
 	[q addOperationWithBlock:^{
 		
-		NSString * endpoint = [NSString stringWithFormat:@"%@%@", API_DOMAIN, [options valueForKey:@"path"]];
+		NSString * path   = (NSString *)[options objectForKey:@"path"];
+		NSString * method = (NSString *)[options objectForKey:@"method"];
+		
+		NSRange absolutePath = [path rangeOfString:@"http://"];
+		
+		if(absolutePath.location == NSNotFound)
+			path = [NSString stringWithFormat:@"%@%@", API_DOMAIN, path];
+			
+		
+		NSString * endpoint = path;
 		
 		if ([options objectForKey:@"query"] != nil) 
 		{
-			NSDictionary * query = (NSDictionary *) [options valueForKey:@"query"];
+			NSDictionary * query = (NSDictionary *) [options objectForKey:@"query"];
 			endpoint = [NSString stringWithFormat:@"%@?%@", endpoint, [GMRUtils formEncodedStringFromDictionary:query]];
 		}
 		
@@ -39,9 +50,26 @@
 		
 		[request addRequestHeader:@"Authorization" value:[NSString stringWithFormat:@"OAuth %@", self.key]];
 		[request addRequestHeader:@"Accept"        value:@"application/json"];
-		[request addRequestHeader:@"User-Agent"    value:@"HazGame Mobile"];
+		[request addRequestHeader:@"User-Agent"    value:USER_AGENT];
 		
-		[request setRequestMethod:[options valueForKey:@"method"]];
+		[request setRequestMethod:method];
+		
+		if([method isEqualToString:@"POST"])
+		{
+			NSDictionary * data = [options objectForKey:@"data"];
+			
+			if(data)
+			{
+				NSMutableData * postBody = [NSMutableData data];
+				[postBody appendData:[[GMRUtils formEncodedStringFromDictionary:data] dataUsingEncoding:NSUTF8StringEncoding]];
+				
+				[request addRequestHeader:@"Content-Type"    value:@"application/x-www-form-urlencoded"];
+				[request addRequestHeader:@"Content-Length"  value:[NSString stringWithFormat:@"%u", [postBody length]]];
+				[request setPostBody:postBody];
+			}
+			
+		}
+		
 		[request startSynchronous];
 		
 		NSError * error = nil;

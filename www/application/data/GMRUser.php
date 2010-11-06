@@ -8,6 +8,7 @@ class GMRUser
 	public $lastname;
 	public $password;
 	public $active;
+	public $token;
 	public $created_on;
 	
 	public static function hasUserWithNameOrEmail($username, $email)
@@ -114,6 +115,7 @@ class GMRUser
 		$object->lastname   = $array['lastname'];
 		$object->password   = $array['password'];
 		$object->active     = (int) $array['active'];
+		$object->token      = $array['token'];
 		$object->created_on = $array['created_on'];
 		
 		return $object;
@@ -133,6 +135,7 @@ class GMRUser
 			                                                    'firstname' => $this->firstname,
 			                                                    'lastname'  => $this->lastname,
 			                                                    'active'    => $this->active,
+			                                                    'token'     => $this->token,
 			                                                    'password'  => $this->password));
 			$query->execute();
 			$object = $this;
@@ -146,6 +149,7 @@ class GMRUser
 			                                                    'email'     => $this->email,
 			                                                    'firstname' => $this->firstname,
 			                                                    'lastname'  => $this->lastname,
+			                                                    'token'     => $this->token,
 			                                                    //'active'    => $this->active,
 			                                                    'password'  => $this->password));
 			$query->execute();
