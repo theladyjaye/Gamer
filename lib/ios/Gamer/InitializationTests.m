@@ -198,6 +198,7 @@ static NSString * kCreatedMatchId1;
 						andTimeInterval:GMRTimeIntervalHour 
 						   withCallback:^(BOOL ok, NSDictionary * response){
 							   NSArray * matches = [response objectForKey:@"matches"];
+							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within the hour"); 
 							   STAssertTrue([matches count] == MATCHES_XBOX360_HOUR, [NSString stringWithFormat:@"Expected %i scheduled matches within the hour got %i", MATCHES_XBOX360_HOUR, [matches count]]);
 						   }];
@@ -210,6 +211,7 @@ static NSString * kCreatedMatchId1;
 						andTimeInterval:GMRTimeInterval30Min
 						   withCallback:^(BOOL ok, NSDictionary * response){
 							   NSArray * matches = [response objectForKey:@"matches"];
+							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within 30min");
 							   STAssertTrue([matches count] == MATCHES_XBOX360_30MIN, [NSString stringWithFormat:@"Expected %i scheduled matches within 30min got %i", MATCHES_XBOX360_30MIN, [matches count]]);
 						   }];
@@ -222,6 +224,7 @@ static NSString * kCreatedMatchId1;
 						andTimeInterval:GMRTimeInterval15Min
 						   withCallback:^(BOOL ok, NSDictionary * response){
 							   NSArray * matches = [response objectForKey:@"matches"];
+							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within 15min"); 
 							   STAssertTrue([matches count] == MATCHES_XBOX360_15MIN, [NSString stringWithFormat:@"Expected %i scheduled matches within 15min got %i", MATCHES_XBOX360_15MIN, [matches count]]);
 						   }];

@@ -147,9 +147,6 @@ static NSArray * platformStrings;
 		case GMRTimeInterval15Min:
 			interval = @"15min";
 			break;
-
-
-
 	}
 	
 	NSString*     method = @"GET";
