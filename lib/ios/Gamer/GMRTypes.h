@@ -21,4 +21,12 @@ enum {
 };
 typedef NSUInteger GMRPlatform;
 
+enum {
+	GMRTimeIntervalHour,
+	GMRTimeInterval30Min,
+	GMRTimeInterval15Min
+};
+typedef NSUInteger GMRTimeInterval;
+
+
 typedef void (^GMRCallback)(BOOL, NSDictionary *);

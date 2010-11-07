@@ -354,6 +354,8 @@ function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)
 	var now       = new Date();
 	var end;
 	
+	now = new Date(now.getTime() - now.getMilliseconds());
+	
 	switch(timeframe)
 	{
 		case 'hour':

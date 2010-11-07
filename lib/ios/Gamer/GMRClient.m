@@ -130,6 +130,38 @@ static NSArray * platformStrings;
 		   }];
 }
 
+- (void)matchesScheduledForPlatform:(GMRPlatform)platform andTimeInterval:(GMRTimeInterval)timeInterval withCallback:(GMRCallback)callback
+{
+	
+	NSString * interval = nil;
+	switch(timeInterval)
+	{
+		case GMRTimeIntervalHour:
+			interval = @"hour";
+			break;
+			
+		case GMRTimeInterval30Min:
+			interval = @"30min";
+			break;
+			
+		case GMRTimeInterval15Min:
+			interval = @"15min";
+			break;
+
+
+
+	}
+	
+	NSString*     method = @"GET";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [self stringForPlatform:platform], interval];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+	
+}
+
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
 {
 	NSString * time;

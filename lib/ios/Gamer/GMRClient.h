@@ -32,6 +32,7 @@
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback;
 - (void)matchesScheduled:(GMRCallback)callback;
+- (void)matchesScheduledForPlatform:(GMRPlatform)platform andTimeInterval:(GMRTimeInterval)timeInterval withCallback:(GMRCallback)callback;
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback;
 - (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;
 - (void)matchLeave:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback;

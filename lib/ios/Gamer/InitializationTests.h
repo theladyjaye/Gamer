@@ -33,6 +33,9 @@
 - (void)testMatch4Leave;
 - (void)testMatch5Cancel;
 - (void)testMatch6Scheduled; // we check scheduled twice because we create a match and then cancel a match, need to make sure the scheduled quantity is correct
+- (void)testMatchesForIntervalHour;
+- (void)testMatchesForInterval30min;
+- (void)testMatchesForInterval15min;
 
 
 @end

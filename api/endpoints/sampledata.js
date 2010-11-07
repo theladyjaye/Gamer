@@ -36,11 +36,20 @@ function initialize(req, res, next)
 	var minute = 60000;
 	var hour   = 3600000;
 	
-	var fifteenMinutesFromNow    = now.getTime() + (15 * minute);
-	var thirtyMinutesFromNow     = now.getTime() + (30 * minute);
-	var fourtyFiveMinutesFromNow = now.getTime() + (30 * minute);
-	var twoHoursFromNow          = now.getTime() + (2 * hour);
-	var sixHoursFromNow          = now.getTime() + (6 * hour);
+	var milliseconds             = now.getMilliseconds();
+	
+	console.log("30 * minute = " + 30 * minute);
+	console.log("45 * minute = " + 45 * minute);
+	
+	var fifteenMinutesFromNow    = (now.getTime() - milliseconds) + (15 * minute);
+	var thirtyMinutesFromNow     = (now.getTime() - milliseconds) + (30 * minute);
+	var fourtyFiveMinutesFromNow = (now.getTime() - milliseconds) + (45 * minute);
+	var twoHoursFromNow          = (now.getTime() - milliseconds) + (2 * hour);
+	var sixHoursFromNow          = (now.getTime() - milliseconds) + (6 * hour);
+	
+	console.log("30 Min: " + thirtyMinutesFromNow);
+	console.log("45 Min: " + fourtyFiveMinutesFromNow);
+	console.log("45 Min: " + new Date(fourtyFiveMinutesFromNow).toJSON());
 	
 	var t1                = new Token();
 	    t1.user           = "system";
@@ -66,7 +75,7 @@ function initialize(req, res, next)
 	var g2                = new Game();
 	    g2.label          = "Red Dead Redemption";
 	    g2._id            = "game/red-dead-redemption";
-	    g2.platforms      = ["ps3", "xbox360"];
+	    g2.platforms      = ["xbox360", "ps3"];
 	    g2.maxPlayers     = 24;
 	    g2.modes.push("Deathmatch");
 
@@ -104,6 +113,7 @@ function initialize(req, res, next)
 	
 	
 	var m1                = new Match();
+	    m1.availability   = 'public';
 	    m1.created_by     = 'aventurella';
 	    m1.label          = "Lorem ipsum dolor sit amet";
 	    m1.game.id        = g1._id;
@@ -114,18 +124,20 @@ function initialize(req, res, next)
 	    m1.players.push(m1.created_by);
 
 	var m2                = new Match();
+	    m2.availability   = 'public';
 	    m2.created_by     = 'aventurella';
-	    m2.label          = "Lorem ipsum dolor sit amet";
+	    m2.label          = "Yeee Haw!";
 	    m2.game.id        = g2._id;
 	    m2.game.label     = g2.label;
-	    m2.game.platform  = g2.platforms[0];
+	    m2.game.platform  = g2.platforms[1];
 	    m2.scheduled_time = new Date(thirtyMinutesFromNow);
 	    m2.maxPlayers     = 4;
 	    m2.players.push(m2.created_by);
 
 	var m3                = new Match();
+	    m3.availability   = 'public';
 	    m3.created_by     = 'bpuglisi';
-	    m3.label          = "Lorem ipsum dolor sit amet";
+	    m3.label          = "Borderlands on legendary";
 	    m3.game.id        = g3._id;
 	    m3.game.label     = g3.label;
 	    m3.game.platform  = g3.platforms[0];
@@ -134,6 +146,7 @@ function initialize(req, res, next)
 	    m3.players.push(m3.created_by);
 
 	var m4                = new Match();
+	    m4.availability   = 'public';
 	    m4.created_by     = 'aventurella';
 	    m4.label          = "Lorem ipsum dolor sit amet";
 	    m4.game.id        = g4._id;
@@ -145,6 +158,7 @@ function initialize(req, res, next)
 
 
 	var m5                = new Match();
+	    m5.availability   = 'public';
 	    m5.created_by     = 'bpuglisi';
 	    m5.label          = "Lorem ipsum dolor sit amet";
 	    m5.game.id        = g5._id;
@@ -155,6 +169,7 @@ function initialize(req, res, next)
 	    m5.players.push(m5.created_by);
 
 	var m6                = new Match();
+	    m6.availability   = 'public';
 	    m6.created_by     = 'aventurella';
 	    m6.label          = "Lorem ipsum dolor sit amet";
 	    m6.game.id        = g6._id;
@@ -165,6 +180,7 @@ function initialize(req, res, next)
 	    m6.players.push(m6.created_by);
 
 	var m7                = new Match();
+	    m7.availability   = 'public';
 	    m7.created_by     = 'bpuglisi';
 	    m7.label          = "Lorem ipsum dolor sit amet";
 	    m7.game.id        = g6._id;
