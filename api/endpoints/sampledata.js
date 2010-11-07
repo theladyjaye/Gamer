@@ -38,18 +38,11 @@ function initialize(req, res, next)
 	
 	var milliseconds             = now.getMilliseconds();
 	
-	console.log("30 * minute = " + 30 * minute);
-	console.log("45 * minute = " + 45 * minute);
-	
 	var fifteenMinutesFromNow    = (now.getTime() - milliseconds) + (15 * minute);
 	var thirtyMinutesFromNow     = (now.getTime() - milliseconds) + (30 * minute);
 	var fourtyFiveMinutesFromNow = (now.getTime() - milliseconds) + (45 * minute);
 	var twoHoursFromNow          = (now.getTime() - milliseconds) + (2 * hour);
 	var sixHoursFromNow          = (now.getTime() - milliseconds) + (6 * hour);
-	
-	console.log("30 Min: " + thirtyMinutesFromNow);
-	console.log("45 Min: " + fourtyFiveMinutesFromNow);
-	console.log("45 Min: " + new Date(fourtyFiveMinutesFromNow).toJSON());
 	
 	var t1                = new Token();
 	    t1.user           = "system";

@@ -9,13 +9,14 @@
 #import "InitializationTests.h"
 #import "GMRClient.h"
 
-#define USERNAME @"aventurella"
-#define PASSWORD @"12345"
-#define VERSION  @"0.2"
-#define GAME_ID  @"halo-reach"
+#define USERNAME       @"aventurella"
+#define PASSWORD       @"12345"
+#define VERSION        @"0.2"
+#define GAME_ID        @"halo-reach"
+#define GAME_LABEL     @"Halo:Reach"
 
-#define USER_1   @"aventurella"
-#define USER_2   @"bpuglisi"
+#define USER_1         @"aventurella"
+#define USER_2         @"bpuglisi"
 #define API_KEY_USER_1 @"359390f17f9ce566c7248b8b111ab4f8"
 #define API_KEY_USER_2 @"0d266a3aed2466c265c0aa401b073cd7"
 
@@ -24,6 +25,8 @@
 #define MATCHES_XBOX360_HOUR 3
 #define MATCHES_XBOX360_30MIN 2
 #define MATCHES_XBOX360_15MIN 1
+
+#define MATCHES_XBOX360_HOUR_HALO_REACH 2
 
 
 static GMRClient * client;
@@ -200,7 +203,7 @@ static NSString * kCreatedMatchId1;
 							   NSArray * matches = [response objectForKey:@"matches"];
 							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within the hour"); 
-							   STAssertTrue([matches count] == MATCHES_XBOX360_HOUR, [NSString stringWithFormat:@"Expected %i scheduled matches within the hour got %i", MATCHES_XBOX360_HOUR, [matches count]]);
+							   STAssertTrue([matches count] == MATCHES_XBOX360_HOUR, [NSString stringWithFormat:@"Expected %i scheduled matches on Xbox 360 within the hour got %i", MATCHES_XBOX360_HOUR, [matches count]]);
 						   }];
 }
 
@@ -213,7 +216,7 @@ static NSString * kCreatedMatchId1;
 							   NSArray * matches = [response objectForKey:@"matches"];
 							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within 30min");
-							   STAssertTrue([matches count] == MATCHES_XBOX360_30MIN, [NSString stringWithFormat:@"Expected %i scheduled matches within 30min got %i", MATCHES_XBOX360_30MIN, [matches count]]);
+							   STAssertTrue([matches count] == MATCHES_XBOX360_30MIN, [NSString stringWithFormat:@"Expected %i scheduled matches on Xbox 360 within 30min got %i", MATCHES_XBOX360_30MIN, [matches count]]);
 						   }];
 	
 }
@@ -226,7 +229,26 @@ static NSString * kCreatedMatchId1;
 							   NSArray * matches = [response objectForKey:@"matches"];
 							   
 							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 in within 15min"); 
-							   STAssertTrue([matches count] == MATCHES_XBOX360_15MIN, [NSString stringWithFormat:@"Expected %i scheduled matches within 15min got %i", MATCHES_XBOX360_15MIN, [matches count]]);
+							   STAssertTrue([matches count] == MATCHES_XBOX360_15MIN, [NSString stringWithFormat:@"Expected %i scheduled matches on Xbox 360 within 15min got %i", MATCHES_XBOX360_15MIN, [matches count]]);
+						   }];
+	
+}
+
+- (void)testMatchesForGameAndIntervalHour
+{
+	[client matchesScheduledForPlatform:GMRPlatformXBox360 
+								andGame:GAME_ID 
+						andTimeInterval:GMRTimeIntervalHour 
+						   withCallback:^(BOOL ok, NSDictionary * response){
+							   
+							   STAssertTrue(ok, @"Unable to get Scheduled Matches For Xbox360 And Halo Reach in within the hour"); 
+							   
+							   NSDictionary * game  = [response objectForKey:@"game"];
+							   NSArray * matches    = [response objectForKey:@"matches"];
+							   NSString * gameLabel = (NSString *)[game objectForKey:@"label"];
+							   
+							   STAssertTrue([gameLabel isEqualToString:GAME_LABEL], [NSString stringWithFormat:@"Expected Halo:Reach got %@", [game objectForKey:@"label"]]);
+							   STAssertTrue([matches count] == MATCHES_XBOX360_HOUR_HALO_REACH, [NSString stringWithFormat:@"Expected %i scheduled matches on Xbox 360 for Halo Reach within the hour got %i", MATCHES_XBOX360_HOUR_HALO_REACH, [matches count]]);
 						   }];
 	
 }
