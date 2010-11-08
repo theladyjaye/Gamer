@@ -129,7 +129,6 @@ static NSString * kCreatedMatchId1;
 			   
 			   kCreatedMatchId1 = [response objectForKey:@"match"];
 			   [kCreatedMatchId1 retain];
-			   NSLog(@"Created Game: %@", kCreatedMatchId1);
 		   }];
 }
 
@@ -152,7 +151,6 @@ static NSString * kCreatedMatchId1;
 			   matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
 	 {
 		 STAssertTrue(ok, @"Unable to join match");
-		 NSLog(@"Joined Game Response %@", response);
 		 [gmrClient release];
 	 }];
 }
@@ -160,13 +158,11 @@ static NSString * kCreatedMatchId1;
 - (void)testMatch4Leave
 {
 	GMRClient * gmrClient = [[GMRClient alloc] initWithKey:API_KEY_USER_2 andName:USER_2];
-	NSLog(@"Leaving Match: %@", kCreatedMatchId1);
 	
 	[gmrClient matchLeave:GMRPlatformXBox360 
 				gameId:GAME_ID 
 			   matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
 	 {
-		 NSLog(@"Leave Response %@", response);
 		 STAssertTrue(ok, @"Unable to leave match");
 		 [gmrClient release];
 	 }];
@@ -179,7 +175,6 @@ static NSString * kCreatedMatchId1;
 				   gameId:GAME_ID
 				  matchId:kCreatedMatchId1 withCallback:^(BOOL ok, NSDictionary * response)
 	 {
-		 NSLog(@"Cancel Response %@", response);
 		 STAssertTrue(ok, @"Unable to cancel match");
 		 [gmrClient release];
 	 }];

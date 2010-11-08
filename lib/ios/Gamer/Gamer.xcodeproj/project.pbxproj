@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* Gamer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
+		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
+		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
+		D775C4DB1287973B00C72E64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
+		D775C4DC1287973B00C72E64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D775C4DD1287973B00C72E64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B728161282271D00419F60 /* UIKit.framework */; };
+		D775C4E01287978700C72E64 /* HazGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4DF1287978700C72E64 /* HazGame.m */; };
+		D775C4E61287981500C72E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4E51287981500C72E64 /* main.m */; };
+		D775C4E81287986C00C72E64 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D775C4E71287986C00C72E64 /* MainWindow.xib */; };
+		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
+		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
+		D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E061287ABD0005BD0B4 /* Icon.png */; };
+		D7B41E091287ABD0005BD0B4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E071287ABD0005BD0B4 /* Icon@2x.png */; };
 		D7B7280E128226F100419F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		D7B728141282270A00419F60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
 		D7B728171282271D00419F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B728161282271D00419F60 /* UIKit.framework */; };
@@ -99,6 +112,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D775C4BB128795D100C72E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Gamer;
+		};
 		D7DB93921280B91900D6C442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -126,6 +146,17 @@
 		AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D775C4B2128795A400C72E64 /* HazGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D775C4B4128795A400C72E64 /* HazGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazGame-Info.plist"; sourceTree = "<group>"; };
+		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
+		D775C4DF1287978700C72E64 /* HazGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HazGame.m; sourceTree = "<group>"; };
+		D775C4E41287981500C72E64 /* HazGame_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame_Prefix.pch; sourceTree = "<group>"; };
+		D775C4E51287981500C72E64 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D775C4E71287986C00C72E64 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D7B41E061287ABD0005BD0B4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D7B41E071287ABD0005BD0B4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D7B7280B128226E700419F60 /* libYAJL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYAJL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B728161282271D00419F60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7B7281C1282275A00419F60 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -219,6 +250,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D775C4B0128795A400C72E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */,
+				D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */,
+				D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */,
+				D775C4DB1287973B00C72E64 /* CoreGraphics.framework in Frameworks */,
+				D775C4DC1287973B00C72E64 /* Foundation.framework in Frameworks */,
+				D775C4DD1287973B00C72E64 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7B72809128226E700419F60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +318,7 @@
 				D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */,
 				D7DB90901280832500D6C442 /* libASIHttp.a */,
 				D7B7280B128226E700419F60 /* libYAJL.a */,
+				D775C4B2128795A400C72E64 /* HazGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,20 +326,15 @@
 		0867D691FE84028FC02AAC07 /* Gamer */ = {
 			isa = PBXGroup;
 			children = (
+				D775C4BD128795D900C72E64 /* HazGame */,
 				D7B72806128226AA00419F60 /* YAJL */,
 				D7DDD885127FDFCB00C29265 /* ASIHttp */,
 				D7DDD7AB127FD40200C29265 /* Tests */,
-				08FB77AEFE84172EC02AAC07 /* Classes */,
+				08FB77AEFE84172EC02AAC07 /* libGamer */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */,
-				D7DB90D7128086B100D6C442 /* CFNetwork.framework */,
-				D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */,
-				D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */,
-				D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */,
-				D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */,
-				D7B728161282271D00419F60 /* UIKit.framework */,
 			);
 			name = Gamer;
 			sourceTree = "<group>";
@@ -302,12 +342,18 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7DB90D7128086B100D6C442 /* CFNetwork.framework */,
+				D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */,
+				D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */,
+				D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */,
+				D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */,
+				D7B728161282271D00419F60 /* UIKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+		08FB77AEFE84172EC02AAC07 /* libGamer */ = {
 			isa = PBXGroup;
 			children = (
 				D7DDD7B7127FD49100C29265 /* GMRClient.h */,
@@ -318,7 +364,7 @@
 				D7DB93311280B14000D6C442 /* GMRUtils.h */,
 				D7DB93321280B14000D6C442 /* GMRUtils.m */,
 			);
-			name = Classes;
+			name = libGamer;
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -327,6 +373,55 @@
 				AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D775C4BD128795D900C72E64 /* HazGame */ = {
+			isa = PBXGroup;
+			children = (
+				D775C4E3128797FF00C72E64 /* Other Sources */,
+				D775C4E2128797D800C72E64 /* Resources */,
+				D775C4E11287978C00C72E64 /* Classes */,
+				D775C4DE1287978700C72E64 /* HazGame.h */,
+				D775C4DF1287978700C72E64 /* HazGame.m */,
+			);
+			name = HazGame;
+			sourceTree = "<group>";
+		};
+		D775C4E11287978C00C72E64 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D775C4E2128797D800C72E64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7B41DF91287AAE0005BD0B4 /* Images */,
+				D775C4B4128795A400C72E64 /* HazGame-Info.plist */,
+				D775C4E71287986C00C72E64 /* MainWindow.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D775C4E3128797FF00C72E64 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D775C4E41287981500C72E64 /* HazGame_Prefix.pch */,
+				D775C4E51287981500C72E64 /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D7B41DF91287AAE0005BD0B4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D7B41E061287ABD0005BD0B4 /* Icon.png */,
+				D7B41E071287ABD0005BD0B4 /* Icon@2x.png */,
+				D7B41DFA1287AAE0005BD0B4 /* Default.png */,
+				D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		D7B72806128226AA00419F60 /* YAJL */ = {
@@ -554,6 +649,24 @@
 			productReference = D2AAC07E0554694100DB518D /* libGamer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D775C4B1128795A400C72E64 /* HazGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D775C4B7128795A500C72E64 /* Build configuration list for PBXNativeTarget "HazGame" */;
+			buildPhases = (
+				D775C4AE128795A400C72E64 /* Resources */,
+				D775C4AF128795A400C72E64 /* Sources */,
+				D775C4B0128795A400C72E64 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D775C4BC128795D100C72E64 /* PBXTargetDependency */,
+			);
+			name = HazGame;
+			productName = HazGame;
+			productReference = D775C4B2128795A400C72E64 /* HazGame.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D7B7280A128226E700419F60 /* YAJL */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7B72813128226F900419F60 /* Build configuration list for PBXNativeTarget "YAJL" */;
@@ -650,11 +763,24 @@
 				D7DDD799127FD3BA00C29265 /* GamerTesting */,
 				D7DB908F1280832500D6C442 /* ASIHttp */,
 				D7B7280A128226E700419F60 /* YAJL */,
+				D775C4B1128795A400C72E64 /* HazGame */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D775C4AE128795A400C72E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D775C4E81287986C00C72E64 /* MainWindow.xib in Resources */,
+				D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */,
+				D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */,
+				D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */,
+				D7B41E091287ABD0005BD0B4 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7DDD78E127FD3A100C29265 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -688,6 +814,15 @@
 				D7DDD7BA127FD49100C29265 /* GMRClient.m in Sources */,
 				D7DB92681280A1FC00D6C442 /* GMRRequest.m in Sources */,
 				D7DB93341280B14000D6C442 /* GMRUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D775C4AF128795A400C72E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D775C4E01287978700C72E64 /* HazGame.m in Sources */,
+				D775C4E61287981500C72E64 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +880,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D775C4BC128795D100C72E64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* Gamer */;
+			targetProxy = D775C4BB128795D100C72E64 /* PBXContainerItemProxy */;
+		};
 		D7DB93931280B91900D6C442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D7DB908F1280832500D6C442 /* ASIHttp */;
@@ -822,6 +962,66 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D775C4B5128795A500C72E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HazGame_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_FILE = "HazGame-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = HazGame;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+			};
+			name = Debug;
+		};
+		D775C4B6128795A500C72E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HazGame_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = NO;
+				INFOPLIST_FILE = "HazGame-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = HazGame;
+				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -994,6 +1194,15 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D775C4B7128795A500C72E64 /* Build configuration list for PBXNativeTarget "HazGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D775C4B5128795A500C72E64 /* Debug */,
+				D775C4B6128795A500C72E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
