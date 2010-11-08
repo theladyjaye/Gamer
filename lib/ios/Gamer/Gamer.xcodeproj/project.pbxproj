@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* Gamer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		D727C3311287D098001F2BAF /* GMRAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */; };
+		D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */; };
+		D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */; };
+		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
 		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
@@ -146,6 +150,12 @@
 		AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationController.h; sourceTree = "<group>"; };
+		D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationController.m; sourceTree = "<group>"; };
+		D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationController.xib; sourceTree = "<group>"; };
+		D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationInputController.h; sourceTree = "<group>"; };
+		D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationInputController.m; sourceTree = "<group>"; };
+		D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationInputController.xib; sourceTree = "<group>"; };
 		D775C4B2128795A400C72E64 /* HazGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775C4B4128795A400C72E64 /* HazGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazGame-Info.plist"; sourceTree = "<group>"; };
 		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
@@ -380,18 +390,24 @@
 			children = (
 				D775C4E3128797FF00C72E64 /* Other Sources */,
 				D775C4E2128797D800C72E64 /* Resources */,
-				D775C4E11287978C00C72E64 /* Classes */,
+				D775C4E11287978C00C72E64 /* ViewControllers */,
 				D775C4DE1287978700C72E64 /* HazGame.h */,
 				D775C4DF1287978700C72E64 /* HazGame.m */,
 			);
 			name = HazGame;
 			sourceTree = "<group>";
 		};
-		D775C4E11287978C00C72E64 /* Classes */ = {
+		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */,
+				D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */,
+				D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */,
+				D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */,
+				D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */,
+				D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */,
 			);
-			name = Classes;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D775C4E2128797D800C72E64 /* Resources */ = {
@@ -778,6 +794,8 @@
 				D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */,
 				D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */,
 				D7B41E091287ABD0005BD0B4 /* Icon@2x.png in Resources */,
+				D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */,
+				D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +841,8 @@
 			files = (
 				D775C4E01287978700C72E64 /* HazGame.m in Sources */,
 				D775C4E61287981500C72E64 /* main.m in Sources */,
+				D727C3311287D098001F2BAF /* GMRAuthenticationController.m in Sources */,
+				D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GMRAuthenticationController;
 @interface HazGame : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+	GMRAuthenticationController * authenticationController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

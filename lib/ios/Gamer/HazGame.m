@@ -8,6 +8,7 @@
 
 #import "HazGame.h"
 #import "GMRClient.h"
+#import "GMRAuthenticationController.h"
 
 @implementation HazGame
 
@@ -34,7 +35,8 @@
 
 - (void) initializeAuthenticationFlow
 {
-
+	authenticationController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
+	[self.window addSubview:authenticationController.view];
 }
 
 - (void) initializeApplicationFlow
