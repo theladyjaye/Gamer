@@ -44,6 +44,13 @@
 	[self presentModalViewController:inputController animated:YES];
 }
 
+- (void)authenticationDidSucceed
+{
+	[self dismissModalViewControllerAnimated:YES];
+	[inputController release];
+	inputController = nil;
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];

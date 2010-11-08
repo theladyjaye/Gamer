@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GMRAuthenticationInputController : UIViewController {
-
+@interface GMRAuthenticationInputController : UIViewController<UITextFieldDelegate>
+{
+	UITextField * username;
+	UITextField * password;
 }
 
+@property(nonatomic, retain) IBOutlet UITextField * username;
+@property(nonatomic, retain) IBOutlet UITextField * password;
+
+- (IBAction)authenticate;
+- (void)authenticationDidSucceedWithUsername:(NSString *)name andToken:(NSString *)token;
+- (void)authenticationDidFail;
 @end

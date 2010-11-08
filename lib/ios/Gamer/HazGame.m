@@ -50,7 +50,7 @@
 	BOOL result = NO;
 	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
 	
-	if([defaults objectForKey:@"apiKey"] != nil && [defaults objectForKey:@"username"] != nil)
+	if([defaults objectForKey:@"token"] != nil && [defaults objectForKey:@"username"] != nil)
 	{
 		result = YES;
 	}

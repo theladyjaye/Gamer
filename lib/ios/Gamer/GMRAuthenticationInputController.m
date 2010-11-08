@@ -7,27 +7,10 @@
 //
 
 #import "GMRAuthenticationInputController.h"
-
+#import "GMRAuthenticationController.h"
 
 @implementation GMRAuthenticationInputController
-
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
+@synthesize username, password;
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -37,6 +20,47 @@
 }
 */
 
+- (IBAction)authenticate
+{
+	NSString * usernameString = self.username.text;
+	NSString * passwordString = self.password.text;
+	
+	NSLog(@"%@ : %@", usernameString, passwordString);
+	[self authenticationDidSucceedWithUsername:@"foo" andToken:@"bar"];
+	
+}
+
+- (void)authenticationDidSucceedWithUsername:(NSString *)name andToken:(NSString *)token;
+{
+	//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	//[defaults setObject:name forKey:@"username"];
+	//[defaults setObject:token forKey:@"token"];
+	
+	GMRAuthenticationController * parentController = (GMRAuthenticationController *) self.parentViewController;
+	[parentController authenticationDidSucceed];
+}
+
+- (void)authenticationDidFail
+{
+
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	if(textField == self.username)
+	{
+		[self.password becomeFirstResponder];
+		
+	}
+	else 
+	{
+		[self.username becomeFirstResponder];
+	}
+	
+	return YES;
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -44,10 +68,16 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
-- (void)viewDidUnload {
+- (void)viewDidAppear:(BOOL)animated
+{
+	[self.username becomeFirstResponder];
+}
+
+- (void)viewDidUnload 
+{
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	self.username = nil;
+	self.password = nil;
 }
 
 

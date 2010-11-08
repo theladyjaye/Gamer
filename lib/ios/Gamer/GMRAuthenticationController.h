@@ -15,4 +15,6 @@
 	GMRAuthenticationInputController * inputController;
 }
 
+- (void)authenticationDidSucceed;
+
 @end
