@@ -10,6 +10,7 @@ class GMRUser
 	public $active;
 	public $token;
 	public $created_on;
+	private $aliases;
 	
 	public static function hasUserWithNameOrEmail($username, $email)
 	{
@@ -36,6 +37,29 @@ class GMRUser
 		}
 		
 		return false;
+	}
+	
+	public static function userWithToken($token)
+	{
+		static $queryLoaded = false;
+		
+		if(!$queryLoaded)
+		{
+			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserWithToken.php';
+			$queryLoaded = true;
+		}
+		
+		
+		$object   = null;
+		$database = GMRDatabase::connection(GMRDatabase::kSql);
+		$query    = new GMRQueryUserWithToken($database, $token);
+
+		if(count($query) == 1)
+		{
+			$object = GMRUser::hydrateWithArray($query->one());
+		}
+		
+		return $object;
 	}
 	
 	public static function userWithId($id)
@@ -119,6 +143,50 @@ class GMRUser
 		$object->created_on = $array['created_on'];
 		
 		return $object;
+	}
+	
+	public function addAliasForPlatform($alias, $platform)
+	{
+		static $queryLoaded = false;
+		
+		if(!$queryLoaded)
+		{
+			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserUpsertAlias.php';
+			$queryLoaded = true;
+		}
+		
+		$database = GMRDatabase::connection(GMRDatabase::kSql);
+		$query    = new GMRQueryUserUpsertAlias($database, array("user_id"  => $this->id,
+		                                                         "platform" => $platform,
+		                                                         "alias"    => $alias));
+		
+		return $query->execute();
+	}
+	
+	public function aliases()
+	{
+		static $queryLoaded = false;
+		
+		if(!$queryLoaded)
+		{
+			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserAliasesForUser.php';
+			$queryLoaded = true;
+		}
+		
+		if(!$this->aliases)
+		{
+		
+			$database       = GMRDatabase::connection(GMRDatabase::kSql);
+			$query          = new GMRQueryUserAliasesForUser($database, $this->id);
+			$this->aliases  = array();
+			
+			foreach($query as $row)
+			{
+				$this->aliases[$row['platform']] = $row['alias'];
+			}
+		}
+		
+		return $this->aliases;
 	}
 	
 	public function save()

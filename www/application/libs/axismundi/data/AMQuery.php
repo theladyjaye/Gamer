@@ -20,9 +20,9 @@ class AMQuery implements Iterator, Countable
 	protected $dbh;
 	protected $options;
 	
-	function __construct($dbh, $options=null)
+	function __construct(&$dbh, $options=null)
 	{
-		$this->dbh     = $dbh;
+		$this->dbh     = &$dbh;
 		$this->options = $options;
 		$this->initialize();
 	}
@@ -32,15 +32,18 @@ class AMQuery implements Iterator, Countable
 	public function execute()
 	{
 		if($this->isMultiQuery)
-			$this->dbh->multi_query($this->__toString());
+			$this->result = $this->dbh->multi_query($this->__toString());
 		else
 			$this->result = $this->dbh->query($this->__toString());
+			
+		return $this->dbh->sqlstate == 00000 ? true : false;
 	}
 	
 	public function __toString()
 	{
 		return $this->sql;
 	}
+	
 
 	
 	public function count()

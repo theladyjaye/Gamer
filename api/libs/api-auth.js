@@ -58,9 +58,16 @@ function hydrateToken(req, next)
 	
 	authenticate.execute(function(err, rows, fields)
 	{
-		if(err == null && rows.length == 1)
+		if(err == null && rows.length > 0)
 		{
-			req.access_token = {"user":rows[0].username}
+			var access_token = {"user":rows[0].username, "aliases":[]}
+			
+			rows.forEach(function(row)
+			{
+				access_token.aliases.push({"platform": row.platform,"alias":row.alias})
+			});
+			
+			req.access_token = access_token;
 			next();
 		}
 		else
