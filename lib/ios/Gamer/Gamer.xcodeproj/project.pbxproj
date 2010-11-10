@@ -26,6 +26,7 @@
 		D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
 		D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
 		D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
+		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
 		D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E061287ABD0005BD0B4 /* Icon.png */; };
@@ -187,6 +188,8 @@
 		D775C4E51287981500C72E64 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D775C4E71287986C00C72E64 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		D77E1BBB12889F3000B75D60 /* GMRGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGlobals.h; sourceTree = "<group>"; };
+		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
+		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D7B41E061287ABD0005BD0B4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -425,6 +428,7 @@
 		D775C4BD128795D900C72E64 /* HazGame */ = {
 			isa = PBXGroup;
 			children = (
+				D7AFF522128A68FF00CF1A07 /* Utils */,
 				D7EEAE53128A20CF0022AF4E /* Data */,
 				D775C4E3128797FF00C72E64 /* Other Sources */,
 				D775C4E2128797D800C72E64 /* Resources */,
@@ -463,6 +467,15 @@
 				D775C4E51287981500C72E64 /* main.m */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D7AFF522128A68FF00CF1A07 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D7AFF523128A693200CF1A07 /* NSDate+JSON.h */,
+				D7AFF524128A693200CF1A07 /* NSDate+JSON.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		D7B41DF91287AAE0005BD0B4 /* Images */ = {
@@ -929,6 +942,7 @@
 				D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */,
 				D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */,
 				D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */,
+				D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

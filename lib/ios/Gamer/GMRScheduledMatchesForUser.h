@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "GMRDataSource.h"
 @interface GMRScheduledMatchesForUser : NSObject<GMRDataSource, UITableViewDelegate, UITableViewDataSource> {
-
+	NSArray * matches;
 }
 
 @end

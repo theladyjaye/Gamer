@@ -10,5 +10,5 @@
 
 
 @protocol GMRDataSource
-- (void)refresh;
+- (void)refresh:(UIView *)target;
 @end

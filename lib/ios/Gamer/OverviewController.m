@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad 
 {	
-	[dataProvider refresh];
+	[dataProvider refresh:tableView];
 	[super viewDidLoad];
 }
 
