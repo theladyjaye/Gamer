@@ -11,6 +11,7 @@
 #import "GMRUtils.h"
 #import "ASIHTTPRequest.h"
 #import "YAJLDocument.h"
+#include <dispatch/dispatch.h>
 
 
 #define API_DOMAIN @"http://hazgame.com:7331"
@@ -18,14 +19,29 @@
 
 #define GAMER_TESTING 1
 
+static dispatch_queue_t networkQueue;
+static dispatch_queue_t jsonProcessingQueue;
+
 @implementation GMRRequest
 @synthesize key;
 
+- (id)init
+{
+	self = [super init];
+	if(self)
+	{
+		networkQueue        = dispatch_queue_create("com.hazgame.network", NULL);
+		jsonProcessingQueue = dispatch_queue_create("com.hazgame.json", NULL);
+	}
+	
+	return self;
+}
+
 - (void)execute:(NSDictionary *)options withCallback:(GMRCallback)callback
 {
-	NSOperationQueue * q = [[[NSOperationQueue alloc] init] autorelease];
+	//NSOperationQueue * q = [[[NSOperationQueue alloc] init] autorelease];
 	
-	[q addOperationWithBlock:^{
+	dispatch_async(networkQueue, ^{
 		
 		NSString * path   = (NSString *)[options objectForKey:@"path"];
 		NSString * method = (NSString *)[options objectForKey:@"method"];
@@ -71,28 +87,32 @@
 			
 		}
 		
+		[ASIHTTPRequest setShouldUpdateNetworkActivityIndicator:NO];
 		[request startSynchronous];
 		
-		NSError * error = nil;
-		YAJLDocument * json = [[[YAJLDocument alloc] initWithData:[request responseData] 
-													   parserOptions:YAJLParserOptionsNone 
-															   error:&error] autorelease];		
-		if(error)
-			NSLog(@"ER-ROAR!");
 		
+		dispatch_async(jsonProcessingQueue, ^{
+			NSError * error = nil;
+			YAJLDocument * json = [[[YAJLDocument alloc] initWithData:[request responseData] 
+														parserOptions:YAJLParserOptionsNone 
+																error:&error] autorelease];		
+			if(error)
+				NSLog(@"GMRRequest Network Error!");
+			
+			
+			callback([[json.root objectForKey:@"ok"] boolValue], (NSDictionary *)json.root);
+		});
 		
-		callback([[json.root objectForKey:@"ok"] boolValue], (NSDictionary *)json.root);
-	}];
-	
-#if GAMER_TESTING
-	[q waitUntilAllOperationsAreFinished];
-#endif
+	});
 }
 
 
 - (void)dealloc
 {
+	dispatch_release(networkQueue);
+	dispatch_release(jsonProcessingQueue);
 	self.key = nil;
+	
 	[super dealloc];
 }
 @end

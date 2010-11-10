@@ -8,16 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class GMRAuthenticationController;
+@class GMRAuthenticationController, GMRMainController;
 @interface HazGame : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	GMRAuthenticationController * authenticationController;
+	GMRMainController * mainController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-- (BOOL) hasAuthenticatedUser;
-- (void) initializeAuthenticationFlow;
-- (void) initializeApplicationFlow;
+- (BOOL)hasAuthenticatedUser;
+- (void)initializeAuthenticationFlow;
+- (void)initializeApplicationFlow;
 
 @end

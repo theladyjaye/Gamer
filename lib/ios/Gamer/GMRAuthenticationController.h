@@ -13,8 +13,10 @@
 @interface GMRAuthenticationController : UIViewController 
 {
 	GMRAuthenticationInputController * inputController;
+	UIImageView * defaultImageView;
 }
 
+@property (nonatomic, retain) IBOutlet UIImageView * defaultImageView;
 - (void)authenticationDidSucceed;
 
 @end

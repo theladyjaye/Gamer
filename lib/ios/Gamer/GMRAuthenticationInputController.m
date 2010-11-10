@@ -6,11 +6,14 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#include <dispatch/dispatch.h>
 #import "GMRAuthenticationInputController.h"
 #import "GMRAuthenticationController.h"
+#import "GMRGlobals.h"
+#import "GMRClient.h"
 
 @implementation GMRAuthenticationInputController
-@synthesize username, password;
+@synthesize username, password, authenticationController;
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -25,24 +28,49 @@
 	NSString * usernameString = self.username.text;
 	NSString * passwordString = self.password.text;
 	
-	NSLog(@"%@ : %@", usernameString, passwordString);
-	[self authenticationDidSucceedWithUsername:@"foo" andToken:@"bar"];
-	
+	// both of these methods will be invoked from a background thread
+	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){
+		if(YES)
+		{
+			NSString * token = (NSString *)[response objectForKey:@"token"];
+			kGamerApi.username = usernameString;
+			kGamerApi.apiKey   = token;
+			[self authenticationDidSucceedWithUsername:usernameString andToken:token];
+		}
+		else 
+		{
+			[self authenticationDidFail];
+		}
+
+	}];
 }
 
 - (void)authenticationDidSucceedWithUsername:(NSString *)name andToken:(NSString *)token;
 {
-	//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	//[defaults setObject:name forKey:@"username"];
-	//[defaults setObject:token forKey:@"token"];
 	
-	GMRAuthenticationController * parentController = (GMRAuthenticationController *) self.parentViewController;
-	[parentController authenticationDidSucceed];
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setObject:name forKey:@"username"];
+	[defaults setObject:token forKey:@"token"];
+	
+	// because this will affect the ui thread (the transition), 
+	// we need to be sure it's called from the main thread	
+	
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.authenticationController authenticationDidSucceed];
+	});
+	
+	
+	//SEL command = @selector(authenticationDidSucceed);
+	//NSInvocation* invocation     = [NSInvocation invocationWithMethodSignature:[self.parentViewController methodSignatureForSelector:command]];
+	//[invocation setTarget:self.parentViewController];
+	//[invocation setSelector:command];
+	
+	//[invocation performSelectorOnMainThread:@selector(invoke) withObject:NULL waitUntilDone:NO];	
 }
 
 - (void)authenticationDidFail
 {
-
+	NSLog(@"Authentication failed!");
 }
 
 
@@ -78,6 +106,7 @@
     [super viewDidUnload];
 	self.username = nil;
 	self.password = nil;
+	self.authenticationController = nil;
 }
 
 

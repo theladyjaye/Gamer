@@ -7,11 +7,15 @@
 //
 
 #import "HazGame.h"
+#import "GMRGlobals.h"
 #import "GMRClient.h"
 #import "GMRAuthenticationController.h"
+#import "GMRMainController.h"
+
+GMRClient * kGamerApi = nil;
+
 
 @implementation HazGame
-
 @synthesize window;
 
 
@@ -19,7 +23,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+	
 	if([self hasAuthenticatedUser])
 	{
 		[self initializeApplicationFlow];
@@ -33,16 +37,40 @@
     return YES;
 }
 
-- (void) initializeAuthenticationFlow
+- (void)initializeAuthenticationFlow
 {
+	kGamerApi = [[GMRClient alloc] init];
 	authenticationController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
 	[self.window addSubview:authenticationController.view];
 }
 
-- (void) initializeApplicationFlow
+- (void)initializeApplicationFlow
 {
-
+	if(!kGamerApi)
+	{
+		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		kGamerApi = [[GMRClient alloc] initWithKey:[defaults objectForKey:@"token"] 
+										   andName:[defaults objectForKey:@"username"]];
+	}
+	
+	
+	mainController = [[GMRMainController alloc] initWithNibName:nil bundle:nil];
+	
+	[self.window addSubview:mainController.view];
+	
+	if(authenticationController)
+	{
+		[authenticationController.view removeFromSuperview];
+		[authenticationController release];
+		authenticationController = nil;
+	}
+	
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	[defaults removeObjectForKey:@"token"];
+	[defaults removeObjectForKey:@"username"];
 }
+
+
 
 
 - (BOOL) hasAuthenticatedUser

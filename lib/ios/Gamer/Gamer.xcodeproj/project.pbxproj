@@ -22,6 +22,10 @@
 		D775C4E01287978700C72E64 /* HazGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4DF1287978700C72E64 /* HazGame.m */; };
 		D775C4E61287981500C72E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4E51287981500C72E64 /* main.m */; };
 		D775C4E81287986C00C72E64 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D775C4E71287986C00C72E64 /* MainWindow.xib */; };
+		D77E1BF71288A27800B75D60 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
+		D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
+		D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
+		D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
 		D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E061287ABD0005BD0B4 /* Icon.png */; };
@@ -67,6 +71,8 @@
 		D7B728731282287C00419F60 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B7286F1282287C00419F60 /* GTMBase64.h */; };
 		D7B728741282287C00419F60 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B728701282287C00419F60 /* GTMBase64.m */; };
 		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
+		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
+		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
 		D7DB90A41280837D00D6C442 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */; };
 		D7DB90A51280837D00D6C442 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */; };
 		D7DB90A61280837D00D6C442 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90961280837D00D6C442 /* ASICacheDelegate.h */; };
@@ -113,6 +119,9 @@
 		D7DDD7BA127FD49100C29265 /* GMRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */; };
 		D7DDD810127FDB4A00C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D7DDD81D127FDBC800C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
+		D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAD84128A11BF0022AF4E /* OverviewController.m */; };
+		D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7EEAD85128A11BF0022AF4E /* OverviewController.xib */; };
+		D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +131,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Gamer;
+		};
+		D77E1BD61288A0EA00B75D60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DB908F1280832500D6C442;
+			remoteInfo = ASIHttp;
+		};
+		D7CD224B1289E76400E26772 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7B7280A128226E700419F60;
+			remoteInfo = YAJL;
 		};
 		D7DB93921280B91900D6C442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -163,6 +186,7 @@
 		D775C4E41287981500C72E64 /* HazGame_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame_Prefix.pch; sourceTree = "<group>"; };
 		D775C4E51287981500C72E64 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D775C4E71287986C00C72E64 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D77E1BBB12889F3000B75D60 /* GMRGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGlobals.h; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D7B41E061287ABD0005BD0B4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -206,6 +230,9 @@
 		D7B7286D1282287C00419F60 /* GHNSBundle+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHNSBundle+Utils.m"; sourceTree = "<group>"; };
 		D7B7286F1282287C00419F60 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		D7B728701282287C00419F60 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		D7B7CB82128909D400DC33F4 /* GMRMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMainController.h; sourceTree = "<group>"; };
+		D7B7CB83128909D400DC33F4 /* GMRMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMainController.m; sourceTree = "<group>"; };
+		D7B7CB84128909D400DC33F4 /* GMRMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMainController.xib; sourceTree = "<group>"; };
 		D7DB90901280832500D6C442 /* libASIHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASIHttp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -242,6 +269,12 @@
 		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
 		D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRClient.m; sourceTree = "<group>"; };
+		D7EEAD83128A11BF0022AF4E /* OverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewController.h; sourceTree = "<group>"; };
+		D7EEAD84128A11BF0022AF4E /* OverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewController.m; sourceTree = "<group>"; };
+		D7EEAD85128A11BF0022AF4E /* OverviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewController.xib; sourceTree = "<group>"; };
+		D7EEAE54128A20E90022AF4E /* GMRScheduledMatchesForUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRScheduledMatchesForUser.h; sourceTree = "<group>"; };
+		D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRScheduledMatchesForUser.m; sourceTree = "<group>"; };
+		D7EEAE57128A210D0022AF4E /* GMRDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +303,10 @@
 				D775C4DB1287973B00C72E64 /* CoreGraphics.framework in Frameworks */,
 				D775C4DC1287973B00C72E64 /* Foundation.framework in Frameworks */,
 				D775C4DD1287973B00C72E64 /* UIKit.framework in Frameworks */,
+				D77E1BF71288A27800B75D60 /* CFNetwork.framework in Frameworks */,
+				D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */,
+				D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */,
+				D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,11 +425,13 @@
 		D775C4BD128795D900C72E64 /* HazGame */ = {
 			isa = PBXGroup;
 			children = (
+				D7EEAE53128A20CF0022AF4E /* Data */,
 				D775C4E3128797FF00C72E64 /* Other Sources */,
 				D775C4E2128797D800C72E64 /* Resources */,
 				D775C4E11287978C00C72E64 /* ViewControllers */,
 				D775C4DE1287978700C72E64 /* HazGame.h */,
 				D775C4DF1287978700C72E64 /* HazGame.m */,
+				D77E1BBB12889F3000B75D60 /* GMRGlobals.h */,
 			);
 			name = HazGame;
 			sourceTree = "<group>";
@@ -400,12 +439,9 @@
 		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */,
-				D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */,
-				D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */,
-				D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */,
-				D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */,
-				D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */,
+				D7EEAD82128A11AF0022AF4E /* Overview */,
+				D7B7CA681288FCB000DC33F4 /* MainView */,
+				D7B7CA671288FAE900DC33F4 /* Authentication */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -532,6 +568,29 @@
 			path = GTM;
 			sourceTree = "<group>";
 		};
+		D7B7CA671288FAE900DC33F4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */,
+				D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */,
+				D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */,
+				D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */,
+				D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */,
+				D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		D7B7CA681288FCB000DC33F4 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D7B7CB82128909D400DC33F4 /* GMRMainController.h */,
+				D7B7CB83128909D400DC33F4 /* GMRMainController.m */,
+				D7B7CB84128909D400DC33F4 /* GMRMainController.xib */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
 		D7DB90B71280839900D6C442 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +631,26 @@
 				D7DB90A31280837D00D6C442 /* ASIProgressDelegate.h */,
 			);
 			name = ASIHttp;
+			sourceTree = "<group>";
+		};
+		D7EEAD82128A11AF0022AF4E /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				D7EEAD83128A11BF0022AF4E /* OverviewController.h */,
+				D7EEAD84128A11BF0022AF4E /* OverviewController.m */,
+				D7EEAD85128A11BF0022AF4E /* OverviewController.xib */,
+			);
+			name = Overview;
+			sourceTree = "<group>";
+		};
+		D7EEAE53128A20CF0022AF4E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D7EEAE54128A20E90022AF4E /* GMRScheduledMatchesForUser.h */,
+				D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */,
+				D7EEAE57128A210D0022AF4E /* GMRDataSource.h */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +755,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				D77E1BD71288A0EA00B75D60 /* PBXTargetDependency */,
+				D7CD224C1289E76400E26772 /* PBXTargetDependency */,
 				D775C4BC128795D100C72E64 /* PBXTargetDependency */,
 			);
 			name = HazGame;
@@ -796,6 +877,8 @@
 				D7B41E091287ABD0005BD0B4 /* Icon@2x.png in Resources */,
 				D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */,
 				D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */,
+				D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */,
+				D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +926,9 @@
 				D775C4E61287981500C72E64 /* main.m in Sources */,
 				D727C3311287D098001F2BAF /* GMRAuthenticationController.m in Sources */,
 				D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */,
+				D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */,
+				D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */,
+				D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +990,16 @@
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* Gamer */;
 			targetProxy = D775C4BB128795D100C72E64 /* PBXContainerItemProxy */;
+		};
+		D77E1BD71288A0EA00B75D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DB908F1280832500D6C442 /* ASIHttp */;
+			targetProxy = D77E1BD61288A0EA00B75D60 /* PBXContainerItemProxy */;
+		};
+		D7CD224C1289E76400E26772 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7B7280A128226E700419F60 /* YAJL */;
+			targetProxy = D7CD224B1289E76400E26772 /* PBXContainerItemProxy */;
 		};
 		D7DB93931280B91900D6C442 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1011,6 +1107,7 @@
 				PRODUCT_NAME = HazGame;
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1041,6 +1138,7 @@
 				PRODUCT_NAME = HazGame;
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
+				USER_HEADER_SEARCH_PATHS = "";
 				ZERO_LINK = NO;
 			};
 			name = Release;

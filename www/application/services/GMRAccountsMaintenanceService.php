@@ -10,7 +10,6 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 	 */
 	public function linkPlatformAlias($username, $platform)
 	{
-		
 		$response     = new stdClass();
 		$response->ok = true;
 		
@@ -35,7 +34,7 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 		}
 		else
 		{
-			$response->ok = false;
+			$response->ok      = false;
 			$response->message = "unauthorized_client";
 		}
 		
