@@ -10,7 +10,7 @@
 #import "GMRAuthenticationInputController.h"
 
 @implementation GMRAuthenticationNewAccount
-@synthesize inputController, email, username, password, passwordConfirm;
+@synthesize inputController, email, username, password, passwordConfirm, form, topBar;
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -19,27 +19,66 @@
 }
 */
 
+-(void)viewDidLoad
+{
+	//self.navigationBar.frame = CGRectMake(0, 20.0, self.view.frame.size.width, self.navigationBar.frame.size.height);
+	self.topBar.transform = CGAffineTransformMakeTranslation(0.0, -60);
+	[self.view insertSubview:form atIndex:0];
+	[super viewDidLoad];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[UIView transitionWithView:self.topBar 
+					  duration:0.35 
+					   options:UIViewAnimationOptionCurveEaseOut 
+					animations:^{
+						self.topBar.transform = CGAffineTransformMakeTranslation(0.0, -60);
+					} 
+					completion:NULL];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[UIView transitionWithView:self.topBar 
+					  duration:0.35 
+					   options:UIViewAnimationOptionCurveEaseOut 
+					animations:^{
+						self.topBar.transform = CGAffineTransformIdentity;
+					} 
+					completion:NULL];
+}
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
 
 	if(textField == password)
 	{
-		[UIView transitionWithView:self.view 
+		[UIView transitionWithView:self.form 
 						  duration:0.35 
 						   options:UIViewAnimationOptionCurveEaseOut 
 						animations:^{
-							self.view.transform = CGAffineTransformMakeTranslation(0.0, -120.0);
+							self.form.transform = CGAffineTransformMakeTranslation(0.0, -80.0);
 						} 
 						completion:NULL];
 	}
-	
-	else if(textField == username && self.view.transform.ty != 0)
+	else if(textField == passwordConfirm)
 	{
-		[UIView transitionWithView:self.view 
+		[UIView transitionWithView:self.form 
+						  duration:0.35 
+						   options:UIViewAnimationOptionCurveEaseOut 
+						animations:^{
+							self.form.transform = CGAffineTransformMakeTranslation(0.0, -140.0);
+						} 
+						completion:NULL];
+	}
+	else if(textField == username && self.form.transform.ty != 0)
+	{
+		[UIView transitionWithView:self.form 
 						  duration:0.35
 						   options:UIViewAnimationOptionCurveEaseOut 
 						animations:^{
-							self.view.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
+							self.form.transform = CGAffineTransformMakeTranslation(0.0, 0.0);
 						} 
 						completion:NULL];
 	}
@@ -107,12 +146,18 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	
+    self.email = nil;
+	self.username = nil; 
+	self.password = nil; 
+	self.passwordConfirm = nil;
+	self.topBar = nil;
+	self.form = nil;
 }
 
 
 - (void)dealloc {
+	
     [super dealloc];
 }
 
