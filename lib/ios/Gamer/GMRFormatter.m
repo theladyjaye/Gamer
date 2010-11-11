@@ -46,8 +46,7 @@
 
 - (void)dealloc
 {
-	[onInvalidCharacter release];
-	onInvalidCharacter = nil;
+	self.onInvalidCharacter = nil;
 	[super dealloc];
 }
 

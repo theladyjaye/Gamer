@@ -8,13 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^GMRFormatterErrorCallback)(void);
-
 @interface GMRFormatter : NSFormatter {
-	GMRFormatterErrorCallback onInvalidCharacter;
+	void (^onInvalidCharacter)(void);
 }
 
-@property(nonatomic, retain) GMRFormatterErrorCallback onInvalidCharacter;
+@property(nonatomic, retain) void (^onInvalidCharacter)(void);
+
 -(NSString *) applyFormat:(NSString *)string withValidCharacters:(NSString *)validCharacters;
 -(NSString *) applyFormat:(NSString *)string withInvalidCharacters:(NSString *)invalidCharactes;
 @end
