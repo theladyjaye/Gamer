@@ -162,15 +162,16 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
-- (void)viewDidUnload {
+- (void)viewDidUnload 
+{
     [super viewDidUnload];
 	
-    self.email = nil;
-	self.username = nil; 
-	self.password = nil; 
+    self.email           = nil;
+	self.username        = nil; 
+	self.password        = nil; 
 	self.passwordConfirm = nil;
-	self.topBar = nil;
-	self.form = nil;
+	self.topBar          = nil;
+	self.form            = nil;
 }
 
 

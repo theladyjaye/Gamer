@@ -250,8 +250,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -308,7 +306,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 33}, {255, 861}}</string>
+							<string>{{0, 0}, {255, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,6 +334,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -353,7 +353,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D78356F9128CA24400E19528</string>
+										<string>D7835702128CA2EC00E19528</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -424,7 +424,7 @@
 											<string>D78356C3128C9FD500E19528</string>
 											<string>D78356C4128C9FD500E19528</string>
 											<string>D78356ED128CA0AD00E19528</string>
-											<string>D78356F7128CA24200E19528</string>
+											<string>D7835701128CA2C000E19528</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -438,18 +438,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1279, 612}}</string>
+								<string>{{0, 0}, {1279, 874}}</string>
 								<key>RubberWindowFrame</key>
 								<string>25 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>612pt</string>
+							<string>874pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>262pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -517,7 +517,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1279, 235}}</string>
+										<string>{{10, 27}, {1279, -27}}</string>
 										<key>RubberWindowFrame</key>
 										<string>25 108 1556 920 0 0 1680 1028 </string>
 									</dict>
@@ -724,7 +724,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>311206468.68189299</real>
+	<real>311206636.18749601</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
