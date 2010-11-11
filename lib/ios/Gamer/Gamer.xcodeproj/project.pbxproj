@@ -28,6 +28,11 @@
 		D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
 		D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
 		D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */; };
+		D7835649128C826300E19528 /* GMREmailFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835648128C826300E19528 /* GMREmailFormatter.m */; };
+		D7835678128C926E00E19528 /* GMRFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835677128C926E00E19528 /* GMRFormatter.m */; };
+		D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835684128C93A400E19528 /* GMRUsernameFormatter.m */; };
+		D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835687128C93B000E19528 /* GMRPasswordFormatter.m */; };
+		D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78356B7128C9FB500E19528 /* AudioToolbox.framework */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -193,6 +198,15 @@
 		D775C4E51287981500C72E64 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D775C4E71287986C00C72E64 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		D77E1BBB12889F3000B75D60 /* GMRGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGlobals.h; sourceTree = "<group>"; };
+		D7835647128C826300E19528 /* GMREmailFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMREmailFormatter.h; sourceTree = "<group>"; };
+		D7835648128C826300E19528 /* GMREmailFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMREmailFormatter.m; sourceTree = "<group>"; };
+		D7835676128C926E00E19528 /* GMRFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRFormatter.h; sourceTree = "<group>"; };
+		D7835677128C926E00E19528 /* GMRFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRFormatter.m; sourceTree = "<group>"; };
+		D7835683128C93A400E19528 /* GMRUsernameFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRUsernameFormatter.h; sourceTree = "<group>"; };
+		D7835684128C93A400E19528 /* GMRUsernameFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRUsernameFormatter.m; sourceTree = "<group>"; };
+		D7835686128C93B000E19528 /* GMRPasswordFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPasswordFormatter.h; sourceTree = "<group>"; };
+		D7835687128C93B000E19528 /* GMRPasswordFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPasswordFormatter.m; sourceTree = "<group>"; };
+		D78356B7128C9FB500E19528 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -315,6 +329,7 @@
 				D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */,
 				D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */,
 				D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */,
+				D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +405,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */,
+				D78356B7128C9FB500E19528 /* AudioToolbox.framework */,
 			);
 			name = Gamer;
 			sourceTree = "<group>";
@@ -433,6 +449,7 @@
 		D775C4BD128795D900C72E64 /* HazGame */ = {
 			isa = PBXGroup;
 			children = (
+				D783562A128C81E100E19528 /* Formatters */,
 				D7AFF522128A68FF00CF1A07 /* Utils */,
 				D7EEAE53128A20CF0022AF4E /* Data */,
 				D775C4E3128797FF00C72E64 /* Other Sources */,
@@ -472,6 +489,21 @@
 				D775C4E51287981500C72E64 /* main.m */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D783562A128C81E100E19528 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				D7835647128C826300E19528 /* GMREmailFormatter.h */,
+				D7835648128C826300E19528 /* GMREmailFormatter.m */,
+				D7835676128C926E00E19528 /* GMRFormatter.h */,
+				D7835677128C926E00E19528 /* GMRFormatter.m */,
+				D7835683128C93A400E19528 /* GMRUsernameFormatter.h */,
+				D7835684128C93A400E19528 /* GMRUsernameFormatter.m */,
+				D7835686128C93B000E19528 /* GMRPasswordFormatter.h */,
+				D7835687128C93B000E19528 /* GMRPasswordFormatter.m */,
+			);
+			name = Formatters;
 			sourceTree = "<group>";
 		};
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
@@ -953,6 +985,10 @@
 				D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */,
 				D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */,
 				D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */,
+				D7835649128C826300E19528 /* GMREmailFormatter.m in Sources */,
+				D7835678128C926E00E19528 /* GMRFormatter.m in Sources */,
+				D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */,
+				D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

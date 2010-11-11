@@ -6,8 +6,13 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import "GMRAuthenticationNewAccount.h"
 #import "GMRAuthenticationInputController.h"
+#import "GMRFormatter.h"
+#import "GMREmailFormatter.h"
+#import "GMRUsernameFormatter.h"
+#import "GMRPasswordFormatter.h"
 
 @implementation GMRAuthenticationNewAccount
 @synthesize inputController, email, username, password, passwordConfirm, form, topBar;
@@ -82,31 +87,44 @@
 						} 
 						completion:NULL];
 	}
+	
+	
+	
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-	return YES;
-	/*
-	BOOL result = YES;
 	
+	GMRFormatter * formatter;
+	NSString * value = nil;
+
 	if(range.length != 1 && ![string isEqualToString:@""])
 	{
-		if([textField isEqual:inputSerialNumber] || [textField isEqual:inputModelNumber])
+		if(textField == email)
 		{
-			SerialNumberFormatter * formatter = [[SerialNumberFormatter alloc] init];
-			NSString * value  = [formatter stringForString:string];
-			[formatter release];
-			
-			if(!value){
-				result = NO;
-			}
-			
+			formatter = [[[GMREmailFormatter alloc] init] autorelease];
+			formatter.onInvalidCharacter = ^{AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);};
+			value  = [formatter stringForObjectValue:string];
 		}
+		
+		if(textField == username)
+		{
+			formatter = [[[GMRUsernameFormatter alloc] init] autorelease];
+			formatter.onInvalidCharacter = ^{AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);};
+			value  = [formatter stringForObjectValue:string];
+		}
+		
+		if(textField == passwordConfirm || textField == password)
+		{
+			formatter = [[[GMRPasswordFormatter alloc] init] autorelease];
+			formatter.onInvalidCharacter = ^{AudioServicesPlaySystemSound (kSystemSoundID_Vibrate);};
+			value  = [formatter stringForObjectValue:string];
+		}
+		
+		return value != nil;
 	}
 	
-	return result;
-	 */
+	return YES;
 }
 
 - (IBAction)cancel:(id)sender
