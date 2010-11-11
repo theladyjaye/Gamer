@@ -19,7 +19,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	static BOOL needsTransition = YES;
-	
 	if(needsTransition)
 	{
 		needsTransition = NO;
@@ -31,6 +30,8 @@
 		dispatch_after(delay, dispatch_get_main_queue(), ^{
 			
 			[inputController viewWillAppear:YES];
+			
+			[self.view addSubview:inputController.view];
 
 			[UIView transitionFromView:defaultImageView
 								toView:inputController.view

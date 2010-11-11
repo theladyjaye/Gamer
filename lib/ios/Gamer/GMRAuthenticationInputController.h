@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class GMRAuthenticationController;
+@class GMRAuthenticationController,GMRAuthenticationNewAccount;
 @interface GMRAuthenticationInputController : UIViewController<UITextFieldDelegate>
 {
 	UITextField * username;
 	UITextField * password;
 	GMRAuthenticationController * authenticationController;
+	GMRAuthenticationNewAccount * newAccountController;
 }
 
 @property(nonatomic, retain) IBOutlet UITextField * username;
@@ -21,6 +22,7 @@
 @property(nonatomic, assign) GMRAuthenticationController * authenticationController;
 
 - (IBAction)authenticate;
+- (IBAction)newAccount;
 - (void)authenticationDidSucceedWithUsername:(NSString *)name andToken:(NSString *)token;
 - (void)authenticationDidFail;
 @end

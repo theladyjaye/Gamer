@@ -70,8 +70,9 @@ class GMRAccountsOpenService extends GMRAbstractService
 		$context = array(AMForm::kDataKey=>$_POST);
 		$input   = AMForm::formWithContext($context);
 
-		$input->addValidator(new AMPatternValidator('firstname', AMValidator::kRequired, '/^[a-zA-Z]{2,}[a-zA-Z ]{0,}$/', "Invalid first name. Expecting minimum 2 characters. Must start with at least 2 letters, followed by letters or spaces"));
-		$input->addValidator(new AMPatternValidator('lastname', AMValidator::kRequired, '/^[a-zA-Z]{2,}[a-zA-Z ]{0,}$/', "Invalid last name.  Expecting minimum 2 characters. Must start with at least 2 letters, followed by letters or spaces"));
+		// I'm gonna say we don't need First/Last name.  No need
+		// $input->addValidator(new AMPatternValidator('firstname', AMValidator::kRequired, '/^[a-zA-Z]{2,}[a-zA-Z ]{0,}$/', "Invalid first name. Expecting minimum 2 characters. Must start with at least 2 letters, followed by letters or spaces"));
+		// $input->addValidator(new AMPatternValidator('lastname', AMValidator::kRequired, '/^[a-zA-Z]{2,}[a-zA-Z ]{0,}$/', "Invalid last name.  Expecting minimum 2 characters. Must start with at least 2 letters, followed by letters or spaces"));
 		$input->addValidator(new AMEmailValidator('email', AMValidator::kRequired, 'Invalid email address'));
 		$input->addValidator(new AMPatternValidator('username', AMValidator::kRequired, '/^[\w\d]{4,}$/', "Invalid username.  Expecting minimum 4 characters. Must be composed of letters, numbers or _"));
 		$input->addValidator(new AMPatternValidator('password', AMValidator::kRequired, '/^[\w\d\W]{5,}$/', "Invalid password.  Expecting minimum 5 characters. Cannot contain spaces"));
@@ -84,8 +85,8 @@ class GMRAccountsOpenService extends GMRAbstractService
 			// before we can create the account
 
 			$data =& $input->formData;
-			$data['firstname'] = ucwords(strtolower($data['firstname']));
-			$data['lastname']  = ucwords(strtolower($data['lastname']));
+			//$data['firstname'] = ucwords(strtolower($data['firstname']));
+			//$data['lastname']  = ucwords(strtolower($data['lastname']));
 			$data['email']     = strtolower($data['email']);
 			$data['username']  = strtolower($data['username']);
 
@@ -118,8 +119,8 @@ class GMRAccountsOpenService extends GMRAbstractService
 				$user               = new GMRUser();
 				$user->username     = $input->username;
 				$user->email        = $input->email;
-				$user->firstname    = $input->firstname;
-				$user->lastname     = $input->lastname;
+				//$user->firstname    = $input->firstname;
+				//$user->lastname     = $input->lastname;
 				$user->token        = GMRSecurity::generate_token(uniqid(true));
 				$user->password     = GMRSecurity::hash($input->password);
 				

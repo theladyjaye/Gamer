@@ -9,6 +9,7 @@
 #include <dispatch/dispatch.h>
 #import "GMRAuthenticationInputController.h"
 #import "GMRAuthenticationController.h"
+#import "GMRAuthenticationNewAccount.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
 
@@ -22,6 +23,30 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (IBAction)newAccount
+{
+	newAccountController = [[GMRAuthenticationNewAccount alloc] initWithNibName:nil bundle:nil];
+	newAccountController.view.frame = CGRectMake(self.view.frame.size.width, 0.0, self.view.frame.size.width, self.view.frame.size.height);	
+	
+	
+	[newAccountController viewWillAppear:YES];
+	
+	
+	[UIView transitionWithView:self.view.superview
+					  duration:0.35f 
+					   options:UIViewAnimationOptionCurveEaseInOut  
+					animations:^{
+						[self.view.superview addSubview:newAccountController.view];
+						self.view.superview.transform = CGAffineTransformMakeTranslation(-1 * self.view.frame.size.width, 0.0);
+						//self.view.superview.frame = CGRectMake(-1 * self.view.frame.size.width, 0.0, self.view.superview.frame.size.width, self.view.superview.frame.size.height);
+					} 
+					completion:^(BOOL finished){
+						[newAccountController viewDidAppear:YES];
+						newAccountController.inputController = self;
+						self.view.superview.frame = CGRectMake(self.view.superview.frame.origin.x, 0.0, (self.view.superview.frame.size.width * 2), self.view.superview.frame.size.height);
+					}];
+}
 
 - (IBAction)authenticate
 {
@@ -99,6 +124,13 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[self.username becomeFirstResponder];
+	
+	if(newAccountController)
+	{
+		[newAccountController.view removeFromSuperview];
+		[newAccountController release];
+		newAccountController = nil;
+	}
 }
 
 - (void)viewDidUnload 

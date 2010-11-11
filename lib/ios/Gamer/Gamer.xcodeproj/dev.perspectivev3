@@ -290,14 +290,16 @@
 								<string>D7AFF522128A68FF00CF1A07</string>
 								<string>D7EEAE53128A20CF0022AF4E</string>
 								<string>D775C4E11287978C00C72E64</string>
+								<string>D7B7CA671288FAE900DC33F4</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>7</integer>
-									<integer>5</integer>
+									<integer>19</integer>
+									<integer>14</integer>
+									<integer>11</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -320,7 +322,7 @@
 							<real>255</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>153 82 1556 920 0 0 1680 1028 </string>
+						<string>25 108 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -338,7 +340,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRScheduledMatchesForUser.m</string>
+								<string>GMRAuthenticationInputController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -346,11 +348,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRScheduledMatchesForUser.m</string>
+										<string>GMRAuthenticationInputController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7AFF576128A71BE00CF1A07</string>
+										<string>D7C9EEED128B86D8000580B2</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -387,7 +389,6 @@
 											<string>D7EEAB571289F8EB0022AF4E</string>
 											<string>D7EEAC42128A05390022AF4E</string>
 											<string>D7EEAC5F128A06360022AF4E</string>
-											<string>D7EEAC6C128A07440022AF4E</string>
 											<string>D7EEACCD128A0B290022AF4E</string>
 											<string>D7EEACEC128A0C820022AF4E</string>
 											<string>D7EEACEE128A0C820022AF4E</string>
@@ -397,8 +398,6 @@
 											<string>D7EEADF2128A15060022AF4E</string>
 											<string>D7EEAE05128A171D0022AF4E</string>
 											<string>D7EEAE0A128A1B620022AF4E</string>
-											<string>D7EEAE0C128A1B620022AF4E</string>
-											<string>D7EEAE0D128A1B620022AF4E</string>
 											<string>D7EEAE0E128A1B620022AF4E</string>
 											<string>D7EEAE61128A356B0022AF4E</string>
 											<string>D7EEAE62128A356B0022AF4E</string>
@@ -410,7 +409,13 @@
 											<string>D7AFF52C128A6BC600CF1A07</string>
 											<string>D7AFF537128A6BED00CF1A07</string>
 											<string>D7AFF56B128A713000CF1A07</string>
-											<string>D7AFF575128A71AE00CF1A07</string>
+											<string>D72E3DBB128B16710083464E</string>
+											<string>D7C9EE61128B5F1C000580B2</string>
+											<string>D7C9EE8D128B7705000580B2</string>
+											<string>D7C9EE8E128B7705000580B2</string>
+											<string>D7C9EEE6128B8685000580B2</string>
+											<string>D7C9EEE7128B8685000580B2</string>
+											<string>D7C9EEEC128B86C2000580B2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -426,7 +431,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1279, 612}}</string>
 								<key>RubberWindowFrame</key>
-								<string>153 82 1556 920 0 0 1680 1028 </string>
+								<string>25 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -505,7 +510,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1279, 235}}</string>
 										<key>RubberWindowFrame</key>
-										<string>153 82 1556 920 0 0 1680 1028 </string>
+										<string>25 108 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -533,11 +538,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D7AFF479128A5A6000CF1A07</string>
+				<string>D7C9EE67128B5F1D000580B2</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>D7AFF47A128A5A6000CF1A07</string>
+				<string>D7C9EE68128B5F1D000580B2</string>
 				<string>D7DDD7BB127FD49300C29265</string>
-				<string>D7AFF47B128A5A6000CF1A07</string>
+				<string>D7C9EE69128B5F1D000580B2</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -686,13 +691,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D7AFF493128A5E5700CF1A07</string>
+				<string>D7C9EE6A128B5F1D000580B2</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>D7AFF494128A5E5700CF1A07</string>
-				<string>D7AFF495128A5E5700CF1A07</string>
-				<string>D7AFF496128A5E5700CF1A07</string>
-				<string>D7AFF497128A5E5700CF1A07</string>
+				<string>D7C9EE6B128B5F1D000580B2</string>
+				<string>D7C9EE6C128B5F1D000580B2</string>
+				<string>D7C9EE6D128B5F1D000580B2</string>
+				<string>D7C9EE6E128B5F1D000580B2</string>
 				<string>D7DDD7BB127FD49300C29265</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
@@ -710,7 +715,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>311062974.76880199</real>
+	<real>311133912.52683902</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -730,7 +735,7 @@
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>153 82 1556 920 0 0 1680 1028 </string>
+	<string>25 108 1556 920 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -1103,7 +1108,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D5B069F1CE1000CFCEE</string>
-				<string>D775C51C12879C4200C72E64</string>
+				<string>D72E4009128B57710083464E</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

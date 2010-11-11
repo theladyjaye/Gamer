@@ -13,6 +13,8 @@
 		D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */; };
 		D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */; };
 		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
+		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
+		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
 		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
@@ -180,6 +182,9 @@
 		D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationInputController.h; sourceTree = "<group>"; };
 		D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationInputController.m; sourceTree = "<group>"; };
 		D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationInputController.xib; sourceTree = "<group>"; };
+		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
+		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
+		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
 		D775C4B2128795A400C72E64 /* HazGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775C4B4128795A400C72E64 /* HazGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazGame-Info.plist"; sourceTree = "<group>"; };
 		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
@@ -590,6 +595,9 @@
 				D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */,
 				D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */,
 				D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */,
+				D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */,
+				D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */,
+				D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -892,6 +900,7 @@
 				D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */,
 				D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */,
 				D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */,
+				D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +952,7 @@
 				D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */,
 				D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */,
 				D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */,
+				D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
