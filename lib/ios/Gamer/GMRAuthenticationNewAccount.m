@@ -73,7 +73,7 @@
 						  duration:0.35 
 						   options:UIViewAnimationOptionCurveEaseOut 
 						animations:^{
-							self.form.transform = CGAffineTransformMakeTranslation(0.0, -140.0);
+							self.form.transform = CGAffineTransformMakeTranslation(0.0, -135.0);
 						} 
 						completion:NULL];
 	}
