@@ -17,7 +17,8 @@ enum {
 	GMRPlatformWii,
 	GMRPlatformPlaystation3,
 	GMRPlatformPlaystation2,
-	GMRPlatformPC
+	GMRPlatformPC,
+	GMRPlatformBattleNet
 };
 typedef NSUInteger GMRPlatform;
 

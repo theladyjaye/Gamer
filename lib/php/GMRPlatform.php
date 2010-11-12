@@ -6,5 +6,6 @@ class GMRPlatform
 	const kPlaystation3 = 'playstation3';
 	const kPlaystation2 = 'playstation2';
 	const kPC           = 'pc';
+	const kBattleNet    = 'battlenet';
 }
 ?>

@@ -10,6 +10,7 @@
 #import "GMRAuthenticationInputController.h"
 #import "GMRAuthenticationController.h"
 #import "GMRAuthenticationNewAccount.h"
+#import "GMRAlertView.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
 
@@ -55,7 +56,8 @@
 	
 	// both of these methods will be invoked from a background thread
 	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){
-		if(YES)
+		
+		if(ok)
 		{
 			NSString * token = (NSString *)[response objectForKey:@"token"];
 			kGamerApi.username = usernameString;
@@ -95,7 +97,20 @@
 
 - (void)authenticationDidFail
 {
-	NSLog(@"Authentication failed!");
+	dispatch_async(dispatch_get_main_queue(), ^{
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithTitle:@"Error" 
+														   message:@"Invalid Username or Password" 
+														  delegate:self];
+		[alert show];
+	});
+	
+	
+}
+
+- (void)alertViewDidDismiss:(GMRAlertView *)alertView
+{
+	
+	[alertView release];
 }
 
 

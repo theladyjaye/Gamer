@@ -65,9 +65,9 @@ GMRClient * kGamerApi = nil;
 		authenticationController = nil;
 	}
 	
-	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	[defaults removeObjectForKey:@"token"];
-	[defaults removeObjectForKey:@"username"];
+	//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	//[defaults removeObjectForKey:@"token"];
+	//[defaults removeObjectForKey:@"username"];
 }
 
 
