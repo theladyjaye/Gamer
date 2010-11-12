@@ -28,6 +28,7 @@
 
 - (void)version:(GMRCallback)callback;
 - (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback;
+- (void)registerUser:(NSString *)email username:(NSString *)name password:(NSString *)password passwordVerify:(NSString *)passwordVerify withCallback:(GMRCallback)callback;
 
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback;

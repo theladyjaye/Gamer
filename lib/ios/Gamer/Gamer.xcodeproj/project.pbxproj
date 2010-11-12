@@ -81,6 +81,8 @@
 		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
 		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
+		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
+		D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */; };
 		D7DB90A41280837D00D6C442 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */; };
 		D7DB90A51280837D00D6C442 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */; };
 		D7DB90A61280837D00D6C442 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90961280837D00D6C442 /* ASICacheDelegate.h */; };
@@ -255,6 +257,9 @@
 		D7B7CB82128909D400DC33F4 /* GMRMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMainController.h; sourceTree = "<group>"; };
 		D7B7CB83128909D400DC33F4 /* GMRMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMainController.m; sourceTree = "<group>"; };
 		D7B7CB84128909D400DC33F4 /* GMRMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMainController.xib; sourceTree = "<group>"; };
+		D7D23DA2128CE9A500C23711 /* GMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlertView.h; sourceTree = "<group>"; };
+		D7D23DA3128CE9A500C23711 /* GMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlertView.m; sourceTree = "<group>"; };
+		D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAlertView.xib; sourceTree = "<group>"; };
 		D7DB90901280832500D6C442 /* libASIHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASIHttp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -465,6 +470,7 @@
 		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7D23DA1128CE98800C23711 /* Alert */,
 				D7EEAD82128A11AF0022AF4E /* Overview */,
 				D7B7CA681288FCB000DC33F4 /* MainView */,
 				D7B7CA671288FAE900DC33F4 /* Authentication */,
@@ -642,6 +648,16 @@
 				D7B7CB84128909D400DC33F4 /* GMRMainController.xib */,
 			);
 			name = MainView;
+			sourceTree = "<group>";
+		};
+		D7D23DA1128CE98800C23711 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D7D23DA2128CE9A500C23711 /* GMRAlertView.h */,
+				D7D23DA3128CE9A500C23711 /* GMRAlertView.m */,
+				D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */,
+			);
+			name = Alert;
 			sourceTree = "<group>";
 		};
 		D7DB90B71280839900D6C442 /* Reachability */ = {
@@ -933,6 +949,7 @@
 				D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */,
 				D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */,
 				D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */,
+				D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -989,6 +1006,7 @@
 				D7835678128C926E00E19528 /* GMRFormatter.m in Sources */,
 				D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */,
 				D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */,
+				D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

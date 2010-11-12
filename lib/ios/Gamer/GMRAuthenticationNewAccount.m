@@ -7,12 +7,16 @@
 //
 
 #import <AudioToolbox/AudioToolbox.h>
+#include <dispatch/dispatch.h>
 #import "GMRAuthenticationNewAccount.h"
 #import "GMRAuthenticationInputController.h"
 #import "GMRFormatter.h"
 #import "GMREmailFormatter.h"
 #import "GMRUsernameFormatter.h"
 #import "GMRPasswordFormatter.h"
+#import "GMRGlobals.h"
+#import "GMRClient.h"
+#import "GMRAlertView.h"
 
 @implementation GMRAuthenticationNewAccount
 @synthesize inputController, email, username, password, passwordConfirm, form, topBar;
@@ -134,7 +138,52 @@
 
 - (IBAction)create:(id)sender
 {
+	
+	[kGamerApi registerUser:email.text 
+				   username:username.text 
+				   password:password.text 
+			 passwordVerify:passwordConfirm.text 
+			   withCallback:^(BOOL ok, NSDictionary * response){
+				   
+				   if(ok)
+				   {
+					   dispatch_async(dispatch_get_main_queue(), ^{
+						   [self createSucceeded];
+					   });
+				   }
+				   else 
+				   {
+					   dispatch_async(dispatch_get_main_queue(), ^{
+						   [self createFailedWithErrors:[response objectForKey:@"errors"]];
+					   });
+				   }
 
+			   }];
+}
+- (void)createFailedWithErrors:(NSArray *)errors
+{
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithTitle:@"Error" 
+													   message:@"Form Error"
+													  delegate:self];
+	[alert show];
+}
+
+- (void)createSucceeded
+{
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithTitle:@"Success" 
+													   message:@"Account Created Successfully!\nPlease check your email to activate your new acocunt"
+													  delegate:self];
+	[alert show];
+
+}
+
+- (void)alertViewDidDismiss:(GMRAlertView *)alertView
+{
+	[alertView autorelease];
+	
+	if([alertView.alertTitle isEqualToString:@"Success"])
+		[self transitionOut];
+	
 }
 
 - (void)transitionOut

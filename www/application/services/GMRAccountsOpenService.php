@@ -52,8 +52,8 @@ class GMRAccountsOpenService extends GMRAbstractService
 	 * POST /accounts/register
 	 *
 	 * Form Vars (application/x-www-form-urlencoded)
-	 * firstname
-	 * lastname
+	 * //firstname
+	 * //lastname
 	 * email
 	 * username
 	 * password

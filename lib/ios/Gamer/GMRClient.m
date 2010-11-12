@@ -82,6 +82,18 @@ static NSArray * platformStrings;
 	
 }
 
+- (void)registerUser:(NSString *)email username:(NSString *)name password:(NSString *)password passwordVerify:(NSString *)passwordVerify withCallback:(GMRCallback)callback
+{
+	NSString*      method = @"POST";
+	NSString*      path   = @"http://hazgame.com/accounts/register";
+	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:email, @"email", name, @"username", password, @"password", passwordVerify, @"password_verify", nil];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+}
+
 - (void)version:(GMRCallback)callback
 {
 	NSString*     method = @"GET";

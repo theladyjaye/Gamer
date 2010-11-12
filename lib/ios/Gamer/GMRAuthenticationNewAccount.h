@@ -30,5 +30,8 @@
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)create:(id)sender;
+- (void)createFailedWithErrors:(NSArray *)errors;
+- (void)createSucceeded;
+
 - (void)transitionOut;
 @end
