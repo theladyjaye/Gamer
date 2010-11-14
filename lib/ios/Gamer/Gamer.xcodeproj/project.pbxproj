@@ -15,6 +15,14 @@
 		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
 		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
 		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
+		D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = D747507F1290315100342AD1 /* MatchListCellBottom.png */; };
+		D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750801290315100342AD1 /* MatchListCellBottom@2x.png */; };
+		D747509F129036E400342AD1 /* MatchListCellBottomPodShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */; };
+		D74750A0129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */; };
+		D74750C812907BA600342AD1 /* MatchListCellBoxArt.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */; };
+		D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */; };
+		D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */; };
+		D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */; };
 		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
@@ -33,6 +41,10 @@
 		D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835684128C93A400E19528 /* GMRUsernameFormatter.m */; };
 		D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835687128C93B000E19528 /* GMRPasswordFormatter.m */; };
 		D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78356B7128C9FB500E19528 /* AudioToolbox.framework */; };
+		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
+		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
+		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
+		D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -192,6 +204,14 @@
 		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
 		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
 		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
+		D747507F1290315100342AD1 /* MatchListCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottom.png; sourceTree = "<group>"; };
+		D74750801290315100342AD1 /* MatchListCellBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBottom@2x.png"; sourceTree = "<group>"; };
+		D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottomPodShadow.png; sourceTree = "<group>"; };
+		D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBottomPodShadow@2x.png"; sourceTree = "<group>"; };
+		D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArt.png; sourceTree = "<group>"; };
+		D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArt@2x.png"; sourceTree = "<group>"; };
+		D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArtShadow.png; sourceTree = "<group>"; };
+		D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArtShadow@2x.png"; sourceTree = "<group>"; };
 		D775C4B2128795A400C72E64 /* HazGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775C4B4128795A400C72E64 /* HazGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazGame-Info.plist"; sourceTree = "<group>"; };
 		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
@@ -209,6 +229,11 @@
 		D7835686128C93B000E19528 /* GMRPasswordFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPasswordFormatter.h; sourceTree = "<group>"; };
 		D7835687128C93B000E19528 /* GMRPasswordFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPasswordFormatter.m; sourceTree = "<group>"; };
 		D78356B7128C9FB500E19528 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
+		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
+		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
+		D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMatchListCell.h; sourceTree = "<group>"; };
+		D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatchListCell.m; sourceTree = "<group>"; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -470,6 +495,7 @@
 		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D795FDB6128FB3E50033F086 /* TableCells */,
 				D7D23DA1128CE98800C23711 /* Alert */,
 				D7EEAD82128A11AF0022AF4E /* Overview */,
 				D7B7CA681288FCB000DC33F4 /* MainView */,
@@ -512,6 +538,16 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		D795FDB6128FB3E50033F086 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */,
+				D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */,
+				D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,6 +560,16 @@
 		D7B41DF91287AAE0005BD0B4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */,
+				D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */,
+				D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */,
+				D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */,
+				D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */,
+				D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */,
+				D747507F1290315100342AD1 /* MatchListCellBottom.png */,
+				D74750801290315100342AD1 /* MatchListCellBottom@2x.png */,
+				D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */,
+				D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */,
 				D7B41E061287ABD0005BD0B4 /* Icon.png */,
 				D7B41E071287ABD0005BD0B4 /* Icon@2x.png */,
 				D7B41DFA1287AAE0005BD0B4 /* Default.png */,
@@ -950,6 +996,17 @@
 				D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */,
 				D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */,
 				D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */,
+				D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */,
+				D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */,
+				D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */,
+				D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */,
+				D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */,
+				D747509F129036E400342AD1 /* MatchListCellBottomPodShadow.png in Resources */,
+				D74750A0129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png in Resources */,
+				D74750C812907BA600342AD1 /* MatchListCellBoxArt.png in Resources */,
+				D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */,
+				D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */,
+				D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1064,7 @@
 				D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */,
 				D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */,
 				D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */,
+				D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

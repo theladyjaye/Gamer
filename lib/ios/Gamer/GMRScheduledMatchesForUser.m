@@ -11,6 +11,7 @@
 #import "GMRGlobals.h"
 #import "GMRClient.h"
 #import "NSDate+JSON.h"
+#import "GMRMatchListCell.h"
 
 @implementation GMRScheduledMatchesForUser
 
@@ -22,6 +23,7 @@
 	 {
 		 if(ok)
 		 {
+			 NSLog(@"%@", response);
 			 matches = (NSArray *)[response objectForKey:@"matches"];
 			 [matches retain];
 			 dispatch_async(dispatch_get_main_queue(), ^{[tableView reloadData];});
@@ -40,20 +42,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [matches count];
+    return 5;//[matches count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"MatchListCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+	GMRMatchListCell *cell = (GMRMatchListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) 
+	{
+        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRMatchListCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        //self.tvCell = nil;
     }
-    
+    /*
     NSDictionary * item = [matches objectAtIndex:indexPath.row];
 	
 	NSString * scheduled_time = [item objectForKey:@"scheduled_time"];
@@ -70,7 +77,7 @@
 	
 	cell.textLabel.text = (NSString *)[item objectForKey:@"label"];
 	cell.detailTextLabel.text = displayDate;
-    
+    */
     return cell;
 }
 

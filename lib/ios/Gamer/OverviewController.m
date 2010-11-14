@@ -14,6 +14,8 @@
 
 - (void)viewDidLoad 
 {	
+	// cell height is set to 92 - Image components = 91 + 1 for seperator
+	tableView.separatorColor = [UIColor blackColor];
 	[dataProvider refresh:tableView];
 	[super viewDidLoad];
 }

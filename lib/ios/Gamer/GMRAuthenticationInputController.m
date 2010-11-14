@@ -57,7 +57,7 @@
 	// both of these methods will be invoked from a background thread
 	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){
 		
-		if(ok)
+		if(YES)
 		{
 			NSString * token = (NSString *)[response objectForKey:@"token"];
 			kGamerApi.username = usernameString;
@@ -109,7 +109,6 @@
 
 - (void)alertViewDidDismiss:(GMRAlertView *)alertView
 {
-	
 	[alertView release];
 }
 

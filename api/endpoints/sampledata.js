@@ -6,7 +6,7 @@ var couchdb     = require('../libs/node-couchdb/lib/couchdb'),
 	spawn       = require('child_process').spawn,
 	Game        = require('../data/game'),
 	Match       = require('../data/match'),
-	Token       = require('../data/token');
+	Player      = require('../data/player');
 	
 exports.endpoints = function(app)
 {
@@ -44,18 +44,6 @@ function initialize(req, res, next)
 	var twoHoursFromNow          = (now.getTime() - milliseconds) + (2 * hour);
 	var sixHoursFromNow          = (now.getTime() - milliseconds) + (6 * hour);
 	
-	var t1                = new Token();
-	    t1.user           = "system";
-	    t1.setId('12345');
-	
-	var t2                = new Token();
-	    t2.user           = "aventurella";
-	    t2.setId('123456');
-	
-	var t3                = new Token();
-	    t3.user           = "bpuglisi";
-	    t3.setId('1234567');
-	
 	var g1                = new Game();
 	    g1.label          = "Halo:Reach";
 	    g1._id            = "game/halo-reach";
@@ -85,7 +73,7 @@ function initialize(req, res, next)
 	    g4.label          = "Starcraft 2";
 	    g4._id            = "game/starcraft2";
 	    g4.maxPlayers     = 8;
-	    g4.platforms      = ["pc"];
+	    g4.platforms      = ["battlenet"];
 	    g4.modes.push("Melee");
 
 	var g5                = new Game();
@@ -108,107 +96,103 @@ function initialize(req, res, next)
 	var m1                = new Match();
 	    m1.availability   = 'public';
 	    m1.created_by     = 'aventurella';
-	    m1.label          = "Lorem ipsum dolor sit amet";
+	    m1.label          = "!Lorem ipsum dolor sit amet";
 	    m1.game.id        = g1._id;
 	    m1.game.label     = g1.label;
 		m1.game.platform  = g1.platforms[0];
 	    m1.scheduled_time = new Date(fifteenMinutesFromNow); 
 	    m1.maxPlayers     = 6;
-	    m1.players.push(m1.created_by);
+	    //m1.players.push(m1.created_by);
 
 	var m2                = new Match();
 	    m2.availability   = 'public';
 	    m2.created_by     = 'aventurella';
-	    m2.label          = "Yeee Haw!";
+	    m2.label          = "!Yeee Haw!";
 	    m2.game.id        = g2._id;
 	    m2.game.label     = g2.label;
 	    m2.game.platform  = g2.platforms[1];
 	    m2.scheduled_time = new Date(thirtyMinutesFromNow);
 	    m2.maxPlayers     = 4;
-	    m2.players.push(m2.created_by);
+	    //m2.players.push(m2.created_by);
 
 	var m3                = new Match();
 	    m3.availability   = 'public';
 	    m3.created_by     = 'bpuglisi';
-	    m3.label          = "Borderlands on legendary";
+	    m3.label          = "!Borderlands on legendary";
 	    m3.game.id        = g3._id;
 	    m3.game.label     = g3.label;
 	    m3.game.platform  = g3.platforms[0];
 	    m3.scheduled_time = new Date(fourtyFiveMinutesFromNow);
 	    m3.maxPlayers     = 2;
-	    m3.players.push(m3.created_by);
+	    //m3.players.push(m3.created_by);
 
 	var m4                = new Match();
 	    m4.availability   = 'public';
 	    m4.created_by     = 'aventurella';
-	    m4.label          = "Lorem ipsum dolor sit amet";
+	    m4.label          = "!Lorem ipsum dolor sit amet";
 	    m4.game.id        = g4._id;
 	    m4.game.label     = g4.label;
 	    m4.game.platform  = g4.platforms[0];
 	    m4.scheduled_time = new Date(twoHoursFromNow);
 	    m4.maxPlayers     = 8;
-	    m4.players.push(m4.created_by);
-
+	    //m4.players.push(m4.created_by);
 
 	var m5                = new Match();
 	    m5.availability   = 'public';
 	    m5.created_by     = 'bpuglisi';
-	    m5.label          = "Lorem ipsum dolor sit amet";
+	    m5.label          = "!Lorem ipsum dolor sit amet";
 	    m5.game.id        = g5._id;
 	    m5.game.label     = g5.label;
 	    m5.game.platform  = g5.platforms[0];
 	    m5.scheduled_time = new Date(sixHoursFromNow);
 	    m5.maxPlayers     = 10;
-	    m5.players.push(m5.created_by);
+	    //m5.players.push(m5.created_by);
 
 	var m6                = new Match();
 	    m6.availability   = 'public';
 	    m6.created_by     = 'aventurella';
-	    m6.label          = "Lorem ipsum dolor sit amet";
+	    m6.label          = "!Lorem ipsum dolor sit amet";
 	    m6.game.id        = g6._id;
 	    m6.game.label     = g6.label;
 	    m6.game.platform  = g6.platforms[0];
 	    m6.scheduled_time = new Date(sixHoursFromNow);
 	    m6.maxPlayers     = 4;
-	    m6.players.push(m6.created_by);
+	    //m6.players.push(m6.created_by);
 
 	var m7                = new Match();
 	    m7.availability   = 'public';
 	    m7.created_by     = 'bpuglisi';
-	    m7.label          = "Lorem ipsum dolor sit amet";
+	    m7.label          = "!Lorem ipsum dolor sit amet";
 	    m7.game.id        = g6._id;
 	    m7.game.label     = g6.label;
 	    m7.game.platform  = g6.platforms[0];
 	    m7.scheduled_time = new Date(sixHoursFromNow);
 	    m7.maxPlayers     = 4;
-	    m7.players.push(m7.created_by);
+	    //m7.players.push(m7.created_by);
 	
 	var m8                = new Match();
 	    m8.availability   = 'private';
 		m8.created_by     = 'bpuglisi';
-		m8.label          = "Lorem ipsum dolor sit amet";
+		m8.label          = "!Lorem ipsum dolor sit amet";
 		m8.game.id        = g1._id;
 		m8.game.label     = g1.label;
 		m8.game.platform  = g1.platforms[0];
 		m8.scheduled_time = new Date(fifteenMinutesFromNow);
 		m8.maxPlayers     = 6;
-		m8.players.push(m8.created_by);
+		//m8.players.push(m8.created_by);
 		
 
 	var m9                = new Match();
 	    m9.availability   = 'public';
 	    m9.created_by     = 'lucy';
-	    m9.label          = "Lorem ipsum dolor sit amet";
+	    m9.label          = "!Lorem ipsum dolor sit amet";
 	    m9.game.id        = g1._id;
 	    m9.game.label     = g1.label;
 	    m9.game.platform  = g1.platforms[0];
 	    m9.scheduled_time = new Date(thirtyMinutesFromNow);
 	    m9.maxPlayers     = 16;
-	    m9.players.push(m9.created_by);
+	    //m9.players.push(m9.created_by);
 
-	db.saveDoc(t1);
-	db.saveDoc(t2);
-	db.saveDoc(t3);
 	
 	db.saveDoc(g1);
 	db.saveDoc(g2);
@@ -217,15 +201,92 @@ function initialize(req, res, next)
 	db.saveDoc(g5);
 	db.saveDoc(g6);
 	
-	db.saveDoc(m1);
-	db.saveDoc(m2);
-	db.saveDoc(m3);
-	db.saveDoc(m4);
-	db.saveDoc(m5);
-	db.saveDoc(m6);
-	db.saveDoc(m7);
-	db.saveDoc(m8);
-	db.saveDoc(m9);
+	db.saveDoc(m1, function(error, data){
+		var p1 = new Player();
+		p1.username = 'aventurella';
+		p1.alias    = 'logix812';
+		p1.match    = data.id;
+		
+		var p2 = new Player();
+		p2.username = 'bpuglisi';
+		p2.alias    = 'subzer0';
+		p2.match    = data.id;
+		
+		db.saveDoc(p1);
+		db.saveDoc(p2);
+	});
+	
+	db.saveDoc(m2, function(error, data){
+		var p1 = new Player();
+		p1.username = 'aventurella';
+		p1.alias    = 'logix812';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m3, function(error, data){
+		var p1 = new Player();
+		p1.username = 'bpuglisi';
+		p1.alias    = 'subzer0';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m4, function(error, data){
+		var p1 = new Player();
+		p1.username = 'aventurella';
+		p1.alias    = 'logix812';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m5, function(error, data){
+		var p1 = new Player();
+		p1.username = 'bpuglisi';
+		p1.alias    = 'subzer0';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m6, function(error, data){
+		var p1 = new Player();
+		p1.username = 'aventurella';
+		p1.alias    = 'logix812';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+
+	db.saveDoc(m7, function(error, data){
+		var p1 = new Player();
+		p1.username = 'bpuglisi';
+		p1.alias    = 'subzer0';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m8, function(error, data){
+		var p1 = new Player();
+		p1.username = 'bpuglisi';
+		p1.alias    = 'subzer0';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
+	
+	db.saveDoc(m9, function(error, data){
+		var p1 = new Player();
+		p1.username = 'lucy';
+		p1.alias    = 'robofish';
+		p1.match    = data.id;
+		
+		db.saveDoc(p1);
+	});
 	
 	next({"ok":true, "message":"done"});
 }
