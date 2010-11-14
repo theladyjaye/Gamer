@@ -3,7 +3,7 @@
 	0867D690FE84028FC02AAC07 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = D775C4B3128795A400C72E64 /* HazGame */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = D775C4B1128795A400C72E64 /* HazGame */;
 		addToTargets = (
 			D775C4B1128795A400C72E64 /* HazGame */,
@@ -129,6 +129,10 @@
 			D74750FA12907ECF00342AD1 /* PBXTextBookmark */ = D74750FA12907ECF00342AD1 /* PBXTextBookmark */;
 			D74750FC12907EDF00342AD1 /* PBXTextBookmark */ = D74750FC12907EDF00342AD1 /* PBXTextBookmark */;
 			D74750FD12907EE400342AD1 /* PBXTextBookmark */ = D74750FD12907EE400342AD1 /* PBXTextBookmark */;
+			D747510012907F5E00342AD1 /* PBXTextBookmark */ = D747510012907F5E00342AD1 /* PBXTextBookmark */;
+			D747510112907F9600342AD1 /* PBXTextBookmark */ = D747510112907F9600342AD1 /* PBXTextBookmark */;
+			D747510212907FA000342AD1 /* PBXTextBookmark */ = D747510212907FA000342AD1 /* PBXTextBookmark */;
+			D747510B1290843F00342AD1 /* PBXTextBookmark */ = D747510B1290843F00342AD1 /* PBXTextBookmark */;
 			D775C3E112875B2100C72E64 = D775C3E112875B2100C72E64 /* PBXTextBookmark */;
 			D775C4041287613A00C72E64 = D775C4041287613A00C72E64 /* PBXTextBookmark */;
 			D775C4F31287994200C72E64 = D775C4F31287994200C72E64 /* PBXTextBookmark */;
@@ -907,6 +911,46 @@
 		vrLen = 395;
 		vrLoc = 0;
 	};
+	D747510012907F5E00342AD1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 20";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
+	D747510112907F9600342AD1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 20";
+		rLen = 0;
+		rLoc = 350;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
+	D747510212907FA000342AD1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 11";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
+	D747510B1290843F00342AD1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 11";
+		rLen = 0;
+		rLoc = 176;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
 	D775C3E112875B2100C72E64 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D7DDD7AC127FD42400C29265 /* InitializationTests.h */;
@@ -1180,7 +1224,7 @@
 	D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1218, 554}}";
-			sepNavSelRange = "{389, 0}";
+			sepNavSelRange = "{176, 0}";
 			sepNavVisRange = "{0, 395}";
 		};
 	};

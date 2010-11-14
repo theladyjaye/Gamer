@@ -355,7 +355,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D74750FD12907EE400342AD1</string>
+										<string>D747510212907FA000342AD1</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -431,7 +431,7 @@
 											<string>D74750911290327B00342AD1</string>
 											<string>D74750A31290372000342AD1</string>
 											<string>D74750A41290372000342AD1</string>
-											<string>D74750FC12907EDF00342AD1</string>
+											<string>D747510112907F9600342AD1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -731,7 +731,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>311459556.60361803</real>
+	<real>311459744.48253602</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -748,6 +748,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D747510312907FA000342AD1</string>
 		<string>D7475089129031B100342AD1</string>
 		<string>D747508B129031B100342AD1</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

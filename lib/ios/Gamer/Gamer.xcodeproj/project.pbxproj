@@ -23,6 +23,8 @@
 		D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */; };
 		D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */; };
 		D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */; };
+		D7475106129083FE00342AD1 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475104129083FE00342AD1 /* 83-calendar.png */; };
+		D7475107129083FE00342AD1 /* 83-calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475105129083FE00342AD1 /* 83-calendar@2x.png */; };
 		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
@@ -212,6 +214,8 @@
 		D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArt@2x.png"; sourceTree = "<group>"; };
 		D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArtShadow.png; sourceTree = "<group>"; };
 		D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArtShadow@2x.png"; sourceTree = "<group>"; };
+		D7475104129083FE00342AD1 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
+		D7475105129083FE00342AD1 /* 83-calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar@2x.png"; sourceTree = "<group>"; };
 		D775C4B2128795A400C72E64 /* HazGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775C4B4128795A400C72E64 /* HazGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazGame-Info.plist"; sourceTree = "<group>"; };
 		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
@@ -560,6 +564,8 @@
 		D7B41DF91287AAE0005BD0B4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7475104129083FE00342AD1 /* 83-calendar.png */,
+				D7475105129083FE00342AD1 /* 83-calendar@2x.png */,
 				D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */,
 				D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */,
 				D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */,
@@ -1007,6 +1013,8 @@
 				D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */,
 				D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */,
 				D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */,
+				D7475106129083FE00342AD1 /* 83-calendar.png in Resources */,
+				D7475107129083FE00342AD1 /* 83-calendar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
