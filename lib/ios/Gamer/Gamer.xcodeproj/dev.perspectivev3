@@ -300,9 +300,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>40</integer>
-									<integer>37</integer>
-									<integer>27</integer>
+									<integer>31</integer>
+									<integer>30</integer>
+									<integer>29</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -343,7 +343,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRMatchListCell.m</string>
+								<string>GMRScheduledMatchesForUser.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -351,11 +351,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRMatchListCell.m</string>
+										<string>GMRScheduledMatchesForUser.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D747510212907FA000342AD1</string>
+										<string>D747514C12908E8000342AD1</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -427,11 +427,11 @@
 											<string>D7AE1B8C128DB58000D34438</string>
 											<string>D7AE1B8D128DB58000D34438</string>
 											<string>D795FDF8128FBCB90033F086</string>
-											<string>D74750901290327B00342AD1</string>
 											<string>D74750911290327B00342AD1</string>
 											<string>D74750A31290372000342AD1</string>
 											<string>D74750A41290372000342AD1</string>
-											<string>D747510112907F9600342AD1</string>
+											<string>D747510D1290897400342AD1</string>
+											<string>D747514B12908E6300342AD1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -609,12 +609,12 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {1556, 77}}</string>
+						<string>{{0, 0}, {1556, 269}}</string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
 					<key>Proportion</key>
-					<string>77pt</string>
+					<string>269pt</string>
 				</dict>
 				<dict>
 					<key>ContentConfiguration</key>
@@ -633,8 +633,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {759, 389}}</string>
-									<string>{{759, 0}, {797, 389}}</string>
+									<string>{{0, 0}, {759, 296}}</string>
+									<string>{{759, 0}, {797, 296}}</string>
 								</array>
 							</dict>
 							<key>VerticalSplitView</key>
@@ -649,8 +649,8 @@
 								<string>yes</string>
 								<key>sizes</key>
 								<array>
-									<string>{{0, 0}, {1556, 389}}</string>
-									<string>{{0, 389}, {1556, 408}}</string>
+									<string>{{0, 0}, {1556, 296}}</string>
+									<string>{{0, 296}, {1556, 309}}</string>
 								</array>
 							</dict>
 						</dict>
@@ -670,7 +670,7 @@
 						<key>DebugSTDIOWindowFrame</key>
 						<string>{{200, 200}, {500, 300}}</string>
 						<key>Frame</key>
-						<string>{{0, 82}, {1556, 797}}</string>
+						<string>{{0, 274}, {1556, 605}}</string>
 						<key>PBXDebugSessionStackFrameViewKey</key>
 						<dict>
 							<key>DebugVariablesTableConfiguration</key>
@@ -683,13 +683,13 @@
 								<real>567</real>
 							</array>
 							<key>Frame</key>
-							<string>{{759, 0}, {797, 389}}</string>
+							<string>{{759, 0}, {797, 296}}</string>
 						</dict>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
 					<key>Proportion</key>
-					<string>797pt</string>
+					<string>605pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -731,7 +731,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>311459744.48253602</real>
+	<real>311463552.32436198</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -748,7 +748,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D747510312907FA000342AD1</string>
+		<string>D747514A12908E3A00342AD1</string>
 		<string>D7475089129031B100342AD1</string>
 		<string>D747508B129031B100342AD1</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

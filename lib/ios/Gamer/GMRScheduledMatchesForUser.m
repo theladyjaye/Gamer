@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;//[matches count];
+    return [matches count];
 }
 
 
@@ -60,24 +60,27 @@
         cell = [nib objectAtIndex:0];
         //self.tvCell = nil;
     }
-    /*
+    
     NSDictionary * item = [matches objectAtIndex:indexPath.row];
+	NSDictionary * game = [item objectForKey:@"game"];
 	
 	NSString * scheduled_time = [item objectForKey:@"scheduled_time"];
 	NSDate * date = [NSDate dateWithJSONString:scheduled_time];
 	
 	NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
 	[formatter setTimeZone:[NSTimeZone localTimeZone]];
+	
 	// TODO: nned to let the user configure how they want their time.
 	[formatter setDateFormat:@"EEE, LLL dd hh:mm a"];
 	NSString * displayDate = [formatter stringFromDate:date];
 	[formatter release];
 	
+	cell.label.text   = (NSString *)[item objectForKey:@"label"];
+	cell.date.text    = displayDate;
+	cell.game.text    = [game objectForKey:@"label"];
+	cell.players.text = [[item objectForKey:@"maxPlayers"] stringValue];
+	cell.mode.text    = [item objectForKey:@"mode"];
 	
-	
-	cell.textLabel.text = (NSString *)[item objectForKey:@"label"];
-	cell.detailTextLabel.text = displayDate;
-    */
     return cell;
 }
 
@@ -86,6 +89,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSLog(@"This row!");
 	// Navigation logic may go here. Create and push another view controller.
     /*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
