@@ -42,7 +42,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [matches count];
+    return 5;//[matches count];
 }
 
 
@@ -61,6 +61,7 @@
         //self.tvCell = nil;
     }
     
+	/*
     NSDictionary * item = [matches objectAtIndex:indexPath.row];
 	NSDictionary * game = [item objectForKey:@"game"];
 	
@@ -80,7 +81,7 @@
 	cell.game.text    = [game objectForKey:@"label"];
 	cell.players.text = [[item objectForKey:@"maxPlayers"] stringValue];
 	cell.mode.text    = [item objectForKey:@"mode"];
-	
+	*/
     return cell;
 }
 
