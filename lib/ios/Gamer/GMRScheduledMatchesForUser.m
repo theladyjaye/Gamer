@@ -90,7 +90,9 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"This row!");
+	
+	NSLog(@"%@", matches);
+	
 	// Navigation logic may go here. Create and push another view controller.
     /*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -99,6 +101,11 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+}
+
+- (void)dealloc
+{
+	[matches release];
 }
 
 

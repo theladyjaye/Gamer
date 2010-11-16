@@ -131,6 +131,9 @@
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
 		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
 		D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */; };
+		D7D8CCBC1293274800A00E18 /* GMRPlayersForMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */; };
+		D7D8CCBF12932A4B00A00E18 /* GMRPlayerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8CCBE12932A4B00A00E18 /* GMRPlayerListCell.m */; };
+		D7D8CCC112932A7E00A00E18 /* GMRPlayerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D8CCC012932A7E00A00E18 /* GMRPlayerListCell.xib */; };
 		D7DB90A41280837D00D6C442 /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */; };
 		D7DB90A51280837D00D6C442 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */; };
 		D7DB90A61280837D00D6C442 /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90961280837D00D6C442 /* ASICacheDelegate.h */; };
@@ -358,6 +361,11 @@
 		D7D23DA2128CE9A500C23711 /* GMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlertView.h; sourceTree = "<group>"; };
 		D7D23DA3128CE9A500C23711 /* GMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlertView.m; sourceTree = "<group>"; };
 		D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAlertView.xib; sourceTree = "<group>"; };
+		D7D8CCBA1293274800A00E18 /* GMRPlayersForMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayersForMatch.h; sourceTree = "<group>"; };
+		D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlayersForMatch.m; sourceTree = "<group>"; };
+		D7D8CCBD12932A4B00A00E18 /* GMRPlayerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayerListCell.h; sourceTree = "<group>"; };
+		D7D8CCBE12932A4B00A00E18 /* GMRPlayerListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlayerListCell.m; sourceTree = "<group>"; };
+		D7D8CCC012932A7E00A00E18 /* GMRPlayerListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRPlayerListCell.xib; sourceTree = "<group>"; };
 		D7DB90901280832500D6C442 /* libASIHttp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libASIHttp.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DB90941280837D00D6C442 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		D7DB90951280837D00D6C442 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
@@ -628,6 +636,9 @@
 				D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */,
 				D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */,
 				D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */,
+				D7D8CCBD12932A4B00A00E18 /* GMRPlayerListCell.h */,
+				D7D8CCBE12932A4B00A00E18 /* GMRPlayerListCell.m */,
+				D7D8CCC012932A7E00A00E18 /* GMRPlayerListCell.xib */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -882,6 +893,8 @@
 				D7EEAE54128A20E90022AF4E /* GMRScheduledMatchesForUser.h */,
 				D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */,
 				D7EEAE57128A210D0022AF4E /* GMRDataSource.h */,
+				D7D8CCBA1293274800A00E18 /* GMRPlayersForMatch.h */,
+				D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1160,6 +1173,7 @@
 				D7208AC51292C884009C0624 /* PlayerCellBackground@2x.png in Resources */,
 				D7208AC61292C884009C0624 /* PlayerCellBackgroundOpen.png in Resources */,
 				D7208AC71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png in Resources */,
+				D7D8CCC112932A7E00A00E18 /* GMRPlayerListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1219,6 +1233,8 @@
 				D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */,
 				D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */,
 				D7208A811292BEFE009C0624 /* GMRGameDetailController.m in Sources */,
+				D7D8CCBC1293274800A00E18 /* GMRPlayersForMatch.m in Sources */,
+				D7D8CCBF12932A4B00A00E18 /* GMRPlayerListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

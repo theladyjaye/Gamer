@@ -12,6 +12,13 @@
 @implementation GMRMatchListCell
 @synthesize label, game, players, date, mode;
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated 
+{
+    [super setSelected:selected animated:animated];
+    // Configure the view for the selected state.
+}
+
+
 - (void)dealloc
 {
 	self.label = nil;

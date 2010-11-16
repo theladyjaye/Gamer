@@ -7,28 +7,20 @@
 //
 
 #import "GMRGameDetailController.h"
-
+#import "GMRPlayersForMatch.h"
 
 @implementation GMRGameDetailController
+@synthesize tableView, playersForMatch;
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
+- (void)viewDidLoad 
+{	
+	// cell height is set to 92 - Image components = 91 + 1 for seperator
+	//tableView.separatorColor = [UIColor blackColor];
+
+	//playersForMatch.maxPlayers = 0;
+	[playersForMatch refresh:tableView];
+	[super viewDidLoad];
 }
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -48,10 +40,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	tableView = nil;
 }
 
 
 - (void)dealloc {
+	playersForMatch = nil;
     [super dealloc];
 }
 

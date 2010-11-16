@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-
+@class GMRPlayersForMatch;
 @interface GMRGameDetailController : UIViewController {
-
+	UITableView * tableView;
+	GMRPlayersForMatch * playersForMatch;
 }
-
+@property(nonatomic, retain) IBOutlet UITableView * tableView;
+@property(nonatomic, retain) IBOutlet GMRPlayersForMatch * playersForMatch;
 @end
