@@ -13,13 +13,46 @@ var couchdb        = require('../libs/node-couchdb/lib/couchdb'),
 exports.endpoints = function(app)
 {
 	app.get('/scheduled/:username', getScheduledMatches);
-	app.get('/:platform/:game/:timeframe', getScheduledMatchesForGameAndPlatformAndTimeframe);
-	app.get('/:platform/:timeframe', getScheduledMatchesForPlatformAndTimeframe);
+	
+	
+	//app.get('/:platform/:game/hour|30min|15min', getScheduledMatchesForGameAndPlatformAndTimeframe);
+	//app.get('/:platform/hour|30min|15min', getScheduledMatchesForPlatformAndTimeframe);
+	
+	app.get(/\/([\w]+)\/([\w-]+)\/(hour|30min|15min)$/, getScheduledMatchesForGameAndPlatformAndTimeframe);
+	app.get(/\/([\w]+)\/(hour|30min|15min)$/, getScheduledMatchesForPlatformAndTimeframe);
+	app.get('/:platform/:game/:match_id', getPlayersInMatch);
+	
 	
 	app.post('/:platform/:game', createMatch);
 	app.post('/:platform/:game/:match_id/:username', joinMatch);
 	app.del('/:platform/:game/:match_id/:username', leaveMatch);
 	
+}
+
+function getPlayersInMatch(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game;
+	var match_id  = req.params.match_id;
+	
+	db.view("application", "matches-players", {"include_docs":true, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, data)
+	{
+		if(error == null)
+		{
+			var response = [];
+			
+			data.rows.forEach(function(player)
+			{
+				response.push({"username":player.doc.username, "alias":player.doc.alias});
+			});
+			
+			next({"ok":true, "players":response});
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unknown_match.message});
+		}
+	});
 }
 
 function leaveMatch(req, res, next)
@@ -346,10 +379,9 @@ function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)
 	/*
 		TODO Need to validate platforms or make it a regex in the route
 	*/
-	
-	var platform  = req.params.platform;
-	var game      = req.params.game;
-	var timeframe = req.params.timeframe;
+	var platform  = req.params[0] // platform;
+	var game      = req.params[1] // game;
+	var timeframe = req.params[2] // timeframe;
 	
 	var now       = new Date();
 	var end;
@@ -372,6 +404,7 @@ function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)
 		
 		default:
 			next({"ok":false, "message":Errors.not_implemented.message});
+			return;
 			break;
 	}
 	
@@ -420,8 +453,8 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 		TODO Need to validate platforms or make it a regex in the route
 	*/
 	
-	var platform  = req.params.platform;
-	var timeframe = req.params.timeframe;
+	var platform  = req.params[0] // platform;
+	var timeframe = req.params[1] // timeframe;
 		
 	var now   = new Date();
 	var end;
@@ -444,6 +477,7 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 		
 		default:
 			next({"ok":false, "message":Errors.not_implemented.message});
+			return;
 			break;
 	}
 		
