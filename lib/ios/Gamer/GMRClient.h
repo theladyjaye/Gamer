@@ -25,14 +25,18 @@
 - (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name;
 
 - (NSString *)stringForPlatform:(GMRPlatform)platform;
+- (GMRPlatform)platformForString:(NSString *)string;
 
 - (void)version:(GMRCallback)callback;
 - (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback;
 - (void)registerUser:(NSString *)email username:(NSString *)name password:(NSString *)password passwordVerify:(NSString *)passwordVerify withCallback:(GMRCallback)callback;
 
+- (void)playersForMatch:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId callback:(GMRCallback)callback;
+
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback;
 - (void)matchesScheduled:(GMRCallback)callback;
+
 - (void)matchesScheduledForPlatform:(GMRPlatform)platform andTimeInterval:(GMRTimeInterval)timeInterval withCallback:(GMRCallback)callback;
 - (void)matchesScheduledForPlatform:(GMRPlatform)platform andGame:(NSString *)gameId andTimeInterval:(GMRTimeInterval)timeInterval withCallback:(GMRCallback)callback;
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback;

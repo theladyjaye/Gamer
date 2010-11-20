@@ -6,18 +6,21 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "OverviewController.h"
-
+#import "OverviewController+TableView.h"
+#import "GMRGlobals.h"
 
 @implementation OverviewController
-@synthesize tableView, dataProvider;
+@synthesize matchesTable;
 
 - (void)viewDidLoad 
-{	
+{		
 	// cell height is set to 92 - Image components = 91 + 1 for seperator
-	tableView.separatorColor = [UIColor blackColor];
-	[dataProvider refresh:tableView];
+	matchesTable.separatorColor = [UIColor blackColor];
+	[self matchesTableRefresh];
 	[super viewDidLoad];
+	
 }
 
 
@@ -29,6 +32,7 @@
 }
 */
 
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -38,13 +42,16 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+	self.matchesTable = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
 
-- (void)dealloc {
-    [super dealloc];
+- (void)dealloc 
+{
+    [matches release];
+	[super dealloc];
 }
 
 

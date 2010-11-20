@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GMRMainController : UIViewController {
+@interface GMRMainController : UIViewController<UINavigationBarDelegate> {
 	UITabBarController * tabBarController;
 	UIImageView * defaultImageView;
-	UINavigationBar * navigationBar;
 }
 @property(nonatomic, retain)IBOutlet UITabBarController * tabBarController;
 @property(nonatomic, retain)IBOutlet UIImageView * defaultImageView;
-@property(nonatomic, retain)IBOutlet UINavigationBar * navigationBar;
+
 
 - (IBAction)newMatch:(id)sender;
 @end

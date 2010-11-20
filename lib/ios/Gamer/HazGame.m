@@ -14,7 +14,6 @@
 
 GMRClient * kGamerApi = nil;
 
-
 @implementation HazGame
 @synthesize window;
 

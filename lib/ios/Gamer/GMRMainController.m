@@ -7,10 +7,12 @@
 //
 
 #import "GMRMainController.h"
+#import "GMRGlobals.h"
 
+static UINavigationController * currentNavigationController;
 
 @implementation GMRMainController
-@synthesize tabBarController, defaultImageView, navigationBar;
+@synthesize tabBarController, defaultImageView;
 
 - (IBAction)newMatch:(id)sender
 {
@@ -20,12 +22,15 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
 {
-	[super viewDidLoad];
+	UINavigationController * navController = [self.tabBarController.viewControllers objectAtIndex:0];
+	UINavigationBar * navigationBar = navController.navigationBar;
+	
 	[self.view addSubview:tabBarController.view];
-	[self.view addSubview:self.navigationBar];
 	[self.tabBarController.view insertSubview:self.defaultImageView atIndex:1];
 	tabBarController.tabBar.transform = CGAffineTransformMakeTranslation(0.0, 49.0);
-	self.navigationBar.transform = CGAffineTransformMakeTranslation(0.0, -44.0);
+	
+	navigationBar.transform = CGAffineTransformMakeTranslation(0.0, -44.0);
+	[super viewDidLoad];
 	
 }
 
@@ -51,13 +56,18 @@
 						self.defaultImageView = nil;
 					}];
 	
+	UINavigationController * navController = [self.tabBarController.viewControllers objectAtIndex:0];
+	UINavigationBar * navigationBar = navController.navigationBar;
+	
 	[UIView beginAnimations:@"tabBarTransition" context:nil];
 	[UIView setAnimationDelay:0.15];
 	[UIView setAnimationDuration:0.25];
 	self.tabBarController.tabBar.transform = CGAffineTransformIdentity;
-	self.navigationBar.transform = CGAffineTransformMakeTranslation(0.0, 20.0);
+	navigationBar.transform = CGAffineTransformIdentity;
 	[UIView commitAnimations];
+	
 }
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -65,6 +75,7 @@
     
     // Release any cached data, images, etc. that aren't in use.
 }
+
 
 - (void)viewDidUnload {
     [super viewDidUnload];

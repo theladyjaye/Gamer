@@ -129,6 +129,9 @@
 		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
 		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
+		D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE3512129785A6008E84EB /* GMRViewController.m */; };
+		D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */; };
+		D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */; };
 		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
 		D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */; };
 		D7D8CCBC1293274800A00E18 /* GMRPlayersForMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */; };
@@ -358,6 +361,12 @@
 		D7B7CB82128909D400DC33F4 /* GMRMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMainController.h; sourceTree = "<group>"; };
 		D7B7CB83128909D400DC33F4 /* GMRMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMainController.m; sourceTree = "<group>"; };
 		D7B7CB84128909D400DC33F4 /* GMRMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMainController.xib; sourceTree = "<group>"; };
+		D7BE3511129785A6008E84EB /* GMRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRViewController.h; sourceTree = "<group>"; };
+		D7BE3512129785A6008E84EB /* GMRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRViewController.m; sourceTree = "<group>"; };
+		D7C33D9F1295677A00B923AE /* OverviewController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OverviewController+TableView.h"; sourceTree = "<group>"; };
+		D7C33DA01295677A00B923AE /* OverviewController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OverviewController+TableView.m"; sourceTree = "<group>"; };
+		D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameDetailController+PlayerList.h"; sourceTree = "<group>"; };
+		D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRGameDetailController+PlayerList.m"; sourceTree = "<group>"; };
 		D7D23DA2128CE9A500C23711 /* GMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlertView.h; sourceTree = "<group>"; };
 		D7D23DA3128CE9A500C23711 /* GMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlertView.m; sourceTree = "<group>"; };
 		D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAlertView.xib; sourceTree = "<group>"; };
@@ -563,6 +572,8 @@
 				D7208A7E1292BEFE009C0624 /* GMRGameDetailController.h */,
 				D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */,
 				D7208A801292BEFE009C0624 /* GMRGameDetailController.xib */,
+				D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */,
+				D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */,
 			);
 			name = GameDetail;
 			sourceTree = "<group>";
@@ -592,6 +603,8 @@
 				D7EEAD82128A11AF0022AF4E /* Overview */,
 				D7B7CA681288FCB000DC33F4 /* MainView */,
 				D7B7CA671288FAE900DC33F4 /* Authentication */,
+				D7BE3511129785A6008E84EB /* GMRViewController.h */,
+				D7BE3512129785A6008E84EB /* GMRViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -883,6 +896,8 @@
 				D7EEAD83128A11BF0022AF4E /* OverviewController.h */,
 				D7EEAD84128A11BF0022AF4E /* OverviewController.m */,
 				D7EEAD85128A11BF0022AF4E /* OverviewController.xib */,
+				D7C33D9F1295677A00B923AE /* OverviewController+TableView.h */,
+				D7C33DA01295677A00B923AE /* OverviewController+TableView.m */,
 			);
 			name = Overview;
 			sourceTree = "<group>";
@@ -1235,6 +1250,9 @@
 				D7208A811292BEFE009C0624 /* GMRGameDetailController.m in Sources */,
 				D7D8CCBC1293274800A00E18 /* GMRPlayersForMatch.m in Sources */,
 				D7D8CCBF12932A4B00A00E18 /* GMRPlayerListCell.m in Sources */,
+				D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */,
+				D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */,
+				D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

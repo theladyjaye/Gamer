@@ -23,6 +23,8 @@ static NSArray * platformStrings;
 					                            @"playstation3",
 					                            @"playstation2",
 					                            @"pc",
+					                            @"battlenet",
+					                            @"unknown",
 												nil];
 	[platformStrings retain];
 }
@@ -63,6 +65,15 @@ static NSArray * platformStrings;
 	apiRequest.key = value;
 }
 
+- (GMRPlatform)platformForString:(NSString *)string
+{
+	NSUInteger platform = [platformStrings indexOfObject:string];
+	
+	if(platform != NSNotFound)
+		return (GMRPlatform) platform;
+	
+	return GMRPlatformUnknown;
+}
 
 - (NSString *)stringForPlatform:(GMRPlatform)platform
 {
@@ -103,6 +114,19 @@ static NSArray * platformStrings;
 		   withCallback:^(BOOL ok, NSDictionary * response){
 			   callback(ok, response);
 		   }];
+}
+
+- (void)playersForMatch:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId callback:(GMRCallback)callback
+{
+	NSString*     method = @"GET";
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [self stringForPlatform:platform], gameId, matchId];
+	
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+	
 }
 
 

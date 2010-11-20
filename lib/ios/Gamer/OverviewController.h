@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GMRDataSource.h"
-
-@class ScheduledMatchesData;
-@interface OverviewController : UIViewController<UITableViewDelegate, UITableViewDelegate> {
-	UITableView * tableView;
-	NSObject<GMRDataSource> * dataProvider;
+#import "GMRViewController.h"
+@interface OverviewController : GMRViewController {
+	UITableView * matchesTable;
+	NSArray * matches;
 }
-@property(nonatomic, retain)IBOutlet UITableView * tableView;
-@property(nonatomic, retain)IBOutlet NSObject<GMRDataSource> * dataProvider;
+@property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 
 @end

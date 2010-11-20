@@ -7,18 +7,30 @@
 //
 
 #import "GMRGameDetailController.h"
-#import "GMRPlayersForMatch.h"
+#import "GMRGameDetailController+PlayerList.h"
 
 @implementation GMRGameDetailController
-@synthesize tableView, playersForMatch;
+@synthesize playersTableView, playersForMatch;
 
+-(id)initWithDictionary:(NSDictionary *)dictionary
+{
+	self = [super initWithNibName:nil bundle:nil];
+	if(self)
+	{
+		match = dictionary;
+		[match retain];
+	}
+	
+	return self;
+}
 - (void)viewDidLoad 
 {	
 	// cell height is set to 92 - Image components = 91 + 1 for seperator
 	//tableView.separatorColor = [UIColor blackColor];
 
 	//playersForMatch.maxPlayers = 0;
-	[playersForMatch refresh:tableView];
+	self.navigationItem.title = @"Match Detail";
+	[self playersTableRefresh];
 	[super viewDidLoad];
 }
 /*
@@ -40,12 +52,13 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	tableView = nil;
+	self.playersTableView = nil;
 }
 
 
 - (void)dealloc {
-	playersForMatch = nil;
+	self.playersForMatch = nil;
+	[match release];
     [super dealloc];
 }
 

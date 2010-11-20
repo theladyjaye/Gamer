@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class GMRPlayersForMatch;
-@interface GMRGameDetailController : UIViewController {
-	UITableView * tableView;
-	GMRPlayersForMatch * playersForMatch;
+#import "GMRViewController.h"
+@interface GMRGameDetailController : GMRViewController {
+	UITableView * playersTableView;
+	NSArray * playersForMatch;
+	NSDictionary * match;
 }
-@property(nonatomic, retain) IBOutlet UITableView * tableView;
-@property(nonatomic, retain) IBOutlet GMRPlayersForMatch * playersForMatch;
+@property(nonatomic, retain) IBOutlet UITableView * playersTableView;
+@property(nonatomic, retain) NSArray * playersForMatch;
+
+-(id)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
