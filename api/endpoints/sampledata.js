@@ -215,11 +215,13 @@ function initialize(req, res, next)
 		p1.username = 'aventurella';
 		p1.alias    = 'logix812';
 		p1.match    = data.id;
+		p1.scheduled_time = m1.scheduled_time;
 		
 		var p2 = new Player();
 		p2.username = 'bpuglisi';
 		p2.alias    = 'subzer0';
 		p2.match    = data.id;
+		p2.scheduled_time = m1.scheduled_time;
 		
 		db.saveDoc(p1);
 		db.saveDoc(p2);
@@ -227,14 +229,16 @@ function initialize(req, res, next)
 	
 	db.saveDoc(m2, function(error, data){
 		var p1 = new Player();
-		p1.username = 'bpuglisi';
-		p1.alias    = 'subzer0';
-		p1.match    = data.id;
+		p1.username       = 'bpuglisi';
+		p1.alias          = 'subzer0';
+		p1.match          = data.id;
+		p1.scheduled_time = m2.scheduled_time;
 		
 		var p2 = new Player();
 		p2.username = 'aventurella';
 		p2.alias    = 'logix812';
 		p2.match    = data.id;
+		p2.scheduled_time = m2.scheduled_time;
 		
 		db.saveDoc(p1);
 		db.saveDoc(p2);
@@ -245,6 +249,7 @@ function initialize(req, res, next)
 		p1.username = 'bpuglisi';
 		p1.alias    = 'subzer0';
 		p1.match    = data.id;
+		p1.scheduled_time = m3.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -254,6 +259,7 @@ function initialize(req, res, next)
 		p1.username = 'aventurella';
 		p1.alias    = 'logix812';
 		p1.match    = data.id;
+		p1.scheduled_time = m4.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -263,6 +269,7 @@ function initialize(req, res, next)
 		p1.username = 'bpuglisi';
 		p1.alias    = 'subzer0';
 		p1.match    = data.id;
+		p1.scheduled_time = m5.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -272,6 +279,7 @@ function initialize(req, res, next)
 		p1.username = 'aventurella';
 		p1.alias    = 'logix812';
 		p1.match    = data.id;
+		p1.scheduled_time = m6.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -281,6 +289,7 @@ function initialize(req, res, next)
 		p1.username = 'bpuglisi';
 		p1.alias    = 'subzer0';
 		p1.match    = data.id;
+		p1.scheduled_time = m7.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -290,6 +299,7 @@ function initialize(req, res, next)
 		p1.username = 'bpuglisi';
 		p1.alias    = 'subzer0';
 		p1.match    = data.id;
+		p1.scheduled_time = m8.scheduled_time;
 		
 		db.saveDoc(p1);
 	});
@@ -299,6 +309,7 @@ function initialize(req, res, next)
 		p1.username = 'lucy';
 		p1.alias    = 'robofish';
 		p1.match    = data.id;
+		p1.scheduled_time = m9.scheduled_time;
 		
 		db.saveDoc(p1);
 	});

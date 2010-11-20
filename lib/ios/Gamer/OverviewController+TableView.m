@@ -19,6 +19,11 @@
 
 - (void)matchesTableRefresh
 {
+	NSLog(@"MATCHES TABLE REFRESH");
+	
+	[matches release];
+	matches = nil;
+	
 	[kGamerApi matchesScheduled:^(BOOL ok, NSDictionary * response)
 	 {
 		 if(ok)
@@ -28,6 +33,10 @@
 			 [matches retain];
 			 dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
 		 }
+		 else {
+			 NSLog(@"%@", response);
+		 }
+
 	 }];
 }
 
@@ -42,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [matches count];
+    return matches ? [matches count] : 0;
 }
 
 

@@ -78,70 +78,84 @@ function leaveMatch(req, res, next)
 			if(match.created_by == username)
 			{
 				// remove the whole match - owner is canceling it
-				db.removeDoc(match._id, match._rev, function(error, data)
+				purgeAndNotifyPlayersForMatch(match, function(err, data)
 				{
-					if(error == null)
+					if(err = null)
 					{
-						next({"ok":true});
 						
-						if(match.players.length > 1)
+						db.removeDoc(match._id, match._rev, function(error, data)
 						{
-							var playersQuery  = new PlayersInArray(match.players.slice(1));
-							playersQuery.execute(function(err, rows, fields)
+							if(error == null)
 							{
-								rows.forEach(function(player)
-								{
-									var NotificationCancel            = require('../data/NotificationCancel');
-									var currentNotification           = new NotificationCancel();
-									currentNotification.email_to      = player.email;
-									currentNotification.username_to   = player.username
-									currentNotification.username_from = match.created_by;
-									currentNotification.platform      = Platform[match.game.platform].label;
-									currentNotification.game          = match.game.label;
-									currentNotification.date          = match.scheduled_time;
-									currentNotification.send();
-								});
-							});
-						}
+								next({"ok":true});
+								return;
+							}
+							else
+							{
+								next({"ok":false, "message":Errors.update_match.message})
+								return;
+							}
+						});
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.update_match.message})
+						next({"ok":false, "message":Errors.unknown_error.message})
+						return;
 					}
 				});
 			}
 			else
 			{
-				match.players = match.players.filter( function(element, index, array){ return element != username; });
-				
-				db.saveDoc(match, function(error, data)
+				var account = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == platform) return element; })[0];
+				db.view("application", "matches-players", {"include_docs":true, "startkey":[match._id, account.alias], "endkey":[match._id, account.alias]}, function(error, data)
 				{
 					if(error == null)
 					{
-						next({"ok":true});
-
-						// should we notify the owner that someone has left?
-						
-						/*var playersQuery  = new PlayersInArray([match.created_by, username]);
-						playersQuery.execute(function(err, rows, fields)
+						if(data.rows.length == 1)
 						{
-							if(rows.length == 2)
+							var player = data.rows[0].doc;
+							db.removeDoc(player._id, player._rev, function(errorRemove, data)
 							{
-								var Notification                  = require('../data/Notification');
-								var currentNotification           = new Notification();
-								currentNotification.email_to      = rows[0].email;
-								currentNotification.username_to   = rows[0].username
-								currentNotification.username_from = rows[1].username;
-								currentNotification.platform      = Platform[match.game.platform].label;
-								currentNotification.game          = match.game.label;
-								currentNotification.date          = match.scheduled_time;
-								currentNotification.send();
-							}
-						});*/
+								if(errorRemove == null)
+								{
+									next({"ok":true});
+									// should we notify the owner that someone has left?
+
+									/*var playersQuery  = new PlayersInArray([match.created_by, username]);
+									playersQuery.execute(function(err, rows, fields)
+									{
+										if(rows.length == 2)
+										{
+											var Notification                  = require('../data/Notification');
+											var currentNotification           = new Notification();
+											currentNotification.email_to      = rows[0].email;
+											currentNotification.username_to   = rows[0].username
+											currentNotification.username_from = rows[1].username;
+											currentNotification.platform      = Platform[match.game.platform].label;
+											currentNotification.game          = match.game.label;
+											currentNotification.date          = match.scheduled_time;
+											currentNotification.send();
+										}
+									});*/
+									return;
+								}
+								else
+								{
+									next({"ok":false, "message":errorRemove}.reason);
+									return;
+								}
+							});
+						}
+						else
+						{
+							next({"ok":false, "message":Errors.unknown_alias.message});
+							return;
+						}
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.update_match.message})
+						next({"ok":false, "message":Errors.unknown_alias.message});
+						return;
 					}
 				});
 			}
@@ -535,4 +549,63 @@ function getScheduledMatches(req, res, next)
 	{
 		next({"ok":false, "message":Errors.unauthorized_client.message});
 	}
+}
+
+function purgeAndNotifyPlayersForMatch(match, callback)
+{
+	// get rid of all of the player objects
+	db.view("application", "matches-players", {"include_docs":true, "startkey":[match._id, null], "endkey":[match._id, {}]}, function(error, data)
+	{
+		if(error == null)
+		{
+			var targets = [];
+			var players = [];
+			
+			data.rows.forEach(function(row)
+			{
+				row.doc._deleted = true;
+				targets.push(row.doc);
+				
+				if(row.doc.username != match.created_by)
+					players.push(row.doc.username);
+			});
+			
+			db.bulkDocs({"docs":targets}, function(err, data)
+			{
+				if(err == null)
+				{
+					callback(null, data);
+				}
+				else
+				{
+					callback(err, data);
+				}
+			});
+			
+			// notify the other players the match is cancelled.
+			if(players.length > 1)
+			{
+				var playersQuery  = new PlayersInArray(match.players.slice(1));
+				playersQuery.execute(function(err, rows, fields)
+				{
+					rows.forEach(function(player)
+					{
+						var NotificationCancel            = require('../data/NotificationCancel');
+						var currentNotification           = new NotificationCancel();
+						currentNotification.email_to      = player.email;
+						currentNotification.username_to   = player.username
+						currentNotification.username_from = match.created_by;
+						currentNotification.platform      = Platform[match.game.platform].label;
+						currentNotification.game          = match.game.label;
+						currentNotification.date          = match.scheduled_time;
+						currentNotification.send();
+					});
+				});
+			}
+		}
+		else
+		{
+			//next({"ok":false, "message":Errors.unknown_match.message});
+		}
+	});
 }

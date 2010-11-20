@@ -1,21 +1,30 @@
-(function()
+function (doc)
+{
+	if(doc.type == "player")
+	{
+		emit([doc.username, doc.scheduled_time], {_id:doc.match})
+	}
+}
+/*(function()
 {
 	var matches = {};
 	return function(doc)
 	{
 		if(doc.type == "match")
 		{
-			matches[doc._id] = doc;
+			matches[doc._id] = doc//{"_id":doc._id, "scheduled_time":doc.scheduled_time, "_deleted":doc._deleted};
 		}
-		
+	
 		if(doc.type == "player")
 		{
 			var match = matches[doc.match];
-			
-			emit([doc.username.toLowerCase(), match.scheduled_time], {"_id":match._id});
+			if(match._deleted == false || typeof match._deleted == "undefined")
+				emit([doc.username.toLowerCase(), match.scheduled_time], {"_id":match._id});
 		}
+
 	}
 })();
+*/
 
 /*
 function(doc)

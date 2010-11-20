@@ -8,16 +8,37 @@
 
 #import "GMRAlertView.h"
 
-@implementation GMRAlertView
-@synthesize alertTitle, alertMessage;
+@interface GMRAlertView(Private)
+- (void)showConfirmation;
+- (void)showNotification;
+@end
 
-- (id)initWithTitle:(NSString *)title message:(id)message delegate:(id<NSObject>)del
+
+@implementation GMRAlertView
+@synthesize alertTitle, alertMessage, style, selectedButtonIndex;
+
+- (id)initWithStyle:(GMRAlertViewStyle)alertStyle title:(NSString *)title message:(id)message delegate:(id<NSObject>)del
+{
+	self = [super init];
+	
+	if(self)
+	{
+		style             = alertStyle;
+		self.alertTitle   = title;
+		self.alertMessage = message;
+		delegate = del;
+	}
+	
+	return self;
+}
+- (id)initWithTitle:(NSString *)title message:(id)message delegate:(id<NSObject>)del;
 {
 	//self = [super initWithNibName:nil bundle:nil];
 	self = [super init];
 	
 	if(self)
 	{
+		style = GMRAlertViewStyleNotification;
 		self.alertTitle   = title;
 		self.alertMessage = message;
 		delegate = del;
@@ -28,6 +49,30 @@
 
 - (void)show
 {
+	switch(self.style)
+	{
+		case GMRAlertViewStyleConfirmation:
+			[self showConfirmation];
+			break;
+		
+		case GMRAlertViewStyleNotification:
+			[self showNotification];
+			break;
+	}
+}
+
+- (void)showConfirmation
+{
+	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:self.alertTitle 
+													 message:(NSString * )self.alertMessage 
+													delegate:self 
+										   cancelButtonTitle:@"Cancel" 
+										   otherButtonTitles:@"Ok",nil];
+	[alert show];
+}
+
+- (void)showNotification
+{
 	UIAlertView * alert = [[UIAlertView alloc] initWithTitle:self.alertTitle 
 													 message:(NSString * )self.alertMessage 
 													delegate:self 
@@ -36,10 +81,13 @@
 	[alert show];
 }
 
+
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
 	
 	[alertView release];
+	
+	selectedButtonIndex = buttonIndex;
 	
 	if(delegate && [delegate respondsToSelector:@selector(alertViewDidDismiss:)])
 		[delegate performSelector:@selector(alertViewDidDismiss:) withObject:self];

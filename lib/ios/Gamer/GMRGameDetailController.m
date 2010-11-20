@@ -6,6 +6,7 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <dispatch/dispatch.h>
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
 #import "GMRButton.h"
@@ -13,6 +14,7 @@
 #import "GMRGlobals.h"
 #import "NSDate+JSON.h"
 #import "GMRTypes.h"
+#import "GMRAlertView.h"
 
 @implementation GMRGameDetailController
 @synthesize playersTableView, playersForMatch, platformBanner, gameLabel, descriptionLabel, modeLabel, scheduleTimeLabel;
@@ -41,9 +43,9 @@
 	platformBanner.platform = platform;
 	
 	
-	gameLabel.text        = [gameData objectForKey:@"label"];
-	descriptionLabel.text = [match objectForKey:@"label"];
-	modeLabel.text        = [match objectForKey:@"mode"];
+	gameLabel.text         = [gameData objectForKey:@"label"];
+	descriptionLabel.text  = [match objectForKey:@"label"];
+	modeLabel.text         = [match objectForKey:@"mode"];
 	scheduleTimeLabel.text = [NSDate gamerScheduleTimeString:[match objectForKey:@"scheduled_time"]];
 	
 	NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
@@ -114,12 +116,43 @@
 
 -(void)cancelGame
 {
-
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
+														 title:@"Cancel Game?" 
+													   message:@"Are you sure you wish to cancel this game?" 
+													  delegate:self];
+	[alert show];
+	
+	
 }
 
 -(void)leaveGame
 {
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
+														 title:@"Leave Game?" 
+													   message:@"Are you sure you wish to leave this game?" 
+													  delegate:self];
+	[alert show];
+}
 
+- (void)alertViewDidDismiss:(GMRAlertView *)alertView
+{
+
+	if(alertView.selectedButtonIndex == 1)
+	{
+		 NSDictionary * gameData = [match objectForKey:@"game"];
+		 
+		 GMRPlatform platform = platformBanner.platform;
+		 NSString * gameId    = [[[gameData objectForKey:@"id"] componentsSeparatedByString:@"/"] objectAtIndex:1];
+		 NSString * matchId   = [match objectForKey:@"_id"];
+		 [kGamerApi matchLeave:platform gameId:gameId matchId:matchId withCallback:^(BOOL ok, NSDictionary * response){
+			 dispatch_async(dispatch_get_main_queue(), ^{
+				 [self.navigationController popViewControllerAnimated:YES];
+				 [[self.navigationController topViewController] performSelector:@selector(matchesTableRefresh)];
+			 });
+		 }];
+	}
+	
+	[alertView release];
 }
 
 /*
