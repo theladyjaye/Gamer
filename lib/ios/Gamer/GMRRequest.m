@@ -93,7 +93,6 @@ static dispatch_queue_t jsonProcessingQueue;
 		
 		dispatch_async(jsonProcessingQueue, ^{
 			NSError * error = nil;
-			NSLog(@"%@", [request responseString]);
 			YAJLDocument * json = [[[YAJLDocument alloc] initWithData:[request responseData] 
 														parserOptions:YAJLParserOptionsNone 
 																error:&error] autorelease];		

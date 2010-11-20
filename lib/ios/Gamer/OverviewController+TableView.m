@@ -19,8 +19,6 @@
 
 - (void)matchesTableRefresh
 {
-	NSLog(@"MATCHES TABLE REFRESH");
-	
 	[matches release];
 	matches = nil;
 	

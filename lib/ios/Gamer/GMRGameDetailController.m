@@ -146,8 +146,12 @@
 		 NSString * matchId   = [match objectForKey:@"_id"];
 		 [kGamerApi matchLeave:platform gameId:gameId matchId:matchId withCallback:^(BOOL ok, NSDictionary * response){
 			 dispatch_async(dispatch_get_main_queue(), ^{
+				 
+				 NSUInteger previousIndex              = ([[self.navigationController viewControllers] indexOfObject:self] -1);
+				 UIViewController * previousController = [[self.navigationController viewControllers] objectAtIndex:previousIndex];
+				 
+				 [previousController performSelector:@selector(matchesTableRefresh)];
 				 [self.navigationController popViewControllerAnimated:YES];
-				 [[self.navigationController topViewController] performSelector:@selector(matchesTableRefresh)];
 			 });
 		 }];
 	}

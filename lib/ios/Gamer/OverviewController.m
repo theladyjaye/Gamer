@@ -14,6 +14,11 @@
 @implementation OverviewController
 @synthesize matchesTable;
 
+-(IBAction)createGame
+{
+	//[self presentModalViewController:<#(UIViewController *)modalViewController#> animated:<#(BOOL)animated#>];
+}
+
 - (void)viewDidLoad 
 {		
 	// cell height is set to 92 - Image components = 91 + 1 for seperator

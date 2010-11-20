@@ -14,4 +14,5 @@
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 
+-(IBAction)createGame;
 @end
