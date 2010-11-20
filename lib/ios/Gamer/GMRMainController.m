@@ -14,10 +14,6 @@ static UINavigationController * currentNavigationController;
 @implementation GMRMainController
 @synthesize tabBarController, defaultImageView;
 
-- (IBAction)newMatch:(id)sender
-{
-	NSLog(@"Add Match!");
-}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
@@ -68,6 +64,22 @@ static UINavigationController * currentNavigationController;
 	
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+	
+	static UIViewController * lastViewController;
+	
+	if(lastViewController)
+		[lastViewController viewWillDisappear:animated];
+	
+	lastViewController = viewController;
+	[viewController viewWillAppear:animated];
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+	[viewController viewDidAppear:animated];
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

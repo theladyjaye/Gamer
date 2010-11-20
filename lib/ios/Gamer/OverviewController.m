@@ -20,7 +20,6 @@
 	matchesTable.separatorColor = [UIColor blackColor];
 	[self matchesTableRefresh];
 	[super viewDidLoad];
-	
 }
 
 
@@ -31,7 +30,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
-
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

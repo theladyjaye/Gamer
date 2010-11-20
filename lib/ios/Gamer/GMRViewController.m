@@ -10,20 +10,11 @@
 #import "GMRGlobals.h"
 
 @implementation GMRViewController
-- (void)changeViews:(UIViewController *)controller withTitle:(NSString *)title;
+- (void)changeViews:(UIViewController *)controller;
 {
-	UINavigationItem * navItem   = [[UINavigationItem alloc] initWithTitle:title];
-	UIBarButtonItem * backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" 
-												  				    style:UIBarButtonItemStylePlain
-																   target:self 
-																   action:@selector(popViewController)];
-	navItem.backBarButtonItem  = backButton;
-	
 	
 	[self.navigationController pushViewController:controller animated:YES];
 	
-	[navItem release];
-	[backButton release];
 }
 
 - (void)popViewController

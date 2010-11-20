@@ -56,9 +56,9 @@ function initialize(req, res, next)
 	var g2                = new Game();
 	    g2.label          = "Red Dead Redemption";
 	    g2._id            = "game/red-dead-redemption";
-	    g2.platforms      = ["xbox360", "ps3"];
+	    g2.platforms      = ["xbox360", "playstation3"];
 	    g2.maxPlayers     = 24;
-	    g2.modes.push("Deathmatch");
+	    g2.modes.push("Co-Op Campaign");
 
 	var g3                = new Game();
 	    g3.label          = "Borderlands";
@@ -107,7 +107,7 @@ function initialize(req, res, next)
 
 	var m2                = new Match();
 	    m2.availability   = 'public';
-	    m2.created_by     = 'aventurella';
+	    m2.created_by     = 'bpuglisi';
 	    m2.label          = "Yeeeee Haw, Leroy Jenkins!";
 	    m2.game.id        = g2._id;
 	    m2.game.label     = g2.label;
@@ -227,11 +227,17 @@ function initialize(req, res, next)
 	
 	db.saveDoc(m2, function(error, data){
 		var p1 = new Player();
-		p1.username = 'aventurella';
-		p1.alias    = 'logix812';
+		p1.username = 'bpuglisi';
+		p1.alias    = 'subzer0';
 		p1.match    = data.id;
 		
+		var p2 = new Player();
+		p2.username = 'aventurella';
+		p2.alias    = 'logix812';
+		p2.match    = data.id;
+		
 		db.saveDoc(p1);
+		db.saveDoc(p2);
 	});
 	
 	db.saveDoc(m3, function(error, data){

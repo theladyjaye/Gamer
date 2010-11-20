@@ -12,5 +12,6 @@
 @interface NSDate(JSON) 
 
 + (NSDate *)dateWithJSONString:(NSString *)string;
++ (NSString *)gamerScheduleTimeString:(NSString *)scheduled_time;
 
 @end

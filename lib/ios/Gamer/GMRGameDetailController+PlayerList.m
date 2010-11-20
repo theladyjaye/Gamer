@@ -94,7 +94,7 @@ typedef NSUInteger PlayerListCellStyle;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"PlayerListCell";
+    static NSString *CellIdentifier     = @"PlayerListCell";
 	static NSString *CellIdentifierOpen = @"PlayerListCellOpen";
 	
 	PlayerListCellStyle cellStyle = indexPath.row > ([self.playersForMatch count] -1 ) ? PlayerListCellStyleOpen : PlayerListCellStylePlayer;

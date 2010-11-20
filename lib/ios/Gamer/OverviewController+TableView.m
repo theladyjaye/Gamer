@@ -65,7 +65,7 @@
 	 NSDictionary * game = [item objectForKey:@"game"];
 	 
 	 NSString * scheduled_time = [item objectForKey:@"scheduled_time"];
-	 NSDate * date = [NSDate dateWithJSONString:scheduled_time];
+	 /*NSDate * date = [NSDate dateWithJSONString:scheduled_time];
 	 
 	 NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
 	 [formatter setTimeZone:[NSTimeZone localTimeZone]];
@@ -74,9 +74,10 @@
 	 [formatter setDateFormat:@"EEE, LLL dd hh:mm a"];
 	 NSString * displayDate = [formatter stringFromDate:date];
 	 [formatter release];
+	  */
 	 
 	 cell.label.text   = (NSString *)[item objectForKey:@"label"];
-	 cell.date.text    = displayDate;
+	 cell.date.text    = [NSDate gamerScheduleTimeString:scheduled_time];
 	 cell.game.text    = [game objectForKey:@"label"];
 	 cell.players.text = [[item objectForKey:@"maxPlayers"] stringValue];
 	 cell.mode.text    = [item objectForKey:@"mode"];
@@ -92,7 +93,8 @@
 	
 	
 	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithDictionary:[matches objectAtIndex:indexPath.row]];
-	[self changeViews:detail withTitle:@"GameDetail"];
+	[self.navigationController pushViewController:detail animated:YES];
+	//[self changeViews:detail withTitle:@"GameDetail"];
 	[detail release];
 	
 	

@@ -12,6 +12,6 @@
 @interface GMRViewController : UIViewController {
 
 }
-- (void)changeViews:(UIViewController *)controller withTitle:(NSString *)title;
+- (void)changeViews:(UIViewController *)controller;
 - (void)popViewController;
 @end

@@ -24,4 +24,27 @@
 	
 	return date;
 }
+
++ (NSString *)gamerScheduleTimeString:(NSString *)scheduled_time
+{
+	// TODO: need to let the user configure how they want their time.
+	
+	NSDate * date = [NSDate dateWithJSONString:scheduled_time];
+	NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+	[formatter setTimeZone:[NSTimeZone localTimeZone]];
+	
+	[formatter setDateFormat:@"EEE, LLL dd hh:mm a"];
+	NSString * displayDate = [formatter stringFromDate:date];
+	[formatter release];
+	
+	return displayDate;
+}
 @end
+
+
+
+
+
+
+
+
