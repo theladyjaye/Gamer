@@ -10,13 +10,23 @@
 #import "OverviewController.h"
 #import "OverviewController+TableView.h"
 #import "GMRGlobals.h"
+#import "GMRCreateGameController.h"
 
 @implementation OverviewController
 @synthesize matchesTable;
 
 -(IBAction)createGame
 {
-	//[self presentModalViewController:<#(UIViewController *)modalViewController#> animated:<#(BOOL)animated#>];
+	GMRCreateGameController * controller = [[GMRCreateGameController alloc] initWithNibName:nil
+																					 bundle:nil];
+	
+	UINavigationController * createGame      = [[UINavigationController alloc] initWithRootViewController:controller];
+	createGame.navigationBar.tintColor       = [UIColor colorWithRed:41.0/255.0 green:41.0/255.0 blue:41.0/255.0 alpha:1.0];
+	
+	[self presentModalViewController:createGame 
+							animated:YES];
+	[createGame release];
+	[controller release];
 }
 
 - (void)viewDidLoad 
