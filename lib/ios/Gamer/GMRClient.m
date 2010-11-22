@@ -18,13 +18,13 @@ static NSArray * platformStrings;
 
 +(void)initialize
 {
-	platformStrings = [NSArray arrayWithObjects:@"xbox360", 
+	platformStrings = [NSArray arrayWithObjects:@"unknown",
+					                            @"xbox360", 
 					                            @"wii",
 					                            @"playstation3",
 					                            @"playstation2",
 					                            @"pc",
 					                            @"battlenet",
-					                            @"unknown",
 												nil];
 	[platformStrings retain];
 }

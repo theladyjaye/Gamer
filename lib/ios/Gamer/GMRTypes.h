@@ -13,13 +13,14 @@ enum{
 typedef NSUInteger GMRMatchAvailablilty;
 
 enum {
+	GMRPlatformUnknown,
 	GMRPlatformXBox360,
 	GMRPlatformWii,
 	GMRPlatformPlaystation3,
 	GMRPlatformPlaystation2,
 	GMRPlatformPC,
-	GMRPlatformBattleNet,
-	GMRPlatformUnknown
+	GMRPlatformBattleNet
+	
 };
 typedef NSUInteger GMRPlatform;
 
