@@ -10,16 +10,16 @@
 
 
 @implementation GMRMatch
-@synthesize platform, gameId, gameTitle, gameMode, players, time, description;
+@synthesize platform, gameId, gameTitle, gameMode, availability, players, time, description;
 
 - (void)dealloc
 {
-	self.gameId      = nil;
-	self.gameTitle   = nil;
-	self.gameMode    = nil;
-	self.players     = nil;
-	self.time        = nil;
-	self.description = nil;
+	self.gameId       = nil;
+	self.gameTitle    = nil;
+	self.gameMode     = nil;
+	self.availability = nil;
+	self.time         = nil;
+	self.description  = nil;
 	
 	[super dealloc];
 }

@@ -1,53 +1,35 @@
 //
-//  GMRChoosePlatformController.m
+//  GMRChooseAvailability.m
 //  Gamer
 //
-//  Created by Adam Venturella on 11/20/10.
+//  Created by Adam Venturella on 11/21/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "GMRChoosePlatformController.h"
-#import "GMRMatch.h"
-#import "GMRTypes.h"
+#import "GMRChooseAvailability.h"
 #import "GMRCreateGameGlobals.h"
+#import "GMRMatch.h"
 
-@implementation GMRChoosePlatformController
+@implementation GMRChooseAvailability
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title = @"Platform";
+    self.navigationItem.title = @"Availability";
 	[super viewDidLoad];
 }
 
-- (IBAction)selectBattleNet
+
+- (IBAction)selectPublic
 {
-	kCreateMatchProgress.platform = GMRPlatformBattleNet;
+	kCreateMatchProgress.availability = @"public";
 	[self cancelSheet];
 }
 
-- (IBAction)selectPlaystation2
+- (IBAction)selectPrivate
 {
-	kCreateMatchProgress.platform = GMRPlatformPlaystation2;
+	kCreateMatchProgress.availability = @"private";
 	[self cancelSheet];
 }
-
-- (IBAction)selectPlaystation3
-{
-	kCreateMatchProgress.platform = GMRPlatformPlaystation3;
-	[self cancelSheet];
-}
-- (IBAction)selectWii
-{
-	kCreateMatchProgress.platform = GMRPlatformWii;
-	[self cancelSheet];
-}
-
-- (IBAction)selectXbox360
-{
-	kCreateMatchProgress.platform = GMRPlatformXBox360;
-	[self cancelSheet];
-}
-
 
 
 /*

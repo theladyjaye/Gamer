@@ -15,7 +15,8 @@
 	NSString * gameId;
 	NSString * gameTitle;
 	NSString * gameMode;
-	NSString * players;
+	NSString * availability;
+	NSInteger players;
 	NSString * time;
 	NSString * description;
 	
@@ -24,7 +25,8 @@
 @property(nonatomic, retain) NSString * gameId;
 @property(nonatomic, retain) NSString * gameTitle;
 @property(nonatomic, retain) NSString * gameMode;
-@property(nonatomic, retain) NSString * players;
+@property(nonatomic, retain) NSString * availability;
+@property(nonatomic, assign) NSInteger players;
 @property(nonatomic, retain) NSString * time;
 @property(nonatomic, retain) NSString * description;
 @end

@@ -43,8 +43,15 @@
 
 - (void)setSelected:(BOOL)value
 {
+	BOOL needsBackgroundImageUpdate;
+	
+	if(self.selected == NO && value)
+		needsBackgroundImageUpdate = YES;
+	
 	[super setSelected:value];
-	self.backgroundImage.image = [self backgroundImageForState:UIControlStateSelected];
+	
+	if(needsBackgroundImageUpdate)
+		self.backgroundImage.image = [self backgroundImageForState:UIControlStateSelected];
 }
 
 - (void)touchUpInside

@@ -294,17 +294,17 @@
 								<string>D775C4E11287978C00C72E64</string>
 								<string>D750128712989F710079EB44</string>
 								<string>D75012DD1298CE6A0079EB44</string>
-								<string>D750128E1298A0780079EB44</string>
+								<string>D709BF41129A2B590057EA4B</string>
 								<string>D7EEAD82128A11AF0022AF4E</string>
 								<string>D7B7CA681288FCB000DC33F4</string>
+								<string>D7B7CA671288FAE900DC33F4</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>32</integer>
-									<integer>30</integer>
+									<integer>44</integer>
 									<integer>29</integer>
 									<integer>28</integer>
 									<integer>1</integer>
@@ -329,7 +329,7 @@
 							<real>321</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>75 84 1556 920 0 0 1680 1028 </string>
+						<string>104 108 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -347,7 +347,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRCreateGameController.m</string>
+								<string>GMRCreateGameSheet.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -355,11 +355,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRCreateGameController.m</string>
+										<string>GMRCreateGameSheet.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D709BF021299E3A10057EA4B</string>
+										<string>D709C02D129A3DD00057EA4B</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -399,7 +399,6 @@
 											<string>D7EEAE0A128A1B620022AF4E</string>
 											<string>D7EEAE77128A36F00022AF4E</string>
 											<string>D7AFF52C128A6BC600CF1A07</string>
-											<string>D7C9EE61128B5F1C000580B2</string>
 											<string>D7C9EE8E128B7705000580B2</string>
 											<string>D7C9EEE6128B8685000580B2</string>
 											<string>D783568B128C94F200E19528</string>
@@ -454,20 +453,29 @@
 											<string>D709BD641299B25C0057EA4B</string>
 											<string>D709BD711299B3030057EA4B</string>
 											<string>D709BD871299B3A50057EA4B</string>
-											<string>D709BD9A1299B47B0057EA4B</string>
-											<string>D709BE291299D67F0057EA4B</string>
 											<string>D709BE2B1299D67F0057EA4B</string>
 											<string>D709BE2C1299D67F0057EA4B</string>
 											<string>D709BE341299D6CD0057EA4B</string>
-											<string>D709BE3E1299D9440057EA4B</string>
 											<string>D709BE711299DAEA0057EA4B</string>
-											<string>D709BE821299DC930057EA4B</string>
 											<string>D709BE8D1299DDA20057EA4B</string>
 											<string>D709BE8F1299DDA20057EA4B</string>
 											<string>D709BE901299DDA20057EA4B</string>
-											<string>D709BEB71299DEF10057EA4B</string>
-											<string>D709BECD1299DFF60057EA4B</string>
-											<string>D709BF011299E3900057EA4B</string>
+											<string>D709BF11129A29840057EA4B</string>
+											<string>D709BF16129A29840057EA4B</string>
+											<string>D709BF2F129A2B050057EA4B</string>
+											<string>D709BF59129A2EAA0057EA4B</string>
+											<string>D709BF5E129A2EAA0057EA4B</string>
+											<string>D709BF8B129A35000057EA4B</string>
+											<string>D709BF8D129A35000057EA4B</string>
+											<string>D709BF8F129A35000057EA4B</string>
+											<string>D709BFB2129A37A20057EA4B</string>
+											<string>D709BFC1129A38A50057EA4B</string>
+											<string>D709BFC2129A38A50057EA4B</string>
+											<string>D709BFC3129A38A50057EA4B</string>
+											<string>D709C002129A3B140057EA4B</string>
+											<string>D709C01F129A3C260057EA4B</string>
+											<string>D709C020129A3C260057EA4B</string>
+											<string>D709C02C129A3D8C0057EA4B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -481,18 +489,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1213, 874}}</string>
+								<string>{{0, 0}, {1213, 593}}</string>
 								<key>RubberWindowFrame</key>
-								<string>75 84 1556 920 0 0 1680 1028 </string>
+								<string>104 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>874pt</string>
+							<string>593pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>281pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -560,9 +568,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1213, -27}}</string>
+										<string>{{10, 27}, {1213, 254}}</string>
 										<key>RubberWindowFrame</key>
-										<string>75 84 1556 920 0 0 1680 1028 </string>
+										<string>104 108 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -767,7 +775,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>312075169.36938602</real>
+	<real>312098256.62352502</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -786,11 +794,10 @@
 	<array>
 		<string>D709BD1D1299AEA60057EA4B</string>
 		<string>D709BD191299AE9B0057EA4B</string>
-		<string>D709BD691299B25C0057EA4B</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>75 84 1556 920 0 0 1680 1028 </string>
+	<string>104 108 1556 920 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

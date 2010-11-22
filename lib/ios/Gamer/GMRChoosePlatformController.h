@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GMRCreateGameSheet.h"
 
-
-@interface GMRChoosePlatformController : UIViewController {
+@interface GMRChoosePlatformController : GMRCreateGameSheet {
 
 }
 

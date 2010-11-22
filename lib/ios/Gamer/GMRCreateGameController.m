@@ -12,6 +12,9 @@
 #import "GMRMenuButton.h"
 #import "GMRMenuButtonAltLabel.h"
 #import "GMRChoosePlatformController.h"
+#import "GMRChooseGameAndMode.h"
+#import "GMRChooseAvailability.h"
+#import "GMRChoosePlayers.h"
 
 
 GMRMatch * kCreateMatchProgress = nil;
@@ -31,7 +34,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	
 	kCreateMatchProgress = [[GMRMatch alloc] init];
-	NSLog(@"INITIALIZING MENU");
+	
 	[kCreateMatchProgress addObserver:self 
 						   forKeyPath:@"platform" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
@@ -44,6 +47,11 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	[kCreateMatchProgress addObserver:self 
 						   forKeyPath:@"gameMode" 
+							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+							  context:nil];
+	
+	[kCreateMatchProgress addObserver:self 
+						   forKeyPath:@"availability" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 							  context:nil];
 	
@@ -69,11 +77,13 @@ GMRMatch * kCreateMatchProgress = nil;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
 	static enum{
-		Invalid         = 0,
-		ValidPlatform   = 1 << 0,
-		ValidGameTitle  = 1 << 1,
-		ValidGameId     = 1 << 2,
-		ValidGameMode   = 1 << 3,
+		Invalid           = 0,
+		ValidPlatform     = 1 << 0,
+		ValidGameTitle    = 1 << 1,
+		ValidGameId       = 1 << 2,
+		ValidGameMode     = 1 << 3,
+		ValidAvailability = 1 << 4,
+		ValidPlayers      = 1 << 5,
 	};
 	static int formProgress = Invalid;
 	
@@ -81,14 +91,6 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	if([[change objectForKey:NSKeyValueChangeKindKey] intValue] == NSKeyValueChangeSetting)
 	{
-		/*
-		 NSString * gameId;
-		 NSString * gameTitle;
-		 NSString * gameMode;
-		 NSString * players;
-		 NSString * time;
-		 NSString * description;*/
-		
 		if([keyPath isEqualToString:@"platform"])
 		{
 			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
@@ -146,9 +148,23 @@ GMRMatch * kCreateMatchProgress = nil;
 				formProgress = formProgress | ValidGameMode;
 			}
 		}
+		else if([keyPath isEqualToString:@"availability"])
+		{
+			if(![[change objectForKey:NSKeyValueChangeNewKey] isEqualToString:[change objectForKey:NSKeyValueChangeOldKey]])
+			{
+				formProgress = formProgress | ValidAvailability;
+				self.availability.selected   = YES;
+				self.availability.label.text = [[change objectForKey:NSKeyValueChangeNewKey] isEqualToString:@"public"] ? @"Public" : @"Private";
+			}	
+		}
 		else if([keyPath isEqualToString:@"players"])
 		{
-			
+			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
+			{
+				formProgress = formProgress | ValidPlayers;
+				self.players.selected   = YES;
+				self.players.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.players];
+			}
 		}
 		else if([keyPath isEqualToString:@"time"])
 		{
@@ -161,7 +177,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	}
 	
 
-	NSLog(@"%@", change);
+	//NSLog(@"%@", change);
 }
 
 - (void)dismissModalViewController
@@ -179,17 +195,26 @@ GMRMatch * kCreateMatchProgress = nil;
 
 - (IBAction)selectGameAndMode
 {
-	NSLog(@"%f, %f", self.gameAndMode.frame.size.width, self.gameAndMode.frame.size.height);
+	GMRChooseGameAndMode * controller = [[GMRChooseGameAndMode alloc] initWithNibName:nil 
+																			   bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
+	[controller release];
 }
 
 - (IBAction)selectAvailability
-{
-	NSLog(@"%f, %f", self.availability.frame.size.width, self.availability.frame.size.height);
+{	
+	GMRChooseAvailability * controller = [[GMRChooseAvailability alloc] initWithNibName:nil 
+																			     bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
+	[controller release];
 }
 
 - (IBAction)selectPlayers
 {
-	NSLog(@"%f, %f", self.players.frame.size.width, self.players.frame.size.height);
+	GMRChoosePlayers * controller = [[GMRChoosePlayers alloc] initWithNibName:nil 
+																	   bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
+	[controller release];
 }
 
 - (IBAction)selectTime
@@ -242,6 +267,9 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	[kCreateMatchProgress removeObserver:self 
 							  forKeyPath:@"gameMode"];
+	
+	[kCreateMatchProgress removeObserver:self 
+							  forKeyPath:@"availability"];
 	
 	[kCreateMatchProgress removeObserver:self 
 							  forKeyPath:@"players"];
