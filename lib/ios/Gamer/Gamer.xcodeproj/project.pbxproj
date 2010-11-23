@@ -25,6 +25,8 @@
 		D709BF48129A2B810057EA4B /* GMRChooseAvailability.xib in Resources */ = {isa = PBXBuildFile; fileRef = D709BF46129A2B810057EA4B /* GMRChooseAvailability.xib */; };
 		D709BF80129A30DE0057EA4B /* GMRChoosePlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = D709BF7E129A30DE0057EA4B /* GMRChoosePlayers.m */; };
 		D709BF81129A30DE0057EA4B /* GMRChoosePlayers.xib in Resources */ = {isa = PBXBuildFile; fileRef = D709BF7F129A30DE0057EA4B /* GMRChoosePlayers.xib */; };
+		D714A125129C0B3400151FC9 /* GMRChooseDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = D714A123129C0B3400151FC9 /* GMRChooseDateTime.m */; };
+		D714A126129C0B3400151FC9 /* GMRChooseDateTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = D714A124129C0B3400151FC9 /* GMRChooseDateTime.xib */; };
 		D7208A811292BEFE009C0624 /* GMRGameDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */; };
 		D7208A821292BEFE009C0624 /* GMRGameDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7208A801292BEFE009C0624 /* GMRGameDetailController.xib */; };
 		D7208AA81292C884009C0624 /* ButtonGrayFull.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A881292C884009C0624 /* ButtonGrayFull.png */; };
@@ -284,6 +286,9 @@
 		D709BF7D129A30DE0057EA4B /* GMRChoosePlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChoosePlayers.h; sourceTree = "<group>"; };
 		D709BF7E129A30DE0057EA4B /* GMRChoosePlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChoosePlayers.m; sourceTree = "<group>"; };
 		D709BF7F129A30DE0057EA4B /* GMRChoosePlayers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChoosePlayers.xib; sourceTree = "<group>"; };
+		D714A122129C0B3400151FC9 /* GMRChooseDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseDateTime.h; sourceTree = "<group>"; };
+		D714A123129C0B3400151FC9 /* GMRChooseDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseDateTime.m; sourceTree = "<group>"; };
+		D714A124129C0B3400151FC9 /* GMRChooseDateTime.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseDateTime.xib; sourceTree = "<group>"; };
 		D7208A7E1292BEFE009C0624 /* GMRGameDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameDetailController.h; sourceTree = "<group>"; };
 		D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameDetailController.m; sourceTree = "<group>"; };
 		D7208A801292BEFE009C0624 /* GMRGameDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRGameDetailController.xib; sourceTree = "<group>"; };
@@ -661,6 +666,16 @@
 			name = ChooseDescription;
 			sourceTree = "<group>";
 		};
+		D714A121129C0B1900151FC9 /* ChooseDateAndTime */ = {
+			isa = PBXGroup;
+			children = (
+				D714A122129C0B3400151FC9 /* GMRChooseDateTime.h */,
+				D714A123129C0B3400151FC9 /* GMRChooseDateTime.m */,
+				D714A124129C0B3400151FC9 /* GMRChooseDateTime.xib */,
+			);
+			name = ChooseDateAndTime;
+			sourceTree = "<group>";
+		};
 		D7208A7D1292BECD009C0624 /* GameDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +694,7 @@
 				D75012DD1298CE6A0079EB44 /* CreateGameMenu */,
 				D750128E1298A0780079EB44 /* ChoosePlatform */,
 				D709BF05129A266B0057EA4B /* ChooseGameAndMode */,
+				D714A121129C0B1900151FC9 /* ChooseDateAndTime */,
 				D709BF40129A2B500057EA4B /* ChooseAvailability */,
 				D709BF41129A2B590057EA4B /* ChoosePlayers */,
 				D709BF42129A2B600057EA4B /* ChooseDescription */,
@@ -1358,6 +1374,7 @@
 				D709BF48129A2B810057EA4B /* GMRChooseAvailability.xib in Resources */,
 				D709BF81129A30DE0057EA4B /* GMRChoosePlayers.xib in Resources */,
 				D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */,
+				D714A126129C0B3400151FC9 /* GMRChooseDateTime.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1433,6 +1450,7 @@
 				D709BF0E129A28630057EA4B /* GMRCreateGameSheet.m in Sources */,
 				D709BF47129A2B810057EA4B /* GMRChooseAvailability.m in Sources */,
 				D709BF80129A30DE0057EA4B /* GMRChoosePlayers.m in Sources */,
+				D714A125129C0B3400151FC9 /* GMRChooseDateTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

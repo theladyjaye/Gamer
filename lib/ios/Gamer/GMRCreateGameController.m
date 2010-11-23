@@ -13,8 +13,10 @@
 #import "GMRMenuButtonAltLabel.h"
 #import "GMRChoosePlatformController.h"
 #import "GMRChooseGameAndMode.h"
+#import "GMRChooseDateTime.h"
 #import "GMRChooseAvailability.h"
 #import "GMRChoosePlayers.h"
+#import "NSDate+JSON.h"
 
 
 GMRMatch * kCreateMatchProgress = nil;
@@ -84,6 +86,7 @@ GMRMatch * kCreateMatchProgress = nil;
 		ValidGameMode     = 1 << 3,
 		ValidAvailability = 1 << 4,
 		ValidPlayers      = 1 << 5,
+		ValidTime         = 1 << 6,
 	};
 	static int formProgress = Invalid;
 	
@@ -168,7 +171,9 @@ GMRMatch * kCreateMatchProgress = nil;
 		}
 		else if([keyPath isEqualToString:@"time"])
 		{
-			
+			formProgress = formProgress | ValidTime;
+			self.time.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
+			self.time.selected = YES;
 		}
 		else if([keyPath isEqualToString:@"description"])
 		{
@@ -218,8 +223,11 @@ GMRMatch * kCreateMatchProgress = nil;
 }
 
 - (IBAction)selectTime
-{
-	NSLog(@"%f, %f", self.time.frame.size.width, self.time.frame.size.height);
+{	
+	GMRChooseDateTime * controller = [[GMRChooseDateTime alloc] initWithNibName:nil 
+																	     bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
+	[controller release];
 }
 
 - (IBAction)selectDescription

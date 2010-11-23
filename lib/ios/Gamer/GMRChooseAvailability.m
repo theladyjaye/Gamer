@@ -32,6 +32,7 @@
 	if(sender != selectedAvailability)
 	{
 		if(sender == availabilityPublic)
+			
 		{
 			kCreateMatchProgress.availability = @"public";
 		}

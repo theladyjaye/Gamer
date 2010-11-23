@@ -25,6 +25,20 @@
 	return date;
 }
 
++ (NSString *)dateToJSONString:(NSDate *)date
+{
+	// 2010-11-10T06:20:23.000Z
+	
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+	[dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+	
+	NSString* string = [dateFormatter stringFromDate:date];
+	[dateFormatter release];
+	
+	return string;
+}
+
 + (NSString *)gamerScheduleTimeString:(NSString *)scheduled_time
 {
 	// TODO: need to let the user configure how they want their time.
