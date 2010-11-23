@@ -151,6 +151,7 @@
 		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
 		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
+		D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */; };
 		D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE3512129785A6008E84EB /* GMRViewController.m */; };
 		D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */; };
 		D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */; };
@@ -417,6 +418,7 @@
 		D7B7CB82128909D400DC33F4 /* GMRMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMainController.h; sourceTree = "<group>"; };
 		D7B7CB83128909D400DC33F4 /* GMRMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMainController.m; sourceTree = "<group>"; };
 		D7B7CB84128909D400DC33F4 /* GMRMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMainController.xib; sourceTree = "<group>"; };
+		D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccessorySelected.png; sourceTree = "<group>"; };
 		D7BE3511129785A6008E84EB /* GMRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRViewController.h; sourceTree = "<group>"; };
 		D7BE3512129785A6008E84EB /* GMRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRViewController.m; sourceTree = "<group>"; };
 		D7C33D9F1295677A00B923AE /* OverviewController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OverviewController+TableView.h"; sourceTree = "<group>"; };
@@ -814,6 +816,7 @@
 		D7B41DF91287AAE0005BD0B4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */,
 				D709BBDA12998C5C0057EA4B /* ButtonInputLargeSelected.png */,
 				D709BBDB12998C5C0057EA4B /* ButtonInputSelected.png */,
 				D709BB701299765D0057EA4B /* ButtonInputClosed.png */,
@@ -1354,6 +1357,7 @@
 				D709BF0A129A26AD0057EA4B /* GMRChooseGameAndMode.xib in Resources */,
 				D709BF48129A2B810057EA4B /* GMRChooseAvailability.xib in Resources */,
 				D709BF81129A30DE0057EA4B /* GMRChoosePlayers.xib in Resources */,
+				D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

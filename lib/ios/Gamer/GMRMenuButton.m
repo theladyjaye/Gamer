@@ -9,10 +9,11 @@
 #import "GMRMenuButton.h"
 
 @implementation GMRMenuButton
-@synthesize backgroundImage, label;
+@synthesize backgroundImage, label, accessoryImage;
 
 -(void)awakeFromNib
 {
+	
 	if(self.backgroundImage.image != nil)
 	{
 		[self setBackgroundImage:self.backgroundImage.image forState:UIControlStateNormal];
@@ -52,6 +53,20 @@
 	
 	if(needsBackgroundImageUpdate)
 		self.backgroundImage.image = [self backgroundImageForState:UIControlStateSelected];
+	
+	if(self.accessoryImage)
+	{
+		if(value)
+		{
+			self.accessoryImage.hidden = NO;
+		}
+		else 
+		{
+			self.accessoryImage.hidden = YES;
+		}
+
+	}
+		
 }
 
 - (void)touchUpInside
@@ -97,6 +112,7 @@
 {
 	self.label = nil;
 	self.backgroundImage = nil;
+	self.accessoryImage = nil;
 	[backgroundImageLookup release];
 	[super dealloc];
 }

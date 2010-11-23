@@ -10,42 +10,88 @@
 #import "GMRMatch.h"
 #import "GMRTypes.h"
 #import "GMRCreateGameGlobals.h"
-
+#import "GMRMenuButton.h"
 @implementation GMRChoosePlatformController
+@synthesize platformBattleNet, platformPlaystation2, platformPlaystation3, platformWii, platformXBox360;
 
 - (void)viewDidLoad 
 {
     self.navigationItem.title = @"Platform";
+	
+	if(kCreateMatchProgress.platform != GMRPlatformUnknown)
+	{
+		[self selectPlatform:kCreateMatchProgress.platform];
+	}
+	
 	[super viewDidLoad];
 }
 
-- (IBAction)selectBattleNet
+- (IBAction)selectPlatformAction:(id)sender
 {
-	kCreateMatchProgress.platform = GMRPlatformBattleNet;
-	[self cancelSheet];
+	if(sender != selectedButton)
+	{
+		if(sender == platformBattleNet)
+		{
+			kCreateMatchProgress.platform = GMRPlatformBattleNet;
+		}
+		else if(sender == platformPlaystation2)
+		{
+			kCreateMatchProgress.platform = GMRPlatformPlaystation2;
+		}
+		else if(sender == platformPlaystation3)
+		{
+			kCreateMatchProgress.platform = GMRPlatformPlaystation3;
+		}
+		else if(sender == platformWii)
+		{
+			kCreateMatchProgress.platform = GMRPlatformWii;
+		}
+		else if (sender == platformXBox360)
+		{
+			kCreateMatchProgress.platform = GMRPlatformXBox360;
+		}
+	}
+	
+	[self selectPlatform:kCreateMatchProgress.platform];
+	
 }
 
-- (IBAction)selectPlaystation2
+- (void)selectPlatform:(GMRPlatform)platform
 {
-	kCreateMatchProgress.platform = GMRPlatformPlaystation2;
-	[self cancelSheet];
-}
-
-- (IBAction)selectPlaystation3
-{
-	kCreateMatchProgress.platform = GMRPlatformPlaystation3;
-	[self cancelSheet];
-}
-- (IBAction)selectWii
-{
-	kCreateMatchProgress.platform = GMRPlatformWii;
-	[self cancelSheet];
-}
-
-- (IBAction)selectXbox360
-{
-	kCreateMatchProgress.platform = GMRPlatformXBox360;
-	[self cancelSheet];
+	GMRMenuButton * target;
+	
+	switch(platform)
+	{
+		case GMRPlatformBattleNet:
+			target = self.platformBattleNet;
+			break;
+		
+		case GMRPlatformPlaystation2:
+			target = self.platformPlaystation2;
+			break;
+		
+		case GMRPlatformPlaystation3:
+			target = self.platformPlaystation3;
+			break;
+		
+		case GMRPlatformWii:
+			target = self.platformWii;
+			break;
+		
+		case GMRPlatformXBox360:
+			target = self.platformXBox360;
+			break;
+	}
+	
+	if(selectedButton != target)
+	{
+		if(selectedButton)
+			selectedButton.selected = NO;
+		
+		selectedButton = target;
+		selectedButton.selected = YES;
+	}
+	
 }
 
 
@@ -73,6 +119,11 @@
 
 
 - (void)dealloc {
+	self.platformBattleNet = nil;
+	self.platformPlaystation2 = nil;
+	self.platformPlaystation3 = nil;
+	self.platformWii = nil;
+	self.platformXBox360 = nil;
     [super dealloc];
 }
 

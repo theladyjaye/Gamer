@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "GMRCreateGameSheet.h"
 
+@class GMRMenuButton;
 @interface GMRChooseAvailability : GMRCreateGameSheet {
-
+	GMRMenuButton * availabilityPublic;
+	GMRMenuButton * availabilityPrivate;
+	GMRMenuButton * selectedAvailability;
 }
+@property(nonatomic, retain) IBOutlet GMRMenuButton * availabilityPublic;
+@property(nonatomic, retain) IBOutlet GMRMenuButton * availabilityPrivate;
 
-- (IBAction)selectPublic;
-- (IBAction)selectPrivate;
+- (IBAction)selectAvailabilityAction:(id)sender;
+- (void)selectAvailability:(NSString *)value;
 @end

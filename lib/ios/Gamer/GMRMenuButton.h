@@ -14,8 +14,12 @@
 	NSMutableDictionary * backgroundImageLookup;
 	
 	UIImageView * backgroundImage;
+	UIImageView * accessoryImage;
 	UILabel * label;
 }
+@property(nonatomic, retain) IBOutlet UILabel * label;
+@property(nonatomic, retain) IBOutlet UIImageView * backgroundImage;
+@property(nonatomic, retain) IBOutlet UIImageView * accessoryImage;
 
 - (void)setBackgroundImage:(UIImage *)image forState:(UIControlState)state;
 - (UIImage *)backgroundImageForState:(UIControlState)state;
@@ -26,6 +30,4 @@
 - (UIImage *)backgroundImageForOpenNormal;
 - (UIImage *)backgroundImageForClosedNormal;
 
-@property(nonatomic, retain) IBOutlet UILabel * label;
-@property(nonatomic, retain) IBOutlet UIImageView * backgroundImage;
 @end

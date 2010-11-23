@@ -9,27 +9,65 @@
 #import "GMRChooseAvailability.h"
 #import "GMRCreateGameGlobals.h"
 #import "GMRMatch.h"
+#import "GMRMenuButton.h"
 
 @implementation GMRChooseAvailability
+@synthesize availabilityPublic, availabilityPrivate;
 
 - (void)viewDidLoad 
 {
     self.navigationItem.title = @"Availability";
+	
+	if(kCreateMatchProgress.availability)
+	{
+		[self selectAvailability:kCreateMatchProgress.availability];
+	}
+	
 	[super viewDidLoad];
 }
 
 
-- (IBAction)selectPublic
+- (IBAction)selectAvailabilityAction:(id)sender
 {
-	kCreateMatchProgress.availability = @"public";
-	[self cancelSheet];
+	if(sender != selectedAvailability)
+	{
+		if(sender == availabilityPublic)
+		{
+			kCreateMatchProgress.availability = @"public";
+		}
+		else if(sender == availabilityPrivate)
+		{
+			kCreateMatchProgress.availability = @"private";
+		}
+		
+		
+		[self selectAvailability:kCreateMatchProgress.availability];
+	}
 }
 
-- (IBAction)selectPrivate
+- (void)selectAvailability:(NSString *)value
 {
-	kCreateMatchProgress.availability = @"private";
-	[self cancelSheet];
+	GMRMenuButton * target;
+	
+	if([value isEqualToString:@"public"])
+	{
+		target = self.availabilityPublic;
+	}
+	else 
+	{
+		target = self.availabilityPrivate;	
+	}
+	
+	if(selectedAvailability != target)
+	{
+		if(selectedAvailability)
+			selectedAvailability.selected = NO;
+		
+		selectedAvailability = target;
+		selectedAvailability.selected = YES;
+	}
 }
+
 
 
 /*
@@ -55,6 +93,8 @@
 
 
 - (void)dealloc {
+	self.availabilityPublic = nil;
+	self.availabilityPrivate = nil;
     [super dealloc];
 }
 

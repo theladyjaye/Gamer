@@ -96,7 +96,6 @@ GMRMatch * kCreateMatchProgress = nil;
 			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
 			{
 				NSString * displayString;
-				NSLog(@"%i : %i", kCreateMatchProgress.platform, GMRPlatformXBox360);
 				
 				switch (kCreateMatchProgress.platform) 
 				{

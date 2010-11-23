@@ -8,14 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "GMRCreateGameSheet.h"
+#import "GMRTypes.h"
 
+@class GMRMenuButton;
 @interface GMRChoosePlatformController : GMRCreateGameSheet {
-
+	GMRMenuButton * selectedButton;
+	GMRMenuButton * platformBattleNet;
+	GMRMenuButton * platformPlaystation2;
+	GMRMenuButton * platformPlaystation3;
+	GMRMenuButton * platformWii;
+	GMRMenuButton * platformXBox360;
 }
 
-- (IBAction)selectBattleNet;
-- (IBAction)selectPlaystation2;
-- (IBAction)selectPlaystation3;
-- (IBAction)selectWii;
-- (IBAction)selectXbox360;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformBattleNet;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformPlaystation2;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformPlaystation3;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformWii;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformXBox360;
+
+- (IBAction)selectPlatformAction:(id)sender;
+- (void)selectPlatform:(GMRPlatform)platform;
 @end

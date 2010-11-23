@@ -83,6 +83,18 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
+							<object class="IBUIImageView" id="334691762">
+								<reference key="NSNextResponder" ref="935580103"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{286, 4}, {24, 25}}</string>
+								<reference key="NSSuperview" ref="935580103"/>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage" id="630075184">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">AccessorySelected.png</string>
+								</object>
+							</object>
 						</object>
 						<string key="NSFrame">{{3, 3}, {314, 33}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -123,6 +135,15 @@
 								<reference key="IBUIHighlightedColor" ref="127889944"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
+							</object>
+							<object class="IBUIImageView" id="893296035">
+								<reference key="NSNextResponder" ref="522007005"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{286, 4}, {24, 25}}</string>
+								<reference key="NSSuperview" ref="522007005"/>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="630075184"/>
 							</object>
 						</object>
 						<string key="NSFrame">{{3, 38}, {314, 33}}</string>
@@ -165,6 +186,15 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
+							<object class="IBUIImageView" id="180765167">
+								<reference key="NSNextResponder" ref="40340384"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{286, 4}, {24, 25}}</string>
+								<reference key="NSSuperview" ref="40340384"/>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="630075184"/>
+							</object>
 						</object>
 						<string key="NSFrame">{{3, 73}, {314, 33}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -206,6 +236,15 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
+							<object class="IBUIImageView" id="844143577">
+								<reference key="NSNextResponder" ref="785605756"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{286, 4}, {24, 25}}</string>
+								<reference key="NSSuperview" ref="785605756"/>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="630075184"/>
+							</object>
 						</object>
 						<string key="NSFrame">{{3, 108}, {314, 33}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
@@ -246,6 +285,15 @@
 								<reference key="IBUIHighlightedColor" ref="127889944"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
+							</object>
+							<object class="IBUIImageView" id="424753552">
+								<reference key="NSNextResponder" ref="235135245"/>
+								<int key="NSvFlags">-2147483356</int>
+								<string key="NSFrame">{{286, 4}, {24, 25}}</string>
+								<reference key="NSSuperview" ref="235135245"/>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUIImage" ref="630075184"/>
 							</object>
 						</object>
 						<string key="NSFrame">{{3, 143}, {314, 33}}</string>
@@ -366,49 +414,129 @@
 					<int key="connectionID">36</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">accessoryImage</string>
+						<reference key="source" ref="235135245"/>
+						<reference key="destination" ref="424753552"/>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">accessoryImage</string>
+						<reference key="source" ref="785605756"/>
+						<reference key="destination" ref="844143577"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">accessoryImage</string>
+						<reference key="source" ref="40340384"/>
+						<reference key="destination" ref="180765167"/>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">accessoryImage</string>
+						<reference key="source" ref="522007005"/>
+						<reference key="destination" ref="893296035"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">accessoryImage</string>
+						<reference key="source" ref="935580103"/>
+						<reference key="destination" ref="334691762"/>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformBattleNet</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="935580103"/>
+					</object>
+					<int key="connectionID">59</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformPlaystation2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="522007005"/>
+					</object>
+					<int key="connectionID">60</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformPlaystation3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="40340384"/>
+					</object>
+					<int key="connectionID">61</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformWii</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="785605756"/>
+					</object>
+					<int key="connectionID">62</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformXBox360</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="235135245"/>
+					</object>
+					<int key="connectionID">63</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">selectBattleNet</string>
+						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="935580103"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">37</int>
+					<int key="connectionID">64</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">selectPlaystation2</string>
+						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="522007005"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">38</int>
+					<int key="connectionID">65</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">selectPlaystation3</string>
+						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="40340384"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">39</int>
+					<int key="connectionID">66</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">selectWii</string>
+						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="785605756"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">40</int>
+					<int key="connectionID">67</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">selectXbox360</string>
+						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="235135245"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">41</int>
+					<int key="connectionID">68</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -451,6 +579,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="85488074"/>
 							<reference ref="1039717133"/>
+							<reference ref="334691762"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Battlenet</string>
@@ -473,6 +602,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="269368656"/>
 							<reference ref="555436636"/>
+							<reference ref="893296035"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Playstation 2</string>
@@ -495,6 +625,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="259402937"/>
 							<reference ref="852986736"/>
+							<reference ref="180765167"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Playstation 3</string>
@@ -517,6 +648,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="227927666"/>
 							<reference ref="254387011"/>
+							<reference ref="844143577"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Wii</string>
@@ -539,6 +671,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="442829262"/>
 							<reference ref="742067700"/>
+							<reference ref="424753552"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Xbox 360</string>
@@ -553,6 +686,31 @@
 						<reference key="object" ref="742067700"/>
 						<reference key="parent" ref="235135245"/>
 						<string key="objectName">Label</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">43</int>
+						<reference key="object" ref="334691762"/>
+						<reference key="parent" ref="935580103"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">44</int>
+						<reference key="object" ref="844143577"/>
+						<reference key="parent" ref="785605756"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">45</int>
+						<reference key="object" ref="893296035"/>
+						<reference key="parent" ref="522007005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">46</int>
+						<reference key="object" ref="180765167"/>
+						<reference key="parent" ref="40340384"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">47</int>
+						<reference key="object" ref="424753552"/>
+						<reference key="parent" ref="235135245"/>
 					</object>
 				</object>
 			</object>
@@ -599,6 +757,16 @@
 					<string>33.IBViewBoundsToFrameTransform</string>
 					<string>34.IBPluginDependency</string>
 					<string>34.IBViewBoundsToFrameTransform</string>
+					<string>43.IBPluginDependency</string>
+					<string>43.IBViewBoundsToFrameTransform</string>
+					<string>44.IBPluginDependency</string>
+					<string>44.IBViewBoundsToFrameTransform</string>
+					<string>45.IBPluginDependency</string>
+					<string>45.IBViewBoundsToFrameTransform</string>
+					<string>46.IBPluginDependency</string>
+					<string>46.IBViewBoundsToFrameTransform</string>
+					<string>47.IBPluginDependency</string>
+					<string>47.IBViewBoundsToFrameTransform</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -661,6 +829,26 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABDBQAAwzkAAA</bytes>
 					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUOPAABAgAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUONgABAgAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUMUAABDRAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUMUAABDRAAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUMUAABDRAAAA</bytes>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -679,7 +867,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">41</int>
+			<int key="maxID">68</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -688,55 +876,66 @@
 					<string key="className">GMRChoosePlatformController</string>
 					<string key="superclassName">GMRCreateGameSheet</string>
 					<object class="NSMutableDictionary" key="actions">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>selectBattleNet</string>
-							<string>selectPlaystation2</string>
-							<string>selectPlaystation3</string>
-							<string>selectWii</string>
-							<string>selectXbox360</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-							<string>id</string>
-						</object>
+						<string key="NS.key.0">selectPlatformAction:</string>
+						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">selectPlatformAction:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">selectPlatformAction:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>selectBattleNet</string>
-							<string>selectPlaystation2</string>
-							<string>selectPlaystation3</string>
-							<string>selectWii</string>
-							<string>selectXbox360</string>
+							<string>platformBattleNet</string>
+							<string>platformPlaystation2</string>
+							<string>platformPlaystation3</string>
+							<string>platformWii</string>
+							<string>platformXBox360</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBActionInfo">
-								<string key="name">selectBattleNet</string>
-								<string key="candidateClassName">id</string>
+							<string>GMRMenuButton</string>
+							<string>GMRMenuButton</string>
+							<string>GMRMenuButton</string>
+							<string>GMRMenuButton</string>
+							<string>GMRMenuButton</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>platformBattleNet</string>
+							<string>platformPlaystation2</string>
+							<string>platformPlaystation3</string>
+							<string>platformWii</string>
+							<string>platformXBox360</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">platformBattleNet</string>
+								<string key="candidateClassName">GMRMenuButton</string>
 							</object>
-							<object class="IBActionInfo">
-								<string key="name">selectPlaystation2</string>
-								<string key="candidateClassName">id</string>
+							<object class="IBToOneOutletInfo">
+								<string key="name">platformPlaystation2</string>
+								<string key="candidateClassName">GMRMenuButton</string>
 							</object>
-							<object class="IBActionInfo">
-								<string key="name">selectPlaystation3</string>
-								<string key="candidateClassName">id</string>
+							<object class="IBToOneOutletInfo">
+								<string key="name">platformPlaystation3</string>
+								<string key="candidateClassName">GMRMenuButton</string>
 							</object>
-							<object class="IBActionInfo">
-								<string key="name">selectWii</string>
-								<string key="candidateClassName">id</string>
+							<object class="IBToOneOutletInfo">
+								<string key="name">platformWii</string>
+								<string key="candidateClassName">GMRMenuButton</string>
 							</object>
-							<object class="IBActionInfo">
-								<string key="name">selectXbox360</string>
-								<string key="candidateClassName">id</string>
+							<object class="IBToOneOutletInfo">
+								<string key="name">platformXBox360</string>
+								<string key="candidateClassName">GMRMenuButton</string>
 							</object>
 						</object>
 					</object>
@@ -760,11 +959,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>accessoryImage</string>
 							<string>backgroundImage</string>
 							<string>label</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIImageView</string>
 							<string>UIImageView</string>
 							<string>UILabel</string>
 						</object>
@@ -773,11 +974,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>accessoryImage</string>
 							<string>backgroundImage</string>
 							<string>label</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">accessoryImage</string>
+								<string key="candidateClassName">UIImageView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">backgroundImage</string>
 								<string key="candidateClassName">UIImageView</string>
@@ -1013,8 +1219,17 @@
 		<string key="IBDocument.LastKnownRelativeProjectPath">Gamer.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">ButtonInputClosed.png</string>
-			<string key="NS.object.0">{314, 33}</string>
+			<bool key="EncodedWithXMLCoder">YES</bool>
+			<object class="NSArray" key="dict.sortedKeys">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>AccessorySelected.png</string>
+				<string>ButtonInputClosed.png</string>
+			</object>
+			<object class="NSMutableArray" key="dict.values">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{24, 25}</string>
+				<string>{314, 33}</string>
+			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">132</string>
 	</data>
