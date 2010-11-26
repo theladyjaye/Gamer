@@ -20,7 +20,7 @@
 	
 	if(kCreateMatchProgress.time)
 	{
-		[datePicker setDate:[NSDate dateWithJSONString:kCreateMatchProgress.time] animated:NO];
+		[datePicker setDate:kCreateMatchProgress.time animated:NO];
 		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
 	}
 
@@ -37,7 +37,7 @@
 	if(!kCreateMatchProgress.time)
 	{
 		NSDate * now = [NSDate dateWithTimeIntervalSinceNow:1.0];
-		kCreateMatchProgress.time = [NSDate dateToJSONString:now];
+		kCreateMatchProgress.time = now;
 		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
 		self.datePicker.minimumDate = now;
 		[datePicker setDate:now animated:NO];
@@ -48,7 +48,7 @@
 
 - (void)pickerChanged
 {
-	kCreateMatchProgress.time = [NSDate dateToJSONString:datePicker.date];
+	kCreateMatchProgress.time = datePicker.date;
 	self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
 }
 

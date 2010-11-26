@@ -21,7 +21,39 @@
 
 @implementation GMRCreateGameController(Navigation)
 
-- (IBAction)selectPlatform
+- (IBAction)selectOption:(id)sender
+{
+	NSInteger tag = [sender tag];
+	
+	switch(tag)
+	{
+		case 0: // Platform
+			[self selectPlatform];
+			break;
+		
+		case 1: // Game and Mode
+			[self selectGameAndMode];
+			break;
+		
+		case 2: // Availability
+			[self selectAvailability];
+			break;
+			
+		case 3: // Players
+			[self selectPlayers];
+			break;
+			
+		case 4: // Time
+			[self selectTime];
+			break;
+			
+		case 5: // Description
+			[self selectDescription];
+			break;
+	}
+}
+
+- (void)selectPlatform
 {
 	GMRChoosePlatformController * controller = [[GMRChoosePlatformController alloc] initWithNibName:nil 
 																							 bundle:nil];
@@ -29,7 +61,7 @@
 	[controller release];
 }
 
-- (IBAction)selectGameAndMode
+- (void)selectGameAndMode
 {
 	if(kCreateMatchProgress.platform != GMRPlatformUnknown)
 	{
@@ -52,7 +84,7 @@
 	
 }
 
-- (IBAction)selectAvailability
+- (void)selectAvailability
 {	
 	GMRChooseAvailability * controller = [[GMRChooseAvailability alloc] initWithNibName:nil 
 																			     bundle:nil];
@@ -60,7 +92,7 @@
 	[controller release];
 }
 
-- (IBAction)selectPlayers
+- (void)selectPlayers
 {
 	if(kCreateMatchProgress.game)
 	{
@@ -83,7 +115,7 @@
 	
 }
 
-- (IBAction)selectTime
+- (void)selectTime
 {	
 	GMRChooseDateTime * controller = [[GMRChooseDateTime alloc] initWithNibName:nil 
 																	     bundle:nil];
@@ -91,7 +123,7 @@
 	[controller release];
 }
 
-- (IBAction)selectDescription
+- (void)selectDescription
 {
 	GMRChooseDescription * controller = [[GMRChooseDescription alloc] initWithNibName:nil 
 																	           bundle:nil];

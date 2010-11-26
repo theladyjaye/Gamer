@@ -3,18 +3,25 @@ final class GMRRequest
 {
 	private $options;
 	private $key;
+	private $masquerade;
 	const kDomain = 'http://hazgame.com:7331';
 	
 	
-	public function __construct($key)
+	public function __construct($key, $masquerade=null)
 	{
-		$this->key = $key;
+		$this->key        = $key;
+		$this->masquerade = $masquerade;
+		
 	}
 	
 	public function execute($options)
 	{
 		$headers = array('Authorization: OAuth '.$this->key,
 		                 'Accept: application/json');
+		
+		
+		if($this->masquerade)
+			array_push($headers, "X-Masquerade-As: ".$this->masquerade);
 		
 		$request = curl_init();
 		

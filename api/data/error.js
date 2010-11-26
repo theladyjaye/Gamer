@@ -3,6 +3,7 @@ module.exports = {
 	"unauthorized_client":{"code":401, "message":"unauthorized_client"},
 	"not_implemented"    :{"code":404, "message":"not_implemented"},
 	"unknown_game"       :{"code":404, "message":"unknown_game"},
+	"unknown_game_mode"  :{"code":404, "message":"unknown_game_mode"},
 	"unknown_platform"   :{"code":400, "message":"unknown_platform"},
 	"unknown_error"      :{"code":400, "message":"unknown_error"},
 	"unknown_user"       :{"code":400, "message":"unknown_user"},

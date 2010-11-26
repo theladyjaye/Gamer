@@ -15,7 +15,6 @@
 - (void)dealloc
 {
 	self.game         = nil;
-	self.availability = nil;
 	self.time         = nil;
 	self.description  = nil;
 	

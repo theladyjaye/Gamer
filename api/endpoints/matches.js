@@ -6,6 +6,7 @@ var couchdb        = require('../libs/node-couchdb/lib/couchdb'),
     Errors         = require('../data/error'),
     Match          = require('../data/match'),
     Platform       = require('../data/Platform'),
+    Player         = require('../data/player');
 	PlayersInArray = require('../data/queries/PlayersInArray');
 
 
@@ -266,6 +267,12 @@ function createMatch(req, res, next)
 			return;
 		}
 		
+		if(typeof fields.mode == "undefined")
+		{
+			next({"ok":false, "message":Errors.unknown_game_mode.message});
+			return;
+		}
+		
 		if(typeof fields.scheduled_time == "undefined" )
 		{
 			next({"ok":false, "message":Errors.schedule_time.message});
@@ -293,11 +300,32 @@ function createMatch(req, res, next)
 						match.game.platform  = platform;
 						match.availability   = fields.availability == "private" ? "private" : "public";
 						match.maxPlayers     = fields.maxPlayers <= game.maxPlayers ? fields.maxPlayers : game.maxPlayers;
+						match.mode           = fields.mode;
 						match.scheduled_time = new Date(fields.scheduled_time); 
-						match.players        = [match.created_by];
+						//match.players        = [match.created_by];
+						
+						// make sure the user creating this game has linked their platform alias for this game's platform
+						var alias = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == match.game.platform) return element; } );
+						
+						if(alias.length == 1)
+						{
+							var creator            = new Player();
+							creator.username       = req.access_token.user;
+							creator.alias          = alias[0].alias;
+							//creator.match          = data.id;
+							creator.scheduled_time = match.scheduled_time;
+							
+							next({"ok":true, "message":"WIL CREATE MATCH WITH ALIASED USER"});
+							return;
+						}
+						else
+						{
+							next({"ok":false, "message":Errors.unknown_alias.message});
+							return;
+						}
 						
 					/*
-						We might also consider doing some checking to see if this match conflicts 
+						TODO: We might also consider doing some checking to see if this match conflicts 
 						with another game the creator is already in.
 					*/
 					
@@ -332,7 +360,7 @@ function createMatch(req, res, next)
 								if(row.username != match.created_by)
 								{
 									invitation.players.push(row);
-									match.players.push(row.username)
+									//match.players.push(row.username)
 								}
 							});
 							

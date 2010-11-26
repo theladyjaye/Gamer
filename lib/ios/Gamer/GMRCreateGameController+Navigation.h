@@ -10,10 +10,11 @@
 #import "GMRCreateGameController.h"
 
 @interface GMRCreateGameController(Navigation)
-- (IBAction)selectPlatform;
-- (IBAction)selectGameAndMode;
-- (IBAction)selectAvailability;
-- (IBAction)selectPlayers;
-- (IBAction)selectTime;
-- (IBAction)selectDescription;
+- (IBAction)selectOption:(id)sender;
+- (void)selectPlatform;
+- (void)selectGameAndMode;
+- (void)selectAvailability;
+- (void)selectPlayers;
+- (void)selectTime;
+- (void)selectDescription;
 @end

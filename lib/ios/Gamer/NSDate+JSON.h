@@ -13,6 +13,6 @@
 
 + (NSDate *)dateWithJSONString:(NSString *)string;
 + (NSString *)dateToJSONString:(NSDate *)date;
-+ (NSString *)gamerScheduleTimeString:(NSString *)scheduled_time;
++ (NSString *)gamerScheduleTimeString:(NSDate *)scheduled_time;
 
 @end

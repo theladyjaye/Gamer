@@ -10,12 +10,24 @@ require dirname(__FILE__) . '/GMRPlatform.php';
 final class GMRClient
 {
 	private $request;
+	private $username;
+	
 	const kPageLimit  = 3; // limit is 2, but we add 1 so we know the startkey of the next page. Hint: it's the 3rd result
 	const kSessionKey = "GamerAPI";
 	
-	public function __construct($key)
+	// If this is the system key, you will be able to masquerade as any user.
+	// masquerading is ONLY valid with the system key.
+	public function __construct($key, $username=null)
 	{
-		$this->request = new GMRRequest($key);
+		$this->username = $username;
+		if($username)
+		{
+			$this->request  = new GMRRequest($key, $username);
+		}
+		else
+		{
+			$this->request  = new GMRRequest($key);
+		}
 	}
 	
 	/**
@@ -23,16 +35,15 @@ final class GMRClient
 	 * if the user leaving the match is the creator of the match
 	 * the match will be cancelled.
 	 *
-	 * @param string $username name of the user joining the game
 	 * @param string $platform constant from GMRPlatform
 	 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
 	 * @param string $match_id the hash representing the match to join
 	 * @return bool
 	 * @author Adam Venturella
 	 */
-	public function matchLeave($username, $platform, $game_id, $match_id)
+	public function matchLeave($platform, $game_id, $match_id)
 	{
-		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$username,
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$this->username,
 		                                          'method'        => 'DELETE'));
 		
 		$data = json_decode($response);
@@ -42,16 +53,15 @@ final class GMRClient
 	/**
 	 * Join and existing match
 	 *
-	 * @param string $username name of the user joining the game
 	 * @param string $platform constant from GMRPlatform
 	 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
 	 * @param string $match_id the hash representing the match to join
 	 * @return bool
 	 * @author Adam Venturella
 	 */
-	public function matchJoin($username, $platform, $game_id, $match_id)
+	public function matchJoin($platform, $game_id, $match_id)
 	{
-		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$username,
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/'.$this->username,
 		                                          'method'        => 'POST'));
 		
 		$data = json_decode($response);
@@ -61,7 +71,6 @@ final class GMRClient
 	/**
 	 * Create a new match
 	 *
-	 * @param string $owner username of the person creating this game.  This will be the match owner
 	 * @param DateTime $scheduled_time when is this match scheduled
 	 * @param string $game_id game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
 	 * @param string $platform constant from GMRPlatform
@@ -71,12 +80,12 @@ final class GMRClient
 	 * @return string id of the match created
 	 * @author Adam Venturella
 	 */
-	public function matchCreate($owner, DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
+	public function matchCreate(DateTime $scheduled_time, $game_id, $platform, $availability, $maxPlayers, $invited_players=null, $label=null)
 	{
 		$scheduled_time->setTimezone(new DateTimeZone('UTC'));
 		
 		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id,
-		                                          'data'          => array('username'       => $owner,
+		                                          'data'          => array('username'       => $this->username,
 		                                                                   'scheduled_time' => $scheduled_time->format('Y-m-d\TH:i:s\Z'), // pretty much DateTime::ISO8601 but instead of Y-m-d\TH:i:sO it's Y-m-d\TH:i:s\Z (note the Z - Zulu time) compatible with JavaScript
 		                                                                   'availability'   => $availability,
 		                                                                   'maxPlayers'     => $maxPlayers,
@@ -95,13 +104,12 @@ final class GMRClient
 	/**
 	 * Gets matches for a given user
 	 *
-	 * @param string $user_id 
 	 * @return object
 	 * @author Adam Venturella
 	 */
-	public function matchesForUser($user_id)
+	public function matchesForUser()
 	{
-		$response = $this->request->execute(array('path'          => '/matches/scheduled/'.$user_id,
+		$response = $this->request->execute(array('path'          => '/matches/scheduled/'.$this->username,
 		                                          'method'        => 'GET'));
 		
 		$data = json_decode($response);

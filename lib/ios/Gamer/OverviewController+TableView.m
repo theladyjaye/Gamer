@@ -71,7 +71,7 @@
 	 NSDictionary * item = [matches objectAtIndex:indexPath.row];
 	 NSDictionary * game = [item objectForKey:@"game"];
 	 
-	 NSString * scheduled_time = [item objectForKey:@"scheduled_time"];
+	NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
 	 /*NSDate * date = [NSDate dateWithJSONString:scheduled_time];
 	 
 	 NSDateFormatter * formatter = [[NSDateFormatter alloc] init];

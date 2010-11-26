@@ -66,6 +66,12 @@
 		D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */; };
 		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
 		D72C7B8712A010FC00580653 /* GMRCreateGameController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7B8612A010FC00580653 /* GMRCreateGameController+Navigation.m */; };
+		D72C7B9E12A0129D00580653 /* GMRForm.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7B9D12A0129D00580653 /* GMRForm.m */; };
+		D72C7BA212A0150900580653 /* GMRNotNilValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7BA112A0150900580653 /* GMRNotNilValidator.m */; };
+		D72C7BAD12A0154700580653 /* GMRValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7BAC12A0154700580653 /* GMRValidator.m */; };
+		D72C7C5E12A02DA400580653 /* GMRPlatformValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7C5D12A02DA400580653 /* GMRPlatformValidator.m */; };
+		D72C7CE512A0360B00580653 /* GMRPredicateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7CE412A0360B00580653 /* GMRPredicateValidator.m */; };
+		D72C7D3212A0440F00580653 /* GMRInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7D3112A0440F00580653 /* GMRInputValidator.m */; };
 		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
 		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
 		D742353E129D668000EA0272 /* GMRChooseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */; };
@@ -338,6 +344,18 @@
 		D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationInputController.xib; sourceTree = "<group>"; };
 		D72C7B8512A010FC00580653 /* GMRCreateGameController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRCreateGameController+Navigation.h"; sourceTree = "<group>"; };
 		D72C7B8612A010FC00580653 /* GMRCreateGameController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRCreateGameController+Navigation.m"; sourceTree = "<group>"; };
+		D72C7B9C12A0129D00580653 /* GMRForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRForm.h; sourceTree = "<group>"; };
+		D72C7B9D12A0129D00580653 /* GMRForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRForm.m; sourceTree = "<group>"; };
+		D72C7BA012A0150900580653 /* GMRNotNilValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRNotNilValidator.h; sourceTree = "<group>"; };
+		D72C7BA112A0150900580653 /* GMRNotNilValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRNotNilValidator.m; sourceTree = "<group>"; };
+		D72C7BAB12A0154700580653 /* GMRValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRValidator.h; sourceTree = "<group>"; };
+		D72C7BAC12A0154700580653 /* GMRValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRValidator.m; sourceTree = "<group>"; };
+		D72C7C5C12A02DA400580653 /* GMRPlatformValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlatformValidator.h; sourceTree = "<group>"; };
+		D72C7C5D12A02DA400580653 /* GMRPlatformValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlatformValidator.m; sourceTree = "<group>"; };
+		D72C7CE312A0360B00580653 /* GMRPredicateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPredicateValidator.h; sourceTree = "<group>"; };
+		D72C7CE412A0360B00580653 /* GMRPredicateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPredicateValidator.m; sourceTree = "<group>"; };
+		D72C7D3012A0440F00580653 /* GMRInputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRInputValidator.h; sourceTree = "<group>"; };
+		D72C7D3112A0440F00580653 /* GMRInputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRInputValidator.m; sourceTree = "<group>"; };
 		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
 		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
 		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
@@ -712,6 +730,41 @@
 			name = GameDetail;
 			sourceTree = "<group>";
 		};
+		D72C7B9F12A014D400580653 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				D72C7C5F12A02DA900580653 /* Gamer */,
+				D72C7BA312A0150C00580653 /* Validators */,
+				D72C7B9C12A0129D00580653 /* GMRForm.h */,
+				D72C7B9D12A0129D00580653 /* GMRForm.m */,
+			);
+			name = Forms;
+			sourceTree = "<group>";
+		};
+		D72C7BA312A0150C00580653 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				D72C7BA012A0150900580653 /* GMRNotNilValidator.h */,
+				D72C7BA112A0150900580653 /* GMRNotNilValidator.m */,
+				D72C7BAB12A0154700580653 /* GMRValidator.h */,
+				D72C7BAC12A0154700580653 /* GMRValidator.m */,
+				D72C7CE312A0360B00580653 /* GMRPredicateValidator.h */,
+				D72C7CE412A0360B00580653 /* GMRPredicateValidator.m */,
+				D72C7D3012A0440F00580653 /* GMRInputValidator.h */,
+				D72C7D3112A0440F00580653 /* GMRInputValidator.m */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		D72C7C5F12A02DA900580653 /* Gamer */ = {
+			isa = PBXGroup;
+			children = (
+				D72C7C5C12A02DA400580653 /* GMRPlatformValidator.h */,
+				D72C7C5D12A02DA400580653 /* GMRPlatformValidator.m */,
+			);
+			name = Gamer;
+			sourceTree = "<group>";
+		};
 		D750128712989F710079EB44 /* CreateGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,6 +902,7 @@
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D72C7B9F12A014D400580653 /* Forms */,
 				D7AFF523128A693200CF1A07 /* NSDate+JSON.h */,
 				D7AFF524128A693200CF1A07 /* NSDate+JSON.m */,
 			);
@@ -1485,6 +1539,12 @@
 				D7423697129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m in Sources */,
 				D74237EB129F6A4F00EA0272 /* GMRGame.m in Sources */,
 				D72C7B8712A010FC00580653 /* GMRCreateGameController+Navigation.m in Sources */,
+				D72C7B9E12A0129D00580653 /* GMRForm.m in Sources */,
+				D72C7BA212A0150900580653 /* GMRNotNilValidator.m in Sources */,
+				D72C7BAD12A0154700580653 /* GMRValidator.m in Sources */,
+				D72C7C5E12A02DA400580653 /* GMRPlatformValidator.m in Sources */,
+				D72C7CE512A0360B00580653 /* GMRPredicateValidator.m in Sources */,
+				D72C7D3212A0440F00580653 /* GMRInputValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

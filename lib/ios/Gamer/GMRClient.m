@@ -223,7 +223,7 @@ static NSArray * platformStrings;
 		   }];
 }
 
-- (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
+- (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId gameMode:(NSString *)gameMode platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
 {
 	NSString * time;
 	NSString * availabilityString  = (availability == GMRMatchAvailabliltyPublic) ? @"public" : @"private";
@@ -248,6 +248,7 @@ static NSArray * platformStrings;
 	// send urlencoded array for invitedPlayers as "players"
 	NSDictionary* data   = [NSDictionary dictionaryWithObjectsAndKeys:
 							time,                                          @"scheduled_time",
+							gameMode,                                      @"mode",
 							availabilityString,                            @"availability", 
 							[NSString stringWithFormat:@"%u", maxPlayers], @"maxPlayers",
 							label,                                         @"label", 

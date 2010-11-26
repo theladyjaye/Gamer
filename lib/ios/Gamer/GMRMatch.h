@@ -12,18 +12,19 @@
 @class GMRGame;
 @interface GMRMatch : NSObject 
 {
-	GMRPlatform platform;
 	GMRGame  * game;
-	NSString * availability;
-	NSInteger players;
-	NSString * time;
+	NSDate * time;
 	NSString * description;
 	
+	GMRPlatform platform;
+	GMRMatchAvailablilty availability;
+	NSInteger players;	
 }
-@property(nonatomic) GMRPlatform platform;
 @property(nonatomic, retain) GMRGame * game;
-@property(nonatomic, retain) NSString * availability;
-@property(nonatomic, assign) NSInteger players;
-@property(nonatomic, retain) NSString * time;
+@property(nonatomic, retain) NSDate * time;
 @property(nonatomic, retain) NSString * description;
+@property(nonatomic, assign) GMRPlatform platform;
+@property(nonatomic, assign) GMRMatchAvailablilty availability;
+@property(nonatomic, assign) NSInteger players;
+
 @end

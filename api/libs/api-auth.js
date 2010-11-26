@@ -16,7 +16,6 @@ exports.access = function (req, res, next)
 			if(err == null)
 			{
 				req.form = {"fields":fields, "files":files};
-				
 				authorizeAction(req, next);
 			}
 			else
@@ -44,23 +43,46 @@ function authorizeAction(req, next)
 		*/
 		// the whole API requires authorization. except when you are authorizing
 		// uncomment this line if you want to debug without a token present.
-		// next({"ok":false, "message":Errors.unauthorized_client.message});
-		next();
+		next({"ok":false, "message":"no token present: " + Errors.unauthorized_client.message});
+		//next();
 	}
 }
 
 function hydrateToken(req, next)
 {
 	var token = req.headers.authorization.split(' ')[1];
-	
 	var TokenAuthenticate = require('../data/queries/TokenAuthenticate');
 	var authenticate = new TokenAuthenticate(token);
-	
+	handleHydrationQuery(authenticate, req, next);
+	/*
 	authenticate.execute(function(err, rows, fields)
 	{
 		if(err == null && rows.length > 0)
 		{
-			var access_token = {"user":rows[0].username, "aliases":[]}
+			var access_token = {"user":null, "aliases":[]}
+			// this is the system user, it has full privlidges, so lets turn it into the user it wants to be
+			
+			if(rows[0].username == "system")
+			{
+				if(typeof req.form.username != "undefined")
+				{
+					var UsernameAuthenticate = require('../data/queries/UsernameAuthenticate');
+					var  uAuthenticate = new UsernameAuthenticate(req.form.username);
+					uAuthenticate.execute(function(err, rows, fields)
+					{
+						
+					}
+				}
+				else
+				{
+					next({"ok":false, "message":Errors.unauthorized_client.message});
+				}
+			}
+			else
+			{
+				access_token.user = rows[0].username;
+			}
+			
 			
 			rows.forEach(function(row)
 			{
@@ -69,6 +91,50 @@ function hydrateToken(req, next)
 			
 			req.access_token = access_token;
 			next();
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unauthorized_client.message});
+		}
+	});*/
+}
+
+function handleHydrationQuery(query, req, next)
+{
+	query.execute(function(err, rows, fields)
+	{
+		if(err == null && rows.length > 0)
+		{
+			
+			// this is the system user, it has full privlidges, 
+			// so lets turn it into the user it wants to be
+			if(rows[0].username == "system")
+			{
+				if(typeof req.headers["x-masquerade-as"] != "undefined")
+				{
+					var UsernameAuthenticate = require('../data/queries/UsernameAuthenticate');
+					
+					handleHydrationQuery(new UsernameAuthenticate(req.headers["x-masquerade-as"]), req, next);
+				}
+				else
+				{
+					next({"ok":false, "message":Errors.unauthorized_client.message});
+					return;
+				}
+			}
+			else
+			{
+				var access_token = {"user":null, "aliases":[]}
+				access_token.user = rows[0].username;
+				
+				rows.forEach(function(row)
+				{
+					access_token.aliases.push({"platform": row.platform,"alias":row.alias})
+				});
+				
+				req.access_token = access_token;
+				next();
+			}
 		}
 		else
 		{
@@ -83,7 +149,7 @@ exports.userIsAuthorized = function(username, token)
 {
 	result = false;
 	
-	if(token.user == "system" || token.user == username)
+	if(token.user == username)
 		result = true;
 	
 	return result;

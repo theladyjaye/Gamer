@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GMRCreateGameSheet.h"
+#import "GMRTypes.h"
 
 @class GMRMenuButton;
 @interface GMRChooseAvailability : GMRCreateGameSheet {
@@ -19,5 +20,5 @@
 @property(nonatomic, retain) IBOutlet GMRMenuButton * availabilityPrivate;
 
 - (IBAction)selectAvailabilityAction:(id)sender;
-- (void)selectAvailability:(NSString *)value;
+- (void)selectAvailability:(GMRMatchAvailablilty)value;
 @end

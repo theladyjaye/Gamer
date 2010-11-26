@@ -1,7 +1,9 @@
 <?php
 session_start();
 require 'GMRClient.php';
-$client = new GMRClient('a35dec05633be98c00ebc27a46f54365');
+$aventurella = new GMRClient('a35dec05633be98c00ebc27a46f54365', 'aventurella');
+$bpuglisi    = new GMRClient('a35dec05633be98c00ebc27a46f54365', 'bpuglisi');
+$client      = new GMRClient('a35dec05633be98c00ebc27a46f54365');
 ?>
 
 <h2>Create New Match, Owned By: <span style="color:#00cc00">aventurella</span></h2>
@@ -10,7 +12,7 @@ $client = new GMRClient('a35dec05633be98c00ebc27a46f54365');
 
 $date = new DateTime('now');
 $players = array('psyduck', 'robofish'); // robofish is an invalid username, just testing to make sure it is not included.
-$created_match_id =  $client->matchCreate('aventurella', $date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, $players, 'extra information - optional');
+$created_match_id =  $aventurella->matchCreate($date, 'halo-reach', GMRPlatform::kXbox360, 'private', 4, $players, 'extra information - optional');
 echo $created_match_id;
 ?>
 </pre>
@@ -20,7 +22,7 @@ echo $created_match_id;
 <h2><span style="color:#00cc00">bpuglisi</span> Join Match <?php echo $created_match_id ?></h2>
 <pre>
 <?php
-	$result =  $client->matchJoin('bpuglisi', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	$result =  $bpuglisi->matchJoin(GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
 	echo $result ? 'Success' : 'Failed';
 ?>
 </pre>
@@ -30,7 +32,7 @@ echo $created_match_id;
 <h2><span style="color:#00cc00">bpuglisi</span> Leave Match <?php echo $created_match_id ?></h2>
 <pre>
 <?php
-	$result =  $client->matchLeave('bpuglisi', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	$result =  $bpuglisi->matchLeave(GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
 	echo $result ? 'Success' : 'Failed';
 ?>
 </pre>
@@ -40,7 +42,7 @@ echo $created_match_id;
 <h2><span style="color:#00cc00">aventurella</span> Leave Match <?php echo $created_match_id ?> (should remove the match all together)</h2>
 <pre>
 <?php
-	$result =  $client->matchLeave('aventurella', GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
+	$result =  $aventurella->matchLeave(GMRPlatform::kXbox360, 'halo-reach', $created_match_id);
 	echo $result ? 'Success' : 'Failed';
 ?>
 </pre>
@@ -49,7 +51,7 @@ echo $created_match_id;
 
 <h2>Schedules Matched for bpuglisi</h2>
 <pre>
-	<?php print_r($client->matchesForUser('bpuglisi')); ?>
+	<?php print_r($bpuglisi->matchesForUser()); ?>
 </pre>
 
 <hr>

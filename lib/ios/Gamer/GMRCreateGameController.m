@@ -15,6 +15,14 @@
 
 #import "NSDate+JSON.h"
 
+#import "GMRForm.h"
+#import "GMRNotNilValidator.h"
+#import "GMRPlatformValidator.h"
+#import "GMRPredicateValidator.h"
+#import "GMRInputValidator.h"
+
+#import "GMRGlobals.h"
+#import "GMRClient.h"
 
 GMRMatch * kCreateMatchProgress = nil;
 
@@ -85,17 +93,6 @@ GMRMatch * kCreateMatchProgress = nil;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	static enum{
-		Invalid           = 0,
-		ValidPlatform     = 1 << 0,
-		ValidGameTitle    = 1 << 1,
-		ValidGameId       = 1 << 2,
-		ValidGameMode     = 1 << 3,
-		ValidAvailability = 1 << 4,
-		ValidPlayers      = 1 << 5,
-		ValidTime         = 1 << 6,
-	};
-	static int formProgress = Invalid;
 	
 	//NSLog(@"%@ : %i - %i", [change objectForKey:NSKeyValueChangeKindKey], [[change objectForKey:NSKeyValueChangeKindKey] intValue], NSKeyValueChangeSetting);
 	
@@ -136,14 +133,15 @@ GMRMatch * kCreateMatchProgress = nil;
 				
 				if(self.platform.selected == NO)
 				{
-					formProgress = formProgress | ValidPlatform;
 					self.platform.selected  = YES;
 				}
 				
 				self.platform.label.text = displayString;
 				
 				if(kCreateMatchProgress.game)
+				{
 					kCreateMatchProgress.game = nil;
+				}
 				
 			}
 		}
@@ -160,13 +158,13 @@ GMRMatch * kCreateMatchProgress = nil;
 					
 					self.players.selected   = NO;
 					self.players.label.text = @"Players";
+					
 					kCreateMatchProgress.players = 0;
 				}
 				else 
 				{
 					if(self.gameAndMode.selected == NO)
 					{
-						formProgress = formProgress | ValidGameTitle;
 						self.gameAndMode.selected   = YES;
 						self.gameAndMode.label.text = kCreateMatchProgress.game.label;
 					}
@@ -177,31 +175,27 @@ GMRMatch * kCreateMatchProgress = nil;
 		{
 			if(kCreateMatchProgress.game.selectedMode > -1)
 			{
-				formProgress = formProgress | ValidGameMode;
 				self.gameAndMode.altLabel.text = [kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode];
 			}
 		}
 		else if([keyPath isEqualToString:@"availability"])
 		{
-			if(![[change objectForKey:NSKeyValueChangeNewKey] isEqualToString:[change objectForKey:NSKeyValueChangeOldKey]])
+			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
 			{
-				formProgress = formProgress | ValidAvailability;
 				self.availability.selected   = YES;
-				self.availability.label.text = [[change objectForKey:NSKeyValueChangeNewKey] isEqualToString:@"public"] ? @"Public" : @"Private";
+				self.availability.label.text = [[change objectForKey:NSKeyValueChangeNewKey] intValue] == GMRMatchAvailabliltyPublic ? @"Public" : @"Private";
 			}	
 		}
 		else if([keyPath isEqualToString:@"players"])
 		{
 			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
 			{
-				formProgress = formProgress | ValidPlayers;
 				self.players.selected   = YES;
 				self.players.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.players];
 			}
 		}
 		else if([keyPath isEqualToString:@"time"])
 		{
-			formProgress = formProgress | ValidTime;
 			self.time.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
 			self.time.selected = YES;
 		}
@@ -224,8 +218,72 @@ GMRMatch * kCreateMatchProgress = nil;
 
 - (void)saveMatch
 {
-	NSLog(@"Saving!");
-	[self dismissModalViewController];
+
+	
+	GMRForm * form = [[GMRForm alloc] initWithContext:kCreateMatchProgress];
+	
+	[form addValidator:[GMRPlatformValidator validatorWithKeyPath:@"platform" 
+												      requirement:GMRValidatorRequirementRequired 
+													      message:@"Invalid Platform"]];
+
+	[form addValidator:[GMRNotNilValidator validatorWithKeyPath:@"game" 
+												    requirement:GMRValidatorRequirementRequired 
+													    message:@"Invalid Game"]];
+	
+	
+	[form addValidator:[GMRPredicateValidator validatorWithPredicate:[NSPredicate predicateWithFormat:@"game.selectedMode > -1"]
+												         requirement:GMRValidatorRequirementRequired 
+												  	         message:@"Invalid Game Mode"]];
+	
+	[form addValidator:[GMRPredicateValidator validatorWithPredicate:[NSPredicate predicateWithFormat:@"players > 0 AND players <= game.maxPlayers"]
+												         requirement:GMRValidatorRequirementRequired 
+												  	         message:@"Invalid Players"]];
+	
+	[form addValidator:[GMRPredicateValidator validatorWithPredicate:[NSPredicate predicateWithFormat:@"availability == %i OR availability == %i", GMRMatchAvailabliltyPublic, GMRMatchAvailabliltyPrivate]
+												         requirement:GMRValidatorRequirementRequired 
+												  	         message:@"Invalid Availability"]];
+	
+	[form addValidator:[GMRNotNilValidator validatorWithKeyPath:@"time" 
+												    requirement:GMRValidatorRequirementRequired 
+													    message:@"Invalid Time"]];	
+	
+	[form addValidator:[GMRInputValidator validatorWithKeyPath:@"description"
+												    requirement:GMRValidatorRequirementRequired 
+													  minLength:4
+													  maxLength:0
+													    message:@"Invalid Time"]];	
+	
+	if(form.ok)
+	{
+		[kGamerApi matchCreate:kCreateMatchProgress.time 
+						gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
+					  gameMode:[[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode] lowercaseString]
+					  platform:kCreateMatchProgress.platform 
+				  availability:kCreateMatchProgress.availability 
+					maxPlayers:kCreateMatchProgress.players 
+				invitedPlayers:nil 
+						 label:kCreateMatchProgress.description 
+				  withCallback:^(BOOL ok, NSDictionary * response)
+							  {
+								  NSLog(@"%@", response);
+							  }];
+	}
+	else 
+	{
+		NSLog(@"%@", form.errors);
+	}
+
+	/*if([self matchIsValid:kCreateMatchProgress])
+	{
+	
+	}
+	else 
+	{
+			
+	}*/
+
+	
+	//[self dismissModalViewController];
 }
 
 

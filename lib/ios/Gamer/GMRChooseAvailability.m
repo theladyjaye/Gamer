@@ -10,6 +10,7 @@
 #import "GMRCreateGameGlobals.h"
 #import "GMRMatch.h"
 #import "GMRMenuButton.h"
+#import "GMRTypes.h"
 
 @implementation GMRChooseAvailability
 @synthesize availabilityPublic, availabilityPrivate;
@@ -18,7 +19,7 @@
 {
     self.navigationItem.title = @"Availability";
 	
-	if(kCreateMatchProgress.availability)
+	if(kCreateMatchProgress.availability != GMRMatchAvailabliltyUnknown)
 	{
 		[self selectAvailability:kCreateMatchProgress.availability];
 	}
@@ -31,33 +32,38 @@
 {
 	if(sender != selectedAvailability)
 	{
-		if(sender == availabilityPublic)
-			
-		{
-			kCreateMatchProgress.availability = @"public";
-		}
-		else if(sender == availabilityPrivate)
-		{
-			kCreateMatchProgress.availability = @"private";
-		}
+		NSInteger tag = [sender tag];
 		
+		switch(tag)
+		{
+			case 0: // Public
+				kCreateMatchProgress.availability = GMRMatchAvailabliltyPublic;
+				break;
+			
+			case 1: // Private
+				kCreateMatchProgress.availability = GMRMatchAvailabliltyPrivate;
+				break;
+		}
 		
 		[self selectAvailability:kCreateMatchProgress.availability];
 	}
 }
 
-- (void)selectAvailability:(NSString *)value
+- (void)selectAvailability:(GMRMatchAvailablilty)value
 {
 	GMRMenuButton * target;
 	
-	if([value isEqualToString:@"public"])
+	switch(value)
 	{
-		target = self.availabilityPublic;
-	}
-	else 
-	{
-		target = self.availabilityPrivate;	
-	}
+		case GMRMatchAvailabliltyPublic:
+			target = self.availabilityPublic;
+			break;
+		
+		case GMRMatchAvailabliltyPrivate:
+			target = self.availabilityPrivate;	
+			break;
+			
+	}	
 	
 	if(selectedAvailability != target)
 	{

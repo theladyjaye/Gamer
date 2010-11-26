@@ -7,8 +7,9 @@
 //
 
 enum{
+	GMRMatchAvailabliltyUnknown,
 	GMRMatchAvailabliltyPublic,
-	GMRMatchAvailabliltyPrivate,
+	GMRMatchAvailabliltyPrivate
 };
 typedef NSUInteger GMRMatchAvailablilty;
 
