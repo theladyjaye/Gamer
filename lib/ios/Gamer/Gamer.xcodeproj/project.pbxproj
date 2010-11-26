@@ -65,6 +65,7 @@
 		D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */; };
 		D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */; };
 		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
+		D72C7B8712A010FC00580653 /* GMRCreateGameController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7B8612A010FC00580653 /* GMRCreateGameController+Navigation.m */; };
 		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
 		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
 		D742353E129D668000EA0272 /* GMRChooseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */; };
@@ -335,6 +336,8 @@
 		D727C3341287D163001F2BAF /* GMRAuthenticationInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationInputController.h; sourceTree = "<group>"; };
 		D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationInputController.m; sourceTree = "<group>"; };
 		D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationInputController.xib; sourceTree = "<group>"; };
+		D72C7B8512A010FC00580653 /* GMRCreateGameController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRCreateGameController+Navigation.h"; sourceTree = "<group>"; };
+		D72C7B8612A010FC00580653 /* GMRCreateGameController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRCreateGameController+Navigation.m"; sourceTree = "<group>"; };
 		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
 		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
 		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
@@ -742,6 +745,8 @@
 				D75012DE1298CE860079EB44 /* GMRCreateGameController.h */,
 				D75012DF1298CE860079EB44 /* GMRCreateGameController.m */,
 				D75012E01298CE860079EB44 /* GMRCreateGameController.xib */,
+				D72C7B8512A010FC00580653 /* GMRCreateGameController+Navigation.h */,
+				D72C7B8612A010FC00580653 /* GMRCreateGameController+Navigation.m */,
 			);
 			name = CreateGameMenu;
 			sourceTree = "<group>";
@@ -1479,6 +1484,7 @@
 				D7423662129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m in Sources */,
 				D7423697129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m in Sources */,
 				D74237EB129F6A4F00EA0272 /* GMRGame.m in Sources */,
+				D72C7B8712A010FC00580653 /* GMRCreateGameController+Navigation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

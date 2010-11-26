@@ -25,11 +25,5 @@
 @property(nonatomic, retain) IBOutlet GMRMenuButton * time;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * description;
 
-- (IBAction)selectPlatform;
-- (IBAction)selectGameAndMode;
-- (IBAction)selectAvailability;
-- (IBAction)selectPlayers;
-- (IBAction)selectTime;
-- (IBAction)selectDescription;
 
 @end

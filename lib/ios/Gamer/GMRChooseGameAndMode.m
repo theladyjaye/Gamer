@@ -14,7 +14,7 @@
 #import "GMRCreateGameGlobals.h"
 
 @implementation GMRChooseGameAndMode
-@synthesize gameLabel, modeLabel;
+@synthesize gameLabel, modeLabel, modesView, modesTableView;
 
 - (void)viewDidLoad 
 {
@@ -23,6 +23,7 @@
 	if(kCreateMatchProgress.game)	
 	{
 		gameLabel.text = kCreateMatchProgress.game.label;
+		modesView.hidden = NO;
 		
 		if(kCreateMatchProgress.game.selectedMode > -1)
 		{
@@ -40,7 +41,17 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	NSLog(@"GAME SELECTED!");
+	if([kCreateMatchProgress.game.modes count] > 0)
+	{
+		modesView.hidden = NO;
+		
+		[modesTableView reloadData];
+		
+		if([kCreateMatchProgress.game.modes count] < 7)
+		{
+			modesTableView.scrollEnabled = NO;
+		}
+	}
 }
 
 
@@ -65,6 +76,8 @@
     // e.g. self.myOutlet = nil;
 	self.gameLabel = nil;
 	self.modeLabel = nil;
+	self.modesView = nil;
+	self.modesTableView = nil;
 }
 
 
@@ -72,7 +85,6 @@
 {
     [kCreateMatchProgress removeObserver:self 
 							  forKeyPath:@"game"];
-
 	[games release];
 	[super dealloc];
 }

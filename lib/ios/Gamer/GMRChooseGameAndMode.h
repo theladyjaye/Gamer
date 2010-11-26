@@ -13,8 +13,12 @@
 	NSArray * games;
 	UILabel * gameLabel;
 	UILabel * modeLabel;
+	UIView * modesView;
+	UITableView * modesTableView;
 }
 
 @property(nonatomic, retain)IBOutlet UILabel * gameLabel;
 @property(nonatomic, retain)IBOutlet UILabel * modeLabel;
+@property(nonatomic, retain)IBOutlet UIView * modesView;
+@property(nonatomic, retain)IBOutlet UITableView * modesTableView;
 @end

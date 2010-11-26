@@ -8,6 +8,9 @@
 
 #import "GMRChooseGameAndMode+TableView.h"
 #import "GMRChooseGameAndMode+SearchTableView.h"
+#import "GMRMatch.h"
+#import "GMRGame.h"
+#import "GMRCreateGameGlobals.h"
 
 @implementation GMRChooseGameAndMode(TableView)
 
@@ -30,7 +33,7 @@
 		return [self searchResultsTableView:tableView numberOfRowsInSection:section];
 	
 	// Return the number of rows in the section.
-    return 3;
+    return [kCreateMatchProgress.game.modes count];
 }
 
 
@@ -49,7 +52,7 @@
     }
     
     // Configure the cell...
-    
+	cell.textLabel.text = [kCreateMatchProgress.game.modes objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -106,15 +109,9 @@
 		return;
 	}
 	
-		
-	// Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+	NSString * mode = [kCreateMatchProgress.game.modes objectAtIndex:indexPath.row];
+	modeLabel.text  = mode;
+	kCreateMatchProgress.game.selectedMode = indexPath.row;		
 }
 
 
