@@ -26,7 +26,7 @@ function searchGamesForPlatform(req, res, next)
 			{
 				if(typeof unique[row.doc._id] == "undefined")
 				{
-					results.push({"id":row.doc._id, "label":row.doc.label});
+					results.push({"id":row.doc._id, "label":row.doc.label, "maxPlayers":row.doc.maxPlayers, "modes":row.doc.modes});
 					unique[row.doc._id] = true;
 				}
 			});

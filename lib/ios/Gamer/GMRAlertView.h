@@ -21,6 +21,7 @@ typedef NSUInteger GMRAlertViewStyle;
 	id<NSObject> delegate;
 	GMRAlertViewStyle style;
 	NSInteger selectedButtonIndex;
+	void (^callback)(GMRAlertView *);
 }
 
 @property(nonatomic, retain) NSString * alertTitle;
@@ -28,6 +29,7 @@ typedef NSUInteger GMRAlertViewStyle;
 @property(nonatomic, readonly) GMRAlertViewStyle style;
 @property(nonatomic, readonly) NSInteger selectedButtonIndex;
 
+- (id)initWithStyle:(GMRAlertViewStyle)alertStyle title:(NSString *)title message:(id)message callback:(void (^)(GMRAlertView *))block;
 - (id)initWithStyle:(GMRAlertViewStyle)alertStyle title:(NSString *)title message:(id)message delegate:(id<NSObject>)del;
 - (id)initWithTitle:(NSString *)title message:(id)message delegate:(id<NSObject>)del;
 - (void)show;

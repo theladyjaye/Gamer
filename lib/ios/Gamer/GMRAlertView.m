@@ -17,6 +17,21 @@
 @implementation GMRAlertView
 @synthesize alertTitle, alertMessage, style, selectedButtonIndex;
 
+- (id)initWithStyle:(GMRAlertViewStyle)alertStyle title:(NSString *)title message:(id)message callback:(void (^)(GMRAlertView *))block
+{
+	self = [super init];
+	
+	if(self)
+	{
+		style             = alertStyle;
+		self.alertTitle   = title;
+		self.alertMessage = message;
+		callback          = [block copy];
+	}
+	
+	return self;
+}
+
 - (id)initWithStyle:(GMRAlertViewStyle)alertStyle title:(NSString *)title message:(id)message delegate:(id<NSObject>)del
 {
 	self = [super init];
@@ -89,6 +104,12 @@
 	
 	selectedButtonIndex = buttonIndex;
 	
+	if(callback)
+	{
+		callback(self);
+		return;
+	}
+	
 	if(delegate && [delegate respondsToSelector:@selector(alertViewDidDismiss:)])
 		[delegate performSelector:@selector(alertViewDidDismiss:) withObject:self];
 }
@@ -133,10 +154,12 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
     self.alertTitle   = nil;
 	self.alertMessage = nil;
-		
+	[callback release];
+	callback = nil;
 	[super dealloc];
 }
 

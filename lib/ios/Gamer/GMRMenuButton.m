@@ -46,13 +46,15 @@
 {
 	BOOL needsBackgroundImageUpdate;
 	
-	if(self.selected == NO && value)
+	if((self.selected == NO && value) || (self.selected == YES && !value))
 		needsBackgroundImageUpdate = YES;
 	
 	[super setSelected:value];
 	
 	if(needsBackgroundImageUpdate)
-		self.backgroundImage.image = [self backgroundImageForState:UIControlStateSelected];
+	{
+		self.backgroundImage.image = value ? [self backgroundImageForState:UIControlStateSelected] : [self backgroundImageForState:UIControlStateNormal];
+	}
 	
 	if(self.accessoryImage)
 	{

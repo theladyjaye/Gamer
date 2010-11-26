@@ -9,6 +9,7 @@
 #import "GMRChoosePlayers.h"
 #import "GMRCreateGameGlobals.h"
 #import "GMRMatch.h"
+#import "GMRGame.h"
 
 @implementation GMRChoosePlayers
 @synthesize label, pickerView;
@@ -43,7 +44,7 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-	return 64;
+	return kCreateMatchProgress.game.maxPlayers;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component

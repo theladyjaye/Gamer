@@ -12,7 +12,7 @@
 #import "GMRCreateGameGlobals.h"
 #import "GMRMenuButton.h"
 @implementation GMRChoosePlatformController
-@synthesize platformBattleNet, platformPlaystation2, platformPlaystation3, platformWii, platformXBox360;
+@synthesize platformBattleNet, platformPlaystation2, platformPlaystation3, platformSteam, platformWii, platformXBox360;
 
 - (void)viewDidLoad 
 {
@@ -41,6 +41,10 @@
 		else if(sender == platformPlaystation3)
 		{
 			kCreateMatchProgress.platform = GMRPlatformPlaystation3;
+		}
+		else if(sender == platformSteam)
+		{
+			kCreateMatchProgress.platform = GMRPlatformSteam;
 		}
 		else if(sender == platformWii)
 		{
@@ -72,6 +76,10 @@
 		
 		case GMRPlatformPlaystation3:
 			target = self.platformPlaystation3;
+			break;
+			
+		case GMRPlatformSteam:
+			target = self.platformSteam;
 			break;
 		
 		case GMRPlatformWii:
@@ -122,6 +130,7 @@
 	self.platformBattleNet = nil;
 	self.platformPlaystation2 = nil;
 	self.platformPlaystation3 = nil;
+	self.platformSteam = nil;
 	self.platformWii = nil;
 	self.platformXBox360 = nil;
     [super dealloc];

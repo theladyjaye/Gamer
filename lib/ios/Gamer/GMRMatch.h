@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "GMRTypes.h"
 
+@class GMRGame;
 @interface GMRMatch : NSObject 
 {
 	GMRPlatform platform;
-	NSString * gameId;
-	NSString * gameTitle;
-	NSString * gameMode;
+	GMRGame  * game;
 	NSString * availability;
 	NSInteger players;
 	NSString * time;
@@ -22,9 +21,7 @@
 	
 }
 @property(nonatomic) GMRPlatform platform;
-@property(nonatomic, retain) NSString * gameId;
-@property(nonatomic, retain) NSString * gameTitle;
-@property(nonatomic, retain) NSString * gameMode;
+@property(nonatomic, retain) GMRGame * game;
 @property(nonatomic, retain) NSString * availability;
 @property(nonatomic, assign) NSInteger players;
 @property(nonatomic, retain) NSString * time;

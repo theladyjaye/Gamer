@@ -7,16 +7,14 @@
 //
 
 #import "GMRMatch.h"
-
+#import "GMRGame.h"
 
 @implementation GMRMatch
-@synthesize platform, gameId, gameTitle, gameMode, availability, players, time, description;
+@synthesize platform, game, availability, players, time, description;
 
 - (void)dealloc
 {
-	self.gameId       = nil;
-	self.gameTitle    = nil;
-	self.gameMode     = nil;
+	self.game         = nil;
 	self.availability = nil;
 	self.time         = nil;
 	self.description  = nil;

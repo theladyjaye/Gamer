@@ -10,7 +10,11 @@
 #import "GMRCreateGameSheet.h"
 
 @interface GMRChooseGameAndMode : GMRCreateGameSheet {
-
+	NSArray * games;
+	UILabel * gameLabel;
+	UILabel * modeLabel;
 }
 
+@property(nonatomic, retain)IBOutlet UILabel * gameLabel;
+@property(nonatomic, retain)IBOutlet UILabel * modeLabel;
 @end

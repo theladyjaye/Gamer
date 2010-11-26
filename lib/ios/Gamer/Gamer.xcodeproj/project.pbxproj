@@ -67,6 +67,11 @@
 		D727C3381287D163001F2BAF /* GMRAuthenticationInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3361287D163001F2BAF /* GMRAuthenticationInputController.xib */; };
 		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
 		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
+		D742353E129D668000EA0272 /* GMRChooseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */; };
+		D742353F129D668000EA0272 /* GMRChooseDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = D742353D129D668000EA0272 /* GMRChooseDescription.xib */; };
+		D7423662129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7423661129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m */; };
+		D7423697129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7423696129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m */; };
+		D74237EB129F6A4F00EA0272 /* GMRGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D74237EA129F6A4F00EA0272 /* GMRGame.m */; };
 		D746BFBE12984E61003ADC09 /* GMRPlatformBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */; };
 		D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = D747507F1290315100342AD1 /* MatchListCellBottom.png */; };
 		D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750801290315100342AD1 /* MatchListCellBottom@2x.png */; };
@@ -333,6 +338,15 @@
 		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
 		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
 		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
+		D742353B129D668000EA0272 /* GMRChooseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseDescription.h; sourceTree = "<group>"; };
+		D742353C129D668000EA0272 /* GMRChooseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseDescription.m; sourceTree = "<group>"; };
+		D742353D129D668000EA0272 /* GMRChooseDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseDescription.xib; sourceTree = "<group>"; };
+		D7423660129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRChooseGameAndMode+TableView.h"; sourceTree = "<group>"; };
+		D7423661129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRChooseGameAndMode+TableView.m"; sourceTree = "<group>"; };
+		D7423695129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRChooseGameAndMode+SearchTableView.h"; sourceTree = "<group>"; };
+		D7423696129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRChooseGameAndMode+SearchTableView.m"; sourceTree = "<group>"; };
+		D74237E9129F6A4F00EA0272 /* GMRGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGame.h; sourceTree = "<group>"; };
+		D74237EA129F6A4F00EA0272 /* GMRGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGame.m; sourceTree = "<group>"; };
 		D746BFBC12984E61003ADC09 /* GMRPlatformBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlatformBanner.h; sourceTree = "<group>"; };
 		D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlatformBanner.m; sourceTree = "<group>"; };
 		D747507F1290315100342AD1 /* MatchListCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottom.png; sourceTree = "<group>"; };
@@ -635,6 +649,10 @@
 				D709BF06129A26AD0057EA4B /* GMRChooseGameAndMode.h */,
 				D709BF07129A26AD0057EA4B /* GMRChooseGameAndMode.m */,
 				D709BF08129A26AD0057EA4B /* GMRChooseGameAndMode.xib */,
+				D7423660129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.h */,
+				D7423661129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m */,
+				D7423695129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.h */,
+				D7423696129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m */,
 			);
 			name = ChooseGameAndMode;
 			sourceTree = "<group>";
@@ -662,6 +680,9 @@
 		D709BF42129A2B600057EA4B /* ChooseDescription */ = {
 			isa = PBXGroup;
 			children = (
+				D742353B129D668000EA0272 /* GMRChooseDescription.h */,
+				D742353C129D668000EA0272 /* GMRChooseDescription.m */,
+				D742353D129D668000EA0272 /* GMRChooseDescription.xib */,
 			);
 			name = ChooseDescription;
 			sourceTree = "<group>";
@@ -1083,6 +1104,8 @@
 				D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */,
 				D709BE201299BFBD0057EA4B /* GMRMatch.h */,
 				D709BE211299BFBD0057EA4B /* GMRMatch.m */,
+				D74237E9129F6A4F00EA0272 /* GMRGame.h */,
+				D74237EA129F6A4F00EA0272 /* GMRGame.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1375,6 +1398,7 @@
 				D709BF81129A30DE0057EA4B /* GMRChoosePlayers.xib in Resources */,
 				D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */,
 				D714A126129C0B3400151FC9 /* GMRChooseDateTime.xib in Resources */,
+				D742353F129D668000EA0272 /* GMRChooseDescription.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1451,6 +1475,10 @@
 				D709BF47129A2B810057EA4B /* GMRChooseAvailability.m in Sources */,
 				D709BF80129A30DE0057EA4B /* GMRChoosePlayers.m in Sources */,
 				D714A125129C0B3400151FC9 /* GMRChooseDateTime.m in Sources */,
+				D742353E129D668000EA0272 /* GMRChooseDescription.m in Sources */,
+				D7423662129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m in Sources */,
+				D7423697129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m in Sources */,
+				D74237EB129F6A4F00EA0272 /* GMRGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

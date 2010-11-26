@@ -16,6 +16,7 @@
 	GMRMenuButton * platformBattleNet;
 	GMRMenuButton * platformPlaystation2;
 	GMRMenuButton * platformPlaystation3;
+	GMRMenuButton * platformSteam;
 	GMRMenuButton * platformWii;
 	GMRMenuButton * platformXBox360;
 }
@@ -23,6 +24,7 @@
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformBattleNet;
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformPlaystation2;
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformPlaystation3;
+@property (nonatomic, retain) IBOutlet GMRMenuButton * platformSteam;
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformWii;
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformXBox360;
 

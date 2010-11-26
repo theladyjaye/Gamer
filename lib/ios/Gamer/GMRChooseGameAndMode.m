@@ -7,14 +7,40 @@
 //
 
 #import "GMRChooseGameAndMode.h"
-
+#import "GMRChooseGameAndMode+TableView.h"
+#import "GMRChooseGameAndMode+SearchTableView.h"
+#import "GMRGame.h"
+#import "GMRMatch.h"
+#import "GMRCreateGameGlobals.h"
 
 @implementation GMRChooseGameAndMode
+@synthesize gameLabel, modeLabel;
 
 - (void)viewDidLoad 
 {
     self.navigationItem.title = @"Game and Mode";
+	
+	if(kCreateMatchProgress.game)	
+	{
+		gameLabel.text = kCreateMatchProgress.game.label;
+		
+		if(kCreateMatchProgress.game.selectedMode > -1)
+		{
+			modeLabel.text = [kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode];
+		}
+	}
+	
+	[kCreateMatchProgress addObserver:self 
+						   forKeyPath:@"game" 
+							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+							  context:nil];
+	
 	[super viewDidLoad];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	NSLog(@"GAME SELECTED!");
 }
 
 
@@ -37,11 +63,18 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.gameLabel = nil;
+	self.modeLabel = nil;
 }
 
 
-- (void)dealloc {
-    [super dealloc];
+- (void)dealloc 
+{
+    [kCreateMatchProgress removeObserver:self 
+							  forKeyPath:@"game"];
+
+	[games release];
+	[super dealloc];
 }
 
 

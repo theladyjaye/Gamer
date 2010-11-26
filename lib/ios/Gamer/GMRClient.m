@@ -25,6 +25,7 @@ static NSArray * platformStrings;
 					                            @"playstation2",
 					                            @"pc",
 					                            @"battlenet",
+					                            @"steam",
 												nil];
 	[platformStrings retain];
 }
