@@ -299,77 +299,74 @@ function createMatch(req, res, next)
 					    match.game.label     = game.label;
 						match.game.platform  = platform;
 						match.availability   = fields.availability == "private" ? "private" : "public";
-						match.maxPlayers     = fields.maxPlayers <= game.maxPlayers ? fields.maxPlayers : game.maxPlayers;
+						match.maxPlayers     = fields.maxPlayers <= game.maxPlayers ? parseInt(fields.maxPlayers) : game.maxPlayers;
 						match.mode           = fields.mode;
 						match.scheduled_time = new Date(fields.scheduled_time); 
 						//match.players        = [match.created_by];
 						
 						// make sure the user creating this game has linked their platform alias for this game's platform
-						var alias = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == match.game.platform) return element; } );
+					var alias = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == match.game.platform) return element; } );
 						
-						if(alias.length == 1)
+					if(alias.length == 1)
+					{
+						var firstPlayer            = new Player();
+						firstPlayer.username       = req.access_token.user;
+						firstPlayer.alias          = alias[0].alias;
+						firstPlayer.scheduled_time = match.scheduled_time;
+						
+						/*
+							TODO: We might also consider doing some checking to see if this match conflicts 
+							with another game the firstPlayer/creator is already in.
+						*/
+
+						var players = null;
+
+						if(typeof fields.players != "undefined" && typeof fields.players == "object")
 						{
-							var creator            = new Player();
-							creator.username       = req.access_token.user;
-							creator.alias          = alias[0].alias;
-							//creator.match          = data.id;
-							creator.scheduled_time = match.scheduled_time;
-							
-							next({"ok":true, "message":"WIL CREATE MATCH WITH ALIASED USER"});
-							return;
+							players = [];
+
+							for (key in fields.players)
+								players.push(fields.players[key]);
+						}
+						else if(Array.isArray(fields.players))
+						{
+							players = fields.players;
+						}
+
+						if(players)
+						{
+							var playersQuery  = new PlayersInArray(players);
+							playersQuery.execute(function(err, rows, fields)
+							{
+								var invitation = {"game":game.label,
+									              "host":match.created_by,
+									              "platform":Platform[platform].label,
+									              "date":match.scheduled_time,
+									              "players":[]
+									              }
+
+								rows.forEach(function(row)
+								{
+									if(row.username != match.created_by)
+									{
+										invitation.players.push(row);
+										//match.players.push(row.username)
+									}
+								});
+
+								finalizeMatch(match, firstPlayer, next, invitation);
+							});
 						}
 						else
 						{
-							next({"ok":false, "message":Errors.unknown_alias.message});
-							return;
+							finalizeMatch(match, firstPlayer, next);
 						}
 						
-					/*
-						TODO: We might also consider doing some checking to see if this match conflicts 
-						with another game the creator is already in.
-					*/
-					
-					var players = null;
-					
-					if(typeof fields.players != "undefined" && typeof fields.players == "object")
-					{
-						players = [];
-						
-						for (key in fields.players)
-							players.push(fields.players[key]);
-					}
-					else if(Array.isArray(fields.players))
-					{
-						players = fields.players;
-					}
-						
-					if(players)
-					{
-						var playersQuery  = new PlayersInArray(players);
-						playersQuery.execute(function(err, rows, fields)
-						{
-							var invitation = {"game":game.label,
-								              "host":match.created_by,
-								              "platform":Platform[platform].label,
-								              "date":match.scheduled_time,
-								              "players":[]
-								              }
-							
-							rows.forEach(function(row)
-							{
-								if(row.username != match.created_by)
-								{
-									invitation.players.push(row);
-									//match.players.push(row.username)
-								}
-							});
-							
-							finalizeMatch(match, next, invitation);
-						});
 					}
 					else
 					{
-						finalizeMatch(match, next);
+						next({"ok":false, "message":Errors.unknown_alias.message});
+						return;
 					}
 				}
 				else
@@ -385,13 +382,16 @@ function createMatch(req, res, next)
 	}
 }
 
-function finalizeMatch(match, next, invitation)
+function finalizeMatch(match, firstPlayer, next, invitation)
 {
 	db.saveDoc(match, function(error, data)
 	{
 		if(error == null)
 		{
 			next({"ok":true, "match":data.id});
+			
+			firstPlayer.match = data.id;
+			db.saveDoc(firstPlayer);
 			
 			if(invitation)
 			{

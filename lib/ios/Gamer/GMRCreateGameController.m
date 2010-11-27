@@ -257,7 +257,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	{
 		[kGamerApi matchCreate:kCreateMatchProgress.time 
 						gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
-					  gameMode:[[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode] lowercaseString]
+					  gameMode:[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode]
 					  platform:kCreateMatchProgress.platform 
 				  availability:kCreateMatchProgress.availability 
 					maxPlayers:kCreateMatchProgress.players 

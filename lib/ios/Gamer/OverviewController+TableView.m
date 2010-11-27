@@ -28,8 +28,11 @@
 		 {
 			 NSLog(@"%@", response);
 			 matches = (NSArray *)[response objectForKey:@"matches"];
-			 [matches retain];
-			 dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
+			 if (matches)
+			 {
+				 [matches retain];
+				 dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
+			 }
 		 }
 		 else {
 			 NSLog(@"%@", response);
@@ -71,7 +74,7 @@
 	 NSDictionary * item = [matches objectAtIndex:indexPath.row];
 	 NSDictionary * game = [item objectForKey:@"game"];
 	 
-	NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
+	 NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
 	 /*NSDate * date = [NSDate dateWithJSONString:scheduled_time];
 	 
 	 NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
@@ -83,6 +86,7 @@
 	 [formatter release];
 	  */
 	 
+	NSLog(@"%@", [[item objectForKey:@"maxPlayers"] class]);
 	 cell.label.text   = (NSString *)[item objectForKey:@"label"];
 	 cell.date.text    = [NSDate gamerScheduleTimeString:scheduled_time];
 	 cell.game.text    = [game objectForKey:@"label"];
