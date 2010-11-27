@@ -23,7 +23,7 @@ GMRClient * kGamerApi = nil;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-	if([self hasAuthenticatedUser])
+	if(YES)//[self hasAuthenticatedUser])
 	{
 		[self initializeApplicationFlow];
 	}
@@ -64,9 +64,9 @@ GMRClient * kGamerApi = nil;
 		authenticationController = nil;
 	}
 	
-	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	[defaults removeObjectForKey:@"token"];
-	[defaults removeObjectForKey:@"username"];
+	//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	//[defaults removeObjectForKey:@"token"];
+	//[defaults removeObjectForKey:@"username"];
 }
 
 
