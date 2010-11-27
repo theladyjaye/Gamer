@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GMRTypes.h"
 
 @interface GMRGame : NSObject {
 	NSString * id;
@@ -15,6 +15,8 @@
 	NSArray  * modes;
 	NSInteger maxPlayers;
 	NSInteger selectedMode;
+	GMRPlatform platform;
+	
 	
 }
 @property(nonatomic, retain) NSString * id;
@@ -22,4 +24,7 @@
 @property(nonatomic, retain) NSArray  * modes;
 @property(nonatomic, assign) NSInteger maxPlayers;
 @property(nonatomic, assign) NSInteger selectedMode;
+@property(nonatomic, assign) GMRPlatform platform;
+
++ (id)gameWithDicitonary:(NSDictionary *)dictionary;
 @end

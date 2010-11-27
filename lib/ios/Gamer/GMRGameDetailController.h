@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "GMRViewController.h"
 
-@class GMRPlatformBanner;
+@class GMRPlatformBanner, GMRMatch;
 @interface GMRGameDetailController : GMRViewController {
-	NSDictionary * match;
+	GMRMatch * match;
 	NSArray * playersForMatch;
 	UITableView * playersTableView;
 	UIButton * actionButton;
@@ -33,7 +33,7 @@
 @property(nonatomic, retain) IBOutlet UILabel * modeLabel;
 @property(nonatomic, retain) IBOutlet UILabel * scheduleTimeLabel;
 
--(id)initWithDictionary:(NSDictionary *)dictionary;
+-(id)initWithMatch:(GMRMatch *)value;
 -(void)shareGame;
 -(void)cancelGame;
 -(void)leaveGame;

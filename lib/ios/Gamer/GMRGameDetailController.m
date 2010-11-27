@@ -15,16 +15,18 @@
 #import "NSDate+JSON.h"
 #import "GMRTypes.h"
 #import "GMRAlertView.h"
+#import "GMRMatch.h"
+#import "GMRGame.h"
 
 @implementation GMRGameDetailController
 @synthesize playersTableView, playersForMatch, platformBanner, gameLabel, descriptionLabel, modeLabel, scheduleTimeLabel;
 
--(id)initWithDictionary:(NSDictionary *)dictionary
+-(id)initWithMatch:(GMRMatch *)value;
 {
 	self = [super initWithNibName:nil bundle:nil];
 	if(self)
 	{
-		match = dictionary;
+		match = value;
 		[match retain];
 	}
 	
@@ -37,20 +39,17 @@
 
 	self.navigationItem.title = @"Details";
 	
-	NSDictionary * gameData = [match objectForKey:@"game"];
-	GMRPlatform platform    = [kGamerApi platformForString:[gameData objectForKey:@"platform"]];
-	
-	platformBanner.platform = platform;
+	platformBanner.platform = match.game.platform;
 	
 	
-	gameLabel.text         = [gameData objectForKey:@"label"];
-	descriptionLabel.text  = [match objectForKey:@"label"];
-	modeLabel.text         = [match objectForKey:@"mode"];
-	scheduleTimeLabel.text = [NSDate gamerScheduleTimeString:[match objectForKey:@"scheduled_time"]];
+	gameLabel.text         = match.game.label;
+	descriptionLabel.text  = match.label;
+	modeLabel.text         = match.mode;
+	scheduleTimeLabel.text = [NSDate gamerScheduleTimeString:match.scheduled_time];
 	
 	NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
 	
-	if ([[match objectForKey:@"created_by"] isEqualToString:currentUser]) 
+	if ([match.created_by isEqualToString:currentUser]) 
 	{
 		actionButton = [[GMRButton alloc] initWithStyle:GMRButtonStyleRed 
 												  label:@"Cancel Game" 
@@ -136,23 +135,22 @@
 
 - (void)alertViewDidDismiss:(GMRAlertView *)alertView
 {
-
 	if(alertView.selectedButtonIndex == 1)
 	{
-		 NSDictionary * gameData = [match objectForKey:@"game"];
-		 
-		 GMRPlatform platform = platformBanner.platform;
-		 NSString * gameId    = [[[gameData objectForKey:@"id"] componentsSeparatedByString:@"/"] objectAtIndex:1];
-		 NSString * matchId   = [match objectForKey:@"_id"];
-		 [kGamerApi matchLeave:platform gameId:gameId matchId:matchId withCallback:^(BOOL ok, NSDictionary * response){
-			 dispatch_async(dispatch_get_main_queue(), ^{
+		NSString * gameId    = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
+		
+		 [kGamerApi matchLeave:match.game.platform 
+						gameId:gameId 
+					   matchId:match.id 
+				  withCallback:^(BOOL ok, NSDictionary * response){
+					     dispatch_async(dispatch_get_main_queue(), ^{
 				 
-				 NSUInteger previousIndex              = ([[self.navigationController viewControllers] indexOfObject:self] -1);
-				 UIViewController * previousController = [[self.navigationController viewControllers] objectAtIndex:previousIndex];
+						  NSUInteger previousIndex              = ([[self.navigationController viewControllers] indexOfObject:self] -1);
+						  UIViewController * previousController = [[self.navigationController viewControllers] objectAtIndex:previousIndex];
 				 
-				 [previousController performSelector:@selector(matchesTableRefresh)];
-				 [self.navigationController popViewControllerAnimated:YES];
-			 });
+						  [previousController performSelector:@selector(matchesTableRefresh)];
+						  [self.navigationController popViewControllerAnimated:YES];
+			             });
 		 }];
 	}
 	

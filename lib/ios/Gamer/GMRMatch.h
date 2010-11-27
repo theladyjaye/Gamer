@@ -13,18 +13,28 @@
 @interface GMRMatch : NSObject 
 {
 	GMRGame  * game;
-	NSDate * time;
-	NSString * description;
+	NSString * id;
+	NSDate * scheduled_time;
+	NSString * label;
+	NSString * mode;
+	NSString * created_by;
 	
 	GMRPlatform platform;
 	GMRMatchAvailablilty availability;
 	NSInteger players;	
+	NSInteger maxPlayers;
 }
 @property(nonatomic, retain) GMRGame * game;
-@property(nonatomic, retain) NSDate * time;
-@property(nonatomic, retain) NSString * description;
+@property(nonatomic, retain) NSDate * scheduled_time;
+@property(nonatomic, retain) NSString * id;
+@property(nonatomic, retain) NSString * label;
+@property(nonatomic, retain) NSString * created_by;
+@property(nonatomic, retain) NSString * mode;
 @property(nonatomic, assign) GMRPlatform platform;
 @property(nonatomic, assign) GMRMatchAvailablilty availability;
 @property(nonatomic, assign) NSInteger players;
+@property(nonatomic, assign) NSInteger maxPlayers;
+
++ (id)matchWithDicitonary:(NSDictionary *)dictionary;
 
 @end

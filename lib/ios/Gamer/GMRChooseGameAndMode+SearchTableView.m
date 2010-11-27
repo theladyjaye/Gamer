@@ -99,18 +99,10 @@
 
 - (void)searchResultsTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	
-	GMRGame * selectedGame = [[GMRGame alloc] init];
-	selectedGame.id = [[games objectAtIndex:indexPath.row] objectForKey:@"id"];
-	selectedGame.label = [[games objectAtIndex:indexPath.row] objectForKey:@"label"];
-	selectedGame.maxPlayers = [[[games objectAtIndex:indexPath.row] objectForKey:@"maxPlayers"] intValue];
-	selectedGame.modes = [[games objectAtIndex:indexPath.row] objectForKey:@"modes"];
-	
+	GMRGame * selectedGame = [GMRGame gameWithDicitonary:[games objectAtIndex:indexPath.row]];
 	self.gameLabel.text = selectedGame.label;
 	
 	kCreateMatchProgress.game    = selectedGame;
-	
-	[selectedGame release];
 	
 	[self.searchDisplayController setActive:NO animated:YES];
 }

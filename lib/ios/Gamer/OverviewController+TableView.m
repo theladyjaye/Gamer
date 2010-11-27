@@ -10,6 +10,8 @@
 #import "OverviewController+TableView.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
+#import "GMRMatch.h"
+#import "GMRGame.h"
 #import "NSDate+JSON.h"
 #import "GMRMatchListCell.h"
 #import "GMRGameDetailController.h"
@@ -26,15 +28,40 @@
 	 {
 		 if(ok)
 		 {
-			 NSLog(@"%@", response);
-			 matches = (NSArray *)[response objectForKey:@"matches"];
-			 if (matches)
+			 // NSLog(@"%@", response);
+			 if(matches)
 			 {
-				 [matches retain];
-				 dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
+				 [matches release];
+				 matches = nil;
 			 }
+			 
+			 
+			 NSArray * tempMatches = [response objectForKey:@"matches"];
+			 NSLog(@"Total Matches: %i", [tempMatches count]);
+			 if ([tempMatches count] > 0)
+			 {
+				 matches = [NSMutableArray array];//:(NSArray *)[response objectForKey:@"matches"]];
+				 
+				 NSLog(@"Converting to Model Objects");
+				 
+				 for(NSDictionary * item in tempMatches)
+				 {
+					 GMRMatch * currentMatch = [GMRMatch matchWithDicitonary:item];
+					 [matches addObject:currentMatch];
+				 }
+				
+				 
+				[matches retain];
+				dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
+			 }
+			 else 
+			 {
+				 matches = nil;
+			 }
+
 		 }
-		 else {
+		 else 
+		 {
 			 NSLog(@"%@", response);
 		 }
 
@@ -71,10 +98,11 @@
         //self.tvCell = nil;
     }
     
-	 NSDictionary * item = [matches objectAtIndex:indexPath.row];
-	 NSDictionary * game = [item objectForKey:@"game"];
+	 GMRMatch * item = [matches objectAtIndex:indexPath.row];
+	 //NSDictionary * item = [matches objectAtIndex:indexPath.row];
+	 //NSDictionary * game = [item objectForKey:@"game"];
 	 
-	 NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
+	 //NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
 	 /*NSDate * date = [NSDate dateWithJSONString:scheduled_time];
 	 
 	 NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
@@ -86,12 +114,12 @@
 	 [formatter release];
 	  */
 	 
-	NSLog(@"%@", [[item objectForKey:@"maxPlayers"] class]);
-	 cell.label.text   = (NSString *)[item objectForKey:@"label"];
-	 cell.date.text    = [NSDate gamerScheduleTimeString:scheduled_time];
-	 cell.game.text    = [game objectForKey:@"label"];
-	 cell.players.text = [[item objectForKey:@"maxPlayers"] stringValue];
-	 cell.mode.text    = [item objectForKey:@"mode"];
+	//NSLog(@"%@", [[item objectForKey:@"maxPlayers"] class]);
+	cell.label.text   = item.label;
+	cell.date.text    = [NSDate gamerScheduleTimeString:item.scheduled_time];
+	cell.game.text    = item.game.label;
+	cell.players.text = [NSString stringWithFormat:@"%i", item.maxPlayers];
+	cell.mode.text    = item.mode;
 	
     return cell;
 }
@@ -103,11 +131,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	
-	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithDictionary:[matches objectAtIndex:indexPath.row]];
+	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithMatch:[matches objectAtIndex:indexPath.row]];
 	[self.navigationController pushViewController:detail animated:YES];
-	//[self changeViews:detail withTitle:@"GameDetail"];
 	[detail release];
-	
-	
 }
 @end

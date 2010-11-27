@@ -13,6 +13,8 @@
 #import "GMRClient.h"
 #import "NSDate+JSON.h"
 #import "GMRPlayerListCell.h"
+#import "GMRMatch.h"
+#import "GMRGame.h"
 
 
 enum {
@@ -25,35 +27,16 @@ typedef NSUInteger PlayerListCellStyle;
 @implementation GMRGameDetailController(PlayerList)
 
 - (void)playersTableRefresh
-{
-	/*
-	 {
-		"_id" = e68ce2a591a7500a3551255d2c003d61;
-		"_rev" = "1-97419aefed46cc225edce4bf5a79c01a";
-		availability = public;
-		"created_by" = aventurella;
-		"created_on" = "2010-11-19T15:12:17.447Z";
-		game =             {
-							id = "game/mario-kart";
-							label = "Mario Kart";
-							platform = wii;
-						   };
-		label = "Little Kartage down home style";
-		maxPlayers = 4;
-		mode = Deathmatch;
-		"scheduled_time" = "2010-11-19T21:12:17.000Z";
-		type = match;
-	 }
-	 */
-	
-	NSDictionary * gameData = [match objectForKey:@"game"];
-	GMRPlatform platform    = [kGamerApi platformForString:[gameData objectForKey:@"platform"]];
-	NSString * game = [[[gameData objectForKey:@"id"] componentsSeparatedByString:@"/"] objectAtIndex:1];
+{	
+	GMRPlatform platform    = match.game.platform;
+	NSString * game = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
 	
 	
 	if(platform != GMRPlatformUnknown)
 	{
-		[kGamerApi playersForMatch:platform gameId:game matchId:[match objectForKey:@"_id"] callback:^(BOOL ok, NSDictionary * response)
+		[kGamerApi playersForMatch:platform gameId:game 
+						   matchId:match.id 
+						  callback:^(BOOL ok, NSDictionary * response)
 		 {
 			 /* response :
 			  ok = 1;
@@ -87,7 +70,7 @@ typedef NSUInteger PlayerListCellStyle;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.playersForMatch == nil ? 0 : [[match objectForKey:@"maxPlayers"] intValue];
+    return self.playersForMatch == nil ? 0 : match.maxPlayers;
 }
 
 

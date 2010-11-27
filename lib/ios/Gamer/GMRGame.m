@@ -7,10 +7,18 @@
 //
 
 #import "GMRGame.h"
-
+#import "GMRClient.h"
 
 @implementation GMRGame
-@synthesize id, label, modes, maxPlayers, selectedMode;
+@synthesize id, label, modes, maxPlayers, selectedMode, platform;
+
++ (id)gameWithDicitonary:(NSDictionary *)dictionary
+{
+	GMRGame * game = [[GMRGame alloc] init];
+	[game setValuesForKeysWithDictionary:dictionary];
+	
+	return [game autorelease];
+}
 
 - (id)init
 {
@@ -22,6 +30,14 @@
 	}
 	
 	return self;
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key
+{
+	if([key isEqualToString:@"platform"])
+		self.platform = [GMRClient platformForString:value];
+	else 
+		[super setValue:value forKey:key];
 }
 
 - (void)dealloc

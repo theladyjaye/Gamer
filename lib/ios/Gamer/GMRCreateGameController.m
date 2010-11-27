@@ -78,12 +78,12 @@ GMRMatch * kCreateMatchProgress = nil;
 							  context:nil];
 	
 	[kCreateMatchProgress addObserver:self 
-						   forKeyPath:@"time" 
+						   forKeyPath:@"scheduled_time" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 							  context:nil];
 	
 	[kCreateMatchProgress addObserver:self 
-						   forKeyPath:@"description" 
+						   forKeyPath:@"label" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 							  context:nil];
 	
@@ -194,15 +194,15 @@ GMRMatch * kCreateMatchProgress = nil;
 				self.players.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.players];
 			}
 		}
-		else if([keyPath isEqualToString:@"time"])
+		else if([keyPath isEqualToString:@"scheduled_time"])
 		{
-			self.time.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
+			self.time.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.scheduled_time];
 			self.time.selected = YES;
 		}
-		else if([keyPath isEqualToString:@"description"])
+		else if([keyPath isEqualToString:@"label"])
 		{
 			self.description.selected = YES;
-			self.description.label.text = kCreateMatchProgress.description;
+			self.description.label.text = kCreateMatchProgress.label;
 		}
 	}
 	
@@ -243,11 +243,11 @@ GMRMatch * kCreateMatchProgress = nil;
 												         requirement:GMRValidatorRequirementRequired 
 												  	         message:@"Invalid Availability"]];
 	
-	[form addValidator:[GMRNotNilValidator validatorWithKeyPath:@"time" 
+	[form addValidator:[GMRNotNilValidator validatorWithKeyPath:@"scheduled_time" 
 												    requirement:GMRValidatorRequirementRequired 
 													    message:@"Invalid Time"]];	
 	
-	[form addValidator:[GMRInputValidator validatorWithKeyPath:@"description"
+	[form addValidator:[GMRInputValidator validatorWithKeyPath:@"label"
 												    requirement:GMRValidatorRequirementRequired 
 													  minLength:4
 													  maxLength:0
@@ -255,7 +255,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	if(form.ok)
 	{
-		[kGamerApi matchCreate:kCreateMatchProgress.time 
+		[kGamerApi matchCreate:kCreateMatchProgress.scheduled_time 
 						gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
 					  gameMode:[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode]
 					  platform:kCreateMatchProgress.platform 
@@ -334,10 +334,10 @@ GMRMatch * kCreateMatchProgress = nil;
 							  forKeyPath:@"players"];
 	
 	[kCreateMatchProgress removeObserver:self 
-							  forKeyPath:@"time"];
+							  forKeyPath:@"scheduled_time"];
 	
 	[kCreateMatchProgress removeObserver:self 
-							  forKeyPath:@"description"];
+							  forKeyPath:@"label"];
 
 	
 	[kCreateMatchProgress release];

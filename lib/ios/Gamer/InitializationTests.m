@@ -52,11 +52,11 @@ static NSString * kCreatedMatchId1;
 	
 - (void)testPlatformStrings
 {
-	STAssertTrue(@"xbox360" == [client stringForPlatform:GMRPlatformXBox360], @"GMRPlatformXBox360 does not equal xbox360");
-	STAssertTrue(@"wii" == [client stringForPlatform:GMRPlatformWii], @"GMRPlatformWii does not equal wii");
-	STAssertTrue(@"playstation3" == [client stringForPlatform:GMRPlatformPlaystation3], @"GMRPlatformPlaystation3 does not equal playstation3");
-	STAssertTrue(@"playstation2" == [client stringForPlatform:GMRPlatformPlaystation2], @"GMRPlatformPlaystation2 does not equal playstation2");
-	STAssertTrue(@"pc" == [client stringForPlatform:GMRPlatformPC], @"GMRPlatformPC does not equal pc");
+	STAssertTrue(@"xbox360" == [GMRClient stringForPlatform:GMRPlatformXBox360], @"GMRPlatformXBox360 does not equal xbox360");
+	STAssertTrue(@"wii" == [GMRClient stringForPlatform:GMRPlatformWii], @"GMRPlatformWii does not equal wii");
+	STAssertTrue(@"playstation3" == [GMRClient stringForPlatform:GMRPlatformPlaystation3], @"GMRPlatformPlaystation3 does not equal playstation3");
+	STAssertTrue(@"playstation2" == [GMRClient stringForPlatform:GMRPlatformPlaystation2], @"GMRPlatformPlaystation2 does not equal playstation2");
+	STAssertTrue(@"pc" == [GMRClient stringForPlatform:GMRPlatformPC], @"GMRPlatformPC does not equal pc");
 }
 
 - (void)testAuthenticateUser

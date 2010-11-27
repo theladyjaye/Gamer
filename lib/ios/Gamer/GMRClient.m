@@ -30,6 +30,22 @@ static NSArray * platformStrings;
 	[platformStrings retain];
 }
 
++ (GMRPlatform)platformForString:(NSString *)string
+{
+	NSUInteger platform = [platformStrings indexOfObject:string];
+	
+	if(platform != NSNotFound)
+		return (GMRPlatform) platform;
+	
+	return GMRPlatformUnknown;
+}
+
++ (NSString *)stringForPlatform:(GMRPlatform)platform
+{
+	return [platformStrings objectAtIndex:platform];
+}
+
+
 - (id)init
 {
 	self = [super init];
@@ -66,20 +82,6 @@ static NSArray * platformStrings;
 	apiRequest.key = value;
 }
 
-- (GMRPlatform)platformForString:(NSString *)string
-{
-	NSUInteger platform = [platformStrings indexOfObject:string];
-	
-	if(platform != NSNotFound)
-		return (GMRPlatform) platform;
-	
-	return GMRPlatformUnknown;
-}
-
-- (NSString *)stringForPlatform:(GMRPlatform)platform
-{
-	return [platformStrings objectAtIndex:platform];
-}
 
 - (void)authenticateUser:(NSString *)name password:(NSString *)password withCallback:(GMRCallback)callback
 {
@@ -120,7 +122,7 @@ static NSArray * platformStrings;
 - (void)playersForMatch:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId callback:(GMRCallback)callback
 {
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [self stringForPlatform:platform], gameId, matchId];
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [GMRClient stringForPlatform:platform], gameId, matchId];
 	
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
@@ -134,7 +136,7 @@ static NSArray * platformStrings;
 - (void)searchPlatform:(GMRPlatform)platform forGame:(NSString *)query withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/games/%@/search/%@", [self stringForPlatform:platform], query];
+	NSString*     path   = [NSString stringWithFormat:@"/games/%@/search/%@", [GMRClient stringForPlatform:platform], query];
 	
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
@@ -147,7 +149,7 @@ static NSArray * platformStrings;
 - (void)gamesForPlatform:(GMRPlatform)platform withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/games/%@", [self stringForPlatform:platform]];
+	NSString*     path   = [NSString stringWithFormat:@"/games/%@", [GMRClient stringForPlatform:platform]];
 	NSDictionary* query  = [NSDictionary dictionaryWithObjectsAndKeys:@"3", @"limit", nil];
 	
 	
@@ -187,7 +189,7 @@ static NSArray * platformStrings;
 	}
 	
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [self stringForPlatform:platform], interval];
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [GMRClient stringForPlatform:platform], interval];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
@@ -215,7 +217,7 @@ static NSArray * platformStrings;
 	}
 	
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [self stringForPlatform:platform], gameId, interval];
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [GMRClient stringForPlatform:platform], gameId, interval];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
@@ -243,7 +245,7 @@ static NSArray * platformStrings;
 	[dateFormatter release];
 	
 	NSString*     method = @"POST";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [self stringForPlatform:platform], gameId];
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@", [GMRClient stringForPlatform:platform], gameId];
 	
 	// send urlencoded array for invitedPlayers as "players"
 	NSDictionary* data   = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -263,7 +265,7 @@ static NSArray * platformStrings;
 - (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"POST";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [GMRClient stringForPlatform:platform],
 							gameId,
 							matchId,
 							username];
@@ -278,7 +280,7 @@ static NSArray * platformStrings;
 - (void)matchLeave:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
 	NSString*     method = @"DELETE";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [self stringForPlatform:platform],
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [GMRClient stringForPlatform:platform],
 							gameId,
 							matchId,
 							username];

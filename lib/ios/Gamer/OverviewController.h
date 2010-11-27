@@ -10,7 +10,7 @@
 #import "GMRViewController.h"
 @interface OverviewController : GMRViewController {
 	UITableView * matchesTable;
-	NSArray * matches;
+	NSMutableArray * matches;
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 

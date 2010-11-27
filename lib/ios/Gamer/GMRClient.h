@@ -22,10 +22,11 @@
 @property(nonatomic, copy) NSString * username;
 @property(nonatomic, assign) NSString * apiKey;
 
-- (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name;
++ (NSString *)stringForPlatform:(GMRPlatform)platform;
++ (GMRPlatform)platformForString:(NSString *)string;
 
-- (NSString *)stringForPlatform:(GMRPlatform)platform;
-- (GMRPlatform)platformForString:(NSString *)string;
+
+- (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name;
 
 - (void)version:(GMRCallback)callback;
 - (void)authenticateUser:(NSString *)username password:(NSString *)password withCallback:(GMRCallback)callback;

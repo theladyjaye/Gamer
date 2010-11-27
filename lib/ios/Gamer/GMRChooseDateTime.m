@@ -18,10 +18,10 @@
 {
     self.navigationItem.title   = @"Date and Time";
 	
-	if(kCreateMatchProgress.time)
+	if(kCreateMatchProgress.scheduled_time)
 	{
-		[datePicker setDate:kCreateMatchProgress.time animated:NO];
-		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
+		[datePicker setDate:kCreateMatchProgress.scheduled_time animated:NO];
+		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.scheduled_time];
 	}
 
 	
@@ -34,11 +34,11 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	if(!kCreateMatchProgress.time)
+	if(!kCreateMatchProgress.scheduled_time)
 	{
 		NSDate * now = [NSDate dateWithTimeIntervalSinceNow:1.0];
-		kCreateMatchProgress.time = now;
-		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
+		kCreateMatchProgress.scheduled_time = now;
+		self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.scheduled_time];
 		self.datePicker.minimumDate = now;
 		[datePicker setDate:now animated:NO];
 	}
@@ -48,8 +48,8 @@
 
 - (void)pickerChanged
 {
-	kCreateMatchProgress.time = datePicker.date;
-	self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.time];
+	kCreateMatchProgress.scheduled_time = datePicker.date;
+	self.label.text = [NSDate gamerScheduleTimeString:kCreateMatchProgress.scheduled_time];
 }
 
 

@@ -53,7 +53,7 @@ static CGFloat currentHeight;
 		}
 	}
 	
-	kCreateMatchProgress.description = textField.text;
+	kCreateMatchProgress.label = textField.text;
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
