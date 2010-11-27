@@ -766,6 +766,26 @@
 			D72C7FFC12A0C63600580653 /* PBXTextBookmark */ = D72C7FFC12A0C63600580653 /* PBXTextBookmark */;
 			D72C7FFE12A0C66100580653 /* PBXTextBookmark */ = D72C7FFE12A0C66100580653 /* PBXTextBookmark */;
 			D72C7FFF12A0C66A00580653 /* PBXTextBookmark */ = D72C7FFF12A0C66A00580653 /* PBXTextBookmark */;
+			D72C800012A0C77300580653 /* PBXTextBookmark */ = D72C800012A0C77300580653 /* PBXTextBookmark */;
+			D72C800112A0C77300580653 /* PBXTextBookmark */ = D72C800112A0C77300580653 /* PBXTextBookmark */;
+			D72C800212A0C77300580653 /* PBXTextBookmark */ = D72C800212A0C77300580653 /* PBXTextBookmark */;
+			D72C800312A0C78B00580653 /* PBXTextBookmark */ = D72C800312A0C78B00580653 /* PBXTextBookmark */;
+			D72C800612A0C9F500580653 /* PBXTextBookmark */ = D72C800612A0C9F500580653 /* PBXTextBookmark */;
+			D72C800712A0C9F500580653 /* PBXTextBookmark */ = D72C800712A0C9F500580653 /* PBXTextBookmark */;
+			D72C800912A0CA1F00580653 /* PBXTextBookmark */ = D72C800912A0CA1F00580653 /* PBXTextBookmark */;
+			D72C800A12A0CA1F00580653 /* PBXTextBookmark */ = D72C800A12A0CA1F00580653 /* PBXTextBookmark */;
+			D72C800D12A0CA4200580653 /* PBXTextBookmark */ = D72C800D12A0CA4200580653 /* PBXTextBookmark */;
+			D72C800E12A0CA4200580653 /* PBXTextBookmark */ = D72C800E12A0CA4200580653 /* PBXTextBookmark */;
+			D72C800F12A0CA4200580653 /* PBXTextBookmark */ = D72C800F12A0CA4200580653 /* PBXTextBookmark */;
+			D72C801012A0CA4200580653 /* PBXTextBookmark */ = D72C801012A0CA4200580653 /* PBXTextBookmark */;
+			D72C801412A0CA8300580653 /* PBXTextBookmark */ = D72C801412A0CA8300580653 /* PBXTextBookmark */;
+			D72C801512A0CA8300580653 /* PBXTextBookmark */ = D72C801512A0CA8300580653 /* PBXTextBookmark */;
+			D72C801612A0CA8300580653 /* PBXTextBookmark */ = D72C801612A0CA8300580653 /* PBXTextBookmark */;
+			D72C801712A0CA8300580653 /* PBXTextBookmark */ = D72C801712A0CA8300580653 /* PBXTextBookmark */;
+			D72C801912A0CA9000580653 /* PBXTextBookmark */ = D72C801912A0CA9000580653 /* PBXTextBookmark */;
+			D72C801A12A0CAC800580653 /* PBXTextBookmark */ = D72C801A12A0CAC800580653 /* PBXTextBookmark */;
+			D72C801B12A0CAC800580653 /* PBXTextBookmark */ = D72C801B12A0CAC800580653 /* PBXTextBookmark */;
+			D72C801C12A0CAC800580653 /* PBXTextBookmark */ = D72C801C12A0CAC800580653 /* PBXTextBookmark */;
 			D7423549129D6DFC00EA0272 = D7423549129D6DFC00EA0272 /* PBXTextBookmark */;
 			D7423626129DF57B00EA0272 = D7423626129DF57B00EA0272 /* PBXTextBookmark */;
 			D7423642129EB8ED00EA0272 = D7423642129EB8ED00EA0272 /* PBXTextBookmark */;
@@ -1249,7 +1269,7 @@
 		ignoreCount = 0;
 		lineNumber = 84;
 		location = HazGame;
-		modificationTime = 312526391.427121;
+		modificationTime = 312527492.920369;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1320,7 +1340,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 159";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1098;
 		vrLoc = 3761;
@@ -1330,7 +1350,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 164";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 2008;
 		vrLoc = 3761;
@@ -1340,7 +1360,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 164";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 2008;
 		vrLoc = 3761;
@@ -1856,7 +1876,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 164";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1813;
 		vrLoc = 3633;
@@ -1866,7 +1886,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 163";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 951;
 		vrLoc = 3410;
@@ -1876,7 +1896,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 163";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 874;
 		vrLoc = 3410;
@@ -1896,7 +1916,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 163";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 614;
 		vrLoc = 3741;
@@ -1906,7 +1926,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 162";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1223;
 		vrLoc = 3943;
@@ -1946,7 +1966,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 162";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 614;
 		vrLoc = 3741;
@@ -2046,7 +2066,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 162";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1905;
 		vrLoc = 3685;
@@ -2056,7 +2076,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 145";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1028;
 		vrLoc = 3510;
@@ -2066,7 +2086,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 145";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 987;
 		vrLoc = 3510;
@@ -2086,7 +2106,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 145";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 612;
 		vrLoc = 3791;
@@ -2096,7 +2116,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 309";
 		rLen = 0;
-		rLoc = 8663;
+		rLoc = 8547;
 		rType = 0;
 		vrLen = 1172;
 		vrLoc = 7893;
@@ -2106,7 +2126,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 309";
 		rLen = 0;
-		rLoc = 8663;
+		rLoc = 8547;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 7893;
@@ -2116,7 +2136,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 309";
 		rLen = 0;
-		rLoc = 8663;
+		rLoc = 8547;
 		rType = 0;
 		vrLen = 673;
 		vrLoc = 7893;
@@ -2146,7 +2166,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 309";
 		rLen = 0;
-		rLoc = 8663;
+		rLoc = 8547;
 		rType = 0;
 		vrLen = 1182;
 		vrLoc = 7633;
@@ -2156,7 +2176,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 307";
 		rLen = 0;
-		rLoc = 8659;
+		rLoc = 8543;
 		rType = 0;
 		vrLen = 1154;
 		vrLoc = 8686;
@@ -2166,7 +2186,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 307";
 		rLen = 0;
-		rLoc = 8659;
+		rLoc = 8543;
 		rType = 0;
 		vrLen = 1103;
 		vrLoc = 8686;
@@ -2176,7 +2196,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 307";
 		rLen = 0;
-		rLoc = 8659;
+		rLoc = 8543;
 		rType = 0;
 		vrLen = 731;
 		vrLoc = 8686;
@@ -2186,7 +2206,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 37";
 		rLen = 0;
-		rLoc = 1050;
+		rLoc = 1054;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 0;
@@ -2196,7 +2216,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 37";
 		rLen = 0;
-		rLoc = 1050;
+		rLoc = 1054;
 		rType = 0;
 		vrLen = 1163;
 		vrLoc = 0;
@@ -2206,7 +2226,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 37";
 		rLen = 0;
-		rLoc = 1050;
+		rLoc = 1054;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 396;
@@ -2270,7 +2290,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 36";
 		rLen = 0;
-		rLoc = 1167;
+		rLoc = 1171;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 2411;
@@ -2280,7 +2300,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 36";
 		rLen = 0;
-		rLoc = 1167;
+		rLoc = 1171;
 		rType = 0;
 		vrLen = 1212;
 		vrLoc = 2411;
@@ -2290,7 +2310,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 36";
 		rLen = 0;
-		rLoc = 1167;
+		rLoc = 1171;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 2411;
@@ -2320,7 +2340,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 116";
 		rLen = 0;
-		rLoc = 3397;
+		rLoc = 3401;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 4658;
@@ -2330,7 +2350,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 226";
 		rLen = 0;
-		rLoc = 6177;
+		rLoc = 6064;
 		rType = 0;
 		vrLen = 1685;
 		vrLoc = 5676;
@@ -2398,7 +2418,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 217";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 5732;
@@ -2662,7 +2682,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 213";
 		rLen = 0;
-		rLoc = 6258;
+		rLoc = 6142;
 		rType = 0;
 		vrLen = 885;
 		vrLoc = 5932;
@@ -2672,7 +2692,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 216";
 		rLen = 0;
-		rLoc = 6442;
+		rLoc = 6326;
 		rType = 0;
 		vrLen = 1551;
 		vrLoc = 5189;
@@ -2682,7 +2702,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 222";
 		rLen = 0;
-		rLoc = 8609;
+		rLoc = 8493;
 		rType = 0;
 		vrLen = 1550;
 		vrLoc = 5189;
@@ -2772,7 +2792,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 7902;
+		rLoc = 7793;
 		rType = 0;
 		vrLen = 822;
 		vrLoc = 5515;
@@ -3032,7 +3052,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 240";
 		rLen = 0;
-		rLoc = 8544;
+		rLoc = 8428;
 		rType = 0;
 		vrLen = 1699;
 		vrLoc = 5368;
@@ -3132,7 +3152,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 240";
 		rLen = 0;
-		rLoc = 8544;
+		rLoc = 8428;
 		rType = 0;
 		vrLen = 1100;
 		vrLoc = 5967;
@@ -3142,7 +3162,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 255";
 		rLen = 0;
-		rLoc = 8625;
+		rLoc = 8509;
 		rType = 0;
 		vrLen = 878;
 		vrLoc = 6602;
@@ -3152,7 +3172,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 255";
 		rLen = 0;
-		rLoc = 8625;
+		rLoc = 8509;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 6602;
@@ -3162,7 +3182,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 255";
 		rLen = 0;
-		rLoc = 8625;
+		rLoc = 8509;
 		rType = 0;
 		vrLen = 496;
 		vrLoc = 6602;
@@ -3199,7 +3219,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 225";
 		rLen = 0;
-		rLoc = 6759;
+		rLoc = 6643;
 		rType = 0;
 		vrLen = 1114;
 		vrLoc = 5990;
@@ -3249,7 +3269,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 255";
 		rLen = 0;
-		rLoc = 8625;
+		rLoc = 8509;
 		rType = 0;
 		vrLen = 496;
 		vrLoc = 6602;
@@ -3279,7 +3299,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 225";
 		rLen = 0;
-		rLoc = 6759;
+		rLoc = 6643;
 		rType = 0;
 		vrLen = 1114;
 		vrLoc = 5989;
@@ -3289,7 +3309,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 235";
 		rLen = 0;
-		rLoc = 7889;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 5879;
@@ -3299,7 +3319,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 235";
 		rLen = 0;
-		rLoc = 7889;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 1152;
 		vrLoc = 5879;
@@ -3319,7 +3339,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 234";
 		rLen = 0;
-		rLoc = 7889;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 6244;
@@ -3329,7 +3349,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 237";
 		rLen = 0;
-		rLoc = 7903;
+		rLoc = 7794;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 5879;
@@ -3369,7 +3389,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 234";
 		rLen = 0;
-		rLoc = 7889;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 6244;
@@ -3500,7 +3520,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 237";
 		rLen = 0;
-		rLoc = 7903;
+		rLoc = 7794;
 		rType = 0;
 		vrLen = 1155;
 		vrLoc = 5879;
@@ -3510,7 +3530,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 6446;
+		rLoc = 6330;
 		rType = 0;
 		vrLen = 1157;
 		vrLoc = 5910;
@@ -3520,7 +3540,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 6446;
+		rLoc = 6330;
 		rType = 0;
 		vrLen = 1129;
 		vrLoc = 5910;
@@ -3540,7 +3560,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 6446;
+		rLoc = 6330;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 5950;
@@ -3550,7 +3570,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 225";
 		rLen = 0;
-		rLoc = 6650;
+		rLoc = 6534;
 		rType = 0;
 		vrLen = 1171;
 		vrLoc = 5950;
@@ -3590,7 +3610,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 6446;
+		rLoc = 6330;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 5950;
@@ -3830,7 +3850,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 219";
 		rLen = 0;
-		rLoc = 6406;
+		rLoc = 6290;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 5908;
@@ -3949,7 +3969,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 160";
 		rLen = 0;
-		rLoc = 4556;
+		rLoc = 4560;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 3769;
@@ -3959,7 +3979,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 187";
 		rLen = 0;
-		rLoc = 5450;
+		rLoc = 5454;
 		rType = 0;
 		vrLen = 1885;
 		vrLoc = 4151;
@@ -3969,7 +3989,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 220";
 		rLen = 0;
-		rLoc = 6311;
+		rLoc = 6195;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 5564;
@@ -4100,7 +4120,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 233;
+		rLoc = 222;
 		rType = 1;
 	};
 	D72C7CDE12A0345300580653 /* PBXTextBookmark */ = {
@@ -4108,7 +4128,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 231";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1134;
 		vrLoc = 6036;
@@ -4118,7 +4138,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 231";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1131;
 		vrLoc = 6036;
@@ -4138,7 +4158,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 231";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 6305;
@@ -4182,7 +4202,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 245";
 		rLen = 11;
-		rLoc = 8497;
+		rLoc = 8381;
 		rType = 0;
 		vrLen = 1700;
 		vrLoc = 6036;
@@ -4192,7 +4212,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1753;
 		vrLoc = 6036;
@@ -4243,7 +4263,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 233;
+		rLoc = 222;
 		rType = 1;
 	};
 	D72C7CF312A03FE200580653 /* PBXTextBookmark */ = {
@@ -4251,7 +4271,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 230";
 		rLen = 0;
-		rLoc = 6682;
+		rLoc = 6566;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 6050;
@@ -4282,7 +4302,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 254;
+		rLoc = 243;
 		rType = 1;
 	};
 	D72C7CFD12A040D800580653 /* PBXTextBookmark */ = {
@@ -4290,7 +4310,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 6050;
@@ -4300,7 +4320,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1196;
 		vrLoc = 6050;
@@ -4310,7 +4330,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 870;
 		vrLoc = 6289;
@@ -4340,7 +4360,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 5962;
@@ -4350,7 +4370,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 233";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 5961;
@@ -4360,7 +4380,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 233";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 5961;
@@ -4370,7 +4390,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 233";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 870;
 		vrLoc = 6289;
@@ -4380,7 +4400,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 237";
 		rLen = 0;
-		rLoc = 7469;
+		rLoc = 7353;
 		rType = 0;
 		vrLen = 1302;
 		vrLoc = 5961;
@@ -4390,7 +4410,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 237";
 		rLen = 0;
-		rLoc = 7469;
+		rLoc = 7353;
 		rType = 0;
 		vrLen = 1292;
 		vrLoc = 5961;
@@ -4400,7 +4420,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 219";
 		rLen = 20;
-		rLoc = 6232;
+		rLoc = 6116;
 		rType = 0;
 		vrLen = 982;
 		vrLoc = 5999;
@@ -4440,7 +4460,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 219";
 		rLen = 20;
-		rLoc = 6232;
+		rLoc = 6116;
 		rType = 0;
 		vrLen = 1295;
 		vrLoc = 5961;
@@ -4450,7 +4470,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 234";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1328;
 		vrLoc = 5961;
@@ -4460,7 +4480,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 234";
 		rLen = 0;
-		rLoc = 6875;
+		rLoc = 6759;
 		rType = 0;
 		vrLen = 1325;
 		vrLoc = 5961;
@@ -4470,7 +4490,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 238";
 		rLen = 0;
-		rLoc = 7889;
+		rLoc = 7780;
 		rType = 0;
 		vrLen = 1083;
 		vrLoc = 6150;
@@ -4480,7 +4500,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 238";
 		rLen = 0;
-		rLoc = 7254;
+		rLoc = 7138;
 		rType = 0;
 		vrLen = 1582;
 		vrLoc = 5934;
@@ -4490,7 +4510,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 238";
 		rLen = 0;
-		rLoc = 7254;
+		rLoc = 7138;
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 5934;
@@ -4500,7 +4520,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 238";
 		rLen = 0;
-		rLoc = 7254;
+		rLoc = 7138;
 		rType = 0;
 		vrLen = 1353;
 		vrLoc = 6150;
@@ -4510,7 +4530,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 252";
 		rLen = 0;
-		rLoc = 8539;
+		rLoc = 8423;
 		rType = 0;
 		vrLen = 1584;
 		vrLoc = 5962;
@@ -4560,7 +4580,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 238";
 		rLen = 0;
-		rLoc = 7254;
+		rLoc = 7138;
 		rType = 0;
 		vrLen = 1353;
 		vrLoc = 6150;
@@ -4664,7 +4684,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 247";
 		rLen = 0;
-		rLoc = 7727;
+		rLoc = 7611;
 		rType = 0;
 		vrLen = 1913;
 		vrLoc = 5961;
@@ -4674,7 +4694,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 250";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1913;
 		vrLoc = 5961;
@@ -4745,7 +4765,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 268;
+		rLoc = 257;
 		rType = 1;
 	};
 	D72C7D4D12A04AEA00580653 /* PBXTextBookmark */ = {
@@ -4764,7 +4784,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 268;
+		rLoc = 257;
 		rType = 1;
 	};
 	D72C7D5112A04BFF00580653 /* PBXTextBookmark */ = {
@@ -4772,7 +4792,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 259";
 		rLen = 0;
-		rLoc = 8047;
+		rLoc = 7938;
 		rType = 0;
 		vrLen = 2186;
 		vrLoc = 6591;
@@ -4782,7 +4802,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 261";
 		rLen = 20;
-		rLoc = 8233;
+		rLoc = 8124;
 		rType = 0;
 		vrLen = 1767;
 		vrLoc = 6591;
@@ -4882,7 +4902,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 251";
 		rLen = 0;
-		rLoc = 7738;
+		rLoc = 7622;
 		rType = 0;
 		vrLen = 1324;
 		vrLoc = 4711;
@@ -4892,7 +4912,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 263";
 		rLen = 0;
-		rLoc = 8337;
+		rLoc = 8228;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 7057;
@@ -4902,7 +4922,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 263";
 		rLen = 0;
-		rLoc = 8337;
+		rLoc = 8228;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 7057;
@@ -4912,7 +4932,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 263";
 		rLen = 0;
-		rLoc = 8337;
+		rLoc = 8228;
 		rType = 0;
 		vrLen = 1365;
 		vrLoc = 7057;
@@ -4932,7 +4952,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 263";
 		rLen = 0;
-		rLoc = 8337;
+		rLoc = 8228;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 7742;
@@ -4969,7 +4989,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 198";
 		rLen = 0;
-		rLoc = 5754;
+		rLoc = 5758;
 		rType = 0;
 		vrLen = 1421;
 		vrLoc = 4594;
@@ -4979,7 +4999,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 198";
 		rLen = 0;
-		rLoc = 5754;
+		rLoc = 5758;
 		rType = 0;
 		vrLen = 1416;
 		vrLoc = 4594;
@@ -4989,7 +5009,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 198";
 		rLen = 0;
-		rLoc = 5754;
+		rLoc = 5758;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 5038;
@@ -4999,7 +5019,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 186";
 		rLen = 0;
-		rLoc = 5329;
+		rLoc = 5333;
 		rType = 0;
 		vrLen = 1473;
 		vrLoc = 4553;
@@ -5009,7 +5029,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 186";
 		rLen = 0;
-		rLoc = 5329;
+		rLoc = 5333;
 		rType = 0;
 		vrLen = 1466;
 		vrLoc = 4553;
@@ -5019,7 +5039,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 186";
 		rLen = 0;
-		rLoc = 5329;
+		rLoc = 5333;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 5038;
@@ -5029,7 +5049,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 187";
 		rLen = 0;
-		rLoc = 5365;
+		rLoc = 5369;
 		rType = 0;
 		vrLen = 1303;
 		vrLoc = 4791;
@@ -5089,7 +5109,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 186";
 		rLen = 0;
-		rLoc = 5329;
+		rLoc = 5333;
 		rType = 0;
 		vrLen = 988;
 		vrLoc = 5038;
@@ -5119,7 +5139,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 187";
 		rLen = 0;
-		rLoc = 5365;
+		rLoc = 5369;
 		rType = 0;
 		vrLen = 1409;
 		vrLoc = 4733;
@@ -5129,7 +5149,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7316;
+		rLoc = 7200;
 		rType = 0;
 		vrLen = 2077;
 		vrLoc = 6245;
@@ -5139,7 +5159,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7316;
+		rLoc = 7200;
 		rType = 0;
 		vrLen = 2022;
 		vrLoc = 6245;
@@ -5159,7 +5179,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 244";
 		rLen = 0;
-		rLoc = 7469;
+		rLoc = 7353;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 6614;
@@ -5169,7 +5189,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 244";
 		rLen = 0;
-		rLoc = 7469;
+		rLoc = 7353;
 		rType = 0;
 		vrLen = 2029;
 		vrLoc = 6167;
@@ -5179,7 +5199,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 244";
 		rLen = 0;
-		rLoc = 7469;
+		rLoc = 7353;
 		rType = 0;
 		vrLen = 1983;
 		vrLoc = 6167;
@@ -5189,7 +5209,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7285;
+		rLoc = 7169;
 		rType = 0;
 		vrLen = 1329;
 		vrLoc = 6614;
@@ -5199,7 +5219,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7285;
+		rLoc = 7169;
 		rType = 0;
 		vrLen = 2021;
 		vrLoc = 6167;
@@ -5209,7 +5229,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7285;
+		rLoc = 7169;
 		rType = 0;
 		vrLen = 1975;
 		vrLoc = 6167;
@@ -5219,7 +5239,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7261;
+		rLoc = 7145;
 		rType = 0;
 		vrLen = 1337;
 		vrLoc = 6614;
@@ -5229,7 +5249,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7261;
+		rLoc = 7145;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 6740;
@@ -5239,7 +5259,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7343;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 2111;
 		vrLoc = 6167;
@@ -5249,7 +5269,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7343;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 2041;
 		vrLoc = 6167;
@@ -5259,7 +5279,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7261;
+		rLoc = 7145;
 		rType = 0;
 		vrLen = 781;
 		vrLoc = 7702;
@@ -5289,7 +5309,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7261;
+		rLoc = 7145;
 		rType = 0;
 		vrLen = 2435;
 		vrLoc = 6167;
@@ -5299,7 +5319,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 259";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 2112;
 		vrLoc = 6167;
@@ -5309,7 +5329,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 259";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 2042;
 		vrLoc = 6167;
@@ -5319,7 +5339,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 255";
 		rLen = 0;
-		rLoc = 7890;
+		rLoc = 7781;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 7010;
@@ -5329,7 +5349,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7343;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 1878;
 		vrLoc = 6505;
@@ -5349,7 +5369,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 242";
 		rLen = 0;
-		rLoc = 7343;
+		rLoc = 7227;
 		rType = 0;
 		vrLen = 1871;
 		vrLoc = 6505;
@@ -5359,7 +5379,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 259";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 6862;
@@ -5369,7 +5389,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 259";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1718;
 		vrLoc = 6862;
@@ -5379,7 +5399,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1373;
 		vrLoc = 6864;
@@ -5389,7 +5409,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1756;
 		vrLoc = 6862;
@@ -5399,7 +5419,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1753;
 		vrLoc = 6862;
@@ -5409,7 +5429,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1369;
 		vrLoc = 6864;
@@ -5419,7 +5439,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1752;
 		vrLoc = 6862;
@@ -5429,7 +5449,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1749;
 		vrLoc = 6862;
@@ -5439,7 +5459,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 6864;
@@ -5449,7 +5469,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1606;
 		vrLoc = 6862;
@@ -5489,7 +5509,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 258";
 		rLen = 0;
-		rLoc = 7907;
+		rLoc = 7798;
 		rType = 0;
 		vrLen = 1321;
 		vrLoc = 6864;
@@ -5610,7 +5630,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 257;
+		rLoc = 246;
 		rType = 1;
 	};
 	D72C7DF712A066AD00580653 /* PBXTextBookmark */ = {
@@ -5618,7 +5638,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1988;
 		vrLoc = 6505;
@@ -5628,7 +5648,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1985;
 		vrLoc = 6505;
@@ -5648,7 +5668,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 7460;
@@ -5658,7 +5678,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1725;
 		vrLoc = 6864;
@@ -5708,7 +5728,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 7460;
@@ -5984,7 +6004,7 @@
 		ignoreCount = 0;
 		lineNumber = 82;
 		location = HazGame;
-		modificationTime = 312526391.4279;
+		modificationTime = 312527492.921203;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -6163,7 +6183,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8166;
+		rLoc = 8057;
 		rType = 0;
 		vrLen = 1725;
 		vrLoc = 6864;
@@ -6173,7 +6193,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8072;
+		rLoc = 7963;
 		rType = 0;
 		vrLen = 1707;
 		vrLoc = 6864;
@@ -6183,7 +6203,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 260";
 		rLen = 0;
-		rLoc = 8072;
+		rLoc = 7963;
 		rType = 0;
 		vrLen = 1705;
 		vrLoc = 6864;
@@ -6203,7 +6223,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 267";
 		rLen = 0;
-		rLoc = 8450;
+		rLoc = 8334;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 7638;
@@ -6213,7 +6233,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 251";
 		rLen = 0;
-		rLoc = 7739;
+		rLoc = 7623;
 		rType = 0;
 		vrLen = 1707;
 		vrLoc = 6864;
@@ -6223,7 +6243,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 269";
 		rLen = 0;
-		rLoc = 8497;
+		rLoc = 8381;
 		rType = 0;
 		vrLen = 1826;
 		vrLoc = 6740;
@@ -6332,7 +6352,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 267";
 		rLen = 0;
-		rLoc = 8450;
+		rLoc = 8334;
 		rType = 0;
 		vrLen = 879;
 		vrLoc = 7638;
@@ -7103,7 +7123,7 @@
 		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
 		name = "GMRChooseDescription.m: 55";
 		rLen = 0;
-		rLoc = 1268;
+		rLoc = 1256;
 		rType = 0;
 		vrLen = 1038;
 		vrLoc = 414;
@@ -7113,7 +7133,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 81";
 		rLen = 0;
-		rLoc = 2333;
+		rLoc = 2337;
 		rType = 0;
 		vrLen = 1379;
 		vrLoc = 4039;
@@ -8244,6 +8264,206 @@
 		vrLen = 789;
 		vrLoc = 243;
 	};
+	D72C800012A0C77300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 42";
+		rLen = 0;
+		rLoc = 918;
+		rType = 0;
+		vrLen = 864;
+		vrLoc = 101;
+	};
+	D72C800112A0C77300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 81";
+		rLen = 0;
+		rLoc = 2337;
+		rType = 0;
+		vrLen = 2029;
+		vrLoc = 4039;
+	};
+	D72C800212A0C77300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 252";
+		rLen = 8;
+		rLoc = 8065;
+		rType = 0;
+		vrLen = 1915;
+		vrLoc = 7025;
+	};
+	D72C800312A0C78B00580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 211";
+		rLen = 0;
+		rLoc = 6064;
+		rType = 0;
+		vrLen = 2361;
+		vrLoc = 4541;
+	};
+	D72C800612A0C9F500580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1393;
+		vrLoc = 4541;
+	};
+	D72C800712A0C9F500580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1377;
+		vrLoc = 4557;
+	};
+	D72C800912A0CA1F00580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 73";
+		rLen = 0;
+		rLoc = 1590;
+		rType = 0;
+		vrLen = 652;
+		vrLoc = 1113;
+	};
+	D72C800A12A0CA1F00580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1081;
+		vrLoc = 4799;
+	};
+	D72C800D12A0CA4200580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1377;
+		vrLoc = 4557;
+	};
+	D72C800E12A0CA4200580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 55";
+		rLen = 0;
+		rLoc = 1256;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 439;
+	};
+	D72C800F12A0CA4200580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 27";
+		rLen = 0;
+		rLoc = 560;
+		rType = 0;
+		vrLen = 938;
+		vrLoc = 43;
+	};
+	D72C801012A0CA4200580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 27";
+		rLen = 0;
+		rLoc = 560;
+		rType = 0;
+		vrLen = 894;
+		vrLoc = 87;
+	};
+	D72C801412A0CA8300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1081;
+		vrLoc = 4799;
+	};
+	D72C801512A0CA8300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 24";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 273;
+	};
+	D72C801612A0CA8300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 24";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 933;
+		vrLoc = 87;
+	};
+	D72C801712A0CA8300580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 24";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 871;
+		vrLoc = 149;
+	};
+	D72C801912A0CA9000580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 24";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 519;
+		vrLoc = 273;
+	};
+	D72C801A12A0CAC800580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
+		name = "GMRChooseDescription.m: 24";
+		rLen = 0;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 871;
+		vrLoc = 149;
+	};
+	D72C801B12A0CAC800580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 184";
+		rLen = 0;
+		rLoc = 5176;
+		rType = 0;
+		vrLen = 1377;
+		vrLoc = 4557;
+	};
+	D72C801C12A0CAC800580653 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 30";
+		rLen = 0;
+		rLoc = 659;
+		rType = 0;
+		vrLen = 2754;
+		vrLoc = 4859;
+	};
 	D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1218, 574}}";
@@ -8267,9 +8487,9 @@
 	};
 	D742353C129D668000EA0272 /* GMRChooseDescription.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1093, 1469}}";
-			sepNavSelRange = "{1268, 0}";
-			sepNavVisRange = "{414, 1038}";
+			sepNavIntBoundsRect = "{{0, 0}, {1093, 1547}}";
+			sepNavSelRange = "{487, 0}";
+			sepNavVisRange = "{149, 871}";
 		};
 	};
 	D7423549129D6DFC00EA0272 /* PBXTextBookmark */ = {
@@ -8297,7 +8517,7 @@
 		fRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */;
 		name = "GMRChooseDescription.m: 36";
 		rLen = 0;
-		rLoc = 751;
+		rLoc = 739;
 		rType = 0;
 		vrLen = 1031;
 		vrLoc = 238;
@@ -8619,7 +8839,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 153";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1072;
 		vrLoc = 3754;
@@ -8629,7 +8849,7 @@
 		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
 		name = "GMRCreateGameController.m: 159";
 		rLen = 0;
-		rLoc = 6067;
+		rLoc = 6043;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 3754;
@@ -8828,9 +9048,9 @@
 	};
 	D75012DF1298CE860079EB44 /* GMRCreateGameController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 4576}}";
-			sepNavSelRange = "{2333, 0}";
-			sepNavVisRange = "{4039, 1379}";
+			sepNavIntBoundsRect = "{{0, 0}, {1433, 4212}}";
+			sepNavSelRange = "{659, 0}";
+			sepNavVisRange = "{4859, 2754}";
 		};
 	};
 	D775C3E112875B2100C72E64 /* PBXTextBookmark */ = {
@@ -9409,7 +9629,7 @@
 		ignoreCount = 0;
 		lineNumber = 21;
 		location = HazGame;
-		modificationTime = 312526391.427637;
+		modificationTime = 312527492.920928;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -9464,9 +9684,9 @@
 	D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{3069, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{3120, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{3170, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 3400}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1093, 1794}}";
-			sepNavSelRange = "{572, 0}";
-			sepNavVisRange = "{243, 789}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 1716}}";
+			sepNavSelRange = "{1590, 0}";
+			sepNavVisRange = "{1113, 652}";
 		};
 	};
 	D7C33E121295806100B923AE /* PBXTextBookmark */ = {

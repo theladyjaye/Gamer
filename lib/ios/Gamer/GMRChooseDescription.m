@@ -24,9 +24,9 @@ static CGFloat currentHeight;
 	self.textField.contentInset = UIEdgeInsetsZero;
 	[self.textField becomeFirstResponder];
 	
-	if(kCreateMatchProgress.description)
+	if(kCreateMatchProgress.label)
 	{
-		textField.text = kCreateMatchProgress.description;
+		textField.text = kCreateMatchProgress.label;
 		// TODO:  change height here if necessary!
 	}
 	

@@ -27,7 +27,7 @@
 GMRMatch * kCreateMatchProgress = nil;
 
 @implementation GMRCreateGameController
-@synthesize platform, gameAndMode,availability,players,time,description;
+@synthesize platform, gameAndMode, availability, players, time, description;
 
 - (void)viewDidLoad 
 {
@@ -205,21 +205,10 @@ GMRMatch * kCreateMatchProgress = nil;
 			self.description.label.text = kCreateMatchProgress.label;
 		}
 	}
-	
-
-	//NSLog(@"%@", change);
 }
-
-- (void)dismissModalViewController
-{
-	[self dismissModalViewControllerAnimated:YES];
-}
-
 
 - (void)saveMatch
 {
-
-	
 	GMRForm * form = [[GMRForm alloc] initWithContext:kCreateMatchProgress];
 	
 	[form addValidator:[GMRPlatformValidator validatorWithKeyPath:@"platform" 
@@ -251,7 +240,7 @@ GMRMatch * kCreateMatchProgress = nil;
 												    requirement:GMRValidatorRequirementRequired 
 													  minLength:4
 													  maxLength:0
-													    message:@"Invalid Time"]];	
+													    message:@"Invalid Description"]];	
 	
 	if(form.ok)
 	{
@@ -262,7 +251,7 @@ GMRMatch * kCreateMatchProgress = nil;
 				  availability:kCreateMatchProgress.availability 
 					maxPlayers:kCreateMatchProgress.players 
 				invitedPlayers:nil 
-						 label:kCreateMatchProgress.description 
+						 label:kCreateMatchProgress.label
 				  withCallback:^(BOOL ok, NSDictionary * response)
 							  {
 								  NSLog(@"%@", response);
@@ -295,6 +284,12 @@ GMRMatch * kCreateMatchProgress = nil;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void)dismissModalViewController
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

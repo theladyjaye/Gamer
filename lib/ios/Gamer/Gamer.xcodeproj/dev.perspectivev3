@@ -298,6 +298,7 @@
 								<string>D714A121129C0B1900151FC9</string>
 								<string>D709BF40129A2B500057EA4B</string>
 								<string>D709BF41129A2B590057EA4B</string>
+								<string>D709BF42129A2B600057EA4B</string>
 								<string>D7208A7D1292BECD009C0624</string>
 								<string>D7EEAD82128A11AF0022AF4E</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
@@ -306,15 +307,16 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>69</integer>
-									<integer>64</integer>
+									<integer>32</integer>
+									<integer>30</integer>
+									<integer>29</integer>
 									<integer>28</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 521}, {380, 861}}</string>
+							<string>{{0, 443}, {380, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -349,7 +351,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRGameDetailController+PlayerList.m</string>
+								<string>GMRCreateGameController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -357,11 +359,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRGameDetailController+PlayerList.m</string>
+										<string>GMRCreateGameController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D72C7FFF12A0C66A00580653</string>
+										<string>D72C801C12A0CAC800580653</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -491,8 +493,6 @@
 											<string>D72C7EEC12A0BC7500580653</string>
 											<string>D72C7EF112A0BC7500580653</string>
 											<string>D72C7F2112A0BEE200580653</string>
-											<string>D72C7F2212A0BEE200580653</string>
-											<string>D72C7F2312A0BEE200580653</string>
 											<string>D72C7F8D12A0C27E00580653</string>
 											<string>D72C7F9612A0C2ED00580653</string>
 											<string>D72C7F9812A0C2ED00580653</string>
@@ -501,7 +501,9 @@
 											<string>D72C7FC112A0C51500580653</string>
 											<string>D72C7FE312A0C58800580653</string>
 											<string>D72C7FEF12A0C61B00580653</string>
-											<string>D72C7FFE12A0C66100580653</string>
+											<string>D72C800012A0C77300580653</string>
+											<string>D72C801A12A0CAC800580653</string>
+											<string>D72C801B12A0CAC800580653</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -515,18 +517,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1154, 565}}</string>
+								<string>{{0, 0}, {1154, 874}}</string>
 								<key>RubberWindowFrame</key>
 								<string>67 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>565pt</string>
+							<string>874pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>309pt</string>
+							<string>0pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -594,7 +596,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1154, 282}}</string>
+										<string>{{10, 27}, {1154, -27}}</string>
 										<key>RubberWindowFrame</key>
 										<string>67 108 1556 920 0 0 1680 1028 </string>
 									</dict>
@@ -801,7 +803,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>312526442.72776902</real>
+	<real>312527560.57499802</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -818,6 +820,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D72C801812A0CA8300580653</string>
 		<string>D72C7E3912A08A0100580653</string>
 		<string>D72C7B0612A0098B00580653</string>
 		<string>D72C7B0212A0093200580653</string>
