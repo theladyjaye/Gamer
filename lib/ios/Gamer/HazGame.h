@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class GMRAuthenticationController, GMRMainController;
+@class GMRAuthenticationController, GMRMainController,GMRNavigationController;
 @interface HazGame : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	GMRAuthenticationController * authenticationController;
+	GMRNavigationController * authenticationController;
 	GMRMainController * mainController;
 }
 

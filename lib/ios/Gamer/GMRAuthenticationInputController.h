@@ -14,15 +14,14 @@
 	UITextField * username;
 	UITextField * password;
 	GMRAuthenticationController * authenticationController;
-	GMRAuthenticationNewAccount * newAccountController;
 }
 
 @property(nonatomic, retain) IBOutlet UITextField * username;
 @property(nonatomic, retain) IBOutlet UITextField * password;
 @property(nonatomic, assign) GMRAuthenticationController * authenticationController;
 
-- (IBAction)authenticate;
-- (IBAction)newAccount;
+- (void)authenticate;
+- (void)newAccount;
 - (void)authenticationDidSucceedWithUsername:(NSString *)name andToken:(NSString *)token;
 - (void)authenticationDidFail;
 @end

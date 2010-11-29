@@ -29,6 +29,6 @@
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackOpaque</string>
+	<string>UIStatusBarStyleGray</string>
 </dict>
 </plist>

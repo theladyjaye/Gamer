@@ -13,6 +13,7 @@
 #import "GMRAlertView.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
+#import "UIButton+GMRButtonTypes.h"
 
 @implementation GMRAuthenticationInputController
 @synthesize username, password, authenticationController;
@@ -25,31 +26,17 @@
 }
 */
 
-- (IBAction)newAccount
+- (void)newAccount
 {
-	newAccountController = [[GMRAuthenticationNewAccount alloc] initWithNibName:nil bundle:nil];
-	newAccountController.view.frame = CGRectMake(self.view.frame.size.width, 0.0, self.view.frame.size.width, self.view.frame.size.height);	
-	
-	
+	GMRAuthenticationNewAccount * newAccountController = [[GMRAuthenticationNewAccount alloc] initWithNibName:nil bundle:nil];
+	newAccountController.inputController = self;
 	[newAccountController viewWillAppear:YES];
+	[self.authenticationController.gmrNavigationController pushViewController:newAccountController animated:YES];
+	[newAccountController release];
 	
-	
-	[UIView transitionWithView:self.view.superview
-					  duration:0.35f 
-					   options:UIViewAnimationOptionCurveEaseInOut  
-					animations:^{
-						[self.view.superview addSubview:newAccountController.view];
-						self.view.superview.transform = CGAffineTransformMakeTranslation(-1 * self.view.frame.size.width, 0.0);
-						//self.view.superview.frame = CGRectMake(-1 * self.view.frame.size.width, 0.0, self.view.superview.frame.size.width, self.view.superview.frame.size.height);
-					} 
-					completion:^(BOOL finished){
-						[newAccountController viewDidAppear:YES];
-						newAccountController.inputController = self;
-						self.view.superview.frame = CGRectMake(self.view.superview.frame.origin.x, 0.0, (self.view.superview.frame.size.width * 2), self.view.superview.frame.size.height);
-					}];
 }
 
-- (IBAction)authenticate
+- (void)authenticate
 {
 	NSString * usernameString = self.username.text;
 	NSString * passwordString = self.password.text;
@@ -107,6 +94,7 @@
 	
 }
 
+
 - (void)alertViewDidDismiss:(GMRAlertView *)alertView
 {
 	[alertView release];
@@ -135,16 +123,41 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	UIButton* newAccountButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeNewAccount];
+	[newAccountButton addTarget:self action:@selector(newAccount) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIButton* loginButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeLogin];
+	[loginButton addTarget:self action:@selector(authenticate) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * newAccount = [[UIBarButtonItem alloc] initWithCustomView:newAccountButton];
+	UIBarButtonItem * spacer     = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+	UIBarButtonItem * login      = [[UIBarButtonItem alloc] initWithCustomView:loginButton];
+	
+	
+	
+	NSArray * items = [NSArray arrayWithObjects:newAccount, spacer, login, nil];
+	[authenticationController.toolbar setItems:items animated:YES];
+	
+	[newAccount release];
+	[spacer release];
+	[login release];
+	
+	
+	if(self.username)
+	{
+		self.username.text = @"";
+		self.password.text = @"";
+		[self.username becomeFirstResponder];
+	}
+	
+	
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	[self.username becomeFirstResponder];
-	
-	if(newAccountController)
-	{
-		[newAccountController.view removeFromSuperview];
-		[newAccountController release];
-		newAccountController = nil;
-	}
 }
 
 - (void)viewDidUnload 

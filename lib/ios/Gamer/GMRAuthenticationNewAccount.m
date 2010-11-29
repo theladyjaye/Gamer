@@ -10,6 +10,7 @@
 #include <dispatch/dispatch.h>
 #import "GMRAuthenticationNewAccount.h"
 #import "GMRAuthenticationInputController.h"
+#import "GMRAuthenticationController.h"
 #import "GMRFormatter.h"
 #import "GMREmailFormatter.h"
 #import "GMRUsernameFormatter.h"
@@ -17,9 +18,11 @@
 #import "GMRGlobals.h"
 #import "GMRClient.h"
 #import "GMRAlertView.h"
+#import "GMRLabel.h"
+#import "UIButton+GMRButtonTypes.h"
 
 @implementation GMRAuthenticationNewAccount
-@synthesize inputController, email, username, password, passwordConfirm, form, topBar;
+@synthesize inputController, email, username, password, passwordConfirm;
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -30,37 +33,34 @@
 
 -(void)viewDidLoad
 {
-	//self.navigationBar.frame = CGRectMake(0, 20.0, self.view.frame.size.width, self.navigationBar.frame.size.height);
-	self.topBar.transform = CGAffineTransformMakeTranslation(0.0, -60);
-	[self.view insertSubview:form atIndex:0];
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"New Account"];
+	[self.navigationItem setHidesBackButton:YES];
+	
+	UIButton* cancelButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+	[cancelButton addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIButton* createButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCreate];
+	[createButton addTarget:self action:@selector(create) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * cancel = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
+	UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+	UIBarButtonItem * create = [[UIBarButtonItem alloc] initWithCustomView:createButton];
+	
+	NSArray * items = [NSArray arrayWithObjects:cancel, spacer, create, nil];
+	[self.inputController.authenticationController.toolbar setItems:items animated:YES];
+	
+	[cancel release];
+	[spacer release];
+	[create release];
+	
+	[email becomeFirstResponder];
+	
 	[super viewDidLoad];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[UIView transitionWithView:self.topBar 
-					  duration:0.35 
-					   options:UIViewAnimationOptionCurveEaseOut 
-					animations:^{
-						self.topBar.transform = CGAffineTransformMakeTranslation(0.0, -60);
-					} 
-					completion:NULL];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-	[UIView transitionWithView:self.topBar 
-					  duration:0.35 
-					   options:UIViewAnimationOptionCurveEaseOut 
-					animations:^{
-						self.topBar.transform = CGAffineTransformIdentity;
-					} 
-					completion:NULL];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-
+	/*
 	if(textField == password)
 	{
 		[UIView transitionWithView:self.form 
@@ -91,7 +91,7 @@
 						} 
 						completion:NULL];
 	}
-	
+	*/
 	
 	
 }
@@ -131,12 +131,12 @@
 	return YES;
 }
 
-- (IBAction)cancel:(id)sender
+- (void)cancel
 {
 	[self transitionOut];
 }
 
-- (IBAction)create:(id)sender
+- (void)create
 {
 	
 	[kGamerApi registerUser:email.text 
@@ -145,7 +145,7 @@
 			 passwordVerify:passwordConfirm.text 
 			   withCallback:^(BOOL ok, NSDictionary * response){
 				   
-				   if(ok)
+				   if(YES)//ok)
 				   {
 					   dispatch_async(dispatch_get_main_queue(), ^{
 						   [self createSucceeded];
@@ -162,33 +162,34 @@
 }
 - (void)createFailedWithErrors:(NSArray *)errors
 {
-	GMRAlertView * alert = [[GMRAlertView alloc] initWithTitle:@"Error" 
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification
+														 title:@"Error" 
 													   message:@"Form Error"
-													  delegate:self];
+													  callback:^(GMRAlertView * alertView){
+														  [alertView release];
+													  }];
 	[alert show];
 }
 
 - (void)createSucceeded
 {
-	GMRAlertView * alert = [[GMRAlertView alloc] initWithTitle:@"Success" 
-													   message:@"Account Created Successfully!\nPlease check your email to activate your new acocunt"
-													  delegate:self];
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+														 title:@"Success" 
+													   message:@"Account Created Successfully!\nPlease check your email to activate your new acocunt."
+													  callback:^(GMRAlertView * alertView){
+														  [alertView release];
+														  [self transitionOut];
+													  }];
 	[alert show];
 
 }
 
-- (void)alertViewDidDismiss:(GMRAlertView *)alertView
-{
-	[alertView autorelease];
-	
-	if([alertView.alertTitle isEqualToString:@"Success"])
-		[self transitionOut];
-	
-}
-
 - (void)transitionOut
 {
-	[self viewWillDisappear:YES];
+	[self.inputController viewWillAppear:YES];
+	[self.navigationController popViewControllerAnimated:YES];
+	
+	/*[self viewWillDisappear:YES];
 	[inputController viewWillAppear:YES];
 	[UIView transitionWithView:self.view.superview
 					  duration:0.35f 
@@ -201,6 +202,7 @@
 						[self viewDidDisappear:YES];
 						[inputController viewDidAppear:YES];
 					}];
+	 */
 }
 
 
@@ -219,8 +221,6 @@
 	self.username        = nil; 
 	self.password        = nil; 
 	self.passwordConfirm = nil;
-	self.topBar          = nil;
-	self.form            = nil;
 }
 
 

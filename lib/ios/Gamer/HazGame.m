@@ -11,6 +11,7 @@
 #import "GMRClient.h"
 #import "GMRAuthenticationController.h"
 #import "GMRMainController.h"
+#import "GMRNavigationController.h"
 
 GMRClient * kGamerApi = nil;
 
@@ -23,7 +24,7 @@ GMRClient * kGamerApi = nil;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-	if(YES)//[self hasAuthenticatedUser])
+	if([self hasAuthenticatedUser])
 	{
 		[self initializeApplicationFlow];
 	}
@@ -39,8 +40,14 @@ GMRClient * kGamerApi = nil;
 - (void)initializeAuthenticationFlow
 {
 	kGamerApi = [[GMRClient alloc] init];
-	authenticationController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
+	GMRAuthenticationController * loginController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
+	
+	authenticationController = [[GMRNavigationController alloc] initWithRootViewController:loginController];
+	loginController.gmrNavigationController = authenticationController;
+	
+	[authenticationController setNavigationBarHidden:YES animated:NO];
 	[self.window addSubview:authenticationController.view];
+	
 }
 
 - (void)initializeApplicationFlow
