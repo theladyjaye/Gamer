@@ -11,11 +11,14 @@
 #import "OverviewController+TableView.h"
 #import "GMRGlobals.h"
 #import "GMRCreateGameController.h"
+#import "GMRLabel.h"
+#import "UIButton+GMRButtonTypes.h"
+#import "GMRNoneView.h"
 
 @implementation OverviewController
 @synthesize matchesTable;
 
--(IBAction)createGame
+-(void)createGame
 {
 	GMRCreateGameController * controller = [[GMRCreateGameController alloc] initWithNibName:nil
 																					 bundle:nil];
@@ -29,8 +32,25 @@
 	[controller release];
 }
 
+- (void)noMatchesScheduled
+{
+	noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
+	[self.view addSubview:noneView];
+	[noneView release];
+}
+
 - (void)viewDidLoad 
 {		
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Scheduled"];
+	
+	UIButton * addMatchButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeAdd];
+	[addMatchButton addTarget:self action:@selector(createGame) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * addMatch = [[UIBarButtonItem alloc] initWithCustomView:addMatchButton];
+	
+	[self.navigationItem setRightBarButtonItem:addMatch animated:YES];
+	[addMatch release];
+	
 	// cell height is set to 92 - Image components = 91 + 1 for seperator
 	matchesTable.separatorColor = [UIColor blackColor];
 	[self matchesTableRefresh];

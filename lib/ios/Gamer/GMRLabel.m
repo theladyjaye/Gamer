@@ -12,7 +12,7 @@
 @implementation GMRLabel
 + (id)titleLabelWithString:(NSString *)value
 {
-	GMRLabel * label      = [[GMRLabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+	GMRLabel * label      = [[GMRLabel alloc] initWithFrame:CGRectZero];
 	label.backgroundColor = [UIColor clearColor];
 	label.textAlignment   = UITextAlignmentCenter;
 	label.textColor       = [UIColor whiteColor];
@@ -20,6 +20,7 @@
 	label.shadowOffset    = CGSizeMake(0, 1);
 	label.font            = [UIFont fontWithName:@"HelveticaNeue" size:18.0];
 	label.text            = value;
+	[label sizeToFit];
 	
 	return [label autorelease];
 	

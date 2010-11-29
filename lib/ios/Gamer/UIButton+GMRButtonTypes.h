@@ -10,6 +10,7 @@
 
 enum
 {
+	GMRButtonTypeAdd,
 	GMRButtonTypeBack,
 	GMRButtonTypeCancel,
 	GMRButtonTypeCreate,

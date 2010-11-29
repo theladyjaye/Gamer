@@ -11,8 +11,10 @@
 @interface OverviewController : GMRViewController {
 	UITableView * matchesTable;
 	NSMutableArray * matches;
+	UIView * noneView;
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 
--(IBAction)createGame;
+- (void)createGame;
+- (void)noMatchesScheduled;
 @end

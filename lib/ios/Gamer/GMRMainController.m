@@ -55,13 +55,22 @@ static UINavigationController * currentNavigationController;
 	UINavigationController * navController = [self.tabBarController.viewControllers objectAtIndex:0];
 	UINavigationBar * navigationBar = navController.navigationBar;
 	
-	[UIView beginAnimations:@"tabBarTransition" context:nil];
-	[UIView setAnimationDelay:0.15];
-	[UIView setAnimationDuration:0.25];
-	self.tabBarController.tabBar.transform = CGAffineTransformIdentity;
-	navigationBar.transform = CGAffineTransformIdentity;
-	[UIView commitAnimations];
+	UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
+	navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
+	navigationBarShadow.transform     = CGAffineTransformMakeTranslation(0.0, -64.0);
 	
+	[navController.view addSubview:navigationBarShadow];
+	[navigationBarShadow release];
+	
+	[UIView animateWithDuration:0.25 
+						  delay:0.15 
+						options:UIViewAnimationCurveEaseOut 
+					 animations:^{
+						 self.tabBarController.tabBar.transform = CGAffineTransformIdentity;
+						 navigationBar.transform = CGAffineTransformIdentity;
+						 navigationBarShadow.transform = CGAffineTransformIdentity;
+					 } 
+					 completion:NULL];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

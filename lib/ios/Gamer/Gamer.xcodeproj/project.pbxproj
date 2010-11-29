@@ -190,6 +190,27 @@
 		D7D6B49C12A317E3004FD6F6 /* ButtonNewAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B49412A317E3004FD6F6 /* ButtonNewAccount@2x.png */; };
 		D7D6B52E12A32094004FD6F6 /* UIButton+GMRButtonTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6B52D12A32094004FD6F6 /* UIButton+GMRButtonTypes.m */; };
 		D7D6B65312A330B7004FD6F6 /* Background1Up.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B65212A330B7004FD6F6 /* Background1Up.png */; };
+		D7D6B69512A34395004FD6F6 /* Background1Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B69112A34395004FD6F6 /* Background1Up@2x.png */; };
+		D7D6B69612A34395004FD6F6 /* BackgroundController@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B69212A34395004FD6F6 /* BackgroundController@2x.png */; };
+		D7D6B69712A34395004FD6F6 /* NavigationBarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B69312A34395004FD6F6 /* NavigationBarBackground@2x.png */; };
+		D7D6B69812A34395004FD6F6 /* NavigationBarBackgroundShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B69412A34395004FD6F6 /* NavigationBarBackgroundShadow@2x.png */; };
+		D7D6B70B12A34A58004FD6F6 /* ButtonAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B70912A34A58004FD6F6 /* ButtonAdd.png */; };
+		D7D6B70C12A34A58004FD6F6 /* ButtonAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B70A12A34A58004FD6F6 /* ButtonAdd@2x.png */; };
+		D7D6B73612A34C7D004FD6F6 /* GMRNoneView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D6B73512A34C7D004FD6F6 /* GMRNoneView.m */; };
+		D7D6B7CB12A356EA004FD6F6 /* BackgroundMatchCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B7CA12A356EA004FD6F6 /* BackgroundMatchCell.png */; };
+		D7D6B81F12A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81312A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png */; };
+		D7D6B82012A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81412A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png */; };
+		D7D6B82112A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81512A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2.png */; };
+		D7D6B82212A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81612A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2@2x.png */; };
+		D7D6B82312A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81712A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3.png */; };
+		D7D6B82412A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81812A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3@2x.png */; };
+		D7D6B82512A35E3B004FD6F6 /* PlatformColorHorizontalSteam.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81912A35E3B004FD6F6 /* PlatformColorHorizontalSteam.png */; };
+		D7D6B82612A35E3B004FD6F6 /* PlatformColorHorizontalSteam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81A12A35E3B004FD6F6 /* PlatformColorHorizontalSteam@2x.png */; };
+		D7D6B82712A35E3B004FD6F6 /* PlatformColorHorizontalWii.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81B12A35E3B004FD6F6 /* PlatformColorHorizontalWii.png */; };
+		D7D6B82812A35E3B004FD6F6 /* PlatformColorHorizontalWii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81C12A35E3B004FD6F6 /* PlatformColorHorizontalWii@2x.png */; };
+		D7D6B82912A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81D12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png */; };
+		D7D6B82A12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B81E12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png */; };
+		D7D6B84212A36351004FD6F6 /* BackgroundMatchCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B84112A36351004FD6F6 /* BackgroundMatchCell@2x.png */; };
 		D7D8CCBC1293274800A00E18 /* GMRPlayersForMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */; };
 		D7D8CCBF12932A4B00A00E18 /* GMRPlayerListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D8CCBE12932A4B00A00E18 /* GMRPlayerListCell.m */; };
 		D7D8CCC112932A7E00A00E18 /* GMRPlayerListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D8CCC012932A7E00A00E18 /* GMRPlayerListCell.xib */; };
@@ -509,6 +530,28 @@
 		D7D6B52C12A32094004FD6F6 /* UIButton+GMRButtonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GMRButtonTypes.h"; sourceTree = "<group>"; };
 		D7D6B52D12A32094004FD6F6 /* UIButton+GMRButtonTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GMRButtonTypes.m"; sourceTree = "<group>"; };
 		D7D6B65212A330B7004FD6F6 /* Background1Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background1Up.png; path = Images/Light/Background1Up.png; sourceTree = "<group>"; };
+		D7D6B69112A34395004FD6F6 /* Background1Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background1Up@2x.png"; path = "Images/Light/Background1Up@2x.png"; sourceTree = "<group>"; };
+		D7D6B69212A34395004FD6F6 /* BackgroundController@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundController@2x.png"; path = "Images/Light/BackgroundController@2x.png"; sourceTree = "<group>"; };
+		D7D6B69312A34395004FD6F6 /* NavigationBarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavigationBarBackground@2x.png"; path = "Images/Light/NavigationBarBackground@2x.png"; sourceTree = "<group>"; };
+		D7D6B69412A34395004FD6F6 /* NavigationBarBackgroundShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NavigationBarBackgroundShadow@2x.png"; path = "Images/Light/NavigationBarBackgroundShadow@2x.png"; sourceTree = "<group>"; };
+		D7D6B70912A34A58004FD6F6 /* ButtonAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonAdd.png; path = Images/Light/ButtonAdd.png; sourceTree = "<group>"; };
+		D7D6B70A12A34A58004FD6F6 /* ButtonAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonAdd@2x.png"; path = "Images/Light/ButtonAdd@2x.png"; sourceTree = "<group>"; };
+		D7D6B73412A34C7D004FD6F6 /* GMRNoneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRNoneView.h; sourceTree = "<group>"; };
+		D7D6B73512A34C7D004FD6F6 /* GMRNoneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRNoneView.m; sourceTree = "<group>"; };
+		D7D6B7CA12A356EA004FD6F6 /* BackgroundMatchCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundMatchCell.png; path = Images/Light/BackgroundMatchCell.png; sourceTree = "<group>"; };
+		D7D6B81312A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalBattleNet.png; path = Images/Light/PlatformColorHorizontalBattleNet.png; sourceTree = "<group>"; };
+		D7D6B81412A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalBattleNet@2x.png"; path = "Images/Light/PlatformColorHorizontalBattleNet@2x.png"; sourceTree = "<group>"; };
+		D7D6B81512A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalPlaystation2.png; path = Images/Light/PlatformColorHorizontalPlaystation2.png; sourceTree = "<group>"; };
+		D7D6B81612A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalPlaystation2@2x.png"; path = "Images/Light/PlatformColorHorizontalPlaystation2@2x.png"; sourceTree = "<group>"; };
+		D7D6B81712A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalPlaystation3.png; path = Images/Light/PlatformColorHorizontalPlaystation3.png; sourceTree = "<group>"; };
+		D7D6B81812A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalPlaystation3@2x.png"; path = "Images/Light/PlatformColorHorizontalPlaystation3@2x.png"; sourceTree = "<group>"; };
+		D7D6B81912A35E3B004FD6F6 /* PlatformColorHorizontalSteam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalSteam.png; path = Images/Light/PlatformColorHorizontalSteam.png; sourceTree = "<group>"; };
+		D7D6B81A12A35E3B004FD6F6 /* PlatformColorHorizontalSteam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalSteam@2x.png"; path = "Images/Light/PlatformColorHorizontalSteam@2x.png"; sourceTree = "<group>"; };
+		D7D6B81B12A35E3B004FD6F6 /* PlatformColorHorizontalWii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalWii.png; path = Images/Light/PlatformColorHorizontalWii.png; sourceTree = "<group>"; };
+		D7D6B81C12A35E3B004FD6F6 /* PlatformColorHorizontalWii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalWii@2x.png"; path = "Images/Light/PlatformColorHorizontalWii@2x.png"; sourceTree = "<group>"; };
+		D7D6B81D12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlatformColorHorizontalXbox360.png; path = Images/Light/PlatformColorHorizontalXbox360.png; sourceTree = "<group>"; };
+		D7D6B81E12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PlatformColorHorizontalXbox360@2x.png"; path = "Images/Light/PlatformColorHorizontalXbox360@2x.png"; sourceTree = "<group>"; };
+		D7D6B84112A36351004FD6F6 /* BackgroundMatchCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundMatchCell@2x.png"; path = "Images/Light/BackgroundMatchCell@2x.png"; sourceTree = "<group>"; };
 		D7D8CCBA1293274800A00E18 /* GMRPlayersForMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayersForMatch.h; sourceTree = "<group>"; };
 		D7D8CCBB1293274800A00E18 /* GMRPlayersForMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlayersForMatch.m; sourceTree = "<group>"; };
 		D7D8CCBD12932A4B00A00E18 /* GMRPlayerListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayerListCell.h; sourceTree = "<group>"; };
@@ -752,6 +795,26 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7D6B84112A36351004FD6F6 /* BackgroundMatchCell@2x.png */,
+				D7D6B81312A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png */,
+				D7D6B81412A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png */,
+				D7D6B81512A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2.png */,
+				D7D6B81612A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2@2x.png */,
+				D7D6B81712A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3.png */,
+				D7D6B81812A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3@2x.png */,
+				D7D6B81912A35E3B004FD6F6 /* PlatformColorHorizontalSteam.png */,
+				D7D6B81A12A35E3B004FD6F6 /* PlatformColorHorizontalSteam@2x.png */,
+				D7D6B81B12A35E3B004FD6F6 /* PlatformColorHorizontalWii.png */,
+				D7D6B81C12A35E3B004FD6F6 /* PlatformColorHorizontalWii@2x.png */,
+				D7D6B81D12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png */,
+				D7D6B81E12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png */,
+				D7D6B7CA12A356EA004FD6F6 /* BackgroundMatchCell.png */,
+				D7D6B70912A34A58004FD6F6 /* ButtonAdd.png */,
+				D7D6B70A12A34A58004FD6F6 /* ButtonAdd@2x.png */,
+				D7D6B69112A34395004FD6F6 /* Background1Up@2x.png */,
+				D7D6B69212A34395004FD6F6 /* BackgroundController@2x.png */,
+				D7D6B69312A34395004FD6F6 /* NavigationBarBackground@2x.png */,
+				D7D6B69412A34395004FD6F6 /* NavigationBarBackgroundShadow@2x.png */,
 				D7D6B65212A330B7004FD6F6 /* Background1Up.png */,
 				D7D6B48D12A317E3004FD6F6 /* ButtonCancel.png */,
 				D7D6B48E12A317E3004FD6F6 /* ButtonCancel@2x.png */,
@@ -1220,6 +1283,8 @@
 				D7EEAD85128A11BF0022AF4E /* OverviewController.xib */,
 				D7C33D9F1295677A00B923AE /* OverviewController+TableView.h */,
 				D7C33DA01295677A00B923AE /* OverviewController+TableView.m */,
+				D7D6B73412A34C7D004FD6F6 /* GMRNoneView.h */,
+				D7D6B73512A34C7D004FD6F6 /* GMRNoneView.m */,
 			);
 			name = Overview;
 			sourceTree = "<group>";
@@ -1545,6 +1610,26 @@
 				D7D6B49B12A317E3004FD6F6 /* ButtonNewAccount.png in Resources */,
 				D7D6B49C12A317E3004FD6F6 /* ButtonNewAccount@2x.png in Resources */,
 				D7D6B65312A330B7004FD6F6 /* Background1Up.png in Resources */,
+				D7D6B69512A34395004FD6F6 /* Background1Up@2x.png in Resources */,
+				D7D6B69612A34395004FD6F6 /* BackgroundController@2x.png in Resources */,
+				D7D6B69712A34395004FD6F6 /* NavigationBarBackground@2x.png in Resources */,
+				D7D6B69812A34395004FD6F6 /* NavigationBarBackgroundShadow@2x.png in Resources */,
+				D7D6B70B12A34A58004FD6F6 /* ButtonAdd.png in Resources */,
+				D7D6B70C12A34A58004FD6F6 /* ButtonAdd@2x.png in Resources */,
+				D7D6B7CB12A356EA004FD6F6 /* BackgroundMatchCell.png in Resources */,
+				D7D6B81F12A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png in Resources */,
+				D7D6B82012A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png in Resources */,
+				D7D6B82112A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2.png in Resources */,
+				D7D6B82212A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation2@2x.png in Resources */,
+				D7D6B82312A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3.png in Resources */,
+				D7D6B82412A35E3B004FD6F6 /* PlatformColorHorizontalPlaystation3@2x.png in Resources */,
+				D7D6B82512A35E3B004FD6F6 /* PlatformColorHorizontalSteam.png in Resources */,
+				D7D6B82612A35E3B004FD6F6 /* PlatformColorHorizontalSteam@2x.png in Resources */,
+				D7D6B82712A35E3B004FD6F6 /* PlatformColorHorizontalWii.png in Resources */,
+				D7D6B82812A35E3B004FD6F6 /* PlatformColorHorizontalWii@2x.png in Resources */,
+				D7D6B82912A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png in Resources */,
+				D7D6B82A12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png in Resources */,
+				D7D6B84212A36351004FD6F6 /* BackgroundMatchCell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1635,6 +1720,7 @@
 				D70B450112A1D27A00535D03 /* GMRNavigationController.m in Sources */,
 				D7D6B34512A2F6D7004FD6F6 /* GMRLabel.m in Sources */,
 				D7D6B52E12A32094004FD6F6 /* UIButton+GMRButtonTypes.m in Sources */,
+				D7D6B73612A34C7D004FD6F6 /* GMRNoneView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

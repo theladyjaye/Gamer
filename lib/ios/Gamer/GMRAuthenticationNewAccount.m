@@ -145,7 +145,7 @@
 			 passwordVerify:passwordConfirm.text 
 			   withCallback:^(BOOL ok, NSDictionary * response){
 				   
-				   if(YES)//ok)
+				   if(ok)
 				   {
 					   dispatch_async(dispatch_get_main_queue(), ^{
 						   [self createSucceeded];

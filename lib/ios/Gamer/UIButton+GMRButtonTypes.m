@@ -19,6 +19,11 @@
 	
 	switch (buttonType) 
 	{
+		case GMRButtonTypeAdd:
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonAdd" ofType:@"png"];
+			rect = CGRectMake(0, 0, 34, 30);
+			break;
+			
 		case GMRButtonTypeBack:
 			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
 			//rect = CGRectMake(0, 0, 111, 30);

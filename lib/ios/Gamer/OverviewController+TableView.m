@@ -57,12 +57,14 @@
 			 else 
 			 {
 				 matches = nil;
+				 dispatch_async(dispatch_get_main_queue(), ^{[self noMatchesScheduled];});
 			 }
 
 		 }
 		 else 
 		 {
 			 NSLog(@"%@", response);
+			 dispatch_async(dispatch_get_main_queue(), ^{[self noMatchesScheduled];});
 		 }
 
 	 }];
@@ -94,7 +96,7 @@
 	{
         //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
 		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRMatchListCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = (GMRMatchListCell *)[nib objectAtIndex:0];
         //self.tvCell = nil;
     }
     
@@ -118,9 +120,7 @@
 	cell.label.text   = item.label;
 	cell.date.text    = [NSDate gamerScheduleTimeString:item.scheduled_time];
 	cell.game.text    = item.game.label;
-	cell.players.text = [NSString stringWithFormat:@"%i", item.maxPlayers];
-	cell.mode.text    = item.mode;
-	
+	cell.platform     = item.game.platform;
     return cell;
 }
 
