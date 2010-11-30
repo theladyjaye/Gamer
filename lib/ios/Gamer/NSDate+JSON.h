@@ -14,5 +14,6 @@
 + (NSDate *)dateWithJSONString:(NSString *)string;
 + (NSString *)dateToJSONString:(NSDate *)date;
 + (NSString *)gamerScheduleTimeString:(NSDate *)scheduled_time;
++ (NSString *)relativeTime:(NSDate *)date;
 
 @end

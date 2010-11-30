@@ -91,36 +91,17 @@
     static NSString *CellIdentifier = @"MatchListCell";
     
 	GMRMatchListCell *cell = (GMRMatchListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) 
 	{
-        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRMatchListCell" owner:self options:nil];
-        cell = (GMRMatchListCell *)[nib objectAtIndex:0];
-        //self.tvCell = nil;
+		// nib is there for coordinate reference only.
+		cell = [[[GMRMatchListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-	 GMRMatch * item = [matches objectAtIndex:indexPath.row];
-	 //NSDictionary * item = [matches objectAtIndex:indexPath.row];
-	 //NSDictionary * game = [item objectForKey:@"game"];
+	GMRMatch * item = [matches objectAtIndex:indexPath.row];
 	 
-	 //NSDate * scheduled_time = [NSDate dateWithJSONString:[item objectForKey:@"scheduled_time"]];
-	 /*NSDate * date = [NSDate dateWithJSONString:scheduled_time];
-	 
-	 NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
-	 [formatter setTimeZone:[NSTimeZone localTimeZone]];
-	 
-	 // TODO: nned to let the user configure how they want their time.
-	 [formatter setDateFormat:@"EEE, LLL dd hh:mm a"];
-	 NSString * displayDate = [formatter stringFromDate:date];
-	 [formatter release];
-	  */
-	 
-	//NSLog(@"%@", [[item objectForKey:@"maxPlayers"] class]);
-	cell.label.text   = item.label;
-	cell.date.text    = [NSDate gamerScheduleTimeString:item.scheduled_time];
-	cell.game.text    = item.game.label;
-	cell.platform     = item.game.platform;
+	cell.labelString   = item.label;
+	cell.gameString    = item.game.label;
+	cell.platform      = item.game.platform;
+	cell.dateString    = [NSDate relativeTime:item.scheduled_time];
     return cell;
 }
 

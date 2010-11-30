@@ -8,22 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "GMRTypes.h"
+#import "ABTableViewCell.h"
 
-@interface GMRMatchListCell : UITableViewCell {
-	UILabel * label;
-	UILabel * game;
-	UILabel * date;
-	UILabel * platformLabel;
-	UIImageView * platformColors;
+@interface GMRMatchListCell : ABTableViewCell {
+	NSString * labelString;
+	NSString * gameString;
+	NSString * dateString;
+	NSString * platformString;
+	UIImage * platformColors;
 	GMRPlatform platform;
 	
 }
 
-@property(nonatomic, retain)IBOutlet UILabel * label;
-@property(nonatomic, retain)IBOutlet UILabel * game;
-@property(nonatomic, retain)IBOutlet UILabel * date;
-@property(nonatomic, retain)IBOutlet UILabel * platformLabel;
-@property(nonatomic, retain)IBOutlet UIImageView * platformColors;
+@property(nonatomic, retain) NSString * labelString;
+@property(nonatomic, retain) NSString * gameString;
+@property(nonatomic, retain) NSString * dateString;
+@property(nonatomic, retain) NSString * platformString;
+@property(nonatomic, retain) UIImage * platformColors;
 @property(nonatomic, assign) GMRPlatform platform;
 
 @end

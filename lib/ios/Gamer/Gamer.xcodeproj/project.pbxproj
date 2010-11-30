@@ -125,6 +125,8 @@
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
 		D7B41E081287ABD0005BD0B4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E061287ABD0005BD0B4 /* Icon.png */; };
 		D7B41E091287ABD0005BD0B4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41E071287ABD0005BD0B4 /* Icon@2x.png */; };
+		D7B5071012A4B96E005F2413 /* BackgroundMatchCellSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B5070F12A4B96E005F2413 /* BackgroundMatchCellSelected.png */; };
+		D7B507E612A4D096005F2413 /* ABTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B507E512A4D096005F2413 /* ABTableViewCell.m */; };
 		D7B7280E128226F100419F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		D7B728141282270A00419F60 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90E3128086EE00D6C442 /* CoreGraphics.framework */; };
 		D7B728171282271D00419F60 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B728161282271D00419F60 /* UIKit.framework */; };
@@ -460,6 +462,9 @@
 		D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D7B41E061287ABD0005BD0B4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D7B41E071287ABD0005BD0B4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		D7B5070F12A4B96E005F2413 /* BackgroundMatchCellSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundMatchCellSelected.png; path = Images/Light/BackgroundMatchCellSelected.png; sourceTree = "<group>"; };
+		D7B507E412A4D096005F2413 /* ABTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABTableViewCell.h; sourceTree = "<group>"; };
+		D7B507E512A4D096005F2413 /* ABTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABTableViewCell.m; sourceTree = "<group>"; };
 		D7B7280B128226E700419F60 /* libYAJL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYAJL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7B728161282271D00419F60 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D7B7281C1282275A00419F60 /* yajl_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yajl_common.h; sourceTree = "<group>"; };
@@ -795,6 +800,7 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7B5070F12A4B96E005F2413 /* BackgroundMatchCellSelected.png */,
 				D7D6B84112A36351004FD6F6 /* BackgroundMatchCell@2x.png */,
 				D7D6B81312A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png */,
 				D7D6B81412A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet@2x.png */,
@@ -1039,6 +1045,8 @@
 				D7AFF524128A693200CF1A07 /* NSDate+JSON.m */,
 				D7D6B52C12A32094004FD6F6 /* UIButton+GMRButtonTypes.h */,
 				D7D6B52D12A32094004FD6F6 /* UIButton+GMRButtonTypes.m */,
+				D7B507E412A4D096005F2413 /* ABTableViewCell.h */,
+				D7B507E512A4D096005F2413 /* ABTableViewCell.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1630,6 +1638,7 @@
 				D7D6B82912A35E3B004FD6F6 /* PlatformColorHorizontalXbox360.png in Resources */,
 				D7D6B82A12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png in Resources */,
 				D7D6B84212A36351004FD6F6 /* BackgroundMatchCell@2x.png in Resources */,
+				D7B5071012A4B96E005F2413 /* BackgroundMatchCellSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1721,6 +1730,7 @@
 				D7D6B34512A2F6D7004FD6F6 /* GMRLabel.m in Sources */,
 				D7D6B52E12A32094004FD6F6 /* UIButton+GMRButtonTypes.m in Sources */,
 				D7D6B73612A34C7D004FD6F6 /* GMRNoneView.m in Sources */,
+				D7B507E612A4D096005F2413 /* ABTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

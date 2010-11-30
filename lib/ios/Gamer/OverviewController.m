@@ -57,6 +57,11 @@
 	[super viewDidLoad];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+}
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

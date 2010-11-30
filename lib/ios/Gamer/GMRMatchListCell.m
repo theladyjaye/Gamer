@@ -9,15 +9,90 @@
 #import "GMRMatchListCell.h"
 #import "GMRTypes.h"
 
-@implementation GMRMatchListCell
-@synthesize label, game, date, platform, platformLabel, platformColors;
+static UIImage* background;
+static UIImage* backgroundSelected;
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated 
+@implementation GMRMatchListCell
+@synthesize labelString, gameString, dateString, platform, platformString, platformColors;
+
++(void)initialize
 {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state.
+	background         = [UIImage imageNamed:@"BackgroundMatchCell.png"];
+	backgroundSelected = [UIImage imageNamed:@"BackgroundMatchCellSelected.png"];
 }
 
+- (void)drawContentView:(CGRect)rect highlighted:(BOOL)highlighted 
+{
+	CGContextRef context = UIGraphicsGetCurrentContext();
+	
+	UIFont * gameFont      = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0];
+	UIFont * matchFont     = [UIFont fontWithName:@"HelveticaNeue" size:11.0];
+	UIFont * timeFont      = [UIFont fontWithName:@"HelveticaNeue-Italic" size:10.0];
+	UIFont * platformFont  = [UIFont fontWithName:@"HelveticaNeue" size:10.0];
+	UIColor * fontColor    = [UIColor colorWithRed:136.0/255.0 
+											 green:136.0/255.0 
+											  blue:136.0/255.0 
+											 alpha:1.0];
+	
+	switch (platform) 
+	{
+		case GMRPlatformBattleNet:
+			platformString   = @"bnet";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalBattleNet.png"];
+			break;
+			
+		case GMRPlatformPlaystation2:
+			platformString   = @"ps2";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalPlaystation2.png"];
+			break;
+			
+		case GMRPlatformPlaystation3:
+			platformString   = @"ps3";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalPlaystation3.png"];
+			break;
+			
+		case GMRPlatformSteam:
+			platformString   = @"stm";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalSteam.png"];
+			break;
+			
+		case GMRPlatformWii:
+			platformString   = @"wii";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalWii.png"];
+			break;
+			
+		case GMRPlatformXBox360:
+			platformString   = @"xbox";
+			platformColors = [UIImage imageNamed:@"PlatformColorHorizontalXbox360.png"];
+			break;
+			
+		default:
+			platformString = @"unkn";
+			break;
+	}
+	
+	[[UIColor whiteColor] set];
+	CGContextFillRect(context, rect);
+	
+	if(highlighted)
+		[backgroundSelected drawAtPoint:CGPointMake(0, 0)];
+	else
+		[background drawAtPoint:CGPointMake(0, 0)];
+	
+	[fontColor set];
+	[gameString drawAtPoint:CGPointMake(38.0, 10.0)  withFont:gameFont];
+	[labelString drawAtPoint:CGPointMake(38.0, 26.0) withFont:matchFont];
+	[dateString drawAtPoint:CGPointMake(38.0, 40.0)  withFont:timeFont];
+	
+	[platformColors drawAtPoint:CGPointMake(286, 55)];
+	
+    [platformString drawInRect:CGRectMake(286.0, 41.0, 34.0, 14.0) 
+			          withFont:platformFont 
+		         lineBreakMode:UILineBreakModeClip 
+			         alignment:UITextAlignmentCenter];
+
+}
+/*
 - (void)setPlatform:(GMRPlatform)value
 {
 	platform = value;
@@ -60,13 +135,13 @@
 	}
 }
 
-
+*/
 - (void)dealloc
 {
-	self.label = nil;
-	self.game = nil;
-	self.date = nil;
-	self.platformLabel = nil;
+	self.labelString    = nil;
+	self.gameString     = nil;
+	self.dateString     = nil;
+	self.platformString = nil;
 	self.platformColors = nil;
 	[super dealloc];
 }
