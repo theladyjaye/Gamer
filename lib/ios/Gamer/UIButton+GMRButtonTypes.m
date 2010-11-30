@@ -25,8 +25,8 @@
 			break;
 			
 		case GMRButtonTypeBack:
-			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
-			//rect = CGRectMake(0, 0, 111, 30);
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonBack" ofType:@"png"];
+			rect = CGRectMake(0, 0, 57, 30);
 			break;
 			
 		case GMRButtonTypeCancel:
@@ -65,8 +65,8 @@
 			break;
 			
 		case GMRButtonTypeShare:
-			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
-			//rect = CGRectMake(0, 0, 111, 30);
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonShare" ofType:@"png"];
+			rect = CGRectMake(0, 0, 64, 30);
 			break;			
 	}
 	

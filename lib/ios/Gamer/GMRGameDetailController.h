@@ -14,8 +14,6 @@
 	GMRMatch * match;
 	NSArray * playersForMatch;
 	UITableView * playersTableView;
-	UIButton * actionButton;
-	UIButton * shareButton;
 	
 	UILabel * gameLabel;
 	UILabel * descriptionLabel;
@@ -23,6 +21,8 @@
 	UILabel * scheduleTimeLabel;
 	
 	GMRPlatformBanner * platformBanner;
+	
+	UIToolbar * toolbar;
 }
 
 @property(nonatomic, retain) IBOutlet UITableView * playersTableView;

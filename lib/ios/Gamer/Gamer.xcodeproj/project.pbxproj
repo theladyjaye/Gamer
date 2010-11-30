@@ -106,6 +106,11 @@
 		D775C4E01287978700C72E64 /* HazGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4DF1287978700C72E64 /* HazGame.m */; };
 		D775C4E61287981500C72E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D775C4E51287981500C72E64 /* main.m */; };
 		D775C4E81287986C00C72E64 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D775C4E71287986C00C72E64 /* MainWindow.xib */; };
+		D778BF7B12A54D2E00FFD033 /* BackgroundMatchCellSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D778BF7A12A54D2E00FFD033 /* BackgroundMatchCellSelected@2x.png */; };
+		D778BFCB12A54FA800FFD033 /* ButtonBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D778BFC912A54FA800FFD033 /* ButtonBack.png */; };
+		D778BFCC12A54FA800FFD033 /* ButtonBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D778BFCA12A54FA800FFD033 /* ButtonBack@2x.png */; };
+		D778C03412A5548A00FFD033 /* ButtonShare.png in Resources */ = {isa = PBXBuildFile; fileRef = D778C03212A5548A00FFD033 /* ButtonShare.png */; };
+		D778C03512A5548A00FFD033 /* ButtonShare@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D778C03312A5548A00FFD033 /* ButtonShare@2x.png */; };
 		D77E1BF71288A27800B75D60 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
 		D77E1BF81288A27800B75D60 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
 		D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
@@ -439,6 +444,11 @@
 		D775C4E41287981500C72E64 /* HazGame_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame_Prefix.pch; sourceTree = "<group>"; };
 		D775C4E51287981500C72E64 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D775C4E71287986C00C72E64 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		D778BF7A12A54D2E00FFD033 /* BackgroundMatchCellSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundMatchCellSelected@2x.png"; path = "Images/Light/BackgroundMatchCellSelected@2x.png"; sourceTree = "<group>"; };
+		D778BFC912A54FA800FFD033 /* ButtonBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonBack.png; path = Images/Light/ButtonBack.png; sourceTree = "<group>"; };
+		D778BFCA12A54FA800FFD033 /* ButtonBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonBack@2x.png"; path = "Images/Light/ButtonBack@2x.png"; sourceTree = "<group>"; };
+		D778C03212A5548A00FFD033 /* ButtonShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonShare.png; path = Images/Light/ButtonShare.png; sourceTree = "<group>"; };
+		D778C03312A5548A00FFD033 /* ButtonShare@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonShare@2x.png"; path = "Images/Light/ButtonShare@2x.png"; sourceTree = "<group>"; };
 		D77E1BBB12889F3000B75D60 /* GMRGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGlobals.h; sourceTree = "<group>"; };
 		D7835647128C826300E19528 /* GMREmailFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMREmailFormatter.h; sourceTree = "<group>"; };
 		D7835648128C826300E19528 /* GMREmailFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMREmailFormatter.m; sourceTree = "<group>"; };
@@ -800,6 +810,11 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D778C03212A5548A00FFD033 /* ButtonShare.png */,
+				D778C03312A5548A00FFD033 /* ButtonShare@2x.png */,
+				D778BFC912A54FA800FFD033 /* ButtonBack.png */,
+				D778BFCA12A54FA800FFD033 /* ButtonBack@2x.png */,
+				D778BF7A12A54D2E00FFD033 /* BackgroundMatchCellSelected@2x.png */,
 				D7B5070F12A4B96E005F2413 /* BackgroundMatchCellSelected.png */,
 				D7D6B84112A36351004FD6F6 /* BackgroundMatchCell@2x.png */,
 				D7D6B81312A35E3B004FD6F6 /* PlatformColorHorizontalBattleNet.png */,
@@ -1639,6 +1654,11 @@
 				D7D6B82A12A35E3B004FD6F6 /* PlatformColorHorizontalXbox360@2x.png in Resources */,
 				D7D6B84212A36351004FD6F6 /* BackgroundMatchCell@2x.png in Resources */,
 				D7B5071012A4B96E005F2413 /* BackgroundMatchCellSelected.png in Resources */,
+				D778BF7B12A54D2E00FFD033 /* BackgroundMatchCellSelected@2x.png in Resources */,
+				D778BFCB12A54FA800FFD033 /* ButtonBack.png in Resources */,
+				D778BFCC12A54FA800FFD033 /* ButtonBack@2x.png in Resources */,
+				D778C03412A5548A00FFD033 /* ButtonShare.png in Resources */,
+				D778C03512A5548A00FFD033 /* ButtonShare@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

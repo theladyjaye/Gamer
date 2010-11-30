@@ -14,4 +14,5 @@
 }
 - (void)changeViews:(UIViewController *)controller;
 - (void)popViewController;
+- (void)backAction;
 @end

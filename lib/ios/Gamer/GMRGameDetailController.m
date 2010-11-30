@@ -17,6 +17,8 @@
 #import "GMRAlertView.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
+#import "GMRLabel.h"
+#import "UIButton+GMRButtonTypes.h"
 
 @implementation GMRGameDetailController
 @synthesize playersTableView, playersForMatch, platformBanner, gameLabel, descriptionLabel, modeLabel, scheduleTimeLabel;
@@ -33,11 +35,24 @@
 	return self;
 }
 - (void)viewDidLoad 
-{	
-	// cell height is set to 92 - Image components = 91 + 1 for seperator
-	//tableView.separatorColor = [UIColor blackColor];
-
-	self.navigationItem.title = @"Details";
+{
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Details"];
+	[self.navigationItem setHidesBackButton:YES];
+	
+	UIButton * backButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeBack];
+	[backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+	
+	[self.navigationItem setLeftBarButtonItem:backItem animated:YES];
+	[backItem release];
+	
+	toolbar              = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 323, 320, 44)];
+	toolbar.transform    = CGAffineTransformMakeTranslation(0.0, 44);
+	[self.view addSubview:toolbar];
+	
+	
+	/*
 	
 	platformBanner.platform = match.game.platform;
 	
@@ -82,30 +97,51 @@
 	[self.view addSubview:actionButton];
 	
 	[self playersTableRefresh];
-	
+	*/
 	[super viewDidLoad];
+	 
 	
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[self.navigationController setToolbarHidden:YES animated:YES];
+	
+	
+	[UIView animateWithDuration:0.15
+						  delay:0.0
+						options:UIViewAnimationOptionCurveEaseOut
+					 animations:^{
+						 toolbar.transform    = CGAffineTransformMakeTranslation(0.0, 44);
+					 } 
+					 completion:NULL];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[UIView animateWithDuration:0.23
+	[UIView animateWithDuration:0.15
 						  delay:0.0
 						options:UIViewAnimationOptionCurveEaseOut
 					 animations:^{
-						 shareButton.alpha      = 1.0;
-						 shareButton.transform  = CGAffineTransformIdentity; 
+						 
+						 toolbar.transform  = CGAffineTransformIdentity; 
 					 } 
-					 completion:NULL];
-	
-	[UIView animateWithDuration:0.23
-						  delay:0.05
-						options:UIViewAnimationOptionCurveEaseOut
-					 animations:^{
-						 actionButton.alpha     = 1.0;
-						 actionButton.transform = CGAffineTransformIdentity;
-					 } 
-					 completion:NULL];
+					 completion:^(BOOL finished){
+						 
+						 UIButton* actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+						 [actionButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+						 
+						 UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeShare];
+						 [shareButton addTarget:self action:@selector(shareGame) forControlEvents:UIControlEventTouchUpInside];
+						 
+						 UIBarButtonItem * action = [[UIBarButtonItem alloc] initWithCustomView:actionButton];
+						 UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+						 UIBarButtonItem * share = [[UIBarButtonItem alloc] initWithCustomView:shareButton];
+						 
+						 NSArray * items = [NSArray arrayWithObjects:action, spacer, share, nil];
+						 
+						 [toolbar setItems:items animated:YES];
+					 }];
 }
 
 -(void)shareGame
@@ -180,13 +216,13 @@
 	self.descriptionLabel = nil;
 	self.modeLabel = nil;
 	self.scheduleTimeLabel = nil;
+	
+	[toolbar release];
 }
 
 
 - (void)dealloc {
 	self.playersForMatch = nil;
-	[shareButton release];
-	[actionButton release];
 	[match release];
     [super dealloc];
 }

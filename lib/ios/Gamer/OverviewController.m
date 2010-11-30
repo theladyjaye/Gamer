@@ -51,8 +51,6 @@
 	[self.navigationItem setRightBarButtonItem:addMatch animated:YES];
 	[addMatch release];
 	
-	// cell height is set to 92 - Image components = 91 + 1 for seperator
-	matchesTable.separatorColor = [UIColor blackColor];
 	[self matchesTableRefresh];
 	[super viewDidLoad];
 }

@@ -22,4 +22,9 @@
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)backAction
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
