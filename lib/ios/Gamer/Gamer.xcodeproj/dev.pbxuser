@@ -272,6 +272,7 @@
 			D778C03F12A554B700FFD033 /* PBXTextBookmark */ = D778C03F12A554B700FFD033 /* PBXTextBookmark */;
 			D778C04112A554E600FFD033 /* PBXTextBookmark */ = D778C04112A554E600FFD033 /* PBXTextBookmark */;
 			D778C04212A554E900FFD033 /* PBXTextBookmark */ = D778C04212A554E900FFD033 /* PBXTextBookmark */;
+			D778C04312A555C000FFD033 /* PBXTextBookmark */ = D778C04312A555C000FFD033 /* PBXTextBookmark */;
 			D77E1C081288A39600B75D60 = D77E1C081288A39600B75D60 /* PBXTextBookmark */;
 			D783568B128C94F200E19528 = D783568B128C94F200E19528 /* PBXTextBookmark */;
 			D783568E128C94F200E19528 = D783568E128C94F200E19528 /* PBXTextBookmark */;
@@ -754,9 +755,9 @@
 	};
 	D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1377, 2808}}";
-			sepNavSelRange = "{3439, 0}";
-			sepNavVisRange = "{3064, 1516}";
+			sepNavIntBoundsRect = "{{0, 0}, {1377, 2821}}";
+			sepNavSelRange = "{4823, 0}";
+			sepNavVisRange = "{4580, 1349}";
 		};
 	};
 	D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */ = {
@@ -2826,7 +2827,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 6017;
@@ -2836,7 +2837,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 6017;
@@ -2846,7 +2847,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 6017;
@@ -2856,7 +2857,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 1299;
 		vrLoc = 5488;
@@ -2866,7 +2867,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 1280;
 		vrLoc = 5488;
@@ -2876,7 +2877,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 226";
 		rLen = 0;
-		rLoc = 6816;
+		rLoc = 6892;
 		rType = 0;
 		vrLen = 642;
 		vrLoc = 6017;
@@ -2920,6 +2921,16 @@
 		rType = 0;
 		vrLen = 1516;
 		vrLoc = 3064;
+	};
+	D778C04312A555C000FFD033 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 156";
+		rLen = 0;
+		rLoc = 4823;
+		rType = 0;
+		vrLen = 1349;
+		vrLoc = 4580;
 	};
 	D77E1BBB12889F3000B75D60 /* GMRGlobals.h */ = {
 		uiCtxt = {

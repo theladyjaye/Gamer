@@ -153,7 +153,7 @@
 {
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
 														 title:@"Cancel Game?" 
-													   message:@"Are you sure you wish to cancel this game?" 
+													   message:@"This is a serious moment. Are you sure you wish to cancel this game? All players will be removed and the game deleted." 
 													  delegate:self];
 	[alert show];
 	
