@@ -396,6 +396,21 @@
 			D7B5088F12A4DAC8005F2413 /* PBXTextBookmark */ = D7B5088F12A4DAC8005F2413 /* PBXTextBookmark */;
 			D7B5089012A4DAC8005F2413 /* PBXTextBookmark */ = D7B5089012A4DAC8005F2413 /* PBXTextBookmark */;
 			D7B5089112A4DACD005F2413 /* PBXTextBookmark */ = D7B5089112A4DACD005F2413 /* PBXTextBookmark */;
+			D7B5089412A4DAFA005F2413 /* PBXTextBookmark */ = D7B5089412A4DAFA005F2413 /* PBXTextBookmark */;
+			D7B5089512A4DAFA005F2413 /* PBXTextBookmark */ = D7B5089512A4DAFA005F2413 /* PBXTextBookmark */;
+			D7B5089712A4DB03005F2413 /* PBXTextBookmark */ = D7B5089712A4DB03005F2413 /* PBXTextBookmark */;
+			D7B5089A12A4DB63005F2413 /* PBXTextBookmark */ = D7B5089A12A4DB63005F2413 /* PBXTextBookmark */;
+			D7B5089B12A4DB63005F2413 /* PBXTextBookmark */ = D7B5089B12A4DB63005F2413 /* PBXTextBookmark */;
+			D7B5089C12A4DB63005F2413 /* PBXTextBookmark */ = D7B5089C12A4DB63005F2413 /* PBXTextBookmark */;
+			D7B5089D12A4DB63005F2413 /* PBXTextBookmark */ = D7B5089D12A4DB63005F2413 /* PBXTextBookmark */;
+			D7B5089F12A4DBA9005F2413 /* PBXTextBookmark */ = D7B5089F12A4DBA9005F2413 /* PBXTextBookmark */;
+			D7B508A012A4DBA9005F2413 /* PBXTextBookmark */ = D7B508A012A4DBA9005F2413 /* PBXTextBookmark */;
+			D7B508A512A4DBFA005F2413 /* PBXTextBookmark */ = D7B508A512A4DBFA005F2413 /* PBXTextBookmark */;
+			D7B508A612A4DBFA005F2413 /* PBXTextBookmark */ = D7B508A612A4DBFA005F2413 /* PBXTextBookmark */;
+			D7B508A712A4DBFA005F2413 /* PBXTextBookmark */ = D7B508A712A4DBFA005F2413 /* PBXTextBookmark */;
+			D7B508A812A4DBFA005F2413 /* PBXTextBookmark */ = D7B508A812A4DBFA005F2413 /* PBXTextBookmark */;
+			D7B508AA12A4DC1C005F2413 /* PBXTextBookmark */ = D7B508AA12A4DC1C005F2413 /* PBXTextBookmark */;
+			D7B508AB12A4DC2C005F2413 /* PBXTextBookmark */ = D7B508AB12A4DC2C005F2413 /* PBXTextBookmark */;
 			D7B7288912824A0600419F60 = D7B7288912824A0600419F60 /* PBXTextBookmark */;
 			D7B7288A12824A0600419F60 = D7B7288A12824A0600419F60 /* PBXTextBookmark */;
 			D7B7288B12824A0600419F60 = D7B7288B12824A0600419F60 /* PBXTextBookmark */;
@@ -840,7 +855,7 @@
 		ignoreCount = 0;
 		lineNumber = 84;
 		location = HazGame;
-		modificationTime = 312793757.340077;
+		modificationTime = 312794108.221314;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1298,7 +1313,7 @@
 		ignoreCount = 0;
 		lineNumber = 84;
 		location = HazGame;
-		modificationTime = 312793757.340649;
+		modificationTime = 312794108.222591;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1943,9 +1958,9 @@
 	};
 	D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1495, 1846}}";
-			sepNavSelRange = "{2144, 0}";
-			sepNavVisRange = "{1943, 751}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 1287}}";
+			sepNavSelRange = "{817, 0}";
+			sepNavVisRange = "{175, 1468}";
 		};
 	};
 	D79C06BE12982163000F6DAD /* GMRButton.h */ = {
@@ -2015,7 +2030,7 @@
 		ignoreCount = 0;
 		lineNumber = 93;
 		location = HazGame;
-		modificationTime = 312793757.341019;
+		modificationTime = 312794108.223358;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2391,7 +2406,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 56";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1205;
 		vrLoc = 0;
@@ -2401,7 +2416,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 0;
@@ -2411,7 +2426,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1089;
 		vrLoc = 0;
@@ -2431,7 +2446,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 880;
@@ -2441,7 +2456,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 48";
 		rLen = 0;
-		rLoc = 3614;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 365;
@@ -2451,7 +2466,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 39";
 		rLen = 0;
-		rLoc = 3354;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 230;
@@ -2475,7 +2490,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1605;
 		vrLoc = 26;
@@ -2485,7 +2500,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 26;
@@ -2505,7 +2520,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1573;
 		vrLoc = 26;
@@ -2515,7 +2530,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 26;
@@ -2525,7 +2540,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1246;
 		vrLoc = 26;
@@ -2535,7 +2550,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 26;
@@ -2545,7 +2560,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 768;
 		vrLoc = 175;
@@ -2555,7 +2570,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1248;
 		vrLoc = 26;
@@ -2565,7 +2580,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1234;
 		vrLoc = 26;
@@ -2575,7 +2590,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 770;
 		vrLoc = 175;
@@ -2585,7 +2600,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 26;
@@ -2595,7 +2610,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 18";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1236;
 		vrLoc = 26;
@@ -2605,7 +2620,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 24";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 595;
 		vrLoc = 175;
@@ -2615,7 +2630,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 24";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1118;
 		vrLoc = 26;
@@ -2625,7 +2640,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 24";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 26;
@@ -2635,7 +2650,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 24";
 		rLen = 0;
-		rLoc = 386;
+		rLoc = 321;
 		rType = 0;
 		vrLen = 966;
 		vrLoc = 46;
@@ -2645,7 +2660,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 645;
 		vrLoc = 175;
@@ -2655,7 +2670,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 26;
@@ -2665,7 +2680,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -2675,7 +2690,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 645;
 		vrLoc = 175;
@@ -2685,7 +2700,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 26;
@@ -2695,7 +2710,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -2705,7 +2720,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 175;
@@ -2715,7 +2730,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 146;
@@ -2725,7 +2740,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 26;
@@ -2735,7 +2750,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -2745,7 +2760,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 146;
@@ -2782,7 +2797,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -2832,7 +2847,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 146;
@@ -3196,7 +3211,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 17";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -3206,7 +3221,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 26;
@@ -3216,7 +3231,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 26;
@@ -3236,7 +3251,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 613;
 		vrLoc = 26;
@@ -3246,7 +3261,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1148;
 		vrLoc = 26;
@@ -3256,7 +3271,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 26;
@@ -3266,7 +3281,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 693;
 		vrLoc = 197;
@@ -3276,7 +3291,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 26;
@@ -3326,7 +3341,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 693;
 		vrLoc = 197;
@@ -3386,7 +3401,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 26;
@@ -3396,7 +3411,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 26;
@@ -3406,7 +3421,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 26;
@@ -3426,7 +3441,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 609;
 		vrLoc = 26;
@@ -3446,7 +3461,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 19";
 		rLen = 0;
-		rLoc = 2827;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1144;
 		vrLoc = 26;
@@ -3544,7 +3559,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 29";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1538;
 		vrLoc = 0;
@@ -3554,7 +3569,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 27";
 		rLen = 0;
-		rLoc = 754;
+		rLoc = 583;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 146;
@@ -3564,7 +3579,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 28";
 		rLen = 0;
-		rLoc = 830;
+		rLoc = 659;
 		rType = 0;
 		vrLen = 1871;
 		vrLoc = 146;
@@ -3574,7 +3589,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 29";
 		rLen = 0;
-		rLoc = 1002;
+		rLoc = 831;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 146;
@@ -3584,7 +3599,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 29";
 		rLen = 0;
-		rLoc = 922;
+		rLoc = 751;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 146;
@@ -3594,7 +3609,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 37";
 		rLen = 0;
-		rLoc = 2822;
+		rLoc = 2743;
 		rType = 0;
 		vrLen = 1919;
 		vrLoc = 146;
@@ -3604,7 +3619,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 37";
 		rLen = 0;
-		rLoc = 1149;
+		rLoc = 969;
 		rType = 0;
 		vrLen = 1932;
 		vrLoc = 145;
@@ -3624,7 +3639,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 16";
 		rLen = 0;
-		rLoc = 318;
+		rLoc = 253;
 		rType = 0;
 		vrLen = 1844;
 		vrLoc = 145;
@@ -3633,8 +3648,8 @@
 		isa = PBXTextBookmark;
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 31";
-		rLen = 11;
-		rLoc = 1051;
+		rLen = 0;
+		rLoc = 880;
 		rType = 0;
 		vrLen = 1912;
 		vrLoc = 0;
@@ -3664,8 +3679,8 @@
 		comments = "Expected ';' after expression";
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 20;
+		rLen = 0;
+		rLoc = 14;
 		rType = 1;
 	};
 	D7B5080C12A4D4C5005F2413 /* PBXTextBookmark */ = {
@@ -3673,7 +3688,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 23";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 322;
 		rType = 0;
 		vrLen = 1330;
 		vrLoc = 26;
@@ -3683,7 +3698,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 23";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 322;
 		rType = 0;
 		vrLen = 1327;
 		vrLoc = 26;
@@ -3703,7 +3718,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 23";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 322;
 		rType = 0;
 		vrLen = 729;
 		vrLoc = 26;
@@ -3743,7 +3758,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 92";
 		rLen = 0;
-		rLoc = 3994;
+		rLoc = 2786;
 		rType = 0;
 		vrLen = 1083;
 		vrLoc = 1429;
@@ -3753,7 +3768,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 43";
 		rLen = 0;
-		rLoc = 1149;
+		rLoc = 969;
 		rType = 0;
 		vrLen = 1333;
 		vrLoc = 559;
@@ -3763,7 +3778,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 45";
 		rLen = 0;
-		rLoc = 1149;
+		rLoc = 969;
 		rType = 0;
 		vrLen = 1372;
 		vrLoc = 559;
@@ -3773,7 +3788,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 84";
 		rLen = 0;
-		rLoc = 2621;
+		rLoc = 2542;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 1813;
@@ -3783,7 +3798,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 123";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1327;
 		vrLoc = 0;
@@ -3823,7 +3838,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 23";
 		rLen = 0;
-		rLoc = 559;
+		rLoc = 322;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 83;
@@ -3913,7 +3928,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 123";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1327;
 		vrLoc = 0;
@@ -3923,7 +3938,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1364;
 		vrLoc = 0;
@@ -3933,7 +3948,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1151;
 		vrLoc = 0;
@@ -3953,7 +3968,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 906;
+		rLoc = 735;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 405;
@@ -3963,7 +3978,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 906;
+		rLoc = 735;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 175;
@@ -3973,7 +3988,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 906;
+		rLoc = 735;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 175;
@@ -3983,7 +3998,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 955;
 		vrLoc = 405;
@@ -3993,7 +4008,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1475;
 		vrLoc = 175;
@@ -4003,7 +4018,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1461;
 		vrLoc = 175;
@@ -4013,7 +4028,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 82";
 		rLen = 0;
-		rLoc = 2567;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 558;
 		vrLoc = 2092;
@@ -4023,7 +4038,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 82";
 		rLen = 0;
-		rLoc = 2567;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1165;
 		vrLoc = 1854;
@@ -4033,7 +4048,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 82";
 		rLen = 0;
-		rLoc = 2567;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 1129;
 		vrLoc = 1854;
@@ -4043,7 +4058,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 933;
 		vrLoc = 559;
@@ -4053,7 +4068,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1535;
 		vrLoc = 261;
@@ -4063,7 +4078,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 261;
@@ -4073,7 +4088,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 30";
 		rLen = 0;
-		rLoc = 913;
+		rLoc = 742;
 		rType = 0;
 		vrLen = 933;
 		vrLoc = 559;
@@ -4083,7 +4098,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 75";
 		rLen = 0;
-		rLoc = 2213;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 1234;
 		vrLoc = 1393;
@@ -4093,7 +4108,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 75";
 		rLen = 0;
-		rLoc = 2213;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 1232;
 		vrLoc = 1393;
@@ -4103,7 +4118,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 75";
 		rLen = 0;
-		rLoc = 2213;
+		rLoc = 2033;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 1393;
@@ -4123,7 +4138,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 53";
 		rLen = 0;
-		rLoc = 1652;
+		rLoc = 1472;
 		rType = 0;
 		vrLen = 1043;
 		vrLoc = 1649;
@@ -4133,7 +4148,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 1140;
 		vrLoc = 1939;
@@ -4143,7 +4158,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 1136;
 		vrLoc = 1939;
@@ -4153,7 +4168,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 1939;
@@ -4163,7 +4178,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 1216;
 		vrLoc = 1653;
@@ -4173,7 +4188,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 1175;
 		vrLoc = 1653;
@@ -4183,7 +4198,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 1939;
@@ -4203,7 +4218,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 90";
 		rLen = 0;
-		rLoc = 2728;
+		rLoc = 2649;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 1488;
@@ -4213,7 +4228,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 71";
 		rLen = 0;
-		rLoc = 2144;
+		rLoc = 1964;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 1488;
@@ -4223,7 +4238,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 71";
 		rLen = 0;
-		rLoc = 2144;
+		rLoc = 1964;
 		rType = 0;
 		vrLen = 1242;
 		vrLoc = 1488;
@@ -4233,7 +4248,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 71";
 		rLen = 0;
-		rLoc = 2144;
+		rLoc = 1964;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 1939;
@@ -4243,7 +4258,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 56";
 		rLen = 0;
-		rLoc = 1738;
+		rLoc = 1558;
 		rType = 0;
 		vrLen = 1242;
 		vrLoc = 1488;
@@ -4283,7 +4298,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 71";
 		rLen = 0;
-		rLoc = 2144;
+		rLoc = 1964;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 1943;
@@ -4417,6 +4432,156 @@
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 755;
+	};
+	D7B5089412A4DAFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */;
+		name = "OverviewController+TableView.m: 29";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 1034;
+		vrLoc = 755;
+	};
+	D7B5089512A4DAFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */;
+		name = "OverviewController+TableView.m: 29";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 1033;
+		vrLoc = 755;
+	};
+	D7B5089712A4DB03005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */;
+		name = "OverviewController+TableView.m: 29";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 719;
+		vrLoc = 755;
+	};
+	D7B5089A12A4DB63005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */;
+		name = "OverviewController+TableView.m: 29";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 1071;
+		vrLoc = 157;
+	};
+	D7B5089B12A4DB63005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 56";
+		rLen = 0;
+		rLoc = 1558;
+		rType = 0;
+		vrLen = 1238;
+		vrLoc = 1492;
+	};
+	D7B5089C12A4DB63005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 19";
+		rLen = 0;
+		rLoc = 486;
+		rType = 0;
+		vrLen = 1275;
+		vrLoc = 1441;
+	};
+	D7B5089D12A4DB63005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 19";
+		rLen = 0;
+		rLoc = 486;
+		rType = 0;
+		vrLen = 1274;
+		vrLoc = 1441;
+	};
+	D7B5089F12A4DBA9005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */;
+		name = "OverviewController+TableView.m: 29";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 719;
+		vrLoc = 755;
+	};
+	D7B508A012A4DBA9005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 19";
+		rLen = 0;
+		rLoc = 486;
+		rType = 0;
+		vrLen = 661;
+		vrLoc = 1441;
+	};
+	D7B508A512A4DBFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */;
+		name = "GMRMatchListCell.h: 24";
+		rLen = 0;
+		rLoc = 537;
+		rType = 0;
+		vrLen = 759;
+		vrLoc = 0;
+	};
+	D7B508A612A4DBFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 91";
+		rLen = 0;
+		rLoc = 2746;
+		rType = 0;
+		vrLen = 1470;
+		vrLoc = 175;
+	};
+	D7B508A712A4DBFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 20";
+		rLen = 0;
+		rLoc = 515;
+		rType = 0;
+		vrLen = 1456;
+		vrLoc = 0;
+	};
+	D7B508A812A4DBFA005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 20";
+		rLen = 0;
+		rLoc = 515;
+		rType = 0;
+		vrLen = 1341;
+		vrLoc = 0;
+	};
+	D7B508AA12A4DC1C005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 20";
+		rLen = 0;
+		rLoc = 515;
+		rType = 0;
+		vrLen = 1007;
+		vrLoc = 449;
+	};
+	D7B508AB12A4DC2C005F2413 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
+		name = "GMRMatchListCell.m: 25";
+		rLen = 0;
+		rLoc = 817;
+		rType = 0;
+		vrLen = 1468;
+		vrLoc = 175;
 	};
 	D7B7280A128226E700419F60 /* YAJL */ = {
 		activeExec = 0;
@@ -4666,9 +4831,9 @@
 	};
 	D7C33DA01295677A00B923AE /* OverviewController+TableView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1168, 1599}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 1729}}";
 			sepNavSelRange = "{646, 0}";
-			sepNavVisRange = "{755, 1033}";
+			sepNavVisRange = "{755, 719}";
 		};
 	};
 	D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */ = {
@@ -5051,7 +5216,7 @@
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
 		name = "GMRMatchListCell.m: 56";
 		rLen = 0;
-		rLoc = 3891;
+		rLoc = 2746;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 0;

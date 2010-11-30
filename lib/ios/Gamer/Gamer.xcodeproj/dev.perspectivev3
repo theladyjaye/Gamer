@@ -302,8 +302,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>84</integer>
-									<integer>79</integer>
+									<integer>74</integer>
+									<integer>71</integer>
 									<integer>68</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -345,7 +345,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>OverviewController+TableView.m</string>
+								<string>GMRMatchListCell.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -353,11 +353,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>OverviewController+TableView.m</string>
+										<string>GMRMatchListCell.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7B5089112A4DACD005F2413</string>
+										<string>D7B508AB12A4DC2C005F2413</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -508,11 +508,11 @@
 											<string>D7B507ED12A4D2CD005F2413</string>
 											<string>D7B5081312A4D556005F2413</string>
 											<string>D7B5086112A4D90B005F2413</string>
-											<string>D7B5086F12A4D993005F2413</string>
-											<string>D7B5087712A4D9C1005F2413</string>
 											<string>D7B5088212A4DA1C005F2413</string>
 											<string>D7B5088A12A4DA9A005F2413</string>
-											<string>D7B5089012A4DAC8005F2413</string>
+											<string>D7B5089A12A4DB63005F2413</string>
+											<string>D7B508A512A4DBFA005F2413</string>
+											<string>D7B508AA12A4DC1C005F2413</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -812,7 +812,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>312793805.33603102</real>
+	<real>312794156.68641597</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -829,7 +829,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D7B5088E12A4DA9B005F2413</string>
 		<string>D7B506D612A4ADFD005F2413</string>
 		<string>D7B506CC12A4ADBD005F2413</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
