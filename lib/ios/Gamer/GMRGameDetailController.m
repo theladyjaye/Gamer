@@ -115,7 +115,7 @@
 	[platformColors release];
 	
 	
-	//[self playersTableRefresh];
+	[self playersTableRefresh];
 	
 	[super viewDidLoad];
 	 
@@ -124,6 +124,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+	[updateTimer invalidate];
 	/*
 	[self.navigationController setToolbarHidden:YES animated:YES];
 	
@@ -187,15 +188,27 @@
 						 [toolbar setItems:items animated:YES];
 						 
 						 howItWorksView.hidden = NO;
-						[UIView animateWithDuration:0.4
+						[UIView animateWithDuration:0.3
 											   delay:0.0
 											 options:UIViewAnimationOptionCurveEaseOut
 										  animations:^{
 											  howItWorksView.transform = CGAffineTransformIdentity;
+											  updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
+																							 target:self 
+																						   selector:@selector(updateCountdown) 
+																						   userInfo:nil 
+																							repeats:YES];
 										  } 
 										  completion:NULL];
 					}];
 }
+
+-(void)updateCountdown
+{
+	NSLog(@"Updating detail countdown");
+	self.scheduleTimeLabel.text = [NSDate relativeTime:match.scheduled_time];
+}
+
 
 -(void)shareGame
 {
@@ -254,6 +267,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

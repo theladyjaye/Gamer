@@ -89,16 +89,23 @@ typedef NSUInteger PlayerListCellStyle;
     
 	if (cell == nil) 
 	{
-		//cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRPlayerListCell" owner:self options:nil];
-        cell = [nib objectAtIndex:cellStyle];
+		cell = [[[GMRPlayerListCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusableId] autorelease];
+		//NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRPlayerListCell" owner:self options:nil];
+        //cell = [nib objectAtIndex:cellStyle];
     }
     
 	if(cellStyle == PlayerListCellStylePlayer)
 	{
-		cell.player.text = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
+		cell.player = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
 	}
+	else 
+	{
+		cell.player = @"-- Open --";
+	}
+
 	
+	//cell.player = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
+	//NSLog(@"%@", cell.player);
     return cell;
 }
 

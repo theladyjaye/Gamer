@@ -93,7 +93,7 @@
 
 - (void)beginCellUpdates
 {
-	updateTimer = [NSTimer scheduledTimerWithTimeInterval:10 
+	updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
 												   target:self 
 								                 selector:@selector(updateCellsCountdown) 
 								                 userInfo:nil 

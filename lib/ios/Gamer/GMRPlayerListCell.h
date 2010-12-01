@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ABTableViewCell.h"
 
-
-@interface GMRPlayerListCell : UITableViewCell {
-	UILabel * player;
+@interface GMRPlayerListCell : ABTableViewCell {
+	NSString * player;
 }
-@property(nonatomic, retain) IBOutlet UILabel * player;
+@property(nonatomic, retain)  NSString * player;
 @end

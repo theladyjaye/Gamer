@@ -88,11 +88,11 @@
 		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRPlayerListCell" owner:self options:nil];
 		cell = [nib objectAtIndex:0];
 		
-		cell.player.transform     = CGAffineTransformMakeTranslation((10.0 - cell.player.frame.origin.x), 0.0);
-		cell.player.textAlignment = UITextAlignmentLeft;
+		//cell.player.transform     = CGAffineTransformMakeTranslation((10.0 - cell.player.frame.origin.x), 0.0);
+		//cell.player.textAlignment = UITextAlignmentLeft;
 	}
 	
-	cell.player.text          = [[games objectAtIndex:indexPath.row] objectForKey:@"label"];
+	//cell.player.text          = [[games objectAtIndex:indexPath.row] objectForKey:@"label"];
 	
 	return cell;
 }

@@ -21,6 +21,7 @@
 	UILabel * scheduleTimeLabel;
 	UILabel * platformLabel;
 	UIView * howItWorksView;
+	NSTimer * updateTimer;
 	
 	UIToolbar * toolbar;
 }
