@@ -16,6 +16,7 @@
 	NSString * dateString;
 	NSString * platformString;
 	UIImage * platformColors;
+	NSDate * scheduled_time;
 	GMRPlatform platform;
 	
 }
@@ -25,6 +26,7 @@
 @property(nonatomic, retain) NSString * dateString;
 @property(nonatomic, retain) NSString * platformString;
 @property(nonatomic, retain) UIImage * platformColors;
+@property(nonatomic, retain) NSDate * scheduled_time;
 @property(nonatomic, assign) GMRPlatform platform;
 
 @end

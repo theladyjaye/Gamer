@@ -292,6 +292,7 @@
 								<string>D775C4E11287978C00C72E64</string>
 								<string>D7208A7D1292BECD009C0624</string>
 								<string>D795FDB6128FB3E50033F086</string>
+								<string>D7EEAD82128A11AF0022AF4E</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>034768DFFF38A50411DB9C8B</string>
@@ -300,18 +301,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>54</integer>
-									<integer>53</integer>
-									<integer>0</integer>
-								</array>
-								<array>
-									<integer>55</integer>
-									<integer>53</integer>
+									<integer>35</integer>
+									<integer>33</integer>
+									<integer>17</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 468}, {305, 861}}</string>
+							<string>{{0, 157}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -346,7 +344,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRGameDetailController.m</string>
+								<string>OverviewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -354,11 +352,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRGameDetailController.m</string>
+										<string>OverviewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7C0CE1B12A61A7500843E34</string>
+										<string>D7C0CEAE12A6232F00843E34</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -409,7 +407,6 @@
 											<string>D7C33E121295806100B923AE</string>
 											<string>D7C33E131295806100B923AE</string>
 											<string>D7C33E141295806100B923AE</string>
-											<string>D72033351296D11200860452</string>
 											<string>D7BE35C412978E45008E84EB</string>
 											<string>D7BE36EB1297A21B008E84EB</string>
 											<string>D746BE3312983EDD003ADC09</string>
@@ -469,7 +466,6 @@
 											<string>D72C7F9812A0C2ED00580653</string>
 											<string>D72C7FC012A0C51500580653</string>
 											<string>D72C7FC112A0C51500580653</string>
-											<string>D72C800012A0C77300580653</string>
 											<string>D72C801A12A0CAC800580653</string>
 											<string>D70B44DE12A1845F00535D03</string>
 											<string>D70B451112A1D46000535D03</string>
@@ -495,11 +491,7 @@
 											<string>D7B507ED12A4D2CD005F2413</string>
 											<string>D7B5081312A4D556005F2413</string>
 											<string>D7B5086112A4D90B005F2413</string>
-											<string>D7B5088212A4DA1C005F2413</string>
-											<string>D7B5089A12A4DB63005F2413</string>
 											<string>D778BF7012A54D0800FFD033</string>
-											<string>D778BF7112A54D0800FFD033</string>
-											<string>D778BFC312A54F8B00FFD033</string>
 											<string>D778BFEC12A5512C00FFD033</string>
 											<string>D778C01C12A552AC00FFD033</string>
 											<string>D7E2FDAA12A56C0200A7ADD9</string>
@@ -509,11 +501,17 @@
 											<string>D7C0CCA512A608B000843E34</string>
 											<string>D7C0CCA612A608B000843E34</string>
 											<string>D7C0CCDB12A60B5C00843E34</string>
-											<string>D7C0CCE812A60C3B00843E34</string>
-											<string>D7C0CCF312A60D0200843E34</string>
 											<string>D7C0CD4612A612AB00843E34</string>
-											<string>D7C0CD4712A612AB00843E34</string>
-											<string>D7C0CE1A12A61A7300843E34</string>
+											<string>D7C0CE2612A61C4300843E34</string>
+											<string>D7C0CE2712A61C4300843E34</string>
+											<string>D7C0CE2812A61C4300843E34</string>
+											<string>D7C0CE2B12A61C4300843E34</string>
+											<string>D7C0CE3412A61CFB00843E34</string>
+											<string>D7C0CE8812A6202900843E34</string>
+											<string>D7C0CE8F12A6209500843E34</string>
+											<string>D7C0CE9012A6209500843E34</string>
+											<string>D7C0CEA812A6228F00843E34</string>
+											<string>D7C0CEAD12A6232100843E34</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -813,7 +811,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>312875637.66327399</real>
+	<real>312877871.73553097</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>

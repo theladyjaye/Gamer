@@ -12,9 +12,13 @@
 	UITableView * matchesTable;
 	NSMutableArray * matches;
 	UIView * noneView;
+	NSTimer * updateTimer;
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 
 - (void)createGame;
 - (void)noMatchesScheduled;
+- (void)beginCellUpdates;
+- (void)endCellUpdates;
+- (void)updateCellsCountdown;
 @end

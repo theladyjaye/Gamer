@@ -8,9 +8,10 @@
 
 #import "GMRMatchListCell.h"
 #import "GMRTypes.h"
+#import "NSDate+JSON.h"
 
 @implementation GMRMatchListCell
-@synthesize labelString, gameString, dateString, platform, platformString, platformColors;
+@synthesize labelString, gameString, dateString, platform, platformString, platformColors, scheduled_time;
 
 - (void)drawContentView:(CGRect)rect highlighted:(BOOL)highlighted 
 {
@@ -27,6 +28,8 @@
 											 green:grayColor
 											  blue:grayColor
 											 alpha:1.0];
+	
+	self.dateString = [NSDate relativeTime:self.scheduled_time];
 	
 	switch (platform) 
 	{
@@ -97,6 +100,7 @@
 	self.dateString     = nil;
 	self.platformString = nil;
 	self.platformColors = nil;
+	self.scheduled_time = nil;
 	[super dealloc];
 }
 

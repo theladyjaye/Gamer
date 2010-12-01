@@ -14,6 +14,7 @@
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
 #import "GMRNoneView.h"
+#import "GMRMatchListCell.h"
 
 @implementation OverviewController
 @synthesize matchesTable;
@@ -51,13 +52,52 @@
 	[self.navigationItem setRightBarButtonItem:addMatch animated:YES];
 	[addMatch release];
 	
+	
+	
 	[self matchesTableRefresh];
 	[super viewDidLoad];
 }
 
+- (void)updateCellsCountdown
+{
+	NSArray * cells = [matchesTable visibleCells];
+	
+	if([cells count] > 0)
+	{
+		for(GMRMatchListCell * cell in cells)
+		{
+			[cell setNeedsDisplay];
+		}
+		
+		[matchesTable setNeedsDisplay];
+	}
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[self endCellUpdates];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
+	[self updateCellsCountdown];
+	[self beginCellUpdates];
 	[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+}
+
+- (void)endCellUpdates
+{
+	[updateTimer invalidate];
+	updateTimer = nil;
+}
+
+- (void)beginCellUpdates
+{
+	updateTimer = [NSTimer scheduledTimerWithTimeInterval:10 
+												   target:self 
+								                 selector:@selector(updateCellsCountdown) 
+								                 userInfo:nil 
+									              repeats:YES];
 }
 
 

@@ -52,7 +52,10 @@
 				
 				 
 				[matches retain];
-				dispatch_async(dispatch_get_main_queue(), ^{[matchesTable reloadData];});
+				dispatch_async(dispatch_get_main_queue(), ^{
+					
+					[matchesTable reloadData];
+				});
 			 }
 			 else 
 			 {
@@ -101,7 +104,8 @@
 	cell.labelString   = item.label;
 	cell.gameString    = item.game.label;
 	cell.platform      = item.game.platform;
-	cell.dateString    = [NSDate relativeTime:item.scheduled_time];
+	//cell.dateString    = [NSDate relativeTime:item.scheduled_time];
+	cell.scheduled_time = item.scheduled_time;
     return cell;
 }
 
