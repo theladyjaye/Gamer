@@ -19,19 +19,20 @@
 	UILabel * descriptionLabel;
 	UILabel * modeLabel;
 	UILabel * scheduleTimeLabel;
-	
-	GMRPlatformBanner * platformBanner;
+	UILabel * platformLabel;
+	UIView * howItWorksView;
 	
 	UIToolbar * toolbar;
 }
 
 @property(nonatomic, retain) IBOutlet UITableView * playersTableView;
 @property(nonatomic, retain) NSArray * playersForMatch;
-@property(nonatomic, retain) IBOutlet GMRPlatformBanner * platformBanner;
 @property(nonatomic, retain) IBOutlet UILabel * gameLabel;
 @property(nonatomic, retain) IBOutlet UILabel * descriptionLabel;
 @property(nonatomic, retain) IBOutlet UILabel * modeLabel;
 @property(nonatomic, retain) IBOutlet UILabel * scheduleTimeLabel;
+@property(nonatomic, retain) IBOutlet UILabel * platformLabel;
+@property(nonatomic, retain) IBOutlet UIView * howItWorksView;
 
 -(id)initWithMatch:(GMRMatch *)value;
 -(void)shareGame;

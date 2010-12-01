@@ -177,6 +177,13 @@
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
 		D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */; };
 		D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE3512129785A6008E84EB /* GMRViewController.m */; };
+		D7C0CCD112A60B4A00843E34 /* ButtonJoin.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCCD12A60B4A00843E34 /* ButtonJoin.png */; };
+		D7C0CCD212A60B4A00843E34 /* ButtonJoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCCE12A60B4A00843E34 /* ButtonJoin@2x.png */; };
+		D7C0CCD312A60B4A00843E34 /* ButtonLeave.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCCF12A60B4A00843E34 /* ButtonLeave.png */; };
+		D7C0CCD412A60B4A00843E34 /* ButtonLeave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCD012A60B4A00843E34 /* ButtonLeave@2x.png */; };
+		D7C0CD1712A60F6900843E34 /* BackgroundDetailClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CD1512A60F6900843E34 /* BackgroundDetailClock.png */; };
+		D7C0CD1812A60F6900843E34 /* BackgroundDetailClock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CD1612A60F6900843E34 /* BackgroundDetailClock@2x.png */; };
+		D7C0CD7312A6159700843E34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C0CD7212A6159700843E34 /* QuartzCore.framework */; };
 		D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */; };
 		D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */; };
 		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
@@ -520,6 +527,13 @@
 		D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccessorySelected.png; sourceTree = "<group>"; };
 		D7BE3511129785A6008E84EB /* GMRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRViewController.h; sourceTree = "<group>"; };
 		D7BE3512129785A6008E84EB /* GMRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRViewController.m; sourceTree = "<group>"; };
+		D7C0CCCD12A60B4A00843E34 /* ButtonJoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonJoin.png; path = Images/Light/ButtonJoin.png; sourceTree = "<group>"; };
+		D7C0CCCE12A60B4A00843E34 /* ButtonJoin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonJoin@2x.png"; path = "Images/Light/ButtonJoin@2x.png"; sourceTree = "<group>"; };
+		D7C0CCCF12A60B4A00843E34 /* ButtonLeave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonLeave.png; path = Images/Light/ButtonLeave.png; sourceTree = "<group>"; };
+		D7C0CCD012A60B4A00843E34 /* ButtonLeave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonLeave@2x.png"; path = "Images/Light/ButtonLeave@2x.png"; sourceTree = "<group>"; };
+		D7C0CD1512A60F6900843E34 /* BackgroundDetailClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundDetailClock.png; path = Images/Light/BackgroundDetailClock.png; sourceTree = "<group>"; };
+		D7C0CD1612A60F6900843E34 /* BackgroundDetailClock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundDetailClock@2x.png"; path = "Images/Light/BackgroundDetailClock@2x.png"; sourceTree = "<group>"; };
+		D7C0CD7212A6159700843E34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D7C33D9F1295677A00B923AE /* OverviewController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OverviewController+TableView.h"; sourceTree = "<group>"; };
 		D7C33DA01295677A00B923AE /* OverviewController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OverviewController+TableView.m"; sourceTree = "<group>"; };
 		D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameDetailController+PlayerList.h"; sourceTree = "<group>"; };
@@ -647,6 +661,7 @@
 				D77E1BF91288A27800B75D60 /* SystemConfiguration.framework in Frameworks */,
 				D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */,
 				D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */,
+				D7C0CD7312A6159700843E34 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +737,6 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */,
-				D78356B7128C9FB500E19528 /* AudioToolbox.framework */,
 			);
 			name = Gamer;
 			sourceTree = "<group>";
@@ -730,6 +744,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D78356B7128C9FB500E19528 /* AudioToolbox.framework */,
+				D7C0CD7212A6159700843E34 /* QuartzCore.framework */,
 				D7DB90D7128086B100D6C442 /* CFNetwork.framework */,
 				D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */,
 				D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */,
@@ -810,6 +826,12 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7C0CD1512A60F6900843E34 /* BackgroundDetailClock.png */,
+				D7C0CD1612A60F6900843E34 /* BackgroundDetailClock@2x.png */,
+				D7C0CCCD12A60B4A00843E34 /* ButtonJoin.png */,
+				D7C0CCCE12A60B4A00843E34 /* ButtonJoin@2x.png */,
+				D7C0CCCF12A60B4A00843E34 /* ButtonLeave.png */,
+				D7C0CCD012A60B4A00843E34 /* ButtonLeave@2x.png */,
 				D778C03212A5548A00FFD033 /* ButtonShare.png */,
 				D778C03312A5548A00FFD033 /* ButtonShare@2x.png */,
 				D778BFC912A54FA800FFD033 /* ButtonBack.png */,
@@ -1659,6 +1681,12 @@
 				D778BFCC12A54FA800FFD033 /* ButtonBack@2x.png in Resources */,
 				D778C03412A5548A00FFD033 /* ButtonShare.png in Resources */,
 				D778C03512A5548A00FFD033 /* ButtonShare@2x.png in Resources */,
+				D7C0CCD112A60B4A00843E34 /* ButtonJoin.png in Resources */,
+				D7C0CCD212A60B4A00843E34 /* ButtonJoin@2x.png in Resources */,
+				D7C0CCD312A60B4A00843E34 /* ButtonLeave.png in Resources */,
+				D7C0CCD412A60B4A00843E34 /* ButtonLeave@2x.png in Resources */,
+				D7C0CD1712A60F6900843E34 /* BackgroundDetailClock.png in Resources */,
+				D7C0CD1812A60F6900843E34 /* BackgroundDetailClock@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

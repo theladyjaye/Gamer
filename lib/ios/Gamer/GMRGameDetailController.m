@@ -7,11 +7,12 @@
 //
 
 #import <dispatch/dispatch.h>
+#import <QuartzCore/QuartzCore.h>
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
 #import "GMRButton.h"
-#import "GMRPlatformBanner.h"
 #import "GMRGlobals.h"
+#import "GMRClient.h"
 #import "NSDate+JSON.h"
 #import "GMRTypes.h"
 #import "GMRAlertView.h"
@@ -21,7 +22,7 @@
 #import "UIButton+GMRButtonTypes.h"
 
 @implementation GMRGameDetailController
-@synthesize playersTableView, playersForMatch, platformBanner, gameLabel, descriptionLabel, modeLabel, scheduleTimeLabel;
+@synthesize playersTableView, playersForMatch, gameLabel, platformLabel, descriptionLabel, modeLabel, scheduleTimeLabel, howItWorksView;
 
 -(id)initWithMatch:(GMRMatch *)value;
 {
@@ -49,55 +50,73 @@
 	
 	toolbar              = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 323, 320, 44)];
 	toolbar.transform    = CGAffineTransformMakeTranslation(0.0, 44);
+	howItWorksView.transform = CGAffineTransformMakeTranslation(0.0, 84);
+	
+	CGFloat roundedColor = 246.0/255.0;
+	UIView * roundedView = [[UIView alloc] initWithFrame:CGRectMake(4.0, 8.0, 312.0, 68.0)];
+	
+	
+	roundedView.layer.cornerRadius    = 5.0;
+	roundedView.layer.backgroundColor = [UIColor colorWithRed:roundedColor 
+										            green:roundedColor 
+										             blue:roundedColor 
+										            alpha:1.0].CGColor;
+	
+	
+	[howItWorksView insertSubview:roundedView atIndex:0];
+	[roundedView release];
+	howItWorksView.hidden = YES;
+	
+	
 	[self.view addSubview:toolbar];
 	
-	
-	/*
-	
-	platformBanner.platform = match.game.platform;
 	
 	
 	gameLabel.text         = match.game.label;
 	descriptionLabel.text  = match.label;
 	modeLabel.text         = match.mode;
-	scheduleTimeLabel.text = [NSDate gamerScheduleTimeString:match.scheduled_time];
+	scheduleTimeLabel.text = [NSDate relativeTime:match.scheduled_time];
+	platformLabel.text     = [GMRClient displayNameForPlatform:match.platform];
 	
-	NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+	UIView * platformColors = [[UIView alloc] initWithFrame:CGRectMake(0, (descriptionLabel.frame.origin.y + descriptionLabel.frame.size.height), 320, 6)];
+	UIColor * patternColor;
 	
-	if ([match.created_by isEqualToString:currentUser]) 
+	switch(match.platform)
 	{
-		actionButton = [[GMRButton alloc] initWithStyle:GMRButtonStyleRed 
-												  label:@"Cancel Game" 
-												 target:self 
-												 action:@selector(cancelGame)];
+		case GMRPlatformBattleNet:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalBattleNet.png"]];
+			break;
+			
+		case GMRPlatformPlaystation2:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalPlaystation2.png"]];
+			break;
+			
+		case GMRPlatformPlaystation3:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalPlaystation3.png"]];
+			break;
+			
+		case GMRPlatformSteam:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalSteam.png"]];
+			break;
+			
+		case GMRPlatformWii:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalWii.png"]];
+			break;
+			
+		case GMRPlatformXBox360:
+			patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PlatformColorHorizontalXbox360.png"]];
+			break;
+			
 	}
-	else 
-	{
-		actionButton = [[GMRButton alloc] initWithStyle:GMRButtonStyleYellow 
-												  label:@"Leave Game" 
-												 target:self 
-												 action:@selector(leaveGame)];
-	}
 	
-	shareButton = [[GMRButton alloc] initWithStyle:GMRButtonStyleGray
-											  label:@"Share Game" 
-											 target:self 
-											 action:@selector(shareGame)];
+	platformColors.backgroundColor = patternColor;
 	
-	shareButton.frame  = CGRectMake(3.0, 278.0, shareButton.frame.size.width, shareButton.frame.size.height);
-	actionButton.frame = CGRectMake(shareButton.frame.origin.x, (shareButton.frame.origin.y + shareButton.frame.size.height) + 3.0, actionButton.frame.size.width, actionButton.frame.size.height);
+	[self.view addSubview:platformColors];
+	[platformColors release];
 	
-	shareButton.transform = CGAffineTransformMakeTranslation(0.0, 39.0);
-	actionButton.transform = CGAffineTransformMakeTranslation(0.0, 39.0);
 	
-	shareButton.alpha  = 0.0;
-	actionButton.alpha = 0.0;
+	//[self playersTableRefresh];
 	
-	[self.view addSubview:shareButton];
-	[self.view addSubview:actionButton];
-	
-	[self playersTableRefresh];
-	*/
 	[super viewDidLoad];
 	 
 	
@@ -105,16 +124,18 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+	/*
 	[self.navigationController setToolbarHidden:YES animated:YES];
-	
 	
 	[UIView animateWithDuration:0.15
 						  delay:0.0
 						options:UIViewAnimationOptionCurveEaseOut
 					 animations:^{
 						 toolbar.transform    = CGAffineTransformMakeTranslation(0.0, 44);
+						 howItWorksView.transform = CGAffineTransformMakeTranslation(0.0, 84 + 44);
 					 } 
 					 completion:NULL];
+	 */
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -128,8 +149,21 @@
 					 } 
 					 completion:^(BOOL finished){
 						 
-						 UIButton* actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
-						 [actionButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+						 NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+						 
+						 UIButton * actionButton;
+						 
+						 if([match.created_by isEqualToString:currentUser])
+						 {
+							 actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+							 [actionButton addTarget:self action:@selector(cancelGame) forControlEvents:UIControlEventTouchUpInside];
+						 }
+						 else
+						 {
+							 actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeLeave];
+							 [actionButton addTarget:self action:@selector(leaveGame) forControlEvents:UIControlEventTouchUpInside];
+						 }
+						 
 						 
 						 UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeShare];
 						 [shareButton addTarget:self action:@selector(shareGame) forControlEvents:UIControlEventTouchUpInside];
@@ -141,6 +175,11 @@
 						 NSArray * items = [NSArray arrayWithObjects:action, spacer, share, nil];
 						 
 						 [toolbar setItems:items animated:YES];
+						 
+						 howItWorksView.hidden = NO;
+						 [UIView animateWithDuration:0.2 animations:^{
+							 howItWorksView.transform = CGAffineTransformIdentity;
+						 }];
 					 }];
 }
 
@@ -148,6 +187,7 @@
 {
 	
 }
+
 
 -(void)cancelGame
 {
@@ -216,6 +256,8 @@
 	self.descriptionLabel = nil;
 	self.modeLabel = nil;
 	self.scheduleTimeLabel = nil;
+	self.platformLabel = nil;
+	self.howItWorksView = nil;
 	
 	[toolbar release];
 }

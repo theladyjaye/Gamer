@@ -72,17 +72,29 @@
 	else if (ti < 3600) 
 	{
 		int diff = round(ti / 60);
-		suffix =  [NSString stringWithFormat:@"about %d minutes", diff];
+		
+		if(diff == 1)
+			suffix = [NSString stringWithFormat:@"about %d minute", diff];
+		else 
+			suffix =  [NSString stringWithFormat:@"about %d minutes", diff];
 	}
 	else if (ti < 86400) 
 	{
 		int diff = round(ti / 60 / 60);
-		suffix = [NSString stringWithFormat:@"about %d hours", diff];
+		
+		if(diff == 1)
+			suffix = [NSString stringWithFormat:@"about %d hour", diff];
+		else
+			suffix = [NSString stringWithFormat:@"about %d hours", diff];
 	}
 	else if (ti < 2629743) 
 	{
 		int diff = round(ti / 60 / 60 / 24);
-		suffix = [NSString stringWithFormat:@"about %d days", diff];
+		
+		if(diff == 1)
+			suffix = [NSString stringWithFormat:@"about %d day", diff];
+		else
+			suffix = [NSString stringWithFormat:@"about %d days", diff];
 	}
 	else 
 	{

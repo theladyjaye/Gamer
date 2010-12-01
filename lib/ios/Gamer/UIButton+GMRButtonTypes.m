@@ -40,13 +40,13 @@
 			break;
 			
 		case GMRButtonTypeJoin:
-			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
-			//rect = CGRectMake(0, 0, 111, 30);
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonJoin" ofType:@"png"];
+			rect = CGRectMake(0, 0, 53, 30);
 			break;
 			
 		case GMRButtonTypeLeave:
-			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
-			//rect = CGRectMake(0, 0, 111, 30);
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonLeave" ofType:@"png"];
+			rect = CGRectMake(0, 0, 64, 30);
 			break;
 		
 		case GMRButtonTypeLogin:

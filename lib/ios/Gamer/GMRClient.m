@@ -45,6 +45,40 @@ static NSArray * platformStrings;
 	return [platformStrings objectAtIndex:platform];
 }
 
++ (NSString *)displayNameForPlatform:(GMRPlatform)platform
+{
+	NSString * result;
+	
+	switch(platform)
+	{
+		case GMRPlatformBattleNet:
+			result = @"battle.net";
+			break;
+			
+		case GMRPlatformPlaystation2:
+			result = @"playstation 2";
+			break;
+			
+		case GMRPlatformPlaystation3:
+			result = @"playstation 3";
+			break;
+			
+		case GMRPlatformSteam:
+			result = @"steam";
+			break;
+
+		case GMRPlatformWii:
+			result = @"wii";
+			break;
+			
+		case GMRPlatformXBox360:
+			result = @"xbox 360";
+			break;
+	}
+	
+	return result;
+}
+
 
 - (id)init
 {
