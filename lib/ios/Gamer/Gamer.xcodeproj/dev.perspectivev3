@@ -358,7 +358,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7C0CDD112A617C100843E34</string>
+										<string>D7C0CE1B12A61A7500843E34</string>
 										<key>history</key>
 										<array>
 											<string>D7DDD851127FDE1500C29265</string>
@@ -513,7 +513,7 @@
 											<string>D7C0CCF312A60D0200843E34</string>
 											<string>D7C0CD4612A612AB00843E34</string>
 											<string>D7C0CD4712A612AB00843E34</string>
-											<string>D7C0CDD012A617B600843E34</string>
+											<string>D7C0CE1A12A61A7300843E34</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -527,18 +527,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1229, 874}}</string>
+								<string>{{0, 0}, {1229, 572}}</string>
 								<key>RubberWindowFrame</key>
 								<string>92 82 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>874pt</string>
+							<string>572pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>302pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -606,7 +606,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1229, -27}}</string>
+										<string>{{10, 27}, {1229, 275}}</string>
 										<key>RubberWindowFrame</key>
 										<string>92 82 1556 920 0 0 1680 1028 </string>
 									</dict>
@@ -813,7 +813,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>312874945.37577599</real>
+	<real>312875637.66327399</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>

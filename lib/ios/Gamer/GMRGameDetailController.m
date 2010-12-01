@@ -50,7 +50,7 @@
 	
 	toolbar              = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 323, 320, 44)];
 	toolbar.transform    = CGAffineTransformMakeTranslation(0.0, 44);
-	howItWorksView.transform = CGAffineTransformMakeTranslation(0.0, 84);
+	howItWorksView.transform = CGAffineTransformMakeTranslation(0.0, 100);
 	
 	CGFloat roundedColor = 246.0/255.0;
 	UIView * roundedView = [[UIView alloc] initWithFrame:CGRectMake(4.0, 8.0, 312.0, 68.0)];
@@ -141,6 +141,16 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[UIView animateWithDuration:0.15
+						  delay:0.15
+						options:UIViewAnimationOptionCurveEaseOut
+					 animations:^{
+						 
+					 } 
+					 completion:^(BOOL finished){
+						 
+					 }];
+	
+	[UIView animateWithDuration:0.25
 						  delay:0.0
 						options:UIViewAnimationOptionCurveEaseOut
 					 animations:^{
@@ -177,10 +187,14 @@
 						 [toolbar setItems:items animated:YES];
 						 
 						 howItWorksView.hidden = NO;
-						 [UIView animateWithDuration:0.2 animations:^{
-							 howItWorksView.transform = CGAffineTransformIdentity;
-						 }];
-					 }];
+						[UIView animateWithDuration:0.4
+											   delay:0.0
+											 options:UIViewAnimationOptionCurveEaseOut
+										  animations:^{
+											  howItWorksView.transform = CGAffineTransformIdentity;
+										  } 
+										  completion:NULL];
+					}];
 }
 
 -(void)shareGame
