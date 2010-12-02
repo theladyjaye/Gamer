@@ -11,13 +11,14 @@
 #import "GMRMatch.h"
 #import "GMRMenuButton.h"
 #import "GMRTypes.h"
+#import "GMRLabel.h"
 
 @implementation GMRChooseAvailability
 @synthesize availabilityPublic, availabilityPrivate;
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title = @"Availability";
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Availability"];
 	
 	if(kCreateMatchProgress.availability != GMRMatchAvailabliltyUnknown)
 	{

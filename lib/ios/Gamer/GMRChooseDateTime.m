@@ -10,13 +10,14 @@
 #import "GMRMatch.h"
 #import "GMRCreateGameGlobals.h"
 #import "NSDate+JSON.h"
+#import "GMRLabel.h"
 
 @implementation GMRChooseDateTime
 @synthesize datePicker, label;
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title   = @"Date and Time";
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Date and Time"];
 	
 	if(kCreateMatchProgress.scheduled_time)
 	{

@@ -7,28 +7,23 @@
 //
 
 #import "GMRCreateGameSheet.h"
-
+#import "UIButton+GMRButtonTypes.h"
 
 @implementation GMRCreateGameSheet
 
 - (void)viewDidLoad
 {
-	UIBarButtonItem * cancel = [[UIBarButtonItem alloc] initWithTitle:@"Back"
-																style:UIBarButtonItemStylePlain 
-															   target:self 
-															   action:@selector(cancelSheet)];
 	
-	/*UIBarButtonItem * done = [[UIBarButtonItem alloc] initWithTitle:@"Save" 
-																style:UIBarButtonItemStylePlain
-															   target:self 
-															   action:@selector(cancelSheet)];
-	*/
+	[self.navigationItem setHidesBackButton:YES];
 	
-	self.navigationItem.leftBarButtonItem = cancel;
+	UIButton * cancelButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+	[cancelButton addTarget:self action:@selector(cancelSheet) forControlEvents:UIControlEventTouchUpInside];
+	
+
+	UIBarButtonItem * cancel = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
+	
+	self.navigationItem.leftBarButtonItem  = cancel;
 	[cancel release];
-	
-	 //self.navigationItem.rightBarButtonItem = done;*/
-	 //[done release];
 	
 	[super viewDidLoad];
 }

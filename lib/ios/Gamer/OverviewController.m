@@ -25,7 +25,13 @@
 																					 bundle:nil];
 	
 	UINavigationController * createGame      = [[UINavigationController alloc] initWithRootViewController:controller];
-	createGame.navigationBar.tintColor       = [UIColor colorWithRed:41.0/255.0 green:41.0/255.0 blue:41.0/255.0 alpha:1.0];
+	
+	UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
+	navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
+	
+	[createGame.view addSubview:navigationBarShadow];
+	[navigationBarShadow release];
+	
 	
 	[self presentModalViewController:createGame 
 							animated:YES];

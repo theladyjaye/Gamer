@@ -77,6 +77,12 @@
 		D72C7D3212A0440F00580653 /* GMRInputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D72C7D3112A0440F00580653 /* GMRInputValidator.m */; };
 		D72E3DAF128B15050083464E /* GMRAuthenticationNewAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */; };
 		D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */; };
+		D7347BC812A7F541004AA7CC /* BackgroundCreateMenuClock.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC212A7F541004AA7CC /* BackgroundCreateMenuClock.png */; };
+		D7347BC912A7F541004AA7CC /* BackgroundCreateMenuClock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC312A7F541004AA7CC /* BackgroundCreateMenuClock@2x.png */; };
+		D7347BCA12A7F541004AA7CC /* ButtonPodBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC412A7F541004AA7CC /* ButtonPodBackground.png */; };
+		D7347BCB12A7F541004AA7CC /* ButtonPodBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC512A7F541004AA7CC /* ButtonPodBackground@2x.png */; };
+		D7347BCC12A7F541004AA7CC /* ButtonPodBackgroundTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC612A7F541004AA7CC /* ButtonPodBackgroundTall.png */; };
+		D7347BCD12A7F541004AA7CC /* ButtonPodBackgroundTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7347BC712A7F541004AA7CC /* ButtonPodBackgroundTall@2x.png */; };
 		D742353E129D668000EA0272 /* GMRChooseDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = D742353C129D668000EA0272 /* GMRChooseDescription.m */; };
 		D742353F129D668000EA0272 /* GMRChooseDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = D742353D129D668000EA0272 /* GMRChooseDescription.xib */; };
 		D7423662129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7423661129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m */; };
@@ -424,6 +430,12 @@
 		D72E3DAC128B15050083464E /* GMRAuthenticationNewAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationNewAccount.h; sourceTree = "<group>"; };
 		D72E3DAD128B15050083464E /* GMRAuthenticationNewAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationNewAccount.m; sourceTree = "<group>"; };
 		D72E3DAE128B15050083464E /* GMRAuthenticationNewAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationNewAccount.xib; sourceTree = "<group>"; };
+		D7347BC212A7F541004AA7CC /* BackgroundCreateMenuClock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundCreateMenuClock.png; path = Images/Light/BackgroundCreateMenuClock.png; sourceTree = "<group>"; };
+		D7347BC312A7F541004AA7CC /* BackgroundCreateMenuClock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundCreateMenuClock@2x.png"; path = "Images/Light/BackgroundCreateMenuClock@2x.png"; sourceTree = "<group>"; };
+		D7347BC412A7F541004AA7CC /* ButtonPodBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodBackground.png; path = Images/Light/ButtonPodBackground.png; sourceTree = "<group>"; };
+		D7347BC512A7F541004AA7CC /* ButtonPodBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodBackground@2x.png"; path = "Images/Light/ButtonPodBackground@2x.png"; sourceTree = "<group>"; };
+		D7347BC612A7F541004AA7CC /* ButtonPodBackgroundTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodBackgroundTall.png; path = Images/Light/ButtonPodBackgroundTall.png; sourceTree = "<group>"; };
+		D7347BC712A7F541004AA7CC /* ButtonPodBackgroundTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodBackgroundTall@2x.png"; path = "Images/Light/ButtonPodBackgroundTall@2x.png"; sourceTree = "<group>"; };
 		D742353B129D668000EA0272 /* GMRChooseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseDescription.h; sourceTree = "<group>"; };
 		D742353C129D668000EA0272 /* GMRChooseDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseDescription.m; sourceTree = "<group>"; };
 		D742353D129D668000EA0272 /* GMRChooseDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseDescription.xib; sourceTree = "<group>"; };
@@ -839,6 +851,12 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7347BC212A7F541004AA7CC /* BackgroundCreateMenuClock.png */,
+				D7347BC312A7F541004AA7CC /* BackgroundCreateMenuClock@2x.png */,
+				D7347BC412A7F541004AA7CC /* ButtonPodBackground.png */,
+				D7347BC512A7F541004AA7CC /* ButtonPodBackground@2x.png */,
+				D7347BC612A7F541004AA7CC /* ButtonPodBackgroundTall.png */,
+				D7347BC712A7F541004AA7CC /* ButtonPodBackgroundTall@2x.png */,
 				D755BB0212A76C1900390451 /* ButtonSave.png */,
 				D755BB0312A76C1900390451 /* ButtonSave@2x.png */,
 				D755BAA112A764CA00390451 /* BackgroundPlayerCellCreator.png */,
@@ -1714,6 +1732,12 @@
 				D755BAA412A764CA00390451 /* BackgroundPlayerCellCreator@2x.png in Resources */,
 				D755BB0412A76C1900390451 /* ButtonSave.png in Resources */,
 				D755BB0512A76C1900390451 /* ButtonSave@2x.png in Resources */,
+				D7347BC812A7F541004AA7CC /* BackgroundCreateMenuClock.png in Resources */,
+				D7347BC912A7F541004AA7CC /* BackgroundCreateMenuClock@2x.png in Resources */,
+				D7347BCA12A7F541004AA7CC /* ButtonPodBackground.png in Resources */,
+				D7347BCB12A7F541004AA7CC /* ButtonPodBackground@2x.png in Resources */,
+				D7347BCC12A7F541004AA7CC /* ButtonPodBackgroundTall.png in Resources */,
+				D7347BCD12A7F541004AA7CC /* ButtonPodBackgroundTall@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

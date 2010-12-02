@@ -9,6 +9,7 @@
 #import "GMRChooseDescription.h"
 #import "GMRCreateGameGlobals.h"
 #import "GMRMatch.h"
+#import "GMRLabel.h"
 
 
 static CGFloat baseHeight = 34.0;
@@ -21,6 +22,8 @@ static CGFloat currentHeight;
 
 - (void)viewDidLoad 
 {
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Description"];
+	
 	self.textField.contentInset = UIEdgeInsetsZero;
 	[self.textField becomeFirstResponder];
 	

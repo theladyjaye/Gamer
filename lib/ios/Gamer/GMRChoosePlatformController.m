@@ -11,12 +11,14 @@
 #import "GMRTypes.h"
 #import "GMRCreateGameGlobals.h"
 #import "GMRMenuButton.h"
+#import "GMRLabel.h"
+
 @implementation GMRChoosePlatformController
 @synthesize platformBattleNet, platformPlaystation2, platformPlaystation3, platformSteam, platformWii, platformXBox360;
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title = @"Platform";
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Platform"];
 	
 	if(kCreateMatchProgress.platform != GMRPlatformUnknown)
 	{

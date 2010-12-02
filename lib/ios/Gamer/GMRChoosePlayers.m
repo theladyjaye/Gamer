@@ -10,13 +10,14 @@
 #import "GMRCreateGameGlobals.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
+#import "GMRLabel.h"
 
 @implementation GMRChoosePlayers
 @synthesize label, pickerView;
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title = @"Players";
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Players"];
 	
 	if(kCreateMatchProgress.players)
 	{

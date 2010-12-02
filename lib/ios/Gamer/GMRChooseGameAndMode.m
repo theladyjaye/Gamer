@@ -12,13 +12,14 @@
 #import "GMRGame.h"
 #import "GMRMatch.h"
 #import "GMRCreateGameGlobals.h"
+#import "GMRLabel.h"
 
 @implementation GMRChooseGameAndMode
 @synthesize gameLabel, modeLabel, modesView, modesTableView;
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.title = @"Game and Mode";
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Game and Mode"];
 	
 	if(kCreateMatchProgress.game)	
 	{
