@@ -10,7 +10,7 @@
 
 
 @implementation GMRPlayerListCell
-@synthesize player;
+@synthesize player, isOwner;
 
 - (void)drawContentView:(CGRect)rect highlighted:(BOOL)highlighted 
 {
@@ -18,7 +18,7 @@
 	
 	CGFloat  grayColor     = 136.0/255;
 	
-	UIImage * backgroundImage = [UIImage imageNamed:@"BackgroundPlayerCell.png"];
+	UIImage * backgroundImage = [self.reuseIdentifier isEqualToString:@"PlayerListCellCreator"] ? [UIImage imageNamed:@"BackgroundPlayerCellCreator.png"] : [UIImage imageNamed:@"BackgroundPlayerCell.png"];
 	
 	UIFont * playerFont    = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0];
 	UIColor * fontColor    = [UIColor colorWithRed:grayColor
@@ -41,9 +41,6 @@
 			  withFont:playerFont 
 		 lineBreakMode:UILineBreakModeClip 
 			 alignment:UITextAlignmentCenter];
-	
-	//[fontColor set];
-	//[playerFont drawAtPoint:CGPointMake(38.0, 10.0)  withFont:gameFont];
 
 }
 

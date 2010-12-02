@@ -77,30 +77,43 @@ typedef NSUInteger PlayerListCellStyle;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier     = @"PlayerListCell";
-	static NSString *CellIdentifierOpen = @"PlayerListCellOpen";
+    static NSString *CellIdentifier         = @"PlayerListCell";
+	static NSString *CellIdentifierCreator  = @"PlayerListCellCreator";
+	static NSString *CellIdentifierOpen     = @"PlayerListCellOpen";
 	
 	PlayerListCellStyle cellStyle = indexPath.row > ([self.playersForMatch count] -1 ) ? PlayerListCellStyleOpen : PlayerListCellStylePlayer;
 	
-	NSString * reusableId = cellStyle == PlayerListCellStyleOpen ? CellIdentifierOpen : CellIdentifier;
-    
+	NSString * reusableId;
+	NSString * alias = @"-- Open --";
+	NSString * username;
+	
+	if(cellStyle == PlayerListCellStylePlayer)
+	{
+		
+		alias      = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
+		username   = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"username"];		
+		reusableId = [username isEqualToString:match.created_by]? CellIdentifierCreator : CellIdentifier;
+	}
+	else 
+	{
+		reusableId = cellStyle == PlayerListCellStyleOpen ? CellIdentifierOpen : CellIdentifier;
+	}
+
+	
 	GMRPlayerListCell *cell = (GMRPlayerListCell *)[tableView dequeueReusableCellWithIdentifier:reusableId];
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 	if (cell == nil) 
 	{
-		cell = [[[GMRPlayerListCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reusableId] autorelease];
-		//NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRPlayerListCell" owner:self options:nil];
-        //cell = [nib objectAtIndex:cellStyle];
+		cell = [[[GMRPlayerListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reusableId] autorelease];
     }
     
 	if(cellStyle == PlayerListCellStylePlayer)
 	{
-		cell.player = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
+		cell.player = alias;
 	}
 	else 
 	{
-		cell.player = @"-- Open --";
+		cell.player = alias;
 	}
 
 	

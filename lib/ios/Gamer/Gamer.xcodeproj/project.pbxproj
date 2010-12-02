@@ -97,6 +97,8 @@
 		D75012931298A0990079EB44 /* GMRChoosePlatformController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75012911298A0990079EB44 /* GMRChoosePlatformController.xib */; };
 		D75012E11298CE860079EB44 /* GMRCreateGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */; };
 		D75012E21298CE860079EB44 /* GMRCreateGameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75012E01298CE860079EB44 /* GMRCreateGameController.xib */; };
+		D755BAA312A764CA00390451 /* BackgroundPlayerCellCreator.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BAA112A764CA00390451 /* BackgroundPlayerCellCreator.png */; };
+		D755BAA412A764CA00390451 /* BackgroundPlayerCellCreator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */; };
 		D775C4B8128795C600C72E64 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D775C4B9128795C600C72E64 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D775C4BA128795C600C72E64 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
@@ -447,6 +449,8 @@
 		D75012DE1298CE860079EB44 /* GMRCreateGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateGameController.h; sourceTree = "<group>"; };
 		D75012DF1298CE860079EB44 /* GMRCreateGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRCreateGameController.m; sourceTree = "<group>"; };
 		D75012E01298CE860079EB44 /* GMRCreateGameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRCreateGameController.xib; sourceTree = "<group>"; };
+		D755BAA112A764CA00390451 /* BackgroundPlayerCellCreator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundPlayerCellCreator.png; path = Images/Light/BackgroundPlayerCellCreator.png; sourceTree = "<group>"; };
+		D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundPlayerCellCreator@2x.png"; path = "Images/Light/BackgroundPlayerCellCreator@2x.png"; sourceTree = "<group>"; };
 		D775C4B2128795A400C72E64 /* GamePop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamePop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D775C4B4128795A400C72E64 /* GamePop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamePop-Info.plist"; sourceTree = "<group>"; };
 		D775C4DE1287978700C72E64 /* HazGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HazGame.h; sourceTree = "<group>"; };
@@ -831,6 +835,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D755BAA112A764CA00390451 /* BackgroundPlayerCellCreator.png */,
+				D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */,
 				D7C0F4F712A6AD4A00D05D8A /* BackgroundSimpleGradient.png */,
 				D7C0F4F812A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png */,
 				D7C0F47312A6A62200D05D8A /* BackgroundPlayerCell.png */,
@@ -1698,6 +1704,8 @@
 				D7C0F47612A6A62200D05D8A /* BackgroundPlayerCell@2x.png in Resources */,
 				D7C0F4F912A6AD4A00D05D8A /* BackgroundSimpleGradient.png in Resources */,
 				D7C0F4FA12A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png in Resources */,
+				D755BAA312A764CA00390451 /* BackgroundPlayerCellCreator.png in Resources */,
+				D755BAA412A764CA00390451 /* BackgroundPlayerCellCreator@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

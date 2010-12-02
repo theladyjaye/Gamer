@@ -203,20 +203,19 @@
 					}];
 }
 
--(void)updateCountdown
+- (void)updateCountdown
 {
-	NSLog(@"Updating detail countdown");
 	self.scheduleTimeLabel.text = [NSDate relativeTime:match.scheduled_time];
 }
 
 
--(void)shareGame
+- (void)shareGame
 {
-	
+	//TODO : Share ActionSheet
 }
 
 
--(void)cancelGame
+- (void)cancelGame
 {
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
 														 title:@"Cancel Game?" 
@@ -227,7 +226,7 @@
 	
 }
 
--(void)leaveGame
+- (void)leaveGame
 {
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
 														 title:@"Leave Game?" 

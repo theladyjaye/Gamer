@@ -11,6 +11,8 @@
 
 @interface GMRPlayerListCell : ABTableViewCell {
 	NSString * player;
+	BOOL isOwner;
 }
 @property(nonatomic, retain)  NSString * player;
+@property(nonatomic, assign)  BOOL isOwner;
 @end
