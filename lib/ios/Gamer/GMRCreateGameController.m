@@ -20,6 +20,8 @@
 #import "GMRPlatformValidator.h"
 #import "GMRPredicateValidator.h"
 #import "GMRInputValidator.h"
+#import "GMRLabel.h"
+#import "UIButton+GMRButtonTypes.h"
 
 #import "GMRGlobals.h"
 #import "GMRClient.h"
@@ -31,21 +33,20 @@ GMRMatch * kCreateMatchProgress = nil;
 
 - (void)viewDidLoad 
 {
-	UIBarButtonItem * cancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" 
-																style:UIBarButtonItemStylePlain 
-															   target:self 
-															   action:@selector(dismissModalViewController)];
-
-	UIBarButtonItem * save  = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-																			target:self 
-																			action:@selector(saveMatch)];
+	UIButton * cancelButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+	[cancelButton addTarget:self action:@selector(dismissModalViewController) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIButton * saveButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeSave];
+	[saveButton addTarget:self action:@selector(saveMatch) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * cancel = [[UIBarButtonItem alloc] initWithCustomView:cancelButton];
+	UIBarButtonItem * save   = [[UIBarButtonItem alloc] initWithCustomView:saveButton];
 	
 	
-	self.navigationItem.title = @"Create Game";
-	self.navigationItem.leftBarButtonItem = cancel;
-	
-	
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Create Game"];
+	self.navigationItem.leftBarButtonItem  = cancel;
 	self.navigationItem.rightBarButtonItem = save;
+	
 	[cancel release];
 	[save release];
 	

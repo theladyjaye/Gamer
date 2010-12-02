@@ -60,8 +60,8 @@
 			break;
 			
 		case GMRButtonTypeSave:
-			//imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
-			//rect = CGRectMake(0, 0, 111, 30);
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonSave" ofType:@"png"];
+			rect = CGRectMake(0, 0, 57, 30);
 			break;
 			
 		case GMRButtonTypeShare:
