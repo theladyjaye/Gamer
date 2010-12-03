@@ -99,6 +99,8 @@
 		D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */; };
 		D7475106129083FE00342AD1 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475104129083FE00342AD1 /* 83-calendar.png */; };
 		D7475107129083FE00342AD1 /* 83-calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475105129083FE00342AD1 /* 83-calendar@2x.png */; };
+		D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */; };
+		D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */; };
 		D75012921298A0990079EB44 /* GMRChoosePlatformController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012901298A0990079EB44 /* GMRChoosePlatformController.m */; };
 		D75012931298A0990079EB44 /* GMRChoosePlatformController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75012911298A0990079EB44 /* GMRChoosePlatformController.xib */; };
 		D75012E11298CE860079EB44 /* GMRCreateGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */; };
@@ -463,6 +465,8 @@
 		D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArtShadow@2x.png"; sourceTree = "<group>"; };
 		D7475104129083FE00342AD1 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
 		D7475105129083FE00342AD1 /* 83-calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar@2x.png"; sourceTree = "<group>"; };
+		D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodCheckboxTall.png; path = Images/Light/ButtonPodCheckboxTall.png; sourceTree = "<group>"; };
+		D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodCheckboxTall@2x.png"; path = "Images/Light/ButtonPodCheckboxTall@2x.png"; sourceTree = "<group>"; };
 		D750128F1298A0990079EB44 /* GMRChoosePlatformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChoosePlatformController.h; sourceTree = "<group>"; };
 		D75012901298A0990079EB44 /* GMRChoosePlatformController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChoosePlatformController.m; sourceTree = "<group>"; };
 		D75012911298A0990079EB44 /* GMRChoosePlatformController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChoosePlatformController.xib; sourceTree = "<group>"; };
@@ -863,6 +867,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */,
+				D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */,
 				D76C4A8312A8C45700A83206 /* ButtonPodHighlighted.png */,
 				D76C4A8412A8C45700A83206 /* ButtonPodHighlighted@2x.png */,
 				D76C4A3412A8BB6300A83206 /* ButtonPodCheckbox.png */,
@@ -1762,6 +1768,8 @@
 				D76C4A3712A8BB6300A83206 /* ButtonPodCheckbox@2x.png in Resources */,
 				D76C4A8512A8C45700A83206 /* ButtonPodHighlighted.png in Resources */,
 				D76C4A8612A8C45700A83206 /* ButtonPodHighlighted@2x.png in Resources */,
+				D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */,
+				D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

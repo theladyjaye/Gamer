@@ -96,12 +96,12 @@
 
 - (UIImage *)backgroundImageForOpenNormal
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputOpen" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodBackground" ofType:@"png"]];
 }
 
 - (UIImage *)backgroundImageForClosedNormal
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputClosed" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodBackground" ofType:@"png"]];
 }
 
 - (UIImage *)backgroundImageForHighlighted
