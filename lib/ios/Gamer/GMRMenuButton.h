@@ -26,7 +26,7 @@
 
 
 
-- (UIImage *)backgroundImageForSelected;
+- (UIImage *)backgroundImageForHighlighted;
 - (UIImage *)backgroundImageForOpenNormal;
 - (UIImage *)backgroundImageForClosedNormal;
 

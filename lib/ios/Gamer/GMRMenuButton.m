@@ -23,7 +23,7 @@
 		[self setBackgroundImage:[self backgroundImageForOpenNormal] forState:UIControlStateNormal];
 	}
 	
-	[self setBackgroundImage:[self backgroundImageForSelected] forState:UIControlStateHighlighted];
+	[self setBackgroundImage:[self backgroundImageForHighlighted] forState:UIControlStateHighlighted];
 	[self setBackgroundImage:[self backgroundImageForClosedNormal] forState:UIControlStateSelected];
 }
 
@@ -53,7 +53,7 @@
 	
 	if(needsBackgroundImageUpdate)
 	{
-		self.backgroundImage.image = value ? [self backgroundImageForState:UIControlStateSelected] : [self backgroundImageForState:UIControlStateNormal];
+		//self.backgroundImage.image = value ? [self backgroundImageForState:UIControlStateSelected] : [self backgroundImageForState:UIControlStateNormal];
 	}
 	
 	if(self.accessoryImage)
@@ -104,9 +104,9 @@
 	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputClosed" ofType:@"png"]];
 }
 
-- (UIImage *)backgroundImageForSelected
+- (UIImage *)backgroundImageForHighlighted
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputSelected" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodHighlighted" ofType:@"png"]];
 }
 
 
