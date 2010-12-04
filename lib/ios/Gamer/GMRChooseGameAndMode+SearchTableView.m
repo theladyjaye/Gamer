@@ -16,6 +16,7 @@
 #import "GMRTypes.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
+#import "GMRGameListCell.h"
 
 @implementation GMRChooseGameAndMode(SearchTableView)
 
@@ -23,7 +24,7 @@
 {
 	controller.searchResultsTableView.backgroundColor = self.view.backgroundColor;
 	controller.searchResultsTableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
-	controller.searchResultsTableView.rowHeight       = 33.0;
+	controller.searchResultsTableView.rowHeight       = 37.0;
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView
@@ -32,7 +33,7 @@
 	//CGPoint point = controller.searchContentsController.view.frame.origin;
 	
 	//controller.searchContentsController.view.frame = CGRectMake(point.x, point.y, size.width, size.height + 60);
-	controller.searchResultsTableView.transform = CGAffineTransformMakeTranslation(0.0, 2.0);
+	//controller.searchResultsTableView.transform = CGAffineTransformMakeTranslation(0.0, 2.0);
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -78,21 +79,16 @@
 
 - (UITableViewCell *)searchResultsTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	static NSString *CellIdentifier     = @"PlayerListCell";
+	static NSString *CellIdentifier     = @"GameListCell";
 	
-	GMRPlayerListCell *cell = (GMRPlayerListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	GMRGameListCell *cell = (GMRGameListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	
 	if (cell == nil) 
 	{
-		//cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-		NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"GMRPlayerListCell" owner:self options:nil];
-		cell = [nib objectAtIndex:0];
-		
-		//cell.player.transform     = CGAffineTransformMakeTranslation((10.0 - cell.player.frame.origin.x), 0.0);
-		//cell.player.textAlignment = UITextAlignmentLeft;
+		cell = [[[GMRGameListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
-	//cell.player.text          = [[games objectAtIndex:indexPath.row] objectForKey:@"label"];
+	cell.title = [[games objectAtIndex:indexPath.row] objectForKey:@"label"];
 	
 	return cell;
 }

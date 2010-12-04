@@ -39,6 +39,11 @@
 			rect = CGRectMake(0, 0, 68, 30);
 			break;
 			
+		case GMRButtonTypeDone:
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonDone" ofType:@"png"];
+			rect = CGRectMake(0, 0, 59, 30);
+			break;
+			
 		case GMRButtonTypeJoin:
 			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonJoin" ofType:@"png"];
 			rect = CGRectMake(0, 0, 53, 30);

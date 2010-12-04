@@ -88,6 +88,14 @@
 		D7423662129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7423661129EBCEE00EA0272 /* GMRChooseGameAndMode+TableView.m */; };
 		D7423697129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7423696129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m */; };
 		D74237EB129F6A4F00EA0272 /* GMRGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D74237EA129F6A4F00EA0272 /* GMRGame.m */; };
+		D745076B12A9EE7A00034CD6 /* ButtonDone.png in Resources */ = {isa = PBXBuildFile; fileRef = D745076912A9EE7A00034CD6 /* ButtonDone.png */; };
+		D745076C12A9EE7A00034CD6 /* ButtonDone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D745076A12A9EE7A00034CD6 /* ButtonDone@2x.png */; };
+		D745078212A9F90E00034CD6 /* BackgroundGameCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D745077E12A9F90E00034CD6 /* BackgroundGameCell.png */; };
+		D745078312A9F90E00034CD6 /* BackgroundGameCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D745077F12A9F90E00034CD6 /* BackgroundGameCell@2x.png */; };
+		D745078412A9F90E00034CD6 /* BackgroundModeCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D745078012A9F90E00034CD6 /* BackgroundModeCell.png */; };
+		D745078512A9F90E00034CD6 /* BackgroundModeCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D745078112A9F90E00034CD6 /* BackgroundModeCell@2x.png */; };
+		D745078812A9F93800034CD6 /* GMRGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D745078712A9F93800034CD6 /* GMRGameListCell.m */; };
+		D74507A712A9FBC700034CD6 /* GMRModeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D74507A612A9FBC700034CD6 /* GMRModeListCell.m */; };
 		D746BFBE12984E61003ADC09 /* GMRPlatformBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */; };
 		D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = D747507F1290315100342AD1 /* MatchListCellBottom.png */; };
 		D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750801290315100342AD1 /* MatchListCellBottom@2x.png */; };
@@ -453,6 +461,16 @@
 		D7423696129EC46200EA0272 /* GMRChooseGameAndMode+SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRChooseGameAndMode+SearchTableView.m"; sourceTree = "<group>"; };
 		D74237E9129F6A4F00EA0272 /* GMRGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGame.h; sourceTree = "<group>"; };
 		D74237EA129F6A4F00EA0272 /* GMRGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGame.m; sourceTree = "<group>"; };
+		D745076912A9EE7A00034CD6 /* ButtonDone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonDone.png; path = Images/Light/ButtonDone.png; sourceTree = "<group>"; };
+		D745076A12A9EE7A00034CD6 /* ButtonDone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonDone@2x.png"; path = "Images/Light/ButtonDone@2x.png"; sourceTree = "<group>"; };
+		D745077E12A9F90E00034CD6 /* BackgroundGameCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundGameCell.png; path = Images/Light/BackgroundGameCell.png; sourceTree = "<group>"; };
+		D745077F12A9F90E00034CD6 /* BackgroundGameCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundGameCell@2x.png"; path = "Images/Light/BackgroundGameCell@2x.png"; sourceTree = "<group>"; };
+		D745078012A9F90E00034CD6 /* BackgroundModeCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundModeCell.png; path = Images/Light/BackgroundModeCell.png; sourceTree = "<group>"; };
+		D745078112A9F90E00034CD6 /* BackgroundModeCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundModeCell@2x.png"; path = "Images/Light/BackgroundModeCell@2x.png"; sourceTree = "<group>"; };
+		D745078612A9F93800034CD6 /* GMRGameListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameListCell.h; sourceTree = "<group>"; };
+		D745078712A9F93800034CD6 /* GMRGameListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameListCell.m; sourceTree = "<group>"; };
+		D74507A512A9FBC700034CD6 /* GMRModeListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRModeListCell.h; sourceTree = "<group>"; };
+		D74507A612A9FBC700034CD6 /* GMRModeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRModeListCell.m; sourceTree = "<group>"; };
 		D746BFBC12984E61003ADC09 /* GMRPlatformBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlatformBanner.h; sourceTree = "<group>"; };
 		D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlatformBanner.m; sourceTree = "<group>"; };
 		D747507F1290315100342AD1 /* MatchListCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottom.png; sourceTree = "<group>"; };
@@ -867,6 +885,12 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D745077E12A9F90E00034CD6 /* BackgroundGameCell.png */,
+				D745077F12A9F90E00034CD6 /* BackgroundGameCell@2x.png */,
+				D745078012A9F90E00034CD6 /* BackgroundModeCell.png */,
+				D745078112A9F90E00034CD6 /* BackgroundModeCell@2x.png */,
+				D745076912A9EE7A00034CD6 /* ButtonDone.png */,
+				D745076A12A9EE7A00034CD6 /* ButtonDone@2x.png */,
 				D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */,
 				D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */,
 				D76C4A8312A8C45700A83206 /* ButtonPodHighlighted.png */,
@@ -1114,6 +1138,10 @@
 				D7D8CCBD12932A4B00A00E18 /* GMRPlayerListCell.h */,
 				D7D8CCBE12932A4B00A00E18 /* GMRPlayerListCell.m */,
 				D7D8CCC012932A7E00A00E18 /* GMRPlayerListCell.xib */,
+				D745078612A9F93800034CD6 /* GMRGameListCell.h */,
+				D745078712A9F93800034CD6 /* GMRGameListCell.m */,
+				D74507A512A9FBC700034CD6 /* GMRModeListCell.h */,
+				D74507A612A9FBC700034CD6 /* GMRModeListCell.m */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -1770,6 +1798,12 @@
 				D76C4A8612A8C45700A83206 /* ButtonPodHighlighted@2x.png in Resources */,
 				D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */,
 				D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */,
+				D745076B12A9EE7A00034CD6 /* ButtonDone.png in Resources */,
+				D745076C12A9EE7A00034CD6 /* ButtonDone@2x.png in Resources */,
+				D745078212A9F90E00034CD6 /* BackgroundGameCell.png in Resources */,
+				D745078312A9F90E00034CD6 /* BackgroundGameCell@2x.png in Resources */,
+				D745078412A9F90E00034CD6 /* BackgroundModeCell.png in Resources */,
+				D745078512A9F90E00034CD6 /* BackgroundModeCell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1861,6 +1895,8 @@
 				D7D6B52E12A32094004FD6F6 /* UIButton+GMRButtonTypes.m in Sources */,
 				D7D6B73612A34C7D004FD6F6 /* GMRNoneView.m in Sources */,
 				D7B507E612A4D096005F2413 /* ABTableViewCell.m in Sources */,
+				D745078812A9F93800034CD6 /* GMRGameListCell.m in Sources */,
+				D74507A712A9FBC700034CD6 /* GMRModeListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

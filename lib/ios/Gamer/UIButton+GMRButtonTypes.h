@@ -14,6 +14,7 @@ enum
 	GMRButtonTypeBack,
 	GMRButtonTypeCancel,
 	GMRButtonTypeCreate,
+	GMRButtonTypeDone,
 	GMRButtonTypeJoin,
 	GMRButtonTypeLeave,
 	GMRButtonTypeLogin,

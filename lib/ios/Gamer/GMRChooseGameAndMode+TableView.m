@@ -11,6 +11,7 @@
 #import "GMRMatch.h"
 #import "GMRGame.h"
 #import "GMRCreateGameGlobals.h"
+#import "GMRModeListCell.h"
 
 @implementation GMRChooseGameAndMode(TableView)
 
@@ -46,13 +47,12 @@
 	
 	static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    GMRModeListCell *cell = (GMRModeListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[GMRModeListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
-	cell.textLabel.text = [kCreateMatchProgress.game.modes objectAtIndex:indexPath.row];
+	cell.title = [kCreateMatchProgress.game.modes objectAtIndex:indexPath.row];
     return cell;
 }
 

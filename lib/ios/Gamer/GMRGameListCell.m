@@ -1,16 +1,16 @@
 //
-//  GMRPlayerListCell.m
+//  GMRGameListCell.m
 //  Gamer
 //
-//  Created by Adam Venturella on 11/16/10.
+//  Created by Adam Venturella on 12/3/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "GMRPlayerListCell.h"
+#import "GMRGameListCell.h"
 
 
-@implementation GMRPlayerListCell
-@synthesize player;
+@implementation GMRGameListCell
+@synthesize title;
 
 - (void)drawContentView:(CGRect)rect highlighted:(BOOL)highlighted 
 {
@@ -18,7 +18,7 @@
 	
 	CGFloat  grayColor     = 136.0/255;
 	
-	UIImage * backgroundImage = [self.reuseIdentifier isEqualToString:@"PlayerListCellCreator"] ? [UIImage imageNamed:@"BackgroundPlayerCellCreator.png"] : [UIImage imageNamed:@"BackgroundPlayerCell.png"];
+	UIImage * backgroundImage = [UIImage imageNamed:@"BackgroundGameCell.png"];
 	
 	UIFont * playerFont    = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0];
 	UIColor * fontColor    = [UIColor colorWithRed:grayColor
@@ -34,19 +34,21 @@
 	CGFloat fontHeight = playerFont.pointSize;
     CGFloat yOffset    = (rect.size.height - fontHeight) / 2.0;
 	
-    CGRect textRect = CGRectMake(0, yOffset-4.0, rect.size.width, fontHeight);
+    CGRect textRect = CGRectMake(10.0, yOffset-4.0, rect.size.width-10.0, fontHeight);
 	
 	CGContextSetFillColorWithColor(context, fontColor.CGColor);
-    [player drawInRect:textRect 
+    [title drawInRect:textRect 
 			  withFont:playerFont 
 		 lineBreakMode:UILineBreakModeClip 
-			 alignment:UITextAlignmentCenter];
-
+			 alignment:UITextAlignmentLeft];
+	
 }
 
-- (void)dealloc {
-	self.player = nil;
-    [super dealloc];
+
+- (void)dealloc 
+{
+    self.title = nil;
+	[super dealloc];
 }
 
 

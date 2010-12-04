@@ -16,7 +16,7 @@
 	
 	[self.navigationItem setHidesBackButton:YES];
 	
-	UIButton * cancelButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+	UIButton * cancelButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeDone];
 	[cancelButton addTarget:self action:@selector(cancelSheet) forControlEvents:UIControlEventTouchUpInside];
 	
 

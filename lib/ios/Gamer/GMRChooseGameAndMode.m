@@ -17,6 +17,8 @@
 @implementation GMRChooseGameAndMode
 @synthesize gameLabel, modeLabel, modesView, modesTableView;
 
+//TODO: Use Gear Image for game mode cell (Player list cell with gear icon instead of the person icon)
+
 - (void)viewDidLoad 
 {
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Game and Mode"];
