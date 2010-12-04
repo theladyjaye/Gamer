@@ -202,8 +202,23 @@ GMRMatch * kCreateMatchProgress = nil;
 		}
 		else if([keyPath isEqualToString:@"label"])
 		{
-			self.description.selected = YES;
-			self.description.label.text = kCreateMatchProgress.label;
+			if([kCreateMatchProgress.label length] >= 4)
+			{
+				self.description.selected = YES;
+				self.description.label.text = kCreateMatchProgress.label;
+			}
+			else 
+			{
+				if(kCreateMatchProgress.label)
+				{
+					self.description.label.text = @"Description";
+					self.description.selected = NO;
+				
+					kCreateMatchProgress.label = nil;
+				}
+			}
+
+			
 		}
 	}
 }

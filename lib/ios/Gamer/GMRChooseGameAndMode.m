@@ -30,7 +30,11 @@
 		
 		if(kCreateMatchProgress.game.selectedMode > -1)
 		{
-			modeLabel.text = [kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode];
+			modeLabel.text          = [kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode];
+			NSUInteger indexes[]    = {0, kCreateMatchProgress.game.selectedMode};
+			
+			NSIndexPath * indexPath = [NSIndexPath indexPathWithIndexes:indexes length:2];
+			[modesTableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
 		}
 	}
 	

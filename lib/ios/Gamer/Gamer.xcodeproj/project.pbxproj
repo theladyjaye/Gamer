@@ -306,6 +306,8 @@
 		D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAD84128A11BF0022AF4E /* OverviewController.m */; };
 		D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7EEAD85128A11BF0022AF4E /* OverviewController.xib */; };
 		D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */; };
+		D7FD622612AA171700F27863 /* ButtonPodHighlightedTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */; };
+		D7FD622712AA171700F27863 /* ButtonPodHighlightedTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FD622512AA171700F27863 /* ButtonPodHighlightedTall@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -687,6 +689,8 @@
 		D7EEAE54128A20E90022AF4E /* GMRScheduledMatchesForUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRScheduledMatchesForUser.h; sourceTree = "<group>"; };
 		D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRScheduledMatchesForUser.m; sourceTree = "<group>"; };
 		D7EEAE57128A210D0022AF4E /* GMRDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRDataSource.h; sourceTree = "<group>"; };
+		D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodHighlightedTall.png; path = Images/Light/ButtonPodHighlightedTall.png; sourceTree = "<group>"; };
+		D7FD622512AA171700F27863 /* ButtonPodHighlightedTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodHighlightedTall@2x.png"; path = "Images/Light/ButtonPodHighlightedTall@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -885,6 +889,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */,
+				D7FD622512AA171700F27863 /* ButtonPodHighlightedTall@2x.png */,
 				D745077E12A9F90E00034CD6 /* BackgroundGameCell.png */,
 				D745077F12A9F90E00034CD6 /* BackgroundGameCell@2x.png */,
 				D745078012A9F90E00034CD6 /* BackgroundModeCell.png */,
@@ -1804,6 +1810,8 @@
 				D745078312A9F90E00034CD6 /* BackgroundGameCell@2x.png in Resources */,
 				D745078412A9F90E00034CD6 /* BackgroundModeCell.png in Resources */,
 				D745078512A9F90E00034CD6 /* BackgroundModeCell@2x.png in Resources */,
+				D7FD622612AA171700F27863 /* ButtonPodHighlightedTall.png in Resources */,
+				D7FD622712AA171700F27863 /* ButtonPodHighlightedTall@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

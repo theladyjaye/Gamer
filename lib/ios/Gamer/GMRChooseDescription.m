@@ -13,7 +13,7 @@
 
 
 static CGFloat baseHeight = 34.0;
-static CGFloat maxHeight  = 52.0;
+static CGFloat maxHeight  = 54.0;
 static CGFloat currentHeight;
 
 @implementation GMRChooseDescription
@@ -40,11 +40,13 @@ static CGFloat currentHeight;
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-	
+	/*
 	CGFloat candidateHeight = textField.contentSize.height;
+	NSLog(@"%f", candidateHeight);
+	
 	if(candidateHeight >= baseHeight && candidateHeight <= maxHeight)
 	{
-		CGFloat newY = candidateHeight == baseHeight ? 9.0 : 1.0;
+		CGFloat newY = candidateHeight == baseHeight ? 17.0 : 9.0;
 		if(currentHeight != candidateHeight)
 		{
 			currentHeight = candidateHeight;
@@ -54,9 +56,10 @@ static CGFloat currentHeight;
 							 }];
 		
 		}
-	}
+	}*/
 	
-	kCreateMatchProgress.label = textField.text;
+	
+	kCreateMatchProgress.label = [textField.text length] > 0 ? textField.text : nil;
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text

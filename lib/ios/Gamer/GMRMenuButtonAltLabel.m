@@ -14,17 +14,17 @@
 
 - (UIImage *)backgroundImageForOpenNormal
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputOpenLarge" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodBackgroundTall" ofType:@"png"]];
 }
 
 - (UIImage *)backgroundImageForClosedNormal
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputClosedLarge" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodBackgroundTall" ofType:@"png"]];
 }
 
-- (UIImage *)backgroundImageForSelected
+- (UIImage *)backgroundImageForHighlighted
 {
-	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonInputLargeSelected" ofType:@"png"]];
+	return [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ButtonPodHighlightedTall" ofType:@"png"]];
 }
 
 - (void)dealloc 
