@@ -9,6 +9,20 @@
 #import "GMRNavigationController.h"
 #import "HazGame.h"
 
+@interface UISearchBar(CustomImage)
+@end
+
+@implementation UISearchBar(CutsomImage)
+- (void)drawRect:(CGRect)rect
+{
+	UIView* segment=[self.subviews objectAtIndex:0];
+	[segment removeFromSuperview];
+	
+	UIImage *image = [UIImage imageNamed: @"ToolbarBackground.png"];
+	[image drawInRect:CGRectMake(0, 0, self.frame.size.width, image.size.height)];
+}
+@end
+
 @interface UIToolbar(CustomImage)
 @end
 

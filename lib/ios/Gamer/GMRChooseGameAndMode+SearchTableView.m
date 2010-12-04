@@ -20,6 +20,23 @@
 
 @implementation GMRChooseGameAndMode(SearchTableView)
 
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+	[UIView animateWithDuration:0.25 
+					 animations:^{
+						 navigationBarShadow.transform = CGAffineTransformMakeTranslation(0.0, -64.0);
+					 }];
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+	[UIView animateWithDuration:0.25 
+					 animations:^{
+						 navigationBarShadow.transform = CGAffineTransformIdentity;
+					 }];
+	
+}
+
 - (void)searchDisplayController:(UISearchDisplayController *)controller willShowSearchResultsTableView:(UITableView *)tableView
 {
 	controller.searchResultsTableView.backgroundColor = self.view.backgroundColor;

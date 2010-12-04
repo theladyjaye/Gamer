@@ -15,6 +15,7 @@
 	UILabel * modeLabel;
 	UIView * modesView;
 	UITableView * modesTableView;
+	UIImageView * navigationBarShadow; // assign only
 }
 
 @property(nonatomic, retain)IBOutlet UILabel * gameLabel;

@@ -39,7 +39,7 @@
 		[[UIColor clearColor] set];
 		CGContextFillRect(context, rect);
 	
-		UIFont * playerFont    = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0];
+		UIFont * playerFont    = [UIFont fontWithName:@"HelveticaNeue" size:14.0];
 		UIColor * fontColor    = [UIColor colorWithRed:grayColor
 												 green:grayColor
 												  blue:grayColor

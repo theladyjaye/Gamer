@@ -216,6 +216,8 @@
 		D7C0F4FA12A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0F4F812A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png */; };
 		D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */; };
 		D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */; };
+		D7C74C3212AA9606000256F6 /* SectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C74C3012AA9606000256F6 /* SectionBackground.png */; };
+		D7C74C3312AA9606000256F6 /* SectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */; };
 		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
 		D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */; };
 		D7D6B2BD12A2B4E3004FD6F6 /* BackgroundController.png in Resources */ = {isa = PBXBuildFile; fileRef = D7D6B2BA12A2B4E3004FD6F6 /* BackgroundController.png */; };
@@ -601,6 +603,8 @@
 		D7C33DA01295677A00B923AE /* OverviewController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OverviewController+TableView.m"; sourceTree = "<group>"; };
 		D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameDetailController+PlayerList.h"; sourceTree = "<group>"; };
 		D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRGameDetailController+PlayerList.m"; sourceTree = "<group>"; };
+		D7C74C3012AA9606000256F6 /* SectionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SectionBackground.png; path = Images/Light/SectionBackground.png; sourceTree = "<group>"; };
+		D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SectionBackground@2x.png"; path = "Images/Light/SectionBackground@2x.png"; sourceTree = "<group>"; };
 		D7D23DA2128CE9A500C23711 /* GMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlertView.h; sourceTree = "<group>"; };
 		D7D23DA3128CE9A500C23711 /* GMRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlertView.m; sourceTree = "<group>"; };
 		D7D23DA4128CE9A500C23711 /* GMRAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAlertView.xib; sourceTree = "<group>"; };
@@ -889,6 +893,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7C74C3012AA9606000256F6 /* SectionBackground.png */,
+				D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */,
 				D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */,
 				D7FD622512AA171700F27863 /* ButtonPodHighlightedTall@2x.png */,
 				D745077E12A9F90E00034CD6 /* BackgroundGameCell.png */,
@@ -1812,6 +1818,8 @@
 				D745078512A9F90E00034CD6 /* BackgroundModeCell@2x.png in Resources */,
 				D7FD622612AA171700F27863 /* ButtonPodHighlightedTall.png in Resources */,
 				D7FD622712AA171700F27863 /* ButtonPodHighlightedTall@2x.png in Resources */,
+				D7C74C3212AA9606000256F6 /* SectionBackground.png in Resources */,
+				D7C74C3312AA9606000256F6 /* SectionBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "GMRChooseGameAndMode.h"
 #import "GMRChooseGameAndMode+TableView.h"
 #import "GMRChooseGameAndMode+SearchTableView.h"
+#import "GMRNavigationController.h"
 #import "GMRGame.h"
 #import "GMRMatch.h"
 #import "GMRCreateGameGlobals.h"
@@ -17,11 +18,18 @@
 @implementation GMRChooseGameAndMode
 @synthesize gameLabel, modeLabel, modesView, modesTableView;
 
-//TODO: Use Gear Image for game mode cell (Player list cell with gear icon instead of the person icon)
-
 - (void)viewDidLoad 
 {
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Game and Mode"];
+	
+	for(UIView * targetView in [self.navigationController.view subviews])
+	{
+		if([targetView class]== [UIImageView class])
+		{
+			navigationBarShadow = (UIImageView *)targetView;
+		}
+	}
+	
 	
 	if(kCreateMatchProgress.game)	
 	{
@@ -50,9 +58,21 @@
 {
 	if([kCreateMatchProgress.game.modes count] > 0)
 	{
-		modesView.hidden = NO;
 		
 		[modesTableView reloadData];
+		// showing modes view for the first time.
+		if(modesView.hidden)
+		{
+			modesView.transform = CGAffineTransformMakeTranslation(0.0, 187.0);
+			modesView.hidden = NO;
+			[UIView animateWithDuration:0.3 
+								  delay:0.25 
+								options:UIViewAnimationCurveEaseOut 
+							 animations:^{
+								 modesView.transform = CGAffineTransformIdentity;
+							 } 
+							 completion:NULL];
+		}
 		
 		if([kCreateMatchProgress.game.modes count] < 7)
 		{
