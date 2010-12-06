@@ -8,7 +8,7 @@ module.exports = {
 	"unknown_error"      :{"code":400, "message":"unknown_error"},
 	"unknown_user"       :{"code":400, "message":"unknown_user"},
 	"unknown_match"      :{"code":400, "message":"unknown_match"},
-	"unknown_alias"     :{"code":400, "message" :"unknown_alias"},
+	"unknown_alias"     :{"code":400, "message" :"unknown_gamer_alias"},
 	"schedule_time"      :{"code":400, "message":"invalid_schedule_time"},
 	"create_match"       :{"code":400, "message":"unable_to_create_match"},
 	"update_match"       :{"code":400, "message":"unable_to_update_match"}
