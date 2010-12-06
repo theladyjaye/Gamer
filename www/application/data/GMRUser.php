@@ -135,8 +135,6 @@ class GMRUser
 		$object->id         = $array['id'];
 		$object->username   = $array['username'];
 		$object->email      = $array['email'];
-		$object->firstname  = $array['firstname'];
-		$object->lastname   = $array['lastname'];
 		$object->password   = $array['password'];
 		$object->active     = (int) $array['active'];
 		$object->token      = $array['token'];

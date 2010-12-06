@@ -83,7 +83,6 @@ GMRClient * kGamerApi = nil;
 {
 	BOOL result = NO;
 	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	
 	if([defaults objectForKey:@"token"] != nil && [defaults objectForKey:@"username"] != nil)
 	{
 		result = YES;

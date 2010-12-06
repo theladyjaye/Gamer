@@ -97,9 +97,13 @@ static dispatch_queue_t jsonProcessingQueue;
 														parserOptions:YAJLParserOptionsNone 
 																error:&error] autorelease];		
 			if(error)
+			{
 				NSLog(@"GMRRequest Network Error!");
+				NSLog(@"%@",[request responseString]);
+			}
+				
 			
-			
+			NSLog(@"%@", (NSDictionary *)json.root);
 			callback([[json.root objectForKey:@"ok"] boolValue], (NSDictionary *)json.root);
 		});
 		

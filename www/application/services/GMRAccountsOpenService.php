@@ -178,11 +178,10 @@ class GMRAccountsOpenService extends GMRAbstractService
 		}
 		
 		
-		
 		if($input->isValid)
 		{
 			$user = $is_email ? GMRUser::userWithEmail($input->username) : GMRUser::userWithUsername($input->username);
-			
+
 			if($user)
 			{
 				$password = GMRSecurity::hash($input->password);

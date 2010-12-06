@@ -43,7 +43,6 @@
 	
 	// both of these methods will be invoked from a background thread
 	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){
-		
 		if(ok)
 		{
 			NSString * token = (NSString *)[response objectForKey:@"token"];

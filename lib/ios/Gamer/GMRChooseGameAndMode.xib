@@ -124,7 +124,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Mode</string>
-						<object class="NSFont" key="IBUIFont" id="154898069">
+						<object class="NSFont" key="IBUIFont" id="403251654">
 							<string key="NSName">HelveticaNeue-Italic</string>
 							<double key="NSSize">11</double>
 							<int key="NSfFlags">16</int>
@@ -155,7 +155,7 @@
 								<float key="IBUISectionHeaderHeight">22</float>
 								<float key="IBUISectionFooterHeight">22</float>
 							</object>
-							<object class="IBUIImageView" id="819303483">
+							<object class="IBUIImageView" id="232030469">
 								<reference key="NSNextResponder" ref="666397468"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{0, 1}, {320, 37}}</string>
@@ -180,7 +180,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Available Game Modes</string>
 								<reference key="IBUIFont" ref="409221019"/>
-								<object class="NSColor" key="IBUITextColor" id="24080287">
+								<object class="NSColor" key="IBUITextColor" id="784854589">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MSAxIDEAA</bytes>
 								</object>
@@ -188,7 +188,7 @@
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 							</object>
-							<object class="IBUILabel" id="92655305">
+							<object class="IBUILabel" id="495084556">
 								<reference key="NSNextResponder" ref="666397468"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{10, 18}, {147, 21}}</string>
@@ -200,8 +200,8 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<string key="IBUIText">Choose One</string>
-								<reference key="IBUIFont" ref="154898069"/>
-								<reference key="IBUITextColor" ref="24080287"/>
+								<reference key="IBUIFont" ref="403251654"/>
+								<reference key="IBUITextColor" ref="784854589"/>
 								<reference key="IBUIHighlightedColor" ref="530571948"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
@@ -411,9 +411,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="869752733"/>
-							<reference ref="819303483"/>
+							<reference ref="232030469"/>
 							<reference ref="69303242"/>
-							<reference ref="92655305"/>
+							<reference ref="495084556"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Modes Display</string>
@@ -435,12 +435,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="819303483"/>
+						<reference key="object" ref="232030469"/>
 						<reference key="parent" ref="666397468"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
-						<reference key="object" ref="92655305"/>
+						<reference key="object" ref="495084556"/>
 						<reference key="parent" ref="666397468"/>
 					</object>
 				</object>
