@@ -27,4 +27,4 @@ server.use(main.renderResponse);
 server.listen(environment.host.port);
 
 
-console.log('Gamer server listening on port ' + environment.host.port);
+console.log('GamePop server listening on port ' + environment.host.port);

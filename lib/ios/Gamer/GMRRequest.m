@@ -15,7 +15,7 @@
 
 
 #define API_DOMAIN @"http://hazgame.com:7331"
-#define USER_AGENT @"HazGame Mobile"
+#define USER_AGENT @"GamePop Mobile"
 
 #define GAMER_TESTING 1
 
@@ -30,8 +30,8 @@ static dispatch_queue_t jsonProcessingQueue;
 	self = [super init];
 	if(self)
 	{
-		networkQueue        = dispatch_queue_create("com.hazgame.network", NULL);
-		jsonProcessingQueue = dispatch_queue_create("com.hazgame.json", NULL);
+		networkQueue        = dispatch_queue_create("com.gamepop.network", NULL);
+		jsonProcessingQueue = dispatch_queue_create("com.gamepop.json", NULL);
 	}
 	
 	return self;
