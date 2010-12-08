@@ -271,16 +271,8 @@
 								<string>D79C06BC12982155000F6DAD</string>
 								<string>D775C4E2128797D800C72E64</string>
 								<string>D775C4E11287978C00C72E64</string>
-								<string>D750128712989F710079EB44</string>
-								<string>D75012DD1298CE6A0079EB44</string>
-								<string>D750128E1298A0780079EB44</string>
-								<string>D709BF05129A266B0057EA4B</string>
-								<string>D709BF40129A2B500057EA4B</string>
-								<string>D709BF42129A2B600057EA4B</string>
-								<string>D7208A7D1292BECD009C0624</string>
-								<string>D795FDB6128FB3E50033F086</string>
-								<string>D7B7CA671288FAE900DC33F4</string>
-								<string>08FB77AEFE84172EC02AAC07</string>
+								<string>D7F3E21912AFDA0700837E14</string>
+								<string>D7EEAD82128A11AF0022AF4E</string>
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -288,13 +280,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>99</integer>
-									<integer>95</integer>
+									<integer>29</integer>
+									<integer>25</integer>
+									<integer>24</integer>
+									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1370}, {305, 861}}</string>
+							<string>{{0, 120}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRRequest.m</string>
+								<string>GMRActivityView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -337,18 +331,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRRequest.m</string>
+										<string>GMRActivityView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7CBEE8512ACB77F0048EA18</string>
+										<string>D7F3E28112AFE01600837E14</string>
 										<key>history</key>
 										<array>
 											<string>D7CBEE4812ACABE00048EA18</string>
 											<string>D7CBEE5812ACACDD0048EA18</string>
 											<string>D7CBEE5912ACACDD0048EA18</string>
 											<string>D7CBEE6612ACAEC60048EA18</string>
-											<string>D7CBEE8412ACB77C0048EA18</string>
+											<string>D7F3E27C12AFE01600837E14</string>
+											<string>D7F3E27D12AFE01600837E14</string>
+											<string>D7F3E27E12AFE01600837E14</string>
+											<string>D7F3E27F12AFE01600837E14</string>
+											<string>D7F3E28012AFE01600837E14</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -471,11 +469,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D7CBEE2F12AC876C0048EA18</string>
+				<string>D7F3E28212AFE01600837E14</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>D7CBEE3012AC876C0048EA18</string>
+				<string>D7F3E28312AFE01600837E14</string>
 				<string>D7DDD7BB127FD49300C29265</string>
-				<string>D7CBEE3112AC876C0048EA18</string>
+				<string>D7F3E28412AFE01600837E14</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -665,8 +663,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D7CBEE4F12ACABFB0048EA18</string>
-		<string>D7CBEE4D12ACABE10048EA18</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
