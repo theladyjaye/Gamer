@@ -58,18 +58,34 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
 
 - (void)transitionIn
 {
-	[activityView startAnimating];
+	inTransition = YES;
 	[UIView animateWithDuration:0.35 
 						  delay:0.0 
 						options:UIViewAnimationCurveEaseOut
 					 animations:^{
 						 self.transform = CGAffineTransformMakeTranslation(0.0, 50.0);
 					 }
-					 completion:NULL];
+					 completion:^(BOOL finished){
+						 inTransition = NO;
+					 }];
 }
 
 
-- (void)transitionOut
+- (void)transitionOut:(void(^)(void))complete
+{
+	if(inTransition)
+	{
+		inTransition = NO;
+		[self performSelector:@selector(realizeTransitionOut:) withObject:complete afterDelay:0.75];
+	}
+	else 
+	{
+		[self realizeTransitionOut:complete];
+	}
+
+}
+
+- (void)realizeTransitionOut:(void(^)(void))complete
 {
 	[UIView animateWithDuration:0.35 
 						  delay:0.0
@@ -79,6 +95,7 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
 					 }
 					 completion:^(BOOL finished){
 						 [activityView stopAnimating];
+						 complete();
 					 }];
 }
 
@@ -158,6 +175,7 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
 	activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	activityView.transform = CGAffineTransformMakeScale(0.85, 0.85);
 	activityView.frame = (CGRect){ {5.0 + inset, 13.0 + inset}, activityView.frame.size};
+	[activityView startAnimating];
 	[self addSubview:activityView];
 	
 }

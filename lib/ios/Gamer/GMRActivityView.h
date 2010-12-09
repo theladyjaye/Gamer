@@ -11,7 +11,9 @@
 
 @interface GMRActivityView : UIView {
 	UIActivityIndicatorView * activityView;
+	BOOL inTransition;
 }
 - (void)transitionIn;
-- (void)transitionOut;
+- (void)transitionOut:(void(^)(void))complete;
+- (void)realizeTransitionOut:(void(^)(void))complete;
 @end

@@ -16,6 +16,7 @@
 #import "GMRMatchListCell.h"
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
+#import "UIApplication+GamePop.h"
 
 @implementation OverviewController(TableView)
 
@@ -23,6 +24,8 @@
 {
 	[matches release];
 	matches = nil;
+	
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	[kGamerApi matchesScheduled:^(BOOL ok, NSDictionary * response)
 	 {
@@ -54,20 +57,27 @@
 				[matches retain];
 				dispatch_async(dispatch_get_main_queue(), ^{
 					
+					[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 					[matchesTable reloadData];
 				});
 			 }
 			 else 
 			 {
 				 matches = nil;
-				 dispatch_async(dispatch_get_main_queue(), ^{[self noMatchesScheduled];});
+				 dispatch_async(dispatch_get_main_queue(), ^{
+					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+					 [self noMatchesScheduled];
+				 });
 			 }
 
 		 }
 		 else 
 		 {
 			 NSLog(@"%@", response);
-			 dispatch_async(dispatch_get_main_queue(), ^{[self noMatchesScheduled];});
+			 dispatch_async(dispatch_get_main_queue(), ^{
+				 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+				 [self noMatchesScheduled];
+			 });
 		 }
 
 	 }];

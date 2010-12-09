@@ -34,10 +34,7 @@ GMRClient * kGamerApi = nil;
 		[self initializeAuthenticationFlow];
 	}
 	
-	GMRActivityView * view = [[GMRActivityView alloc] initWithFrame:CGRectZero];
 	
-	[window addSubview:view];
-	[view transitionIn];
 	[self.window makeKeyAndVisible];
     return YES;
 }
