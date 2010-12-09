@@ -146,6 +146,7 @@
 		D7835685128C93A400E19528 /* GMRUsernameFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835684128C93A400E19528 /* GMRUsernameFormatter.m */; };
 		D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835687128C93B000E19528 /* GMRPasswordFormatter.m */; };
 		D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78356B7128C9FB500E19528 /* AudioToolbox.framework */; };
+		D7938A8912B09E3E00F45816 /* ActivityViewPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
@@ -528,6 +529,7 @@
 		D7835686128C93B000E19528 /* GMRPasswordFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPasswordFormatter.h; sourceTree = "<group>"; };
 		D7835687128C93B000E19528 /* GMRPasswordFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPasswordFormatter.m; sourceTree = "<group>"; };
 		D78356B7128C9FB500E19528 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActivityViewPattern.png; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
@@ -896,6 +898,7 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */,
 				D7C74C3012AA9606000256F6 /* SectionBackground.png */,
 				D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */,
 				D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */,
@@ -1833,6 +1836,7 @@
 				D7FD622712AA171700F27863 /* ButtonPodHighlightedTall@2x.png in Resources */,
 				D7C74C3212AA9606000256F6 /* SectionBackground.png in Resources */,
 				D7C74C3312AA9606000256F6 /* SectionBackground@2x.png in Resources */,
+				D7938A8912B09E3E00F45816 /* ActivityViewPattern.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

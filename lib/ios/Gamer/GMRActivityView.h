@@ -10,7 +10,8 @@
 
 
 @interface GMRActivityView : UIView {
-
+	UIActivityIndicatorView * activityView;
 }
-
+- (void)transitionIn;
+- (void)transitionOut;
 @end

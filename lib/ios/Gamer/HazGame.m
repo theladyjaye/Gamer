@@ -12,6 +12,7 @@
 #import "GMRAuthenticationController.h"
 #import "GMRMainController.h"
 #import "GMRNavigationController.h"
+#import "GMRActivityView.h"
 
 GMRClient * kGamerApi = nil;
 
@@ -33,6 +34,10 @@ GMRClient * kGamerApi = nil;
 		[self initializeAuthenticationFlow];
 	}
 	
+	GMRActivityView * view = [[GMRActivityView alloc] initWithFrame:CGRectZero];
+	
+	[window addSubview:view];
+	[view transitionIn];
 	[self.window makeKeyAndVisible];
     return YES;
 }
