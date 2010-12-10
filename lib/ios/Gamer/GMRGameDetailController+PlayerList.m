@@ -28,9 +28,9 @@ typedef NSUInteger PlayerListCellStyle;
 
 - (void)playersTableRefresh
 {	
-	GMRPlatform platform    = match.game.platform;
+	GMRPlatform platform    = match.platform;
 	NSString * game = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
-	
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	if(platform != GMRPlatformUnknown)
 	{
@@ -50,11 +50,20 @@ typedef NSUInteger PlayerListCellStyle;
 			 
 			 if(ok)
 			 {
-				 self.playersForMatch = (NSArray *)[response objectForKey:@"players"];
+				 
 				 dispatch_async(dispatch_get_main_queue(), ^{
+					 self.playersForMatch = (NSArray *)[response objectForKey:@"players"];
+					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 					 [playersTableView reloadData];
 				 });
 			 }
+			 else 
+			 {
+				 dispatch_async(dispatch_get_main_queue(), ^{
+					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+				 });
+			 }
+
 		 }];
 	}
 }

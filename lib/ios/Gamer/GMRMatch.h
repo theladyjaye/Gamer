@@ -21,7 +21,6 @@
 	
 	GMRPlatform platform;
 	GMRMatchAvailablilty availability;
-	NSInteger players;	
 	NSInteger maxPlayers;
 }
 @property(nonatomic, retain) GMRGame * game;
@@ -32,7 +31,6 @@
 @property(nonatomic, retain) NSString * mode;
 @property(nonatomic, assign) GMRPlatform platform;
 @property(nonatomic, assign) GMRMatchAvailablilty availability;
-@property(nonatomic, assign) NSInteger players;
 @property(nonatomic, assign) NSInteger maxPlayers;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary;

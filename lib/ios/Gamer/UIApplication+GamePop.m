@@ -10,13 +10,12 @@
 #import "HazGame.h"
 #import "GMRActivityView.h"
 
+static GMRActivityView * activityView;
 
 @implementation UIApplication(GamePop)
 
 - (void)setNetworkActivityIndicatorVisible:(BOOL)value
 {
-	static GMRActivityView * activityView;
-	
 	if(value)
 	{
 		if(!activityView)
@@ -25,6 +24,7 @@
 			
 			HazGame * app = (HazGame*)[[UIApplication sharedApplication] delegate];
 			[app.window addSubview:activityView];
+			[activityView release];
 		}
 			
 		
@@ -35,8 +35,8 @@
 		if(activityView)
 		{
 			[activityView transitionOut:^{
+				NSLog(@"TransitionOutComplete");
 				[activityView removeFromSuperview];
-				[activityView release];
 				activityView = nil;
 				
 			}];

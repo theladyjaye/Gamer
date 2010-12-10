@@ -13,6 +13,7 @@
 #import "GMRMainController.h"
 #import "GMRNavigationController.h"
 #import "GMRActivityView.h"
+#import "UIApplication+GamePop.h"
 
 GMRClient * kGamerApi = nil;
 

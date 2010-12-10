@@ -27,18 +27,13 @@ static void releasePatternCallback(void* image)
 {
 	if (image)
 	{
-		CGImageRelease((CGImageRef)image);
+		// Because we are using [UIImage imageNamed:]
+		// if we release the underlying cached image here
+		// it's bad news.  Normally you would need too though
+		
+		//CGImageRelease((CGImageRef)image);
 	}
 }
-
-static CGPatternCallbacks ActivityViewPatternCallbacks =
-{
-	0, // version
-	drawPatternCallback,
-	releasePatternCallback
-};
-
-
 
 @implementation GMRActivityView
 
@@ -50,7 +45,7 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
     
 	if (self) 
 	{
-        [self setBackgroundColor:[UIColor clearColor]];
+		[self setBackgroundColor:[UIColor clearColor]];
     }
     
 	return self;
@@ -102,45 +97,9 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
 
 - (void)drawRect:(CGRect)rect 
 {
-    CGContextRef context = UIGraphicsGetCurrentContext();
-	UIGraphicsPushContext(context);
+	
+	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGContextClearRect(context, rect);
-	
-	CGContextSetFillColor(context, CGColorGetComponents([UIColor blackColor].CGColor));
-	//CGContextSetShadow(context, CGSizeMake(0.0f, 0.0f), 6.0f);
-	
-	CGContextSetShadowWithColor(context, CGSizeMake(0.0f, 0.0f), 6.0, [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75].CGColor);
-	
-	
-	// --- begin pattern
-	// see: http://www.geekspiff.com/unlinkedCrap/tiledCGImage.html
-	
-	// because we are scaling it in the transform of the pattern, we can set everything else to 1.0 dimension wise
-	// and the transform will deal with the scaling
-	CGRect patternRect      = { CGPointZero, {1.0, 1.0} };
-	CGImageRef patternImage = [UIImage imageNamed:@"ActivityViewPattern.png"].CGImage;
-	
-	CGAffineTransform transform = CGAffineTransformMakeScale(CGImageGetWidth(patternImage), 
-															 CGImageGetHeight(patternImage));
-	
-	CGPatternRef pattern = CGPatternCreate(patternImage,
-										   patternRect, 
-										   transform, 
-										   1.0, 
-										   1.0, 
-										   kCGPatternTilingConstantSpacingMinimalDistortion, 
-										   true, 
-										   &ActivityViewPatternCallbacks);
-	
-	
-	CGColorSpaceRef patternColorspace = CGColorSpaceCreatePattern(NULL);
-	CGContextSetFillColorSpace(context, patternColorspace);
-	CGColorSpaceRelease(patternColorspace);
-	CGContextSetFillPattern(context, pattern, (float[]){1.0});
-	CGPatternRelease(pattern);
-	
-	// --- end pattern
-	
 	
 	CGFloat inset = 8.0;
 	CGRect targetRect = CGRectInset(rect, inset, inset);
@@ -160,30 +119,79 @@ static CGPatternCallbacks ActivityViewPatternCallbacks =
     CGContextAddArcToPoint(context, maxx, maxy, midx, maxy, 7.0);
     CGContextAddArcToPoint(context, minx, maxy, minx, midy, 7.0);
 	
-	CGContextFillPath(context);
 	
+	//CGContextSetFillColor(context, CGColorGetComponents([UIColor blackColor].CGColor));
+	//CGContextSetShadow(context, CGSizeMake(0.0f, 0.0f), 6.0f);
+	
+	UIGraphicsPushContext(context);
+	CGContextSetShadowWithColor(context, CGSizeMake(0.0f, 0.0f), 6.0, [UIColor colorWithRed:0 green:0 blue:0 alpha:0.75].CGColor);
+	
+	
+	// --- begin pattern
+	// see: http://www.geekspiff.com/unlinkedCrap/tiledCGImage.html
+	
+	// because we are scaling it in the transform of the pattern, we can set everything else to 1.0 dimension wise
+	// and the transform will deal with the scaling
+	
+	CGRect patternRect      = { CGPointZero, {1.0, 1.0} };
+	CGImageRef patternImage = [UIImage imageNamed:@"ActivityViewPattern.png"].CGImage;
+	
+	CGAffineTransform matrix = CGAffineTransformMakeScale(CGImageGetWidth(patternImage), 
+															 CGImageGetHeight(patternImage));
+
+	CGPatternCallbacks ActivityViewPatternCallbacks = {
+		0, // version
+		drawPatternCallback,
+		releasePatternCallback
+	};
+	
+	CGPatternRef pattern = CGPatternCreate(patternImage,
+										   patternRect, 
+										   matrix, 
+										   1.0, 
+										   1.0, 
+										   kCGPatternTilingConstantSpacingMinimalDistortion, 
+										   true, 
+										   &ActivityViewPatternCallbacks);
+	
+	
+	CGColorSpaceRef patternColorspace = CGColorSpaceCreatePattern(NULL);
+	
+	CGContextSetFillColorSpace(context, patternColorspace);
+	CGContextSetFillPattern(context, pattern, (float[]){1.0});
+	
+	CGColorSpaceRelease(patternColorspace);
+	CGPatternRelease(pattern);
+	
+	
+	// --- end pattern
+	
+	CGContextFillPath(context);
 	UIGraphicsPopContext();
+	
 	
 	// -- Add the Text
 	
 	[[UIColor whiteColor] set];
 	UIFont * labelFont     = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
-	[@"One Moment" drawAtPoint:CGPointMake(27.0 + inset, 14.0 + inset) withFont:labelFont];
+	[@"Loading" drawAtPoint:CGPointMake(27.0 + inset, 14.0 + inset) withFont:labelFont];
 	
 	// -- Add the Activity Indicator
 	
 	activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
 	activityView.transform = CGAffineTransformMakeScale(0.85, 0.85);
 	activityView.frame = (CGRect){ {5.0 + inset, 13.0 + inset}, activityView.frame.size};
-	[activityView startAnimating];
+	
 	[self addSubview:activityView];
+	[activityView release];
+	[activityView startAnimating];
+	 
 	
 }
 
 
 - (void)dealloc {
 	[activityView removeFromSuperview];
-	[activityView release];
     [super dealloc];
 }
 

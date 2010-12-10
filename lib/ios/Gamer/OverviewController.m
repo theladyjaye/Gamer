@@ -17,12 +17,16 @@
 #import "GMRMatchListCell.h"
 
 @implementation OverviewController
-@synthesize matchesTable;
+@synthesize matchesTable, matches;
 
 -(void)createGame
 {
 	GMRCreateGameController * controller = [[GMRCreateGameController alloc] initWithNibName:nil
 																					 bundle:nil];
+	
+	controller.matchesDataSourceController = self;
+	
+	
 	
 	UINavigationController * createGame      = [[UINavigationController alloc] initWithRootViewController:controller];
 	
@@ -61,7 +65,28 @@
 	
 	
 	[self matchesTableRefresh];
+	
+	[self addObserver:self 
+		         forKeyPath:@"matches" 
+			        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+			        context:nil];
+	
 	[super viewDidLoad];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	if([[change objectForKey:NSKeyValueChangeKindKey] intValue] ==  NSKeyValueChangeInsertion)
+	{
+		NSIndexSet * indexes = [change objectForKey:NSKeyValueChangeIndexesKey];
+		
+		[matchesTable beginUpdates];
+		
+		[matchesTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]] 
+							withRowAnimation:UITableViewRowAnimationNone];
+		
+		[matchesTable endUpdates];
+	}
 }
 
 - (void)updateCellsCountdown
@@ -132,7 +157,10 @@
 
 - (void)dealloc 
 {
-    [matches release];
+    [self removeObserver:self 
+			  forKeyPath:@"matches"];
+	
+	[matches release];
 	[super dealloc];
 }
 

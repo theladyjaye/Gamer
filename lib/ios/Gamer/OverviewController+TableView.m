@@ -16,7 +16,6 @@
 #import "GMRMatchListCell.h"
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
-#import "UIApplication+GamePop.h"
 
 @implementation OverviewController(TableView)
 
@@ -113,7 +112,7 @@
 	 
 	cell.labelString   = item.label;
 	cell.gameString    = item.game.label;
-	cell.platform      = item.game.platform;
+	cell.platform      = item.platform;
 	//cell.dateString    = [NSDate relativeTime:item.scheduled_time];
 	cell.scheduled_time = item.scheduled_time;
     return cell;

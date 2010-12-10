@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class GMRMenuButton,GMRMenuButtonAltLabel;
+@class GMRMenuButton,GMRMenuButtonAltLabel, OverviewController;
 @interface GMRCreateGameController : UIViewController {
 	
 	GMRMenuButton * platform;
@@ -17,6 +17,7 @@
 	GMRMenuButton * players;
 	GMRMenuButton * time;
 	GMRMenuButton * description;
+	OverviewController * matchesDataSourceController;
 }
 @property(nonatomic, retain) IBOutlet GMRMenuButton * platform;
 @property(nonatomic, retain) IBOutlet GMRMenuButtonAltLabel * gameAndMode;
@@ -24,6 +25,7 @@
 @property(nonatomic, retain) IBOutlet GMRMenuButton * players;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * time;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * description;
+@property(nonatomic, assign) OverviewController * matchesDataSourceController;
 
 
 @end

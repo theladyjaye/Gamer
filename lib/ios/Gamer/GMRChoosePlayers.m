@@ -19,10 +19,10 @@
 {
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Players"];
 	
-	if(kCreateMatchProgress.players)
+	if(kCreateMatchProgress.maxPlayers)
 	{
-		self.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.players];
-		[pickerView selectRow:(kCreateMatchProgress.players - 1) inComponent:0 animated:NO];
+		self.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.maxPlayers];
+		[pickerView selectRow:(kCreateMatchProgress.maxPlayers - 1) inComponent:0 animated:NO];
 	}
 	
 	[super viewDidLoad];
@@ -30,9 +30,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	if(!kCreateMatchProgress.players)
+	if(!kCreateMatchProgress.maxPlayers)
 	{
-		kCreateMatchProgress.players = 1;
+		kCreateMatchProgress.maxPlayers = 1;
 	}
 	
 	[super viewDidAppear:animated];
@@ -56,7 +56,7 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
 	self.label.text = [NSString stringWithFormat:@"%i Players", (row + 1)];
-	kCreateMatchProgress.players = (row + 1);
+	kCreateMatchProgress.maxPlayers = (row + 1);
 }
 
 /*

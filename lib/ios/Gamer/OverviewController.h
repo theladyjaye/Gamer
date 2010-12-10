@@ -15,6 +15,7 @@
 	NSTimer * updateTimer;
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
+@property(nonatomic, readonly)NSMutableArray * matches;
 
 - (void)createGame;
 - (void)noMatchesScheduled;

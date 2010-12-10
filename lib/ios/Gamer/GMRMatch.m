@@ -13,7 +13,7 @@
 #import "NSDate+JSON.h"
 
 @implementation GMRMatch
-@synthesize platform, game, availability, players, scheduled_time, label, maxPlayers, mode, created_by, id;
+@synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary
 {

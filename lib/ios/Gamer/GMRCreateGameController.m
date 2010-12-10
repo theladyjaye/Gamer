@@ -6,6 +6,7 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <dispatch/dispatch.h>
 #import "GMRCreateGameController.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
@@ -25,11 +26,12 @@
 
 #import "GMRGlobals.h"
 #import "GMRClient.h"
+#import "OverviewController.h"
 
 GMRMatch * kCreateMatchProgress = nil;
 
 @implementation GMRCreateGameController
-@synthesize platform, gameAndMode, availability, players, time, description;
+@synthesize platform, gameAndMode, availability, players, time, description, matchesDataSourceController;
 
 - (void)viewDidLoad 
 {
@@ -74,7 +76,7 @@ GMRMatch * kCreateMatchProgress = nil;
 							  context:nil];
 	
 	[kCreateMatchProgress addObserver:self 
-						   forKeyPath:@"players" 
+						   forKeyPath:@"maxPlayers" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 							  context:nil];
 	
@@ -160,7 +162,7 @@ GMRMatch * kCreateMatchProgress = nil;
 					self.players.selected   = NO;
 					self.players.label.text = @"Players";
 					
-					kCreateMatchProgress.players = 0;
+					kCreateMatchProgress.maxPlayers = 0;
 				}
 				else 
 				{
@@ -187,12 +189,12 @@ GMRMatch * kCreateMatchProgress = nil;
 				self.availability.label.text = [[change objectForKey:NSKeyValueChangeNewKey] intValue] == GMRMatchAvailabliltyPublic ? @"Public" : @"Private";
 			}	
 		}
-		else if([keyPath isEqualToString:@"players"])
+		else if([keyPath isEqualToString:@"maxPlayers"])
 		{
 			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
 			{
 				self.players.selected   = YES;
-				self.players.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.players];
+				self.players.label.text = [NSString stringWithFormat:@"%i Players", kCreateMatchProgress.maxPlayers];
 			}
 		}
 		else if([keyPath isEqualToString:@"scheduled_time"])
@@ -240,7 +242,7 @@ GMRMatch * kCreateMatchProgress = nil;
 												         requirement:GMRValidatorRequirementRequired 
 												  	         message:@"Invalid Game Mode"]];
 	
-	[form addValidator:[GMRPredicateValidator validatorWithPredicate:[NSPredicate predicateWithFormat:@"players > 0 AND players <= game.maxPlayers"]
+	[form addValidator:[GMRPredicateValidator validatorWithPredicate:[NSPredicate predicateWithFormat:@"maxPlayers > 0 AND maxPlayers <= game.maxPlayers"]
 												         requirement:GMRValidatorRequirementRequired 
 												  	         message:@"Invalid Players"]];
 	
@@ -260,16 +262,65 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	if(form.ok)
 	{
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 		[kGamerApi matchCreate:kCreateMatchProgress.scheduled_time 
 						gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
 					  gameMode:[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode]
 					  platform:kCreateMatchProgress.platform 
 				  availability:kCreateMatchProgress.availability 
-					maxPlayers:kCreateMatchProgress.players 
+					maxPlayers:kCreateMatchProgress.maxPlayers 
 				invitedPlayers:nil 
 						 label:kCreateMatchProgress.label
 				  withCallback:^(BOOL ok, NSDictionary * response)
 							  {
+								  if(ok)
+								  {
+									  dispatch_async(dispatch_get_main_queue(), ^{
+										  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+										  
+										  NSUInteger insertIndex = -1;
+										  
+										  for(GMRMatch * match in matchesDataSourceController.matches)
+										  {
+											  if([kCreateMatchProgress.scheduled_time compare:match.scheduled_time] == NSOrderedDescending)
+											  {
+												  insertIndex = [matchesDataSourceController.matches indexOfObject:match];
+											  }
+											  
+										  }
+										  
+										  insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
+										  NSString * matchId = [response objectForKey:@"match"];
+										  
+										  // prime some values:
+										  kCreateMatchProgress.id = matchId;
+										  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+										  
+										  
+										  [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
+										  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+										 			forKey:@"matches"];
+										  
+										  [matchesDataSourceController.matches insertObject:kCreateMatchProgress 
+										  										atIndex:insertIndex];
+										  
+										  
+										  [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
+											                     valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+													                      forKey:@"matches"];
+										  
+										  [self dismissModalViewController];
+										  
+									  }); 
+								  }
+								  else 
+								  {
+									  dispatch_async(dispatch_get_main_queue(), ^{
+											[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+									  });
+									  
+								  }
+
 								  NSLog(@"%@", response);
 							  }];
 	}
@@ -342,7 +393,7 @@ GMRMatch * kCreateMatchProgress = nil;
 							  forKeyPath:@"availability"];
 	
 	[kCreateMatchProgress removeObserver:self 
-							  forKeyPath:@"players"];
+							  forKeyPath:@"maxPlayers"];
 	
 	[kCreateMatchProgress removeObserver:self 
 							  forKeyPath:@"scheduled_time"];
