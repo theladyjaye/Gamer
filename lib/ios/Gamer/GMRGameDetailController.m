@@ -20,9 +20,10 @@
 #import "GMRGame.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
+#import "OverviewController.h"
 
 @implementation GMRGameDetailController
-@synthesize playersTableView, playersForMatch, gameLabel, platformLabel, descriptionLabel, modeLabel, scheduleTimeLabel, howItWorksView;
+@synthesize playersTableView, playersForMatch, gameLabel, platformLabel, descriptionLabel, modeLabel, scheduleTimeLabel, howItWorksView, matchesDataSourceController;
 
 -(id)initWithMatch:(GMRMatch *)value;
 {
@@ -245,13 +246,20 @@
 						gameId:gameId 
 					   matchId:match.id 
 				  withCallback:^(BOOL ok, NSDictionary * response){
-					     dispatch_async(dispatch_get_main_queue(), ^{
-				 
-						  NSUInteger previousIndex              = ([[self.navigationController viewControllers] indexOfObject:self] -1);
-						  UIViewController * previousController = [[self.navigationController viewControllers] objectAtIndex:previousIndex];
-				 
-						  [previousController performSelector:@selector(matchesTableRefresh)];
-						  [self.navigationController popViewControllerAnimated:YES];
+					     dispatch_async(dispatch_get_main_queue(), ^{				 
+						  
+							 NSUInteger removeIndex              = [kScheduledMatches indexOfObject:match];
+							 [matchesDataSourceController willChange:NSKeyValueChangeRemoval
+												 valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+														  forKey:@"matches"];
+						 
+							 [kScheduledMatches removeObjectAtIndex:removeIndex];
+						 
+							 [matchesDataSourceController didChange:NSKeyValueChangeRemoval 
+												valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+														 forKey:@"matches"];
+						  
+							 [self.navigationController popViewControllerAnimated:YES];
 			             });
 		 }];
 	}

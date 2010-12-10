@@ -107,8 +107,8 @@ function leaveMatch(req, res, next)
 			}
 			else
 			{
-				var account = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == platform) return element; })[0];
-				db.view("application", "matches-players", {"include_docs":true, "startkey":[match._id, account.alias], "endkey":[match._id, account.alias]}, function(error, data)
+				// games are removed by username, not alias.  Aliases are volitle, usernames are not.
+				db.view("application", "matches-players", {"include_docs":true, "startkey":[match._id, username], "endkey":[match._id, username]}, function(error, data)
 				{
 					if(error == null)
 					{

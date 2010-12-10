@@ -17,18 +17,15 @@
 #import "GMRMatchListCell.h"
 
 @implementation OverviewController
-@synthesize matchesTable, matches;
+@synthesize matchesTable, matches=kScheduledMatches;
 
 -(void)createGame
 {
 	GMRCreateGameController * controller = [[GMRCreateGameController alloc] initWithNibName:nil
 																					 bundle:nil];
-	
 	controller.matchesDataSourceController = self;
 	
-	
-	
-	UINavigationController * createGame      = [[UINavigationController alloc] initWithRootViewController:controller];
+	UINavigationController * createGame    = [[UINavigationController alloc] initWithRootViewController:controller];
 	
 	UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
 	navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
@@ -76,17 +73,27 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if([[change objectForKey:NSKeyValueChangeKindKey] intValue] ==  NSKeyValueChangeInsertion)
+	NSKeyValueChange kind = [[change objectForKey:NSKeyValueChangeKindKey] integerValue];
+	NSIndexSet * indexes  = [change objectForKey:NSKeyValueChangeIndexesKey];
+	
+	[matchesTable beginUpdates];
+	
+	switch(kind)
 	{
-		NSIndexSet * indexes = [change objectForKey:NSKeyValueChangeIndexesKey];
+		case NSKeyValueChangeInsertion:
+			[matchesTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]] 
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;
 		
-		[matchesTable beginUpdates];
-		
-		[matchesTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]] 
-							withRowAnimation:UITableViewRowAnimationNone];
-		
-		[matchesTable endUpdates];
+		case NSKeyValueChangeRemoval:
+			[matchesTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]]  
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;		
 	}
+	
+	[matchesTable endUpdates];
+	
+
 }
 
 - (void)updateCellsCountdown
@@ -160,7 +167,6 @@
     [self removeObserver:self 
 			  forKeyPath:@"matches"];
 	
-	[matches release];
 	[super dealloc];
 }
 

@@ -16,6 +16,7 @@
 #import "UIApplication+GamePop.h"
 
 GMRClient * kGamerApi = nil;
+NSMutableArray * kScheduledMatches = nil;
 
 @implementation HazGame
 @synthesize window;
@@ -25,6 +26,12 @@ GMRClient * kGamerApi = nil;
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+	
+	
+	// this guy is going to hang around for the lifetime of the application.
+	// should save us form makeing lot-o-GETs for the same data.
+	kScheduledMatches = [NSMutableArray array];
+	[kScheduledMatches retain];
 	
 	if([self hasAuthenticatedUser])
 	{

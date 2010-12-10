@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GMRViewController.h"
 
-@class GMRPlatformBanner, GMRMatch;
+@class GMRPlatformBanner, GMRMatch, OverviewController;
 @interface GMRGameDetailController : GMRViewController {
 	GMRMatch * match;
 	NSArray * playersForMatch;
@@ -24,6 +24,7 @@
 	NSTimer * updateTimer;
 	
 	UIToolbar * toolbar;
+	OverviewController * matchesDataSourceController;
 }
 
 @property(nonatomic, retain) IBOutlet UITableView * playersTableView;
@@ -34,6 +35,7 @@
 @property(nonatomic, retain) IBOutlet UILabel * scheduleTimeLabel;
 @property(nonatomic, retain) IBOutlet UILabel * platformLabel;
 @property(nonatomic, retain) IBOutlet UIView * howItWorksView;
+@property(nonatomic, assign) OverviewController * matchesDataSourceController;
 
 -(id)initWithMatch:(GMRMatch *)value;
 -(void)shareGame;

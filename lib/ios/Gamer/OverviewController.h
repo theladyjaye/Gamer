@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GMRViewController.h"
+
+
+
 @interface OverviewController : GMRViewController {
 	UITableView * matchesTable;
-	NSMutableArray * matches;
 	UIView * noneView;
 	NSTimer * updateTimer;
 }
