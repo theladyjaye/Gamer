@@ -300,7 +300,7 @@
 
 - (void)dealloc {
 	self.playersForMatch = nil;
-	//[match release];
+	[match release];
     [super dealloc];
 }
 

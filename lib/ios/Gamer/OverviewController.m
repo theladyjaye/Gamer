@@ -42,9 +42,12 @@
 
 - (void)noMatchesScheduled
 {
-	noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
-	[self.view addSubview:noneView];
-	[noneView release];
+	if(!noneView)
+	{
+		noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
+		[self.view addSubview:noneView];
+		[noneView release];
+	}
 }
 
 - (void)viewDidLoad 
@@ -73,6 +76,8 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+	
+	
 	NSKeyValueChange kind = [[change objectForKey:NSKeyValueChangeKindKey] integerValue];
 	NSIndexSet * indexes  = [change objectForKey:NSKeyValueChangeIndexesKey];
 	
@@ -93,7 +98,19 @@
 	
 	[matchesTable endUpdates];
 	
-
+	
+	NSUInteger remaining = [matchesTable numberOfRowsInSection:0];
+	
+	if(remaining == 0)
+	{
+		[self noMatchesScheduled];
+	}
+	else if(noneView && remaining > 0)
+	{
+		[noneView removeFromSuperview];
+		noneView = nil;
+	}
+	
 }
 
 - (void)updateCellsCountdown
