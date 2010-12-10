@@ -81,7 +81,7 @@ function leaveMatch(req, res, next)
 				// remove the whole match - owner is canceling it
 				purgeAndNotifyPlayersForMatch(match, function(err, data)
 				{
-					if(err = null)
+					if(err == null)
 					{
 						
 						db.removeDoc(match._id, match._rev, function(error, data)
