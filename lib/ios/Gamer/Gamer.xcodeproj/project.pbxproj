@@ -105,8 +105,6 @@
 		D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */; };
 		D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */; };
 		D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */; };
-		D7475106129083FE00342AD1 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475104129083FE00342AD1 /* 83-calendar.png */; };
-		D7475107129083FE00342AD1 /* 83-calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7475105129083FE00342AD1 /* 83-calendar@2x.png */; };
 		D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */; };
 		D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */; };
 		D75012921298A0990079EB44 /* GMRChoosePlatformController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012901298A0990079EB44 /* GMRChoosePlatformController.m */; };
@@ -117,6 +115,7 @@
 		D755BAA412A764CA00390451 /* BackgroundPlayerCellCreator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */; };
 		D755BB0412A76C1900390451 /* ButtonSave.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BB0212A76C1900390451 /* ButtonSave.png */; };
 		D755BB0512A76C1900390451 /* ButtonSave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BB0312A76C1900390451 /* ButtonSave@2x.png */; };
+		D76A0D2012B306F00027FDF6 /* ActivityViewPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = D76A0D1F12B306F00027FDF6 /* ActivityViewPattern.png */; };
 		D76C4A2012A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D76C4A1E12A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png */; };
 		D76C4A2112A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76C4A1F12A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png */; };
 		D76C4A3612A8BB6300A83206 /* ButtonPodCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D76C4A3412A8BB6300A83206 /* ButtonPodCheckbox.png */; };
@@ -147,7 +146,22 @@
 		D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835687128C93B000E19528 /* GMRPasswordFormatter.m */; };
 		D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78356B7128C9FB500E19528 /* AudioToolbox.framework */; };
 		D7840F3412B129860049E3F4 /* UIApplication+GamePop.m in Sources */ = {isa = PBXBuildFile; fileRef = D7840F3312B129860049E3F4 /* UIApplication+GamePop.m */; };
-		D7938A8912B09E3E00F45816 /* ActivityViewPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */; };
+		D78CDC0D12B31D4200D6F3E2 /* ActivityViewPattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC0C12B31D4200D6F3E2 /* ActivityViewPattern@2x.png */; };
+		D78CDC1212B31D6B00D6F3E2 /* GMRProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */; };
+		D78CDC1312B31D6B00D6F3E2 /* GMRProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */; };
+		D78CDC1A12B31FD900D6F3E2 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1612B31FD900D6F3E2 /* 83-calendar.png */; };
+		D78CDC1B12B31FD900D6F3E2 /* 83-calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1712B31FD900D6F3E2 /* 83-calendar@2x.png */; };
+		D78CDC1C12B31FD900D6F3E2 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1812B31FD900D6F3E2 /* 112-group.png */; };
+		D78CDC1D12B31FD900D6F3E2 /* 112-group@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1912B31FD900D6F3E2 /* 112-group@2x.png */; };
+		D78CDC7712B3258700D6F3E2 /* BackgroundProfileActions.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC7312B3258700D6F3E2 /* BackgroundProfileActions.png */; };
+		D78CDC7812B3258700D6F3E2 /* BackgroundProfileActions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC7412B3258700D6F3E2 /* BackgroundProfileActions@2x.png */; };
+		D78CDC7912B3258700D6F3E2 /* BackgroundProfileAliases.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC7512B3258700D6F3E2 /* BackgroundProfileAliases.png */; };
+		D78CDC7A12B3258700D6F3E2 /* BackgroundProfileAliases@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC7612B3258700D6F3E2 /* BackgroundProfileAliases@2x.png */; };
+		D78EA0AB12B3D12B00D78651 /* GMRAliasListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA0AA12B3D12B00D78651 /* GMRAliasListCell.m */; };
+		D78EA0B012B3D34700D78651 /* GMRProfileController+AliasTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA0AF12B3D34700D78651 /* GMRProfileController+AliasTable.m */; };
+		D78EA0B312B3D42200D78651 /* GMRAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA0B212B3D42200D78651 /* GMRAlias.m */; };
+		D78EA10612B3D7B600D78651 /* BackgroundAliasCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */; };
+		D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
@@ -488,8 +502,6 @@
 		D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArt@2x.png"; sourceTree = "<group>"; };
 		D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArtShadow.png; sourceTree = "<group>"; };
 		D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArtShadow@2x.png"; sourceTree = "<group>"; };
-		D7475104129083FE00342AD1 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
-		D7475105129083FE00342AD1 /* 83-calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar@2x.png"; sourceTree = "<group>"; };
 		D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodCheckboxTall.png; path = Images/Light/ButtonPodCheckboxTall.png; sourceTree = "<group>"; };
 		D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodCheckboxTall@2x.png"; path = "Images/Light/ButtonPodCheckboxTall@2x.png"; sourceTree = "<group>"; };
 		D750128F1298A0990079EB44 /* GMRChoosePlatformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChoosePlatformController.h; sourceTree = "<group>"; };
@@ -502,6 +514,7 @@
 		D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundPlayerCellCreator@2x.png"; path = "Images/Light/BackgroundPlayerCellCreator@2x.png"; sourceTree = "<group>"; };
 		D755BB0212A76C1900390451 /* ButtonSave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonSave.png; path = Images/Light/ButtonSave.png; sourceTree = "<group>"; };
 		D755BB0312A76C1900390451 /* ButtonSave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonSave@2x.png"; path = "Images/Light/ButtonSave@2x.png"; sourceTree = "<group>"; };
+		D76A0D1F12B306F00027FDF6 /* ActivityViewPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ActivityViewPattern.png; path = Images/Light/ActivityViewPattern.png; sourceTree = "<group>"; };
 		D76C4A1E12A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundCreateMenuCheckbox.png; path = Images/Light/BackgroundCreateMenuCheckbox.png; sourceTree = "<group>"; };
 		D76C4A1F12A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundCreateMenuCheckbox@2x.png"; path = "Images/Light/BackgroundCreateMenuCheckbox@2x.png"; sourceTree = "<group>"; };
 		D76C4A3412A8BB6300A83206 /* ButtonPodCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodCheckbox.png; path = Images/Light/ButtonPodCheckbox.png; sourceTree = "<group>"; };
@@ -532,7 +545,26 @@
 		D78356B7128C9FB500E19528 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D7840F3212B129860049E3F4 /* UIApplication+GamePop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GamePop.h"; sourceTree = "<group>"; };
 		D7840F3312B129860049E3F4 /* UIApplication+GamePop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GamePop.m"; sourceTree = "<group>"; };
-		D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActivityViewPattern.png; sourceTree = "<group>"; };
+		D78CDC0C12B31D4200D6F3E2 /* ActivityViewPattern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ActivityViewPattern@2x.png"; path = "Images/Light/ActivityViewPattern@2x.png"; sourceTree = "<group>"; };
+		D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRProfileController.h; sourceTree = "<group>"; };
+		D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRProfileController.m; sourceTree = "<group>"; };
+		D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRProfileController.xib; sourceTree = "<group>"; };
+		D78CDC1612B31FD900D6F3E2 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83-calendar.png"; path = "Images/icons/83-calendar.png"; sourceTree = "<group>"; };
+		D78CDC1712B31FD900D6F3E2 /* 83-calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83-calendar@2x.png"; path = "Images/icons/83-calendar@2x.png"; sourceTree = "<group>"; };
+		D78CDC1812B31FD900D6F3E2 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group.png"; path = "Images/icons/112-group.png"; sourceTree = "<group>"; };
+		D78CDC1912B31FD900D6F3E2 /* 112-group@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "112-group@2x.png"; path = "Images/icons/112-group@2x.png"; sourceTree = "<group>"; };
+		D78CDC7312B3258700D6F3E2 /* BackgroundProfileActions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundProfileActions.png; path = Images/Light/BackgroundProfileActions.png; sourceTree = "<group>"; };
+		D78CDC7412B3258700D6F3E2 /* BackgroundProfileActions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundProfileActions@2x.png"; path = "Images/Light/BackgroundProfileActions@2x.png"; sourceTree = "<group>"; };
+		D78CDC7512B3258700D6F3E2 /* BackgroundProfileAliases.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundProfileAliases.png; path = Images/Light/BackgroundProfileAliases.png; sourceTree = "<group>"; };
+		D78CDC7612B3258700D6F3E2 /* BackgroundProfileAliases@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundProfileAliases@2x.png"; path = "Images/Light/BackgroundProfileAliases@2x.png"; sourceTree = "<group>"; };
+		D78EA0A912B3D12B00D78651 /* GMRAliasListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAliasListCell.h; sourceTree = "<group>"; };
+		D78EA0AA12B3D12B00D78651 /* GMRAliasListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAliasListCell.m; sourceTree = "<group>"; };
+		D78EA0AE12B3D34700D78651 /* GMRProfileController+AliasTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRProfileController+AliasTable.h"; sourceTree = "<group>"; };
+		D78EA0AF12B3D34700D78651 /* GMRProfileController+AliasTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRProfileController+AliasTable.m"; sourceTree = "<group>"; };
+		D78EA0B112B3D42200D78651 /* GMRAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlias.h; sourceTree = "<group>"; };
+		D78EA0B212B3D42200D78651 /* GMRAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlias.m; sourceTree = "<group>"; };
+		D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAliasCell.png; path = Images/Light/BackgroundAliasCell.png; sourceTree = "<group>"; };
+		D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundAliasCell@2x.png"; path = "Images/Light/BackgroundAliasCell@2x.png"; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
@@ -901,7 +933,14 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
-				D7938A8812B09E3E00F45816 /* ActivityViewPattern.png */,
+				D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */,
+				D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */,
+				D78CDC7312B3258700D6F3E2 /* BackgroundProfileActions.png */,
+				D78CDC7412B3258700D6F3E2 /* BackgroundProfileActions@2x.png */,
+				D78CDC7512B3258700D6F3E2 /* BackgroundProfileAliases.png */,
+				D78CDC7612B3258700D6F3E2 /* BackgroundProfileAliases@2x.png */,
+				D78CDC0C12B31D4200D6F3E2 /* ActivityViewPattern@2x.png */,
+				D76A0D1F12B306F00027FDF6 /* ActivityViewPattern.png */,
 				D7C74C3012AA9606000256F6 /* SectionBackground.png */,
 				D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */,
 				D7FD622412AA171700F27863 /* ButtonPodHighlightedTall.png */,
@@ -1105,6 +1144,7 @@
 		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D78CDC0E12B31D4F00D6F3E2 /* Profile */,
 				D750128712989F710079EB44 /* CreateGame */,
 				D7208A7D1292BECD009C0624 /* GameDetail */,
 				D795FDB6128FB3E50033F086 /* TableCells */,
@@ -1121,6 +1161,7 @@
 		D775C4E2128797D800C72E64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D78CDC1512B31F8F00D6F3E2 /* Icons */,
 				D70B450812A1D40C00535D03 /* ImagesLight */,
 				D7B41DF91287AAE0005BD0B4 /* Images */,
 				D775C4B4128795A400C72E64 /* GamePop-Info.plist */,
@@ -1153,6 +1194,29 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		D78CDC0E12B31D4F00D6F3E2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */,
+				D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */,
+				D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */,
+				D78EA0AE12B3D34700D78651 /* GMRProfileController+AliasTable.h */,
+				D78EA0AF12B3D34700D78651 /* GMRProfileController+AliasTable.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D78CDC1512B31F8F00D6F3E2 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				D78CDC1612B31FD900D6F3E2 /* 83-calendar.png */,
+				D78CDC1712B31FD900D6F3E2 /* 83-calendar@2x.png */,
+				D78CDC1812B31FD900D6F3E2 /* 112-group.png */,
+				D78CDC1912B31FD900D6F3E2 /* 112-group@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		D795FDB6128FB3E50033F086 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1166,6 +1230,8 @@
 				D745078712A9F93800034CD6 /* GMRGameListCell.m */,
 				D74507A512A9FBC700034CD6 /* GMRModeListCell.h */,
 				D74507A612A9FBC700034CD6 /* GMRModeListCell.m */,
+				D78EA0A912B3D12B00D78651 /* GMRAliasListCell.h */,
+				D78EA0AA12B3D12B00D78651 /* GMRAliasListCell.m */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -1245,8 +1311,6 @@
 				D7208AA51292C884009C0624 /* PlayerCellBackground@2x.png */,
 				D7208AA61292C884009C0624 /* PlayerCellBackgroundOpen.png */,
 				D7208AA71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png */,
-				D7475104129083FE00342AD1 /* 83-calendar.png */,
-				D7475105129083FE00342AD1 /* 83-calendar@2x.png */,
 				D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */,
 				D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */,
 				D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */,
@@ -1457,6 +1521,8 @@
 				D709BE211299BFBD0057EA4B /* GMRMatch.m */,
 				D74237E9129F6A4F00EA0272 /* GMRGame.h */,
 				D74237EA129F6A4F00EA0272 /* GMRGame.m */,
+				D78EA0B112B3D42200D78651 /* GMRAlias.h */,
+				D78EA0B212B3D42200D78651 /* GMRAlias.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -1711,8 +1777,6 @@
 				D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */,
 				D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */,
 				D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */,
-				D7475106129083FE00342AD1 /* 83-calendar.png in Resources */,
-				D7475107129083FE00342AD1 /* 83-calendar@2x.png in Resources */,
 				D7208A821292BEFE009C0624 /* GMRGameDetailController.xib in Resources */,
 				D7208AA81292C884009C0624 /* ButtonGrayFull.png in Resources */,
 				D7208AA91292C884009C0624 /* ButtonGrayFull@2x.png in Resources */,
@@ -1841,7 +1905,19 @@
 				D7FD622712AA171700F27863 /* ButtonPodHighlightedTall@2x.png in Resources */,
 				D7C74C3212AA9606000256F6 /* SectionBackground.png in Resources */,
 				D7C74C3312AA9606000256F6 /* SectionBackground@2x.png in Resources */,
-				D7938A8912B09E3E00F45816 /* ActivityViewPattern.png in Resources */,
+				D76A0D2012B306F00027FDF6 /* ActivityViewPattern.png in Resources */,
+				D78CDC0D12B31D4200D6F3E2 /* ActivityViewPattern@2x.png in Resources */,
+				D78CDC1312B31D6B00D6F3E2 /* GMRProfileController.xib in Resources */,
+				D78CDC1A12B31FD900D6F3E2 /* 83-calendar.png in Resources */,
+				D78CDC1B12B31FD900D6F3E2 /* 83-calendar@2x.png in Resources */,
+				D78CDC1C12B31FD900D6F3E2 /* 112-group.png in Resources */,
+				D78CDC1D12B31FD900D6F3E2 /* 112-group@2x.png in Resources */,
+				D78CDC7712B3258700D6F3E2 /* BackgroundProfileActions.png in Resources */,
+				D78CDC7812B3258700D6F3E2 /* BackgroundProfileActions@2x.png in Resources */,
+				D78CDC7912B3258700D6F3E2 /* BackgroundProfileAliases.png in Resources */,
+				D78CDC7A12B3258700D6F3E2 /* BackgroundProfileAliases@2x.png in Resources */,
+				D78EA10612B3D7B600D78651 /* BackgroundAliasCell.png in Resources */,
+				D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1937,6 +2013,10 @@
 				D74507A712A9FBC700034CD6 /* GMRModeListCell.m in Sources */,
 				D7F3E21C12AFDA2000837E14 /* GMRActivityView.m in Sources */,
 				D7840F3412B129860049E3F4 /* UIApplication+GamePop.m in Sources */,
+				D78CDC1212B31D6B00D6F3E2 /* GMRProfileController.m in Sources */,
+				D78EA0AB12B3D12B00D78651 /* GMRAliasListCell.m in Sources */,
+				D78EA0B012B3D34700D78651 /* GMRProfileController+AliasTable.m in Sources */,
+				D78EA0B312B3D42200D78651 /* GMRAlias.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
