@@ -18,6 +18,7 @@
 @property(nonatomic, retain) IBOutlet UITableView * aliasTableView;
 
 - (void)addAlias;
+- (void)logout;
 - (IBAction) performAction:(id)sender;
 
 @end

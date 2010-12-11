@@ -148,11 +148,15 @@
 
 - (void)beginCellUpdates
 {
-	updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
-												   target:self 
-								                 selector:@selector(updateCellsCountdown) 
-								                 userInfo:nil 
-									              repeats:YES];
+	// if more than 1 timer is applied this viewcontroller will not be able to be released. 
+	if(!updateTimer)
+	{
+		updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 
+													   target:self 
+													 selector:@selector(updateCellsCountdown) 
+													 userInfo:nil 
+													  repeats:YES];
+	}
 }
 
 
@@ -172,10 +176,13 @@
 }
 
 - (void)viewDidUnload {
-    [super viewDidUnload];
+    
 	self.matchesTable = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	[noneView removeFromSuperview];
+	noneView = nil;
+	
+	
+	[super viewDidUnload];
 }
 
 
@@ -183,6 +190,10 @@
 {
     [self removeObserver:self 
 			  forKeyPath:@"matches"];
+	
+	self.matchesTable = nil;
+	[noneView removeFromSuperview];
+	noneView = nil;
 	
 	[super dealloc];
 }

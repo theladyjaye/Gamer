@@ -27,12 +27,6 @@ NSMutableArray * kScheduledMatches = nil;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-	
-	// this guy is going to hang around for the lifetime of the application.
-	// should save us form makeing lot-o-GETs for the same data.
-	kScheduledMatches = [NSMutableArray array];
-	[kScheduledMatches retain];
-	
 	if([self hasAuthenticatedUser])
 	{
 		[self initializeApplicationFlow];
@@ -49,7 +43,25 @@ NSMutableArray * kScheduledMatches = nil;
 
 - (void)initializeAuthenticationFlow
 {
-	kGamerApi = [[GMRClient alloc] init];
+	if(!kGamerApi)
+	{
+		kGamerApi = [[GMRClient alloc] init];
+	}
+	
+	if(mainController)
+	{
+		[mainController.view removeFromSuperview];
+		[mainController viewDidUnload];
+		[mainController release];
+		mainController = nil;
+		
+		if(kScheduledMatches)
+		{
+			[kScheduledMatches release];
+			kScheduledMatches = nil;
+		}
+	}
+	
 	GMRAuthenticationController * loginController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
 	
 	authenticationController = [[GMRNavigationController alloc] initWithRootViewController:loginController];
@@ -69,6 +81,10 @@ NSMutableArray * kScheduledMatches = nil;
 										   andName:[defaults objectForKey:@"username"]];
 	}
 	
+	// this guy is going to hang around for the lifetime of the application.
+	// should save us form makeing lot-o-GETs for the same data.
+	kScheduledMatches = [NSMutableArray array];
+	[kScheduledMatches retain];
 	
 	mainController = [[GMRMainController alloc] initWithNibName:nil bundle:nil];
 	
@@ -80,14 +96,7 @@ NSMutableArray * kScheduledMatches = nil;
 		[authenticationController release];
 		authenticationController = nil;
 	}
-	
-	//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-	//[defaults removeObjectForKey:@"token"];
-	//[defaults removeObjectForKey:@"username"];
 }
-
-
-
 
 - (BOOL) hasAuthenticatedUser
 {

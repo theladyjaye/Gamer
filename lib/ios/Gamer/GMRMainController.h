@@ -16,4 +16,5 @@
 @property(nonatomic, retain)IBOutlet UITabBarController * tabBarController;
 @property(nonatomic, retain)IBOutlet UIImageView * defaultImageView;
 
+- (void)logout;
 @end

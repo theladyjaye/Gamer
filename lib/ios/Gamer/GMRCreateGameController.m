@@ -354,7 +354,8 @@ GMRMatch * kCreateMatchProgress = nil;
 
 - (void)dismissModalViewController
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self.matchesDataSourceController dismissModalViewControllerAnimated:YES];
+	//[self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 
 
@@ -365,8 +366,9 @@ GMRMatch * kCreateMatchProgress = nil;
     // Release any cached data, images, etc. that aren't in use.
 }
 
+// this isn't running for some reason...
 - (void)viewDidUnload {
-    [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	self.platform     = nil;
@@ -375,11 +377,22 @@ GMRMatch * kCreateMatchProgress = nil;
 	self.players = nil;
 	self.time = nil;
 	self.description = nil;
+	
+	[super viewDidUnload];
 }
 
 
 - (void)dealloc 
 {
+	[self.view removeFromSuperview];
+
+	self.platform     = nil;
+	self.gameAndMode = nil;
+	self.availability = nil;
+	self.players = nil;
+	self.time = nil;
+	self.description = nil;
+	
 	[kCreateMatchProgress removeObserver:self 
 							  forKeyPath:@"platform"];
 

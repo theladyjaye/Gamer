@@ -19,6 +19,7 @@
 	GMRMenuButton * description;
 	OverviewController * matchesDataSourceController;
 }
+- (void)dismissModalViewController;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * platform;
 @property(nonatomic, retain) IBOutlet GMRMenuButtonAltLabel * gameAndMode;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * availability;

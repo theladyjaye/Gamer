@@ -8,8 +8,11 @@
 
 #import "GMRProfileController.h"
 #import "GMRProfileController+AliasTable.h"
+#import "GMRMainController.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
+#import "GMRAlertView.h"
+
 
 @implementation GMRProfileController
 @synthesize navigationBar, aliasTableView;
@@ -74,11 +77,39 @@
 			break;
 			
 		case 2: // logout
-			NSLog(@"logout");
+			[self logout];
 			break;
 			
 	}
 	
+}
+
+- (void)logout
+{
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation 
+														 title:@"Logout?" 
+													   message:@"Are you sure you wish to logout?" 
+													  delegate:self];
+	[alert show];
+	
+}
+
+- (void)alertViewDidDismiss:(GMRAlertView *)alertView
+{
+	if(alertView.selectedButtonIndex == 1)
+	{
+		// Perform the actual logout
+		//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		//[defaults removeObjectForKey:@"token"];
+		//[defaults removeObjectForKey:@"username"];
+		
+		// Relfect the logout state
+		UITabBarController * tabBarController = (UITabBarController *)self.parentViewController;
+		GMRMainController * mainController = (GMRMainController *)tabBarController.delegate;
+		[mainController logout];
+	}
+	
+	[alertView release];
 }
 
 /*
@@ -98,6 +129,7 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
+	NSLog(@"Profile Controller... Out!");
 	self.navigationBar = nil;
 	self.aliasTableView = nil;
     // Release any retained subviews of the main view.

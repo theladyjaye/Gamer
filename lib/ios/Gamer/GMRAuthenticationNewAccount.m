@@ -215,7 +215,8 @@
 
 - (void)viewDidUnload 
 {
-    [super viewDidUnload];
+    NSLog(@"New Account did Unload");
+	[super viewDidUnload];
 	
     self.email           = nil;
 	self.username        = nil; 
