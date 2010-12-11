@@ -151,11 +151,17 @@
 	// if more than 1 timer is applied this viewcontroller will not be able to be released. 
 	if(!updateTimer)
 	{
-		updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 
-													   target:self 
-													 selector:@selector(updateCellsCountdown) 
-													 userInfo:nil 
-													  repeats:YES];
+		NSLog(@"Wants Timer");
+		if([matchesTable numberOfRowsInSection:0] > 0)
+		{
+			NSLog(@"Wants Got"); // TODO: need to test adding a cell and see if a timer gets scheduled after add
+			[self updateCellsCountdown];
+			updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 
+														   target:self 
+														 selector:@selector(updateCellsCountdown) 
+														 userInfo:nil 
+														  repeats:YES];
+		}
 	}
 }
 

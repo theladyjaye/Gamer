@@ -75,10 +75,10 @@
 							<string key="NSResourceName">BackgroundProfileAliases.png</string>
 						</object>
 					</object>
-					<object class="IBUITableView" id="818341043">
+					<object class="IBUITableView" id="1049566539">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 106}, {320, 126}}</string>
+						<string key="NSFrame">{{0, 106}, {320, 111}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="55968298">
 							<int key="NSColorSpace">3</int>
@@ -419,7 +419,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
-						<reference key="source" ref="818341043"/>
+						<reference key="source" ref="1049566539"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">37</int>
@@ -427,7 +427,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="818341043"/>
+						<reference key="source" ref="1049566539"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">38</int>
@@ -436,7 +436,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">aliasTableView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="818341043"/>
+						<reference key="destination" ref="1049566539"/>
 					</object>
 					<int key="connectionID">39</int>
 				</object>
@@ -465,7 +465,7 @@
 							<reference ref="653602490"/>
 							<reference ref="937670700"/>
 							<reference ref="22429239"/>
-							<reference ref="818341043"/>
+							<reference ref="1049566539"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -592,7 +592,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">36</int>
-						<reference key="object" ref="818341043"/>
+						<reference key="object" ref="1049566539"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
