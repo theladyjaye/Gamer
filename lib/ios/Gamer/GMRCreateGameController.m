@@ -301,7 +301,7 @@ GMRMatch * kCreateMatchProgress = nil;
 										  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
 										 			forKey:@"matches"];
 										  
-										  [matchesDataSourceController.matches insertObject:kCreateMatchProgress 
+										  [kScheduledMatches insertObject:kCreateMatchProgress 
 										  										atIndex:insertIndex];
 										  
 										  
