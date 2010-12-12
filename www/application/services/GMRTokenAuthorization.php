@@ -7,7 +7,6 @@ class GMRTokenAuthorization implements IGMRServiceAuthorizationDelegate
 		
 		// Only works if PHP is running as an apache module
 		$headers = apache_request_headers();
-		
 		list($type, $token) = explode(' ', trim($headers['Authorization']));
 		
 		$user = GMRUser::userWithToken($token);

@@ -142,6 +142,31 @@ static NSArray * platformStrings;
 		   }];
 }
 
+- (void)registerAlias:(NSString*)alias platform:(GMRPlatform)platform withCallback:(GMRCallback)callback
+{
+	NSString*      method = @"POST";
+	NSString*      path   = [NSString stringWithFormat:@"http://hazgame.com/accounts/users/%@/aliases/%@", username, [GMRClient stringForPlatform:platform]];
+	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:alias, @"platformAlias", nil];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+	
+	
+}
+
+- (void)aliases:(GMRCallback)callback
+{	
+	NSString*      method = @"GET";
+	NSString*      path   = [NSString stringWithFormat:@"http://hazgame.com/accounts/users/%@/aliases", username];
+	
+	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil]
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+}
+
 - (void)version:(GMRCallback)callback
 {
 	NSString*     method = @"GET";

@@ -12,6 +12,7 @@
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
 #import "GMRAlertView.h"
+#import "GMRNoneView.h"
 
 
 @implementation GMRProfileController
@@ -54,6 +55,17 @@
 	
 	[self aliasTableRefresh];
 	[super viewDidLoad];
+}
+
+- (void)noAliases
+{
+	if(!noAliasesView)
+	{
+		noAliasesView = [[GMRNoneView alloc] initWithLabel:@"No Registered Aliases."];
+		noAliasesView.frame = (CGRect){ {0.0, 106.0 }, noAliasesView.frame.size };
+		[self.view addSubview:noAliasesView];
+		[noAliasesView release];
+	}
 }
 
 

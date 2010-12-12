@@ -16,4 +16,6 @@
 
 @property (nonatomic, assign) GMRPlatform platform;
 @property (nonatomic, retain) NSString * alias;
+
++ (id)aliasWithDicitonary:(NSDictionary *)dictionary;
 @end

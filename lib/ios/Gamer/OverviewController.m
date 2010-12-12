@@ -45,6 +45,7 @@
 	if(!noneView)
 	{
 		noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
+		noneView.frame = (CGRect){{0.0, 1.0}, noneView.frame.size};
 		[self.view addSubview:noneView];
 		[noneView release];
 	}

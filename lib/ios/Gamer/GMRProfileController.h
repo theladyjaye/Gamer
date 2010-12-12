@@ -13,6 +13,7 @@
 	UINavigationBar * navigationBar;
 	NSMutableArray * aliases;
 	UITableView * aliasTableView;
+	UIView * noAliasesView;
 }
 @property(nonatomic, retain) IBOutlet UINavigationBar * navigationBar;
 @property(nonatomic, retain) IBOutlet UITableView * aliasTableView;
@@ -20,5 +21,6 @@
 - (void)addAlias;
 - (void)logout;
 - (IBAction) performAction:(id)sender;
+- (void)noAliases;
 
 @end

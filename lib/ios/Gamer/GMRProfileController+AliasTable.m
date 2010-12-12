@@ -21,58 +21,50 @@
 		aliases = nil;
 	}
 	
-	//[self.aliasTableView reloadData];
 	
-	//[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-	/*
-	[kGamerApi matchesScheduled:^(BOOL ok, NSDictionary * response)
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+	
+	[kGamerApi aliases:^(BOOL ok, NSDictionary * response)
 	 {
 		 if(ok)
 		 {
-			 NSArray * tempMatches = [response objectForKey:@"matches"];
-			 NSLog(@"Total Matches: %i", [tempMatches count]);
-			 if ([tempMatches count] > 0)
+			 NSArray * tempCollection = [response objectForKey:@"aliases"];
+			 
+			 if ([tempCollection count] > 0)
 			 {
-				 //matches = [NSMutableArray array];//:(NSArray *)[response objectForKey:@"matches"]];
+				 aliases = [[NSMutableArray array] retain];
 				 
-				 NSLog(@"Converting to Model Objects");
-				 
-				 for(NSDictionary * item in tempMatches)
+				 for(NSDictionary * item in tempCollection)
 				 {
-					 GMRMatch * currentMatch = [GMRMatch matchWithDicitonary:item];
-					 [kScheduledMatches addObject:currentMatch];
-					 //[matches addObject:currentMatch];
+					 GMRAlias * currentAlias = [GMRAlias aliasWithDicitonary:item];
+					 [aliases addObject:currentAlias];
 				 }
 				 
-				 
-				 //[matches retain];
 				 dispatch_async(dispatch_get_main_queue(), ^{
 					 
 					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-					 [matchesTable reloadData];
+					 [aliasTableView reloadData];
 				 });
 			 }
 			 else 
 			 {
-				 //matches = nil;
 				 dispatch_async(dispatch_get_main_queue(), ^{
 					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-					 [self noMatchesScheduled];
+					 [self noAliases];
 				 });
 			 }
 			 
 		 }
 		 else 
 		 {
-			 NSLog(@"%@", response);
 			 dispatch_async(dispatch_get_main_queue(), ^{
 				 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-				 [self noMatchesScheduled];
+				 [self noAliases];
 			 });
 		 }
 		 
 	 }];
-	 */
+	 
 }
 
 #pragma mark -
@@ -86,7 +78,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 5;//aliases ? [aliases count] : 0;
+    return aliases ? [aliases count] : 0;
 }
 
 
@@ -102,10 +94,10 @@
 		cell = [[[GMRAliasListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	//GMRAlias * item = [aliases objectAtIndex:indexPath.row];
+	GMRAlias * item = [aliases objectAtIndex:indexPath.row];
 	
-	cell.alias    = @"logix812";//item.alias;
-	cell.platform = GMRPlatformPlaystation3;//item.platform;	
+	cell.alias    = item.alias;
+	cell.platform = item.platform;	
     return cell;
 }
 

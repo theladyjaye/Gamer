@@ -162,6 +162,8 @@
 		D78EA0B312B3D42200D78651 /* GMRAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA0B212B3D42200D78651 /* GMRAlias.m */; };
 		D78EA10612B3D7B600D78651 /* BackgroundAliasCell.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */; };
 		D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */; };
+		D78EA45A12B4858700D78651 /* ArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA45812B4858700D78651 /* ArrowUp.png */; };
+		D78EA45B12B4858700D78651 /* ArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA45912B4858700D78651 /* ArrowUp@2x.png */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
@@ -565,6 +567,8 @@
 		D78EA0B212B3D42200D78651 /* GMRAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAlias.m; sourceTree = "<group>"; };
 		D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAliasCell.png; path = Images/Light/BackgroundAliasCell.png; sourceTree = "<group>"; };
 		D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundAliasCell@2x.png"; path = "Images/Light/BackgroundAliasCell@2x.png"; sourceTree = "<group>"; };
+		D78EA45812B4858700D78651 /* ArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArrowUp.png; path = Images/Light/ArrowUp.png; sourceTree = "<group>"; };
+		D78EA45912B4858700D78651 /* ArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ArrowUp@2x.png"; path = "Images/Light/ArrowUp@2x.png"; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
@@ -933,6 +937,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D78EA45812B4858700D78651 /* ArrowUp.png */,
+				D78EA45912B4858700D78651 /* ArrowUp@2x.png */,
 				D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */,
 				D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */,
 				D78CDC7312B3258700D6F3E2 /* BackgroundProfileActions.png */,
@@ -1918,6 +1924,8 @@
 				D78CDC7A12B3258700D6F3E2 /* BackgroundProfileAliases@2x.png in Resources */,
 				D78EA10612B3D7B600D78651 /* BackgroundAliasCell.png in Resources */,
 				D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */,
+				D78EA45A12B4858700D78651 /* ArrowUp.png in Resources */,
+				D78EA45B12B4858700D78651 /* ArrowUp@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

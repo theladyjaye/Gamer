@@ -61,6 +61,10 @@
 		lineBreakMode:UILineBreakModeClip 
 			alignment:UITextAlignmentCenter];
 	
+	NSString * path = [[NSBundle mainBundle] pathForResource:@"ArrowUp" ofType:@"png"];
+	UIImage * arrow = [UIImage imageWithContentsOfFile:path];
+	[arrow drawAtPoint:CGPointMake(287.0, 8.0)];
+	
 }
 
 

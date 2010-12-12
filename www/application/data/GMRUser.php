@@ -180,7 +180,13 @@ class GMRUser
 			
 			foreach($query as $row)
 			{
-				$this->aliases[$row['platform']] = $row['alias'];
+				$alias = new stdClass();
+				$alias->platform = $row['platform'];
+				$alias->alias    = $row['alias'];
+				
+				$this->aliases[] = $alias;
+				
+				//$this->aliases[$row['platform']] = $row['alias'];
 			}
 		}
 		
