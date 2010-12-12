@@ -176,6 +176,7 @@
 		D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7A212B524D500E36C31 /* GMRCreateAliasController.m */; };
 		D7ACF7A512B524D500E36C31 /* GMRCreateAliasController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ACF7A312B524D500E36C31 /* GMRCreateAliasController.xib */; };
 		D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */; };
+		D7ACF80B12B535B300E36C31 /* GMRAliasChoosePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -594,6 +595,8 @@
 		D7ACF7D212B5291C00E36C31 /* GMRCreateAliasController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRCreateAliasController+Navigation.h"; sourceTree = "<group>"; };
 		D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRCreateAliasController+Navigation.m"; sourceTree = "<group>"; };
 		D7ACF7D612B529F700E36C31 /* GMRCreateAliasGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateAliasGlobals.h; sourceTree = "<group>"; };
+		D7ACF80912B535B300E36C31 /* GMRAliasChoosePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAliasChoosePlatform.h; sourceTree = "<group>"; };
+		D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAliasChoosePlatform.m; sourceTree = "<group>"; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -1225,8 +1228,8 @@
 		D78CDC0E12B31D4F00D6F3E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D7ACF79A12B5248E00E36C31 /* CreateAliasMenu */,
-				D78EA48E12B487D900D78651 /* Main */,
+				D7ACF80712B5356100E36C31 /* Aliases */,
+				D78EA48E12B487D900D78651 /* ProfileMainMenu */,
 				D7ACF7D612B529F700E36C31 /* GMRCreateAliasGlobals.h */,
 			);
 			name = Profile;
@@ -1243,7 +1246,7 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		D78EA48E12B487D900D78651 /* Main */ = {
+		D78EA48E12B487D900D78651 /* ProfileMainMenu */ = {
 			isa = PBXGroup;
 			children = (
 				D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */,
@@ -1254,7 +1257,7 @@
 				D78EA53412B4943600D78651 /* GMRProfileController+MailViewMods.h */,
 				D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */,
 			);
-			name = Main;
+			name = ProfileMainMenu;
 			sourceTree = "<group>";
 		};
 		D795FDB6128FB3E50033F086 /* TableCells */ = {
@@ -1305,6 +1308,24 @@
 				D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */,
 			);
 			name = CreateAliasMenu;
+			sourceTree = "<group>";
+		};
+		D7ACF80712B5356100E36C31 /* Aliases */ = {
+			isa = PBXGroup;
+			children = (
+				D7ACF80812B5356800E36C31 /* ChoosePlatform */,
+				D7ACF79A12B5248E00E36C31 /* CreateAliasMenu */,
+			);
+			name = Aliases;
+			sourceTree = "<group>";
+		};
+		D7ACF80812B5356800E36C31 /* ChoosePlatform */ = {
+			isa = PBXGroup;
+			children = (
+				D7ACF80912B535B300E36C31 /* GMRAliasChoosePlatform.h */,
+				D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */,
+			);
+			name = ChoosePlatform;
 			sourceTree = "<group>";
 		};
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
@@ -2077,6 +2098,7 @@
 				D78EA53612B4943600D78651 /* GMRProfileController+MailViewMods.m in Sources */,
 				D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */,
 				D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */,
+				D7ACF80B12B535B300E36C31 /* GMRAliasChoosePlatform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

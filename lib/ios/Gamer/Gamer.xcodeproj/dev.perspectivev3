@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D7ACF80512B52DD500E36C31</string>
+						<string>D7ACF85712B537F100E36C31</string>
 						<key>history</key>
 						<array>
 							<string>D78EA54A12B495A600D78651</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D7ACF80612B52DD500E36C31</string>
+						<string>D7ACF85812B537F100E36C31</string>
 						<key>history</key>
 						<array>
 							<string>D78EA73212B4A8CC00D78651</string>
@@ -356,9 +356,12 @@
 								<string>D775C4E2128797D800C72E64</string>
 								<string>D775C4E11287978C00C72E64</string>
 								<string>D78CDC0E12B31D4F00D6F3E2</string>
+								<string>D7ACF80712B5356100E36C31</string>
+								<string>D7ACF80812B5356800E36C31</string>
 								<string>D7ACF79A12B5248E00E36C31</string>
 								<string>D750128712989F710079EB44</string>
 								<string>D75012DD1298CE6A0079EB44</string>
+								<string>D750128E1298A0780079EB44</string>
 								<string>D7208A7D1292BECD009C0624</string>
 								<string>D795FDB6128FB3E50033F086</string>
 								<string>D7EEAD82128A11AF0022AF4E</string>
@@ -372,9 +375,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>43</integer>
-									<integer>41</integer>
-									<integer>40</integer>
+									<integer>63</integer>
+									<integer>60</integer>
+									<integer>53</integer>
 									<integer>39</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -416,7 +419,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRCreateAliasController.m</string>
+								<string>GMRAliasChoosePlatform.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -424,11 +427,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRCreateAliasController.m</string>
+										<string>GMRAliasChoosePlatform.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7ACF80412B52DD500E36C31</string>
+										<string>D7ACF85612B537F100E36C31</string>
 										<key>history</key>
 										<array>
 											<string>D7CBEE4812ACABE00048EA18</string>
@@ -469,7 +472,6 @@
 											<string>D78EA41912B47B5A00D78651</string>
 											<string>D78EA41B12B47B5A00D78651</string>
 											<string>D78EA42F12B47CF500D78651</string>
-											<string>D78EA50112B490B000D78651</string>
 											<string>D78EA5E512B49DBE00D78651</string>
 											<string>D78EA64D12B4A22900D78651</string>
 											<string>D78EA66012B4A33300D78651</string>
@@ -495,8 +497,13 @@
 											<string>D7ACF7F912B52DBB00E36C31</string>
 											<string>D7ACF7FA12B52DBB00E36C31</string>
 											<string>D7ACF7FB12B52DBB00E36C31</string>
-											<string>D7ACF7FC12B52DBB00E36C31</string>
-											<string>D7ACF80312B52DD100E36C31</string>
+											<string>D7ACF81412B5369500E36C31</string>
+											<string>D7ACF81512B5369500E36C31</string>
+											<string>D7ACF81712B5369500E36C31</string>
+											<string>D7ACF81812B5369500E36C31</string>
+											<string>D7ACF82A12B536C700E36C31</string>
+											<string>D7ACF84112B5370D00E36C31</string>
+											<string>D7ACF85512B537E500E36C31</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -510,18 +517,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1229, 874}}</string>
+								<string>{{0, 0}, {1229, 612}}</string>
 								<key>RubberWindowFrame</key>
 								<string>124 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>874pt</string>
+							<string>612pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>262pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -589,7 +596,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1229, -27}}</string>
+										<string>{{10, 27}, {1229, 235}}</string>
 										<key>RubberWindowFrame</key>
 										<string>124 108 1556 920 0 0 1680 1028 </string>
 									</dict>

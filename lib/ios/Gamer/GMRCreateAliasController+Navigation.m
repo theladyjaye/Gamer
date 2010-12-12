@@ -7,7 +7,7 @@
 //
 
 #import "GMRCreateAliasController+Navigation.h"
-
+#import "GMRAliasChoosePlatform.h"
 
 @implementation GMRCreateAliasController(Navigation)
 
@@ -30,10 +30,10 @@
 
 - (void)selectPlatform
 {
-	/*GMRChoosePlatformController * controller = [[GMRChoosePlatformController alloc] initWithNibName:nil 
-																							 bundle:nil];
+	GMRAliasChoosePlatform * controller = [[GMRAliasChoosePlatform alloc] initWithNibName:@"GMRChoosePlatformController" 
+																				   bundle:nil];
 	[self.navigationController pushViewController:controller animated:YES];
-	[controller release];*/
+	[controller release];
 }
 
 - (void)selectAlias
