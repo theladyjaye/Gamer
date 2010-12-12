@@ -16,6 +16,7 @@
 	UIImageView * defaultImageView;
 	GMRNavigationController * gmrNavigationController;
 	UIToolbar * toolbar;
+	BOOL hasTransitioned;
 }
 
 @property (nonatomic, retain) IBOutlet UIImageView * defaultImageView;

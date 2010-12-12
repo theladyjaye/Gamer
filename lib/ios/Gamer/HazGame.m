@@ -67,8 +67,13 @@ NSMutableArray * kScheduledMatches = nil;
 	authenticationController = [[GMRNavigationController alloc] initWithRootViewController:loginController];
 	loginController.gmrNavigationController = authenticationController;
 	
+	
 	[authenticationController setNavigationBarHidden:YES animated:NO];
+	[loginController release];
+	
+	//[authenticationController viewWillAppear:YES];
 	[self.window addSubview:authenticationController.view];
+	//[authenticationController viewDidAppear:YES];
 	
 }
 
@@ -88,7 +93,9 @@ NSMutableArray * kScheduledMatches = nil;
 	
 	mainController = [[GMRMainController alloc] initWithNibName:nil bundle:nil];
 	
+	//[mainController viewWillAppear:YES];
 	[self.window addSubview:mainController.view];
+	//[mainController viewDidAppear:YES];
 	
 	if(authenticationController)
 	{

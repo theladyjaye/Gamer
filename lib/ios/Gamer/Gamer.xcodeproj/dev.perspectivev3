@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D78EA64112B4A1C400D78651</string>
+						<string>D78EA72E12B4A8BA00D78651</string>
 						<key>history</key>
 						<array>
 							<string>D78EA54A12B495A600D78651</string>
@@ -257,7 +257,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D78EA64212B4A1C400D78651</string>
+						<string>D78EA72F12B4A8BA00D78651</string>
 						<key>history</key>
 						<array>
 							<string>D78EA51412B4911500D78651</string>
@@ -372,14 +372,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>15</integer>
+									<integer>93</integer>
+									<integer>91</integer>
+									<integer>39</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 142}, {305, 861}}</string>
+							<string>{{0, 1105}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -396,7 +397,7 @@
 							<real>305</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>-20 108 1556 920 0 0 1680 1028 </string>
+						<string>201 108 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -414,7 +415,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRActivityView.m</string>
+								<string>GMRMainController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -422,11 +423,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRActivityView.m</string>
+										<string>GMRMainController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D78EA64012B4A1C400D78651</string>
+										<string>D78EA72D12B4A8B900D78651</string>
 										<key>history</key>
 										<array>
 											<string>D7CBEE4812ACABE00048EA18</string>
@@ -443,9 +444,7 @@
 											<string>D7B885C712B26DFB001C0E16</string>
 											<string>D78CDC2112B320D700D6F3E2</string>
 											<string>D78CDC2212B320D700D6F3E2</string>
-											<string>D78CDC2312B320D700D6F3E2</string>
 											<string>D78CDC2412B320D700D6F3E2</string>
-											<string>D78CDC3612B3214000D6F3E2</string>
 											<string>D78CDC7F12B3292F00D6F3E2</string>
 											<string>D78EA0C012B3D61300D78651</string>
 											<string>D78EA0C112B3D61300D78651</string>
@@ -458,15 +457,10 @@
 											<string>D78EA17B12B4044100D78651</string>
 											<string>D78EA17C12B4044100D78651</string>
 											<string>D78EA1B112B4072E00D78651</string>
-											<string>D78EA20112B408C600D78651</string>
 											<string>D78EA27F12B40BD600D78651</string>
 											<string>D78EA28D12B40D3F00D78651</string>
 											<string>D78EA28E12B40D3F00D78651</string>
-											<string>D78EA2A012B40F0E00D78651</string>
 											<string>D78EA2FB12B410EB00D78651</string>
-											<string>D78EA33412B412DC00D78651</string>
-											<string>D78EA39F12B4161A00D78651</string>
-											<string>D78EA3A712B4165000D78651</string>
 											<string>D78EA3F512B47AA000D78651</string>
 											<string>D78EA3F612B47AA000D78651</string>
 											<string>D78EA3F712B47AA000D78651</string>
@@ -479,14 +473,22 @@
 											<string>D78EA41B12B47B5A00D78651</string>
 											<string>D78EA42F12B47CF500D78651</string>
 											<string>D78EA44912B47E5C00D78651</string>
-											<string>D78EA47212B4864600D78651</string>
 											<string>D78EA50112B490B000D78651</string>
 											<string>D78EA56912B4967100D78651</string>
 											<string>D78EA5E512B49DBE00D78651</string>
 											<string>D78EA5F912B4A01400D78651</string>
 											<string>D78EA60B12B4A08800D78651</string>
-											<string>D78EA63112B4A19200D78651</string>
-											<string>D78EA63F12B4A1C200D78651</string>
+											<string>D78EA64D12B4A22900D78651</string>
+											<string>D78EA65F12B4A33300D78651</string>
+											<string>D78EA66012B4A33300D78651</string>
+											<string>D78EA66112B4A33300D78651</string>
+											<string>D78EA6A712B4A51F00D78651</string>
+											<string>D78EA6A812B4A51F00D78651</string>
+											<string>D78EA6A912B4A51F00D78651</string>
+											<string>D78EA6D712B4A69300D78651</string>
+											<string>D78EA71C12B4A7B100D78651</string>
+											<string>D78EA71D12B4A7B100D78651</string>
+											<string>D78EA72C12B4A8B500D78651</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -502,7 +504,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1229, 874}}</string>
 								<key>RubberWindowFrame</key>
-								<string>-20 108 1556 920 0 0 1680 1028 </string>
+								<string>201 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -581,7 +583,7 @@
 										<key>Frame</key>
 										<string>{{10, 27}, {1229, -27}}</string>
 										<key>RubberWindowFrame</key>
-										<string>-20 108 1556 920 0 0 1680 1028 </string>
+										<string>201 108 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -813,7 +815,7 @@
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>-20 108 1556 920 0 0 1680 1028 </string>
+	<string>201 108 1556 920 0 0 1680 1028 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

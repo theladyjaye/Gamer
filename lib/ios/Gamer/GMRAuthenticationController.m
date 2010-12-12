@@ -32,14 +32,15 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	static BOOL needsTransition = YES;
-	if(needsTransition)
+	if(hasTransitioned == NO)
 	{
-		needsTransition = NO;
+		hasTransitioned = YES;
 		
 		inputController = [[GMRAuthenticationInputController alloc] initWithNibName:nil bundle:nil];
 		
 		dispatch_time_t delay;
+		
+		// this animation was not running until this was added
 		delay = dispatch_time(DISPATCH_TIME_NOW, 100000000);
 		dispatch_after(delay, dispatch_get_main_queue(), ^{
 			

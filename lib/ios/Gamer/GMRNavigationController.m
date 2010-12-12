@@ -94,6 +94,7 @@ static UIViewController * rootController;
 	return navigationController.navigationBar;
 }
 
+
 - (void)viewDidLoad
 {	
 	[super viewDidLoad];

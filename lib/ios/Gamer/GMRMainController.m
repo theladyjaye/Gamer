@@ -114,19 +114,21 @@ static UINavigationController * currentNavigationController;
 	// there was an issue with the TabBarController not calling view_Will/Did_Appear/Disappear
 	// I think I fixed that above, but I don't know what the ramifications for this will be.
 	// If you start haveing problems.. start by looing here.
-	static UIViewController * lastViewController;
 	
 	if(lastViewController)
 		[lastViewController viewWillDisappear:animated];
 	
 	lastViewController = viewController;
 	[viewController viewWillAppear:animated];
+
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
+	
 	[viewController viewDidAppear:animated];
 }
+
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -146,6 +148,7 @@ static UINavigationController * currentNavigationController;
 
 - (void)dealloc {
 	
+	lastViewController = nil;
 	self.tabBarController = nil;
 	self.defaultImageView = nil;	
 	[super dealloc];

@@ -231,9 +231,8 @@
 }
 
 
-- (void)dealloc {
-	
-	NSLog(@"DEALLOC PROFILE CONTROLLER");
+- (void)dealloc 
+{
 	self.navigationBar = nil;
 	self.aliasTableView = nil;
 	

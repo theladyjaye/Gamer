@@ -12,6 +12,7 @@
 @interface GMRMainController : UIViewController<UINavigationBarDelegate> {
 	UITabBarController * tabBarController;
 	UIImageView * defaultImageView;
+	UIViewController * lastViewController;
 }
 @property(nonatomic, retain)IBOutlet UITabBarController * tabBarController;
 @property(nonatomic, retain)IBOutlet UIImageView * defaultImageView;
