@@ -71,7 +71,7 @@ static void releasePatternCallback(void* image)
 	if(inTransition)
 	{
 		inTransition = NO;
-		[self performSelector:@selector(realizeTransitionOut:) withObject:complete afterDelay:0.75];
+		[self performSelector:@selector(realizeTransitionOut:) withObject:complete afterDelay:0.5];
 	}
 	else 
 	{

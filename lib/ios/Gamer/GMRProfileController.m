@@ -6,8 +6,10 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
 #import "GMRProfileController.h"
 #import "GMRProfileController+AliasTable.h"
+#import "GMRProfileController+MailViewMods.h"
 #import "GMRMainController.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
@@ -81,11 +83,11 @@
 	switch(tag)
 	{
 		case 0: // someone took my alias
-			NSLog(@"dispute");
+			[self aliasDispute];
 			break;
 			
 		case 1: // request a game
-			NSLog(@"request");
+			[self requestGameOrFeature];
 			break;
 			
 		case 2: // logout
@@ -96,6 +98,22 @@
 	
 }
 
+- (void)aliasDispute
+{
+	[self sendMail:@"Someone took my alias!" 
+		   message:@"Alias: ?\nPlatform: ?\n"
+			 to:@"aventurella@gmail.com"];
+}
+
+- (void)requestGameOrFeature
+{
+	[self sendMail:@"Request" 
+		   message:@"I would like to request a..."
+			 to:@"aventurella@gmail.com"];
+	
+}
+
+
 - (void)logout
 {
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation 
@@ -104,6 +122,70 @@
 													  delegate:self];
 	[alert show];
 	
+}
+
+
+- (void)sendMail:(NSString *)messageTitle message:(NSString *)messageBody to:(NSString *)email
+{
+	if([MFMailComposeViewController canSendMail])
+	{
+		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		mailViewController.mailComposeDelegate = self;
+		
+		// Optional Configuration Parameters to make life easier for the user
+		[mailViewController setSubject:messageTitle];
+		[mailViewController setMessageBody:messageBody isHTML:NO];
+		[mailViewController setToRecipients:[NSArray arrayWithObject:email]];
+		
+		
+		// Need to replace the bar with our own Style
+		
+		UINavigationBar * styledBar = [[UINavigationBar alloc] initWithFrame:mailViewController.navigationBar.frame];
+		
+		UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
+		navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
+		
+		
+		
+		// we don't want to use an index, as Apple could change 
+		// that layout order sometime in the future.
+		// so we search for it.
+		for (id v in mailViewController.view.subviews) 
+		{
+			if([v class] == [UINavigationBar class])
+			{
+				[self modfiyMailComposeViewNavigationBar:v 
+												  newBar:styledBar 
+												   title:messageTitle];
+				break;
+			}
+		}
+		
+		[mailViewController.view addSubview:navigationBarShadow];
+		[mailViewController.view addSubview:styledBar];
+		
+		[self presentModalViewController:mailViewController animated:YES];
+		
+		[styledBar release];
+		[navigationBarShadow release];
+		[mailViewController release];
+	}
+	else 
+	{
+		[[[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+									   title:@"Oops..." 
+									 message:@"It doesn't look like you are configured to send email." 
+									callback:^(GMRAlertView * alert){
+										[alert release];
+									}] show];
+	}
+	
+}
+
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+	[self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)alertViewDidDismiss:(GMRAlertView *)alertView
@@ -150,6 +232,11 @@
 
 
 - (void)dealloc {
+	
+	NSLog(@"DEALLOC PROFILE CONTROLLER");
+	self.navigationBar = nil;
+	self.aliasTableView = nil;
+	
 	[aliases release];
 	aliases = nil;
     [super dealloc];

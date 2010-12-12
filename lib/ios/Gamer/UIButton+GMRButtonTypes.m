@@ -68,6 +68,11 @@
 			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonSave" ofType:@"png"];
 			rect = CGRectMake(0, 0, 57, 30);
 			break;
+		
+		case GMRButtonTypeSend:
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonSend" ofType:@"png"];
+			rect = CGRectMake(0, 0, 57, 30);
+			break;
 			
 		case GMRButtonTypeShare:
 			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonShare" ofType:@"png"];

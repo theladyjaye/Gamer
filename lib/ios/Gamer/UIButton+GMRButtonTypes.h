@@ -20,6 +20,7 @@ enum
 	GMRButtonTypeLogin,
 	GMRButtonTypeNewAccount,
 	GMRButtonTypeSave,
+	GMRButtonTypeSend,
 	GMRButtonTypeShare
 };
 typedef NSUInteger GMRButtonType;

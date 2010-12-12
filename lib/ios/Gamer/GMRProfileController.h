@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "GMRViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface GMRProfileController : GMRViewController {
+@interface GMRProfileController : GMRViewController <MFMailComposeViewControllerDelegate>{
 	UINavigationBar * navigationBar;
 	NSMutableArray * aliases;
 	UITableView * aliasTableView;
@@ -20,7 +21,10 @@
 
 - (void)addAlias;
 - (void)logout;
+- (void)requestGameOrFeature;
+- (void)aliasDispute;
 - (IBAction) performAction:(id)sender;
 - (void)noAliases;
+- (void)sendMail:(NSString *)messageTitle message:(NSString *)messageBody to:(NSString *)email;
 
 @end

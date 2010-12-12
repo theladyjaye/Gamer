@@ -164,6 +164,10 @@
 		D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */; };
 		D78EA45A12B4858700D78651 /* ArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA45812B4858700D78651 /* ArrowUp.png */; };
 		D78EA45B12B4858700D78651 /* ArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA45912B4858700D78651 /* ArrowUp@2x.png */; };
+		D78EA49912B488FD00D78651 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78EA49812B488FD00D78651 /* MessageUI.framework */; };
+		D78EA53212B492F200D78651 /* ButtonSend.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA53012B492F200D78651 /* ButtonSend.png */; };
+		D78EA53312B492F200D78651 /* ButtonSend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA53112B492F200D78651 /* ButtonSend@2x.png */; };
+		D78EA53612B4943600D78651 /* GMRProfileController+MailViewMods.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
@@ -569,6 +573,11 @@
 		D78EA10512B3D7B600D78651 /* BackgroundAliasCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundAliasCell@2x.png"; path = "Images/Light/BackgroundAliasCell@2x.png"; sourceTree = "<group>"; };
 		D78EA45812B4858700D78651 /* ArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArrowUp.png; path = Images/Light/ArrowUp.png; sourceTree = "<group>"; };
 		D78EA45912B4858700D78651 /* ArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ArrowUp@2x.png"; path = "Images/Light/ArrowUp@2x.png"; sourceTree = "<group>"; };
+		D78EA49812B488FD00D78651 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D78EA53012B492F200D78651 /* ButtonSend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonSend.png; path = Images/Light/ButtonSend.png; sourceTree = "<group>"; };
+		D78EA53112B492F200D78651 /* ButtonSend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonSend@2x.png"; path = "Images/Light/ButtonSend@2x.png"; sourceTree = "<group>"; };
+		D78EA53412B4943600D78651 /* GMRProfileController+MailViewMods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRProfileController+MailViewMods.h"; sourceTree = "<group>"; };
+		D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRProfileController+MailViewMods.m"; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
@@ -773,6 +782,7 @@
 				D77E1BFA1288A27800B75D60 /* libz.1.2.3.dylib in Frameworks */,
 				D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */,
 				D7C0CD7312A6159700843E34 /* QuartzCore.framework in Frameworks */,
+				D78EA49912B488FD00D78651 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +874,7 @@
 				D7DB90E71280872000D6C442 /* libz.1.2.3.dylib */,
 				D7B728161282271D00419F60 /* UIKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				D78EA49812B488FD00D78651 /* MessageUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -937,6 +948,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D78EA53012B492F200D78651 /* ButtonSend.png */,
+				D78EA53112B492F200D78651 /* ButtonSend@2x.png */,
 				D78EA45812B4858700D78651 /* ArrowUp.png */,
 				D78EA45912B4858700D78651 /* ArrowUp@2x.png */,
 				D78EA10412B3D7B600D78651 /* BackgroundAliasCell.png */,
@@ -1203,11 +1216,7 @@
 		D78CDC0E12B31D4F00D6F3E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */,
-				D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */,
-				D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */,
-				D78EA0AE12B3D34700D78651 /* GMRProfileController+AliasTable.h */,
-				D78EA0AF12B3D34700D78651 /* GMRProfileController+AliasTable.m */,
+				D78EA48E12B487D900D78651 /* Main */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1221,6 +1230,20 @@
 				D78CDC1912B31FD900D6F3E2 /* 112-group@2x.png */,
 			);
 			name = Icons;
+			sourceTree = "<group>";
+		};
+		D78EA48E12B487D900D78651 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */,
+				D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */,
+				D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */,
+				D78EA0AE12B3D34700D78651 /* GMRProfileController+AliasTable.h */,
+				D78EA0AF12B3D34700D78651 /* GMRProfileController+AliasTable.m */,
+				D78EA53412B4943600D78651 /* GMRProfileController+MailViewMods.h */,
+				D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		D795FDB6128FB3E50033F086 /* TableCells */ = {
@@ -1926,6 +1949,8 @@
 				D78EA10712B3D7B600D78651 /* BackgroundAliasCell@2x.png in Resources */,
 				D78EA45A12B4858700D78651 /* ArrowUp.png in Resources */,
 				D78EA45B12B4858700D78651 /* ArrowUp@2x.png in Resources */,
+				D78EA53212B492F200D78651 /* ButtonSend.png in Resources */,
+				D78EA53312B492F200D78651 /* ButtonSend@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2025,6 +2050,7 @@
 				D78EA0AB12B3D12B00D78651 /* GMRAliasListCell.m in Sources */,
 				D78EA0B012B3D34700D78651 /* GMRProfileController+AliasTable.m in Sources */,
 				D78EA0B312B3D42200D78651 /* GMRAlias.m in Sources */,
+				D78EA53612B4943600D78651 /* GMRProfileController+MailViewMods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
