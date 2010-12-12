@@ -15,10 +15,11 @@
 #import "UIButton+GMRButtonTypes.h"
 #import "GMRAlertView.h"
 #import "GMRNoneView.h"
+#import "GMRCreateAliasController.h"
 
 
 @implementation GMRProfileController
-@synthesize navigationBar, aliasTableView;
+@synthesize navigationBar, aliasTableView, aliases;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -73,7 +74,26 @@
 
 - (void)addAlias
 {
-	// modal
+	if(!aliases)
+	{
+		aliases = [[NSMutableArray array] retain];
+		
+	}
+	
+	GMRCreateAliasController * controller   = [[GMRCreateAliasController alloc] initWithProfileController:self];
+	UINavigationController * createAlias    = [[UINavigationController alloc] initWithRootViewController:controller];
+	
+	UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
+	navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
+	
+	[createAlias.view addSubview:navigationBarShadow];
+	[navigationBarShadow release];
+	
+	
+	[self presentModalViewController:createAlias 
+							animated:YES];
+	[createAlias release];
+	[controller  release];
 }
 
 - (IBAction) performAction:(id)sender
@@ -235,9 +255,8 @@
 {
 	self.navigationBar = nil;
 	self.aliasTableView = nil;
+	self.aliases = nil;
 	
-	[aliases release];
-	aliases = nil;
     [super dealloc];
 }
 

@@ -16,6 +16,8 @@
 	UITableView * aliasTableView;
 	UIView * noAliasesView;
 }
+
+@property(nonatomic, retain) NSMutableArray * aliases;
 @property(nonatomic, retain) IBOutlet UINavigationBar * navigationBar;
 @property(nonatomic, retain) IBOutlet UITableView * aliasTableView;
 

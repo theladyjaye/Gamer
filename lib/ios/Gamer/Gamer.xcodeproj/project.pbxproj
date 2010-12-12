@@ -173,6 +173,9 @@
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
 		D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */; };
 		D79C06C012982163000F6DAD /* GMRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D79C06BF12982163000F6DAD /* GMRButton.m */; };
+		D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7A212B524D500E36C31 /* GMRCreateAliasController.m */; };
+		D7ACF7A512B524D500E36C31 /* GMRCreateAliasController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ACF7A312B524D500E36C31 /* GMRCreateAliasController.xib */; };
+		D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -585,6 +588,12 @@
 		D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatchListCell.m; sourceTree = "<group>"; };
 		D79C06BE12982163000F6DAD /* GMRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRButton.h; sourceTree = "<group>"; };
 		D79C06BF12982163000F6DAD /* GMRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRButton.m; sourceTree = "<group>"; };
+		D7ACF7A112B524D500E36C31 /* GMRCreateAliasController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateAliasController.h; sourceTree = "<group>"; };
+		D7ACF7A212B524D500E36C31 /* GMRCreateAliasController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRCreateAliasController.m; sourceTree = "<group>"; };
+		D7ACF7A312B524D500E36C31 /* GMRCreateAliasController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRCreateAliasController.xib; sourceTree = "<group>"; };
+		D7ACF7D212B5291C00E36C31 /* GMRCreateAliasController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRCreateAliasController+Navigation.h"; sourceTree = "<group>"; };
+		D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRCreateAliasController+Navigation.m"; sourceTree = "<group>"; };
+		D7ACF7D612B529F700E36C31 /* GMRCreateAliasGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateAliasGlobals.h; sourceTree = "<group>"; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -1216,7 +1225,9 @@
 		D78CDC0E12B31D4F00D6F3E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D7ACF79A12B5248E00E36C31 /* CreateAliasMenu */,
 				D78EA48E12B487D900D78651 /* Main */,
+				D7ACF7D612B529F700E36C31 /* GMRCreateAliasGlobals.h */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1282,6 +1293,18 @@
 				D7D6B34412A2F6D7004FD6F6 /* GMRLabel.m */,
 			);
 			name = Controls;
+			sourceTree = "<group>";
+		};
+		D7ACF79A12B5248E00E36C31 /* CreateAliasMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D7ACF7A112B524D500E36C31 /* GMRCreateAliasController.h */,
+				D7ACF7A212B524D500E36C31 /* GMRCreateAliasController.m */,
+				D7ACF7A312B524D500E36C31 /* GMRCreateAliasController.xib */,
+				D7ACF7D212B5291C00E36C31 /* GMRCreateAliasController+Navigation.h */,
+				D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */,
+			);
+			name = CreateAliasMenu;
 			sourceTree = "<group>";
 		};
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
@@ -1951,6 +1974,7 @@
 				D78EA45B12B4858700D78651 /* ArrowUp@2x.png in Resources */,
 				D78EA53212B492F200D78651 /* ButtonSend.png in Resources */,
 				D78EA53312B492F200D78651 /* ButtonSend@2x.png in Resources */,
+				D7ACF7A512B524D500E36C31 /* GMRCreateAliasController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2051,6 +2075,8 @@
 				D78EA0B012B3D34700D78651 /* GMRProfileController+AliasTable.m in Sources */,
 				D78EA0B312B3D42200D78651 /* GMRAlias.m in Sources */,
 				D78EA53612B4943600D78651 /* GMRProfileController+MailViewMods.m in Sources */,
+				D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */,
+				D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
