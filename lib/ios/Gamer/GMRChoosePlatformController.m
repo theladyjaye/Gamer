@@ -17,45 +17,55 @@
 @synthesize platformBattleNet, platformPlaystation2, platformPlaystation3, platformSteam, platformWii, platformXBox360;
 
 - (void)viewDidLoad 
+{	
+	// this is the override for child classes (eg: GMRAliasChoosePlatform)
+	[self configure];
+	[super viewDidLoad];
+}
+
+// designated override point for viewDidLoad for child classes
+- (void)configure
 {
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Platform"];
 	
 	if(kCreateMatchProgress.platform != GMRPlatformUnknown)
 	{
+		
+		// when you come back we need to select your last selected button
+		// so we need the button IBOutlets so we have something to target
 		[self selectPlatform:kCreateMatchProgress.platform];
 	}
-	
-	[super viewDidLoad];
 }
 
 - (IBAction)selectPlatformAction:(id)sender
 {
-	if(sender != selectedButton)
+	NSUInteger tag = [sender tag];
+	switch(tag)
 	{
-		if(sender == platformBattleNet)
-		{
+		case 0: // Battle.Net
 			kCreateMatchProgress.platform = GMRPlatformBattleNet;
-		}
-		else if(sender == platformPlaystation2)
-		{
+			break;
+			
+		case 1: // Playstation 2
 			kCreateMatchProgress.platform = GMRPlatformPlaystation2;
-		}
-		else if(sender == platformPlaystation3)
-		{
+			break;
+			
+		case 2: // Playstation 3
 			kCreateMatchProgress.platform = GMRPlatformPlaystation3;
-		}
-		else if(sender == platformSteam)
-		{
+			break;
+			
+		case 3: // Steam
 			kCreateMatchProgress.platform = GMRPlatformSteam;
-		}
-		else if(sender == platformWii)
-		{
+			break;
+			
+		case 4: // Wii
 			kCreateMatchProgress.platform = GMRPlatformWii;
-		}
-		else if (sender == platformXBox360)
-		{
+			break;
+			
+		case 5: // XBox 360
 			kCreateMatchProgress.platform = GMRPlatformXBox360;
-		}
+			break;
+			
 	}
 	
 	[self selectPlatform:kCreateMatchProgress.platform];
@@ -103,6 +113,7 @@
 	}
 	
 }
+ 
 
 
 
@@ -129,12 +140,14 @@
 
 
 - (void)dealloc {
+	
 	self.platformBattleNet = nil;
 	self.platformPlaystation2 = nil;
 	self.platformPlaystation3 = nil;
 	self.platformSteam = nil;
 	self.platformWii = nil;
 	self.platformXBox360 = nil;
+	
     [super dealloc];
 }
 

@@ -416,6 +416,7 @@ GMRMatch * kCreateMatchProgress = nil;
 
 	
 	[kCreateMatchProgress release];
+	kCreateMatchProgress = nil;
 	[super dealloc];
 }
 

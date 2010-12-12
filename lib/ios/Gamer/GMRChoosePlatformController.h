@@ -19,6 +19,7 @@
 	GMRMenuButton * platformSteam;
 	GMRMenuButton * platformWii;
 	GMRMenuButton * platformXBox360;
+	
 }
 
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformBattleNet;
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformWii;
 @property (nonatomic, retain) IBOutlet GMRMenuButton * platformXBox360;
 
+- (void)configure;
 - (IBAction)selectPlatformAction:(id)sender;
 - (void)selectPlatform:(GMRPlatform)platform;
 @end

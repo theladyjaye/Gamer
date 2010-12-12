@@ -263,6 +263,7 @@ GMRAlias * kCreateAliasProgress;
 							  forKeyPath:@"alias"];
 	
 	[kCreateAliasProgress release];
+	kCreateAliasProgress = nil;
 	
 	[super dealloc];
 }

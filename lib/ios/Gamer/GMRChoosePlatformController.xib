@@ -506,46 +506,6 @@
 					<int key="connectionID">52</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">platformBattleNet</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="935580103"/>
-					</object>
-					<int key="connectionID">59</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">platformPlaystation2</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="522007005"/>
-					</object>
-					<int key="connectionID">60</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">platformPlaystation3</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="40340384"/>
-					</object>
-					<int key="connectionID">61</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">platformWii</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="785605756"/>
-					</object>
-					<int key="connectionID">62</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">platformXBox360</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="235135245"/>
-					</object>
-					<int key="connectionID">63</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">selectPlatformAction:</string>
 						<reference key="source" ref="935580103"/>
@@ -625,11 +585,51 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformBattleNet</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="935580103"/>
+					</object>
+					<int key="connectionID">79</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformPlaystation2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="522007005"/>
+					</object>
+					<int key="connectionID">80</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformPlaystation3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="40340384"/>
+					</object>
+					<int key="connectionID">81</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">platformSteam</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="310644168"/>
 					</object>
-					<int key="connectionID">77</int>
+					<int key="connectionID">82</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformWii</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="785605756"/>
+					</object>
+					<int key="connectionID">83</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">platformXBox360</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="235135245"/>
+					</object>
+					<int key="connectionID">84</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1025,7 +1025,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">78</int>
+			<int key="maxID">84</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
