@@ -13,7 +13,7 @@ enum{
 };
 typedef NSUInteger GMRMatchAvailablilty;
 
-enum {
+/*enum {
 	GMRPlatformUnknown,
 	GMRPlatformXBox360,
 	GMRPlatformWii,
@@ -23,6 +23,18 @@ enum {
 	GMRPlatformBattleNet,
 	GMRPlatformSteam
 	
+};*/
+
+// This NEEDS to be alphabetized
+enum {
+	GMRPlatformUnknown,
+	GMRPlatformBattleNet,
+	GMRPlatformPC,
+	GMRPlatformPlaystation2,
+	GMRPlatformPlaystation3,
+	GMRPlatformSteam,
+	GMRPlatformWii,
+	GMRPlatformXBox360
 };
 typedef NSUInteger GMRPlatform;
 

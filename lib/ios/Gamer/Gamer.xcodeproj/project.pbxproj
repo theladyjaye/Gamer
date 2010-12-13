@@ -177,6 +177,10 @@
 		D7ACF7A512B524D500E36C31 /* GMRCreateAliasController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ACF7A312B524D500E36C31 /* GMRCreateAliasController.xib */; };
 		D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7D312B5291C00E36C31 /* GMRCreateAliasController+Navigation.m */; };
 		D7ACF80B12B535B300E36C31 /* GMRAliasChoosePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */; };
+		D7ACF8FC12B5ACFB00E36C31 /* GMRChooseAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF8FA12B5ACFB00E36C31 /* GMRChooseAlias.m */; };
+		D7ACF8FD12B5ACFB00E36C31 /* GMRChooseAlias.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ACF8FB12B5ACFB00E36C31 /* GMRChooseAlias.xib */; };
+		D7ACFA2412B5E07600E36C31 /* BackgroundAliasMenuPeople.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */; };
+		D7ACFA2512B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -597,6 +601,11 @@
 		D7ACF7D612B529F700E36C31 /* GMRCreateAliasGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateAliasGlobals.h; sourceTree = "<group>"; };
 		D7ACF80912B535B300E36C31 /* GMRAliasChoosePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAliasChoosePlatform.h; sourceTree = "<group>"; };
 		D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAliasChoosePlatform.m; sourceTree = "<group>"; };
+		D7ACF8F912B5ACFB00E36C31 /* GMRChooseAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseAlias.h; sourceTree = "<group>"; };
+		D7ACF8FA12B5ACFB00E36C31 /* GMRChooseAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseAlias.m; sourceTree = "<group>"; };
+		D7ACF8FB12B5ACFB00E36C31 /* GMRChooseAlias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseAlias.xib; sourceTree = "<group>"; };
+		D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAliasMenuPeople.png; path = Images/Light/BackgroundAliasMenuPeople.png; sourceTree = "<group>"; };
+		D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundAliasMenuPeople@2x.png"; path = "Images/Light/BackgroundAliasMenuPeople@2x.png"; sourceTree = "<group>"; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -960,6 +969,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */,
+				D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */,
 				D78EA53012B492F200D78651 /* ButtonSend.png */,
 				D78EA53112B492F200D78651 /* ButtonSend@2x.png */,
 				D78EA45812B4858700D78651 /* ArrowUp.png */,
@@ -1313,8 +1324,9 @@
 		D7ACF80712B5356100E36C31 /* Aliases */ = {
 			isa = PBXGroup;
 			children = (
-				D7ACF80812B5356800E36C31 /* ChoosePlatform */,
 				D7ACF79A12B5248E00E36C31 /* CreateAliasMenu */,
+				D7ACF8F712B5ACCD00E36C31 /* ChooseAlias */,
+				D7ACF80812B5356800E36C31 /* ChoosePlatform */,
 			);
 			name = Aliases;
 			sourceTree = "<group>";
@@ -1326,6 +1338,16 @@
 				D7ACF80A12B535B300E36C31 /* GMRAliasChoosePlatform.m */,
 			);
 			name = ChoosePlatform;
+			sourceTree = "<group>";
+		};
+		D7ACF8F712B5ACCD00E36C31 /* ChooseAlias */ = {
+			isa = PBXGroup;
+			children = (
+				D7ACF8F912B5ACFB00E36C31 /* GMRChooseAlias.h */,
+				D7ACF8FA12B5ACFB00E36C31 /* GMRChooseAlias.m */,
+				D7ACF8FB12B5ACFB00E36C31 /* GMRChooseAlias.xib */,
+			);
+			name = ChooseAlias;
 			sourceTree = "<group>";
 		};
 		D7AFF522128A68FF00CF1A07 /* Utils */ = {
@@ -1996,6 +2018,9 @@
 				D78EA53212B492F200D78651 /* ButtonSend.png in Resources */,
 				D78EA53312B492F200D78651 /* ButtonSend@2x.png in Resources */,
 				D7ACF7A512B524D500E36C31 /* GMRCreateAliasController.xib in Resources */,
+				D7ACF8FD12B5ACFB00E36C31 /* GMRChooseAlias.xib in Resources */,
+				D7ACFA2412B5E07600E36C31 /* BackgroundAliasMenuPeople.png in Resources */,
+				D7ACFA2512B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2099,6 +2124,7 @@
 				D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */,
 				D7ACF7D412B5291C00E36C31 /* GMRCreateAliasController+Navigation.m in Sources */,
 				D7ACF80B12B535B300E36C31 /* GMRAliasChoosePlatform.m in Sources */,
+				D7ACF8FC12B5ACFB00E36C31 /* GMRChooseAlias.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

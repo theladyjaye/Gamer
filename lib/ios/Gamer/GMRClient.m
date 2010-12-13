@@ -17,15 +17,15 @@ static NSArray * platformStrings;
 @dynamic apiKey;
 
 +(void)initialize
-{
-	platformStrings = [NSArray arrayWithObjects:@"unknown",
-					                            @"xbox360", 
-					                            @"wii",
-					                            @"playstation3",
-					                            @"playstation2",
-					                            @"pc",
-					                            @"battlenet",
-					                            @"steam",
+{	
+	platformStrings = [NSArray arrayWithObjects:@"unknown",                         
+												@"battlenet",
+												@"pc",
+												@"playstation2",
+												@"playstation3",
+												@"steam",
+												@"wii",
+												@"xbox360", 
 												nil];
 	[platformStrings retain];
 }

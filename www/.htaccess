@@ -22,7 +22,7 @@ RewriteBase /
 RewriteCond %{REQUEST_METHOD} ^POST [NC,OR]
 RewriteCond %{HTTP:X-HTTP-Method-Override} ^POST [NC]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]
-RewriteRule accounts/users/([a-z0-9_-]+)/aliases/(wii|xbox360|pc|playstation[23])$ /application/services/endpoints/accounts-maintenance.php?action=linkPlatformAlias&arguments[]=$1&arguments[]=$2 [L] 
+RewriteRule accounts/users/([a-z0-9_-]+)/aliases/(wii|xbox360|pc|playstation[23]|battlenet)$ /application/services/endpoints/accounts-maintenance.php?action=linkPlatformAlias&arguments[]=$1&arguments[]=$2 [L] 
 RewriteRule accounts/(login|register|verify)$ /application/services/endpoints/accounts-open.php?action=$1 [L] 
 RewriteRule accounts/reset/(.+) /application/services/endpoints/accounts-open.php?action=reset&arguments[]=$1 [L] 
 

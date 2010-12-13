@@ -14,11 +14,13 @@
 	GMRProfileController * profileController;	
 	GMRMenuButton * platform;
 	GMRMenuButton * alias;
+	UIView * howItWorksView;
 }
 
 
 @property(nonatomic, retain) IBOutlet GMRMenuButton * platform;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * alias;
+@property(nonatomic, retain) IBOutlet UIView * howItWorksView;
 
 - (id)initWithProfileController:(GMRProfileController *)controller;
 - (void)saveAlias;

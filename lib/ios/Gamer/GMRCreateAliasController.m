@@ -7,6 +7,7 @@
 //
 
 #import <dispatch/dispatch.h>
+#import <QuartzCore/QuartzCore.h>
 #import "GMRCreateAliasController.h"
 #import "UIButton+GMRButtonTypes.h"
 #import "GMRLabel.h"
@@ -23,11 +24,12 @@
 #import "GMRInputValidator.h"
 #import "GMRClient.h"
 #import "GMRGlobals.h"
+#import "GMRAliasListCell.h"
 
 GMRAlias * kCreateAliasProgress;
 
 @implementation GMRCreateAliasController
-@synthesize platform, alias;
+@synthesize platform, alias, howItWorksView;
 
 - (id)initWithProfileController:(GMRProfileController *)controller
 {
@@ -57,7 +59,7 @@ GMRAlias * kCreateAliasProgress;
 	UIBarButtonItem * save   = [[UIBarButtonItem alloc] initWithCustomView:saveButton];
 	
 	
-	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Create Alias"];
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Link Alias"];
 	self.navigationItem.leftBarButtonItem  = cancel;
 	self.navigationItem.rightBarButtonItem = save;
 	
@@ -75,6 +77,36 @@ GMRAlias * kCreateAliasProgress;
 						   forKeyPath:@"alias" 
 							  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 							  context:nil];
+	
+	
+	// Add the rounded background to "How It Works"
+	howItWorksView.transform = CGAffineTransformMakeTranslation(0.0, 100);
+	
+	CGFloat roundedColor = 246.0/255.0;
+	UIView * roundedView = [[UIView alloc] initWithFrame:CGRectMake(4.0, 8.0, 312.0, 68.0)];
+	
+	
+	roundedView.layer.cornerRadius    = 5.0;
+	roundedView.layer.backgroundColor = [UIColor colorWithRed:roundedColor 
+														green:roundedColor 
+														 blue:roundedColor 
+														alpha:1.0].CGColor;
+	
+	
+	[howItWorksView insertSubview:roundedView atIndex:0];
+	[roundedView release];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	howItWorksView.hidden = NO;
+	[UIView animateWithDuration:0.3
+						  delay:0.0
+						options:UIViewAnimationOptionCurveEaseOut
+					 animations:^{
+						 howItWorksView.transform = CGAffineTransformIdentity;
+					 } 
+					 completion:NULL];
 }
 
 - (void)saveAlias
@@ -103,36 +135,58 @@ GMRAlias * kCreateAliasProgress;
 							 dispatch_async(dispatch_get_main_queue(), ^{
 								 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 								 
-								 /*NSUInteger insertIndex = -1;
+								 NSUInteger insertIndex = -1;
 								 
-								 for(GMRAlias * alias in self.platformController.aliases)
+								 for(GMRAlias * object in profileController.aliases)
 								 {
-									 if([kCreateMatchProgress.scheduled_time compare:match.scheduled_time] == NSOrderedDescending)
+									 if(kCreateAliasProgress.platform > object.platform)
 									 {
-										 insertIndex = [matchesDataSourceController.matches indexOfObject:match];
+										 insertIndex = [profileController.aliases indexOfObject:object];
+									 }
+									 else if(kCreateAliasProgress.platform == object.platform)
+									 {
+										 // someone just changed their alias for an existing platform
+										 object.alias = kCreateAliasProgress.alias;
+										 
+										 insertIndex = [profileController.aliases indexOfObject:object];
+										 
+										 UITableView * aliasTableView = profileController.aliasTableView;
+										 GMRAliasListCell *cell = (GMRAliasListCell *)[aliasTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:insertIndex 
+																																			   inSection:0]];
+										 if(cell != nil)
+										 {
+											 cell.alias = object.alias;
+											 [cell setNeedsDisplay];
+										 }
+										 
+										 [self dismissModalViewController];
+										 return;
 									 }
 									 
 								 }
 								 
 								 insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
-								 NSString * matchId = [response objectForKey:@"match"];
+								 
+								 // might need to add some more information for editing.
+								 /*NSString * matchId = [response objectForKey:@"match"];
 								 
 								 // prime some values:
 								 kCreateMatchProgress.id = matchId;
 								 kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+								 */
 								 
 								 
-								 [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
-														 valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-																  forKey:@"matches"];
+								 [profileController willChange:NSKeyValueChangeInsertion 
+											   valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+														forKey:@"aliases"];
 								 
-								 [kScheduledMatches insertObject:kCreateMatchProgress 
-														 atIndex:insertIndex];
+								 [profileController.aliases insertObject:kCreateAliasProgress 
+																 atIndex:insertIndex];
 								 
 								 
-								 [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
-														valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-																 forKey:@"matches"]*/
+								 [profileController didChange:NSKeyValueChangeInsertion 
+											  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+													   forKey:@"aliases"];
 								 
 								 [self dismissModalViewController];
 								 
@@ -146,12 +200,11 @@ GMRAlias * kCreateAliasProgress;
 							 
 						 }
 						 
-						 NSLog(@"%@", response);
 					 }];
 	}
 	else 
 	{
-		NSLog(@"%@", form.errors);
+		NSLog(@"Form Errors: %@", form.errors);
 	}
 }
 
@@ -246,6 +299,7 @@ GMRAlias * kCreateAliasProgress;
     [super viewDidUnload];
 	self.platform = nil;
 	self.alias = nil;
+	self.howItWorksView = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -255,6 +309,7 @@ GMRAlias * kCreateAliasProgress;
 {
     self.platform = nil;
 	self.alias = nil;
+	self.howItWorksView = nil;
 	
 	[kCreateAliasProgress removeObserver:self 
 							  forKeyPath:@"platform"];

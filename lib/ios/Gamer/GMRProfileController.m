@@ -57,6 +57,12 @@
 	[navigationBarShadow release];
 	
 	[self aliasTableRefresh];
+	
+	[self addObserver:self 
+		   forKeyPath:@"aliases" 
+			  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+			  context:nil];
+	
 	[super viewDidLoad];
 }
 
@@ -202,6 +208,45 @@
 	
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	
+	
+	NSKeyValueChange kind = [[change objectForKey:NSKeyValueChangeKindKey] integerValue];
+	NSIndexSet * indexes  = [change objectForKey:NSKeyValueChangeIndexesKey];
+	
+	[aliasTableView beginUpdates];
+	
+	switch(kind)
+	{
+		case NSKeyValueChangeInsertion:
+			[aliasTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]] 
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;
+			
+		case NSKeyValueChangeRemoval:
+			[aliasTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]]  
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;		
+	}
+	
+	[aliasTableView endUpdates];
+	
+	
+	NSUInteger remaining = [aliasTableView numberOfRowsInSection:0];
+	
+	if(remaining == 0)
+	{
+		[self noAliases];
+	}
+	else if(noAliasesView && remaining > 0)
+	{
+		[noAliasesView removeFromSuperview];
+		noAliasesView = nil;
+	}
+	
+}
+
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
@@ -253,6 +298,9 @@
 
 - (void)dealloc 
 {
+	[self removeObserver:self 
+			  forKeyPath:@"aliases"];
+	
 	self.navigationBar = nil;
 	self.aliasTableView = nil;
 	self.aliases = nil;

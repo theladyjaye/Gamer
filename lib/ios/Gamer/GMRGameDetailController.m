@@ -142,7 +142,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[UIView animateWithDuration:0.15
+	/*[UIView animateWithDuration:0.15
 						  delay:0.15
 						options:UIViewAnimationOptionCurveEaseOut
 					 animations:^{
@@ -151,6 +151,7 @@
 					 completion:^(BOOL finished){
 						 
 					 }];
+	 */
 	
 	[UIView animateWithDuration:0.25
 						  delay:0.0
@@ -188,19 +189,20 @@
 						 
 						 [toolbar setItems:items animated:YES];
 						 
-						 howItWorksView.hidden = NO;
+						howItWorksView.hidden = NO;
 						[UIView animateWithDuration:0.3
 											   delay:0.0
 											 options:UIViewAnimationOptionCurveEaseOut
 										  animations:^{
 											  howItWorksView.transform = CGAffineTransformIdentity;
-											  updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
-																							 target:self 
-																						   selector:@selector(updateCountdown) 
-																						   userInfo:nil 
-																							repeats:YES];
 										  } 
-										  completion:NULL];
+										 completion:^(BOOL finished){
+											 updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
+																							target:self 
+																						  selector:@selector(updateCountdown) 
+																						  userInfo:nil 
+																						   repeats:YES];
+										 }];
 					}];
 }
 
