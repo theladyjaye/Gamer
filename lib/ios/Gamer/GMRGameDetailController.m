@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
+#import "GMRGameDetailController+Sharing.h"
 #import "GMRButton.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
@@ -214,7 +215,37 @@
 
 - (void)shareGame
 {
-	//TODO : Share ActionSheet
+	NSLog(@"%@", self.parentViewController);
+	NSLog(@"%@", self.parentViewController.parentViewController);
+	UIActionSheet * sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Sharing %@", match.game.label]
+														delegate:self 
+											   cancelButtonTitle:@"Cancel" 
+										  destructiveButtonTitle:nil 
+											   otherButtonTitles:@"Email", @"Facebook", @"Twitter", nil];
+	
+	[sheet showInView:self.parentViewController.parentViewController.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	switch (buttonIndex) 
+	{
+		case 0: // email
+			[self shareEmail];
+			break;
+		
+		case 1: // Facebook
+			[self shareFacebook];
+			break;
+			
+		case 2: // Twitter
+			[self shareTwitter];
+			break;
+			
+	}
+	
+	[actionSheet release];
+	
 }
 
 

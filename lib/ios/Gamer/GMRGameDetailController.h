@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "GMRViewController.h"
 
 @class GMRPlatformBanner, GMRMatch, OverviewController;
-@interface GMRGameDetailController : GMRViewController {
+@interface GMRGameDetailController : GMRViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
 	GMRMatch * match;
 	NSArray * playersForMatch;
 	UITableView * playersTableView;
