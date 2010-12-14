@@ -244,6 +244,7 @@ function createMatch(req, res, next)
 		var platform  = req.params.platform;
 		var game      = req.params.game;
 		
+		
 		/*
 			TODO ensure that the scheduled time does not occurr in the past?
 			and that it is a valid Date...
@@ -286,6 +287,8 @@ function createMatch(req, res, next)
 				{
 					// is the requested platform available for this game?
 					// eg: is the request for Halo Reach on Playstation 3? this would be invalid
+					console.log("The Platforms: " + game.platforms);
+					
 					if(game.platforms.filter( function(element, index, array){ return element == platform; })[0] == null)
 					{
 						next({"ok":false, "message":Errors.unknown_platform.message});
