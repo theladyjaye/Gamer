@@ -168,6 +168,10 @@
 		D78EA53212B492F200D78651 /* ButtonSend.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA53012B492F200D78651 /* ButtonSend.png */; };
 		D78EA53312B492F200D78651 /* ButtonSend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78EA53112B492F200D78651 /* ButtonSend@2x.png */; };
 		D78EA53612B4943600D78651 /* GMRProfileController+MailViewMods.m in Sources */ = {isa = PBXBuildFile; fileRef = D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */; };
+		D78F3B5412BA63A200014188 /* 116-controller.png in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5212BA63A200014188 /* 116-controller.png */; };
+		D78F3B5512BA63A200014188 /* 116-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5312BA63A200014188 /* 116-controller@2x.png */; };
+		D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */; };
+		D78F3B5E12BA640D00014188 /* GMRGameLobbyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
@@ -587,6 +591,11 @@
 		D78EA53112B492F200D78651 /* ButtonSend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonSend@2x.png"; path = "Images/Light/ButtonSend@2x.png"; sourceTree = "<group>"; };
 		D78EA53412B4943600D78651 /* GMRProfileController+MailViewMods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRProfileController+MailViewMods.h"; sourceTree = "<group>"; };
 		D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRProfileController+MailViewMods.m"; sourceTree = "<group>"; };
+		D78F3B5212BA63A200014188 /* 116-controller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "116-controller.png"; path = "Images/icons/116-controller.png"; sourceTree = "<group>"; };
+		D78F3B5312BA63A200014188 /* 116-controller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "116-controller@2x.png"; path = "Images/icons/116-controller@2x.png"; sourceTree = "<group>"; };
+		D78F3B5A12BA640D00014188 /* GMRGameLobbyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameLobbyController.h; sourceTree = "<group>"; };
+		D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameLobbyController.m; sourceTree = "<group>"; };
+		D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRGameLobbyController.xib; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
@@ -1191,6 +1200,7 @@
 		D775C4E11287978C00C72E64 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D78F3B5912BA63EF00014188 /* GameLobby */,
 				D78CDC0E12B31D4F00D6F3E2 /* Profile */,
 				D750128712989F710079EB44 /* CreateGame */,
 				D7208A7D1292BECD009C0624 /* GameDetail */,
@@ -1254,6 +1264,8 @@
 		D78CDC1512B31F8F00D6F3E2 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				D78F3B5212BA63A200014188 /* 116-controller.png */,
+				D78F3B5312BA63A200014188 /* 116-controller@2x.png */,
 				D78CDC1612B31FD900D6F3E2 /* 83-calendar.png */,
 				D78CDC1712B31FD900D6F3E2 /* 83-calendar@2x.png */,
 				D78CDC1812B31FD900D6F3E2 /* 112-group.png */,
@@ -1274,6 +1286,16 @@
 				D78EA53512B4943600D78651 /* GMRProfileController+MailViewMods.m */,
 			);
 			name = ProfileMainMenu;
+			sourceTree = "<group>";
+		};
+		D78F3B5912BA63EF00014188 /* GameLobby */ = {
+			isa = PBXGroup;
+			children = (
+				D78F3B5A12BA640D00014188 /* GMRGameLobbyController.h */,
+				D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */,
+				D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */,
+			);
+			name = GameLobby;
 			sourceTree = "<group>";
 		};
 		D795FDB6128FB3E50033F086 /* TableCells */ = {
@@ -2026,6 +2048,9 @@
 				D7ACF8FD12B5ACFB00E36C31 /* GMRChooseAlias.xib in Resources */,
 				D7ACFA2412B5E07600E36C31 /* BackgroundAliasMenuPeople.png in Resources */,
 				D7ACFA2512B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png in Resources */,
+				D78F3B5412BA63A200014188 /* 116-controller.png in Resources */,
+				D78F3B5512BA63A200014188 /* 116-controller@2x.png in Resources */,
+				D78F3B5E12BA640D00014188 /* GMRGameLobbyController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2131,6 +2156,7 @@
 				D7ACF80B12B535B300E36C31 /* GMRAliasChoosePlatform.m in Sources */,
 				D7ACF8FC12B5ACFB00E36C31 /* GMRChooseAlias.m in Sources */,
 				D79E57AF12B7C65C0050E284 /* GMRGameDetailController+Sharing.m in Sources */,
+				D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

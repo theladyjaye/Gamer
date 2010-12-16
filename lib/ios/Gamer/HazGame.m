@@ -26,7 +26,7 @@ NSMutableArray * kScheduledMatches = nil;
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
+		
 	if([self hasAuthenticatedUser])
 	{
 		[self initializeApplicationFlow];
