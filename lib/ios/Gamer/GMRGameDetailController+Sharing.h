@@ -15,6 +15,6 @@
 - (void)shareFacebook;
 - (void)shareTwitter;
 - (void)sendMail:(NSString *)messageTitle message:(NSString *)messageBody to:(NSString *)email;
--(void)modfiyMailComposeViewNavigationBar:(UINavigationBar *)sourceBar newBar:(UINavigationBar *)newBar title:(NSString *)barTitle;
+//-(void)modfiyMailComposeViewNavigationBar:(UINavigationBar *)sourceBar newBar:(UINavigationBar *)newBar title:(NSString *)barTitle;
 
 @end

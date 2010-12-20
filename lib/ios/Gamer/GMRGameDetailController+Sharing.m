@@ -10,9 +10,11 @@
 #import "GMRAlertView.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
+#import "MFMailComposeViewController+GMRComposeViewStyle.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
 #import "NSDate+JSON.h"
+
 static UINavigationItem * composeViewNavigationItem;
 
 @implementation GMRGameDetailController(Sharing)
@@ -41,19 +43,31 @@ static UINavigationItem * composeViewNavigationItem;
 {
 	if([MFMailComposeViewController canSendMail])
 	{
-		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		NSArray * recipients = nil;
+		
+		if(email)
+			recipients = [NSArray arrayWithObject:email];
+		
+		MFMailComposeViewController * mailViewController = [MFMailComposeViewController composeViewWithTitle:messageTitle 
+																									    body:messageBody 
+																								  recipients:recipients];
 		mailViewController.mailComposeDelegate = self;
 		
+		
+		// MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		
 		// Optional Configuration Parameters to make life easier for the user
+		/*
 		[mailViewController setSubject:messageTitle];
 		[mailViewController setMessageBody:messageBody isHTML:NO];
 		
 		if(email)
 			[mailViewController setToRecipients:[NSArray arrayWithObject:email]];
+		 */
 		
 		
 		// Need to replace the bar with our own Style
-		
+		/*
 		UINavigationBar * styledBar = [[UINavigationBar alloc] initWithFrame:mailViewController.navigationBar.frame];
 		
 		UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
@@ -82,7 +96,10 @@ static UINavigationItem * composeViewNavigationItem;
 		
 		[styledBar release];
 		[navigationBarShadow release];
-		[mailViewController release];
+		 */
+		//[mailViewController release];
+		
+		[self presentModalViewController:mailViewController animated:YES];
 	}
 	else 
 	{
@@ -101,6 +118,7 @@ static UINavigationItem * composeViewNavigationItem;
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+/*
 -(void)modfiyMailComposeViewNavigationBar:(UINavigationBar *)sourceBar newBar:(UINavigationBar *)newBar title:(NSString *)barTitle
 {
 	composeViewNavigationItem = sourceBar.topItem;
@@ -157,5 +175,6 @@ static UINavigationItem * composeViewNavigationItem;
 	[target.target performSelector:target.action withObject:target];
 	
 }
+ */
 
 @end

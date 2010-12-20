@@ -251,6 +251,7 @@
 		D7C0F4FA12A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0F4F812A6AD4A00D05D8A /* BackgroundSimpleGradient@2x.png */; };
 		D7C33DA11295677A00B923AE /* OverviewController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DA01295677A00B923AE /* OverviewController+TableView.m */; };
 		D7C33DF512956BE100B923AE /* GMRGameDetailController+PlayerList.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */; };
+		D7C52E3112BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D7C52E3012BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m */; };
 		D7C74C3212AA9606000256F6 /* SectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C74C3012AA9606000256F6 /* SectionBackground.png */; };
 		D7C74C3312AA9606000256F6 /* SectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */; };
 		D7D23DA5128CE9A500C23711 /* GMRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D23DA3128CE9A500C23711 /* GMRAlertView.m */; };
@@ -687,6 +688,8 @@
 		D7C33DA01295677A00B923AE /* OverviewController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OverviewController+TableView.m"; sourceTree = "<group>"; };
 		D7C33DF312956BE100B923AE /* GMRGameDetailController+PlayerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameDetailController+PlayerList.h"; sourceTree = "<group>"; };
 		D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRGameDetailController+PlayerList.m"; sourceTree = "<group>"; };
+		D7C52E2F12BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFMailComposeViewController+GMRComposeViewStyle.h"; sourceTree = "<group>"; };
+		D7C52E3012BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFMailComposeViewController+GMRComposeViewStyle.m"; sourceTree = "<group>"; };
 		D7C74C3012AA9606000256F6 /* SectionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SectionBackground.png; path = Images/Light/SectionBackground.png; sourceTree = "<group>"; };
 		D7C74C3112AA9606000256F6 /* SectionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SectionBackground@2x.png"; path = "Images/Light/SectionBackground@2x.png"; sourceTree = "<group>"; };
 		D7D23DA2128CE9A500C23711 /* GMRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAlertView.h; sourceTree = "<group>"; };
@@ -1387,6 +1390,8 @@
 				D7D6B52D12A32094004FD6F6 /* UIButton+GMRButtonTypes.m */,
 				D7B507E412A4D096005F2413 /* ABTableViewCell.h */,
 				D7B507E512A4D096005F2413 /* ABTableViewCell.m */,
+				D7C52E2F12BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.h */,
+				D7C52E3012BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -2157,6 +2162,7 @@
 				D7ACF8FC12B5ACFB00E36C31 /* GMRChooseAlias.m in Sources */,
 				D79E57AF12B7C65C0050E284 /* GMRGameDetailController+Sharing.m in Sources */,
 				D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */,
+				D7C52E3112BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
