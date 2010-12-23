@@ -66,6 +66,11 @@ GMRFilter * kFilters = nil;
 				}
 				
 				self.platform.label.text = displayString;
+				
+				if(kFilters.game)
+				{
+					kFilters.game = nil;
+				}
 			}
 		}
 		
