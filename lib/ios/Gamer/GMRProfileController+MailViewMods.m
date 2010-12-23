@@ -13,6 +13,7 @@
 static UINavigationItem * composeViewNavigationItem;
 
 @implementation GMRProfileController(MailViewMods)
+/*
 -(void)modfiyMailComposeViewNavigationBar:(UINavigationBar *)sourceBar newBar:(UINavigationBar *)newBar title:(NSString *)barTitle
 {
 	composeViewNavigationItem = sourceBar.topItem;
@@ -69,4 +70,5 @@ static UINavigationItem * composeViewNavigationItem;
 	[target.target performSelector:target.action withObject:target];
 	
 }
+ */
 @end

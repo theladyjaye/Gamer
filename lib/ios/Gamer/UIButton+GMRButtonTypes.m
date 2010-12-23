@@ -44,6 +44,11 @@
 			rect = CGRectMake(0, 0, 59, 30);
 			break;
 			
+		case GMRButtonTypeFilters:
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonFilters" ofType:@"png"];
+			rect = CGRectMake(0, 0, 63, 30);
+			break;
+			
 		case GMRButtonTypeJoin:
 			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonJoin" ofType:@"png"];
 			rect = CGRectMake(0, 0, 53, 30);

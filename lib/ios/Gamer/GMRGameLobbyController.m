@@ -7,10 +7,14 @@
 //
 
 #import "GMRGameLobbyController.h"
+#import "UIButton+GMRButtonTypes.h"
 #import "GMRLabel.h"
+#import "GMRGlobals.h"
+#import "GMRClient.h"
 
 
 @implementation GMRGameLobbyController
+@synthesize filterCheveron;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -34,7 +38,59 @@
 	
 	[self.navigationController.view addSubview:navigationBarShadow];
 	[navigationBarShadow release];
+	
+	UIButton * filtersButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeFilters];
+	[filtersButton addTarget:self action:@selector(editLobbyFilters) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * filters = [[UIBarButtonItem alloc] initWithCustomView:filtersButton];
+	
+	[self.navigationItem setRightBarButtonItem:filters animated:YES];
+	[filters release];
+	
+	
+	filterCheveron.transform = CGAffineTransformMakeTranslation(-60,0);
+	[kGamerApi matchesScheduledForPlatform:GMRPlatformXBox360 
+						   andTimeInterval:GMRTimeInterval15Min 
+							  withCallback:^(BOOL ok, NSDictionary * response){
+							  }];
+	
 	[super viewDidLoad];
+}
+
+- (void)editLobbyFilters
+{
+	
+}
+
+- (IBAction)changeTimeFilter:(id)sender
+{
+	NSInteger tag = [sender tag];
+	
+	switch(tag)
+	{
+		case 15:
+			[self translateCheveronX:-60];
+			break;
+		
+		case 30:
+			[self translateCheveronX:0];
+			break;
+		
+		case 60:
+			[self translateCheveronX:60];
+			break;
+	}
+}
+
+- (void)translateCheveronX:(CGFloat)tx
+{
+	[UIView animateWithDuration:0.2 
+						  delay:0.0 
+						options:UIViewAnimationCurveEaseOut 
+					 animations:^{
+						filterCheveron.transform = CGAffineTransformMakeTranslation(tx, 0); 
+					 }
+					 completion:NULL];
 }
 
 
@@ -57,10 +113,12 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+	self.filterCheveron = nil;
 }
 
 
 - (void)dealloc {
+	self.filterCheveron = nil;
     [super dealloc];
 }
 

@@ -186,6 +186,10 @@
 		D7ACF8FD12B5ACFB00E36C31 /* GMRChooseAlias.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7ACF8FB12B5ACFB00E36C31 /* GMRChooseAlias.xib */; };
 		D7ACFA2412B5E07600E36C31 /* BackgroundAliasMenuPeople.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */; };
 		D7ACFA2512B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */; };
+		D7AF658B12C276BD00C7ED47 /* BackgroundFilterBar.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF658712C276BD00C7ED47 /* BackgroundFilterBar.png */; };
+		D7AF658C12C276BD00C7ED47 /* BackgroundFilterBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF658812C276BD00C7ED47 /* BackgroundFilterBar@2x.png */; };
+		D7AF658D12C276BD00C7ED47 /* FilterSelectionArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF658912C276BD00C7ED47 /* FilterSelectionArrow.png */; };
+		D7AF658E12C276BD00C7ED47 /* FilterSelectionArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7AF658A12C276BD00C7ED47 /* FilterSelectionArrow@2x.png */; };
 		D7AFF525128A693200CF1A07 /* NSDate+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */; };
 		D7B41DFC1287AAE0005BD0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFA1287AAE0005BD0B4 /* Default.png */; };
 		D7B41DFD1287AAE0005BD0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B41DFB1287AAE0005BD0B4 /* Default@2x.png */; };
@@ -341,6 +345,8 @@
 		D7DDD7BA127FD49100C29265 /* GMRClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */; };
 		D7DDD810127FDB4A00C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D7DDD81D127FDBC800C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
+		D7E1706912C3B88400F6E060 /* ButtonFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E1706712C3B88400F6E060 /* ButtonFilters.png */; };
+		D7E1706A12C3B88400F6E060 /* ButtonFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */; };
 		D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAD84128A11BF0022AF4E /* OverviewController.m */; };
 		D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7EEAD85128A11BF0022AF4E /* OverviewController.xib */; };
 		D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */; };
@@ -619,6 +625,10 @@
 		D7ACF8FB12B5ACFB00E36C31 /* GMRChooseAlias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseAlias.xib; sourceTree = "<group>"; };
 		D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAliasMenuPeople.png; path = Images/Light/BackgroundAliasMenuPeople.png; sourceTree = "<group>"; };
 		D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundAliasMenuPeople@2x.png"; path = "Images/Light/BackgroundAliasMenuPeople@2x.png"; sourceTree = "<group>"; };
+		D7AF658712C276BD00C7ED47 /* BackgroundFilterBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundFilterBar.png; path = Images/Light/BackgroundFilterBar.png; sourceTree = "<group>"; };
+		D7AF658812C276BD00C7ED47 /* BackgroundFilterBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundFilterBar@2x.png"; path = "Images/Light/BackgroundFilterBar@2x.png"; sourceTree = "<group>"; };
+		D7AF658912C276BD00C7ED47 /* FilterSelectionArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FilterSelectionArrow.png; path = Images/Light/FilterSelectionArrow.png; sourceTree = "<group>"; };
+		D7AF658A12C276BD00C7ED47 /* FilterSelectionArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "FilterSelectionArrow@2x.png"; path = "Images/Light/FilterSelectionArrow@2x.png"; sourceTree = "<group>"; };
 		D7AFF523128A693200CF1A07 /* NSDate+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JSON.h"; sourceTree = "<group>"; };
 		D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JSON.m"; sourceTree = "<group>"; };
 		D7B41DFA1287AAE0005BD0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -774,6 +784,8 @@
 		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
 		D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRClient.m; sourceTree = "<group>"; };
+		D7E1706712C3B88400F6E060 /* ButtonFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonFilters.png; path = Images/Light/ButtonFilters.png; sourceTree = "<group>"; };
+		D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonFilters@2x.png"; path = "Images/Light/ButtonFilters@2x.png"; sourceTree = "<group>"; };
 		D7EEAD83128A11BF0022AF4E /* OverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewController.h; sourceTree = "<group>"; };
 		D7EEAD84128A11BF0022AF4E /* OverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewController.m; sourceTree = "<group>"; };
 		D7EEAD85128A11BF0022AF4E /* OverviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewController.xib; sourceTree = "<group>"; };
@@ -984,6 +996,12 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D7E1706712C3B88400F6E060 /* ButtonFilters.png */,
+				D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */,
+				D7AF658712C276BD00C7ED47 /* BackgroundFilterBar.png */,
+				D7AF658812C276BD00C7ED47 /* BackgroundFilterBar@2x.png */,
+				D7AF658912C276BD00C7ED47 /* FilterSelectionArrow.png */,
+				D7AF658A12C276BD00C7ED47 /* FilterSelectionArrow@2x.png */,
 				D7ACFA2212B5E07600E36C31 /* BackgroundAliasMenuPeople.png */,
 				D7ACFA2312B5E07600E36C31 /* BackgroundAliasMenuPeople@2x.png */,
 				D78EA53012B492F200D78651 /* ButtonSend.png */,
@@ -2056,6 +2074,12 @@
 				D78F3B5412BA63A200014188 /* 116-controller.png in Resources */,
 				D78F3B5512BA63A200014188 /* 116-controller@2x.png in Resources */,
 				D78F3B5E12BA640D00014188 /* GMRGameLobbyController.xib in Resources */,
+				D7AF658B12C276BD00C7ED47 /* BackgroundFilterBar.png in Resources */,
+				D7AF658C12C276BD00C7ED47 /* BackgroundFilterBar@2x.png in Resources */,
+				D7AF658D12C276BD00C7ED47 /* FilterSelectionArrow.png in Resources */,
+				D7AF658E12C276BD00C7ED47 /* FilterSelectionArrow@2x.png in Resources */,
+				D7E1706912C3B88400F6E060 /* ButtonFilters.png in Resources */,
+				D7E1706A12C3B88400F6E060 /* ButtonFilters@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,10 @@
 #import "GMRViewController.h"
 
 @interface GMRGameLobbyController : GMRViewController {
-
+	UIImageView * filterCheveron;
 }
-
+@property(nonatomic, retain)IBOutlet UIImageView * filterCheveron;
+- (IBAction)changeTimeFilter:(id)sender;
+- (void)translateCheveronX:(CGFloat)tx;
+- (void)editLobbyFilters;
 @end

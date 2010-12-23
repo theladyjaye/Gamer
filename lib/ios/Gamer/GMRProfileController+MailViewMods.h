@@ -10,7 +10,9 @@
 #import "GMRProfileController.h"
 
 @interface GMRProfileController(MailViewMods)
+/*
 - (void)modfiyMailComposeViewNavigationBar:(UINavigationBar *)sourceBar newBar:(UINavigationBar *)newBar title:(NSString *)barTitle;
 - (void)sendProxy;
 - (void)cancelProxy;
+ */
 @end

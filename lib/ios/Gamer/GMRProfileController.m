@@ -10,6 +10,7 @@
 #import "GMRProfileController.h"
 #import "GMRProfileController+AliasTable.h"
 #import "GMRProfileController+MailViewMods.h"
+#import "MFMailComposeViewController+GMRComposeViewStyle.h"
 #import "GMRMainController.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
@@ -155,7 +156,18 @@
 {
 	if([MFMailComposeViewController canSendMail])
 	{
-		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		NSArray * recipients = nil;
+		
+		if(email)
+			recipients = [NSArray arrayWithObject:email];
+		
+		MFMailComposeViewController * mailViewController = [MFMailComposeViewController composeViewWithTitle:messageTitle 
+																									    body:messageBody 
+																								  recipients:recipients];
+		mailViewController.mailComposeDelegate = self;
+		[self presentModalViewController:mailViewController animated:YES];
+		
+		/*MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
 		mailViewController.mailComposeDelegate = self;
 		
 		// Optional Configuration Parameters to make life easier for the user
@@ -194,7 +206,7 @@
 		
 		[styledBar release];
 		[navigationBarShadow release];
-		[mailViewController release];
+		[mailViewController release];*/
 	}
 	else 
 	{
