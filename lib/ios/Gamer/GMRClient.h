@@ -25,6 +25,7 @@
 + (NSString *)stringForPlatform:(GMRPlatform)platform;
 + (GMRPlatform)platformForString:(NSString *)string;
 + (NSString *)displayNameForPlatform:(GMRPlatform)platform;
++ (NSString *)formalDisplayNameForPlatform:(GMRPlatform)platform;
 
 
 - (GMRClient *)initWithKey:(NSString *)key andName:(NSString *)name;

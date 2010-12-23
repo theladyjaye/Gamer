@@ -221,34 +221,7 @@ GMRAlias * kCreateAliasProgress;
 		{
 			if([[change objectForKey:NSKeyValueChangeNewKey] intValue] != [[change objectForKey:NSKeyValueChangeOldKey] intValue])
 			{
-				NSString * displayString;
-				
-				switch (kCreateAliasProgress.platform) 
-				{
-					case GMRPlatformBattleNet:
-						displayString = @"BattleNet";
-						break;
-						
-					case GMRPlatformPlaystation2:
-						displayString = @"Playstation 2";
-						break;
-						
-					case GMRPlatformPlaystation3:
-						displayString = @"Playstation 3";
-						break;
-						
-					case GMRPlatformSteam:
-						displayString = @"Steam";
-						break;
-						
-					case GMRPlatformWii:
-						displayString = @"Wii";
-						break;
-						
-					case GMRPlatformXBox360:
-						displayString = @"Xbox 360";
-						break;
-				}
+				NSString * displayString = [GMRClient formalDisplayNameForPlatform:kCreateAliasProgress.platform];
 				
 				if(self.platform.selected == NO)
 				{

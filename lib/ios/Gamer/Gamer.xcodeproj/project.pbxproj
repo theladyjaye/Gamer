@@ -347,6 +347,16 @@
 		D7DDD81D127FDBC800C29265 /* libGamer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libGamer.a */; };
 		D7E1706912C3B88400F6E060 /* ButtonFilters.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E1706712C3B88400F6E060 /* ButtonFilters.png */; };
 		D7E1706A12C3B88400F6E060 /* ButtonFilters@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */; };
+		D7E1708512C3D10000F6E060 /* GMRGameLobbyController+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1708412C3D10000F6E060 /* GMRGameLobbyController+TableView.m */; };
+		D7E1709112C3D39400F6E060 /* GMRLobbyFiltersController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1708F12C3D39400F6E060 /* GMRLobbyFiltersController.m */; };
+		D7E1709212C3D39400F6E060 /* GMRLobbyFiltersController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E1709012C3D39400F6E060 /* GMRLobbyFiltersController.xib */; };
+		D7E170BC12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E170BB12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.m */; };
+		D7E170C112C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E170C012C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.m */; };
+		D7E170D912C3DB0200F6E060 /* GMRFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E170D812C3DB0200F6E060 /* GMRFilter.m */; };
+		D7E1713D12C3E58600F6E060 /* GMRChooseGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1713B12C3E58600F6E060 /* GMRChooseGame.m */; };
+		D7E1713E12C3E58600F6E060 /* GMRChooseGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7E1713C12C3E58600F6E060 /* GMRChooseGame.xib */; };
+		D7E1714112C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1714012C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m */; };
+		D7E1716912C3E99D00F6E060 /* GMRChooseGame+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */; };
 		D7EEAD86128A11BF0022AF4E /* OverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAD84128A11BF0022AF4E /* OverviewController.m */; };
 		D7EEAD87128A11BF0022AF4E /* OverviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7EEAD85128A11BF0022AF4E /* OverviewController.xib */; };
 		D7EEAE56128A20E90022AF4E /* GMRScheduledMatchesForUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D7EEAE55128A20E90022AF4E /* GMRScheduledMatchesForUser.m */; };
@@ -786,6 +796,25 @@
 		D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRClient.m; sourceTree = "<group>"; };
 		D7E1706712C3B88400F6E060 /* ButtonFilters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonFilters.png; path = Images/Light/ButtonFilters.png; sourceTree = "<group>"; };
 		D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonFilters@2x.png"; path = "Images/Light/ButtonFilters@2x.png"; sourceTree = "<group>"; };
+		D7E1707A12C3CFD300F6E060 /* GMRGameLobbyGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameLobbyGlobals.h; sourceTree = "<group>"; };
+		D7E1708312C3D10000F6E060 /* GMRGameLobbyController+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameLobbyController+TableView.h"; sourceTree = "<group>"; };
+		D7E1708412C3D10000F6E060 /* GMRGameLobbyController+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRGameLobbyController+TableView.m"; sourceTree = "<group>"; };
+		D7E1708E12C3D39400F6E060 /* GMRLobbyFiltersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRLobbyFiltersController.h; sourceTree = "<group>"; };
+		D7E1708F12C3D39400F6E060 /* GMRLobbyFiltersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRLobbyFiltersController.m; sourceTree = "<group>"; };
+		D7E1709012C3D39400F6E060 /* GMRLobbyFiltersController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRLobbyFiltersController.xib; sourceTree = "<group>"; };
+		D7E170BA12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRLobbyFiltersChoosePlatform.h; sourceTree = "<group>"; };
+		D7E170BB12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRLobbyFiltersChoosePlatform.m; sourceTree = "<group>"; };
+		D7E170BF12C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRLobbyFiltersController+Navigation.h"; sourceTree = "<group>"; };
+		D7E170C012C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRLobbyFiltersController+Navigation.m"; sourceTree = "<group>"; };
+		D7E170D712C3DB0200F6E060 /* GMRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRFilter.h; sourceTree = "<group>"; };
+		D7E170D812C3DB0200F6E060 /* GMRFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRFilter.m; sourceTree = "<group>"; };
+		D7E1713A12C3E58600F6E060 /* GMRChooseGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseGame.h; sourceTree = "<group>"; };
+		D7E1713B12C3E58600F6E060 /* GMRChooseGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseGame.m; sourceTree = "<group>"; };
+		D7E1713C12C3E58600F6E060 /* GMRChooseGame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseGame.xib; sourceTree = "<group>"; };
+		D7E1713F12C3E65E00F6E060 /* GMRChooseGame+SearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRChooseGame+SearchTableView.h"; sourceTree = "<group>"; };
+		D7E1714012C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRChooseGame+SearchTableView.m"; sourceTree = "<group>"; };
+		D7E1716712C3E99D00F6E060 /* GMRChooseGame+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRChooseGame+TableView.h"; sourceTree = "<group>"; };
+		D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GMRChooseGame+TableView.m"; sourceTree = "<group>"; };
 		D7EEAD83128A11BF0022AF4E /* OverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewController.h; sourceTree = "<group>"; };
 		D7EEAD84128A11BF0022AF4E /* OverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewController.m; sourceTree = "<group>"; };
 		D7EEAD85128A11BF0022AF4E /* OverviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewController.xib; sourceTree = "<group>"; };
@@ -1312,9 +1341,13 @@
 		D78F3B5912BA63EF00014188 /* GameLobby */ = {
 			isa = PBXGroup;
 			children = (
+				D7E1708C12C3D37000F6E060 /* Filters */,
 				D78F3B5A12BA640D00014188 /* GMRGameLobbyController.h */,
 				D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */,
 				D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */,
+				D7E1708312C3D10000F6E060 /* GMRGameLobbyController+TableView.h */,
+				D7E1708412C3D10000F6E060 /* GMRGameLobbyController+TableView.m */,
+				D7E1707A12C3CFD300F6E060 /* GMRGameLobbyGlobals.h */,
 			);
 			name = GameLobby;
 			sourceTree = "<group>";
@@ -1644,6 +1677,51 @@
 			name = ASIHttp;
 			sourceTree = "<group>";
 		};
+		D7E1708C12C3D37000F6E060 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				D7E1713912C3E4F000F6E060 /* ChooseGame */,
+				D7E170B912C3D6D000F6E060 /* ChoosePlatform */,
+				D7E1708D12C3D37600F6E060 /* FiltersMainMenu */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		D7E1708D12C3D37600F6E060 /* FiltersMainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D7E1708E12C3D39400F6E060 /* GMRLobbyFiltersController.h */,
+				D7E1708F12C3D39400F6E060 /* GMRLobbyFiltersController.m */,
+				D7E1709012C3D39400F6E060 /* GMRLobbyFiltersController.xib */,
+				D7E170BF12C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.h */,
+				D7E170C012C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.m */,
+			);
+			name = FiltersMainMenu;
+			sourceTree = "<group>";
+		};
+		D7E170B912C3D6D000F6E060 /* ChoosePlatform */ = {
+			isa = PBXGroup;
+			children = (
+				D7E170BA12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.h */,
+				D7E170BB12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.m */,
+			);
+			name = ChoosePlatform;
+			sourceTree = "<group>";
+		};
+		D7E1713912C3E4F000F6E060 /* ChooseGame */ = {
+			isa = PBXGroup;
+			children = (
+				D7E1713A12C3E58600F6E060 /* GMRChooseGame.h */,
+				D7E1713B12C3E58600F6E060 /* GMRChooseGame.m */,
+				D7E1713C12C3E58600F6E060 /* GMRChooseGame.xib */,
+				D7E1713F12C3E65E00F6E060 /* GMRChooseGame+SearchTableView.h */,
+				D7E1714012C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m */,
+				D7E1716712C3E99D00F6E060 /* GMRChooseGame+TableView.h */,
+				D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */,
+			);
+			name = ChooseGame;
+			sourceTree = "<group>";
+		};
 		D7EEAD82128A11AF0022AF4E /* Overview */ = {
 			isa = PBXGroup;
 			children = (
@@ -1668,6 +1746,8 @@
 				D74237EA129F6A4F00EA0272 /* GMRGame.m */,
 				D78EA0B112B3D42200D78651 /* GMRAlias.h */,
 				D78EA0B212B3D42200D78651 /* GMRAlias.m */,
+				D7E170D712C3DB0200F6E060 /* GMRFilter.h */,
+				D7E170D812C3DB0200F6E060 /* GMRFilter.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -2080,6 +2160,8 @@
 				D7AF658E12C276BD00C7ED47 /* FilterSelectionArrow@2x.png in Resources */,
 				D7E1706912C3B88400F6E060 /* ButtonFilters.png in Resources */,
 				D7E1706A12C3B88400F6E060 /* ButtonFilters@2x.png in Resources */,
+				D7E1709212C3D39400F6E060 /* GMRLobbyFiltersController.xib in Resources */,
+				D7E1713E12C3E58600F6E060 /* GMRChooseGame.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2187,6 +2269,14 @@
 				D79E57AF12B7C65C0050E284 /* GMRGameDetailController+Sharing.m in Sources */,
 				D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */,
 				D7C52E3112BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m in Sources */,
+				D7E1708512C3D10000F6E060 /* GMRGameLobbyController+TableView.m in Sources */,
+				D7E1709112C3D39400F6E060 /* GMRLobbyFiltersController.m in Sources */,
+				D7E170BC12C3D6EF00F6E060 /* GMRLobbyFiltersChoosePlatform.m in Sources */,
+				D7E170C112C3D7A500F6E060 /* GMRLobbyFiltersController+Navigation.m in Sources */,
+				D7E170D912C3DB0200F6E060 /* GMRFilter.m in Sources */,
+				D7E1713D12C3E58600F6E060 /* GMRChooseGame.m in Sources */,
+				D7E1714112C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m in Sources */,
+				D7E1716912C3E99D00F6E060 /* GMRChooseGame+TableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

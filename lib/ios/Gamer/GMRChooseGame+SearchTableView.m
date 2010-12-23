@@ -1,27 +1,27 @@
 //
-//  GMRChooseGameAndMode+SearchTableView.m
+//  GMRChooseGame+SearchTableView.m
 //  Gamer
 //
-//  Created by Adam Venturella on 11/25/10.
+//  Created by Adam Venturella on 12/23/10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
 #include <dispatch/dispatch.h>
-
-#import "GMRChooseGameAndMode+SearchTableView.h"
-#import "GMRPlayerListCell.h"
+#import "GMRChooseGame+SearchTableView.h"
+#import "GMRGameLobbyGlobals.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
-#import "GMRCreateGameGlobals.h"
-#import "GMRTypes.h"
-#import "GMRMatch.h"
-#import "GMRGame.h"
 #import "GMRGameListCell.h"
+#import "GMRGame.h"
+#import "GMRFilter.h"
 
-@implementation GMRChooseGameAndMode(SearchTableView)
-
+@implementation GMRChooseGame(SearchTableView)
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
+	[games release];
+	games = nil;
+	[controller.searchResultsTableView reloadData];
+	
 	[UIView animateWithDuration:0.25 
 					 animations:^{
 						 navigationBarShadow.transform = CGAffineTransformMakeTranslation(0.0, -64.0);
@@ -57,13 +57,15 @@
 {
 	if([searchString length] > 2)
 	{
-		[kGamerApi searchPlatform:kCreateMatchProgress.platform 
+		[kGamerApi searchPlatform:kFilters.platform 
 						  forGame:searchString
 					 withCallback:^(BOOL ok, NSDictionary* response){
 						 if(ok)
-						 {
+						 { 
 							 if([[response objectForKey:@"games"] count] > 0)
 							 {
+								 //NSLog(@"%@", response);
+								 
 								 dispatch_async(dispatch_get_main_queue(), ^{ 
 									 
 									 if(games)
@@ -81,30 +83,31 @@
 							 }
 							 else 
 							 {
-								 dispatch_async(dispatch_get_main_queue(), ^{ 
-									 if(games)
-									 {
-										 [games release];
-										 games = nil;
-										 [controller.searchResultsTableView reloadData];
-									 }
-								 });
+								dispatch_async(dispatch_get_main_queue(), ^{ 
+									if(games)
+									{
+										[games release];
+										games = nil;
+										[controller.searchResultsTableView reloadData];
+									}
+								});
 							 }
-
+							 
 						 }
 					 }];
-	
+		
 		return YES;
 	}
+	
 	
 	if(games)
 	{
 		[games release];
 		games = nil;
-		
+	
 		[controller.searchResultsTableView reloadData]; 
 	}
-
+	
 	return NO;
 }
 
@@ -140,12 +143,12 @@
 
 - (void)searchResultsTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
+	
 	GMRGame * selectedGame = [GMRGame gameWithDicitonary:[games objectAtIndex:indexPath.row]];
 	self.gameLabel.text = selectedGame.label;
+	kFilters.game = selectedGame;
 	
-	kCreateMatchProgress.game    = selectedGame;
 	
 	[self.searchDisplayController setActive:NO animated:YES];
 }
-
 @end

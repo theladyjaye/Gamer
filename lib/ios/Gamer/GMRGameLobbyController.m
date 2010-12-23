@@ -8,30 +8,22 @@
 
 #import "GMRGameLobbyController.h"
 #import "UIButton+GMRButtonTypes.h"
+#import "GMRGameLobbyController+TableView.h"
+#import "GMRGameLobbyGlobals.h"
+#import "GMRLobbyFiltersController.h"
 #import "GMRLabel.h"
-#import "GMRGlobals.h"
-#import "GMRClient.h"
+#import "GMRTypes.h"
+#import "GMRFilter.h"
 
 
 @implementation GMRGameLobbyController
 @synthesize filterCheveron;
 
-// The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
-
 
 - (void)viewDidLoad 
 {
-    self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Lobby"];
+	
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Lobby"];
 	
 	UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
 	navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
@@ -44,22 +36,38 @@
 	
 	UIBarButtonItem * filters = [[UIBarButtonItem alloc] initWithCustomView:filtersButton];
 	
-	[self.navigationItem setRightBarButtonItem:filters animated:YES];
+	[self.navigationItem setRightBarButtonItem:filters animated:NO];
 	[filters release];
 	
 	
 	filterCheveron.transform = CGAffineTransformMakeTranslation(-60,0);
-	[kGamerApi matchesScheduledForPlatform:GMRPlatformXBox360 
-						   andTimeInterval:GMRTimeInterval15Min 
-							  withCallback:^(BOOL ok, NSDictionary * response){
-							  }];
+	
+	[self resultsTableRefresh];
+	
 	
 	[super viewDidLoad];
 }
 
 - (void)editLobbyFilters
 {
+	 GMRLobbyFiltersController * controller = [[GMRLobbyFiltersController alloc] initWithNibName:nil
+																						  bundle:nil];
 	
+	controller.owner = self;
+	
+	 UINavigationController * filterGames    = [[UINavigationController alloc] initWithRootViewController:controller];
+	 
+	 UIImageView * navigationBarShadow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NavigationBarBackgroundShadow.png"]];
+	 navigationBarShadow.frame         = CGRectMake(0, 64, 320.0, 9.0);
+	 
+	 [filterGames.view addSubview:navigationBarShadow];
+	 [navigationBarShadow release];
+	 
+	 
+	 [self presentModalViewController:filterGames 
+							 animated:YES];
+	 [filterGames release];
+	 [controller release];
 }
 
 - (IBAction)changeTimeFilter:(id)sender
@@ -119,7 +127,8 @@
 
 - (void)dealloc {
 	self.filterCheveron = nil;
-    [super dealloc];
+    
+	[super dealloc];
 }
 
 
