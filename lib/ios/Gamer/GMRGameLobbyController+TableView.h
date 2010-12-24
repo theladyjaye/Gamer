@@ -13,5 +13,7 @@
 {
 
 }
-- (void)resultsTableRefresh;
+- (void)resultsTableRefresh:(GMRFilter *)filter;
+- (void)processFilterResultsOnBackgroundThread:(NSDictionary *)response;
+- (void)noFilterResultsOnBackgroundThread;
 @end

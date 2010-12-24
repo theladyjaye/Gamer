@@ -11,6 +11,8 @@
 
 @interface GMRNoneView : UIView {
 	NSString * label;
+	BOOL showsArrow;
 }
+@property(nonatomic, assign) BOOL showsArrow;
 - (id)initWithLabel:(NSString *)value;
 @end

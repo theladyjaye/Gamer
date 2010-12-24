@@ -24,7 +24,7 @@ GMRFilter * kFilters = nil;
 - (void)viewDidLoad 
 {
 	UIButton * doneButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeDone];
-	[doneButton addTarget:self action:@selector(applyFilters) forControlEvents:UIControlEventTouchUpInside];
+	[doneButton addTarget:self action:@selector(applyFilter) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem * done   = [[UIBarButtonItem alloc] initWithCustomView:doneButton];
 	
@@ -96,8 +96,9 @@ GMRFilter * kFilters = nil;
 	}
 }
 
-- (void)applyFilters
+- (void)applyFilter
 {
+	[self.owner performSelector:@selector(applyFilter:) withObject:kFilters];
 	[self dismissModalViewController];
 }
 

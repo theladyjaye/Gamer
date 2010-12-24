@@ -9,15 +9,15 @@
 #import "GMRGameLobbyController.h"
 #import "UIButton+GMRButtonTypes.h"
 #import "GMRGameLobbyController+TableView.h"
-#import "GMRGameLobbyGlobals.h"
 #import "GMRLobbyFiltersController.h"
 #import "GMRLabel.h"
 #import "GMRTypes.h"
 #import "GMRFilter.h"
+#import "GMRNoneView.h"
 
 
 @implementation GMRGameLobbyController
-@synthesize filterCheveron;
+@synthesize filterCheveron, currentFilter,matchesTable;
 
 
 - (void)viewDidLoad 
@@ -42,8 +42,10 @@
 	
 	filterCheveron.transform = CGAffineTransformMakeTranslation(-60,0);
 	
-	[self resultsTableRefresh];
 	
+	GMRFilter * filter = [[GMRFilter alloc] init];
+	[self applyFilter:filter];
+	[filter release];
 	
 	[super viewDidLoad];
 }
@@ -70,24 +72,69 @@
 	 [controller release];
 }
 
+- (void)applyFilter:(GMRFilter *)filter
+{
+	if(![[filter description] isEqualToString:[currentFilter description]])
+	{
+		[currentFilter release];
+		currentFilter = nil;
+		currentFilter = filter;
+		[filter retain];
+		
+		switch(filter.timeInterval)
+		{
+			case GMRTimeInterval15Min:
+				[self translateCheveronX:-60];
+				break;
+				
+			case GMRTimeInterval30Min:
+				[self translateCheveronX:0];
+				break;
+				
+			case GMRTimeIntervalHour:
+				[self translateCheveronX:60];
+				break;
+		}
+		
+		[self resultsTableRefresh:currentFilter];
+	}
+}
+
+
 - (IBAction)changeTimeFilter:(id)sender
 {
 	NSInteger tag = [sender tag];
+	GMRFilter * filter;
+	
+	if(currentFilter)
+	{
+		filter = [GMRFilter filterWithFilter:currentFilter];
+	}
+	else 
+	{
+		filter = [[[GMRFilter alloc] init] autorelease];
+	}
+
 	
 	switch(tag)
 	{
 		case 15:
+			filter.timeInterval = GMRTimeInterval15Min;
 			[self translateCheveronX:-60];
 			break;
 		
 		case 30:
 			[self translateCheveronX:0];
+			filter.timeInterval = GMRTimeInterval30Min;
 			break;
 		
 		case 60:
 			[self translateCheveronX:60];
+			filter.timeInterval = GMRTimeIntervalHour;
 			break;
 	}
+	
+	[self applyFilter:filter];
 }
 
 - (void)translateCheveronX:(CGFloat)tx
@@ -99,6 +146,20 @@
 						filterCheveron.transform = CGAffineTransformMakeTranslation(tx, 0); 
 					 }
 					 completion:NULL];
+}
+
+- (void)noMatchesScheduled
+{
+	if(!noneView)
+	{
+		noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
+		noneView.showsArrow = NO;
+		noneView.frame = (CGRect){{0.0, 33.0}, noneView.frame.size};
+		[self.view addSubview:noneView];
+		[noneView release];
+		
+		[self.matchesTable reloadData];
+	}
 }
 
 
@@ -122,12 +183,23 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	self.filterCheveron = nil;
+	self.matchesTable = nil;
 }
 
 
 - (void)dealloc {
 	self.filterCheveron = nil;
+	self.matchesTable = nil;
     
+	[matches release];
+	matches = nil;
+	
+	[currentFilter release];
+	currentFilter = nil;
+	
+	[noneView release];
+	noneView = nil;
+	
 	[super dealloc];
 }
 

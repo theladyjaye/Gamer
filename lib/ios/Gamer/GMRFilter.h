@@ -19,4 +19,5 @@
 @property(nonatomic, assign) GMRPlatform platform;
 @property(nonatomic, retain) GMRGame * game;
 
++ (GMRFilter *)filterWithFilter:(GMRFilter *)filter;
 @end

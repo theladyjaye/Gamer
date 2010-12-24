@@ -504,6 +504,9 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 	var now   = new Date();
 	var end;
 	
+	var viewName = null;
+	var viewOptions = null;
+	
 	now = new Date(now.getTime() - now.getMilliseconds());
 	
 	switch(timeframe)
@@ -525,8 +528,19 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 			return;
 			break;
 	}
+	
+	if(platform == "unknown" || platform == "all")
+	{
+		viewName = "matches-all-platforms-time"
+		viewOptions = {"include_docs":true, "startkey":now.toJSON(), "endkey":end.toJSON()}
+	}
+	else
+	{
+		viewName = "matches-platform-time";
+		viewOptions = {"include_docs":true, "startkey":[platform, now.toJSON()], "endkey":[platform, end.toJSON()]};
+	}
 		
-	db.view("application", "matches-platform-time", {"include_docs":true, "startkey":[platform, now.toJSON()], "endkey":[platform, end.toJSON()]}, function(error, data)
+	db.view("application", viewName, viewOptions, function(error, data)
 	{
 		if(error == null)
 		{

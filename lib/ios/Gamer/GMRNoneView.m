@@ -10,6 +10,7 @@
 
 
 @implementation GMRNoneView
+@synthesize showsArrow;
 
 - (id)initWithLabel:(NSString *)value
 {
@@ -24,7 +25,7 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code.
+        showsArrow = YES;
     }
     return self;
 }
@@ -61,9 +62,12 @@
 		lineBreakMode:UILineBreakModeClip 
 			alignment:UITextAlignmentCenter];
 	
-	NSString * path = [[NSBundle mainBundle] pathForResource:@"ArrowUp" ofType:@"png"];
-	UIImage * arrow = [UIImage imageWithContentsOfFile:path];
-	[arrow drawAtPoint:CGPointMake(287.0, 8.0)];
+	if(showsArrow)
+	{
+		NSString * path = [[NSBundle mainBundle] pathForResource:@"ArrowUp" ofType:@"png"];
+		UIImage * arrow = [UIImage imageWithContentsOfFile:path];
+		[arrow drawAtPoint:CGPointMake(287.0, 8.0)];
+	}
 	
 }
 

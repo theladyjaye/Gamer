@@ -18,6 +18,6 @@
 @property(nonatomic, retain) IBOutlet GMRMenuButton * game;
 @property(nonatomic, assign) UIViewController * owner;
 
-- (void)applyFilters;
+- (void)applyFilter;
 - (void)dismissModalViewController;
 @end
