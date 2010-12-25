@@ -17,6 +17,7 @@
 	NSMutableArray * matches;
 	UITableView * matchesTable;
 	GMRNoneView * noneView;
+	NSTimer * updateTimer;
 }
 @property(nonatomic, readonly) GMRFilter * currentFilter;
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
@@ -27,4 +28,7 @@
 - (void)editLobbyFilters;
 - (void)applyFilter:(GMRFilter *)filter;
 - (void)noMatchesScheduled;
+- (void)beginCellUpdates;
+- (void)endCellUpdates;
+- (void)updateCellsCountdown;
 @end

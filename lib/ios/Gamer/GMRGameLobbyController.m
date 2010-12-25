@@ -14,6 +14,7 @@
 #import "GMRTypes.h"
 #import "GMRFilter.h"
 #import "GMRNoneView.h"
+#import "GMRMatchListCell.h"
 
 
 @implementation GMRGameLobbyController
@@ -152,6 +153,8 @@
 {
 	if(!noneView)
 	{
+		[self endCellUpdates];
+		
 		noneView = [[GMRNoneView alloc] initWithLabel:@"No Scheduled Games."];
 		noneView.showsArrow = NO;
 		noneView.frame = (CGRect){{0.0, 33.0}, noneView.frame.size};
@@ -161,6 +164,61 @@
 		[self.matchesTable reloadData];
 	}
 }
+
+- (void)endCellUpdates
+{
+	NSLog(@"killing timer");
+	[updateTimer invalidate];
+	updateTimer = nil;
+}
+
+- (void)beginCellUpdates
+{
+	// if more than 1 timer is applied this viewcontroller will not be able to be released. 
+	if(!updateTimer)
+	{
+		NSLog(@"Wants Timer");
+		if([matchesTable numberOfRowsInSection:0] > 0)
+		{ 
+			NSLog(@"Wants Got"); // TODO: need to test adding a cell and see if a timer gets scheduled after add
+			[self updateCellsCountdown];
+			updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 
+														   target:self 
+														 selector:@selector(updateCellsCountdown) 
+														 userInfo:nil 
+														  repeats:YES];
+		}
+	}
+}
+
+- (void)updateCellsCountdown
+{
+	NSArray * cells = [matchesTable visibleCells];
+	
+	if([cells count] > 0)
+	{
+		for(GMRMatchListCell * cell in cells)
+		{
+			[cell setNeedsDisplay];
+		}
+		
+		[matchesTable setNeedsDisplay];
+	}
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[self endCellUpdates];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[self updateCellsCountdown];
+	[self beginCellUpdates];
+	[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+}
+
+
 
 
 /*

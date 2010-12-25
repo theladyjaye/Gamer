@@ -18,7 +18,7 @@
 GMRFilter * kFilters = nil;
 
 @implementation GMRLobbyFiltersController
-@synthesize owner, platform, game;
+@synthesize owner, platform, game, timeInterval;
 
 
 - (void)viewDidLoad 
@@ -44,6 +44,11 @@ GMRFilter * kFilters = nil;
 	
 	[kFilters addObserver:self 
 			   forKeyPath:@"game" 
+				  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+				  context:nil];
+	
+	[kFilters addObserver:self 
+			   forKeyPath:@"timeInterval" 
 				  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 				  context:nil];
 	
@@ -93,6 +98,36 @@ GMRFilter * kFilters = nil;
 				}
 			}
 		}
+		else if([keyPath isEqualToString:@"timeInterval"])
+		{
+			if([change objectForKey:NSKeyValueChangeNewKey] != [change objectForKey:NSKeyValueChangeOldKey])
+			{
+				NSString * displayString;
+				
+				switch(kFilters.timeInterval)
+				{
+					case GMRTimeInterval15Min:
+						displayString = @"Starting Within 15 min";
+						break;
+						
+					case GMRTimeInterval30Min:
+						displayString = @"Starting Within 30 min";
+						break;
+						
+					case GMRTimeIntervalHour:
+						displayString = @"Starting Within 1 hour";
+						break;
+				}
+				
+				if(self.timeInterval.selected == NO)
+				{
+					self.timeInterval.selected = YES;
+				}
+				
+				self.timeInterval.label.text = displayString;
+				
+			}
+		}
 	}
 }
 
@@ -127,6 +162,7 @@ GMRFilter * kFilters = nil;
     [super viewDidUnload];
 	self.platform = nil;
 	self.game = nil;
+	self.timeInterval = nil;
 	
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -137,13 +173,16 @@ GMRFilter * kFilters = nil;
 	
 	self.platform = nil;
 	self.game = nil;
+	self.timeInterval = nil;
 	
 	[kFilters removeObserver:self 
 				  forKeyPath:@"platform"];
 	
+	[kFilters removeObserver:self 
+				  forKeyPath:@"game"];
 	
 	[kFilters removeObserver:self 
-				forKeyPath:@"game"];
+				  forKeyPath:@"timeInterval"];
 	
 	[kFilters release];
 	kFilters = nil;

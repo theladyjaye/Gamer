@@ -8,6 +8,7 @@
 
 #import "GMRLobbyFiltersController+Navigation.h"
 #import "GMRLobbyFiltersChoosePlatform.h"
+#import "GMRChooseTimeInterval.h"
 #import "GMRGameLobbyGlobals.h"
 #import "GMRFilter.h"
 #import "GMRChooseGame.h"
@@ -28,6 +29,10 @@
 		case 1: // Game
 			[self selectGame];
 			break;			
+			
+		case 2: // Starting Within
+			[self selectTimeInterval];
+			break;			
 	}
 }
 
@@ -35,7 +40,15 @@
 - (void)selectPlatform
 {
 	GMRLobbyFiltersChoosePlatform * controller = [[GMRLobbyFiltersChoosePlatform alloc] initWithNibName:@"GMRChoosePlatformController" 
-																				   bundle:nil];
+																								 bundle:nil];
+	[self.navigationController pushViewController:controller animated:YES];
+	[controller release];
+}
+
+- (void)selectTimeInterval
+{
+	GMRChooseTimeInterval * controller = [[GMRChooseTimeInterval alloc] initWithNibName:nil 
+																				 bundle:nil];
 	[self.navigationController pushViewController:controller animated:YES];
 	[controller release];
 }
@@ -45,7 +58,8 @@
 	if(kFilters.platform != GMRPlatformUnknown)
 	{
 		GMRChooseGame * controller = [[GMRChooseGame alloc] initWithNibName:nil 
-																				   bundle:nil];
+																	 bundle:nil];
+		
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 	}

@@ -13,4 +13,5 @@
 - (IBAction)selectOption:(id)sender;
 - (void)selectPlatform;
 - (void)selectGame;
+- (void)selectTimeInterval;
 @end

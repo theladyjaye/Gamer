@@ -141,6 +141,8 @@
 
 - (void)dealloc {
 	
+	selectedButton = nil;
+	
 	self.platformBattleNet = nil;
 	self.platformPlaystation2 = nil;
 	self.platformPlaystation3 = nil;

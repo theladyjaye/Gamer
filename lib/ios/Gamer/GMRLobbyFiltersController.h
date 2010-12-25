@@ -13,9 +13,11 @@
 	UIViewController * owner;
 	GMRMenuButton * platform;
 	GMRMenuButton * game;
+	GMRMenuButton * timeInterval;
 }
 @property(nonatomic, retain) IBOutlet GMRMenuButton * platform;
 @property(nonatomic, retain) IBOutlet GMRMenuButton * game;
+@property(nonatomic, retain) IBOutlet GMRMenuButton * timeInterval;
 @property(nonatomic, assign) UIViewController * owner;
 
 - (void)applyFilter;

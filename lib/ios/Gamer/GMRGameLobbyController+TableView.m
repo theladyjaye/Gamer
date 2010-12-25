@@ -93,9 +93,11 @@
 			{
 				[noneView removeFromSuperview];
 				noneView = nil;
+				[self beginCellUpdates];
 			}
 			
 			[matchesTable reloadData];
+			[self beginCellUpdates];
 		});
 	}
 	else 

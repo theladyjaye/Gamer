@@ -146,6 +146,8 @@
 		D7835688128C93B000E19528 /* GMRPasswordFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = D7835687128C93B000E19528 /* GMRPasswordFormatter.m */; };
 		D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78356B7128C9FB500E19528 /* AudioToolbox.framework */; };
 		D7840F3412B129860049E3F4 /* UIApplication+GamePop.m in Sources */ = {isa = PBXBuildFile; fileRef = D7840F3312B129860049E3F4 /* UIApplication+GamePop.m */; };
+		D7886D4712C65ECA001F2077 /* GMRChooseTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = D7886D4512C65ECA001F2077 /* GMRChooseTimeInterval.m */; };
+		D7886D4812C65ECA001F2077 /* GMRChooseTimeInterval.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7886D4612C65ECA001F2077 /* GMRChooseTimeInterval.xib */; };
 		D78CDC0D12B31D4200D6F3E2 /* ActivityViewPattern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC0C12B31D4200D6F3E2 /* ActivityViewPattern@2x.png */; };
 		D78CDC1212B31D6B00D6F3E2 /* GMRProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */; };
 		D78CDC1312B31D6B00D6F3E2 /* GMRProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78CDC1112B31D6B00D6F3E2 /* GMRProfileController.xib */; };
@@ -581,6 +583,9 @@
 		D78356B7128C9FB500E19528 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D7840F3212B129860049E3F4 /* UIApplication+GamePop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GamePop.h"; sourceTree = "<group>"; };
 		D7840F3312B129860049E3F4 /* UIApplication+GamePop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GamePop.m"; sourceTree = "<group>"; };
+		D7886D4412C65ECA001F2077 /* GMRChooseTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChooseTimeInterval.h; sourceTree = "<group>"; };
+		D7886D4512C65ECA001F2077 /* GMRChooseTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRChooseTimeInterval.m; sourceTree = "<group>"; };
+		D7886D4612C65ECA001F2077 /* GMRChooseTimeInterval.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRChooseTimeInterval.xib; sourceTree = "<group>"; };
 		D78CDC0C12B31D4200D6F3E2 /* ActivityViewPattern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ActivityViewPattern@2x.png"; path = "Images/Light/ActivityViewPattern@2x.png"; sourceTree = "<group>"; };
 		D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRProfileController.h; sourceTree = "<group>"; };
 		D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRProfileController.m; sourceTree = "<group>"; };
@@ -1301,6 +1306,16 @@
 			name = Formatters;
 			sourceTree = "<group>";
 		};
+		D7886D4312C65EAF001F2077 /* ChooseTimeInterval */ = {
+			isa = PBXGroup;
+			children = (
+				D7886D4412C65ECA001F2077 /* GMRChooseTimeInterval.h */,
+				D7886D4512C65ECA001F2077 /* GMRChooseTimeInterval.m */,
+				D7886D4612C65ECA001F2077 /* GMRChooseTimeInterval.xib */,
+			);
+			name = ChooseTimeInterval;
+			sourceTree = "<group>";
+		};
 		D78CDC0E12B31D4F00D6F3E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1680,6 +1695,7 @@
 		D7E1708C12C3D37000F6E060 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
+				D7886D4312C65EAF001F2077 /* ChooseTimeInterval */,
 				D7E1713912C3E4F000F6E060 /* ChooseGame */,
 				D7E170B912C3D6D000F6E060 /* ChoosePlatform */,
 				D7E1708D12C3D37600F6E060 /* FiltersMainMenu */,
@@ -2162,6 +2178,7 @@
 				D7E1706A12C3B88400F6E060 /* ButtonFilters@2x.png in Resources */,
 				D7E1709212C3D39400F6E060 /* GMRLobbyFiltersController.xib in Resources */,
 				D7E1713E12C3E58600F6E060 /* GMRChooseGame.xib in Resources */,
+				D7886D4812C65ECA001F2077 /* GMRChooseTimeInterval.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2277,6 +2294,7 @@
 				D7E1713D12C3E58600F6E060 /* GMRChooseGame.m in Sources */,
 				D7E1714112C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m in Sources */,
 				D7E1716912C3E99D00F6E060 /* GMRChooseGame+TableView.m in Sources */,
+				D7886D4712C65ECA001F2077 /* GMRChooseTimeInterval.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
