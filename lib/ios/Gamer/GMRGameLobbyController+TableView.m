@@ -162,7 +162,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithMatch:[matches objectAtIndex:indexPath.row]];
+	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithMatch:[matches objectAtIndex:indexPath.row] 
+																		   membership:GMRMatchMembershipUnknown];
 	detail.matchesDataSourceController = self;
 	[self.navigationController pushViewController:detail animated:YES];
 	[detail release];

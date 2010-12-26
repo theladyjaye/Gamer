@@ -20,4 +20,10 @@
 	alias.alias    = [dictionary valueForKey:@"alias"];	
 	return [alias autorelease];
 }
+
+- (void)dealloc
+{
+	self.alias = nil;
+	[super dealloc];
+}
 @end

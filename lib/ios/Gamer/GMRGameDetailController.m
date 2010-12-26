@@ -22,17 +22,20 @@
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
 #import "OverviewController.h"
+#import "GMRPlayer.h"
 
 @implementation GMRGameDetailController
 @synthesize playersTableView, playersForMatch, gameLabel, platformLabel, descriptionLabel, modeLabel, scheduleTimeLabel, howItWorksView, matchesDataSourceController;
 
--(id)initWithMatch:(GMRMatch *)value;
+-(id)initWithMatch:(GMRMatch *)value membership:(GMRMatchMembership)member
 {
 	self = [super initWithNibName:nil bundle:nil];
 	if(self)
 	{
 		match = value;
 		[match retain];
+		
+		membership = member;
 	}
 	
 	return self;
@@ -163,32 +166,8 @@
 					 } 
 					 completion:^(BOOL finished){
 						 
-						 NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-						 
-						 UIButton * actionButton;
-						 
-						 if([match.created_by isEqualToString:currentUser])
-						 {
-							 actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
-							 [actionButton addTarget:self action:@selector(cancelGame) forControlEvents:UIControlEventTouchUpInside];
-						 }
-						 else
-						 {
-							 actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeLeave];
-							 [actionButton addTarget:self action:@selector(leaveGame) forControlEvents:UIControlEventTouchUpInside];
-						 }
-						 
-						 
-						 UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeShare];
-						 [shareButton addTarget:self action:@selector(shareGame) forControlEvents:UIControlEventTouchUpInside];
-						 
-						 UIBarButtonItem * action = [[UIBarButtonItem alloc] initWithCustomView:actionButton];
-						 UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-						 UIBarButtonItem * share = [[UIBarButtonItem alloc] initWithCustomView:shareButton];
-						 
-						 NSArray * items = [NSArray arrayWithObjects:action, spacer, share, nil];
-						 
-						 [toolbar setItems:items animated:YES];
+						if(membership == GMRMatchMembershipMember)
+							[self setupToolbar];
 						 
 						howItWorksView.hidden = NO;
 						[UIView animateWithDuration:0.3
@@ -205,6 +184,59 @@
 																						   repeats:YES];
 										 }];
 					}];
+}
+
+- (void)setupToolbar
+{
+	NSString * currentUser = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+	
+	UIButton * actionButton;
+	
+	if([match.created_by isEqualToString:currentUser])
+	{
+		actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeCancel];
+		[actionButton addTarget:self action:@selector(cancelGame) forControlEvents:UIControlEventTouchUpInside];
+	}
+	else
+	{
+		// save us a loop if we can.
+		if(membership == GMRMatchMembershipMember)
+		{
+			actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeLeave];
+			[actionButton addTarget:self action:@selector(leaveGame) forControlEvents:UIControlEventTouchUpInside];
+		}
+		else 
+		{
+			for(GMRPlayer * player in self.playersForMatch)
+			{
+				if([player.username isEqualToString:currentUser])
+				{
+					actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeLeave];
+					[actionButton addTarget:self action:@selector(leaveGame) forControlEvents:UIControlEventTouchUpInside];
+					break;
+				}
+			}
+			
+			if(actionButton == nil)
+			{
+				actionButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeJoin];
+				[actionButton addTarget:self action:@selector(joinGame) forControlEvents:UIControlEventTouchUpInside];
+			}
+		}
+
+	}
+	
+	
+	UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeShare];
+	[shareButton addTarget:self action:@selector(shareGame) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * action = [[UIBarButtonItem alloc] initWithCustomView:actionButton];
+	UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+	UIBarButtonItem * share = [[UIBarButtonItem alloc] initWithCustomView:shareButton];
+	
+	NSArray * items = [NSArray arrayWithObjects:action, spacer, share, nil];
+	
+	[toolbar setItems:items animated:YES];
 }
 
 - (void)updateCountdown
@@ -246,6 +278,11 @@
 	
 	[actionSheet release];
 	
+}
+
+- (void)joinGame
+{
+
 }
 
 

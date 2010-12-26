@@ -178,6 +178,7 @@
 		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
 		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
 		D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */; };
+		D79AB89112C7BE7400F2E8AE /* GMRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D79AB89012C7BE7400F2E8AE /* GMRPlayer.m */; };
 		D79C06C012982163000F6DAD /* GMRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D79C06BF12982163000F6DAD /* GMRButton.m */; };
 		D79E57AF12B7C65C0050E284 /* GMRGameDetailController+Sharing.m in Sources */ = {isa = PBXBuildFile; fileRef = D79E57AE12B7C65C0050E284 /* GMRGameDetailController+Sharing.m */; };
 		D7ACF7A412B524D500E36C31 /* GMRCreateAliasController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ACF7A212B524D500E36C31 /* GMRCreateAliasController.m */; };
@@ -623,6 +624,8 @@
 		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
 		D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMatchListCell.h; sourceTree = "<group>"; };
 		D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatchListCell.m; sourceTree = "<group>"; };
+		D79AB88F12C7BE7400F2E8AE /* GMRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayer.h; sourceTree = "<group>"; };
+		D79AB89012C7BE7400F2E8AE /* GMRPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlayer.m; sourceTree = "<group>"; };
 		D79C06BE12982163000F6DAD /* GMRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRButton.h; sourceTree = "<group>"; };
 		D79C06BF12982163000F6DAD /* GMRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRButton.m; sourceTree = "<group>"; };
 		D79E57AD12B7C65C0050E284 /* GMRGameDetailController+Sharing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMRGameDetailController+Sharing.h"; sourceTree = "<group>"; };
@@ -1764,6 +1767,8 @@
 				D78EA0B212B3D42200D78651 /* GMRAlias.m */,
 				D7E170D712C3DB0200F6E060 /* GMRFilter.h */,
 				D7E170D812C3DB0200F6E060 /* GMRFilter.m */,
+				D79AB88F12C7BE7400F2E8AE /* GMRPlayer.h */,
+				D79AB89012C7BE7400F2E8AE /* GMRPlayer.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -2295,6 +2300,7 @@
 				D7E1714112C3E65E00F6E060 /* GMRChooseGame+SearchTableView.m in Sources */,
 				D7E1716912C3E99D00F6E060 /* GMRChooseGame+TableView.m in Sources */,
 				D7886D4712C65ECA001F2077 /* GMRChooseTimeInterval.m in Sources */,
+				D79AB89112C7BE7400F2E8AE /* GMRPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -295,15 +295,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>116</integer>
-									<integer>111</integer>
-									<integer>50</integer>
+									<integer>115</integer>
+									<integer>113</integer>
+									<integer>52</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1487}, {305, 861}}</string>
+							<string>{{0, 1380}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -334,7 +334,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRGameDetailController+PlayerList.m</string>
+								<string>GMRGameDetailController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -342,11 +342,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRGameDetailController+PlayerList.m</string>
+										<string>GMRGameDetailController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D79AB86612C7A39C00F2E8AE</string>
+										<string>D79AB8CA12C7C2A800F2E8AE</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -371,8 +371,6 @@
 											<string>D78EA28E12B40D3F00D78651</string>
 											<string>D78EA3F512B47AA000D78651</string>
 											<string>D78EA3FD12B47AA000D78651</string>
-											<string>D78EA3FE12B47AA000D78651</string>
-											<string>D78EA41912B47B5A00D78651</string>
 											<string>D78EA64D12B4A22900D78651</string>
 											<string>D78EA6A712B4A51F00D78651</string>
 											<string>D78EA6A812B4A51F00D78651</string>
@@ -395,7 +393,6 @@
 											<string>D78F3B7212BA657400014188</string>
 											<string>D78F3B7312BA657400014188</string>
 											<string>D7C52E3812BEF11000B9D73C</string>
-											<string>D7C52E3C12BEF11000B9D73C</string>
 											<string>D7C52E3D12BEF11000B9D73C</string>
 											<string>D7C52E4312BEF11000B9D73C</string>
 											<string>D7C52E8712BEF90900B9D73C</string>
@@ -456,12 +453,17 @@
 											<string>D79AB80D12C7A00600F2E8AE</string>
 											<string>D79AB84412C7A18800F2E8AE</string>
 											<string>D79AB85712C7A37C00F2E8AE</string>
-											<string>D79AB85812C7A37C00F2E8AE</string>
-											<string>D79AB85912C7A37C00F2E8AE</string>
-											<string>D79AB85A12C7A37C00F2E8AE</string>
-											<string>D79AB86212C7A39B00F2E8AE</string>
-											<string>D79AB86312C7A39B00F2E8AE</string>
-											<string>D79AB86412C7A39B00F2E8AE</string>
+											<string>D79AB87712C7BD4700F2E8AE</string>
+											<string>D79AB87812C7BD4700F2E8AE</string>
+											<string>D79AB87912C7BD4700F2E8AE</string>
+											<string>D79AB87A12C7BD4700F2E8AE</string>
+											<string>D79AB87B12C7BD4700F2E8AE</string>
+											<string>D79AB89712C7BF2100F2E8AE</string>
+											<string>D79AB89812C7BF2100F2E8AE</string>
+											<string>D79AB8A812C7C17600F2E8AE</string>
+											<string>D79AB8A912C7C17600F2E8AE</string>
+											<string>D79AB8BF12C7C28400F2E8AE</string>
+											<string>D79AB8C512C7C29600F2E8AE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -552,7 +554,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1229, -27}}</string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -782,7 +784,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D79AB86712C7A39C00F2E8AE</string>
+		<string>D79AB8CB12C7C2A800F2E8AE</string>
 		<string>D79AB82612C7A06F00F2E8AE</string>
 		<string>D79AB81812C7A00700F2E8AE</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

@@ -10,6 +10,13 @@
 #import <MessageUI/MessageUI.h>
 #import "GMRViewController.h"
 
+enum{
+	GMRMatchMembershipUnknown,
+	GMRMatchMembershipMember
+};
+
+typedef NSUInteger GMRMatchMembership;
+
 @class GMRPlatformBanner, GMRMatch, OverviewController;
 @interface GMRGameDetailController : GMRViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
 	GMRMatch * match;
@@ -25,7 +32,9 @@
 	NSTimer * updateTimer;
 	
 	UIToolbar * toolbar;
-	OverviewController * matchesDataSourceController;
+	UIViewController * matchesDataSourceController;
+	
+	GMRMatchMembership membership;
 }
 
 @property(nonatomic, retain) IBOutlet UITableView * playersTableView;
@@ -36,11 +45,13 @@
 @property(nonatomic, retain) IBOutlet UILabel * scheduleTimeLabel;
 @property(nonatomic, retain) IBOutlet UILabel * platformLabel;
 @property(nonatomic, retain) IBOutlet UIView * howItWorksView;
-@property(nonatomic, assign) OverviewController * matchesDataSourceController;
+@property(nonatomic, assign) UIViewController * matchesDataSourceController;
 
--(id)initWithMatch:(GMRMatch *)value;
--(void)shareGame;
--(void)cancelGame;
--(void)leaveGame;
+- (id)initWithMatch:(GMRMatch *)value membership:(GMRMatchMembership)member;
+- (void)shareGame;
+- (void)cancelGame;
+- (void)leaveGame;
+- (void)joinGame;
+- (void)setupToolbar;
 
 @end

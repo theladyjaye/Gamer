@@ -15,6 +15,7 @@
 #import "GMRPlayerListCell.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
+#import "GMRPlayer.h"
 
 
 enum {
@@ -54,9 +55,24 @@ typedef NSUInteger PlayerListCellStyle;
 			 {
 				 
 				 dispatch_async(dispatch_get_main_queue(), ^{
-					 self.playersForMatch = (NSArray *)[response objectForKey:@"players"];
+					 NSInteger count = [[response objectForKey:@"players"] count];
+					 GMRPlayer * players[count];
+					 NSArray * responseCollection = (NSArray *)[response objectForKey:@"players"];
+					 
+					 for(NSInteger i =0; i < count; i++)
+					 {
+						 GMRPlayer * p = [GMRPlayer playerWithDicitonary:[responseCollection objectAtIndex:i]];
+						 players[i] = p;
+					 }
+					 
+					 self.playersForMatch = [NSArray arrayWithObjects:players count:count];
+					 
+					 
 					 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 					 [playersTableView reloadData];
+					 
+					 if(membership == GMRMatchMembershipUnknown)
+						 [self setupToolbar];
 				 });
 			 }
 			 else 
@@ -101,8 +117,11 @@ typedef NSUInteger PlayerListCellStyle;
 	if(cellStyle == PlayerListCellStylePlayer)
 	{
 		
-		alias      = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"alias"];
-		username   = [[self.playersForMatch objectAtIndex:indexPath.row] objectForKey:@"username"];		
+		GMRPlayer * player = (GMRPlayer *)[self.playersForMatch objectAtIndex:indexPath.row];
+		
+		alias      = player.alias;
+		username   = player.username;		
+		
 		reusableId = [username isEqualToString:match.created_by]? CellIdentifierCreator : CellIdentifier;
 	}
 	else 
@@ -138,7 +157,7 @@ typedef NSUInteger PlayerListCellStyle;
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"This row!");
+	//NSLog(@"This row!");
 	// Navigation logic may go here. Create and push another view controller.
     /*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
