@@ -465,7 +465,7 @@ function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)
 
 					data.rows.forEach(function(match)
 					{
-						delete match.doc._id;
+						//delete match.doc._id;
 						delete match.doc._rev;
 						delete match.doc.game;
 						delete match.doc.platform;
@@ -548,7 +548,7 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 			
 			data.rows.forEach(function(match)
 			{
-				delete match.doc._id;
+				//delete match.doc._id;
 				delete match.doc._rev;
 				delete match.doc.platform;
 				matches.push(match.doc);

@@ -34,7 +34,9 @@ typedef NSUInteger PlayerListCellStyle;
 	
 	if(platform != GMRPlatformUnknown)
 	{
-		[kGamerApi playersForMatch:platform gameId:game 
+		NSLog(@"Match Id: %@", match.id);
+		[kGamerApi playersForMatch:platform 
+							gameId:game 
 						   matchId:match.id 
 						  callback:^(BOOL ok, NSDictionary * response)
 		 {

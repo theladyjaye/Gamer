@@ -81,6 +81,7 @@
 		
 		for(NSDictionary * item in tempMatches)
 		{
+			
 			GMRMatch * currentMatch = [GMRMatch matchWithDicitonary:item];
 			[matches addObject:currentMatch];
 		}
@@ -162,9 +163,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
 	GMRGameDetailController * detail = [[GMRGameDetailController alloc] initWithMatch:[matches objectAtIndex:indexPath.row]];
-	//detail.matchesDataSourceController = self;
-	//[self.navigationController pushViewController:detail animated:YES];
-	//[detail release];
+	detail.matchesDataSourceController = self;
+	[self.navigationController pushViewController:detail animated:YES];
+	[detail release];
 }
 
 @end
