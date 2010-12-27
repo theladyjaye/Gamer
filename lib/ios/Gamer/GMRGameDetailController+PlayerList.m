@@ -30,14 +30,14 @@ typedef NSUInteger PlayerListCellStyle;
 - (void)playersTableRefresh
 {	
 	GMRPlatform platform    = match.platform;
-	NSString * game = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
+	//NSString * game = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	if(platform != GMRPlatformUnknown)
 	{
-		NSLog(@"Match Id: %@", match.id);
+		//NSLog(@"Match Id: %@", match.id);
 		[kGamerApi playersForMatch:platform 
-							gameId:game 
+							gameId:match.game.id 
 						   matchId:match.id 
 						  callback:^(BOOL ok, NSDictionary * response)
 		 {

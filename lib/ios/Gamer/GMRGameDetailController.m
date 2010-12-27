@@ -301,7 +301,7 @@
 	{
 		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
 															 title:@"Schedule Conflict" 
-														   message:@"You are currently scheduled for a match that starts within 30 minutes of this match." 
+														   message:@"You are currently scheduled for a game that starts within 30 minutes of this match." 
 														  callback:^(GMRAlertView * alertView){
 															  [alertView release];
 														  }];
@@ -318,7 +318,15 @@
 				withCallback:^(BOOL ok, NSDictionary * response){
 					dispatch_async(dispatch_get_main_queue(), ^{				 
 						[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-						[self didJoinMatch];
+						NSError * error = nil;
+						if(!ok)
+						{
+							error = [NSError errorWithDomain:@"com.api.GamePop" 
+														code:[[response objectForKey:@"code"] integerValue] 
+													userInfo:nil];
+						}
+						
+						[self didJoinMatch:error];
 					});
 				}];
 	}
@@ -366,35 +374,74 @@
 	[alertView release];
 }
 
-- (void)didJoinMatch
+- (void)didJoinMatch:(NSError *)error
 {
-	if(kScheduledMatchesViewController)
+	if(error)
 	{
-		
-		NSUInteger insertIndex = -1;
-		
-		for(GMRMatch * currentMatch in kScheduledMatches)
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Unable to join game" 
+														   message:@"" 
+														  callback:^(GMRAlertView * alertView){
+															  [alertView release];
+														  }];
+		NSString * platformString = [GMRClient formalDisplayNameForPlatform:match.platform];
+		switch ([error code]) 
 		{
-			if([match.scheduled_time compare:currentMatch.scheduled_time] == NSOrderedDescending)
-			{
-				insertIndex = [kScheduledMatches indexOfObject:currentMatch];
-			}
-			
+			case 2007:
+				alert.alertTitle   = @"No linked alias";
+				alert.alertMessage = [NSString stringWithFormat:@"You do not have an alias linked to %@. Proceed to your profile, link an alias for %@, and try again.", platformString, platformString];
+				break;
+				
+			default:
+				alert.alertMessage = @"Woah nelly! An unknown error occurred.";
+				break;
 		}
 		
-		insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
-		
-		[kScheduledMatchesViewController willChange:NSKeyValueChangeInsertion 
-								valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-										 forKey:@"matches"];
-		
-		[kScheduledMatches insertObject:match 
-								atIndex:insertIndex];
-		
-		
-		[kScheduledMatchesViewController didChange:NSKeyValueChangeInsertion 
-							   valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-										forKey:@"matches"];
+		[alert show];
+	}
+	else 
+	{
+		if(kScheduledMatchesViewController)
+		{
+			
+			NSUInteger insertIndex = -1;
+			
+			for(GMRMatch * currentMatch in kScheduledMatches)
+			{
+				if([match.scheduled_time compare:currentMatch.scheduled_time] == NSOrderedDescending)
+				{
+					insertIndex = [kScheduledMatches indexOfObject:currentMatch];
+				}
+				
+			}
+			
+			insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
+			
+			[kScheduledMatchesViewController willChange:NSKeyValueChangeInsertion 
+									valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+											 forKey:@"matches"];
+			
+			[kScheduledMatches insertObject:match 
+									atIndex:insertIndex];
+			
+			
+			[kScheduledMatchesViewController didChange:NSKeyValueChangeInsertion 
+								   valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+											forKey:@"matches"];
+			
+			
+			NSString * relativeDate = [NSDate relativeTime:match.scheduled_time];
+			
+			GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																 title:@"Game Joined!" 
+															   message:[NSString stringWithFormat:@"This game %@. \n\nIt is your responsibility to be ready at that time. If you cannot make the scheduled time, please leave the game to make room for others.", relativeDate]
+															  callback:^(GMRAlertView * alertView){
+																  [self.navigationController popViewControllerAnimated:YES];
+																  [alertView release];
+															  }];
+			
+			[alert show];
+		}
 	}
 }
 

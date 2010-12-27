@@ -104,6 +104,7 @@ static dispatch_queue_t jsonProcessingQueue;
 				
 			
 			NSLog(@"%@", (NSDictionary *)json.root);
+			// This should be an NSError...
 			callback([[json.root objectForKey:@"ok"] boolValue], (NSDictionary *)json.root);
 		});
 		

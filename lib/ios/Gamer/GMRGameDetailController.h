@@ -53,7 +53,7 @@ typedef NSUInteger GMRMatchMembership;
 - (void)leaveGame;
 - (void)joinGame;
 - (void)didLeaveMatch;
-- (void)didJoinMatch;
+- (void)didJoinMatch:(NSError *)error;
 - (void)setupToolbar;
 
 @end

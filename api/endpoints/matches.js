@@ -51,7 +51,7 @@ function getPlayersInMatch(req, res, next)
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unknown_match.message});
+			next({"ok":false, "message":Errors.unknown_match.message, "code":Errors.unknown_match.code});
 		}
 	});
 }
@@ -71,7 +71,7 @@ function leaveMatch(req, res, next)
 			{
 				if((req.access_token.user != username) && (req.access_token.user != match.created_by))
 				{
-					next({"ok":false, "message":Errors.unauthorized_client.message});
+					next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
 					return;
 				}
 			}
@@ -93,14 +93,14 @@ function leaveMatch(req, res, next)
 							}
 							else
 							{
-								next({"ok":false, "message":Errors.update_match.message})
+								next({"ok":false, "message":Errors.update_match.message, "code":Errors.update_match.code})
 								return;
 							}
 						});
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.unknown_error.message})
+						next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code})
 						return;
 					}
 				});
@@ -149,13 +149,13 @@ function leaveMatch(req, res, next)
 						}
 						else
 						{
-							next({"ok":false, "message":Errors.unknown_alias.message});
+							next({"ok":false, "message":Errors.unknown_alias.message, "code":Errors.unknown_alias.code});
 							return;
 						}
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.unknown_alias.message});
+						next({"ok":false, "message":Errors.unknown_alias.message, "code":Errors.unknown_alias.code});
 						return;
 					}
 				});
@@ -163,7 +163,7 @@ function leaveMatch(req, res, next)
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unknown_match.message});
+			next({"ok":false, "message":Errors.unknown_match.message, "code":Errors.unknown_match.code});
 		}
 	});
 }
@@ -179,7 +179,7 @@ function joinMatch(req, res, next)
 	{
 		if(req.access_token.user != username)
 		{
-			next({"ok":false, "message":Errors.unauthorized_client.message});
+			next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
 			return;
 		}
 	}
@@ -188,16 +188,25 @@ function joinMatch(req, res, next)
 	{
 		if(error == null)
 		{
-			if(match.players.indexOf(username) == -1)
+			var alias = req.access_token.aliases.filter(function(element, index, array){ if(element.platform == match.game.platform) return element; } );
+			if(alias.length == 1)
 			{
-				match.players.push(username);
+				/*
+					TODO The user has a valid alias, now we need to confirm that there is an open slot for them befoe adding them
+				*/
+				var player            = new Player();
+				player.username       = req.access_token.user;
+				player.alias          = alias[0].alias;
+				player.scheduled_time = match.scheduled_time;
+				player.match          = match._id;
 				
-				db.saveDoc(match, function(error, data)
+				db.saveDoc(player, function(error, data)
 				{
 					if(error == null)
 					{
 						next({"ok":true});
 						
+						// get the contact information for the creator and the user
 						var playersQuery  = new PlayersInArray([match.created_by, username]);
 						playersQuery.execute(function(err, rows, fields)
 						{
@@ -217,18 +226,20 @@ function joinMatch(req, res, next)
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.update_match.message})
+						next({"ok":false, "message":Errors.update_match.message, "code":Errors.update_match.code});
+						return;
 					}
 				});
 			}
 			else
 			{
-				next({"ok":true});
+				next({"ok":false, "message":Errors.unknown_alias.message, "code":Errors.unknown_alias.code});
+				return;
 			}
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unknown_match.message});
+			next({"ok":false, "message":Errors.unknown_match.message, "code":Errors.unknown_match.code});
 		}
 	});
 	
@@ -252,31 +263,31 @@ function createMatch(req, res, next)
 		
 		if(typeof Platform[platform] == "undefined")
 		{
-			next({"ok":false, "message":Errors.unknown_platform.message});
+			next({"ok":false, "message":Errors.unknown_platform.message, "code":Errors.unknown_platform.code});
 			return;
 		}
 		
 		if(req.access_token.user == "system" && typeof fields.username == "undefined")
 		{
-			next({"ok":false, "message":Errors.unknown_user.message});
+			next({"ok":false, "message":Errors.unknown_user.message, "code":Errors.unknown_user.code});
 			return;
 		}
 		
 		if(req.access_token.user == "system" && fields.username.length < 4)
 		{
-			next({"ok":false, "message":Errors.unknown_user.message});
+			next({"ok":false, "message":Errors.unknown_user.message, "code":Errors.unknown_user.code});
 			return;
 		}
 		
 		if(typeof fields.mode == "undefined")
 		{
-			next({"ok":false, "message":Errors.unknown_game_mode.message});
+			next({"ok":false, "message":Errors.unknown_game_mode.message, "code":Errors.unknown_game_mode.code});
 			return;
 		}
 		
 		if(typeof fields.scheduled_time == "undefined" )
 		{
-			next({"ok":false, "message":Errors.schedule_time.message});
+			next({"ok":false, "message":Errors.schedule_time.message, "code":Errors.schedule_time.code});
 			return;
 		}
 		else
@@ -291,7 +302,7 @@ function createMatch(req, res, next)
 					
 					if(game.platforms.filter( function(element, index, array){ return element == platform; })[0] == null)
 					{
-						next({"ok":false, "message":Errors.unknown_platform.message});
+						next({"ok":false, "message":Errors.unknown_platform.message, "code":Errors.unknown_platform.code});
 						return;
 					}
 
@@ -368,13 +379,13 @@ function createMatch(req, res, next)
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.unknown_alias.message});
+						next({"ok":false, "message":Errors.unknown_alias.message, "code":Errors.unknown_alias.code});
 						return;
 					}
 				}
 				else
 				{
-					next({"ok":false, "message":Errors.unknown_game.message});
+					next({"ok":false, "message":Errors.unknown_game.message, "code":Errors.unknown_game.code});
 				}
 			});
 		}
@@ -481,13 +492,13 @@ function getScheduledMatchesForGameAndPlatformAndTimeframe(req, res, next)
 				}
 				else
 				{
-					next({"ok":false, "message":Errors.unknown_error.message});
+					next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
 				}
 			});
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unknown_game.message});
+			next({"ok":false, "message":Errors.unknown_game.message, "code":Errors.unknown_game.code});
 		}
 	});
 }
@@ -524,7 +535,7 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 			break;
 		
 		default:
-			next({"ok":false, "message":Errors.not_implemented.message});
+			next({"ok":false, "message":Errors.not_implemented.message, "code":Errors.not_implemented.code});
 			return;
 			break;
 	}
@@ -558,7 +569,7 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unknown_error.message});
+			next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
 		}
 		
 	})
@@ -586,13 +597,13 @@ function getScheduledMatches(req, res, next)
 			}
 			else
 			{
-				next({"ok":false, "message":Errors.unknown_error.message});
+				next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
 			}
 		});
 	}
 	else
 	{
-		next({"ok":false, "message":Errors.unauthorized_client.message});
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
 	}
 }
 

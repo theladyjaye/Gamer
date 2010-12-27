@@ -18,7 +18,7 @@
 {
 	NSRange range = [gameId rangeOfString:@"game/"];
 	
-	if(range.length != NSNotFound)
+	if(range.location != NSNotFound)
 		gameId = [gameId substringFromIndex:(range.location + range.length)];
 	
 	return gameId;
