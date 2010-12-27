@@ -29,6 +29,14 @@ static UINavigationController * currentNavigationController;
 	tabBarController.tabBar.transform = CGAffineTransformMakeTranslation(0.0, 49.0);
 	
 	navigationBar.transform = CGAffineTransformMakeTranslation(0.0, -44.0);
+	
+	UINavigationController * overviewNavigationController = [self.tabBarController.viewControllers objectAtIndex:0];
+	
+	//using this to update the view of scheduled games if the user leaves or joins a game from the lobby.
+	// the OverviewController should always be available for the life of the session.
+	
+	kScheduledMatchesViewController = (OverviewController *)overviewNavigationController.topViewController;
+	
 	[super viewDidLoad];
 	
 }

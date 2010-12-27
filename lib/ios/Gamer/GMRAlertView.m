@@ -26,7 +26,9 @@
 		style             = alertStyle;
 		self.alertTitle   = title;
 		self.alertMessage = message;
-		callback          = [block copy];
+		
+		if(block)
+			callback          = [block copy];
 	}
 	
 	return self;

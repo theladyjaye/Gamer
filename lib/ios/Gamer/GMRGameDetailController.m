@@ -282,7 +282,46 @@
 
 - (void)joinGame
 {
-
+	NSTimeInterval matchTime = [match.scheduled_time timeIntervalSinceNow];
+	NSTimeInterval closestMatch = (double)INT_MAX;
+	
+	// get the scheduled match closest to now.
+	for (GMRMatch * scheduledMatch in kScheduledMatches) 
+	{
+		NSTimeInterval scheduledInterval = [scheduledMatch.scheduled_time timeIntervalSinceNow];
+		NSTimeInterval delta = ABS(matchTime - scheduledInterval);
+		
+		closestMatch = delta < closestMatch ? scheduledInterval : closestMatch;
+	}
+	
+	
+	// 30 min - Games are alloted a 30 min (1800 sec) play slot.  if the user wishes to join a game
+	// they connot have any other game scheduled that start within 30 min from the game they wish to join.
+	if(closestMatch < 1800) 
+	{
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Schedule Conflict" 
+														   message:@"You are currently scheduled for a match that starts within 30 minutes of this match." 
+														  callback:^(GMRAlertView * alertView){
+															  [alertView release];
+														  }];
+		[alert show];
+	}
+	else
+	{
+		
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+		
+		[kGamerApi matchJoin:match.platform
+					  gameId:match.game.id 
+					 matchId:match.id 
+				withCallback:^(BOOL ok, NSDictionary * response){
+					dispatch_async(dispatch_get_main_queue(), ^{				 
+						[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+						[self didJoinMatch];
+					});
+				}];
+	}
 }
 
 
@@ -312,24 +351,14 @@
 	{
 		NSString * gameId    = [[match.game.id componentsSeparatedByString:@"/"] objectAtIndex:1];
 		
-		 [kGamerApi matchLeave:match.game.platform 
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES; 
+		[kGamerApi matchLeave:match.game.platform 
 						gameId:gameId 
 					   matchId:match.id 
 				  withCallback:^(BOOL ok, NSDictionary * response){
 					     dispatch_async(dispatch_get_main_queue(), ^{				 
-						  
-							 NSUInteger removeIndex              = [kScheduledMatches indexOfObject:match];
-							 [matchesDataSourceController willChange:NSKeyValueChangeRemoval
-												 valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
-														  forKey:@"matches"];
-						 
-							 [kScheduledMatches removeObjectAtIndex:removeIndex];
-						 
-							 [matchesDataSourceController didChange:NSKeyValueChangeRemoval 
-												valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
-														 forKey:@"matches"];
-						  
-							 [self.navigationController popViewControllerAnimated:YES];
+							 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+							 [self didLeaveMatch];
 			             });
 		 }];
 	}
@@ -337,6 +366,75 @@
 	[alertView release];
 }
 
+- (void)didJoinMatch
+{
+	if(kScheduledMatchesViewController)
+	{
+		
+		NSUInteger insertIndex = -1;
+		
+		for(GMRMatch * currentMatch in kScheduledMatches)
+		{
+			if([match.scheduled_time compare:currentMatch.scheduled_time] == NSOrderedDescending)
+			{
+				insertIndex = [kScheduledMatches indexOfObject:currentMatch];
+			}
+			
+		}
+		
+		insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
+		
+		[kScheduledMatchesViewController willChange:NSKeyValueChangeInsertion 
+								valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+										 forKey:@"matches"];
+		
+		[kScheduledMatches insertObject:match 
+								atIndex:insertIndex];
+		
+		
+		[kScheduledMatchesViewController didChange:NSKeyValueChangeInsertion 
+							   valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+										forKey:@"matches"];
+	}
+}
+
+- (void)didLeaveMatch
+{
+	// we may have gotten here from the OverviewController or the LobbyController.  
+	// because of that we cannot use [indexOfObject:] since if we arrived from the LobbyController
+	// the match objects will be differnt/new objects compared to the scheduled matches objects.
+	
+	NSUInteger removeIndex = [kScheduledMatches indexOfObjectPassingTest:^BOOL (id obj, NSUInteger idx, BOOL *stop){
+		GMRMatch * currentMatch = (GMRMatch *)obj;
+		if([currentMatch.id isEqualToString:match.id])
+		{
+			*stop = YES;
+			return YES;
+		}
+		
+		return NO;
+	}];
+	
+	// notify the overview controller we changed the matches
+	if(removeIndex != NSNotFound)
+	{
+		if(kScheduledMatchesViewController)
+		{
+		
+			[kScheduledMatchesViewController willChange:NSKeyValueChangeRemoval
+									valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+											 forKey:@"matches"];
+			
+			[kScheduledMatches removeObjectAtIndex:removeIndex];
+			
+			[kScheduledMatchesViewController didChange:NSKeyValueChangeRemoval 
+								   valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+											forKey:@"matches"];
+		}
+	}
+	
+	[self.navigationController popViewControllerAnimated:YES];
+}
 /*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

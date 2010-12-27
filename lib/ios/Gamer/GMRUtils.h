@@ -13,7 +13,9 @@
 
 }
 
++ (NSString *)cleanupGameId:(NSString *)gameId;
 + (NSString *)formEncodedStringFromDictionary:(NSDictionary *)dictionary;
 + (NSString *)formEncodedStringFromString:(NSString *)value;
+
 
 @end

@@ -14,9 +14,11 @@
 #import "GMRNavigationController.h"
 #import "GMRActivityView.h"
 #import "UIApplication+GamePop.h"
+#import "OverviewController.h"
 
 GMRClient * kGamerApi = nil;
 NSMutableArray * kScheduledMatches = nil;
+OverviewController * kScheduledMatchesViewController = nil;
 
 @implementation HazGame
 @synthesize window;

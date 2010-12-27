@@ -52,6 +52,8 @@ typedef NSUInteger GMRMatchMembership;
 - (void)cancelGame;
 - (void)leaveGame;
 - (void)joinGame;
+- (void)didLeaveMatch;
+- (void)didJoinMatch;
 - (void)setupToolbar;
 
 @end

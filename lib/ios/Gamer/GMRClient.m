@@ -9,6 +9,7 @@
 #import "GMRClient.h"
 #import "GMRTypes.h"
 #import "GMRRequest.h"
+#import "GMRUtils.h"
 
 static NSArray * platformStrings;
 
@@ -214,6 +215,8 @@ static NSArray * platformStrings;
 
 - (void)playersForMatch:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId callback:(GMRCallback)callback
 {
+	gameId = [GMRUtils cleanupGameId:gameId];
+	
 	NSString*     method = @"GET";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [GMRClient stringForPlatform:platform], gameId, matchId];
 	
@@ -293,6 +296,8 @@ static NSArray * platformStrings;
 
 - (void)matchesScheduledForPlatform:(GMRPlatform)platform andGame:(NSString *)gameId andTimeInterval:(GMRTimeInterval)timeInterval withCallback:(GMRCallback)callback
 {
+	gameId = [GMRUtils cleanupGameId:gameId];
+	
 	NSString * interval = nil;
 	switch(timeInterval)
 	{
@@ -320,6 +325,8 @@ static NSArray * platformStrings;
 
 - (void)matchCreate:(NSDate *)scheduledTime gameId:(NSString *)gameId gameMode:(NSString *)gameMode platform:(GMRPlatform)platform availability:(GMRMatchAvailablilty)availability maxPlayers:(NSUInteger)maxPlayers invitedPlayers:(NSArray *)invitedPlayers label:(NSString *)label withCallback:(GMRCallback)callback
 {
+	gameId = [GMRUtils cleanupGameId:gameId];
+	
 	NSString * time;
 	NSString * availabilityString  = (availability == GMRMatchAvailabliltyPublic) ? @"public" : @"private";
 	NSLocale * enUSPOSIXLocale     = [[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease];
@@ -357,6 +364,8 @@ static NSArray * platformStrings;
 
 - (void)matchJoin:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
+	gameId = [GMRUtils cleanupGameId:gameId];
+	
 	NSString*     method = @"POST";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [GMRClient stringForPlatform:platform],
 							gameId,
@@ -372,6 +381,8 @@ static NSArray * platformStrings;
 
 - (void)matchLeave:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId withCallback:(GMRCallback)callback
 {
+	gameId = [GMRUtils cleanupGameId:gameId];
+	
 	NSString*     method = @"DELETE";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/%@", [GMRClient stringForPlatform:platform],
 							gameId,

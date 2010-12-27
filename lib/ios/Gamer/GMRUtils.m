@@ -13,6 +13,18 @@
 
 
 @implementation GMRUtils
+
++ (NSString *)cleanupGameId:(NSString *)gameId
+{
+	NSRange range = [gameId rangeOfString:@"game/"];
+	
+	if(range.length != NSNotFound)
+		gameId = [gameId substringFromIndex:(range.location + range.length)];
+	
+	return gameId;
+}
+
+
 +(NSString *)formEncodedStringFromDictionary:(NSDictionary *)value
 {
 	NSMutableArray* arguments = [NSMutableArray arrayWithCapacity:[value count]];

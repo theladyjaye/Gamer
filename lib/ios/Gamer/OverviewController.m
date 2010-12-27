@@ -19,6 +19,32 @@
 @implementation OverviewController
 @synthesize matchesTable, matches=kScheduledMatches;
 
+
+- (void)viewDidLoad 
+{		
+	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Scheduled"];
+	
+	UIButton * addMatchButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeAdd];
+	[addMatchButton addTarget:self action:@selector(createGame) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem * addMatch = [[UIBarButtonItem alloc] initWithCustomView:addMatchButton];
+	
+	[self.navigationItem setRightBarButtonItem:addMatch animated:YES];
+	[addMatch release];
+	
+	
+	
+	[self matchesTableRefresh];
+	
+	[self addObserver:self 
+		         forKeyPath:@"matches" 
+			        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+			        context:nil];
+	
+	[super viewDidLoad];
+}
+
+
 -(void)createGame
 {
 	GMRCreateGameController * controller = [[GMRCreateGameController alloc] initWithNibName:nil
@@ -49,30 +75,6 @@
 		[self.view addSubview:noneView];
 		[noneView release];
 	}
-}
-
-- (void)viewDidLoad 
-{		
-	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Scheduled"];
-	
-	UIButton * addMatchButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeAdd];
-	[addMatchButton addTarget:self action:@selector(createGame) forControlEvents:UIControlEventTouchUpInside];
-	
-	UIBarButtonItem * addMatch = [[UIBarButtonItem alloc] initWithCustomView:addMatchButton];
-	
-	[self.navigationItem setRightBarButtonItem:addMatch animated:YES];
-	[addMatch release];
-	
-	
-	
-	[self matchesTableRefresh];
-	
-	[self addObserver:self 
-		         forKeyPath:@"matches" 
-			        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
-			        context:nil];
-	
-	[super viewDidLoad];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
