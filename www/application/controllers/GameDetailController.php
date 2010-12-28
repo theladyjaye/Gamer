@@ -17,10 +17,13 @@ class GameDetailController extends GMRController
 				$this->game_id  = $_GET['arguments'][1];
 				$this->match_id = $_GET['arguments'][2];
 				
-				$this->client = new GMRClient();
+				$settings = GMRConfiguration::standardConfiguration();
+				
+				$this->client = new GMRClient($settings['libGamerKey']);
+				
 				$match = $this->match();
 				
-				if(!$match->ok)
+				if($match == null)
 					header("Location: /");
 			}
 		}
@@ -33,9 +36,14 @@ class GameDetailController extends GMRController
 	public function match()
 	{
 		static $response = null;
+		
 		if($response == null)
 		{
-			$response = $client->match($this->platform, $this->game_id, $this->match_id);
+			$obj = $this->client->match($this->platform, $this->game_id, $this->match_id);
+			if($obj->ok)
+			{
+				$response = $obj->match;
+			}
 		}
 		
 		return $response;
@@ -47,7 +55,11 @@ class GameDetailController extends GMRController
 		
 		if($response == null)
 		{
-			$response = $client->matchPlayers($this->platform, $this->game_id, $this->match_id);
+			$obj = $this->client->matchPlayers($this->platform, $this->game_id, $this->match_id);
+			if($obj->ok)
+			{
+				$response = $obj->players;
+			}
 		}
 		
 		return $response;

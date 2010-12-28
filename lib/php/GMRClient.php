@@ -30,6 +30,40 @@ final class GMRClient
 		}
 	}
 	
+		/**
+		 * Retrieve a match
+		 *
+		 * @param string $platform constant from GMRPlatform
+		 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+		 * @param string $match_id the hash representing the match to join
+		 * @return object {"ok":bool, "match":<object>, "players":<uri_to_players_for_match_endpoint>}
+		 * @author Adam Venturella
+		 */
+		public function match($platform, $game_id, $match_id)
+		{
+			$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id,
+		                                              'method'        => 'GET'));
+			$data = json_decode($response);
+			return $data;
+		}
+		
+		/**
+		 * Gets the players for a given match
+		 *
+		 * @param string $platform constant from GMRPlatform
+		 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+		 * @param string $match_id the hash representing the match to join
+		 * @return object {"ok":bool,"players":[{"username":<username>,"alias":<alias>}...]}
+		 * @author Adam Venturella
+		 */
+		public function matchPlayers($platform, $game_id, $match_id)
+		{
+			$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/players',
+	                                                  'method'        => 'GET'));
+			$data = json_decode($response);
+			return $data;
+	    }
+	
 	/**
 	 * Leave or cancel an existing match
 	 * if the user leaving the match is the creator of the match

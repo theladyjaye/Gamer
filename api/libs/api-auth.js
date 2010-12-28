@@ -20,7 +20,7 @@ exports.access = function (req, res, next)
 			}
 			else
 			{
-				next({"ok":false, "message":Errors.unknown_error.message});
+				next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
 			}
 		});
 	}
@@ -118,8 +118,13 @@ function handleHydrationQuery(query, req, next)
 				}
 				else
 				{
-					next({"ok":false, "message":Errors.unauthorized_client.message});
-					return;
+					var access_token  = {"user":null, "aliases":[]}
+					access_token.user = 'system';
+					req.access_token  = access_token;
+					next();
+					
+					//next({"ok":false, "message":Errors.unauthorized_client.message, "code":"message":Errors.unauthorized_client.code});
+					//return;
 				}
 			}
 			else
@@ -138,7 +143,7 @@ function handleHydrationQuery(query, req, next)
 		}
 		else
 		{
-			next({"ok":false, "message":Errors.unauthorized_client.message});
+			next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
 		}
 	});
 }

@@ -9,5 +9,25 @@ class GMRPlatform
 	const kUnknown      = 'unknown';
 	const kWii          = 'wii';
 	const kXbox360      = 'xbox360';
+	
+	public static function validPlatformForString($string)
+	{
+		$result = false;
+		$string = strtolower($string);
+		
+		switch($string)
+		{
+			case 'battlenet':
+			case 'playstation2':
+			case 'playstation3':
+			case 'steam':
+			case 'wii':
+			case 'xbox360':
+				$result = true;
+				break;
+		}
+		
+		return $result;
+	}
 }
 ?>

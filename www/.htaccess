@@ -5,11 +5,12 @@ RewriteBase /
 
 
 #RedirectMatch 404 ^/application(/?|/.*)$
-#<FilesMatch "[^\.]+\.ini">
-#	Order allow,deny
-#	Deny from all
-#	Satisfy All
-#</FilesMatch>
+
+<FilesMatch "[^\.]+\.ini">
+	Order allow,deny
+	Deny from all
+	Satisfy All
+</FilesMatch>
 
 # Disable ETags
 #Header unset ETag  

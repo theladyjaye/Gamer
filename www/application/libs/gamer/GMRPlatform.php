@@ -10,10 +10,11 @@ class GMRPlatform
 	const kWii          = 'wii';
 	const kXbox360      = 'xbox360';
 	
-	// we just want to be sure we are working with a valid platform
 	public static function validPlatformForString($string)
 	{
-		$valid = false;
+		$result = false;
+		$string = strtolower($string);
+		
 		switch($string)
 		{
 			case 'battlenet':
@@ -22,11 +23,11 @@ class GMRPlatform
 			case 'steam':
 			case 'wii':
 			case 'xbox360':
-				$valid = true;
+				$result = true;
 				break;
 		}
 		
-		return $valid;
+		return $result;
 	}
 }
 ?>
