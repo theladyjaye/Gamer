@@ -382,6 +382,7 @@
 															 title:@"Unable to join game" 
 														   message:@"" 
 														  callback:^(GMRAlertView * alertView){
+															  [self.navigationController popViewControllerAnimated:YES];
 															  [alertView release];
 														  }];
 		NSString * platformString = [GMRClient formalDisplayNameForPlatform:match.platform];
@@ -391,6 +392,12 @@
 				alert.alertTitle   = @"No linked alias";
 				alert.alertMessage = [NSString stringWithFormat:@"You do not have an alias linked to %@. Proceed to your profile, link an alias for %@, and try again.", platformString, platformString];
 				break;
+				
+			case 3004:
+				alert.alertTitle   = @"Game is full";
+				alert.alertMessage = @"Sorry, this game has become full. Please choose another game to join.";
+				break;
+
 				
 			default:
 				alert.alertMessage = @"Woah nelly! An unknown error occurred.";

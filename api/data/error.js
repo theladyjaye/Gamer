@@ -10,5 +10,6 @@ module.exports = {
 	"unknown_alias"      :{"code":2007, "message" :"unknown_gamer_alias"},
 	"schedule_time"      :{"code":3001, "message":"invalid_schedule_time"},
 	"create_match"       :{"code":3002, "message":"unable_to_create_match"},
-	"update_match"       :{"code":3003, "message":"unable_to_update_match"}
+	"update_match"       :{"code":3003, "message":"unable_to_update_match"},
+	"match_full"         :{"code":3004, "message":"match_full"}
 }

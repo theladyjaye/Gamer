@@ -227,6 +227,20 @@
 			D78C7B0412C92BCA0010649D /* PBXTextBookmark */ = D78C7B0412C92BCA0010649D /* PBXTextBookmark */;
 			D78C7B0512C92BCA0010649D /* PBXTextBookmark */ = D78C7B0512C92BCA0010649D /* PBXTextBookmark */;
 			D78C7B0612C92BCA0010649D /* PBXTextBookmark */ = D78C7B0612C92BCA0010649D /* PBXTextBookmark */;
+			D78C7B0712C9499E0010649D /* PBXTextBookmark */ = D78C7B0712C9499E0010649D /* PBXTextBookmark */;
+			D78C7B0812C9499E0010649D /* PBXTextBookmark */ = D78C7B0812C9499E0010649D /* PBXTextBookmark */;
+			D78C7B0912C95F890010649D /* PBXTextBookmark */ = D78C7B0912C95F890010649D /* PBXTextBookmark */;
+			D78C7B0C12C961410010649D /* PBXTextBookmark */ = D78C7B0C12C961410010649D /* PBXTextBookmark */;
+			D78C7B0D12C961420010649D /* PBXTextBookmark */ = D78C7B0D12C961420010649D /* PBXTextBookmark */;
+			D78C7B1312C9655C0010649D /* PBXTextBookmark */ = D78C7B1312C9655C0010649D /* PBXTextBookmark */;
+			D78C7B1712C966980010649D /* PBXTextBookmark */ = D78C7B1712C966980010649D /* PBXTextBookmark */;
+			D78C7B1A12C966DD0010649D /* PBXTextBookmark */ = D78C7B1A12C966DD0010649D /* PBXTextBookmark */;
+			D78C7B1B12C966DD0010649D /* PBXTextBookmark */ = D78C7B1B12C966DD0010649D /* PBXTextBookmark */;
+			D78C7B1C12C966DD0010649D /* PBXTextBookmark */ = D78C7B1C12C966DD0010649D /* PBXTextBookmark */;
+			D78C7B1D12C966DD0010649D /* PBXTextBookmark */ = D78C7B1D12C966DD0010649D /* PBXTextBookmark */;
+			D78C7B1F12C967220010649D /* PBXTextBookmark */ = D78C7B1F12C967220010649D /* PBXTextBookmark */;
+			D78C7B2012C967220010649D /* PBXTextBookmark */ = D78C7B2012C967220010649D /* PBXTextBookmark */;
+			D78C7B2112C967270010649D /* PBXTextBookmark */ = D78C7B2112C967270010649D /* PBXTextBookmark */;
 			D78CDC2112B320D700D6F3E2 = D78CDC2112B320D700D6F3E2 /* PBXBookmark */;
 			D78CDC2412B320D700D6F3E2 = D78CDC2412B320D700D6F3E2 /* PBXTextBookmark */;
 			D78CDC7F12B3292F00D6F3E2 = D78CDC7F12B3292F00D6F3E2 /* PBXTextBookmark */;
@@ -473,9 +487,9 @@
 	};
 	D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1909, 6786}}";
-			sepNavSelRange = "{12263, 0}";
-			sepNavVisRange = "{11616, 2102}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 7137}}";
+			sepNavSelRange = "{12227, 0}";
+			sepNavVisRange = "{11692, 677}";
 		};
 	};
 	D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */ = {
@@ -618,7 +632,7 @@
 		ignoreCount = 0;
 		lineNumber = 98;
 		location = HazGame;
-		modificationTime = 315173796.373705;
+		modificationTime = 315188958.540071;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -933,7 +947,7 @@
 		ignoreCount = 0;
 		lineNumber = 283;
 		location = GamePop;
-		modificationTime = 315173796.374299;
+		modificationTime = 315188958.540789;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1829,7 +1843,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 389";
 		rLen = 0;
-		rLoc = 11945;
+		rLoc = 12021;
 		rType = 0;
 		vrLen = 1721;
 		vrLoc = 10733;
@@ -1849,7 +1863,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 389";
 		rLen = 0;
-		rLoc = 11945;
+		rLoc = 12021;
 		rType = 0;
 		vrLen = 539;
 		vrLoc = 11337;
@@ -1859,7 +1873,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 386";
 		rLen = 0;
-		rLoc = 11615;
+		rLoc = 11691;
 		rType = 0;
 		vrLen = 1767;
 		vrLoc = 10829;
@@ -1869,7 +1883,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 386";
 		rLen = 0;
-		rLoc = 11615;
+		rLoc = 11691;
 		rType = 0;
 		vrLen = 1759;
 		vrLoc = 10829;
@@ -1927,6 +1941,7 @@
 	};
 	D78C7AC112C928320010649D /* FoundationErrors.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = FoundationErrors.h;
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/FoundationErrors.h;
 		sourceTree = "<absolute>";
@@ -1934,6 +1949,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1189, 1027}}";
 			sepNavSelRange = "{4227, 37}";
 			sepNavVisRange = "{0, 4043}";
+			sepNavWindowFrame = "{{19, 194}, {1248, 829}}";
 		};
 	};
 	D78C7AC212C928320010649D /* PBXTextBookmark */ = {
@@ -1951,7 +1967,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 386";
 		rLen = 0;
-		rLoc = 11615;
+		rLoc = 11691;
 		rType = 0;
 		vrLen = 1821;
 		vrLoc = 10832;
@@ -1991,7 +2007,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 386";
 		rLen = 0;
-		rLoc = 11615;
+		rLoc = 11691;
 		rType = 0;
 		vrLen = 1892;
 		vrLoc = 10832;
@@ -2031,7 +2047,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 386";
 		rLen = 0;
-		rLoc = 11615;
+		rLoc = 11691;
 		rType = 0;
 		vrLen = 1899;
 		vrLoc = 10832;
@@ -2071,7 +2087,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 391";
 		rLen = 0;
-		rLoc = 11790;
+		rLoc = 11866;
 		rType = 0;
 		vrLen = 809;
 		vrLoc = 11280;
@@ -2081,7 +2097,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 437";
 		rLen = 0;
-		rLoc = 13388;
+		rLoc = 13636;
 		rType = 0;
 		vrLen = 2230;
 		vrLoc = 11597;
@@ -2091,7 +2107,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 437";
 		rLen = 0;
-		rLoc = 13388;
+		rLoc = 13636;
 		rType = 0;
 		vrLen = 2040;
 		vrLoc = 11597;
@@ -2131,7 +2147,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 437";
 		rLen = 0;
-		rLoc = 13388;
+		rLoc = 13636;
 		rType = 0;
 		vrLen = 1856;
 		vrLoc = 11310;
@@ -2171,7 +2187,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 437";
 		rLen = 0;
-		rLoc = 13235;
+		rLoc = 13483;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 12689;
@@ -2241,7 +2257,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 439";
 		rLen = 0;
-		rLoc = 13520;
+		rLoc = 13768;
 		rType = 0;
 		vrLen = 2186;
 		vrLoc = 12202;
@@ -2251,7 +2267,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 439";
 		rLen = 0;
-		rLoc = 13520;
+		rLoc = 13768;
 		rType = 0;
 		vrLen = 2129;
 		vrLoc = 12259;
@@ -2291,7 +2307,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 439";
 		rLen = 0;
-		rLoc = 13520;
+		rLoc = 13768;
 		rType = 0;
 		vrLen = 711;
 		vrLoc = 12202;
@@ -2301,7 +2317,7 @@
 		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
 		name = "GMRGameDetailController.m: 410";
 		rLen = 0;
-		rLoc = 12263;
+		rLoc = 12511;
 		rType = 0;
 		vrLen = 2102;
 		vrLoc = 11616;
@@ -2335,6 +2351,146 @@
 		rType = 0;
 		vrLen = 2045;
 		vrLoc = 2665;
+	};
+	D78C7B0712C9499E0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 410";
+		rLen = 0;
+		rLoc = 12511;
+		rType = 0;
+		vrLen = 1797;
+		vrLoc = 9949;
+	};
+	D78C7B0812C9499E0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D79AB8F112C7FE7100F2E8AE /* limits.h */;
+		name = "limits.h: 71";
+		rLen = 55;
+		rLoc = 3414;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 2665;
+	};
+	D78C7B0912C95F890010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 410";
+		rLen = 0;
+		rLoc = 12511;
+		rType = 0;
+		vrLen = 1797;
+		vrLoc = 9949;
+	};
+	D78C7B0C12C961410010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 357";
+		rLen = 0;
+		rLoc = 10691;
+		rType = 0;
+		vrLen = 1797;
+		vrLoc = 9949;
+	};
+	D78C7B0D12C961420010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 357";
+		rLen = 0;
+		rLoc = 10691;
+		rType = 0;
+		vrLen = 1782;
+		vrLoc = 9964;
+	};
+	D78C7B1312C9655C0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 357";
+		rLen = 0;
+		rLoc = 10691;
+		rType = 0;
+		vrLen = 1798;
+		vrLoc = 10005;
+	};
+	D78C7B1712C966980010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 398";
+		rLen = 0;
+		rLoc = 12227;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 11692;
+	};
+	D78C7B1A12C966DD0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 398";
+		rLen = 0;
+		rLoc = 12227;
+		rType = 0;
+		vrLen = 1817;
+		vrLoc = 11115;
+	};
+	D78C7B1B12C966DD0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 56";
+		rLen = 0;
+		rLoc = 1189;
+		rType = 0;
+		vrLen = 1806;
+		vrLoc = 2361;
+	};
+	D78C7B1C12C966DD0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 107";
+		rLen = 0;
+		rLoc = 2635;
+		rType = 0;
+		vrLen = 1820;
+		vrLoc = 2268;
+	};
+	D78C7B1D12C966DD0010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 107";
+		rLen = 0;
+		rLoc = 2635;
+		rType = 0;
+		vrLen = 1818;
+		vrLoc = 2270;
+	};
+	D78C7B1F12C967220010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */;
+		name = "GMRGameDetailController.m: 398";
+		rLen = 0;
+		rLoc = 12227;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 11692;
+	};
+	D78C7B2012C967220010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 106";
+		rLen = 0;
+		rLoc = 2635;
+		rType = 0;
+		vrLen = 927;
+		vrLoc = 2270;
+	};
+	D78C7B2112C967270010649D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */;
+		name = "GMRGameDetailController+PlayerList.m: 110";
+		rLen = 0;
+		rLoc = 2834;
+		rType = 0;
+		vrLen = 1854;
+		vrLoc = 1931;
 	};
 	D78CDC0F12B31D6B00D6F3E2 /* GMRProfileController.h */ = {
 		uiCtxt = {
@@ -2783,6 +2939,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1171, 1404}}";
 			sepNavSelRange = "{3414, 55}";
 			sepNavVisRange = "{2665, 2045}";
+			sepNavWindowFrame = "{{65, 163}, {1230, 818}}";
 		};
 	};
 	D79AB98812C8116000F2E8AE /* PBXTextBookmark */ = {
@@ -3201,7 +3358,7 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = HazGame;
-		modificationTime = 315173796.374077;
+		modificationTime = 315188958.540547;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3357,10 +3514,10 @@
 	};
 	D7C33DF412956BE100B923AE /* GMRGameDetailController+PlayerList.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4251, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4302, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4352, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4582}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1495, 2379}}";
-			sepNavSelRange = "{847, 0}";
-			sepNavVisRange = "{565, 597}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{4248, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{4299, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{4349, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 4579}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 2249}}";
+			sepNavSelRange = "{2834, 0}";
+			sepNavVisRange = "{1931, 1854}";
 		};
 	};
 	D7C52E2F12BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.h */ = {
@@ -3432,7 +3589,7 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1189, 701}}";
 			sepNavSelRange = "{571, 12}";
 			sepNavVisRange = "{0, 1068}";
-			sepNavWindowFrame = "{{19, 465}, {750, 558}}";
+			sepNavWindowFrame = "{{19, 194}, {1248, 829}}";
 		};
 	};
 	D7D23DA3128CE9A500C23711 /* GMRAlertView.m */ = {

@@ -192,41 +192,61 @@ function joinMatch(req, res, next)
 			if(alias.length == 1)
 			{
 				/*
-					TODO The user has a valid alias, now we need to confirm that there is an open slot for them befoe adding them
+					The user has a valid alias, now we need to confirm that there is an open slot for them befoe adding them
 				*/
-				var player            = new Player();
-				player.username       = req.access_token.user;
-				player.alias          = alias[0].alias;
-				player.scheduled_time = match.scheduled_time;
-				player.match          = match._id;
 				
-				db.saveDoc(player, function(error, data)
+				db.view("application", "matches-players", {"startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, players)
 				{
 					if(error == null)
 					{
-						next({"ok":true});
-						
-						// get the contact information for the creator and the user
-						var playersQuery  = new PlayersInArray([match.created_by, username]);
-						playersQuery.execute(function(err, rows, fields)
+						if(players.rows.length < match.maxPlayers)
 						{
-							if(rows.length == 2)
+							var player            = new Player();
+							player.username       = req.access_token.user;
+							player.alias          = alias[0].alias;
+							player.scheduled_time = match.scheduled_time;
+							player.match          = match._id;
+
+							db.saveDoc(player, function(error, data)
 							{
-								var NotificationJoin              = require('../data/NotificationJoin');
-								var currentNotification           = new NotificationJoin();
-								currentNotification.email_to      = rows[0].email;
-								currentNotification.username_to   = rows[0].username
-								currentNotification.username_from = rows[1].username;
-								currentNotification.platform      = Platform[match.game.platform].label;
-								currentNotification.game          = match.game.label;
-								currentNotification.date          = match.scheduled_time;
-								currentNotification.send();
-							}
-						});
+								if(error == null)
+								{
+									next({"ok":true});
+
+									// get the contact information for the creator and the user
+									var playersQuery  = new PlayersInArray([match.created_by, username]);
+									playersQuery.execute(function(err, rows, fields)
+									{
+										if(rows.length == 2)
+										{
+											var NotificationJoin              = require('../data/NotificationJoin');
+											var currentNotification           = new NotificationJoin();
+											currentNotification.email_to      = rows[0].email;
+											currentNotification.username_to   = rows[0].username
+											currentNotification.username_from = rows[1].username;
+											currentNotification.platform      = Platform[match.game.platform].label;
+											currentNotification.game          = match.game.label;
+											currentNotification.date          = match.scheduled_time;
+											currentNotification.send();
+										}
+									});
+								}
+								else
+								{
+									next({"ok":false, "message":Errors.update_match.message, "code":Errors.update_match.code});
+									return;
+								}
+							});
+						}
+						else
+						{
+							next({"ok":false, "message":Errors.match_full.message, "code":Errors.match_full.code});
+							return;
+						}
 					}
 					else
 					{
-						next({"ok":false, "message":Errors.update_match.message, "code":Errors.update_match.code});
+						next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
 						return;
 					}
 				});
