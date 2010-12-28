@@ -21,13 +21,36 @@ exports.endpoints = function(app)
 	
 	app.get(/\/([\w]+)\/([\w-]+)\/(hour|30min|15min)$/, getScheduledMatchesForGameAndPlatformAndTimeframe);
 	app.get(/\/([\w]+)\/(hour|30min|15min)$/, getScheduledMatchesForPlatformAndTimeframe);
-	app.get('/:platform/:game/:match_id', getPlayersInMatch);
+	app.get('/:platform/:game/:match_id/players', getPlayersInMatch);
+	app.get('/:platform/:game/:match_id', getMatch);
 	
 	
 	app.post('/:platform/:game', createMatch);
 	app.post('/:platform/:game/:match_id/:username', joinMatch);
 	app.del('/:platform/:game/:match_id/:username', leaveMatch);
 	
+}
+
+function getMatch(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game;
+	var match_id  = req.params.match_id;
+	
+	db.getDoc(match_id, function(error, match)
+	{
+		if(error == null)
+		{
+			console.log(match);
+			var playersEndpoint = "http://" + environment.host.name + ":" + environment.host.port + "/matches/" + platform + "/" + game + "/" + match_id + "/players";
+			
+			next({"ok":true, "match":match, "players":playersEndpoint});
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unknown_match.message, "code":Errors.unknown_match.code});
+		}
+	});
 }
 
 function getPlayersInMatch(req, res, next)

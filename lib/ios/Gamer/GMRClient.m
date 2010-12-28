@@ -179,8 +179,9 @@ static NSArray * platformStrings;
 
 - (void)registerAlias:(NSString*)alias platform:(GMRPlatform)platform withCallback:(GMRCallback)callback
 {
+	// using the full URL here because it cannot run though the API port, it's going to 80
 	NSString*      method = @"POST";
-	NSString*      path   = [NSString stringWithFormat:@"http://hazgame.com/accounts/users/%@/aliases/%@", username, [GMRClient stringForPlatform:platform]];
+	NSString*      path   = [NSString stringWithFormat:@"http://gamepopapp.com/accounts/users/%@/aliases/%@", username, [GMRClient stringForPlatform:platform]];
 	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:alias, @"platformAlias", nil];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
@@ -193,8 +194,9 @@ static NSArray * platformStrings;
 
 - (void)aliases:(GMRCallback)callback
 {	
+	// using the full URL here because it cannot run though the API port, it's going to 80
 	NSString*      method = @"GET";
-	NSString*      path   = [NSString stringWithFormat:@"http://hazgame.com/accounts/users/%@/aliases", username];
+	NSString*      path   = [NSString stringWithFormat:@"http://gamepopapp.com/accounts/users/%@/aliases", username];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil]
 		   withCallback:^(BOOL ok, NSDictionary * response){
@@ -218,7 +220,7 @@ static NSArray * platformStrings;
 	gameId = [GMRUtils cleanupGameId:gameId];
 	
 	NSString*     method = @"GET";
-	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@", [GMRClient stringForPlatform:platform], gameId, matchId];
+	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/players", [GMRClient stringForPlatform:platform], gameId, matchId];
 	
 	NSLog(@"%@", path);
 	

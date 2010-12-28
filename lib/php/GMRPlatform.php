@@ -1,11 +1,13 @@
 <?php
 class GMRPlatform
 {
-	const kXbox360      = 'xbox360';
-	const kWii          = 'wii';
-	const kPlaystation3 = 'playstation3';
-	const kPlaystation2 = 'playstation2';
-	const kPC           = 'pc';
 	const kBattleNet    = 'battlenet';
+	const kPC           = 'pc';
+	const kPlaystation2 = 'playstation2';
+	const kPlaystation3 = 'playstation3';
+	const kSteam        = 'steam';
+	const kUnknown      = 'unknown';
+	const kWii          = 'wii';
+	const kXbox360      = 'xbox360';
 }
 ?>

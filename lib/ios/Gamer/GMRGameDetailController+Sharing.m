@@ -13,6 +13,8 @@
 #import "MFMailComposeViewController+GMRComposeViewStyle.h"
 #import "GMRMatch.h"
 #import "GMRGame.h"
+#import "GMRUtils.h"
+#import "GMRClient.h"
 #import "NSDate+JSON.h"
 
 static UINavigationItem * composeViewNavigationItem;
@@ -21,9 +23,15 @@ static UINavigationItem * composeViewNavigationItem;
 
 - (void)shareEmail
 {
+	NSString * matchUrl = [NSString stringWithFormat:@"http://gamepopapp.com/%@/%@/%@", [GMRClient stringForPlatform:match.platform], [GMRUtils cleanupGameId:match.game.id], match.id];
 	NSString * messageTitle = [NSString stringWithFormat:@"Playing %@", match.game.label];
-	NSString * messageBody = [NSString stringWithFormat:@"%@\n%@\n@ %@\n(%@)\n\nYou in or out?", match.game.label, match.label, [NSDate gamerScheduleTimeString:match.scheduled_time], [NSDate relativeTime:match.scheduled_time]];
+	NSString * messageBody = [NSString stringWithFormat:@"%@\n%@\n@ %@\n(%@)\n\nYou in or out?\n\n%@", match.game.label, 
+							  match.label, 
+							  [NSDate gamerScheduleTimeString:match.scheduled_time], 
+							  [NSDate relativeTime:match.scheduled_time], 
+							  matchUrl];
 	
+	NSLog(@"%@", matchUrl);
 	[self sendMail:messageTitle 
 		   message:messageBody 
 				to:nil];

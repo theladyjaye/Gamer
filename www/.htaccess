@@ -15,6 +15,12 @@ RewriteBase /
 #Header unset ETag  
 #FileETag None
 
+# WWW Routes
+#/platform/game_id/match_id
+RewriteRule ^(battlenet|playstation2|playstation3|steam|wii|xbox360)/([a-z0-9_-]{2,})/([a-f0-9]{32}) /gameDetail.php?arguments[]=$1&arguments[]=$2&arguments[]=$3 [L]
+
+
+# API Routes
 # sinatra routing is the da-bomb... PHP doesn't really do that
 # and it would be a waste to try as mod_rewrite can get us there, 
 # admittedly in a less pretty way, but why re-invent the wheel

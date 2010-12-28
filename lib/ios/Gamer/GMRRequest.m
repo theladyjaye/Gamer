@@ -6,15 +6,16 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#include <dispatch/dispatch.h>
+
 #import "GMRRequest.h"
 #import "GMRTypes.h"
 #import "GMRUtils.h"
 #import "ASIHTTPRequest.h"
 #import "YAJLDocument.h"
-#include <dispatch/dispatch.h>
 
 
-#define API_DOMAIN @"http://hazgame.com:7331"
+#define API_DOMAIN @"http://gamepopapp.com:7331"
 #define USER_AGENT @"GamePop Mobile"
 
 #define GAMER_TESTING 1
