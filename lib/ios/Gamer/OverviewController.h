@@ -8,16 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "GMRViewController.h"
+#import "GMRMatchListSource.h"
 
 
-
-@interface OverviewController : GMRViewController {
+@interface OverviewController : GMRViewController<GMRMatchListSource> {
 	UITableView * matchesTable;
 	UIView * noneView;
 	NSTimer * updateTimer;
+	BOOL matchListSourceUpdateViewOnChange;
 }
 @property(nonatomic, retain)IBOutlet UITableView * matchesTable;
 @property(nonatomic, readonly)NSMutableArray * matches;
+@property(nonatomic, readonly) BOOL matchListSourceUpdateViewOnChange;
 
 - (void)createGame;
 - (void)noMatchesScheduled;

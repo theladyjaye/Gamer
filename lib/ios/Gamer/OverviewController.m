@@ -17,11 +17,15 @@
 #import "GMRMatchListCell.h"
 
 @implementation OverviewController
-@synthesize matchesTable, matches=kScheduledMatches;
+@synthesize matchesTable, matches=kScheduledMatches, matchListSourceUpdateViewOnChange;
 
 
 - (void)viewDidLoad 
 {		
+	// this is going to be handeled on the OverviewController for us.
+	// we do not need it to be YES in this case.
+	matchListSourceUpdateViewOnChange = NO;
+	
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Scheduled"];
 	
 	UIButton * addMatchButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeAdd];

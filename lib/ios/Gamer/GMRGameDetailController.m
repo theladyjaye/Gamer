@@ -11,6 +11,7 @@
 #import "GMRGameDetailController.h"
 #import "GMRGameDetailController+PlayerList.h"
 #import "GMRGameDetailController+Sharing.h"
+
 #import "GMRButton.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
@@ -23,6 +24,8 @@
 #import "UIButton+GMRButtonTypes.h"
 #import "OverviewController.h"
 #import "GMRPlayer.h"
+
+static BOOL isCancelOperation;
 
 @implementation GMRGameDetailController
 @synthesize playersTableView, playersForMatch, gameLabel, platformLabel, descriptionLabel, modeLabel, scheduleTimeLabel, howItWorksView, matchesDataSourceController;
@@ -335,6 +338,7 @@
 
 - (void)cancelGame
 {
+	isCancelOperation = YES;
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
 														 title:@"Cancel Game?" 
 													   message:@"This is a serious moment. Are you sure you wish to cancel this game? All players will be removed and the game deleted." 
@@ -346,6 +350,7 @@
 
 - (void)leaveGame
 {
+	isCancelOperation = NO;
 	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleConfirmation
 														 title:@"Leave Game?" 
 													   message:@"Are you sure you wish to leave this game?" 
@@ -408,6 +413,7 @@
 	}
 	else 
 	{
+		// This updates the users scheduled view (OverviewController)
 		if(kScheduledMatchesViewController)
 		{
 			
@@ -454,11 +460,46 @@
 
 - (void)didLeaveMatch
 {
-	// we may have gotten here from the OverviewController or the LobbyController.  
-	// because of that we cannot use [indexOfObject:] since if we arrived from the LobbyController
-	// the match objects will be differnt/new objects compared to the scheduled matches objects.
 	
-	NSUInteger removeIndex = [kScheduledMatches indexOfObjectPassingTest:^BOOL (id obj, NSUInteger idx, BOOL *stop){
+	// we may have gotten here from the OverviewController or the LobbyController.  
+	
+	// this is going to update the LobbyController if the game was cancelled 
+	// by the creator from said controller. This flag is only set to YES on the LobbyController
+	// we only need to remove it though if it was a cancel operation from the owner.
+	if(isCancelOperation && self.matchesDataSourceController.matchListSourceUpdateViewOnChange)
+	{
+		NSUInteger removeIndex = [self.matchesDataSourceController.matches indexOfObjectPassingTest:^BOOL (id obj, NSUInteger idx, BOOL *stop){
+			GMRMatch * currentMatch = (GMRMatch *)obj;
+			if([currentMatch.id isEqualToString:match.id])
+			{
+				*stop = YES;
+				return YES;
+			}
+			
+			return NO;
+		}];
+		
+		if(removeIndex != NSNotFound)
+		{
+			[self.matchesDataSourceController willChange:NSKeyValueChangeRemoval
+										 valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+												  forKey:@"matches"];
+			
+			[self.matchesDataSourceController.matches removeObjectAtIndex:removeIndex];
+			
+			[self.matchesDataSourceController didChange:NSKeyValueChangeRemoval 
+									    valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+										  		 forKey:@"matches"];
+		}
+		
+		// rest the flag
+		isCancelOperation = NO;
+	}
+	
+	// Update the users scheduled view if necessary.
+	// Was this game in the users scheduled list, lets find out.
+	// regardless of cancel or leave this needs to run.
+	NSUInteger scheduledRemoveIndex = [kScheduledMatches indexOfObjectPassingTest:^BOOL (id obj, NSUInteger idx, BOOL *stop){
 		GMRMatch * currentMatch = (GMRMatch *)obj;
 		if([currentMatch.id isEqualToString:match.id])
 		{
@@ -470,19 +511,19 @@
 	}];
 	
 	// notify the overview controller we changed the matches
-	if(removeIndex != NSNotFound)
+	if(scheduledRemoveIndex != NSNotFound)
 	{
 		if(kScheduledMatchesViewController)
 		{
 		
 			[kScheduledMatchesViewController willChange:NSKeyValueChangeRemoval
-									valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+									valuesAtIndexes:[NSIndexSet indexSetWithIndex:scheduledRemoveIndex] 
 											 forKey:@"matches"];
 			
-			[kScheduledMatches removeObjectAtIndex:removeIndex];
+			[kScheduledMatches removeObjectAtIndex:scheduledRemoveIndex];
 			
 			[kScheduledMatchesViewController didChange:NSKeyValueChangeRemoval 
-								   valuesAtIndexes:[NSIndexSet indexSetWithIndex:removeIndex] 
+								   valuesAtIndexes:[NSIndexSet indexSetWithIndex:scheduledRemoveIndex] 
 											forKey:@"matches"];
 		}
 	}

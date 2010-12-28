@@ -271,7 +271,6 @@
 								<string>D79C06BC12982155000F6DAD</string>
 								<string>D7F3E21912AFDA0700837E14</string>
 								<string>D7AFF522128A68FF00CF1A07</string>
-								<string>D7EEAE53128A20CF0022AF4E</string>
 								<string>D775C4E2128797D800C72E64</string>
 								<string>D775C4E11287978C00C72E64</string>
 								<string>D78F3B5912BA63EF00014188</string>
@@ -280,11 +279,6 @@
 								<string>D7E1713912C3E4F000F6E060</string>
 								<string>D7E1708D12C3D37600F6E060</string>
 								<string>D78CDC0E12B31D4F00D6F3E2</string>
-								<string>D750128712989F710079EB44</string>
-								<string>D75012DD1298CE6A0079EB44</string>
-								<string>D750128E1298A0780079EB44</string>
-								<string>D709BF05129A266B0057EA4B</string>
-								<string>D709BF41129A2B590057EA4B</string>
 								<string>D7208A7D1292BECD009C0624</string>
 								<string>D7EEAD82128A11AF0022AF4E</string>
 								<string>D7B7CA681288FCB000DC33F4</string>
@@ -296,15 +290,15 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>118</integer>
-									<integer>113</integer>
-									<integer>52</integer>
+									<integer>75</integer>
+									<integer>73</integer>
+									<integer>40</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1733}, {305, 861}}</string>
+							<string>{{0, 752}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -339,7 +333,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRGameDetailController+PlayerList.m</string>
+								<string>GMRGameDetailController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -347,11 +341,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRGameDetailController+PlayerList.m</string>
+										<string>GMRGameDetailController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D78C7B2112C967270010649D</string>
+										<string>D78C7B5112C98DBC0010649D</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -394,7 +388,6 @@
 											<string>D7C52E3812BEF11000B9D73C</string>
 											<string>D7C52E3D12BEF11000B9D73C</string>
 											<string>D7C52E8712BEF90900B9D73C</string>
-											<string>D7C52E8812BEF90900B9D73C</string>
 											<string>D7C52E9712BF0FF300B9D73C</string>
 											<string>D7AF656412C2554D00C7ED47</string>
 											<string>D7AF657D12C255B600C7ED47</string>
@@ -428,8 +421,6 @@
 											<string>D7E1724412C3F24600F6E060</string>
 											<string>D7384DBD12C5500B00AE3C96</string>
 											<string>D7384DBE12C5500B00AE3C96</string>
-											<string>D7886D1712C65CCD001F2077</string>
-											<string>D7886D2B12C65D18001F2077</string>
 											<string>D7886D3712C65D67001F2077</string>
 											<string>D7886D4F12C65F91001F2077</string>
 											<string>D7886D5112C65F91001F2077</string>
@@ -446,9 +437,7 @@
 											<string>D79AB80D12C7A00600F2E8AE</string>
 											<string>D79AB84412C7A18800F2E8AE</string>
 											<string>D79AB85712C7A37C00F2E8AE</string>
-											<string>D79AB87812C7BD4700F2E8AE</string>
 											<string>D79AB87912C7BD4700F2E8AE</string>
-											<string>D79AB87A12C7BD4700F2E8AE</string>
 											<string>D79AB89712C7BF2100F2E8AE</string>
 											<string>D79AB89812C7BF2100F2E8AE</string>
 											<string>D79AB8A812C7C17600F2E8AE</string>
@@ -460,13 +449,19 @@
 											<string>D79AB9AF12C814CC00F2E8AE</string>
 											<string>D79AB9F912C8194B00F2E8AE</string>
 											<string>D79AB9FA12C8194B00F2E8AE</string>
-											<string>D78C7A7012C8FAEC0010649D</string>
 											<string>D78C7A7B12C8FB0B0010649D</string>
 											<string>D78C7A9812C8FB5A0010649D</string>
 											<string>D78C7AA912C927A50010649D</string>
-											<string>D78C7AAA12C927A50010649D</string>
-											<string>D78C7B1A12C966DD0010649D</string>
-											<string>D78C7B2012C967220010649D</string>
+											<string>D78C7B2412C967E20010649D</string>
+											<string>D78C7B3A12C988220010649D</string>
+											<string>D78C7B3B12C988220010649D</string>
+											<string>D78C7B3C12C988220010649D</string>
+											<string>D78C7B3D12C988220010649D</string>
+											<string>D78C7B3E12C988220010649D</string>
+											<string>D78C7B3F12C988220010649D</string>
+											<string>D78C7B4012C988220010649D</string>
+											<string>D78C7B4112C988220010649D</string>
+											<string>D78C7B5012C98DB50010649D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -506,8 +501,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1229, -27}}</string>
-										<key>RubberWindowFrame</key>
-										<string>132 68 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -561,7 +554,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{0, 0}, {568, 405}}</string>
+										<string>{{10, 27}, {1229, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>132 68 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -783,7 +778,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D78C7B1E12C966DD0010649D</string>
+		<string>D78C7B4F12C98A790010649D</string>
 		<string>D78C7A5612C8FA3A0010649D</string>
 		<string>D78C7A4812C8F9E40010649D</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

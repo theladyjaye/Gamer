@@ -18,11 +18,14 @@
 
 
 @implementation GMRGameLobbyController
-@synthesize filterCheveron, currentFilter,matchesTable;
+@synthesize filterCheveron, currentFilter,matchesTable, matches, matchListSourceUpdateViewOnChange;
 
 
 - (void)viewDidLoad 
 {
+	
+	// we will need this ViewController to be notified when the match list has been changed.
+	matchListSourceUpdateViewOnChange = YES;
 	
 	self.navigationItem.titleView = [GMRLabel titleLabelWithString:@"Lobby"];
 	
@@ -48,7 +51,51 @@
 	[self applyFilter:filter];
 	[filter release];
 	
+	[self addObserver:self 
+		   forKeyPath:@"matches" 
+			  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
+			  context:nil];
+	
 	[super viewDidLoad];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+	
+	
+	NSKeyValueChange kind = [[change objectForKey:NSKeyValueChangeKindKey] integerValue];
+	NSIndexSet * indexes  = [change objectForKey:NSKeyValueChangeIndexesKey];
+	
+	[matchesTable beginUpdates];
+	
+	switch(kind)
+	{
+		case NSKeyValueChangeInsertion:
+			[matchesTable insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]] 
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;
+			
+		case NSKeyValueChangeRemoval:
+			[matchesTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:[indexes firstIndex] inSection:0]]  
+								withRowAnimation:UITableViewRowAnimationNone];
+			break;		
+	}
+	
+	[matchesTable endUpdates];
+	
+	
+	NSUInteger remaining = [matchesTable numberOfRowsInSection:0];
+	
+	if(remaining == 0)
+	{
+		[self noMatchesScheduled];
+	}
+	else if(noneView && remaining > 0)
+	{
+		[noneView removeFromSuperview];
+		noneView = nil;
+	}
+	
 }
 
 - (void)editLobbyFilters
@@ -246,6 +293,10 @@
 
 
 - (void)dealloc {
+	
+	[self removeObserver:self 
+			  forKeyPath:@"matches"];
+	
 	self.filterCheveron = nil;
 	self.matchesTable = nil;
     

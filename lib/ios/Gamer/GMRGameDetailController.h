@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "GMRViewController.h"
+#import "GMRMatchListSource.h"
 
 enum{
 	GMRMatchMembershipUnknown,
@@ -32,7 +33,7 @@ typedef NSUInteger GMRMatchMembership;
 	NSTimer * updateTimer;
 	
 	UIToolbar * toolbar;
-	UIViewController * matchesDataSourceController;
+	NSObject<GMRMatchListSource> * matchesDataSourceController;
 	
 	GMRMatchMembership membership;
 }
@@ -45,7 +46,7 @@ typedef NSUInteger GMRMatchMembership;
 @property(nonatomic, retain) IBOutlet UILabel * scheduleTimeLabel;
 @property(nonatomic, retain) IBOutlet UILabel * platformLabel;
 @property(nonatomic, retain) IBOutlet UIView * howItWorksView;
-@property(nonatomic, assign) UIViewController * matchesDataSourceController;
+@property(nonatomic, assign) NSObject<GMRMatchListSource> * matchesDataSourceController;
 
 - (id)initWithMatch:(GMRMatch *)value membership:(GMRMatchMembership)member;
 - (void)shareGame;
