@@ -62,8 +62,8 @@
 	
 	if(ti < 1) 
 	{
-		suffix = @"now";
-		prefix = @"starts";
+		suffix = @"";
+		prefix = @"started";
 	} 
 	else if (ti <= 60) 
 	{

@@ -102,6 +102,18 @@
 			D7635F8012CA82970081E4A2 /* PBXTextBookmark */ = D7635F8012CA82970081E4A2 /* PBXTextBookmark */;
 			D7635F8212CA84940081E4A2 /* PBXTextBookmark */ = D7635F8212CA84940081E4A2 /* PBXTextBookmark */;
 			D7635F8312CA84980081E4A2 /* PBXTextBookmark */ = D7635F8312CA84980081E4A2 /* PBXTextBookmark */;
+			D7635F8412CA88100081E4A2 /* PBXTextBookmark */ = D7635F8412CA88100081E4A2 /* PBXTextBookmark */;
+			D7635F8712CA88360081E4A2 /* PBXTextBookmark */ = D7635F8712CA88360081E4A2 /* PBXTextBookmark */;
+			D7635F8812CA88360081E4A2 /* PBXTextBookmark */ = D7635F8812CA88360081E4A2 /* PBXTextBookmark */;
+			D7635F8912CA88360081E4A2 /* PBXTextBookmark */ = D7635F8912CA88360081E4A2 /* PBXTextBookmark */;
+			D7635F8A12CA88360081E4A2 /* PBXTextBookmark */ = D7635F8A12CA88360081E4A2 /* PBXTextBookmark */;
+			D7635F8C12CA886D0081E4A2 /* PBXTextBookmark */ = D7635F8C12CA886D0081E4A2 /* PBXTextBookmark */;
+			D7635F8D12CA886D0081E4A2 /* PBXTextBookmark */ = D7635F8D12CA886D0081E4A2 /* PBXTextBookmark */;
+			D7635F8E12CA88740081E4A2 /* PBXTextBookmark */ = D7635F8E12CA88740081E4A2 /* PBXTextBookmark */;
+			D7635F8F12CAB3F50081E4A2 /* PBXTextBookmark */ = D7635F8F12CAB3F50081E4A2 /* PBXTextBookmark */;
+			D7635F9012CAB4000081E4A2 /* PBXTextBookmark */ = D7635F9012CAB4000081E4A2 /* PBXTextBookmark */;
+			D7635F9312CAC5F80081E4A2 /* PBXTextBookmark */ = D7635F9312CAC5F80081E4A2 /* PBXTextBookmark */;
+			D7635F9412CAC5FB0081E4A2 /* PBXTextBookmark */ = D7635F9412CAC5FB0081E4A2 /* PBXTextBookmark */;
 			D783F80C12B216E800A04D59 = D783F80C12B216E800A04D59 /* PBXTextBookmark */;
 			D7840F4012B12CE30049E3F4 = D7840F4012B12CE30049E3F4 /* PBXTextBookmark */;
 			D7886D3712C65D67001F2077 = D7886D3712C65D67001F2077 /* PBXTextBookmark */;
@@ -511,7 +523,7 @@
 		ignoreCount = 0;
 		lineNumber = 98;
 		location = HazGame;
-		modificationTime = 315260414.187363;
+		modificationTime = 315275220.127923;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -786,6 +798,126 @@
 		vrLen = 1860;
 		vrLoc = 41;
 	};
+	D7635F8412CA88100081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D79E57AE12B7C65C0050E284 /* GMRGameDetailController+Sharing.m */;
+		name = "GMRGameDetailController+Sharing.m: 25";
+		rLen = 0;
+		rLoc = 580;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 559;
+	};
+	D7635F8712CA88360081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D79E57AE12B7C65C0050E284 /* GMRGameDetailController+Sharing.m */;
+		name = "GMRGameDetailController+Sharing.m: 25";
+		rLen = 0;
+		rLoc = 580;
+		rType = 0;
+		vrLen = 1860;
+		vrLoc = 41;
+	};
+	D7635F8812CA88360081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 42";
+		rLen = 23;
+		rLoc = 999;
+		rType = 0;
+		vrLen = 1659;
+		vrLoc = 0;
+	};
+	D7635F8912CA88360081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 65";
+		rLen = 0;
+		rLoc = 1677;
+		rType = 0;
+		vrLen = 1532;
+		vrLoc = 1420;
+	};
+	D7635F8A12CA88360081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 65";
+		rLen = 0;
+		rLoc = 1677;
+		rType = 0;
+		vrLen = 1455;
+		vrLoc = 1420;
+	};
+	D7635F8C12CA886D0081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D79E57AE12B7C65C0050E284 /* GMRGameDetailController+Sharing.m */;
+		name = "GMRGameDetailController+Sharing.m: 25";
+		rLen = 0;
+		rLoc = 580;
+		rType = 0;
+		vrLen = 721;
+		vrLoc = 559;
+	};
+	D7635F8D12CA886D0081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 65";
+		rLen = 0;
+		rLoc = 1677;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 1420;
+	};
+	D7635F8E12CA88740081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 75";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 1675;
+		vrLoc = 672;
+	};
+	D7635F8F12CAB3F50081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 75";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 1050;
+	};
+	D7635F9012CAB4000081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 75";
+		rLen = 0;
+		rLoc = 1818;
+		rType = 0;
+		vrLen = 1607;
+		vrLoc = 1050;
+	};
+	D7635F9312CAC5F80081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 58";
+		rLen = 0;
+		rLoc = 1541;
+		rType = 0;
+		vrLen = 396;
+		vrLoc = 1420;
+	};
+	D7635F9412CAC5FB0081E4A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7AFF524128A693200CF1A07 /* NSDate+JSON.m */;
+		name = "NSDate+JSON.m: 58";
+		rLen = 0;
+		rLoc = 1541;
+		rType = 0;
+		vrLen = 1549;
+		vrLoc = 1050;
+	};
 	D775C4B1128795A400C72E64 /* GamePop */ = {
 		activeExec = 0;
 		executables = (
@@ -936,7 +1068,7 @@
 		ignoreCount = 0;
 		lineNumber = 283;
 		location = GamePop;
-		modificationTime = 315260414.1885;
+		modificationTime = 315275220.128811;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1778,9 +1910,9 @@
 	};
 	D79E57AE12B7C65C0050E284 /* GMRGameDetailController+Sharing.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1300, 2548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 2574}}";
 			sepNavSelRange = "{580, 0}";
-			sepNavVisRange = "{41, 1860}";
+			sepNavVisRange = "{559, 721}";
 		};
 	};
 	D79E57C912B7C9DA0050E284 /* PBXTextBookmark */ = {
@@ -1995,9 +2127,9 @@
 	};
 	D7AFF524128A693200CF1A07 /* NSDate+JSON.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1168, 2054}}";
-			sepNavSelRange = "{999, 23}";
-			sepNavVisRange = "{0, 1681}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 1872}}";
+			sepNavSelRange = "{1541, 0}";
+			sepNavVisRange = "{1050, 1549}";
 		};
 	};
 	D7B506B812A4AD92005F2413 /* NSDate+JSON.m:105 */ = {
@@ -2014,7 +2146,7 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = HazGame;
-		modificationTime = 315260414.188074;
+		modificationTime = 315275220.128448;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};

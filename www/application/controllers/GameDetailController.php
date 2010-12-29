@@ -33,6 +33,11 @@ class GameDetailController extends GMRController
 		}
 	}
 	
+	public function platform()
+	{
+		return $this->platform;
+	}
+	
 	public function match()
 	{
 		static $response = null;

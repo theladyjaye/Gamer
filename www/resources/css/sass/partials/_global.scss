@@ -1,0 +1,86 @@
+@mixin rounded-corners{
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px;
+	border-radius:7px;
+}
+
+body{
+	border-top:10px solid #eee;
+	background:#fff url("../images/backgrounds/background-global-header.png") repeat-x top left;
+	text-align: center;
+	font-family:verdana, arial, sans-serif;
+	font-size:12px;
+	color:#888;
+}
+
+#window{
+	margin: 0 auto;
+	margin-top:50px;
+	width: 888px;
+	text-align:left;
+	height:600px;
+}
+
+#iphone{
+	background:url("../images/backgrounds/backgrond-iphone4.png") no-repeat top left;
+	width:323px;
+	height:652px;
+	position:absolute;
+}
+
+#iphone img{
+	position:relative;
+	left:50px;
+	top:87px;
+}
+
+
+#content {
+	position:relative;
+	background:url("../images/backgrounds/background-window.png") repeat-x top left;
+	left:292px;
+	top:50px;
+	min-height:90px;
+	width:530px;
+	height:465px;
+	@include rounded-corners;
+}
+
+#header{
+	padding:24px 0 16px 19px;
+	border-bottom:1px solid #f4f4f4;
+}
+
+#header h1.appname{
+	text-indent:-5000em;
+	background:url("../images/text/txt-gamepop.png") no-repeat top left;
+	width:129px;
+	height:28px;
+	padding-bottom:3px;
+}
+
+#header h2.appsub{
+	text-indent:-5000em;
+	background:url("../images/text/txt-appsub.png") no-repeat top left;
+	width:242px;
+	height:17px;
+}
+
+#body {
+	background:url("../images/backgrounds/background-clock.png") no-repeat top left;
+	width:100%;
+	min-height:171px;
+	margin-top:8px;
+	padding-left:25px;
+}
+
+#body p{
+	width:400px;
+	padding-bottom:15px;
+}
+#copyright{
+	font-size:10px;
+	position:absolute;
+	bottom:5px;
+	right:0px;
+}
