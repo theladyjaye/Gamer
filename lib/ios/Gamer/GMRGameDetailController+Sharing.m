@@ -23,15 +23,15 @@ static UINavigationItem * composeViewNavigationItem;
 
 - (void)shareEmail
 {
-	NSString * matchUrl = [NSString stringWithFormat:@"http://gamepopapp.com/%@/%@/%@", [GMRClient stringForPlatform:match.platform], [GMRUtils cleanupGameId:match.game.id], match.id];
+	//NSString * matchUrl = [NSString stringWithFormat:@"http://gamepopapp.com/%@/%@/%@", [GMRClient stringForPlatform:match.platform], [GMRUtils cleanupGameId:match.game.id], match.id];
 	NSString * messageTitle = [NSString stringWithFormat:@"Playing %@", match.game.label];
 	NSString * messageBody = [NSString stringWithFormat:@"%@\n%@\n@ %@\n(%@)\n\nYou in or out?\n\n%@", match.game.label, 
 							  match.label, 
 							  [NSDate gamerScheduleTimeString:match.scheduled_time], 
 							  [NSDate relativeTime:match.scheduled_time], 
-							  matchUrl];
+							  match.publicUrl];
 	
-	NSLog(@"%@", matchUrl);
+	NSLog(@"%@", match.publicUrl);
 	[self sendMail:messageTitle 
 		   message:messageBody 
 				to:nil];
@@ -45,6 +45,11 @@ static UINavigationItem * composeViewNavigationItem;
 - (void)shareTwitter
 {
 
+}
+
+- (void)shareCopyUrl
+{
+	[UIPasteboard generalPasteboard].string = match.publicUrl;
 }
 
 - (void)sendMail:(NSString *)messageTitle message:(NSString *)messageBody to:(NSString *)email

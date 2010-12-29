@@ -235,7 +235,7 @@ static BOOL isCancelOperation;
 	
 	UIBarButtonItem * action = [[UIBarButtonItem alloc] initWithCustomView:actionButton];
 	UIBarButtonItem * spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-	UIBarButtonItem * share = [[UIBarButtonItem alloc] initWithCustomView:shareButton];
+	UIBarButtonItem * share  = [[UIBarButtonItem alloc] initWithCustomView:shareButton];
 	
 	NSArray * items = [NSArray arrayWithObjects:action, spacer, share, nil];
 	
@@ -250,13 +250,11 @@ static BOOL isCancelOperation;
 
 - (void)shareGame
 {
-	NSLog(@"%@", self.parentViewController);
-	NSLog(@"%@", self.parentViewController.parentViewController);
 	UIActionSheet * sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Sharing %@", match.game.label]
 														delegate:self 
 											   cancelButtonTitle:@"Cancel" 
 										  destructiveButtonTitle:nil 
-											   otherButtonTitles:@"Email", @"Facebook", @"Twitter", nil];
+											   otherButtonTitles:@"Email", @"Copy Game Url", nil];
 	
 	[sheet showInView:self.parentViewController.parentViewController.view];
 }
@@ -268,14 +266,19 @@ static BOOL isCancelOperation;
 		case 0: // email
 			[self shareEmail];
 			break;
+			
+		case 1:
+			[self shareCopyUrl];
+			break;
 		
-		case 1: // Facebook
+		/*case 1: // Facebook
 			[self shareFacebook];
 			break;
 			
 		case 2: // Twitter
 			[self shareTwitter];
 			break;
+		 */
 			
 	}
 	

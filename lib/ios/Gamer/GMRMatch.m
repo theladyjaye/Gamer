@@ -10,10 +10,11 @@
 #import "GMRGame.h"
 #import "GMRTypes.h"
 #import "GMRClient.h"
+#import "GMRUtils.h"
 #import "NSDate+JSON.h"
 
 @implementation GMRMatch
-@synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id;
+@synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id, publicUrl;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary
 {
@@ -29,6 +30,12 @@
 	match.availability      = [[dictionary objectForKey:@"availability"] isEqualToString:@"public"] ? GMRMatchAvailabliltyPublic : GMRMatchAvailabliltyPrivate; 
 	match.game.selectedMode = [match.game.modes indexOfObject:match.mode];
 	return [match autorelease];
+}
+
+- (NSString *)publicUrl
+{
+	return [NSString stringWithFormat:@"http://gamepopapp.com/%@/%@/%@", [GMRClient stringForPlatform:self.platform], [GMRUtils cleanupGameId:self.game.id], self.id];
+	
 }
 
 - (void)dealloc

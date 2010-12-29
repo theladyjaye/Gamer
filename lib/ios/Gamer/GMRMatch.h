@@ -32,6 +32,7 @@
 @property(nonatomic, assign) GMRPlatform platform;
 @property(nonatomic, assign) GMRMatchAvailablilty availability;
 @property(nonatomic, assign) NSInteger maxPlayers;
+@property(nonatomic, readonly) NSString * publicUrl;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary;
 
