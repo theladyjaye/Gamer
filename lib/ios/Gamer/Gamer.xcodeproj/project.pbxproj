@@ -9,14 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA747D9F0F9514B9006C5449 /* Gamer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		D709BB741299765D0057EA4B /* ButtonInputClosed.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BB701299765D0057EA4B /* ButtonInputClosed.png */; };
-		D709BB751299765D0057EA4B /* ButtonInputClosedLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BB711299765D0057EA4B /* ButtonInputClosedLarge.png */; };
-		D709BB761299765D0057EA4B /* ButtonInputOpen.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BB721299765D0057EA4B /* ButtonInputOpen.png */; };
-		D709BB771299765D0057EA4B /* ButtonInputOpenLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BB731299765D0057EA4B /* ButtonInputOpenLarge.png */; };
 		D709BB7A12997BC70057EA4B /* GMRMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D709BB7912997BC70057EA4B /* GMRMenuButton.m */; };
 		D709BB9D12997FC90057EA4B /* GMRMenuButtonAltLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D709BB9C12997FC90057EA4B /* GMRMenuButtonAltLabel.m */; };
-		D709BBDC12998C5C0057EA4B /* ButtonInputLargeSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BBDA12998C5C0057EA4B /* ButtonInputLargeSelected.png */; };
-		D709BBDD12998C5C0057EA4B /* ButtonInputSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D709BBDB12998C5C0057EA4B /* ButtonInputSelected.png */; };
 		D709BE221299BFBD0057EA4B /* GMRMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */; };
 		D709BF09129A26AD0057EA4B /* GMRChooseGameAndMode.m in Sources */ = {isa = PBXBuildFile; fileRef = D709BF07129A26AD0057EA4B /* GMRChooseGameAndMode.m */; };
 		D709BF0A129A26AD0057EA4B /* GMRChooseGameAndMode.xib in Resources */ = {isa = PBXBuildFile; fileRef = D709BF08129A26AD0057EA4B /* GMRChooseGameAndMode.xib */; };
@@ -32,38 +26,6 @@
 		D714A126129C0B3400151FC9 /* GMRChooseDateTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = D714A124129C0B3400151FC9 /* GMRChooseDateTime.xib */; };
 		D7208A811292BEFE009C0624 /* GMRGameDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */; };
 		D7208A821292BEFE009C0624 /* GMRGameDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7208A801292BEFE009C0624 /* GMRGameDetailController.xib */; };
-		D7208AA81292C884009C0624 /* ButtonGrayFull.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A881292C884009C0624 /* ButtonGrayFull.png */; };
-		D7208AA91292C884009C0624 /* ButtonGrayFull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A891292C884009C0624 /* ButtonGrayFull@2x.png */; };
-		D7208AAA1292C884009C0624 /* ButtonGrayFullSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8A1292C884009C0624 /* ButtonGrayFullSelected.png */; };
-		D7208AAB1292C884009C0624 /* ButtonGrayFullSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8B1292C884009C0624 /* ButtonGrayFullSelected@2x.png */; };
-		D7208AAC1292C884009C0624 /* ButtonRedFull.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8C1292C884009C0624 /* ButtonRedFull.png */; };
-		D7208AAD1292C884009C0624 /* ButtonRedFull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8D1292C884009C0624 /* ButtonRedFull@2x.png */; };
-		D7208AAE1292C884009C0624 /* ButtonRedFullSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8E1292C884009C0624 /* ButtonRedFullSelected.png */; };
-		D7208AAF1292C884009C0624 /* ButtonRedFullSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A8F1292C884009C0624 /* ButtonRedFullSelected@2x.png */; };
-		D7208AB01292C884009C0624 /* ButtonTealFull.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A901292C884009C0624 /* ButtonTealFull.png */; };
-		D7208AB11292C884009C0624 /* ButtonTealFull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A911292C884009C0624 /* ButtonTealFull@2x.png */; };
-		D7208AB21292C884009C0624 /* ButtonTealFullSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A921292C884009C0624 /* ButtonTealFullSelected.png */; };
-		D7208AB31292C884009C0624 /* ButtonTealFullSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A931292C884009C0624 /* ButtonTealFullSelected@2x.png */; };
-		D7208AB41292C884009C0624 /* ButtonYellowFull.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A941292C884009C0624 /* ButtonYellowFull.png */; };
-		D7208AB51292C884009C0624 /* ButtonYellowFull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A951292C884009C0624 /* ButtonYellowFull@2x.png */; };
-		D7208AB61292C884009C0624 /* ButtonYellowFullSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A961292C884009C0624 /* ButtonYellowFullSelected.png */; };
-		D7208AB71292C884009C0624 /* ButtonYellowFullSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A971292C884009C0624 /* ButtonYellowFullSelected@2x.png */; };
-		D7208AB81292C884009C0624 /* GameDetailHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A981292C884009C0624 /* GameDetailHeader.png */; };
-		D7208AB91292C884009C0624 /* GameDetailHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A991292C884009C0624 /* GameDetailHeader@2x.png */; };
-		D7208ABA1292C884009C0624 /* PlatformBattleNet.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9A1292C884009C0624 /* PlatformBattleNet.png */; };
-		D7208ABB1292C884009C0624 /* PlatformBattleNet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9B1292C884009C0624 /* PlatformBattleNet@2x.png */; };
-		D7208ABC1292C884009C0624 /* PlatformPlaystation2.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9C1292C884009C0624 /* PlatformPlaystation2.png */; };
-		D7208ABD1292C884009C0624 /* PlatformPlaystation2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9D1292C884009C0624 /* PlatformPlaystation2@2x.png */; };
-		D7208ABE1292C884009C0624 /* PlatformPlaystation3.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9E1292C884009C0624 /* PlatformPlaystation3.png */; };
-		D7208ABF1292C884009C0624 /* PlatformPlaystation3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208A9F1292C884009C0624 /* PlatformPlaystation3@2x.png */; };
-		D7208AC01292C884009C0624 /* PlatformWii.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA01292C884009C0624 /* PlatformWii.png */; };
-		D7208AC11292C884009C0624 /* PlatformWii@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA11292C884009C0624 /* PlatformWii@2x.png */; };
-		D7208AC21292C884009C0624 /* PlatformXbox360.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA21292C884009C0624 /* PlatformXbox360.png */; };
-		D7208AC31292C884009C0624 /* PlatformXbox360@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA31292C884009C0624 /* PlatformXbox360@2x.png */; };
-		D7208AC41292C884009C0624 /* PlayerCellBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA41292C884009C0624 /* PlayerCellBackground.png */; };
-		D7208AC51292C884009C0624 /* PlayerCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA51292C884009C0624 /* PlayerCellBackground@2x.png */; };
-		D7208AC61292C884009C0624 /* PlayerCellBackgroundOpen.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA61292C884009C0624 /* PlayerCellBackgroundOpen.png */; };
-		D7208AC71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7208AA71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png */; };
 		D727C3311287D098001F2BAF /* GMRAuthenticationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */; };
 		D727C3321287D098001F2BAF /* GMRAuthenticationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */; };
 		D727C3371287D163001F2BAF /* GMRAuthenticationInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */; };
@@ -97,14 +59,6 @@
 		D745078812A9F93800034CD6 /* GMRGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D745078712A9F93800034CD6 /* GMRGameListCell.m */; };
 		D74507A712A9FBC700034CD6 /* GMRModeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D74507A612A9FBC700034CD6 /* GMRModeListCell.m */; };
 		D746BFBE12984E61003ADC09 /* GMRPlatformBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */; };
-		D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = D747507F1290315100342AD1 /* MatchListCellBottom.png */; };
-		D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750801290315100342AD1 /* MatchListCellBottom@2x.png */; };
-		D747509F129036E400342AD1 /* MatchListCellBottomPodShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */; };
-		D74750A0129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */; };
-		D74750C812907BA600342AD1 /* MatchListCellBoxArt.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */; };
-		D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */; };
-		D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */; };
-		D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */; };
 		D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */; };
 		D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */; };
 		D75012921298A0990079EB44 /* GMRChoosePlatformController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012901298A0990079EB44 /* GMRChoosePlatformController.m */; };
@@ -175,8 +129,6 @@
 		D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */; };
 		D78F3B5E12BA640D00014188 /* GMRGameLobbyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
-		D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */; };
-		D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */; };
 		D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */; };
 		D79AB89112C7BE7400F2E8AE /* GMRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D79AB89012C7BE7400F2E8AE /* GMRPlayer.m */; };
 		D79C06C012982163000F6DAD /* GMRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D79C06BF12982163000F6DAD /* GMRButton.m */; };
@@ -243,7 +195,6 @@
 		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
 		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
-		D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */ = {isa = PBXBuildFile; fileRef = D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */; };
 		D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE3512129785A6008E84EB /* GMRViewController.m */; };
 		D7C0CCD112A60B4A00843E34 /* ButtonJoin.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCCD12A60B4A00843E34 /* ButtonJoin.png */; };
 		D7C0CCD212A60B4A00843E34 /* ButtonJoin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C0CCCE12A60B4A00843E34 /* ButtonJoin@2x.png */; };
@@ -417,16 +368,10 @@
 		AA747D9E0F9514B9006C5449 /* Gamer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamer_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D709BB701299765D0057EA4B /* ButtonInputClosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputClosed.png; sourceTree = "<group>"; };
-		D709BB711299765D0057EA4B /* ButtonInputClosedLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputClosedLarge.png; sourceTree = "<group>"; };
-		D709BB721299765D0057EA4B /* ButtonInputOpen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputOpen.png; sourceTree = "<group>"; };
-		D709BB731299765D0057EA4B /* ButtonInputOpenLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputOpenLarge.png; sourceTree = "<group>"; };
 		D709BB7812997BC70057EA4B /* GMRMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMenuButton.h; sourceTree = "<group>"; };
 		D709BB7912997BC70057EA4B /* GMRMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMenuButton.m; sourceTree = "<group>"; };
 		D709BB9B12997FC90057EA4B /* GMRMenuButtonAltLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMenuButtonAltLabel.h; sourceTree = "<group>"; };
 		D709BB9C12997FC90057EA4B /* GMRMenuButtonAltLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMenuButtonAltLabel.m; sourceTree = "<group>"; };
-		D709BBDA12998C5C0057EA4B /* ButtonInputLargeSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputLargeSelected.png; sourceTree = "<group>"; };
-		D709BBDB12998C5C0057EA4B /* ButtonInputSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonInputSelected.png; sourceTree = "<group>"; };
 		D709BE1F1299BC9A0057EA4B /* GMRCreateGameGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRCreateGameGlobals.h; sourceTree = "<group>"; };
 		D709BE201299BFBD0057EA4B /* GMRMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMatch.h; sourceTree = "<group>"; };
 		D709BE211299BFBD0057EA4B /* GMRMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatch.m; sourceTree = "<group>"; };
@@ -451,38 +396,6 @@
 		D7208A7E1292BEFE009C0624 /* GMRGameDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameDetailController.h; sourceTree = "<group>"; };
 		D7208A7F1292BEFE009C0624 /* GMRGameDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameDetailController.m; sourceTree = "<group>"; };
 		D7208A801292BEFE009C0624 /* GMRGameDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRGameDetailController.xib; sourceTree = "<group>"; };
-		D7208A881292C884009C0624 /* ButtonGrayFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGrayFull.png; sourceTree = "<group>"; };
-		D7208A891292C884009C0624 /* ButtonGrayFull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonGrayFull@2x.png"; sourceTree = "<group>"; };
-		D7208A8A1292C884009C0624 /* ButtonGrayFullSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGrayFullSelected.png; sourceTree = "<group>"; };
-		D7208A8B1292C884009C0624 /* ButtonGrayFullSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonGrayFullSelected@2x.png"; sourceTree = "<group>"; };
-		D7208A8C1292C884009C0624 /* ButtonRedFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRedFull.png; sourceTree = "<group>"; };
-		D7208A8D1292C884009C0624 /* ButtonRedFull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonRedFull@2x.png"; sourceTree = "<group>"; };
-		D7208A8E1292C884009C0624 /* ButtonRedFullSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRedFullSelected.png; sourceTree = "<group>"; };
-		D7208A8F1292C884009C0624 /* ButtonRedFullSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonRedFullSelected@2x.png"; sourceTree = "<group>"; };
-		D7208A901292C884009C0624 /* ButtonTealFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonTealFull.png; sourceTree = "<group>"; };
-		D7208A911292C884009C0624 /* ButtonTealFull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonTealFull@2x.png"; sourceTree = "<group>"; };
-		D7208A921292C884009C0624 /* ButtonTealFullSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonTealFullSelected.png; sourceTree = "<group>"; };
-		D7208A931292C884009C0624 /* ButtonTealFullSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonTealFullSelected@2x.png"; sourceTree = "<group>"; };
-		D7208A941292C884009C0624 /* ButtonYellowFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonYellowFull.png; sourceTree = "<group>"; };
-		D7208A951292C884009C0624 /* ButtonYellowFull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonYellowFull@2x.png"; sourceTree = "<group>"; };
-		D7208A961292C884009C0624 /* ButtonYellowFullSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonYellowFullSelected.png; sourceTree = "<group>"; };
-		D7208A971292C884009C0624 /* ButtonYellowFullSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ButtonYellowFullSelected@2x.png"; sourceTree = "<group>"; };
-		D7208A981292C884009C0624 /* GameDetailHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameDetailHeader.png; sourceTree = "<group>"; };
-		D7208A991292C884009C0624 /* GameDetailHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GameDetailHeader@2x.png"; sourceTree = "<group>"; };
-		D7208A9A1292C884009C0624 /* PlatformBattleNet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatformBattleNet.png; sourceTree = "<group>"; };
-		D7208A9B1292C884009C0624 /* PlatformBattleNet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlatformBattleNet@2x.png"; sourceTree = "<group>"; };
-		D7208A9C1292C884009C0624 /* PlatformPlaystation2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatformPlaystation2.png; sourceTree = "<group>"; };
-		D7208A9D1292C884009C0624 /* PlatformPlaystation2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlatformPlaystation2@2x.png"; sourceTree = "<group>"; };
-		D7208A9E1292C884009C0624 /* PlatformPlaystation3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatformPlaystation3.png; sourceTree = "<group>"; };
-		D7208A9F1292C884009C0624 /* PlatformPlaystation3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlatformPlaystation3@2x.png"; sourceTree = "<group>"; };
-		D7208AA01292C884009C0624 /* PlatformWii.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatformWii.png; sourceTree = "<group>"; };
-		D7208AA11292C884009C0624 /* PlatformWii@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlatformWii@2x.png"; sourceTree = "<group>"; };
-		D7208AA21292C884009C0624 /* PlatformXbox360.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlatformXbox360.png; sourceTree = "<group>"; };
-		D7208AA31292C884009C0624 /* PlatformXbox360@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlatformXbox360@2x.png"; sourceTree = "<group>"; };
-		D7208AA41292C884009C0624 /* PlayerCellBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayerCellBackground.png; sourceTree = "<group>"; };
-		D7208AA51292C884009C0624 /* PlayerCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayerCellBackground@2x.png"; sourceTree = "<group>"; };
-		D7208AA61292C884009C0624 /* PlayerCellBackgroundOpen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayerCellBackgroundOpen.png; sourceTree = "<group>"; };
-		D7208AA71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayerCellBackgroundOpen@2x.png"; sourceTree = "<group>"; };
 		D727C32E1287D098001F2BAF /* GMRAuthenticationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRAuthenticationController.h; sourceTree = "<group>"; };
 		D727C32F1287D098001F2BAF /* GMRAuthenticationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRAuthenticationController.m; sourceTree = "<group>"; };
 		D727C3301287D098001F2BAF /* GMRAuthenticationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRAuthenticationController.xib; sourceTree = "<group>"; };
@@ -533,14 +446,6 @@
 		D74507A612A9FBC700034CD6 /* GMRModeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRModeListCell.m; sourceTree = "<group>"; };
 		D746BFBC12984E61003ADC09 /* GMRPlatformBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlatformBanner.h; sourceTree = "<group>"; };
 		D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlatformBanner.m; sourceTree = "<group>"; };
-		D747507F1290315100342AD1 /* MatchListCellBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottom.png; sourceTree = "<group>"; };
-		D74750801290315100342AD1 /* MatchListCellBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBottom@2x.png"; sourceTree = "<group>"; };
-		D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBottomPodShadow.png; sourceTree = "<group>"; };
-		D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBottomPodShadow@2x.png"; sourceTree = "<group>"; };
-		D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArt.png; sourceTree = "<group>"; };
-		D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArt@2x.png"; sourceTree = "<group>"; };
-		D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellBoxArtShadow.png; sourceTree = "<group>"; };
-		D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellBoxArtShadow@2x.png"; sourceTree = "<group>"; };
 		D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodCheckboxTall.png; path = Images/Light/ButtonPodCheckboxTall.png; sourceTree = "<group>"; };
 		D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodCheckboxTall@2x.png"; path = "Images/Light/ButtonPodCheckboxTall@2x.png"; sourceTree = "<group>"; };
 		D750128F1298A0990079EB44 /* GMRChoosePlatformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChoosePlatformController.h; sourceTree = "<group>"; };
@@ -621,8 +526,6 @@
 		D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameLobbyController.m; sourceTree = "<group>"; };
 		D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRGameLobbyController.xib; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
-		D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatchListCellTop.png; sourceTree = "<group>"; };
-		D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MatchListCellTop@2x.png"; sourceTree = "<group>"; };
 		D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMatchListCell.h; sourceTree = "<group>"; };
 		D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatchListCell.m; sourceTree = "<group>"; };
 		D79AB88F12C7BE7400F2E8AE /* GMRPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlayer.h; sourceTree = "<group>"; };
@@ -699,7 +602,6 @@
 		D7B7CB82128909D400DC33F4 /* GMRMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMainController.h; sourceTree = "<group>"; };
 		D7B7CB83128909D400DC33F4 /* GMRMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMainController.m; sourceTree = "<group>"; };
 		D7B7CB84128909D400DC33F4 /* GMRMainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMainController.xib; sourceTree = "<group>"; };
-		D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AccessorySelected.png; sourceTree = "<group>"; };
 		D7BE3511129785A6008E84EB /* GMRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRViewController.h; sourceTree = "<group>"; };
 		D7BE3512129785A6008E84EB /* GMRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRViewController.m; sourceTree = "<group>"; };
 		D7C0CCCD12A60B4A00843E34 /* ButtonJoin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonJoin.png; path = Images/Light/ButtonJoin.png; sourceTree = "<group>"; };
@@ -1470,55 +1372,6 @@
 		D7B41DF91287AAE0005BD0B4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				D7B7DCCF129B7FD8003AD661 /* AccessorySelected.png */,
-				D709BBDA12998C5C0057EA4B /* ButtonInputLargeSelected.png */,
-				D709BBDB12998C5C0057EA4B /* ButtonInputSelected.png */,
-				D709BB701299765D0057EA4B /* ButtonInputClosed.png */,
-				D709BB711299765D0057EA4B /* ButtonInputClosedLarge.png */,
-				D709BB721299765D0057EA4B /* ButtonInputOpen.png */,
-				D709BB731299765D0057EA4B /* ButtonInputOpenLarge.png */,
-				D7208A881292C884009C0624 /* ButtonGrayFull.png */,
-				D7208A891292C884009C0624 /* ButtonGrayFull@2x.png */,
-				D7208A8A1292C884009C0624 /* ButtonGrayFullSelected.png */,
-				D7208A8B1292C884009C0624 /* ButtonGrayFullSelected@2x.png */,
-				D7208A8C1292C884009C0624 /* ButtonRedFull.png */,
-				D7208A8D1292C884009C0624 /* ButtonRedFull@2x.png */,
-				D7208A8E1292C884009C0624 /* ButtonRedFullSelected.png */,
-				D7208A8F1292C884009C0624 /* ButtonRedFullSelected@2x.png */,
-				D7208A901292C884009C0624 /* ButtonTealFull.png */,
-				D7208A911292C884009C0624 /* ButtonTealFull@2x.png */,
-				D7208A921292C884009C0624 /* ButtonTealFullSelected.png */,
-				D7208A931292C884009C0624 /* ButtonTealFullSelected@2x.png */,
-				D7208A941292C884009C0624 /* ButtonYellowFull.png */,
-				D7208A951292C884009C0624 /* ButtonYellowFull@2x.png */,
-				D7208A961292C884009C0624 /* ButtonYellowFullSelected.png */,
-				D7208A971292C884009C0624 /* ButtonYellowFullSelected@2x.png */,
-				D7208A981292C884009C0624 /* GameDetailHeader.png */,
-				D7208A991292C884009C0624 /* GameDetailHeader@2x.png */,
-				D7208A9A1292C884009C0624 /* PlatformBattleNet.png */,
-				D7208A9B1292C884009C0624 /* PlatformBattleNet@2x.png */,
-				D7208A9C1292C884009C0624 /* PlatformPlaystation2.png */,
-				D7208A9D1292C884009C0624 /* PlatformPlaystation2@2x.png */,
-				D7208A9E1292C884009C0624 /* PlatformPlaystation3.png */,
-				D7208A9F1292C884009C0624 /* PlatformPlaystation3@2x.png */,
-				D7208AA01292C884009C0624 /* PlatformWii.png */,
-				D7208AA11292C884009C0624 /* PlatformWii@2x.png */,
-				D7208AA21292C884009C0624 /* PlatformXbox360.png */,
-				D7208AA31292C884009C0624 /* PlatformXbox360@2x.png */,
-				D7208AA41292C884009C0624 /* PlayerCellBackground.png */,
-				D7208AA51292C884009C0624 /* PlayerCellBackground@2x.png */,
-				D7208AA61292C884009C0624 /* PlayerCellBackgroundOpen.png */,
-				D7208AA71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png */,
-				D74750C412907BA600342AD1 /* MatchListCellBoxArt.png */,
-				D74750C512907BA600342AD1 /* MatchListCellBoxArt@2x.png */,
-				D74750C612907BA600342AD1 /* MatchListCellBoxArtShadow.png */,
-				D74750C712907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png */,
-				D747509D129036E400342AD1 /* MatchListCellBottomPodShadow.png */,
-				D747509E129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png */,
-				D747507F1290315100342AD1 /* MatchListCellBottom.png */,
-				D74750801290315100342AD1 /* MatchListCellBottom@2x.png */,
-				D795FDBA128FB7CE0033F086 /* MatchListCellTop.png */,
-				D795FDBB128FB7CE0033F086 /* MatchListCellTop@2x.png */,
 				D7B41E061287ABD0005BD0B4 /* Icon.png */,
 				D7B41E071287ABD0005BD0B4 /* Icon@2x.png */,
 				D7B41DFA1287AAE0005BD0B4 /* Default.png */,
@@ -2015,62 +1868,13 @@
 				D72E3DB0128B15050083464E /* GMRAuthenticationNewAccount.xib in Resources */,
 				D7D23DA6128CE9A500C23711 /* GMRAlertView.xib in Resources */,
 				D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */,
-				D795FDBC128FB7CE0033F086 /* MatchListCellTop.png in Resources */,
-				D795FDBD128FB7CE0033F086 /* MatchListCellTop@2x.png in Resources */,
-				D74750811290315100342AD1 /* MatchListCellBottom.png in Resources */,
-				D74750821290315100342AD1 /* MatchListCellBottom@2x.png in Resources */,
-				D747509F129036E400342AD1 /* MatchListCellBottomPodShadow.png in Resources */,
-				D74750A0129036E400342AD1 /* MatchListCellBottomPodShadow@2x.png in Resources */,
-				D74750C812907BA600342AD1 /* MatchListCellBoxArt.png in Resources */,
-				D74750C912907BA600342AD1 /* MatchListCellBoxArt@2x.png in Resources */,
-				D74750CA12907BA600342AD1 /* MatchListCellBoxArtShadow.png in Resources */,
-				D74750CB12907BA600342AD1 /* MatchListCellBoxArtShadow@2x.png in Resources */,
 				D7208A821292BEFE009C0624 /* GMRGameDetailController.xib in Resources */,
-				D7208AA81292C884009C0624 /* ButtonGrayFull.png in Resources */,
-				D7208AA91292C884009C0624 /* ButtonGrayFull@2x.png in Resources */,
-				D7208AAA1292C884009C0624 /* ButtonGrayFullSelected.png in Resources */,
-				D7208AAB1292C884009C0624 /* ButtonGrayFullSelected@2x.png in Resources */,
-				D7208AAC1292C884009C0624 /* ButtonRedFull.png in Resources */,
-				D7208AAD1292C884009C0624 /* ButtonRedFull@2x.png in Resources */,
-				D7208AAE1292C884009C0624 /* ButtonRedFullSelected.png in Resources */,
-				D7208AAF1292C884009C0624 /* ButtonRedFullSelected@2x.png in Resources */,
-				D7208AB01292C884009C0624 /* ButtonTealFull.png in Resources */,
-				D7208AB11292C884009C0624 /* ButtonTealFull@2x.png in Resources */,
-				D7208AB21292C884009C0624 /* ButtonTealFullSelected.png in Resources */,
-				D7208AB31292C884009C0624 /* ButtonTealFullSelected@2x.png in Resources */,
-				D7208AB41292C884009C0624 /* ButtonYellowFull.png in Resources */,
-				D7208AB51292C884009C0624 /* ButtonYellowFull@2x.png in Resources */,
-				D7208AB61292C884009C0624 /* ButtonYellowFullSelected.png in Resources */,
-				D7208AB71292C884009C0624 /* ButtonYellowFullSelected@2x.png in Resources */,
-				D7208AB81292C884009C0624 /* GameDetailHeader.png in Resources */,
-				D7208AB91292C884009C0624 /* GameDetailHeader@2x.png in Resources */,
-				D7208ABA1292C884009C0624 /* PlatformBattleNet.png in Resources */,
-				D7208ABB1292C884009C0624 /* PlatformBattleNet@2x.png in Resources */,
-				D7208ABC1292C884009C0624 /* PlatformPlaystation2.png in Resources */,
-				D7208ABD1292C884009C0624 /* PlatformPlaystation2@2x.png in Resources */,
-				D7208ABE1292C884009C0624 /* PlatformPlaystation3.png in Resources */,
-				D7208ABF1292C884009C0624 /* PlatformPlaystation3@2x.png in Resources */,
-				D7208AC01292C884009C0624 /* PlatformWii.png in Resources */,
-				D7208AC11292C884009C0624 /* PlatformWii@2x.png in Resources */,
-				D7208AC21292C884009C0624 /* PlatformXbox360.png in Resources */,
-				D7208AC31292C884009C0624 /* PlatformXbox360@2x.png in Resources */,
-				D7208AC41292C884009C0624 /* PlayerCellBackground.png in Resources */,
-				D7208AC51292C884009C0624 /* PlayerCellBackground@2x.png in Resources */,
-				D7208AC61292C884009C0624 /* PlayerCellBackgroundOpen.png in Resources */,
-				D7208AC71292C884009C0624 /* PlayerCellBackgroundOpen@2x.png in Resources */,
 				D7D8CCC112932A7E00A00E18 /* GMRPlayerListCell.xib in Resources */,
 				D75012931298A0990079EB44 /* GMRChoosePlatformController.xib in Resources */,
 				D75012E21298CE860079EB44 /* GMRCreateGameController.xib in Resources */,
-				D709BB741299765D0057EA4B /* ButtonInputClosed.png in Resources */,
-				D709BB751299765D0057EA4B /* ButtonInputClosedLarge.png in Resources */,
-				D709BB761299765D0057EA4B /* ButtonInputOpen.png in Resources */,
-				D709BB771299765D0057EA4B /* ButtonInputOpenLarge.png in Resources */,
-				D709BBDC12998C5C0057EA4B /* ButtonInputLargeSelected.png in Resources */,
-				D709BBDD12998C5C0057EA4B /* ButtonInputSelected.png in Resources */,
 				D709BF0A129A26AD0057EA4B /* GMRChooseGameAndMode.xib in Resources */,
 				D709BF48129A2B810057EA4B /* GMRChooseAvailability.xib in Resources */,
 				D709BF81129A30DE0057EA4B /* GMRChoosePlayers.xib in Resources */,
-				D7B7DCD0129B7FD8003AD661 /* AccessorySelected.png in Resources */,
 				D714A126129C0B3400151FC9 /* GMRChooseDateTime.xib in Resources */,
 				D742353F129D668000EA0272 /* GMRChooseDescription.xib in Resources */,
 				D70B450A12A1D41D00535D03 /* NavigationBarBackground.png in Resources */,
