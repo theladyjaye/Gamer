@@ -7,13 +7,13 @@ module.exports = {
 	      port:7331
 	     },
 	
-	database:{catalog: "gamer",
+	database:{catalog: "gamepop",
 	             host: "localhost",
 	             port: 5984},
 	
-	mysql:{ catalog: "gamer",
+	mysql:{ catalog: "gamepop",
 	           host: "localhost",
 	           port: "3306",
-	       username: "root",
-	       password: ""}
+	       username: "gamepop",
+	       password: "Sch00lofF1sh!"}
 };

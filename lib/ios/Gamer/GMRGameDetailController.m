@@ -405,6 +405,11 @@ static BOOL isCancelOperation;
 				alert.alertTitle   = @"Game is full";
 				alert.alertMessage = @"Sorry, this game has become full. Please choose another game to join.";
 				break;
+				
+			case 3005:
+				alert.alertTitle   = @"Duplicate Alias";
+				alert.alertMessage = @"This player has already joined the game.";
+				break;
 
 				
 			default:
