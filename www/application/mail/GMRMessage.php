@@ -3,8 +3,8 @@ require GMRApplication::basePath().'/application/libs/phpmailer/class.phpmailer.
 
 abstract class GMRMessage
 {
-	protected $fromName    = 'HazGame';
-	protected $fromAddress = 'humans@hazgame.com';
+	protected $fromName    = 'GamePop';
+	protected $fromAddress = 'donotreply@gamepopapp.com';
 	protected $subject;
 	protected $text;
 	protected $html;

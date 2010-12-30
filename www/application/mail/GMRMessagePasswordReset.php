@@ -1,7 +1,7 @@
 <?php
 class GMRMessagePasswordReset extends GMRMessage
 {
-	protected $subject = 'Your Password has been reset';
+	protected $subject = 'GamePop - Your Password has been reset';
 	protected $text    = '/application/mail/messages/accountResetPassword.txt';
 	protected $html    = '/application/mail/messages/accountResetPassword.html';
 	

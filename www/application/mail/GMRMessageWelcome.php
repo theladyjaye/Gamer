@@ -1,7 +1,7 @@
 <?php
 class GMRMessageWelcome extends GMRMessage
 {
-	protected $subject = 'Welcome to HazGame';
+	protected $subject = 'GamePop - Welcome';
 	protected $text    = '/application/mail/messages/accountWelcome.txt';
 	protected $html    = '/application/mail/messages/accountWelcome.html';
 	

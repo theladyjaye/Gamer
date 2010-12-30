@@ -1,7 +1,7 @@
 <?php
 class GMRMessageVerifyAccountComplete extends GMRMessage
 {
-	protected $subject = 'HazGame - Account Verified';
+	protected $subject = 'GamePop - Account Verified';
 	protected $text    = '/application/mail/messages/accountVerified.html';
 	protected $html    = '/application/mail/messages/accountVerified.txt';
 	

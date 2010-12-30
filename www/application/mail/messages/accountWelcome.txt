@@ -1,5 +1,5 @@
-Welcome To HazGame
+Welcome To GamePop
 
 You Just Signed up!
 
-Verify your account: http://hazgame.com/accounts/verify/{token}
+Verify your account: http://gamepopapp.com/accounts/verify/{token}
