@@ -155,7 +155,7 @@ static NSArray * platformStrings;
 - (void)authenticateUser:(NSString *)name password:(NSString *)password withCallback:(GMRCallback)callback
 {
 	NSString*      method = @"POST";
-	NSString*      path   = @"http://hazgame.com/accounts/login";
+	NSString*      path   = @"http://gamepopapp.com/accounts/login";
 	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:name, @"username", password, @"password", nil];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
@@ -168,7 +168,7 @@ static NSArray * platformStrings;
 - (void)registerUser:(NSString *)email username:(NSString *)name password:(NSString *)password passwordVerify:(NSString *)passwordVerify withCallback:(GMRCallback)callback
 {
 	NSString*      method = @"POST";
-	NSString*      path   = @"http://hazgame.com/accounts/register";
+	NSString*      path   = @"http://gamepopapp.com/accounts/register";
 	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:email, @"email", name, @"username", password, @"password", passwordVerify, @"password_verify", nil];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]

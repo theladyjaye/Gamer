@@ -6,6 +6,7 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
+#import <dispatch/dispatch.h>
 #import "HazGame.h"
 #import "GMRGlobals.h"
 #import "GMRClient.h"
@@ -28,10 +29,47 @@ OverviewController * kScheduledMatchesViewController = nil;
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-		
+	
 	if([self hasAuthenticatedUser])
 	{
-		[self initializeApplicationFlow];
+		if(!kGamerApi)
+		{
+			// make sure this token is valid...
+			// because this will take an unknown amount of time
+			// don't let the user see anything weird...
+			
+			NSString * path = [[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"];
+			UIImageView * defaultImage = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:path]];
+			
+			[self.window addSubview:defaultImage];
+			
+			NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+			kGamerApi = [[GMRClient alloc] initWithKey:[defaults objectForKey:@"token"] 
+											   andName:[defaults objectForKey:@"username"]];
+			
+			
+			[kGamerApi version:^(BOOL ok, NSDictionary * response){
+				
+				dispatch_async(dispatch_get_main_queue(), ^{
+					if(ok == NO)
+					{
+						[kGamerApi release];
+						kGamerApi = nil;
+						[defaultImage removeFromSuperview];
+						[self initializeAuthenticationFlow];
+					}
+					else 
+					{
+						[defaultImage removeFromSuperview];
+						[self initializeApplicationFlow];
+					}
+					
+					[defaultImage release]; 
+				});
+			}];
+		}
+		
+		//[self initializeApplicationFlow];
 	}
 	else 
 	{
@@ -80,14 +118,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 }
 
 - (void)initializeApplicationFlow
-{
-	if(!kGamerApi)
-	{
-		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-		kGamerApi = [[GMRClient alloc] initWithKey:[defaults objectForKey:@"token"] 
-										   andName:[defaults objectForKey:@"username"]];
-	}
-	
+{	
 	// this guy is going to hang around for the lifetime of the application.
 	// should save us form makeing lot-o-GETs for the same data.
 	kScheduledMatches = [NSMutableArray array];
