@@ -41,7 +41,6 @@ function getMatch(req, res, next)
 	{
 		if(error == null)
 		{
-			console.log(match);
 			var playersEndpoint = "http://" + environment.host.name + ":" + environment.host.port + "/matches/" + platform + "/" + game + "/" + match_id + "/players";
 			
 			next({"ok":true, "match":match, "players":playersEndpoint});
