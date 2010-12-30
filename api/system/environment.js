@@ -1,6 +1,6 @@
 module.exports = { 
 	
-	api:{version: "0.2",
+	api:{version: "1.0",
 	    name:"GamePop"},
 	
 	host:{name:"gamepopapp.com", 
