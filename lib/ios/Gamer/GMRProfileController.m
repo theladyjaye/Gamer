@@ -129,14 +129,14 @@
 {
 	[self sendMail:@"Someone took my alias!" 
 		   message:@"Alias: ?\nPlatform: ?\n"
-			 to:@"aventurella@gmail.com"];
+			 to:@"help@gamepopapp.com"];
 }
 
 - (void)requestGameOrFeature
 {
 	[self sendMail:@"Request" 
 		   message:@"I would like to request a..."
-			 to:@"aventurella@gmail.com"];
+			 to:@"features@gamepopapp.com"];
 	
 }
 
