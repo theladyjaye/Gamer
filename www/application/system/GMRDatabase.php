@@ -22,6 +22,7 @@ class GMRDatabase
 		if(!$connection)
 		{
 			$configuration = GMRConfiguration::standardConfiguration();
+			
 			$connection =  new mysqli($configuration['database.sql.host'], 
 				                      $configuration['database.sql.username'],
 				                      $configuration['database.sql.password'],
@@ -30,7 +31,7 @@ class GMRDatabase
 			if ($connection->connect_errno) 
 			{
 				// handle this error accordingly
-				//echo 'Error', $connection->connect_errno;
+				//echo 'Connection Error:', $connection->connect_errno;
 			}
 		}
 		
