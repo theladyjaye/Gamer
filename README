@@ -1,0 +1,29 @@
+Requirements
+==================
+
+Node.js v0.2.5+
+-------------------
+NPM (https://github.com/isaacs/npm)
+Connect (npm install connect) (https://github.com/senchalabs/Connect)
+Formidable (npm install forbidable) (https://github.com/felixge/node-formidable)
+Mysql (npm install mysql) (https://github.com/felixge/node-mysql)
+CouchDB (included in repo) (https://github.com/felixge/node-couchdb)
+
+Python v2.x+
+-------------------
+couchapp (http://couchapp.org/page/installing)
+
+
+CouchDB v1.0.1
+-------------------
+http://wiki.apache.org/couchdb/Installing_on_Ubuntu
+
+
+MySQL v5.1+
+-------------------
+
+PHP v5.3+
+-------------------
+
+Apache Httpd v2.x+
+-------------------
