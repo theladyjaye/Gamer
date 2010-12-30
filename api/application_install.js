@@ -10,6 +10,8 @@ var couchdb     = require('./libs/node-couchdb/lib/couchdb'),
 	MySql       = require('mysql').Client;
 
 
+var mysqlAdminUsername = null;
+var mysqlAdminPassword = null;
 
 var colors = {
 	  reset: "\x1B[0m",
@@ -34,14 +36,52 @@ var colors = {
 	    white:   "\x1B[1;37m",
 	  }
 	}
+
 var logging = {
 	error: colors.red + "[Error]" + colors.reset + " ",
 	success : colors.green + "[Success]" + colors.reset + " "
 }
 
+function prompt(question, callback)
+{
+	// https://github.com/jesusabdullah/node-prompt/blob/master/prompt.js
+	// quiet mode is available there too.
+	
+	var p = process.openStdin();
+	p.setEncoding('utf8');
+	
+	console.log(question);
+	
+	p.on('data', function(line) 
+	{
+		p.removeAllListeners('data');
+		callback(line);
+		
+		if (p.listeners('data').length === 0) 
+		{
+			p.destroy();
+		}
+	});
+}
+
 function install()
 {
-	console.log(colors.magenta + 'Installing GamePop');
+	console.log(colors.magenta + 'Installing GamePop' + colors.reset);
+	
+	prompt("Administrative MySQL Username:", function(username)
+	{
+		mysqlAdminUsername = username.trim();
+		
+		prompt("Administrative MySQL Password:", function(password)
+		{
+			mysqlAdminPassword = password.trim();
+			setup();
+		});
+	})
+}
+
+function setup()
+{
 	initializeCouchDB(function()
 	{
 		initializeMySQL(function()
@@ -49,11 +89,8 @@ function install()
 			initializeSystemUsers(function()
 			{
 				initializeGames(installComplete);
-				return;
 			});
-			return;
 		});
-		return;
 	});
 }
 
@@ -84,8 +121,8 @@ function initializeMySQL(next)
 	console.log(colors.magenta + 'Initializing MySQL');
 	
 	var db      = new MySql();
-	db.user     = 'root'
-	db.password = ''; //GalaxyFoundryqc0LTh7
+	db.user     = mysqlAdminUsername;
+	db.password = mysqlAdminPassword; //GalaxyFoundryqc0LTh7
 	db.connect();
 	
 	console.log(colors.magenta + 'Creating Catalog ' + environment.mysql.catalog);
@@ -275,7 +312,9 @@ function initializeGames(next)
 function installComplete()
 {
 	console.log("\n\n" + colors.bold.green + 'GamePop Install Complete!' + colors.reset + "\n");
+	process.exit(0);
 	return;
+	
 }
 
 install();
