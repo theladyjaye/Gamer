@@ -41,20 +41,28 @@ class GameDetailController extends GMRController
 					$form->addValidator(new AMPatternValidator('alias', AMValidator::kRequired, '/^[\w\d _-]{4,}$/', "Invalid alias. Expecting minimum 4 characters."));
 					if($form->isValid)
 					{
-						$players = $this->players();
-						foreach($players as $player)
-						{
-							if($player->alias == $form->alias)
-							{
-								$form->addValidator(new AMErrorValidator("duplicateAlias", "This player has already joined the game."));
-								$this->errors = new stdClass();
-								$this->hydrateErrors($form, $this->errors);
-								return;
-							}
-						}
+						$response = $this->client->matchJoinAnonymously($this->platform, $this->game_id, $this->match_id, $form->alias);
 						
-						$anonymousClient = new GMRClient($settings['libGamerKey'], 'anonymous');
-						$this->client->matchJoin($this->platform, $this->game_id, $this->match_id);
+						if($response->ok == false)
+						{
+							switch($response->code)
+							{
+								case 3004:
+									$form->addValidator(new AMErrorValidator("gameFull", "This game has become full."));
+									break;
+									
+								case 3005:
+									$form->addValidator(new AMErrorValidator("duplicateAlias", "This player has already joined the game."));
+									break;
+								
+								default:
+									$form->addValidator(new AMErrorValidator("error", "An unknown error occurred."));
+									break;
+							}
+							
+							$this->errors = new stdClass();
+							$this->hydrateErrors($form, $this->errors);
+						}
 					}
 					else
 					{

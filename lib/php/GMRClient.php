@@ -99,7 +99,26 @@ final class GMRClient
 		                                          'method'        => 'POST'));
 		
 		$data = json_decode($response);
-		return $data->ok;
+		return $data;
+	}
+	
+	/**
+	 * Join and existing match anonymously
+	 *
+	 * @param string $platform constant from GMRPlatform
+	 * @param string $game_id  game id, eg: halo-reach, borderlands, mario-kart.  Note there is no leading "game/"
+	 * @param string $match_id the hash representing the match to join
+	 * @param string $alias the alias of the user to join as
+	 * @return bool
+	 * @author Adam Venturella
+	 */
+	public function matchJoinAnonymously($platform, $game_id, $match_id, $alias)
+	{
+		$response = $this->request->execute(array('path'          => '/matches/'.$platform.'/'.$game_id.'/'.$match_id.'/anonymous/'.$alias,
+		                                          'method'        => 'POST'));
+		
+		$data = json_decode($response);
+		return $data;
 	}
 	
 	/**

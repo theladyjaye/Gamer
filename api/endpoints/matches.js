@@ -26,6 +26,7 @@ exports.endpoints = function(app)
 	
 	
 	app.post('/:platform/:game', createMatch);
+	app.post('/:platform/:game/:match_id/anonymous/:alias', joinMatchAnonymously);
 	app.post('/:platform/:game/:match_id/:username', joinMatch);
 	app.del('/:platform/:game/:match_id/:username', leaveMatch);
 	
@@ -190,6 +191,110 @@ function leaveMatch(req, res, next)
 	});
 }
 
+/*
+	TODO refactor joinMatchAnonymously and joinMatch
+	don't need 2 functions that do the same thing with 1 minor difference
+*/
+function joinMatchAnonymously(req, res, next)
+{
+	var platform  = req.params.platform;
+	var game      = req.params.game;
+	var match_id  = req.params.match_id;
+	var alias     = req.params.alias;
+	
+	// Only the system user can perform this function
+	if(req.access_token.user != "system")
+	{
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
+		return;
+	}
+	
+	db.getDoc(match_id, function(error, match)
+	{
+		if(error == null)
+		{
+			db.view("application", "matches-players", {"include_docs":true, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, players)
+			{
+				if(error == null)
+				{
+					var duplicatePlayer = false;
+					
+					players.rows.forEach(function(player)
+					{
+						if(player.doc.alias == alias)
+						{
+							duplicatePlayer = true;
+						}
+					});
+					
+					if(duplicatePlayer)
+					{
+						console.log("WE HAVE A DUPLICATE PLAYER!");
+						next({"ok":false, "message":Errors.duplicate_player.message, "code":Errors.duplicate_player.code});
+						return;
+					}
+					
+					if(players.rows.length < match.maxPlayers)
+					{
+						var player            = new Player();
+						player.username       = "anonymous";
+						player.alias          = alias;
+						player.scheduled_time = match.scheduled_time;
+						player.match          = match._id;
+
+						db.saveDoc(player, function(error, data)
+						{
+							if(error == null)
+							{
+								next({"ok":true});
+								/*
+								// get the contact information for the creator and the user
+								var playersQuery  = new PlayersInArray([match.created_by, username]);
+								playersQuery.execute(function(err, rows, fields)
+								{
+									if(rows.length == 2)
+									{
+										var NotificationJoin              = require('../data/NotificationJoin');
+										var currentNotification           = new NotificationJoin();
+										currentNotification.email_to      = rows[0].email;
+										currentNotification.username_to   = rows[0].username
+										currentNotification.username_from = rows[1].username;
+										currentNotification.platform      = Platform[match.game.platform].label;
+										currentNotification.game          = match.game.label;
+										currentNotification.date          = match.scheduled_time;
+										currentNotification.send();
+									}
+								});
+								*/
+							}
+							else
+							{
+								next({"ok":false, "message":Errors.update_match.message, "code":Errors.update_match.code});
+								return;
+							}
+						});
+					}
+					else
+					{
+						next({"ok":false, "message":Errors.match_full.message, "code":Errors.match_full.code});
+						return;
+					}
+				}
+				else
+				{
+					next({"ok":false, "message":Errors.unknown_error.message, "code":Errors.unknown_error.code});
+					return;
+				}
+			});
+		}
+		else
+		{
+			next({"ok":false, "message":Errors.unknown_match.message, "code":Errors.unknown_match.code});
+		}
+	});
+	
+}
+
 function joinMatch(req, res, next)
 {
 	var platform  = req.params.platform;
@@ -217,10 +322,26 @@ function joinMatch(req, res, next)
 					The user has a valid alias, now we need to confirm that there is an open slot for them befoe adding them
 				*/
 				
-				db.view("application", "matches-players", {"startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, players)
+				db.view("application", "matches-players", {"include_docs":true, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, players)
 				{
 					if(error == null)
 					{
+						var duplicatePlayer = false;
+
+						players.rows.forEach(function(player)
+						{
+							if(player.doc.alias == alias[0].alias)
+							{
+								duplicatePlayer = true;
+							}
+						});
+
+						if(duplicatePlayer)
+						{
+							next({"ok":false, "message":Errors.duplicate_player.message, "code":Errors.duplicate_player.code});
+							return;
+						}
+						
 						if(players.rows.length < match.maxPlayers)
 						{
 							var player            = new Player();
