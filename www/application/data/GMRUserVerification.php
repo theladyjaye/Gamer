@@ -2,24 +2,47 @@
 class GMRUserVerification
 {
 	// for the creation of a new domain
-	public static function welcome(GMRUser &$user)
+	public static function welcome(GMRUser &$user, $token=null)
 	{
 		require GMRApplication::basePath().'/application/libs/axismundi/display/AMDisplayObject.php';
 		require GMRApplication::basePath().'/application/mail/GMRMessage.php';
 		require GMRApplication::basePath().'/application/data/queries/GMRQueryUserVerificationInsert.php';
 		require GMRApplication::basePath().'/application/mail/GMRMessageWelcome.php';
 		
-		$token    = GMRSecurity::generate_token();
-		$database = GMRDatabase::connection(GMRDatabase::kSql);
-		$query    = new GMRQueryUserVerificationInsert($database, array('token'   => $token,
-		                                                                'user_id' => $user->id));
-		$query->execute();
+		if($token == null)
+		{
+			$token    = GMRSecurity::generate_token();
+			
+			$database = GMRDatabase::connection(GMRDatabase::kSql);
+			$query    = new GMRQueryUserVerificationInsert($database, array('token'   => $token,
+			                                                                'user_id' => $user->id));
+			$query->execute();
+		}
 		
 		$message           = new GMRMessageWelcome($user->email, $token);
 		$message->send();
 		
 		return $token;
 	}
+	
+	public static function tokenForUserId($id)
+	{
+		require GMRApplication::basePath().'/application/data/queries/GMRQueryUserVerificationTokenWithId.php';
+		
+		$token    = null;
+		
+		$database = GMRDatabase::connection(GMRDatabase::kSql);
+		$query    = new GMRQueryUserVerificationTokenWithId($database, array('id'=>$id));
+		
+		if(count($query) == 1)
+		{
+			$result  = $query->one();
+			$token = $result['token'];
+		}
+		
+		return $token;
+	}
+	
 	public static function verify($token)
 	{
 		require GMRApplication::basePath().'/application/libs/axismundi/display/AMDisplayObject.php';

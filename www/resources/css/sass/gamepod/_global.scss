@@ -221,7 +221,7 @@ body{
 #form input[type="image"]{
 	padding-top:2px;
 }
-#errors { display:none; }
+#errors, #server-messages { display:none; }
 
 #facebox h2{
 	font-size:18px;

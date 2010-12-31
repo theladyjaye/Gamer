@@ -20,7 +20,7 @@ RewriteBase /
 #/platform/game_id/match_id
 RewriteRule ^$ /index.php [L]
 RewriteRule ^(battlenet|playstation2|playstation3|steam|wii|xbox360)/([a-z0-9_-]{2,})/([a-f0-9]{32}) /gameDetail.php?arguments[]=$1&arguments[]=$2&arguments[]=$3 [L]
-
+RewriteRule accounts/verify/([a-z0-9]{32})$ /accountVerify.php?arguments[]=$1 [L]
 
 # API Routes
 # sinatra routing is the da-bomb... PHP doesn't really do that
@@ -31,12 +31,12 @@ RewriteCond %{REQUEST_METHOD} ^POST [NC,OR]
 RewriteCond %{HTTP:X-HTTP-Method-Override} ^POST [NC]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]
 RewriteRule accounts/users/([a-z0-9_-]+)/aliases/(wii|xbox360|pc|playstation[23]|battlenet)$ /application/services/endpoints/accounts-maintenance.php?action=linkPlatformAlias&arguments[]=$1&arguments[]=$2 [L] 
-RewriteRule accounts/(login|register|verify)$ /application/services/endpoints/accounts-open.php?action=$1 [L] 
+RewriteRule accounts/(login|register)$ /application/services/endpoints/accounts-open.php?action=$1 [L] 
 RewriteRule accounts/reset/(.+) /application/services/endpoints/accounts-open.php?action=reset&arguments[]=$1 [L] 
 
 RewriteCond %{REQUEST_METHOD} ^GET [NC,OR]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]
-RewriteRule accounts/verify/([a-z0-9]{32})$ /application/services/endpoints/accounts-open.php?action=verify&arguments[]=$1 [L]
+#RewriteRule accounts/verify/([a-z0-9]{32})$ /application/services/endpoints/accounts-open.php?action=verify&arguments[]=$1 [L]
 RewriteRule accounts/logout$ /application/services/endpoints/accounts-open.php?action=logout [L] 
 RewriteRule accounts/users/([a-z0-9_-]+)/aliases$ /application/services/endpoints/accounts-maintenance.php?action=platformAliasesForUsername&arguments[]=$1 [L]
 
