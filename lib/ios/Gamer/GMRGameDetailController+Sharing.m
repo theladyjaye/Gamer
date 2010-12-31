@@ -31,7 +31,7 @@ static UINavigationItem * composeViewNavigationItem;
 							  [NSDate relativeTime:match.scheduled_time], 
 							  match.publicUrl];
 	
-	NSLog(@"%@", match.publicUrl);
+	//NSLog(@"%@", match.publicUrl);
 	[self sendMail:messageTitle 
 		   message:messageBody 
 				to:nil];

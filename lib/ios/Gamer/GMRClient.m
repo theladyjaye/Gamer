@@ -222,8 +222,6 @@ static NSArray * platformStrings;
 	NSString*     method = @"GET";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/%@/%@/%@/players", [GMRClient stringForPlatform:platform], gameId, matchId];
 	
-	NSLog(@"%@", path);
-	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
 			   callback(ok, response);

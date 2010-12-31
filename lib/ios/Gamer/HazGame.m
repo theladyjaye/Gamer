@@ -47,8 +47,6 @@ OverviewController * kScheduledMatchesViewController = nil;
 			kGamerApi = [[GMRClient alloc] initWithKey:[defaults objectForKey:@"token"] 
 											   andName:[defaults objectForKey:@"username"]];
 			
-			NSLog(@"TOKEN: %@", [defaults objectForKey:@"token"]);
-			
 			[kGamerApi version:^(BOOL ok, NSDictionary * response){
 				
 				dispatch_async(dispatch_get_main_queue(), ^{

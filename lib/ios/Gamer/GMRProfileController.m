@@ -300,7 +300,6 @@
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-	NSLog(@"Profile Controller... Out!");
 	self.navigationBar = nil;
 	self.aliasTableView = nil;
     // Release any retained subviews of the main view.
