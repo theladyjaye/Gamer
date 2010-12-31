@@ -262,6 +262,7 @@ static NSArray * platformStrings;
 {
 	NSString*     method = @"GET";
 	NSString*     path   = [NSString stringWithFormat:@"/matches/scheduled/%@", username];
+	NSLog(@"path: %@", path);
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil] 
 		   withCallback:^(BOOL ok, NSDictionary * response){
 			   callback(ok, response);

@@ -43,8 +43,8 @@ function authorizeAction(req, next)
 		*/
 		// the whole API requires authorization. except when you are authorizing
 		// uncomment this line if you want to debug without a token present.
-		//next({"ok":false, "message":"no token present: " + Errors.unauthorized_client.message});
-		next();
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
+		//next();
 	}
 }
 
@@ -153,7 +153,7 @@ function handleHydrationQuery(query, req, next)
 exports.userIsAuthorized = function(username, token)
 {
 	result = false;
-	
+	console.log("Token: "+ token);
 	if(token.user == username)
 		result = true;
 	
