@@ -153,7 +153,6 @@ function handleHydrationQuery(query, req, next)
 exports.userIsAuthorized = function(username, token)
 {
 	result = false;
-	console.log("Token: "+ token);
 	if(token.user == username)
 		result = true;
 	

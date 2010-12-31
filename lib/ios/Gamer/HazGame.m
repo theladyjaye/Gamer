@@ -47,6 +47,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 			kGamerApi = [[GMRClient alloc] initWithKey:[defaults objectForKey:@"token"] 
 											   andName:[defaults objectForKey:@"username"]];
 			
+			NSLog(@"TOKEN: %@", [defaults objectForKey:@"token"]);
 			
 			[kGamerApi version:^(BOOL ok, NSDictionary * response){
 				
@@ -55,7 +56,12 @@ OverviewController * kScheduledMatchesViewController = nil;
 					{
 						[kGamerApi release];
 						kGamerApi = nil;
+						
 						[defaultImage removeFromSuperview];
+						
+						[defaults removeObjectForKey:@"token"];
+						[defaults removeObjectForKey:@"username"];
+						
 						[self initializeAuthenticationFlow];
 					}
 					else 

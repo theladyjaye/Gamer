@@ -55,8 +55,6 @@ static dispatch_queue_t jsonProcessingQueue;
 		
 		NSString * endpoint = path;
 		
-		NSLog(@"%@", endpoint);
-		
 		if ([options objectForKey:@"query"] != nil) 
 		{
 			NSDictionary * query = (NSDictionary *) [options objectForKey:@"query"];
