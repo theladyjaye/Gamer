@@ -294,7 +294,7 @@ GMRMatch * kCreateMatchProgress = nil;
 									  
 								  }
 
-								  NSLog(@"%@", response);
+								  //NSLog(@"%@", response);
 							  }];
 	}
 	else 

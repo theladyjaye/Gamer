@@ -5,6 +5,7 @@ var couchdb     = require('./libs/node-couchdb/lib/couchdb'),
 	client      = couchdb.createClient(environment.database.port, environment.database.host),
 	db          = client.db(environment.database.catalog),
 	sys         = require('sys'),
+	fs          = require('fs'),
 	spawn       = require('child_process').spawn,
 	Game        = require('./data/game'),
 	MySql       = require('mysql').Client;
@@ -68,16 +69,34 @@ function install()
 {
 	console.log(colors.magenta + 'Installing GamePop' + colors.reset);
 	
-	prompt("Administrative MySQL Username:", function(username)
+	prompt("Install type: [games, full]", function(choice)
 	{
-		mysqlAdminUsername = username.trim();
 		
-		prompt("Administrative MySQL Password:", function(password)
+		choice = choice.trim().toLowerCase();
+		
+		if(choice == 'games')
 		{
-			mysqlAdminPassword = password.trim();
-			setup();
-		});
-	})
+			initializeGames(installComplete);
+		}
+		else if(choice == 'full')
+		{
+			prompt("Administrative MySQL Username:", function(username)
+			{
+				mysqlAdminUsername = username.trim();
+		
+				prompt("Administrative MySQL Password:", function(password)
+				{
+					mysqlAdminPassword = password.trim();
+					setup();
+				});
+			})
+		}
+		else
+		{
+			console.log("Unknown Choice. Terminating");
+			process.exit(0);
+		}
+	});
 }
 
 function setup()
@@ -272,46 +291,90 @@ function initializeSystemUsers(next)
 
 function initializeGames(next)
 {
-	console.log(colors.magenta + 'Initializing Default Games');
-	var games             = [];
+	console.log(colors.magenta + 'Initializing Default Games' + colors.reset);
+	
+	var games             = null;
 	var count             = 0;
-	var g1                = new Game();
-	    g1.label          = "Halo:Reach";
-	    g1._id            = "game/halo-reach";
-	    g1.platforms      = ["xbox360"];
-	    g1.maxPlayers     = 12;
-	    g1.modes.push("Deathmatch");
-	    g1.modes.push("Capture The Flag");
-	    g1.modes.push("Co-Op Campaign");
 	
-	games.push(g1);
-	
-	
-	for(var index in games)
+	fs.readFile('./games.json', 'utf8', function (err, data) 
 	{
-		var game = games[index];
+		if (err) throw err;
+		games = JSON.parse(data);
 		
-		db.saveDoc(game, function(error, data)
+		for(var index in games)
 		{
-			if(error == null)
+			var g = games[index];
+			// test if this game already exists:
+			db.getDoc(encodeURIComponent(g._id), function(error, target)
 			{
-				console.log(logging.success +"Initialized Game" + game.label);
-			}
-			else
-			{
-				console.log(logging.error +"Failed to Initialize Game" + game.label);
-				console.log(error);
-			}
-			
-			count = count + 1;
-			if(count == games.length) next();
-		});
-	}
+				var game = g;
+				return function(error, target)
+				{
+					var gameObject = null;
+					var dirty      = false;
+					
+					// this is an existing game, update it.
+					// this does not take into account arrays
+					// so things will always get updated.
+					
+					if(error == null)
+					{
+						gameObject = target;
+						
+						for(var key in game)
+						{
+							if(typeof gameObject[key] != "undefined")
+							{
+								if(gameObject[key] != game[key])
+								{
+									gameObject[key] = game[key];
+									dirty = true;
+								}
+							}
+							else
+							{
+								gameObject[key] = game[key];
+								dirty = true;
+							}
+						}
+						
+					}
+					else
+					{
+						gameObject = new Game();
+						dirty = true;
+					
+						for(var key in game)
+							gameObject[key] = game[key];
+					}
+				
+					if(dirty)
+					{
+						db.saveDoc(gameObject, function(error, data)
+						{
+							if(error == null)
+							{
+								console.log(logging.success +"Initialized Game: " + game.label);
+							}
+							else
+							{
+								console.log(logging.error +"Failed to Initialize Game: " + game.label);
+								console.log(error);
+							}
+
+							count = count + 1;
+							if(next && count == games.length) next();
+						});
+					}
+				}
+			}());
+		}
+	});
 }
 
 function installComplete()
 {
-	console.log("\n\n" + colors.bold.green + 'GamePop Install Complete!' + colors.reset + "\n");
+	console.log("\n" + colors.bold.green + 'GamePop Install Complete!' + colors.reset + "\n");
 	process.exit(0);
 	return;
 	
