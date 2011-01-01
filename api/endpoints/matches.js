@@ -742,14 +742,11 @@ function getScheduledMatchesForPlatformAndTimeframe(req, res, next)
 function getScheduledMatches(req, res, next)
 {
 	var username = req.params.username.toLowerCase();
-	console.log("getScheduledMatches username:" + username);
 	
 	if(auth.userIsAuthorized(username, req.access_token))
 	{
-		console.log("running couchdb view!");
 		db.view("application", "matches-scheduled-user", {"include_docs":true, "startkey":[username, new Date().toJSON()], "endkey":[username, {}]}, function(error, data)
 		{
-			console.log("Scheduled Data: "+data);
 			if(error == null)
 			{
 				
@@ -771,7 +768,6 @@ function getScheduledMatches(req, res, next)
 	}
 	else
 	{
-		console.log("getScheduledMatches - USER NOT AUTHORIZED")
 		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
 		return;
 	}

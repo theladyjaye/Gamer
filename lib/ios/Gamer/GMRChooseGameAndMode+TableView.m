@@ -53,6 +53,7 @@
     }
     
 	cell.title = [kCreateMatchProgress.game.modes objectAtIndex:indexPath.row];
+	[cell setNeedsDisplay];
     return cell;
 }
 
