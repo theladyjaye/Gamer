@@ -69,35 +69,35 @@
 	"label"      : "World of Warcraft",
 	"platforms"  : ["battlenet"],
 	"maxPlayers" : 64,
-	"modes"      : [ "Campaign" ]
+	"modes"      : [ "Co-op Campaign" ]
 },
 {
 	"_id"        : "game/world-of-warcraft-burning-crusade",
 	"label"      : "World of Warcraft: The Burning Crusade",
 	"platforms"  : ["battlenet"],
 	"maxPlayers" : 64,
-	"modes"      : [ "Campaign" ]
+	"modes"      : [ "Co-op Campaign" ]
 },
 {
 	"_id"        : "game/world-of-warcraft-wrath-of-the-lich-king",
 	"label"      : "World of Warcraft: Wrath of the Lich King",
 	"platforms"  : ["battlenet"],
 	"maxPlayers" : 64,
-	"modes"      : [ "Campaign" ]
+	"modes"      : [ "Co-op Campaign" ]
 },
 {
 	"_id"        : "game/world-of-warcraft-cataclysm",
 	"label"      : "World of Warcraft: Cataclysm",
 	"platforms"  : ["battlenet"],
 	"maxPlayers" : 64,
-	"modes"      : [ "Campaign" ]
+	"modes"      : [ "Co-op Campaign" ]
 },
 {
 	"_id"        : "game/starcraft2",
 	"label"      : "Starcraft 2: Wings of Liberty",
 	"platforms"  : ["battlenet"],
 	"maxPlayers" : 8,
-	"modes"      : [ "Free For All",
+	"modes"      : ["Free For All",
 					"Melee"]
 },
 {
