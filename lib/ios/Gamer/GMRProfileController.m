@@ -71,8 +71,9 @@
 {
 	if(!noAliasesView)
 	{
-		noAliasesView = [[GMRNoneView alloc] initWithLabel:@"No Registered Aliases."];
+		noAliasesView = [[GMRNoneView alloc] initWithLabel:@"No Linked Aliases."];
 		noAliasesView.frame = (CGRect){ {0.0, 106.0 }, noAliasesView.frame.size };
+		noAliasesView.showsArrow = YES;
 		[self.view addSubview:noAliasesView];
 		[noAliasesView release];
 	}

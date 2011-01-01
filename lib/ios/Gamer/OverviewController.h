@@ -10,10 +10,10 @@
 #import "GMRViewController.h"
 #import "GMRMatchListSource.h"
 
-
+@class GMRNoneView;
 @interface OverviewController : GMRViewController<GMRMatchListSource> {
 	UITableView * matchesTable;
-	UIView * noneView;
+	GMRNoneView * noneView;
 	NSTimer * updateTimer;
 	BOOL matchListSourceUpdateViewOnChange;
 }

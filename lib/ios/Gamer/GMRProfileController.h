@@ -10,11 +10,12 @@
 #import "GMRViewController.h"
 #import <MessageUI/MessageUI.h>
 
+@class GMRNoneView;
 @interface GMRProfileController : GMRViewController <MFMailComposeViewControllerDelegate>{
 	UINavigationBar * navigationBar;
 	NSMutableArray * aliases;
 	UITableView * aliasTableView;
-	UIView * noAliasesView;
+	GMRNoneView * noAliasesView;
 }
 
 @property(nonatomic, retain) NSMutableArray * aliases;

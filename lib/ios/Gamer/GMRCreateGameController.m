@@ -23,6 +23,7 @@
 #import "GMRInputValidator.h"
 #import "GMRLabel.h"
 #import "UIButton+GMRButtonTypes.h"
+#import "GMRAlertView.h"
 
 #import "GMRGlobals.h"
 #import "GMRClient.h"
@@ -290,6 +291,29 @@ GMRMatch * kCreateMatchProgress = nil;
 								  {
 									  dispatch_async(dispatch_get_main_queue(), ^{
 											[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+											
+										  NSInteger code = [[response objectForKey:@"code"] intValue];
+										  NSString * platformString = [GMRClient formalDisplayNameForPlatform:kCreateMatchProgress.platform];
+										  
+										  GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																								 title:@"Unknown Error" 
+																							   message:@"An unknown error occurred" 
+																							  callback:^(GMRAlertView * alertView){
+																								  [self dismissModalViewController];
+																								  [alertView release];
+																							  }];
+										
+										  
+										  
+											switch(code)
+											{
+												case 2007:
+													alert.alertTitle = [NSString stringWithFormat:@"%@ - Linked Alias", platformString];
+													alert.alertMessage = [NSString stringWithFormat:@"You do not have an alias linked for %@.\n\nGo to your profile and link an alias for %@ before crating a game.", platformString, platformString];
+													break;
+											}
+										  
+										  [alert show];
 									  });
 									  
 								  }
@@ -299,20 +323,18 @@ GMRMatch * kCreateMatchProgress = nil;
 	}
 	else 
 	{
-		NSLog(@"%@", form.errors);
+		//NSLog(@"%@", form.errors);
+		NSString * errors  = [form.errors componentsJoinedByString:@"\n"];
+		
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Cannot Create Game" 
+														   message:errors
+														  callback:^(GMRAlertView * alertView){
+															  [alertView release];
+														  }];
+		
+		[alert show];
 	}
-
-	/*if([self matchIsValid:kCreateMatchProgress])
-	{
-	
-	}
-	else 
-	{
-			
-	}*/
-
-	
-	//[self dismissModalViewController];
 }
 
 
