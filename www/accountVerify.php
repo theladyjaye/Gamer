@@ -17,56 +17,54 @@ GMRPage::Controller('AccountVerifyController.php');
 	</script>
 </head>
 <body>
-	<body>
-		<div id="window" >
-			<!-- content -->
-			<div class="content">
-				<div class="content-top">
-					<div class="content-mid">
-						<div id="gamepod-details">
-							<div id="header">
-								<h1 class="appname">GamePop</h1>
-								<h2 class="appsub">Multiplatform Game Scheduling</h1>
+	<div id="window" >
+		<!-- content -->
+		<div class="content">
+			<div class="content-top">
+				<div class="content-mid">
+					<div id="gamepod-details">
+						<div id="header">
+							<h1 class="appname">GamePop</h1>
+							<h2 class="appsub">Multiplatform Game Scheduling</h2>
+						</div>
+						<div id="body">
+							<div id="verification">
+								<h1><?php echo $page->welcomeHeader() ?></h1>
+								<p><?php echo $page->welcomeMessage() ?></p>
 							</div>
-							<div id="body">
-								<div id="verification">
-									<h1><?php echo $page->welcomeHeader() ?></h1>
-									<p><?php echo $page->welcomeMessage() ?></p>
+						</div>
+					</div>
+				</div>
+				<!-- /content-mid -->
+			</div>
+		</div>
+		<!-- /content -->
+		<?php if(!$page->verified):?>
+			<!-- form -->
+			<div id="form">
+				<div class="content">
+					<div class="content-top">
+						<!-- content-mid -->
+						<div class="content-mid">
+							<form action="<?php echo $_SERVER['REQUEST_URI']?>" method="post">
+								<div class="field">
+									<div class="label">Email:</div>
+									<input type="text" name="email">
 								</div>
-							</div>
+								<input type="image" src="/resources/images/buttons/btn-gamepod-resend-verification.png">
+							</form>
 						</div>
-					</div>
-					<!-- /content-mid -->
-				</div>
-			</div>
-			<!-- /content -->
-			<?php if(!$page->verified):?>
-				<!-- form -->
-				<div id="form">
-					<div class="content">
-						<div class="content-top">
-							<!-- content-mid -->
-							<div class="content-mid">
-								<form action="<?php echo $_SERVER['REQUEST_URI']?>" method="post">
-									<div class="field">
-										<div class="label">Email:</div>
-										<input type="text" name="email">
-									</div>
-									<input type="image" src="/resources/images/buttons/btn-gamepod-resend-verification.png">
-								</form>
-							</div>
-							<!-- /content-mid -->
-						</div>
+						<!-- /content-mid -->
 					</div>
 				</div>
-				<!-- /form -->
-			<?php endif;?>
-		</div>
-		<div id="server-messages">
-			<h2>Oops</h2>
-			<div class="message">
 			</div>
+			<!-- /form -->
+		<?php endif;?>
+	</div>
+	<div id="server-messages">
+		<h2>Oops</h2>
+		<div class="message">
 		</div>
-	</body>
+	</div>
 </body>
 </html>

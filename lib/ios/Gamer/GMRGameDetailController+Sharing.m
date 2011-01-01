@@ -49,6 +49,7 @@ static UINavigationItem * composeViewNavigationItem;
 
 - (void)shareCopyUrl
 {
+	NSLog(@"%@", match.publicUrl);
 	[UIPasteboard generalPasteboard].string = match.publicUrl;
 }
 

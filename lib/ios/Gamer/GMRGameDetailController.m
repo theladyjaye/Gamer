@@ -180,7 +180,7 @@ static BOOL isCancelOperation;
 											  howItWorksView.transform = CGAffineTransformIdentity;
 										  } 
 										 completion:^(BOOL finished){
-											 updateTimer = [NSTimer scheduledTimerWithTimeInterval:60.0 
+											 updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 // matches JavaScript Interval 
 																							target:self 
 																						  selector:@selector(updateCountdown) 
 																						  userInfo:nil 

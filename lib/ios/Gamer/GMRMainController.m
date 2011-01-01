@@ -9,6 +9,7 @@
 #import "GMRMainController.h"
 #import "GMRGlobals.h"
 #import "HazGame.h"
+#import "GMRAlertView.h"
 
 static UINavigationController * currentNavigationController;
 
@@ -83,7 +84,20 @@ static UINavigationController * currentNavigationController;
 						 navigationBar.transform = CGAffineTransformIdentity;
 						 navigationBarShadow.transform = CGAffineTransformIdentity;
 					 } 
-					 completion:NULL];
+					 completion:^(BOOL finished){
+						 NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+						 if([[defaults objectForKey:@"welcomeMessage"] boolValue] == NO)
+						 {
+							 GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																				  title:@"Welcome to GamePop!" 
+																				message:@"If you would like to create games, you must first go to your profile and link an alias to a platform." 
+																			   callback:^(GMRAlertView * alertView){
+																				   [defaults setBool:YES forKey:@"welcomeMessage"];
+																				   [alertView release];
+																			   }];
+							 [alert show];
+						 }
+					 }];
 }
 
 - (void)logout

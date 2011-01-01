@@ -229,7 +229,7 @@
 		{ 
 			NSLog(@"Wants Got"); // TODO: need to test adding a cell and see if a timer gets scheduled after add
 			[self updateCellsCountdown];
-			updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 
+			updateTimer = [NSTimer scheduledTimerWithTimeInterval:15.0 // matches JavaScript Interval
 														   target:self 
 														 selector:@selector(updateCellsCountdown) 
 														 userInfo:nil 

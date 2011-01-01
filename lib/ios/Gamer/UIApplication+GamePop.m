@@ -35,7 +35,6 @@ static GMRActivityView * activityView;
 		if(activityView)
 		{
 			[activityView transitionOut:^{
-				NSLog(@"TransitionOutComplete");
 				[activityView removeFromSuperview];
 				activityView = nil;
 				
