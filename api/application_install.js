@@ -304,6 +304,7 @@ function initializeGames(next)
 		for(var index in games)
 		{
 			var g = games[index];
+			
 			// test if this game already exists:
 			db.getDoc(encodeURIComponent(g._id), function(error, target)
 			{
@@ -316,6 +317,9 @@ function initializeGames(next)
 					// this is an existing game, update it.
 					// this does not take into account arrays
 					// so things will always get updated.
+					// we could solve this by first alphabetizing the array
+					// then hasing it and comparing the hashes. Of course,
+					// this will only work on arrays of strings.
 					
 					if(error == null)
 					{
