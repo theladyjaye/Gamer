@@ -1,0 +1,235 @@
+[{
+	"_id"        : "game/gears-of-war-2",
+	"label"      : "Gears of War 2",
+	"platforms"  : ["xbox360"],
+	"maxPlayers" : 10,
+	"modes"      : [ "Annex",
+					"Co-op campaign",
+					"Execution",
+					"Guardian",
+					"Horde",
+					"King of the Hill",
+					"Submission",
+					"Warzone",
+					"Wingman"]
+},
+
+{
+	"_id"        : "game/halo-reach",
+	"label"      : "Halo:Reach",
+	"platforms"  : ["xbox360"],
+	"maxPlayers" : 16,
+	"modes"      : [ "Co-op campaign",
+					"Firefight",
+					"Generator Defense",
+					"Headhunter",
+					"Invasion",
+					"King of the Hill",
+					"Slayer",
+					"Stockpile"
+					]
+},
+
+{
+	"_id"        : "game/halo3",
+	"label"      : "Halo 3",
+	"platforms"  : ["xbox360"],
+	"maxPlayers" : 16,
+	"modes"      : [ "Assault",
+					"Capture The Flag",
+					"Co-op campaign",
+					"Infection",
+					"Juggernaut",
+					"King of the Hill",
+					"Oddball",
+					"Slayer",
+					"Territories",
+					"VIP"
+					]
+},
+
+{
+	"_id"        : "game/call-of-duty-black-ops",
+	"label"      : "Call of Duty: Black Ops",
+	"platforms"  : ["playstation3", "wii", "xbox360"],
+	"maxPlayers" : 24,
+	"modes"      : [
+					"Co-op campaign",
+					"Demolition",
+					"Gun Game",
+					"One in the Chamber",
+					"Search and Destroy",
+					"Sharpshooter",
+					"Sticks and Stones",
+					"Team Deathmatch"
+					]
+},
+{
+	"_id"        : "game/world-of-warcraft",
+	"label"      : "World of Warcraft",
+	"platforms"  : ["battlenet"],
+	"maxPlayers" : 64,
+	"modes"      : [ "Campaign" ]
+},
+{
+	"_id"        : "game/world-of-warcraft-burning-crusade",
+	"label"      : "World of Warcraft: The Burning Crusade",
+	"platforms"  : ["battlenet"],
+	"maxPlayers" : 64,
+	"modes"      : [ "Campaign" ]
+},
+{
+	"_id"        : "game/world-of-warcraft-wrath-of-the-lich-king",
+	"label"      : "World of Warcraft: Wrath of the Lich King",
+	"platforms"  : ["battlenet"],
+	"maxPlayers" : 64,
+	"modes"      : [ "Campaign" ]
+},
+{
+	"_id"        : "game/world-of-warcraft-cataclysm",
+	"label"      : "World of Warcraft: Cataclysm",
+	"platforms"  : ["battlenet"],
+	"maxPlayers" : 64,
+	"modes"      : [ "Campaign" ]
+},
+{
+	"_id"        : "game/starcraft2",
+	"label"      : "Starcraft 2: Wings of Liberty",
+	"platforms"  : ["battlenet"],
+	"maxPlayers" : 8,
+	"modes"      : [ "Free For All",
+					"Melee"]
+},
+{
+	"_id"        : "game/battlefield-bad-company-2",
+	"label"      : "Battlefield: Bad Company 2",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 24,
+	"modes"      : [ "Conquest",
+					"Onslaught",
+					"Rush",
+					"Squad Deathmatch",
+					"Squad Rush"]
+},
+{
+	"_id"        : "game/battlefield-bad-company-2-vietnam",
+	"label"      : "Battlefield: Bad Company 2: Vietnam",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 24,
+	"modes"      : [ "Conquest",
+					"Onslaught",
+					"Rush",
+					"Squad Deathmatch",
+					"Squad Rush"]
+},
+
+{
+	"_id"        : "game/assassins-creed-brotherhood",
+	"label"      : "Assassin's Creed: Brotherhood",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 8,
+	"modes"      : [ "Advanced Alliance",
+					"Advanced Wanted",
+					"Alliance",
+					"Manhunt",
+					"Wanted"
+					]
+},
+
+{
+	"_id"        : "game/fable3",
+	"label"      : "Fable III",
+	"platforms"  : ["xbox360"],
+	"maxPlayers" : 2,
+	"modes"      : [ "Co-op Campaign" ]
+},
+
+{
+	"_id"        : "game/goldeneye-007-2010",
+	"label"      : "GoldenEye 007",
+	"platforms"  : ["wii"],
+	"maxPlayers" : 8,
+	"modes"      : [ "Deathmatch" ]
+},
+
+{
+	"_id"        : "game/need-for-speed-hot-pursuit-2010",
+	"label"      : "Need for Speed: Hot Pursuit",
+	"platforms"  : ["playstation3","wii","xbox360"],
+	"maxPlayers" : 8,
+	"modes"      : [ "Hot Pursuit",
+					"Interceptor",
+					"Race"]
+},
+
+{
+	"_id"        : "game/call-of-duty4-modern-warfare",
+	"label"      : "Call of Duty 4: Modern Warfare",
+	"platforms"  : ["playstation3","wii","xbox360"],
+	"maxPlayers" : 18,
+	"modes"      : [ "Domination",
+					"Free-for-all",
+					"Hardcore",
+					"Headquarters",
+					"Old School",
+					"Search and Destroy",
+					"Team Deathmatch"]
+},
+
+{
+	"_id"        : "game/borderlands",
+	"label"      : "Borderlands",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 4,
+	"modes"      : [ "Co-op Campaign",
+					"Deathmatch"]
+},
+
+{
+	"_id"        : "game/borderlands-the-zombie-island-of-dr-ned",
+	"label"      : "Borderlands: The Zombie Island of Dr. Ned",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 4,
+	"modes"      : [ "Co-op Campaign",
+					"Deathmatch"]
+},
+
+{
+	"_id"        : "game/borderlands-mad-moxxis-underdome-riot",
+	"label"      : "Borderlands: Mad Moxxi's Underdome Riot",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 4,
+	"modes"      : [ "Co-op Campaign",
+					"Deathmatch"]
+},
+
+{
+	"_id"        : "game/borderlands-the-secret-armory-of-general-knoxx",
+	"label"      : "Borderlands: The Secret Armory of General Knoxx",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 4,
+	"modes"      : [ "Co-op Campaign",
+					"Deathmatch"]
+},
+
+{
+	"_id"        : "game/borderlands-claptraps-new-robot-revolution",
+	"label"      : "Borderlands: Claptrap's New Robot Revolution",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 4,
+	"modes"      : [ "Co-op Campaign",
+					"Deathmatch"]
+},
+
+{
+	"_id"        : "game/blur",
+	"label"      : "Blur",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 20,
+	"modes"      : [ "Motor Mash",
+					"Powered-up Racing",
+					"Skirmish Racing",
+					"Team MotorMash",
+					"Team Racing"]
+}]
+
