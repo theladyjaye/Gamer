@@ -43,7 +43,13 @@
 	
 	
 	// both of these methods will be invoked from a background thread
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){
+		
+		dispatch_async(dispatch_get_main_queue(), ^{
+			[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+		});
+		
 		if(ok)
 		{
 			NSString * token = (NSString *)[response objectForKey:@"token"];
