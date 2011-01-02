@@ -80,15 +80,10 @@
 	}
 	else if (ti < 86400) 
 	{
-		//int diff = floor(ti / 60 / 60);
 		double diff = ti / 60 / 60;
-		//int rounded = (int)diff * 10;
-		//NSLog(@"%i", rounded);
-		//diff = rounded / 10.0;
-		//NSLog(@"%f", diff);
 		
-		if(diff == 1.0)
-			suffix = [NSString stringWithFormat:@"about %d. hour", diff];
+		if(diff == 1)
+			suffix = [NSString stringWithFormat:@"about %d hour", diff];
 		else
 			suffix = [NSString stringWithFormat:@"about %2.1f hours", diff];
 	}
