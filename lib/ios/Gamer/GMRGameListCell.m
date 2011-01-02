@@ -34,12 +34,13 @@
 	CGFloat fontHeight = playerFont.pointSize;
     CGFloat yOffset    = (rect.size.height - fontHeight) / 2.0;
 	
-    CGRect textRect = CGRectMake(10.0, yOffset-4.0, rect.size.width-10.0, fontHeight);
+    CGRect textRect = CGRectMake(10.0, yOffset-4.0, rect.size.width-50.0, fontHeight);
 	
 	CGContextSetFillColorWithColor(context, fontColor.CGColor);
+	
     [title drawInRect:textRect 
 			  withFont:playerFont 
-		 lineBreakMode:UILineBreakModeClip 
+		 lineBreakMode:UILineBreakModeTailTruncation 
 			 alignment:UITextAlignmentLeft];
 	
 }
