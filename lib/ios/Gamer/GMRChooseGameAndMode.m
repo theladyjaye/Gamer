@@ -56,6 +56,15 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
+	// If the game changed we need to reset the mode.
+	// Also when the game changes a whole new GMRGame object is used
+	// so selectedMode will always be -1
+	
+	modeLabel.text  = @"Mode";
+	[modesTableView deselectRowAtIndexPath:[modesTableView indexPathForSelectedRow]
+								animated:NO];
+		
+	
 	if([kCreateMatchProgress.game.modes count] > 0)
 	{
 		

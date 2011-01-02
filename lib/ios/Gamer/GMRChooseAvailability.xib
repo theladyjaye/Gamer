@@ -174,7 +174,7 @@
 					<object class="IBUILabel" id="925723126">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{3, 74}, {271, 22}}</string>
+						<string key="NSFrame">{{3, 76}, {271, 22}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -431,6 +431,7 @@
 					<string>32.IBPluginDependency</string>
 					<string>32.IBViewBoundsToFrameTransform</string>
 					<string>41.IBPluginDependency</string>
+					<string>41.IBViewBoundsToFrameTransform</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -473,6 +474,9 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABDBQAAwzkAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">AUBAAABClAAAA</bytes>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
