@@ -190,6 +190,10 @@
 			D779A62912D11F1500F00BD8 /* PBXTextBookmark */ = D779A62912D11F1500F00BD8 /* PBXTextBookmark */;
 			D779A62B12D11F5200F00BD8 /* PBXTextBookmark */ = D779A62B12D11F5200F00BD8 /* PBXTextBookmark */;
 			D779A62C12D11F5E00F00BD8 /* PBXTextBookmark */ = D779A62C12D11F5E00F00BD8 /* PBXTextBookmark */;
+			D779A62D12D1219600F00BD8 /* PBXTextBookmark */ = D779A62D12D1219600F00BD8 /* PBXTextBookmark */;
+			D779A63012D1219B00F00BD8 /* PBXTextBookmark */ = D779A63012D1219B00F00BD8 /* PBXTextBookmark */;
+			D779A63212D121B400F00BD8 /* PBXTextBookmark */ = D779A63212D121B400F00BD8 /* PBXTextBookmark */;
+			D779A63312D121C100F00BD8 /* PBXTextBookmark */ = D779A63312D121C100F00BD8 /* PBXTextBookmark */;
 			D7836CE912D0341200E1B86F = D7836CE912D0341200E1B86F /* PlistBookmark */;
 			D7836D1312D0357F00E1B86F = D7836D1312D0357F00E1B86F /* PlistBookmark */;
 			D783F80C12B216E800A04D59 = D783F80C12B216E800A04D59 /* PBXTextBookmark */;
@@ -605,7 +609,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = HazGame;
-		modificationTime = 315694870.586421;
+		modificationTime = 315695516.375211;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -816,7 +820,7 @@
 	D75012DF1298CE860079EB44 /* GMRCreateGameController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1433, 5655}}";
-			sepNavSelRange = "{10692, 0}";
+			sepNavSelRange = "{10342, 0}";
 			sepNavVisRange = "{9347, 2715}";
 		};
 	};
@@ -1821,6 +1825,46 @@
 		name = "GMRCreateGameController.m: 311";
 		rLen = 0;
 		rLoc = 10692;
+		rType = 0;
+		vrLen = 2715;
+		vrLoc = 9347;
+	};
+	D779A62D12D1219600F00BD8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 311";
+		rLen = 0;
+		rLoc = 10692;
+		rType = 0;
+		vrLen = 2715;
+		vrLoc = 9347;
+	};
+	D779A63012D1219B00F00BD8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 311";
+		rLen = 0;
+		rLoc = 10692;
+		rType = 0;
+		vrLen = 2715;
+		vrLoc = 9347;
+	};
+	D779A63212D121B400F00BD8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 311";
+		rLen = 0;
+		rLoc = 10692;
+		rType = 0;
+		vrLen = 891;
+		vrLoc = 9851;
+	};
+	D779A63312D121C100F00BD8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 303";
+		rLen = 0;
+		rLoc = 10342;
 		rType = 0;
 		vrLen = 2715;
 		vrLoc = 9347;
@@ -2908,7 +2952,7 @@
 		ignoreCount = 0;
 		lineNumber = 111;
 		location = HazGame;
-		modificationTime = 315694870.586873;
+		modificationTime = 315695516.375641;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};

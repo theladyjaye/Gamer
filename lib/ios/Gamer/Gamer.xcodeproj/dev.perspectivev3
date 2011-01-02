@@ -335,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D779A62C12D11F5E00F00BD8</string>
+										<string>D779A63312D121C100F00BD8</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -459,7 +459,7 @@
 											<string>D779A5B012D10C6300F00BD8</string>
 											<string>D779A60612D1163F00F00BD8</string>
 											<string>D779A61212D11A0400F00BD8</string>
-											<string>D779A62B12D11F5200F00BD8</string>
+											<string>D779A63212D121B400F00BD8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -776,7 +776,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D779A62A12D11F1500F00BD8</string>
+		<string>D779A63112D1219B00F00BD8</string>
 		<string>D779A58E12D0F9C700F00BD8</string>
 		<string>D779A58F12D0F9C700F00BD8</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
