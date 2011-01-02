@@ -131,6 +131,7 @@
 			D779A5A912D0FB9A00F00BD8 /* PBXTextBookmark */ = D779A5A912D0FB9A00F00BD8 /* PBXTextBookmark */;
 			D779A5AB12D0FBD300F00BD8 /* PBXTextBookmark */ = D779A5AB12D0FBD300F00BD8 /* PBXTextBookmark */;
 			D779A5AC12D0FBDB00F00BD8 /* PBXTextBookmark */ = D779A5AC12D0FBDB00F00BD8 /* PBXTextBookmark */;
+			D779A5AD12D0FC2700F00BD8 /* PBXTextBookmark */ = D779A5AD12D0FC2700F00BD8 /* PBXTextBookmark */;
 			D7836CE912D0341200E1B86F = D7836CE912D0341200E1B86F /* PlistBookmark */;
 			D7836D1312D0357F00E1B86F = D7836D1312D0357F00E1B86F /* PlistBookmark */;
 			D783F80C12B216E800A04D59 = D783F80C12B216E800A04D59 /* PBXTextBookmark */;
@@ -691,7 +692,7 @@
 	D745078712A9F93800034CD6 /* GMRGameListCell.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1168, 842}}";
-			sepNavSelRange = "{1069, 0}";
+			sepNavSelRange = "{755, 0}";
 			sepNavVisRange = "{0, 1288}";
 		};
 	};
@@ -1172,6 +1173,16 @@
 		name = "GMRGameListCell.m: 39";
 		rLen = 0;
 		rLoc = 1069;
+		rType = 0;
+		vrLen = 1288;
+		vrLoc = 0;
+	};
+	D779A5AD12D0FC2700F00BD8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D745078712A9F93800034CD6 /* GMRGameListCell.m */;
+		name = "GMRGameListCell.m: 30";
+		rLen = 0;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 0;
