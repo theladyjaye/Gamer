@@ -268,25 +268,26 @@
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>D775C4BD128795D900C72E64</string>
-								<string>D7F3E21912AFDA0700837E14</string>
-								<string>D7EEAE53128A20CF0022AF4E</string>
+								<string>D7AFF522128A68FF00CF1A07</string>
 								<string>D775C4E11287978C00C72E64</string>
-								<string>D795FDB6128FB3E50033F086</string>
+								<string>D750128712989F710079EB44</string>
+								<string>D75012DD1298CE6A0079EB44</string>
+								<string>D7208A7D1292BECD009C0624</string>
 								<string>034768DFFF38A50411DB9C8B</string>
 								<string>1C37FBAC04509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>39</integer>
-									<integer>31</integer>
-									<integer>26</integer>
+									<integer>40</integer>
+									<integer>38</integer>
+									<integer>19</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 110}, {305, 861}}</string>
+							<string>{{0, 112}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -321,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRGameListCell.m</string>
+								<string>GMRGameDetailController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRGameListCell.m</string>
+										<string>GMRGameDetailController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D779A5AD12D0FC2700F00BD8</string>
+										<string>D779A60112D1154D00F00BD8</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -419,7 +420,6 @@
 											<string>D7635F9B12CAD59C0081E4A2</string>
 											<string>D7635FA812CAD7060081E4A2</string>
 											<string>D7635FA912CAD7060081E4A2</string>
-											<string>D748009712CBF1D30017ABA6</string>
 											<string>D792BE2012CD607E00ACFA73</string>
 											<string>D792BE2112CD607E00ACFA73</string>
 											<string>D792BE3412CD616100ACFA73</string>
@@ -430,8 +430,6 @@
 											<string>D7CEF65B12CFDD0B00D1D182</string>
 											<string>D7CEF68212CFDF7300D1D182</string>
 											<string>D7A1D05D12CFF9E500D72C60</string>
-											<string>D7A1D0AF12D00AF600D72C60</string>
-											<string>D7A1D0B012D00AF600D72C60</string>
 											<string>D7A1D0D812D00B9D00D72C60</string>
 											<string>D7A1D0D912D00B9D00D72C60</string>
 											<string>D7A1D11C12D00D6500D72C60</string>
@@ -457,7 +455,10 @@
 											<string>D779A59412D0FA2D00F00BD8</string>
 											<string>D779A59512D0FA2D00F00BD8</string>
 											<string>D779A59612D0FA2D00F00BD8</string>
-											<string>D779A5AB12D0FBD300F00BD8</string>
+											<string>D779A5B012D10C6300F00BD8</string>
+											<string>D779A5DD12D111EA00F00BD8</string>
+											<string>D779A5F812D114B400F00BD8</string>
+											<string>D779A60012D1154B00F00BD8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

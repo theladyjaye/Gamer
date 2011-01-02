@@ -298,15 +298,14 @@ GMRMatch * kCreateMatchProgress = nil;
 											  
 											  NSUInteger insertIndex = -1;
 											  
-											  for(GMRMatch * match in matchesDataSourceController.matches)
+											  for(GMRMatch * match in kScheduledMatches)
 											  {
-												  if([kCreateMatchProgress.scheduled_time compare:match.scheduled_time] == NSOrderedDescending)
+												  if([match.scheduled_time compare:kCreateMatchProgress.scheduled_time] == NSOrderedAscending)
 												  {
 													  insertIndex = [matchesDataSourceController.matches indexOfObject:match];
-												  }
-												  
+												  }  
 											  }
-											  
+											  		  
 											  insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
 											  NSString * matchId = [response objectForKey:@"match"];
 											  

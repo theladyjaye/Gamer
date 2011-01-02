@@ -701,7 +701,7 @@
 		D7DB93321280B14000D6C442 /* GMRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRUtils.m; sourceTree = "<group>"; };
 		D7DDD793127FD3A100C29265 /* GamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamerTests-Info.plist"; sourceTree = "<group>"; };
-		D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamerTesting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DDD7A2127FD3BA00C29265 /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD7AC127FD42400C29265 /* InitializationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializationTests.h; sourceTree = "<group>"; };
 		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
@@ -827,7 +827,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libGamer.a */,
 				D7DDD793127FD3A100C29265 /* GamerTests.octest */,
-				D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */,
+				D7DDD7A2127FD3BA00C29265 /* libGamer.a */,
 				D7DB90901280832500D6C442 /* libASIHttp.a */,
 				D7B7280B128226E700419F60 /* libYAJL.a */,
 				D775C4B2128795A400C72E64 /* GamePop.app */,
@@ -1820,7 +1820,7 @@
 			);
 			name = GamerTesting;
 			productName = Gamer;
-			productReference = D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */;
+			productReference = D7DDD7A2127FD3BA00C29265 /* libGamer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */

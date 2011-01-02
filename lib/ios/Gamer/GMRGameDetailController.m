@@ -446,11 +446,11 @@ static BOOL isCancelOperation;
 			
 			for(GMRMatch * currentMatch in kScheduledMatches)
 			{
-				if([match.scheduled_time compare:currentMatch.scheduled_time] == NSOrderedDescending)
+				//if([match.scheduled_time compare:currentMatch.scheduled_time] == NSOrderedDescending)
+				if([currentMatch.scheduled_time compare:match.scheduled_time] == NSOrderedAscending)
 				{
 					insertIndex = [kScheduledMatches indexOfObject:currentMatch];
 				}
-				
 			}
 			
 			insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;

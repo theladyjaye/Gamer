@@ -80,14 +80,25 @@
 	}
 	else if (ti < 86400) 
 	{
-		int diff = round(ti / 60 / 60);
+		//int diff = floor(ti / 60 / 60);
+		double diff = ti / 60 / 60;
+		//int rounded = (int)diff * 10;
+		//NSLog(@"%i", rounded);
+		//diff = rounded / 10.0;
+		//NSLog(@"%f", diff);
 		
-		if(diff == 1)
-			suffix = [NSString stringWithFormat:@"about %d hour", diff];
+		if(diff == 1.0)
+			suffix = [NSString stringWithFormat:@"about %d. hour", diff];
 		else
-			suffix = [NSString stringWithFormat:@"about %d hours", diff];
+			suffix = [NSString stringWithFormat:@"about %2.1f hours", diff];
 	}
-	else if (ti < 2629743) 
+	else 
+	{
+		return [NSDate gamerScheduleTimeString:date];
+	}
+
+	/*
+	else if (ti < 2629743) // 30 days
 	{
 		int diff = round(ti / 60 / 60 / 24);
 		
@@ -100,7 +111,7 @@
 	{
 		suffix = @"you got lots of time";
 		prefix = @"";
-	}
+	}*/
 	
 	return [NSString stringWithFormat:@"%@ %@", prefix, suffix];
 }
