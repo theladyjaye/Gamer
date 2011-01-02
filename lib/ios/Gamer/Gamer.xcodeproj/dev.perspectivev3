@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>ActivePerspectiveName</key>
-	<string>Debug</string>
+	<string>Project</string>
 	<key>AllowedModules</key>
 	<array>
 		<dict>
@@ -304,6 +304,8 @@
 							<string>MainColumn</string>
 							<real>305</real>
 						</array>
+						<key>RubberWindowFrame</key>
+						<string>317 95 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -314,6 +316,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -331,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D779A61E12D11BE400F00BD8</string>
+										<string>D779A62C12D11F5E00F00BD8</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -455,7 +459,7 @@
 											<string>D779A5B012D10C6300F00BD8</string>
 											<string>D779A60612D1163F00F00BD8</string>
 											<string>D779A61212D11A0400F00BD8</string>
-											<string>D779A61A12D11AED00F00BD8</string>
+											<string>D779A62B12D11F5200F00BD8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -470,6 +474,8 @@
 							<dict>
 								<key>Frame</key>
 								<string>{{0, 0}, {1229, 874}}</string>
+								<key>RubberWindowFrame</key>
+								<string>317 95 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -493,6 +499,8 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1229, -27}}</string>
+										<key>RubberWindowFrame</key>
+										<string>317 95 1556 920 0 0 1680 1028 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -619,8 +627,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -632,8 +638,6 @@
 					<dict>
 						<key>Frame</key>
 						<string>{{0, 0}, {1556, 214}}</string>
-						<key>RubberWindowFrame</key>
-						<string>317 95 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugCLIModule</string>
@@ -708,11 +712,7 @@
 							</array>
 							<key>Frame</key>
 							<string>{{759, 0}, {797, 322}}</string>
-							<key>RubberWindowFrame</key>
-							<string>317 95 1556 920 0 0 1680 1028 </string>
 						</dict>
-						<key>RubberWindowFrame</key>
-						<string>317 95 1556 920 0 0 1680 1028 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXDebugSessionModule</string>
@@ -776,7 +776,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D779A61C12D11AF600F00BD8</string>
+		<string>D779A62A12D11F1500F00BD8</string>
 		<string>D779A58E12D0F9C700F00BD8</string>
 		<string>D779A58F12D0F9C700F00BD8</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

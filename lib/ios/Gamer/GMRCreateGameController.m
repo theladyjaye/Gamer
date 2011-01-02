@@ -302,12 +302,13 @@ GMRMatch * kCreateMatchProgress = nil;
 											  {
 												  if([match.scheduled_time compare:kCreateMatchProgress.scheduled_time] == NSOrderedAscending)
 												  {
-													  insertIndex = [matchesDataSourceController.matches indexOfObject:match];
+													  insertIndex = [kScheduledMatches indexOfObject:match];
 												  }  
 											  }
 											  		  
 											  insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
 											  NSString * matchId = [response objectForKey:@"match"];
+											  
 											  
 											  // prime some values:
 											  kCreateMatchProgress.id = matchId;
