@@ -134,7 +134,8 @@ static void releasePatternCallback(void* image)
 	// and the transform will deal with the scaling
 	
 	CGRect patternRect      = { CGPointZero, {1.0, 1.0} };
-	CGImageRef patternImage = [UIImage imageNamed:@"ActivityViewPattern.png"].CGImage;
+	UIImage * image         = [UIImage imageNamed:@"ActivityViewPattern.png"];
+	CGImageRef patternImage = image.CGImage;
 	
 	CGAffineTransform matrix = CGAffineTransformMakeScale(CGImageGetWidth(patternImage), 
 															 CGImageGetHeight(patternImage));

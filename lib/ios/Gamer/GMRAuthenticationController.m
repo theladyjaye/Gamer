@@ -62,7 +62,7 @@
 								// set the toolbar to hidden = NO prior to starting.
 								// the block API immediately sets the hidden property
 								[UIView beginAnimations:@"toolbarTransitionIn" context:nil];
-								[UIView setAnimationDelay:0.3];
+								[UIView setAnimationDelay:0.5];
 								[UIView setAnimationDuration:0.25];
 								[UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
 								[UIView setAnimationWillStartSelector:@selector(toolbarAnimationWillStart:context:)];

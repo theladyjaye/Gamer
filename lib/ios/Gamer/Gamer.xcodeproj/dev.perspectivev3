@@ -268,8 +268,10 @@
 							<array>
 								<string>0867D691FE84028FC02AAC07</string>
 								<string>D775C4BD128795D900C72E64</string>
+								<string>D7F3E21912AFDA0700837E14</string>
 								<string>D775C4E11287978C00C72E64</string>
-								<string>D7B7CA671288FAE900DC33F4</string>
+								<string>D78CDC0E12B31D4F00D6F3E2</string>
+								<string>D78EA48E12B487D900D78651</string>
 								<string>08FB77AEFE84172EC02AAC07</string>
 								<string>0867D69AFE84028FC02AAC07</string>
 								<string>034768DFFF38A50411DB9C8B</string>
@@ -278,9 +280,10 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
-									<integer>18</integer>
-									<integer>9</integer>
+									<integer>19</integer>
+									<integer>17</integer>
+									<integer>15</integer>
+									<integer>13</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -321,7 +324,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>D7DDD7BB127FD49300C29265</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GMRAuthenticationInputController.m</string>
+								<string>GMRProfileController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +332,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>D7DDD7BC127FD49300C29265</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GMRAuthenticationInputController.m</string>
+										<string>GMRProfileController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7A1D21712D013AB00D72C60</string>
+										<string>D7A1D23F12D0165D00D72C60</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -349,7 +352,6 @@
 											<string>D78EA17B12B4044100D78651</string>
 											<string>D78EA28E12B40D3F00D78651</string>
 											<string>D78EA3FD12B47AA000D78651</string>
-											<string>D78EA64D12B4A22900D78651</string>
 											<string>D78EA6A712B4A51F00D78651</string>
 											<string>D78EA6A812B4A51F00D78651</string>
 											<string>D78EA71D12B4A7B100D78651</string>
@@ -439,7 +441,6 @@
 											<string>D7A1D05D12CFF9E500D72C60</string>
 											<string>D7A1D0AF12D00AF600D72C60</string>
 											<string>D7A1D0B012D00AF600D72C60</string>
-											<string>D7A1D0CA12D00B4300D72C60</string>
 											<string>D7A1D0D812D00B9D00D72C60</string>
 											<string>D7A1D0D912D00B9D00D72C60</string>
 											<string>D7A1D11C12D00D6500D72C60</string>
@@ -451,8 +452,10 @@
 											<string>D7A1D21212D013AB00D72C60</string>
 											<string>D7A1D21312D013AB00D72C60</string>
 											<string>D7A1D21412D013AB00D72C60</string>
-											<string>D7A1D21512D013AB00D72C60</string>
-											<string>D7A1D21612D013AB00D72C60</string>
+											<string>D7A1D22112D0142800D72C60</string>
+											<string>D7A1D22C12D014F100D72C60</string>
+											<string>D7A1D23712D015AB00D72C60</string>
+											<string>D7A1D23E12D0165900D72C60</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -769,6 +772,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D7A1D24012D0165D00D72C60</string>
 		<string>D7A1D07B12CFFBEF00D72C60</string>
 		<string>D7A1D07C12CFFBEF00D72C60</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
