@@ -38,8 +38,9 @@
 
 - (void)authenticate
 {
-	NSString * usernameString = self.username.text;
-	NSString * passwordString = self.password.text;
+	NSString * usernameString = [self.username.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	NSString * passwordString = [self.password.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	
 	
 	// both of these methods will be invoked from a background thread
 	[kGamerApi authenticateUser:usernameString password:passwordString withCallback:^(BOOL ok, NSDictionary * response){

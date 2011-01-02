@@ -143,15 +143,21 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[self updateCellsCountdown];
-	[self beginCellUpdates];
-	[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+	if([matchesTable numberOfRowsInSection:0] > 0)
+	{
+		[self updateCellsCountdown];
+		[self beginCellUpdates];
+		[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+	}
 }
 
 - (void)endCellUpdates
 {
-	[updateTimer invalidate];
-	updateTimer = nil;
+	if(updateTimer)
+	{
+		[updateTimer invalidate];
+		updateTimer = nil;
+	}	
 }
 
 - (void)beginCellUpdates

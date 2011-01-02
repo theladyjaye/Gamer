@@ -40,12 +40,9 @@
 			 
 			 
 			 NSArray * tempMatches = [response objectForKey:@"matches"];
-			 NSLog(@"Total Matches: %i", [tempMatches count]);
 			 if ([tempMatches count] > 0)
 			 {
 				 //matches = [NSMutableArray array];//:(NSArray *)[response objectForKey:@"matches"]];
-				 
-				 NSLog(@"Converting to Model Objects");
 				 
 				 for(NSDictionary * item in tempMatches)
 				 {
@@ -60,6 +57,7 @@
 					
 					[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 					[matchesTable reloadData];
+					[self beginCellUpdates];
 				});
 			 }
 			 else 
@@ -74,7 +72,6 @@
 		 }
 		 else 
 		 {
-			 NSLog(@"%@", response);
 			 dispatch_async(dispatch_get_main_queue(), ^{
 				 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 				 [self noMatchesScheduled];

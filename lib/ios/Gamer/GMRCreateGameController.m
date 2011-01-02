@@ -236,90 +236,135 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	if(form.ok)
 	{
-		[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-		[kGamerApi matchCreate:kCreateMatchProgress.scheduled_time 
-						gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
-					  gameMode:[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode]
-					  platform:kCreateMatchProgress.platform 
-				  availability:kCreateMatchProgress.availability 
-					maxPlayers:kCreateMatchProgress.maxPlayers 
-				invitedPlayers:nil 
-						 label:kCreateMatchProgress.label
-				  withCallback:^(BOOL ok, NSDictionary * response)
-							  {
-								  if(ok)
+		// is this match < 30 min from the closest match?
+		NSTimeInterval matchTime = [kCreateMatchProgress.scheduled_time timeIntervalSinceNow];
+		NSTimeInterval closestMatch = (double)INT_MAX;
+		BOOL hasScheduleConflict = YES;
+		
+		if([kScheduledMatches count] > 0)
+		{
+			// get the scheduled match closest to the proposed match.
+			for (GMRMatch * scheduledMatch in kScheduledMatches) 
+			{
+				NSTimeInterval scheduledInterval = [scheduledMatch.scheduled_time timeIntervalSinceNow];
+				NSTimeInterval delta = ABS(matchTime - scheduledInterval);
+				
+				if(delta < closestMatch)
+				{
+					closestMatch = scheduledInterval;
+				}
+			}
+			
+			
+			// 30 min - Games are alloted a 30 min (1800 sec) play slot.  if the user wishes to join/create a game
+			// they connot have any other game scheduled that start within 30 min from the game they wish to join.
+			if(ABS(closestMatch - matchTime) > 1800) hasScheduleConflict = NO; 
+		}
+		else 
+		{
+			hasScheduleConflict = NO;
+		}
+
+		if(hasScheduleConflict) 
+		{
+			GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																 title:@"Schedule Conflict" 
+															   message:@"You are currently scheduled for a game that starts within 30 minutes of this match." 
+															  callback:^(GMRAlertView * alertView){
+																  [alertView release];
+															  }];
+			[alert show];
+		}
+		else
+		{
+			
+			
+			
+			[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+			[kGamerApi matchCreate:kCreateMatchProgress.scheduled_time 
+							gameId:[[kCreateMatchProgress.game.id componentsSeparatedByString:@"/"] objectAtIndex:1]
+						  gameMode:[kCreateMatchProgress.game.modes objectAtIndex:kCreateMatchProgress.game.selectedMode]
+						  platform:kCreateMatchProgress.platform 
+					  availability:kCreateMatchProgress.availability 
+						maxPlayers:kCreateMatchProgress.maxPlayers 
+					invitedPlayers:nil 
+							 label:kCreateMatchProgress.label
+					  withCallback:^(BOOL ok, NSDictionary * response)
 								  {
-									  dispatch_async(dispatch_get_main_queue(), ^{
-										  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-										  
-										  NSUInteger insertIndex = -1;
-										  
-										  for(GMRMatch * match in matchesDataSourceController.matches)
-										  {
-											  if([kCreateMatchProgress.scheduled_time compare:match.scheduled_time] == NSOrderedDescending)
+									  if(ok)
+									  {
+										  dispatch_async(dispatch_get_main_queue(), ^{
+											  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+											  
+											  NSUInteger insertIndex = -1;
+											  
+											  for(GMRMatch * match in matchesDataSourceController.matches)
 											  {
-												  insertIndex = [matchesDataSourceController.matches indexOfObject:match];
+												  if([kCreateMatchProgress.scheduled_time compare:match.scheduled_time] == NSOrderedDescending)
+												  {
+													  insertIndex = [matchesDataSourceController.matches indexOfObject:match];
+												  }
+												  
 											  }
 											  
-										  }
-										  
-										  insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
-										  NSString * matchId = [response objectForKey:@"match"];
-										  
-										  // prime some values:
-										  kCreateMatchProgress.id = matchId;
-										  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
-										  
-										  
-										  [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
-										  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-										 			forKey:@"matches"];
-										  
-										  [kScheduledMatches insertObject:kCreateMatchProgress 
-										  										atIndex:insertIndex];
-										  
-										  
-										  [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
-											                     valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-													                      forKey:@"matches"];
-										  
-										  [self dismissModalViewController];
-										  
-									  }); 
-								  }
-								  else 
-								  {
-									  dispatch_async(dispatch_get_main_queue(), ^{
-											[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+											  insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
+											  NSString * matchId = [response objectForKey:@"match"];
+											  
+											  // prime some values:
+											  kCreateMatchProgress.id = matchId;
+											  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+											  
+											  
+											  [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
+											  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+														forKey:@"matches"];
+											  
+											  [kScheduledMatches insertObject:kCreateMatchProgress 
+																					atIndex:insertIndex];
+											  
+											  
+											  [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
+																	 valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+																			  forKey:@"matches"];
+											  
+											  [self dismissModalViewController];
+											  
+										  }); 
+									  }
+									  else 
+									  {
+										  dispatch_async(dispatch_get_main_queue(), ^{
+												[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+												
+											  NSInteger code = [[response objectForKey:@"code"] intValue];
+											  NSString * platformString = [GMRClient formalDisplayNameForPlatform:kCreateMatchProgress.platform];
+											  
+											  GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																									 title:@"Unknown Error" 
+																								   message:@"An unknown error occurred" 
+																								  callback:^(GMRAlertView * alertView){
+																									  [self dismissModalViewController];
+																									  [alertView release];
+																								  }];
 											
-										  NSInteger code = [[response objectForKey:@"code"] intValue];
-										  NSString * platformString = [GMRClient formalDisplayNameForPlatform:kCreateMatchProgress.platform];
+											  
+											  
+												switch(code)
+												{
+													case 2007:
+														alert.alertTitle = [NSString stringWithFormat:@"%@ - Linked Alias", platformString];
+														alert.alertMessage = [NSString stringWithFormat:@"You do not have an alias linked for %@.\n\nGo to your profile and link an alias for %@ before crating a game.", platformString, platformString];
+														break;
+												}
+											  
+											  [alert show];
+										  });
 										  
-										  GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
-																								 title:@"Unknown Error" 
-																							   message:@"An unknown error occurred" 
-																							  callback:^(GMRAlertView * alertView){
-																								  [self dismissModalViewController];
-																								  [alertView release];
-																							  }];
-										
-										  
-										  
-											switch(code)
-											{
-												case 2007:
-													alert.alertTitle = [NSString stringWithFormat:@"%@ - Linked Alias", platformString];
-													alert.alertMessage = [NSString stringWithFormat:@"You do not have an alias linked for %@.\n\nGo to your profile and link an alias for %@ before crating a game.", platformString, platformString];
-													break;
-											}
-										  
-										  [alert show];
-									  });
-									  
-								  }
+									  }
 
-								  //NSLog(@"%@", response);
-							  }];
+									  //NSLog(@"%@", response);
+								  }];
+		}
 	}
 	else 
 	{

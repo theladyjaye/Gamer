@@ -106,9 +106,11 @@ static UINavigationController * currentNavigationController;
 	UIImage * image       = [[UIImage alloc] initWithContentsOfFile:path];
 	self.defaultImageView = [[[UIImageView alloc] initWithImage:image] autorelease];
 	self.defaultImageView.frame = (CGRect){ {(self.defaultImageView.frame.size.width * -1), self.defaultImageView.frame.origin.y}, self.defaultImageView.frame.size};
+	//NSLog(@"%@", self.defaultImageView);
 	
 	[self.view addSubview:self.defaultImageView];
 	[image release];
+	
 	
 	[UIView transitionWithView:self.defaultImageView 
 					  duration:0.35f 
@@ -120,12 +122,14 @@ static UINavigationController * currentNavigationController;
 						
 						// if the main controller is out of the picture, 
 						// it means we are dropping back to the autentication view
+						
 						HazGame * app = (HazGame *)[UIApplication sharedApplication].delegate;
 						[app initializeAuthenticationFlow];
 						
 						//[self.defaultImageView removeFromSuperview];
 						//self.defaultImageView = nil;
 					}];
+	 
 	
 }
 

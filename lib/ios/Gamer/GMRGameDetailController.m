@@ -288,22 +288,39 @@ static BOOL isCancelOperation;
 
 - (void)joinGame
 {
+	
+	// is this match < 30 min from the closest match?
 	NSTimeInterval matchTime = [match.scheduled_time timeIntervalSinceNow];
 	NSTimeInterval closestMatch = (double)INT_MAX;
 	
-	// get the scheduled match closest to now.
-	for (GMRMatch * scheduledMatch in kScheduledMatches) 
+	BOOL hasScheduleConflict = YES;
+	
+	if([kScheduledMatches count] > 0)
 	{
-		NSTimeInterval scheduledInterval = [scheduledMatch.scheduled_time timeIntervalSinceNow];
-		NSTimeInterval delta = ABS(matchTime - scheduledInterval);
+		// get the scheduled match closest to the proposed match.
+		for (GMRMatch * scheduledMatch in kScheduledMatches) 
+		{
+			NSTimeInterval scheduledInterval = [scheduledMatch.scheduled_time timeIntervalSinceNow];
+			NSTimeInterval delta = ABS(matchTime - scheduledInterval);
+			
+			if(delta < closestMatch)
+			{
+				closestMatch = scheduledInterval;
+			}
+		}
 		
-		closestMatch = delta < closestMatch ? scheduledInterval : closestMatch;
+		
+		// 30 min - Games are alloted a 30 min (1800 sec) play slot.  if the user wishes to join/create a game
+		// they connot have any other game scheduled that start within 30 min from the game they wish to join.
+		if(ABS(closestMatch - matchTime) > 1800) hasScheduleConflict = NO; 
+	}
+	else 
+	{
+		hasScheduleConflict = NO;
 	}
 	
 	
-	// 30 min - Games are alloted a 30 min (1800 sec) play slot.  if the user wishes to join a game
-	// they connot have any other game scheduled that start within 30 min from the game they wish to join.
-	if(closestMatch < 1800) 
+	if(hasScheduleConflict) 
 	{
 		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
 															 title:@"Schedule Conflict" 

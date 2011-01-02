@@ -106,6 +106,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 		}
 	}
 	
+	
 	GMRAuthenticationController * loginController = [[GMRAuthenticationController alloc] initWithNibName:nil bundle:nil];
 	
 	authenticationController = [[GMRNavigationController alloc] initWithRootViewController:loginController];

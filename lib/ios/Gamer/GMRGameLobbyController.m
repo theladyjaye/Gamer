@@ -17,9 +17,10 @@
 #import "GMRMatchListCell.h"
 
 
+static BOOL kObservingMatches;
+
 @implementation GMRGameLobbyController
 @synthesize filterCheveron, currentFilter,matchesTable, matches, matchListSourceUpdateViewOnChange;
-
 
 - (void)viewDidLoad 
 {
@@ -51,10 +52,13 @@
 	[self applyFilter:filter];
 	[filter release];
 	
+
 	[self addObserver:self 
 		   forKeyPath:@"matches" 
 			  options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 			  context:nil];
+	
+	kObservingMatches = YES;
 	
 	[super viewDidLoad];
 }
@@ -214,9 +218,11 @@
 
 - (void)endCellUpdates
 {
-	NSLog(@"killing timer");
-	[updateTimer invalidate];
-	updateTimer = nil;
+	if(updateTimer)
+	{
+		[updateTimer invalidate];
+		updateTimer = nil;
+	}
 }
 
 - (void)beginCellUpdates
@@ -260,9 +266,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	[self updateCellsCountdown];
-	[self beginCellUpdates];
-	[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+	if([matchesTable numberOfRowsInSection:0] > 0)
+	{
+		[self updateCellsCountdown];
+		[self beginCellUpdates];
+		[matchesTable deselectRowAtIndexPath:[matchesTable indexPathForSelectedRow] animated:YES];
+	}
 }
 
 
@@ -294,8 +303,18 @@
 
 - (void)dealloc {
 	
-	[self removeObserver:self 
-			  forKeyPath:@"matches"];
+	// even though this view controller would not be loaded, dealloc was called on it during logout.
+	// probably because it's being hooked up in IB. It should be noted that awakeFromNib does fire on this
+	// class, so something is happening to init it.
+	//
+	// Since viewDidLoad never ran, the observer was never being attached, and attempting to remove
+	// an unattached observer was causing problems.
+	if(kObservingMatches)
+	{
+		[self removeObserver:self 
+				  forKeyPath:@"matches"];
+	}
+	
 	
 	self.filterCheveron = nil;
 	self.matchesTable = nil;
@@ -306,8 +325,13 @@
 	[currentFilter release];
 	currentFilter = nil;
 	
-	[noneView release];
+
+	
+	[noneView removeFromSuperview];
+	// when noneView is added to the superview, it's already released. Removing it from the superview should be enough to kill it.
+	//[noneView release];
 	noneView = nil;
+
 	
 	[super dealloc];
 }

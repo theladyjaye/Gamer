@@ -271,9 +271,9 @@
 	if(alertView.selectedButtonIndex == 1)
 	{
 		// Perform the actual logout
-		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-		[defaults removeObjectForKey:@"token"];
-		[defaults removeObjectForKey:@"username"];
+		//NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		//[defaults removeObjectForKey:@"token"];
+		//[defaults removeObjectForKey:@"username"];
 		
 		// Relfect the logout state
 		UITabBarController * tabBarController = (UITabBarController *)self.parentViewController;
