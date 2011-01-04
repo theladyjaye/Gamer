@@ -19,7 +19,7 @@ exports.endpoints = function(app)
 function updateAlias(req, res, next)
 {
 	var username  = req.params.username;
-	var oldAlias  = req.params.alias;
+	var oldAlias  = req.params.alias.toLowerCase();
 	var fields    = req.form.fields;
 	var newAlias  = fields.alias;
 	
@@ -37,7 +37,7 @@ function updateAlias(req, res, next)
 	}
 	else
 	{
-		newAlias = fields.alias.trim();
+		newAlias = fields.alias.trim().toLowerCase();
 		
 		if(newAlias.length < 3)
 		{

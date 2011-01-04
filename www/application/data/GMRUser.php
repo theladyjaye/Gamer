@@ -180,6 +180,8 @@ class GMRUser
 		                                                         "platform" => $platform,
 		                                                         "alias"    => $alias));
 		
+		$query->execute();
+		
 		return $query->affected_rows > 0;
 	}
 	
