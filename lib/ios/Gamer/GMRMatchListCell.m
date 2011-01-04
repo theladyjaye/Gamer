@@ -99,7 +99,7 @@
 	self.gameString     = nil;
 	self.dateString     = nil;
 	self.platformString = nil;
-	self.platformColors = nil;
+	//self.platformColors = nil;
 	self.scheduled_time = nil;
 	[super dealloc];
 }

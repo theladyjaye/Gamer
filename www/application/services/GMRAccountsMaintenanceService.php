@@ -1,4 +1,6 @@
 <?php
+require GMRApplication::basePath()."/application/libs/gamer/GMRClient.php";
+
 class GMRAccountsMaintenanceService extends GMRAbstractService
 {
 	/**
@@ -55,21 +57,67 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 			$input   = AMForm::formWithContext($context);
 
 			$input->addValidator(new AMPatternValidator('platformAlias', AMValidator::kRequired, '/^[a-zA-Z0-9_-]+$/', "Invalid platform alias."));
+			
 
 			if($input->isValid)
 			{
 				$user  = GMRUser::userWithId($this->session->currentUser->id);
-				$result = $user->addAliasForPlatform($input->platformAlias, $platform);
-				
-				if($result == false)
+				$previousAlias = null;
+				if($user)
 				{
-					$response->ok = false;
-					$response->message = "unable_to_link_alias";
+					//get the alias the user is changing:
+					$aliases = $user->aliases();
+					
+					if(count($aliases))
+					{
+						foreach($aliases as $alias)
+						{
+							if($alias->platform == $platform)
+							{
+								// no change
+								if($alias->alias == $input->platformAlias)
+								{
+									$response->ok      = true;
+									$response->message = "no_change";
+									return $response;
+								}
+								
+								$previousAlias = $alias->alias;
+								break;
+							}
+						}
+					}
+					
+					$result = $user->addAliasForPlatform($input->platformAlias, $platform);
+					
+					
+					if($result == false)
+					{
+						$response->ok = false;
+						$response->message = "unable_to_link_alias";
+					}
+					else
+					{
+						// we successfully changed the users alias
+						// if they had a previous alias for this platform lets update those player objects:
+						// that have yet to occurr
+						if($previousAlias)
+						{
+							$settings = GMRConfiguration::standardConfiguration();
+							$client   = new GMRClient($settings['libGamerKey']);
+							$client->updateAliasForUsernameWithAlias($username, $previousAlias, $input->platformAlias);
+						}
+						
+						// now lets check any anonymous entries for the new alias, and link it to the username accordingly
+						//$client->linkAnonymousAliasOnPlatformWithUsername($input->platformAlias, $platform, $username);
+						$response->ok = true;
+						
+					}
 				}
 				else
 				{
-					// we linked the account, lets check to see if there was a registered player for this alias for a game
-					// that occurrs in the future, and link that to the username.
+					$response->ok = false;
+					$response->message = "unauthorized_client";
 				}
 			}
 		}

@@ -90,13 +90,13 @@ class GMRUser
 		
 		if(!$queryLoaded)
 		{
-			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserWithAlias.php';
+			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserWithAliasOnPlatform.php';
 			$queryLoaded = true;
 		}
 		
 		$object   = null;
 		$database = GMRDatabase::connection(GMRDatabase::kSql);
-		$query    = new GMRQueryUserWithAlias($database, array("alias" => $alias, "platform" => $platform);
+		$query    = new GMRQueryUserWithAliasOnPlatform($database, array("alias" => $alias, "platform" => $platform));
 		
 		if(count($query) == 1)
 		{
@@ -180,7 +180,7 @@ class GMRUser
 		                                                         "platform" => $platform,
 		                                                         "alias"    => $alias));
 		
-		return $query->execute();
+		return $query->affected_rows > 0;
 	}
 	
 	public function aliases()

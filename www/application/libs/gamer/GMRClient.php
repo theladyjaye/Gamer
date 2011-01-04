@@ -31,6 +31,24 @@ final class GMRClient
 	}
 	
 		/**
+		 * Update a players alias
+		 *
+		 * @param string $platform constant from GMRPlatform
+		 * @param string $oldAlias the players old alias
+		 * @param string $newAlias the players new alias
+		 * @return object {"ok":bool}
+		 * @author Adam Venturella
+		 */
+		public function updateAliasForUsernameWithAlias($username, $oldAlias, $newAlias)
+		{
+				$response = $this->request->execute(array('path'          => '/players/'.$username.'/aliases/'.$oldAlias,
+				                                          'data'          => array('alias'=> $newAlias),
+				                                          'method'        => 'POST'));
+			$data = json_decode($response);
+			return $data;
+		}
+		
+		/**
 		 * Retrieve a match
 		 *
 		 * @param string $platform constant from GMRPlatform

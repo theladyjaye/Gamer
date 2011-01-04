@@ -12,5 +12,7 @@ module.exports = {
 	"create_match"       :{"code":3002, "message":"unable_to_create_match"},
 	"update_match"       :{"code":3003, "message":"unable_to_update_match"},
 	"match_full"         :{"code":3004, "message":"match_full"},
-	"duplicate_player"   :{"code":3005, "message":"duplicate_player"}
+	"duplicate_player"   :{"code":3005, "message":"duplicate_player"},
+	"invalid_alias"      :{"code":3006, "message":"invalid_alias"},
+	"update_past_alias"  :{"code":3007, "message":"unable_to_update_past_aliases"}
 }

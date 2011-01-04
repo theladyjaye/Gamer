@@ -13,6 +13,11 @@ class GMRQueryUserUpsertAlias extends AMQuery
 		ON DUPLICATE KEY UPDATE alias = VALUES(alias);
 SQL;
 	}
+	
+	public function success()
+	{
+		return $this->dbh->affected_rows > 0 ? true : false;
+	}
 }
 
 ?>

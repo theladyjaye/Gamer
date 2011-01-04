@@ -25,6 +25,7 @@
 #import "GMRClient.h"
 #import "GMRGlobals.h"
 #import "GMRAliasListCell.h"
+#import "GMRAlertView.h"
 
 GMRAlias * kCreateAliasProgress;
 
@@ -196,6 +197,14 @@ GMRAlias * kCreateAliasProgress;
 						 {
 							 dispatch_async(dispatch_get_main_queue(), ^{
 								 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+								 
+								 GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+																					  title:@"Unable to link alias" 
+																					message:[NSString stringWithFormat:@"The alias \"%@\" has already been linked to an account on %@.", kCreateAliasProgress.alias, [GMRClient formalDisplayNameForPlatform:kCreateAliasProgress.platform]] 
+																				   callback:^(GMRAlertView *alertView) {
+																					   [alertView release];
+																				   }];
+								 [alert show];
 							 });
 							 
 						 }
@@ -204,7 +213,16 @@ GMRAlias * kCreateAliasProgress;
 	}
 	else 
 	{
-		NSLog(@"Form Errors: %@", form.errors);
+		//NSLog(@"Form Errors: %@", form.errors);
+		NSString * errors  = [form.errors componentsJoinedByString:@"\n"];
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Unable to link alias" 
+														   message:errors
+														  callback:^(GMRAlertView * alertView){
+															  [alertView release];
+														  }];
+		
+		[alert show];
 	}
 }
 

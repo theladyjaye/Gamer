@@ -186,6 +186,7 @@ static NSArray * platformStrings;
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
 		   withCallback:^(BOOL ok, NSDictionary * response){
+			   NSLog(@"%@", response);
 			   callback(ok, response);
 		   }];
 	

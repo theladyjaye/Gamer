@@ -14,6 +14,7 @@ class AMQuery implements Iterator, Countable
 {
 	public $sql  = '';
 	public $isMultiQuery;
+	public $affected_rows;
 	
 	protected $currentIndex;
 	protected $result;
@@ -36,6 +37,7 @@ class AMQuery implements Iterator, Countable
 		else
 			$this->result = $this->dbh->query($this->__toString());
 			
+		$this->affected_rows = $this->dbh->affected_rows;
 		return $this->dbh->sqlstate == 00000 ? true : false;
 	}
 	

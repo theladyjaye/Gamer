@@ -33,6 +33,7 @@ class GameDetailController extends GMRController
 				if($this->isPostBack)
 				{
 					require GMRApplication::basePath()."/application/data/GMRUser.php";
+					require GMRApplication::basePath()."/application/libs/axismundi/data/AMQuery.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/AMForm.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/validators/AMPatternValidator.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/validators/AMErrorValidator.php";

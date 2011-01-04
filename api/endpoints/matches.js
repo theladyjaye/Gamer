@@ -229,7 +229,6 @@ function joinMatchAnonymously(req, res, next)
 					
 					if(duplicatePlayer)
 					{
-						console.log("WE HAVE A DUPLICATE PLAYER!");
 						next({"ok":false, "message":Errors.duplicate_player.message, "code":Errors.duplicate_player.code});
 						return;
 					}
