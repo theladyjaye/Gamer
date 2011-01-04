@@ -84,6 +84,28 @@ class GMRUser
 		return $object;
 	}
 	
+	public static function userWithAliasOnPlatform($alias, $platform)
+	{
+		static $queryLoaded = false;
+		
+		if(!$queryLoaded)
+		{
+			require GMRApplication::basePath().'/application/data/queries/GMRQueryUserWithAlias.php';
+			$queryLoaded = true;
+		}
+		
+		$object   = null;
+		$database = GMRDatabase::connection(GMRDatabase::kSql);
+		$query    = new GMRQueryUserWithAlias($database, array("alias" => $alias, "platform" => $platform);
+		
+		if(count($query) == 1)
+		{
+			$object = GMRUser::hydrateWithArray($query->one());
+		}
+		
+		return $object;
+	}
+	
 	public static function userWithUsername($username)
 	{
 		static $queryLoaded = false;

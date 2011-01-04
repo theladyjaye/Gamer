@@ -64,7 +64,12 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 				if($result == false)
 				{
 					$response->ok = false;
-					$response->message = "unable to add alias";
+					$response->message = "unable_to_link_alias";
+				}
+				else
+				{
+					// we linked the account, lets check to see if there was a registered player for this alias for a game
+					// that occurrs in the future, and link that to the username.
 				}
 			}
 		}

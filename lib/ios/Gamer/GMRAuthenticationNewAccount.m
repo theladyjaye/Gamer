@@ -177,8 +177,8 @@
 														 title:@"Success" 
 													   message:@"Account Created Successfully!\nPlease check your email to activate your new acocunt."
 													  callback:^(GMRAlertView * alertView){
-														  [alertView release];
 														  [self transitionOut];
+														  [alertView release];
 													  }];
 	[alert show];
 

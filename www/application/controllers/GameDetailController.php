@@ -32,6 +32,7 @@ class GameDetailController extends GMRController
 				
 				if($this->isPostBack)
 				{
+					require GMRApplication::basePath()."/application/data/GMRUser.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/AMForm.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/validators/AMPatternValidator.php";
 					require GMRApplication::basePath()."/application/libs/axismundi/forms/validators/AMErrorValidator.php";
@@ -41,7 +42,18 @@ class GameDetailController extends GMRController
 					$form->addValidator(new AMPatternValidator('alias', AMValidator::kRequired, '/^[\w\d _-]{4,}$/', "Invalid alias. Expecting minimum 4 characters."));
 					if($form->isValid)
 					{
-						$response = $this->client->matchJoinAnonymously($this->platform, $this->game_id, $this->match_id, $form->alias);
+						$user = GMRUser::userWithAliasOnPlatform($this->alias, $this->platform);
+						
+						if($user)
+						{
+							// masquerade as the user
+							$client   = new GMRClient($settings['libGamerKey'], $user->username);
+							$response = $client->matchJoin($this->platform, $this->game_id, $this->match_id);
+						}
+						else
+						{
+							$response = $this->client->matchJoinAnonymously($this->platform, $this->game_id, $this->match_id, $form->alias);
+						}
 						
 						if($response->ok == false)
 						{
