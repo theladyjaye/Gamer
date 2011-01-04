@@ -240,6 +240,13 @@ function joinMatchAnonymously(req, res, next)
 						player.alias          = alias;
 						player.scheduled_time = match.scheduled_time;
 						player.match          = match._id;
+						
+						// anonymous players are the only ones we need to know the platform for
+						// this will help us relink those players back if they create an account
+						// add their alias to the platform. We need that last data point to connect them 
+						// properly since an alias could exist across different platforms with a different owner.
+						player.platform       = platform; 
+						
 
 						db.saveDoc(player, function(error, data)
 						{
