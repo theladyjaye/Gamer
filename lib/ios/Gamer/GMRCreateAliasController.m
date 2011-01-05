@@ -26,6 +26,8 @@
 #import "GMRGlobals.h"
 #import "GMRAliasListCell.h"
 #import "GMRAlertView.h"
+#import "OverviewController.h"
+#import "OverviewController+TableView.h"
 
 GMRAlias * kCreateAliasProgress;
 
@@ -137,6 +139,7 @@ GMRAlias * kCreateAliasProgress;
 								 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 								 
 								 NSUInteger insertIndex = -1;
+								 NSInteger  additionalLinkedPlayerObjects = [[response objectForKey:@"linked"] intValue];
 								 
 								 for(GMRAlias * object in profileController.aliases)
 								 {
@@ -188,6 +191,21 @@ GMRAlias * kCreateAliasProgress;
 								 [profileController didChange:NSKeyValueChangeInsertion 
 											  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
 													   forKey:@"aliases"];
+								 
+								 
+								 /* TODO consider optimizing, fetching JUST the newly linked games for the player
+								  would need to return the match id's in the response (requires editing the php and the node logic), and then 
+								  perform an additional request to bulk fetch those matches.  The way we are doing it now is the 
+								  atomic option; just blowing it all away and starting over.*/
+								 
+								 NSLog(@"%@", response);
+								 NSLog(@"%i <--- linked player response", additionalLinkedPlayerObjects);
+								 if (additionalLinkedPlayerObjects > 0) 
+								 {
+									// need to do a refresh on the overview controller
+									 NSLog(@"Refreshing Entire matches table");
+									 [kScheduledMatchesViewController matchesTableRefresh];
+								 }
 								 
 								 [self dismissModalViewController];
 								 

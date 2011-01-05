@@ -751,6 +751,7 @@ function getScheduledMatches(req, res, next)
 	
 	if(auth.userIsAuthorized(username, req.access_token))
 	{
+		console.log({"include_docs":true, "startkey":[username, new Date().toJSON()], "endkey":[username, {}]});
 		db.view("application", "matches-scheduled-user", {"include_docs":true, "startkey":[username, new Date().toJSON()], "endkey":[username, {}]}, function(error, data)
 		{
 			if(error == null)

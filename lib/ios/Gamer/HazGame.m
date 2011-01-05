@@ -126,8 +126,8 @@ OverviewController * kScheduledMatchesViewController = nil;
 {	
 	// this guy is going to hang around for the lifetime of the application.
 	// should save us form makeing lot-o-GETs for the same data.
-	kScheduledMatches = [NSMutableArray array];
-	[kScheduledMatches retain];
+	//kScheduledMatches = [NSMutableArray array];
+	//[kScheduledMatches retain];
 	
 	mainController = [[GMRMainController alloc] initWithNibName:nil bundle:nil];
 	

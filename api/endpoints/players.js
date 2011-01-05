@@ -77,7 +77,7 @@ function updateAnonymousAlias(req, res, next)
 						{
 							if(error_bulk == null)
 							{
-								next({"ok":true});
+								next({"ok":true, "linked":updates.length});
 							}
 							else
 							{
@@ -87,13 +87,13 @@ function updateAnonymousAlias(req, res, next)
 					}
 					else
 					{
-						next({"ok":true})
+						next({"ok":true, "linked":0})
 					}
 				});
 			}
 			else
 			{
-				next({"ok":true})
+				next({"ok":true, "linked":0})
 			}
 		});
 	}
@@ -161,7 +161,7 @@ function updateAlias(req, res, next)
 					{
 						if(error_bulk == null)
 						{
-							next({"ok":true});
+							next({"ok":true, "linked":updates.length});
 						}
 						else
 						{
@@ -172,7 +172,7 @@ function updateAlias(req, res, next)
 			}
 			else
 			{
-				next({"ok":true});
+				next({"ok":true, "linked":0});
 			}
 		}
 		else
