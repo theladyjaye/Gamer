@@ -101,15 +101,16 @@ function hydrateToken(req, next)
 
 function handleHydrationQuery(query, req, next)
 {
+	
 	query.execute(function(err, rows, fields)
 	{
 		if(err == null && rows.length > 0)
 		{
-			
 			// this is the system user, it has full privlidges, 
 			// so lets turn it into the user it wants to be
 			if(rows[0].username == "system")
 			{
+				
 				if(typeof req.headers["x-masquerade-as"] != "undefined")
 				{
 					var UsernameAuthenticate = require('../data/queries/UsernameAuthenticate');

@@ -98,18 +98,19 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 					}
 					else
 					{
+						$settings = GMRConfiguration::standardConfiguration();
+						$client   = new GMRClient($settings['libGamerKey']);
+						
 						// we successfully changed the users alias
 						// if they had a previous alias for this platform lets update those player objects:
 						// that have yet to occurr
 						if($previousAlias)
 						{
-							$settings = GMRConfiguration::standardConfiguration();
-							$client   = new GMRClient($settings['libGamerKey']);
 							$client->updateAliasForUsernameWithAlias($username, $previousAlias, $input->platformAlias);
 						}
 						
 						// now lets check any anonymous entries for the new alias, and link it to the username accordingly
-						//$client->linkAnonymousAliasOnPlatformWithUsername($input->platformAlias, $platform, $username);
+						$client->linkAnonymousAliasOnPlatformWithUsername($input->platformAlias, $platform, $username);
 						$response->ok = true;
 						
 					}

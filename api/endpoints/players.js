@@ -13,7 +13,95 @@ var couchdb        = require('../libs/node-couchdb/lib/couchdb'),
 
 exports.endpoints = function(app)
 {
+	app.post('/anonymous/aliases/:alias', updateAnonymousAlias);
 	app.post('/:username/aliases/:alias', updateAlias);
+	
+}
+
+function updateAnonymousAlias(req, res, next)
+{
+	var fields    = req.form.fields;
+	var alias     = req.params.alias.toLowerCase();
+	var username  = null;
+	var platform = null;
+	
+	
+	// Only the system user can perform this function
+	if(req.access_token.user != "system")
+	{
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
+		return;
+	}
+	
+	if(typeof fields.username == "undefined" || typeof fields.platform == "undefined")
+	{
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
+		
+		return;
+	}
+	
+	usernameValidation = /^[\w\d]{4,}$/;
+	platformValidation = /battlenet|playstation2|playstation3|steam|wii|xbox360/
+	
+	username = fields.username;
+	platform = fields.platform;
+	
+	
+	if(username.match(usernameValidation) && platform.match(platformValidation))
+	{
+		// is this a real username:
+		var playersQuery  = new PlayersInArray([username]);
+		playersQuery.execute(function(err, rows, fields)
+		{
+			if(rows.length = 1)
+			{
+				// this view filters by > + new Date() aka NOW
+				db.view("application", "players-scheduled-platform-anonymous", {"include_docs":true, "startkey":[alias, platform], "endkey":[alias, platform]}, function(error, players)
+				{
+					var updates = [];
+					
+					players.rows.forEach(function(player)
+					{
+						player.doc.username = username;
+						player.doc.platform = null;
+						updates.push(player.doc);
+					});
+					
+					if(updates.length > 0)
+					{
+						db.request({
+						  path: '/_bulk_docs',
+						  method: 'POST',
+						  data:{"docs":updates}
+						}, function(error_bulk, response_bulk)
+						{
+							if(error_bulk == null)
+							{
+								next({"ok":true});
+							}
+							else
+							{
+								next({"ok":false, "message":Errors.update_past_alias.message, "code":Errors.update_past_alias.code});
+							}
+						});
+					}
+					else
+					{
+						next({"ok":true})
+					}
+				});
+			}
+			else
+			{
+				next({"ok":true})
+			}
+		});
+	}
+	else
+	{
+		next({"ok":false, "message":Errors.unauthorized_client.message, "code":Errors.unauthorized_client.code});
+		return;
+	}
 }
 
 function updateAlias(req, res, next)
@@ -47,7 +135,7 @@ function updateAlias(req, res, next)
 			
 	}
 	
-	
+	// this view filters by > + new Date() aka NOW
 	db.view("application", "players-scheduled-alias", {"include_docs":true, "startkey":[username], "endkey":[username, oldAlias]}, function(error, players)
 	{
 		if(error == null)
@@ -55,17 +143,12 @@ function updateAlias(req, res, next)
 			if(players.rows.length > 0)
 			{
 				var updates = [];
-				var now = +new Date();
 				
 				players.rows.forEach(function(player)
 				{
-					var schedule_time = new Date(player.doc.scheduled_time).getTime();
+					player.doc.alias = newAlias;
+					updates.push(player.doc);
 					
-					if(schedule_time > now)
-					{
-						player.doc.alias = newAlias;
-						updates.push(player.doc);
-					}
 				});
 				
 				if(updates.length > 0)

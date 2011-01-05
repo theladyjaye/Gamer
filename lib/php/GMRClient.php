@@ -19,6 +19,9 @@ final class GMRClient
 	// masquerading is ONLY valid with the system key.
 	public function __construct($key, $username=null)
 	{
+		if($key == null)
+			throw new Exception("GMRClient requires $key");
+			
 		$this->username = $username;
 		if($username)
 		{
@@ -34,14 +37,18 @@ final class GMRClient
 		 * Link a player added Anonymously with a username 
 		 *
 		 * @param string $alias constant from GMRPlatform
-		 * @param string $oldAlias the players old alias
-		 * @param string $newAlias the players new alias
+		 * @param string $platform constant from GMRPlatform
+		 * @param string $username the username to link this anonymous alias to
 		 * @return object {"ok":bool}
 		 * @author Adam Venturella
 		 */
 		public function linkAnonymousAliasOnPlatformWithUsername($alias, $platform, $username)
 		{
-			
+			$response = $this->request->execute(array('path'          => '/players/anonymous/aliases/'.$alias,
+				                                      'data'          => array('username' => $username, "platform" => $platform),
+				                                      'method'        => 'POST'));
+			$data = json_decode($response);
+			return $data;
 		}
 		
 		/**
@@ -55,9 +62,9 @@ final class GMRClient
 		 */
 		public function updateAliasForUsernameWithAlias($username, $oldAlias, $newAlias)
 		{
-				$response = $this->request->execute(array('path'          => '/players/'.$username.'/aliases/'.$oldAlias,
-				                                          'data'          => array('alias'=> $newAlias),
-				                                          'method'        => 'POST'));
+			$response = $this->request->execute(array('path'          => '/players/'.$username.'/aliases/'.$oldAlias,
+				                                      'data'          => array('alias'=> $newAlias),
+				                                      'method'        => 'POST'));
 			$data = json_decode($response);
 			return $data;
 		}

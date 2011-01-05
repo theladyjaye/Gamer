@@ -9,7 +9,7 @@ function(doc)
 		
 		if(scheduled_time > now)
 		{
-			emit([doc.username, doc.alias.toLowerCase()], null);
+			emit([doc.username.toLowerCase(), doc.alias.toLowerCase()], null);
 		}
 	}
 }
