@@ -39,7 +39,7 @@ GMRPage::Controller('AccountVerifyController.php');
 			</div>
 		</div>
 		<!-- /content -->
-		<?php if(!$page->verified):?>
+		<?php if($page->verified == false):?>
 			<!-- form -->
 			<div id="form">
 				<div class="content">
