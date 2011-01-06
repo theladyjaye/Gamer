@@ -62,7 +62,7 @@ class AccountVerifyController extends GMRController
 				}
 				else
 				{
-					echo "11"
+					echo "11";
 				}
 			}
 		}
