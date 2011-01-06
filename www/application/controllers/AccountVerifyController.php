@@ -7,8 +7,8 @@ require GMRApplication::basePath()."/application/libs/axismundi/data/AMQuery.php
 class AccountVerifyController extends GMRController
 {
 	public  $token;
+	public  $verified = false;
 	private $errors;
-	private $verified = false;
 	private $response;
 	
 	protected function initialize_complete()
