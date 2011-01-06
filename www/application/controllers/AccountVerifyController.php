@@ -57,12 +57,7 @@ class AccountVerifyController extends GMRController
 			{
 				if(GMRUserVerification::verify($this->token))
 				{
-					echo "10";
 					$this->verified = true;
-				}
-				else
-				{
-					echo "11";
 				}
 			}
 		}
