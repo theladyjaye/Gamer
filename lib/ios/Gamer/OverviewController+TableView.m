@@ -25,6 +25,19 @@
 	//[matches release];
 	//matches = nil;
 	
+	// this guy is going to hang around for the lifetime of the application.
+	// should save us form makeing lot-o-GETs for the same data.
+	// unless this method is called again.
+	if(kScheduledMatches)
+	{
+		[kScheduledMatches release];
+		kScheduledMatches = nil;
+	}
+	
+	kScheduledMatches = [NSMutableArray array];
+	[kScheduledMatches retain];
+	
+	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	[kGamerApi matchesScheduled:^(BOOL ok, NSDictionary * response)
@@ -41,15 +54,7 @@
 			 NSArray * tempMatches = [response objectForKey:@"matches"];
 			 if ([tempMatches count] > 0)
 			 {
-				 //matches = [NSMutableArray array];//:(NSArray *)[response objectForKey:@"matches"]];
-				 // this guy is going to hang around for the lifetime of the application.
-				 // should save us form makeing lot-o-GETs for the same data.
-				 // unless this method is called again.
-				 if(kScheduledMatches)
-				 {
-					 [kScheduledMatches release];
-					 kScheduledMatches = nil;
-				 }
+				 // matches = [NSMutableArray array];//:(NSArray *)[response objectForKey:@"matches"]];
 				 
 				 if(noneView && [noneView superview])
 				 {
@@ -57,8 +62,6 @@
 					 noneView = nil;
 				 }
 				 
-				 kScheduledMatches = [NSMutableArray array];
-				 [kScheduledMatches retain];
 				 
 				 for(NSDictionary * item in tempMatches)
 				 {

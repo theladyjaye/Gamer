@@ -178,7 +178,7 @@ GMRMatch * kCreateMatchProgress = nil;
 		}
 		else if([keyPath isEqualToString:@"label"])
 		{
-			if([kCreateMatchProgress.label length] >= 4)
+			if([kCreateMatchProgress.label length] >= 3)
 			{
 				self.description.selected = YES;
 				self.description.label.text = kCreateMatchProgress.label;
@@ -230,7 +230,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	
 	[form addValidator:[GMRInputValidator validatorWithKeyPath:@"label"
 												    requirement:GMRValidatorRequirementRequired 
-													  minLength:4
+													  minLength:3
 													  maxLength:0
 													    message:@"Invalid Description"]];	
 	
@@ -314,18 +314,21 @@ GMRMatch * kCreateMatchProgress = nil;
 											  kCreateMatchProgress.id = matchId;
 											  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
 											  
+											  if(kScheduledMatches) 
+											  {
 											  
-											  [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
-											  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-														forKey:@"matches"];
-											  
-											  [kScheduledMatches insertObject:kCreateMatchProgress 
-																					atIndex:insertIndex];
-											  
-											  
-											  [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
-																	 valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
-																			  forKey:@"matches"];
+												  [matchesDataSourceController willChange:NSKeyValueChangeInsertion 
+												  valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+															forKey:@"matches"];
+												  
+												  [kScheduledMatches insertObject:kCreateMatchProgress 
+																						atIndex:insertIndex];
+												  
+												  
+												  [matchesDataSourceController didChange:NSKeyValueChangeInsertion 
+																		 valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
+																				  forKey:@"matches"];
+											  }
 											  
 											  [self dismissModalViewController];
 											  
@@ -368,7 +371,7 @@ GMRMatch * kCreateMatchProgress = nil;
 	}
 	else 
 	{
-		//NSLog(@"%@", form.errors);
+		NSLog(@"%@", form.errors);
 		NSString * errors  = [form.errors componentsJoinedByString:@"\n"];
 		
 		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 

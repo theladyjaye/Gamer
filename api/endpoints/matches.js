@@ -467,7 +467,7 @@ function createMatch(req, res, next)
 				{
 					// is the requested platform available for this game?
 					// eg: is the request for Halo Reach on Playstation 3? this would be invalid
-					console.log("The Platforms: " + game.platforms);
+					//console.log("The Platforms: " + game.platforms);
 					
 					if(game.platforms.filter( function(element, index, array){ return element == platform; })[0] == null)
 					{

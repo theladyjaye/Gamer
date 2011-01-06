@@ -8,7 +8,7 @@ class AccountVerifyController extends GMRController
 {
 	public  $token;
 	private $errors;
-	private $verfified = false;
+	private $verified = false;
 	private $response;
 	
 	protected function initialize_complete()

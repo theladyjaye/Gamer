@@ -43,7 +43,7 @@ class GameDetailController extends GMRController
 					$form->addValidator(new AMPatternValidator('alias', AMValidator::kRequired, '/^[\w\d _-]{3,}$/', "Invalid alias. Expecting minimum 3 characters."));
 					if($form->isValid)
 					{
-						$user = GMRUser::userWithAliasOnPlatform($this->alias, $this->platform);
+						$user = GMRUser::userWithAliasOnPlatform($form->alias, $this->platform);
 						
 						if($user)
 						{
