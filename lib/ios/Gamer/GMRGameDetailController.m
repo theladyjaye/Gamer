@@ -149,6 +149,19 @@ static BOOL isCancelOperation;
 
 - (void)viewDidAppear:(BOOL)animated
 {
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	if([[defaults objectForKey:@"shareMessage"] boolValue] == NO)
+	{
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Get the word out" 
+														   message:@"Got a game you want people to know about?\n\nTap the share button below to see who's up for throwing one down.\n\n" 
+														  callback:^(GMRAlertView * alertView){
+															  [defaults setBool:YES forKey:@"shareMessage"];
+															  [alertView release];
+														  }];
+		[alert show];
+	}
+	
 	/*[UIView animateWithDuration:0.15
 						  delay:0.15
 						options:UIViewAnimationOptionCurveEaseOut

@@ -139,20 +139,21 @@ static UINavigationController * currentNavigationController;
 	// this might cause subsequent calls to these methods.
 	// there was an issue with the TabBarController not calling view_Will/Did_Appear/Disappear
 	// I think I fixed that above, but I don't know what the ramifications for this will be.
-	// If you start haveing problems.. start by looing here.
+	// If you start haveing problems.. start by loosing here.
 	
+	/*
 	if(lastViewController)
 		[lastViewController viewWillDisappear:animated];
 	
 	lastViewController = viewController;
 	[viewController viewWillAppear:animated];
+	 */
 
 }
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-	
-	[viewController viewDidAppear:animated];
+	// [viewController viewDidAppear:animated];
 }
 
 
