@@ -60,6 +60,10 @@ class AccountVerifyController extends GMRController
 					echo "10";
 					$this->verified = true;
 				}
+				else
+				{
+					echo "11"
+				}
 			}
 		}
 		else
