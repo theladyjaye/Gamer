@@ -84,7 +84,7 @@
 	[labelString drawAtPoint:CGPointMake(38.0, 26.0) withFont:matchFont];
 	[dateString drawAtPoint:CGPointMake(38.0, 40.0)  withFont:timeFont];
 	
-	[platformColors drawAtPoint:CGPointMake(286, 55)];
+	[platformColors drawAtPoint:CGPointMake(286, 54)];
 	
     [platformString drawInRect:CGRectMake(286.0, 41.0, 34.0, 14.0) 
 			          withFont:platformFont 
