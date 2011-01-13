@@ -424,7 +424,6 @@ function createMatch(req, res, next)
 		var platform  = req.params.platform;
 		var game      = req.params.game;
 		
-		
 		/*
 			TODO ensure that the scheduled time does not occurr in the past?
 			and that it is a valid Date...

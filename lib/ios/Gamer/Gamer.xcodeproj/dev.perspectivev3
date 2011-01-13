@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D769DEF012DEC30C00763E71</string>
+						<string>D769DEF512DED29000763E71</string>
 						<key>history</key>
 						<array>
 							<string>D7A9B05A12D6C885003F4779</string>
@@ -373,7 +373,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D769DEEA12DEC30C00763E71</string>
+										<string>D769DEF412DED29000763E71</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -815,7 +815,6 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D769DEF112DEC30C00763E71</string>
-		<string>D769DEF212DEC30C00763E71</string>
 		<string>D769DEF312DEC30C00763E71</string>
 		<string>D7D8B35312D57B8B00319B3B</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>

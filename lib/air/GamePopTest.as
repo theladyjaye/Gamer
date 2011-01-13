@@ -5,6 +5,7 @@ package
 	import com.gamepop.GamePopResponse;
 	import com.gamepop.GamePopPlatform;
 	import com.gamepop.GamePopTimeInterval;
+	import com.gamepop.GamePopAvailability;
 	
 	import flash.display.MovieClip;
 	
@@ -82,6 +83,50 @@ package
 				trace(response.string);
 			});
 			*/
+			
+			// MATCH CREATE
+			/*
+			var now           : Number  = new Date().getTime();
+			var scheduledTime : Date    = new Date(now + (3600 * 1000));
+			
+			client.matchCreate(scheduledTime, 
+							GamePopPlatform.XBOX360, 
+							"halo-reach",
+							"Co-op campaign",
+							GamePopAvailability.PRIVATE, 
+							3, 
+							null, 
+							"This is the user game description", 
+						
+						function(error:GamePopError, response:GamePopResponse)
+						{
+							var matchId = response.data.match; // <--- this is the match id that was just created
+							// used in conjunction with: client.match()
+							client.match(GamePopPlatform.XBOX360, "halo-reach", matchId, function(error:GamePopError, response:GamePopResponse)
+							{
+								trace(response.string);
+							});
+							
+						});*/
+						
+						
+			
+			// PLAYERS IN MATCH
+			/*
+			client.matchPlayers(GamePopPlatform.XBOX360, 'halo-reach', "848f1b71c2ba073d06aae953c10020b8", function(error:GamePopError, response:GamePopResponse)
+			{
+				trace(response.string);
+			});
+			*/
+			
+			// LEAVE/CANCEL MATCH
+			/*
+			client.matchLeave(GamePopPlatform.XBOX360, 'halo-reach', "848f1b71c2ba073d06aae953c10020b8", function(error:GamePopError, response:GamePopResponse)
+			{
+				trace(response.string);
+			});
+			*/
 		}
+		
 	}
 }

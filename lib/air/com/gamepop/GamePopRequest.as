@@ -60,8 +60,7 @@ package com.gamepop
 				e.target.removeEventListener(Event.COMPLETE, arguments.callee);
 			});
 			
-			loader.load(request)
-			loader = null; 
+			loader.load(request); 
 		}
 	}
 }
