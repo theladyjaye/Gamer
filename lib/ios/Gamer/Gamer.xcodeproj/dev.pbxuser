@@ -1,9 +1,9 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = "Distribution App Store";
 		activeExecutable = D775C4B3128795A400C72E64 /* GamePop */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = D775C4B1128795A400C72E64 /* GamePop */;
 		addToTargets = (
 			D775C4B1128795A400C72E64 /* GamePop */,
@@ -86,23 +86,31 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 316063486;
-			PBXWorkspaceStateSaveDate = 316063486;
+			PBXPerProjectTemplateStateSaveDate = 316588613;
+			PBXWorkspaceStateSaveDate = 316588613;
 		};
 		perUserProjectItems = {
 			D70E490312D2BBF70051CAA3 = D70E490312D2BBF70051CAA3 /* PBXTextBookmark */;
 			D72D4ED412D0E38500E3E9B0 = D72D4ED412D0E38500E3E9B0 /* PBXTextBookmark */;
 			D7384DBD12C5500B00AE3C96 = D7384DBD12C5500B00AE3C96 /* PBXTextBookmark */;
 			D7566FBA12D6185100880C42 = D7566FBA12D6185100880C42 /* PBXTextBookmark */;
-			D75BD5CB12D66D14006878B3 = D75BD5CB12D66D14006878B3 /* PBXTextBookmark */;
 			D75BD5CC12D66D14006878B3 = D75BD5CC12D66D14006878B3 /* PlistBookmark */;
 			D7635F9A12CAD59C0081E4A2 = D7635F9A12CAD59C0081E4A2 /* PBXTextBookmark */;
 			D7635F9B12CAD59C0081E4A2 = D7635F9B12CAD59C0081E4A2 /* PBXTextBookmark */;
 			D7635FA812CAD7060081E4A2 = D7635FA812CAD7060081E4A2 /* PBXTextBookmark */;
 			D7635FA912CAD7060081E4A2 = D7635FA912CAD7060081E4A2 /* PBXTextBookmark */;
 			D765CBAB12D6135400C66D55 = D765CBAB12D6135400C66D55 /* PBXTextBookmark */;
+			D769DEDF12DEC2CA00763E71 /* PBXTextBookmark */ = D769DEDF12DEC2CA00763E71 /* PBXTextBookmark */;
+			D769DEE012DEC2CA00763E71 /* PBXTextBookmark */ = D769DEE012DEC2CA00763E71 /* PBXTextBookmark */;
+			D769DEE112DEC2CA00763E71 /* PBXTextBookmark */ = D769DEE112DEC2CA00763E71 /* PBXTextBookmark */;
+			D769DEE512DEC2CA00763E71 /* PlistBookmark */ = D769DEE512DEC2CA00763E71 /* PlistBookmark */;
+			D769DEE612DEC2D200763E71 /* PBXTextBookmark */ = D769DEE612DEC2D200763E71 /* PBXTextBookmark */;
+			D769DEE712DEC2F900763E71 /* PBXTextBookmark */ = D769DEE712DEC2F900763E71 /* PBXTextBookmark */;
+			D769DEE812DEC30C00763E71 /* PBXTextBookmark */ = D769DEE812DEC30C00763E71 /* PBXTextBookmark */;
+			D769DEE912DEC30C00763E71 /* PBXTextBookmark */ = D769DEE912DEC30C00763E71 /* PBXTextBookmark */;
+			D769DEEA12DEC30C00763E71 /* PBXTextBookmark */ = D769DEEA12DEC30C00763E71 /* PBXTextBookmark */;
+			D769DEF012DEC30C00763E71 /* PlistBookmark */ = D769DEF012DEC30C00763E71 /* PlistBookmark */;
 			D772F00E12D0370F00C12E72 = D772F00E12D0370F00C12E72 /* PlistBookmark */;
-			D779A57312D0E66300F00BD8 = D779A57312D0E66300F00BD8 /* PBXTextBookmark */;
 			D779A57412D0E66300F00BD8 = D779A57412D0E66300F00BD8 /* PBXTextBookmark */;
 			D779A59312D0FA2D00F00BD8 = D779A59312D0FA2D00F00BD8 /* PBXTextBookmark */;
 			D779A59412D0FA2D00F00BD8 = D779A59412D0FA2D00F00BD8 /* PBXTextBookmark */;
@@ -153,8 +161,6 @@
 			D79AB8A912C7C17600F2E8AE = D79AB8A912C7C17600F2E8AE /* PBXTextBookmark */;
 			D79AB9F912C8194B00F2E8AE = D79AB9F912C8194B00F2E8AE /* PBXTextBookmark */;
 			D79AB9FA12C8194B00F2E8AE = D79AB9FA12C8194B00F2E8AE /* PBXTextBookmark */;
-			D7A1D05D12CFF9E500D72C60 = D7A1D05D12CFF9E500D72C60 /* PBXTextBookmark */;
-			D7A1D0D812D00B9D00D72C60 = D7A1D0D812D00B9D00D72C60 /* PBXTextBookmark */;
 			D7A1D1C312D011F900D72C60 = D7A1D1C312D011F900D72C60 /* PBXTextBookmark */;
 			D7A1D1FB12D012DD00D72C60 = D7A1D1FB12D012DD00D72C60 /* PBXTextBookmark */;
 			D7A1D21212D013AB00D72C60 = D7A1D21212D013AB00D72C60 /* PBXTextBookmark */;
@@ -163,20 +169,13 @@
 			D7A1D23712D015AB00D72C60 = D7A1D23712D015AB00D72C60 /* PBXTextBookmark */;
 			D7A37B4B12D4C9890095BCC7 = D7A37B4B12D4C9890095BCC7 /* PBXTextBookmark */;
 			D7A37B9A12D4D28A0095BCC7 = D7A37B9A12D4D28A0095BCC7 /* PBXTextBookmark */;
-			D7A9B01012D6BF92003F4779 /* PBXTextBookmark */ = D7A9B01012D6BF92003F4779 /* PBXTextBookmark */;
-			D7A9B01912D6BF92003F4779 /* PlistBookmark */ = D7A9B01912D6BF92003F4779 /* PlistBookmark */;
-			D7A9B01D12D6BFDD003F4779 /* PBXTextBookmark */ = D7A9B01D12D6BFDD003F4779 /* PBXTextBookmark */;
-			D7A9B01E12D6BFDD003F4779 /* PBXTextBookmark */ = D7A9B01E12D6BFDD003F4779 /* PBXTextBookmark */;
-			D7A9B02112D6C041003F4779 /* PBXTextBookmark */ = D7A9B02112D6C041003F4779 /* PBXTextBookmark */;
-			D7A9B02212D6C041003F4779 /* PBXTextBookmark */ = D7A9B02212D6C041003F4779 /* PBXTextBookmark */;
-			D7A9B02312D6C041003F4779 /* PBXTextBookmark */ = D7A9B02312D6C041003F4779 /* PBXTextBookmark */;
-			D7A9B02412D6C041003F4779 /* PBXTextBookmark */ = D7A9B02412D6C041003F4779 /* PBXTextBookmark */;
-			D7A9B02512D6C041003F4779 /* PBXTextBookmark */ = D7A9B02512D6C041003F4779 /* PBXTextBookmark */;
-			D7A9B02612D6C041003F4779 /* PlistBookmark */ = D7A9B02612D6C041003F4779 /* PlistBookmark */;
-			D7A9B02E12D6C48A003F4779 /* PBXTextBookmark */ = D7A9B02E12D6C48A003F4779 /* PBXTextBookmark */;
-			D7A9B02F12D6C48A003F4779 /* PBXTextBookmark */ = D7A9B02F12D6C48A003F4779 /* PBXTextBookmark */;
-			D7A9B03012D6C48C003F4779 /* PBXTextBookmark */ = D7A9B03012D6C48C003F4779 /* PBXTextBookmark */;
-			D7A9B03112D6C48C003F4779 /* PlistBookmark */ = D7A9B03112D6C48C003F4779 /* PlistBookmark */;
+			D7A9B02112D6C041003F4779 = D7A9B02112D6C041003F4779 /* PBXTextBookmark */;
+			D7A9B02212D6C041003F4779 = D7A9B02212D6C041003F4779 /* PBXTextBookmark */;
+			D7A9B05612D6C885003F4779 = D7A9B05612D6C885003F4779 /* PBXTextBookmark */;
+			D7A9B05712D6C885003F4779 = D7A9B05712D6C885003F4779 /* PBXTextBookmark */;
+			D7A9B05812D6C885003F4779 = D7A9B05812D6C885003F4779 /* PBXTextBookmark */;
+			D7A9B05912D6C885003F4779 = D7A9B05912D6C885003F4779 /* PBXTextBookmark */;
+			D7A9B05A12D6C885003F4779 = D7A9B05A12D6C885003F4779 /* PlistBookmark */;
 			D7ACF7AD12B5278400E36C31 = D7ACF7AD12B5278400E36C31 /* PBXTextBookmark */;
 			D7ACF7D912B52BA100E36C31 = D7ACF7D912B52BA100E36C31 /* PBXTextBookmark */;
 			D7ACF81412B5369500E36C31 = D7ACF81412B5369500E36C31 /* PBXTextBookmark */;
@@ -188,7 +187,6 @@
 			D7ACF99912B5D0CA00E36C31 = D7ACF99912B5D0CA00E36C31 /* PBXTextBookmark */;
 			D7ACF9DA12B5D9AC00E36C31 = D7ACF9DA12B5D9AC00E36C31 /* PBXTextBookmark */;
 			D7AE22E612D2E53300BB4592 = D7AE22E612D2E53300BB4592 /* PBXTextBookmark */;
-			D7AE22F512D2E9B800BB4592 = D7AE22F512D2E9B800BB4592 /* PBXTextBookmark */;
 			D7AE22F612D2E9B800BB4592 = D7AE22F612D2E9B800BB4592 /* PBXTextBookmark */;
 			D7C52E3812BEF11000B9D73C = D7C52E3812BEF11000B9D73C /* PBXTextBookmark */;
 			D7C52E3D12BEF11000B9D73C = D7C52E3D12BEF11000B9D73C /* PBXTextBookmark */;
@@ -227,8 +225,6 @@
 			D7E6D31412D63699001A8C41 = D7E6D31412D63699001A8C41 /* PBXTextBookmark */;
 			D7E6D32412D63719001A8C41 = D7E6D32412D63719001A8C41 /* PBXTextBookmark */;
 			D7E6D32F12D63752001A8C41 = D7E6D32F12D63752001A8C41 /* PBXTextBookmark */;
-			D7E6D33212D638B7001A8C41 = D7E6D33212D638B7001A8C41 /* PBXTextBookmark */;
-			D7E6D33312D638B7001A8C41 = D7E6D33312D638B7001A8C41 /* PlistBookmark */;
 		};
 		sourceControlManager = D7DDD78C127FD39A00C29265 /* Source Control */;
 		userBookmarkGroup = D792BDB312CCDF1400ACFA73 /* PBXBookmarkGroup */;
@@ -420,9 +416,9 @@
 	};
 	D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1495, 2340}}";
-			sepNavSelRange = "{2684, 0}";
-			sepNavVisRange = "{2291, 994}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 2236}}";
+			sepNavSelRange = "{1662, 16}";
+			sepNavVisRange = "{823, 1401}";
 		};
 	};
 	D72C7B8512A010FC00580653 /* GMRCreateGameController+Navigation.h */ = {
@@ -537,7 +533,7 @@
 		ignoreCount = 0;
 		lineNumber = 114;
 		location = HazGame;
-		modificationTime = 316064838.730005;
+		modificationTime = 316588763.415366;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -712,16 +708,6 @@
 		vrLen = 1565;
 		vrLoc = 1389;
 	};
-	D75BD5CB12D66D14006878B3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 137";
-		rLen = 0;
-		rLoc = 5154;
-		rType = 0;
-		vrLen = 1267;
-		vrLoc = 5013;
-	};
 	D75BD5CC12D66D14006878B3 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
@@ -788,7 +774,7 @@
 		ignoreCount = 0;
 		lineNumber = 237;
 		location = GamePop;
-		modificationTime = 316064838.73042;
+		modificationTime = 316588763.416138;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -801,6 +787,110 @@
 		rType = 0;
 		vrLen = 1047;
 		vrLoc = 0;
+	};
+	D769DEDF12DEC2CA00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */;
+		name = "GMRChooseGame+TableView.m: 22";
+		rLen = 0;
+		rLoc = 586;
+		rType = 0;
+		vrLen = 1187;
+		vrLoc = 0;
+	};
+	D769DEE012DEC2CA00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
+		name = "GMRAuthenticationInputController.m: 50";
+		rLen = 0;
+		rLoc = 1848;
+		rType = 0;
+		vrLen = 1556;
+		vrLoc = 1064;
+	};
+	D769DEE112DEC2CA00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
+		name = "GMRAuthenticationInputController.m: 52";
+		rLen = 0;
+		rLoc = 1904;
+		rType = 0;
+		vrLen = 1537;
+		vrLoc = 1064;
+	};
+	D769DEE512DEC2CA00763E71 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	D769DEE612DEC2D200763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
+		name = "GMRAuthenticationInputController.m: 52";
+		rLen = 0;
+		rLoc = 1904;
+		rType = 0;
+		vrLen = 1537;
+		vrLoc = 1064;
+	};
+	D769DEE712DEC2F900763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
+		name = "GMRAuthenticationInputController.m: 52";
+		rLen = 0;
+		rLoc = 1904;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 1020;
+	};
+	D769DEE812DEC30C00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
+		name = "GMRAuthenticationInputController.m: 47";
+		rLen = 16;
+		rLoc = 1662;
+		rType = 0;
+		vrLen = 1401;
+		vrLoc = 823;
+	};
+	D769DEE912DEC30C00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 189";
+		rLen = 0;
+		rLoc = 4340;
+		rType = 0;
+		vrLen = 1898;
+		vrLoc = 2768;
+	};
+	D769DEEA12DEC30C00763E71 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7DDD7B8127FD49100C29265 /* GMRClient.m */;
+		name = "GMRClient.m: 184";
+		rLen = 0;
+		rLoc = 3902;
+		rType = 0;
+		vrLen = 1970;
+		vrLoc = 2414;
+	};
+	D769DEF012DEC30C00763E71 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UIPrerenderedIcon,
+		);
+		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	D772F00E12D0370F00C12E72 /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -886,16 +976,6 @@
 			sepNavSelRange = "{364, 0}";
 			sepNavVisRange = "{0, 364}";
 		};
-	};
-	D779A57312D0E66300F00BD8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7284F1282278900419F60 /* YAJLDocument.m */;
-		name = "YAJLDocument.m: 70";
-		rLen = 0;
-		rLoc = 2286;
-		rType = 0;
-		vrLen = 1027;
-		vrLoc = 2155;
 	};
 	D779A57412D0E66300F00BD8 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1306,7 +1386,7 @@
 		fRef = D727C3351287D163001F2BAF /* GMRAuthenticationInputController.m */;
 		name = "GMRAuthenticationInputController.m: 80";
 		rLen = 0;
-		rLoc = 2684;
+		rLoc = 2711;
 		rType = 0;
 		vrLen = 1320;
 		vrLoc = 2197;
@@ -1512,9 +1592,9 @@
 	};
 	D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1168, 1404}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 1469}}";
 			sepNavSelRange = "{2645, 0}";
-			sepNavVisRange = "{1867, 1192}";
+			sepNavVisRange = "{2212, 812}";
 		};
 	};
 	D797F18F12CA56EA00C9A1ED /* PBXTextBookmark */ = {
@@ -1649,26 +1729,6 @@
 			sepNavVisRange = "{1233, 1084}";
 		};
 	};
-	D7A1D05D12CFF9E500D72C60 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */;
-		name = "GMRChooseGame+TableView.m: 18";
-		rLen = 0;
-		rLoc = 435;
-		rType = 0;
-		vrLen = 1146;
-		vrLoc = 0;
-	};
-	D7A1D0D812D00B9D00D72C60 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */;
-		name = "GMRMatchListCell.h: 33";
-		rLen = 0;
-		rLoc = 839;
-		rType = 0;
-		vrLen = 839;
-		vrLoc = 0;
-	};
 	D7A1D1C312D011F900D72C60 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D7E1708412C3D10000F6E060 /* GMRGameLobbyController+TableView.m */;
@@ -1749,48 +1809,6 @@
 		vrLen = 2575;
 		vrLoc = 5272;
 	};
-	D7A9B01012D6BF92003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 137";
-		rLen = 0;
-		rLoc = 5154;
-		rType = 0;
-		vrLen = 1264;
-		vrLoc = 5013;
-	};
-	D7A9B01912D6BF92003F4779 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			UIPrerenderedIcon,
-		);
-		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	D7A9B01D12D6BFDD003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 137";
-		rLen = 0;
-		rLoc = 5154;
-		rType = 0;
-		vrLen = 1038;
-		vrLoc = 5128;
-	};
-	D7A9B01E12D6BFDD003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 142";
-		rLen = 0;
-		rLoc = 5558;
-		rType = 0;
-		vrLen = 1038;
-		vrLoc = 5128;
-	};
 	D7A9B02112D6C041003F4779 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
@@ -1811,79 +1829,45 @@
 		vrLen = 839;
 		vrLoc = 0;
 	};
-	D7A9B02312D6C041003F4779 /* PBXTextBookmark */ = {
+	D7A9B05612D6C885003F4779 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 75";
+		name = "GMRMatchListCell.m: 70";
 		rLen = 0;
-		rLoc = 2175;
-		rType = 0;
-		vrLen = 1173;
-		vrLoc = 1724;
-	};
-	D7A9B02412D6C041003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 87";
-		rLen = 0;
-		rLoc = 2645;
-		rType = 0;
-		vrLen = 1229;
-		vrLoc = 1724;
-	};
-	D7A9B02512D6C041003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 87";
-		rLen = 0;
-		rLoc = 2645;
-		rType = 0;
-		vrLen = 1173;
-		vrLoc = 1724;
-	};
-	D7A9B02612D6C041003F4779 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			UIPrerenderedIcon,
-		);
-		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	D7A9B02E12D6C48A003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 142";
-		rLen = 0;
-		rLoc = 5558;
-		rType = 0;
-		vrLen = 1038;
-		vrLoc = 5128;
-	};
-	D7A9B02F12D6C48A003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 87";
-		rLen = 0;
-		rLoc = 2645;
-		rType = 0;
-		vrLen = 850;
-		vrLoc = 2103;
-	};
-	D7A9B03012D6C48C003F4779 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 87";
-		rLen = 0;
-		rLoc = 2645;
+		rLoc = 2073;
 		rType = 0;
 		vrLen = 1192;
 		vrLoc = 1867;
 	};
-	D7A9B03112D6C48C003F4779 /* PlistBookmark */ = {
+	D7A9B05712D6C885003F4779 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7B7284F1282278900419F60 /* YAJLDocument.m */;
+		name = "YAJLDocument.m: 84";
+		rLen = 0;
+		rLoc = 2595;
+		rType = 0;
+		vrLen = 1527;
+		vrLoc = 1612;
+	};
+	D7A9B05812D6C885003F4779 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Method '-numberOfSectionsInSearchResultsTableView:' not found (return type defaults to 'id')";
+		fRef = D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */;
+		rLen = 1;
+		rLoc = 18;
+		rType = 1;
+	};
+	D7A9B05912D6C885003F4779 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */;
+		name = "GMRChooseGame+TableView.m: 14";
+		rLen = 0;
+		rLoc = 317;
+		rType = 0;
+		vrLen = 1188;
+		vrLoc = 0;
+	};
+	D7A9B05A12D6C885003F4779 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
 		fallbackIsa = PBXBookmark;
@@ -1893,7 +1877,7 @@
 		);
 		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	D7ACF7A112B524D500E36C31 /* GMRCreateAliasController.h */ = {
 		uiCtxt = {
@@ -2068,16 +2052,6 @@
 		vrLen = 2014;
 		vrLoc = 2652;
 	};
-	D7AE22F512D2E9B800BB4592 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */;
-		name = "GMRMatchListCell.m: 75";
-		rLen = 0;
-		rLoc = 2175;
-		rType = 0;
-		vrLen = 1173;
-		vrLoc = 1724;
-	};
 	D7AE22F612D2E9B800BB4592 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D78CDC1012B31D6B00D6F3E2 /* GMRProfileController.m */;
@@ -2116,7 +2090,7 @@
 		ignoreCount = 0;
 		lineNumber = 111;
 		location = HazGame;
-		modificationTime = 316064838.730305;
+		modificationTime = 316588763.415854;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2181,9 +2155,9 @@
 	};
 	D7B7284F1282278900419F60 /* YAJLDocument.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1495, 2184}}";
-			sepNavSelRange = "{2286, 0}";
-			sepNavVisRange = "{2155, 494}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 2158}}";
+			sepNavSelRange = "{2595, 0}";
+			sepNavVisRange = "{1612, 1527}";
 		};
 	};
 	D7B728501282278900419F60 /* YAJLGen.h */ = {
@@ -2556,9 +2530,9 @@
 	};
 	D7DDD7B8127FD49100C29265 /* GMRClient.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1209, 5733}}";
-			sepNavSelRange = "{4340, 0}";
-			sepNavVisRange = "{2652, 2014}";
+			sepNavIntBoundsRect = "{{0, 0}, {1209, 5707}}";
+			sepNavSelRange = "{3902, 0}";
+			sepNavVisRange = "{2414, 1970}";
 		};
 	};
 	D7E1703A12C3B27600F6E060 /* PBXTextBookmark */ = {
@@ -2825,9 +2799,9 @@
 	};
 	D7E1716812C3E99D00F6E060 /* GMRChooseGame+TableView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1495, 871}}";
-			sepNavSelRange = "{435, 0}";
-			sepNavVisRange = "{0, 548}";
+			sepNavIntBoundsRect = "{{0, 0}, {1168, 780}}";
+			sepNavSelRange = "{586, 0}";
+			sepNavVisRange = "{0, 1187}";
 			sepNavWindowFrame = "{{19, 205}, {1230, 818}}";
 		};
 	};
@@ -2970,28 +2944,6 @@
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 4014;
-	};
-	D7E6D33212D638B7001A8C41 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */;
-		name = "GMRMainController.m: 137";
-		rLen = 0;
-		rLoc = 5154;
-		rType = 0;
-		vrLen = 1257;
-		vrLoc = 5020;
-	};
-	D7E6D33312D638B7001A8C41 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = D775C4B4128795A400C72E64 /* GamePop-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			UIPrerenderedIcon,
-		);
-		name = "/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/GamePop-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 	D7EEAD83128A11BF0022AF4E /* OverviewController.h */ = {
 		uiCtxt = {

@@ -7,6 +7,7 @@
 //
 
 #import "GMRChooseGame+TableView.h"
+#import "GMRChooseGame+SearchTableView.h"
 
 @implementation GMRChooseGame(TableView)
 #pragma mark -

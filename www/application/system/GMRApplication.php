@@ -37,7 +37,7 @@ class GMRApplication
 	
 	public static function isMobileClient()
 	{
-		return $_SERVER['HTTP_USER_AGENT'] == 'GamePop Mobile';
+		return $_SERVER['HTTP_USER_AGENT'] == 'GamePop Mobile' || $_SERVER['HTTP_USER_AGENT'] == 'GamePop AIR';
 	}
 	
 	public function startSession()
