@@ -1,0 +1,62 @@
+#twitter{
+	//float:right;
+	width:250px;
+}
+#twitter-header{
+	height:40px;
+	border-bottom:1px solid #F4F4F4;
+}
+
+#twitter-header img{
+	position:absolute;
+	@include rounded-corners;
+}
+
+#twitter-header h2, #twitter-header p{
+	padding-left:40px;
+}
+
+#twitter-header p{
+	padding-top:3px;
+	font-size:10px;
+	font-style:italic;
+	color:#aaa;
+}
+
+#tweets{
+	margin:0;
+	padding:0;
+}
+
+#tweets .tweet{
+	clear:both;
+	height:60px;
+	border-bottom:1px solid #F4F4F4;
+	margin-bottom:2px;
+}
+
+#tweets .tweet a{
+	display:block;
+	text-decoration:none;
+}
+
+#tweets .tweet .thumbnail{
+	display:none;
+	float:left;
+	width:48px;
+}
+
+#tweets .tweet .text{
+	color:#888;
+	height:45px;
+	padding-top:3px;
+	overflow:hidden;
+	padding-left:5px;
+}
+
+#tweets .tweet .timestamp{
+	color:#aaa;
+	font-size:10px;
+	padding-left:5px;
+	font-style:italic;
+}

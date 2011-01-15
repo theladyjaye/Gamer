@@ -40,7 +40,8 @@ var colors = {
 
 var logging = {
 	error: colors.red + "[Error]" + colors.reset + " ",
-	success : colors.green + "[Success]" + colors.reset + " "
+	success : colors.green + "[Success]" + colors.reset + " ",
+	warn : colors.yellow + "[Warn]" + colors.reset + " ",
 }
 
 function prompt(question, callback)
@@ -298,6 +299,9 @@ function initializeGames(next)
 	
 	fs.readFile('./games.json', 'utf8', function (err, data) 
 	{
+		var crypto = require('crypto');
+		
+		
 		if (err) throw err;
 		games = JSON.parse(data);
 		
@@ -329,10 +333,28 @@ function initializeGames(next)
 						{
 							if(typeof gameObject[key] != "undefined")
 							{
-								if(gameObject[key] != game[key])
+								if(key == "modes" || key == "platforms")
 								{
-									gameObject[key] = game[key];
-									dirty = true;
+									
+									var existing   = crypto.createHash('md5');
+									var candidates = crypto.createHash('md5');
+									
+									existing.update(gameObject[key].sort().join("").toLowerCase());
+									candidates.update(game[key].sort().join("").toLowerCase());
+									
+									if(existing.digest('hex') != candidates.digest('hex'))
+									{
+										gameObject[key] = game[key];
+										dirty = true;
+									}
+								}
+								else
+								{
+									if(gameObject[key] != game[key])
+									{
+										gameObject[key] = game[key];
+										dirty = true;
+									}
 								}
 							}
 							else
@@ -341,7 +363,6 @@ function initializeGames(next)
 								dirty = true;
 							}
 						}
-						
 					}
 					else
 					{
@@ -369,6 +390,10 @@ function initializeGames(next)
 							count = count + 1;
 							if(next && count == games.length) next();
 						});
+					}
+					else
+					{
+						console.log(logging.warn +"No Change: " + game.label);
 					}
 				}
 			}());

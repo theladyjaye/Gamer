@@ -231,5 +231,17 @@
 					"Skirmish Racing",
 					"Team MotorMash",
 					"Team Racing"]
+},
+{
+	"_id"        : "game/red-dead-redemption",
+	"label"      : "Red Dead Redemption",
+	"platforms"  : ["playstation3","xbox360"],
+	"maxPlayers" : 16,
+	"modes"      : ["Free Roam",
+					"Gang Shootout",
+					"Gold Rush",
+					"Grab the Bag",
+					"Hold Your Own",
+					"Shootout"]
 }]
 
