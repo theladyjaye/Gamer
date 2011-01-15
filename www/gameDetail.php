@@ -9,7 +9,7 @@ GMRPage::Controller('GameDetailController.php');
 	<title>GamePop : <?php echo $page->match()->game->label?></title>
 	<link rel="stylesheet" href="/resources/css/gamepod.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/resources/css/facebox.css" type="text/css" media="screen" charset="utf-8">
-	<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="/resources/js/libs/jquery/facebox.js"></script>
 	<script type="text/javascript" charset="utf-8" src="/resources/js/utils/GMRDateTime.js"></script>
 	<script type="text/javascript" charset="utf-8" src="/resources/js/gameDetailController.js"></script>

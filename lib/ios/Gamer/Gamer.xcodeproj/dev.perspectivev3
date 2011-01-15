@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D769DEF512DED29000763E71</string>
+						<string>D74F831112E10AA600FBE8FE</string>
 						<key>history</key>
 						<array>
-							<string>D7A9B05A12D6C885003F4779</string>
+							<string>D769DEF512DED29000763E71</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -373,7 +373,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D769DEF412DED29000763E71</string>
+										<string>D74F830712E10AA600FBE8FE</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -497,7 +497,7 @@
 											<string>D7A9B05712D6C885003F4779</string>
 											<string>D769DEDF12DEC2CA00763E71</string>
 											<string>D769DEE812DEC30C00763E71</string>
-											<string>D769DEE912DEC30C00763E71</string>
+											<string>D769DEF412DED29000763E71</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -511,18 +511,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1229, 600}}</string>
+								<string>{{0, 0}, {1229, 593}}</string>
 								<key>RubberWindowFrame</key>
 								<string>81 108 1556 920 0 0 1680 1028 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>600pt</string>
+							<string>593pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>274pt</string>
+							<string>281pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -536,7 +536,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1229, 247}}</string>
+										<string>{{10, 27}, {1229, 254}}</string>
 										<key>RubberWindowFrame</key>
 										<string>81 108 1556 920 0 0 1680 1028 </string>
 									</dict>
@@ -620,11 +620,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D769DEE212DEC2CA00763E71</string>
+				<string>D74F830812E10AA600FBE8FE</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>D769DEE312DEC2CA00763E71</string>
+				<string>D74F830912E10AA600FBE8FE</string>
 				<string>D7DDD7BB127FD49300C29265</string>
-				<string>D769DEE412DEC2CA00763E71</string>
+				<string>D74F830A12E10AA600FBE8FE</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -773,14 +773,14 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D769DEEB12DEC30C00763E71</string>
+				<string>D74F830B12E10AA600FBE8FE</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>D769DEEC12DEC30C00763E71</string>
-				<string>D769DEED12DEC30C00763E71</string>
-				<string>D769DEEE12DEC30C00763E71</string>
-				<string>D769DEEF12DEC30C00763E71</string>
-				<string>D7DDD7BB127FD49300C29265</string>
+				<string>D74F830C12E10AA600FBE8FE</string>
+				<string>D74F830D12E10AA600FBE8FE</string>
+				<string>D74F830E12E10AA600FBE8FE</string>
+				<string>D74F830F12E10AA600FBE8FE</string>
+				<string>D74F831012E10AA600FBE8FE</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
 			<string>2</string>
@@ -814,8 +814,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>D769DEF112DEC30C00763E71</string>
-		<string>D769DEF312DEC30C00763E71</string>
 		<string>D7D8B35312D57B8B00319B3B</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
 	</array>
