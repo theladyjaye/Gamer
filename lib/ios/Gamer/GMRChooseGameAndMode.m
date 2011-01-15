@@ -83,7 +83,7 @@
 							 completion:NULL];
 		}
 		
-		if([kCreateMatchProgress.game.modes count] < 7)
+		if([kCreateMatchProgress.game.modes count] < 4)
 		{
 			modesTableView.scrollEnabled = NO;
 		}

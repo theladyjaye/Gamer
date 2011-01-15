@@ -33,7 +33,7 @@
 	if(tableView == self.searchDisplayController.searchResultsTableView)
 		return [self searchResultsTableView:tableView numberOfRowsInSection:section];
 	
-	// Return the number of rows in the section.
+	
     return [kCreateMatchProgress.game.modes count];
 }
 

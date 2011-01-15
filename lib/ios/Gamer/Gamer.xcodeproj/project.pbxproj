@@ -2272,6 +2272,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2304,6 +2305,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -2441,6 +2443,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Adam Venturella";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -2579,6 +2582,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Adam Venturella";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
