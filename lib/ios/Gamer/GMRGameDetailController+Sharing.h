@@ -12,6 +12,7 @@
 @interface GMRGameDetailController(Sharing)
 
 - (void)shareEmail;
+- (void)addToCalendar;
 - (void)shareFacebook;
 - (void)shareTwitter;
 - (void)shareCopyUrl;

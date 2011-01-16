@@ -47,6 +47,11 @@ static UINavigationItem * composeViewNavigationItem;
 
 }
 
+- (void)addToCalendar
+{
+	[match addToDefaultCalendar];
+}
+
 - (void)shareCopyUrl
 {
 	NSLog(@"%@", match.publicUrl);

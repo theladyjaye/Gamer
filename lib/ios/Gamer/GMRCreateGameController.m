@@ -315,7 +315,11 @@ GMRMatch * kCreateMatchProgress = nil;
 											  kCreateMatchProgress.id = matchId;
 											  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
 											  
-											  [kCreateMatchProgress addToDefaultCalendar];
+											  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+											  if([defaults boolForKey:@"manage_calendar"])
+											  {
+												  [kCreateMatchProgress addToDefaultCalendar];
+											  }
 											  
 											  if(kScheduledMatches) 
 											  {

@@ -18,7 +18,7 @@ typedef struct GMRCalenderIdentifierData
 } GMRCalendarIdentifierData;
 
 
-@class GMRGame;
+@class GMRGame, EKEvent;
 @interface GMRMatch : NSObject 
 {
 	GMRGame  * game;
@@ -42,10 +42,11 @@ typedef struct GMRCalenderIdentifierData
 @property(nonatomic, assign) GMRMatchAvailablilty availability;
 @property(nonatomic, assign) NSInteger maxPlayers;
 @property(nonatomic, readonly) NSString * publicUrl;
+@property(nonatomic, readonly) EKEvent * event;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary;
 
-- (void)addToDefaultCalendar;
-- (void)removeFromDefaultCalendar;
+- (BOOL)addToDefaultCalendar;
+- (BOOL)removeFromDefaultCalendar;
 - (NSString *)calenderIdentifierWithData:(GMRCalendarIdentifierData)data;
 @end

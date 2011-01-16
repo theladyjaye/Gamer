@@ -129,6 +129,7 @@
 		D78F3B5512BA63A200014188 /* 116-controller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5312BA63A200014188 /* 116-controller@2x.png */; };
 		D78F3B5D12BA640D00014188 /* GMRGameLobbyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */; };
 		D78F3B5E12BA640D00014188 /* GMRGameLobbyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */; };
+		D790EF9D12E34A2500BB2AD0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D790EF9C12E34A2500BB2AD0 /* Settings.bundle */; };
 		D795FDB8128FB40C0033F086 /* GMRMatchListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */; };
 		D795FDC3128FB9E60033F086 /* GMRMatchListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */; };
 		D79AB89112C7BE7400F2E8AE /* GMRPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D79AB89012C7BE7400F2E8AE /* GMRPlayer.m */; };
@@ -530,6 +531,7 @@
 		D78F3B5A12BA640D00014188 /* GMRGameLobbyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRGameLobbyController.h; sourceTree = "<group>"; };
 		D78F3B5B12BA640D00014188 /* GMRGameLobbyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRGameLobbyController.m; sourceTree = "<group>"; };
 		D78F3B5C12BA640D00014188 /* GMRGameLobbyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRGameLobbyController.xib; sourceTree = "<group>"; };
+		D790EF9C12E34A2500BB2AD0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D795FDB7128FB40C0033F086 /* GMRMatchListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMRMatchListCell.xib; sourceTree = "<group>"; };
 		D795FDC1128FB9E60033F086 /* GMRMatchListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRMatchListCell.h; sourceTree = "<group>"; };
 		D795FDC2128FB9E60033F086 /* GMRMatchListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRMatchListCell.m; sourceTree = "<group>"; };
@@ -1193,6 +1195,7 @@
 				D775C4B4128795A400C72E64 /* GamePop-Info.plist */,
 				D7836CE712D033FE00E1B86F /* Entitlements.plist */,
 				D775C4E71287986C00C72E64 /* MainWindow.xib */,
+				D790EF9C12E34A2500BB2AD0 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -2001,6 +2004,7 @@
 				D7E1713E12C3E58600F6E060 /* GMRChooseGame.xib in Resources */,
 				D7886D4812C65ECA001F2077 /* GMRChooseTimeInterval.xib in Resources */,
 				D7A1D23212D0153900D72C60 /* ActivityViewPattern@2x.png in Resources */,
+				D790EF9D12E34A2500BB2AD0 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

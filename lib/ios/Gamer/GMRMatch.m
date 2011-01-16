@@ -20,7 +20,7 @@
 
 
 @implementation GMRMatch
-@synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id, publicUrl;
+@synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id, publicUrl, event;
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary
 {
@@ -45,60 +45,108 @@
 	
 }
 
-- (void)addToDefaultCalendar
+- (BOOL)addToDefaultCalendar
 {
 	BOOL ok         = NO;
 	NSError * error = nil;
 	
-	EKEventStore * eventStore = [[EKEventStore alloc] init];
-	EKEvent * event           = [EKEvent eventWithEventStore:eventStore];
-	NSTimeInterval alarmTime  = 900; // 15 minutes
-	
-	// the scheduled time is less than 15 minutes from now:
-	if([self.scheduled_time compare:[NSDate dateWithTimeIntervalSinceNow:alarmTime]] ==  NSOrderedAscending)
+	if(self.event == nil)
 	{
-		NSComparisonResult test = NSOrderedAscending;
-		NSTimeInterval bestAlarmTime = alarmTime;
-		while(test == NSOrderedAscending)
+		EKEventStore * eventStore = [[EKEventStore alloc] init];
+		EKEvent * newEvent        = [EKEvent eventWithEventStore:eventStore];
+		
+		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+		
+		if([defaults boolForKey:@"alarms_enabled"])
 		{
-			bestAlarmTime = bestAlarmTime - 60; // remove 1 minute until we find the best time.
-			test = [self.scheduled_time compare:[NSDate dateWithTimeIntervalSinceNow:bestAlarmTime]];
+			NSTimeInterval alarmTime  = ([defaults doubleForKey:@"alarm_offset"] * 60.0);
+		
+			// the scheduled time is less than the users alarm_offset, find the next best time
+			if([self.scheduled_time compare:[NSDate dateWithTimeIntervalSinceNow:alarmTime]] ==  NSOrderedAscending)
+			{
+				NSComparisonResult test = NSOrderedAscending;
+				NSTimeInterval bestAlarmTime = alarmTime;
+				while(test == NSOrderedAscending)
+				{
+					bestAlarmTime = bestAlarmTime - 60; // remove 1 minute until we find the best time.
+					test = [self.scheduled_time compare:[NSDate dateWithTimeIntervalSinceNow:bestAlarmTime]];
+				}
+				
+				alarmTime = (bestAlarmTime - 60); // we want it to trigger in 60 seconds
+			}
+			
+			
+			if(alarmTime >= 300) // 5 minutes
+			{
+				EKAlarm * alarm           = [EKAlarm alarmWithRelativeOffset:-alarmTime];
+				[newEvent addAlarm:alarm];
+			}
 		}
 		
-		alarmTime = (bestAlarmTime - 60); // we want it to trigger in 60 seconds
+		newEvent.calendar            = eventStore.defaultCalendarForNewEvents;
+		
+		newEvent.endDate             = [self.scheduled_time dateByAddingTimeInterval:1800]; // 30 minutes;
+		newEvent.location            = [GMRClient formalDisplayNameForPlatform:self.platform];
+		newEvent.notes               = self.label;
+		newEvent.startDate           = self.scheduled_time;
+		newEvent.title               = self.game.label;
+		
+		if(newEvent.availability != EKEventAvailabilityNotSupported)
+			newEvent.availability = EKEventAvailabilityBusy;
+		
+		
+		ok = [eventStore saveEvent:newEvent span:EKSpanThisEvent error:&error];
+		
+		[eventStore release];
 	}
 	
-	
-	if(alarmTime >= 300) // 5 minutes
-	{
-		EKAlarm * alarm           = [EKAlarm alarmWithRelativeOffset:-alarmTime];
-		[event addAlarm:alarm];
-	}
-	
-	event.calendar            = eventStore.defaultCalendarForNewEvents;
-	
-	event.endDate             = [self.scheduled_time dateByAddingTimeInterval:1800]; // 30 minutes;
-	event.location            = [GMRClient formalDisplayNameForPlatform:self.platform];
-	event.notes               = self.label;
-	event.startDate           = self.scheduled_time;
-	event.title               = self.game.label;
-	
-	if(event.availability != EKEventAvailabilityNotSupported)
-		event.availability = EKEventAvailabilityBusy;
-	
-	
-	ok = [eventStore saveEvent:event span:EKSpanThisEvent error:&error];
-	
-	[eventStore release];
+	return ok;
 }
 
-- (void)removeFromDefaultCalendar
+- (EKEvent *)event
+{
+	EKEvent * targetEvent     = nil;
+	EKEventStore * eventStore = [[EKEventStore alloc] init];
+	NSArray * calendars       = [NSArray arrayWithObject:eventStore.defaultCalendarForNewEvents];
+	
+	NSPredicate * query = [eventStore predicateForEventsWithStartDate:self.scheduled_time 
+															  endDate:[self.scheduled_time dateByAddingTimeInterval:86400] // 1 day in the future in case the user changed it's end time
+															calendars:calendars];
+	
+	NSArray * events              = [eventStore eventsMatchingPredicate:query];
+	
+	
+	GMRCalendarIdentifierData current = {.location  = [GMRClient formalDisplayNameForPlatform:self.platform], 
+		                                 .title     = self.game.label, 
+		                                 .startDate = [self.scheduled_time timeIntervalSince1970]};
+	
+	NSString * currentDigest = [self calenderIdentifierWithData:current];
+	
+	for(EKEvent * selectedEvent in events)
+	{
+		GMRCalendarIdentifierData selected = {.location  = selectedEvent.location,
+			.title     = selectedEvent.title,
+			.startDate = [[selectedEvent startDate] timeIntervalSince1970]};
+		
+		NSString * selectedDigest = [self calenderIdentifierWithData:selected];
+		
+		if([selectedDigest isEqualToString:currentDigest])
+		{
+			targetEvent = selectedEvent;
+			break;
+		}
+	}
+	
+	return targetEvent;
+}
+
+- (BOOL)removeFromDefaultCalendar
 {
 	EKEventStore * eventStore = [[EKEventStore alloc] init];
-	EKEvent * targetEvent = nil;
+	EKEvent * targetEvent = self.event;
 	BOOL ok = NO;
 	
-	NSArray * calendars  = [NSArray arrayWithObject:eventStore.defaultCalendarForNewEvents];
+	/*NSArray * calendars  = [NSArray arrayWithObject:eventStore.defaultCalendarForNewEvents];
 	
 	// The user may have changed their default calender between adding and removing, so we search them all.
 	// first we are going to check the default calender.  If it's not there, we will check them all
@@ -129,20 +177,17 @@
 			targetEvent = event;
 			break;
 		}
-	}
+	}*/
 	
 	if(targetEvent != nil)
 	{
 		NSError * error = nil;
 		 ok = [eventStore removeEvent:targetEvent span:EKSpanThisEvent error:&error];
-		
-		if(ok == NO)
-		{
-		
-		}
 	}
 	
 	[eventStore release];
+	
+	return ok;
 }
 
 - (NSString *)calenderIdentifierWithData:(GMRCalendarIdentifierData)data

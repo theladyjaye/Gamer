@@ -267,7 +267,7 @@ static BOOL isCancelOperation;
 														delegate:self 
 											   cancelButtonTitle:@"Cancel" 
 										  destructiveButtonTitle:nil 
-											   otherButtonTitles:@"Email", @"Copy Game Url", nil];
+											   otherButtonTitles:@"Email", @"Add To Calendar", @"Copy Game Url", nil];
 	
 	[sheet showInView:self.parentViewController.parentViewController.view];
 }
@@ -280,7 +280,11 @@ static BOOL isCancelOperation;
 			[self shareEmail];
 			break;
 			
-		case 1:
+		case 1: // email
+			[self addToCalendar];
+			break;
+			
+		case 2:
 			[self shareCopyUrl];
 			break;
 		
@@ -468,7 +472,12 @@ static BOOL isCancelOperation;
 			
 			insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
 			
-			[match addToDefaultCalendar];
+			
+			NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+			if([defaults boolForKey:@"manage_calendar"])
+			{
+				[match addToDefaultCalendar];
+			}
 			
 			[kScheduledMatchesViewController willChange:NSKeyValueChangeInsertion 
 									valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
@@ -545,7 +554,12 @@ static BOOL isCancelOperation;
 		GMRMatch * currentMatch = (GMRMatch *)obj;
 		if([currentMatch.id isEqualToString:match.id])
 		{
-			[currentMatch removeFromDefaultCalendar];
+			NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+			if([defaults boolForKey:@"manage_calendar"])
+			{
+				[currentMatch removeFromDefaultCalendar];
+			}
+			
 			*stop = YES;
 			return YES;
 		}
