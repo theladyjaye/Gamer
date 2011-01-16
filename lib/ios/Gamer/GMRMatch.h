@@ -18,7 +18,7 @@ typedef struct GMRCalenderIdentifierData
 } GMRCalendarIdentifierData;
 
 
-@class GMRGame, EKEvent;
+@class GMRGame, EKEvent, EKEventStore;
 @interface GMRMatch : NSObject 
 {
 	GMRGame  * game;
@@ -31,6 +31,7 @@ typedef struct GMRCalenderIdentifierData
 	GMRPlatform platform;
 	GMRMatchAvailablilty availability;
 	NSInteger maxPlayers;
+	EKEventStore * eventStore;
 }
 @property(nonatomic, retain) GMRGame * game;
 @property(nonatomic, retain) NSDate * scheduled_time;

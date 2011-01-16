@@ -64,6 +64,11 @@
 			rect = CGRectMake(0, 0, 60, 30);
 			break;
 			
+		case GMRButtonTypeMore:
+			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonMore" ofType:@"png"];
+			rect = CGRectMake(0, 0, 58, 30);
+			break;
+			
 		case GMRButtonTypeNewAccount:
 			imagePath = [[NSBundle mainBundle] pathForResource:@"ButtonNewAccount" ofType:@"png"];
 			rect = CGRectMake(0, 0, 111, 30);

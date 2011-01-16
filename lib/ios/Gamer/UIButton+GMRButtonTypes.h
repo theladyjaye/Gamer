@@ -19,6 +19,7 @@ enum
 	GMRButtonTypeJoin,
 	GMRButtonTypeLeave,
 	GMRButtonTypeLogin,
+	GMRButtonTypeMore,
 	GMRButtonTypeNewAccount,
 	GMRButtonTypeSave,
 	GMRButtonTypeSend,

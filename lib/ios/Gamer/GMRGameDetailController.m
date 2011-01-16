@@ -154,7 +154,7 @@ static BOOL isCancelOperation;
 	{
 		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
 															 title:@"Get the word out" 
-														   message:@"Got a game you want people to know about?\n\nTap the share button below to see who's up for throwing one down.\n\n" 
+														   message:@"Got a game you want people to know about?\n\nTap the more button below to see who's up for throwing one down.\n\n" 
 														  callback:^(GMRAlertView * alertView){
 															  [defaults setBool:YES forKey:@"shareMessage"];
 															  [alertView release];
@@ -243,7 +243,7 @@ static BOOL isCancelOperation;
 	}
 	
 	
-	UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeShare];
+	UIButton* shareButton = [UIButton buttonWithGMRButtonType:GMRButtonTypeMore];
 	[shareButton addTarget:self action:@selector(shareGame) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem * action = [[UIBarButtonItem alloc] initWithCustomView:actionButton];
@@ -263,7 +263,7 @@ static BOOL isCancelOperation;
 
 - (void)shareGame
 {
-	UIActionSheet * sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Sharing %@", match.game.label]
+	UIActionSheet * sheet = [[UIActionSheet alloc] initWithTitle:[NSString stringWithFormat:@"Actions for %@", match.game.label]
 														delegate:self 
 											   cancelButtonTitle:@"Cancel" 
 										  destructiveButtonTitle:nil 
@@ -276,15 +276,15 @@ static BOOL isCancelOperation;
 {
 	switch (buttonIndex) 
 	{
-		case 0: // email
+		case 0: // Email
 			[self shareEmail];
 			break;
 			
-		case 1: // email
+		case 1: // Add to Calendar
 			[self addToCalendar];
 			break;
 			
-		case 2:
+		case 2: // Copy Url
 			[self shareCopyUrl];
 			break;
 		

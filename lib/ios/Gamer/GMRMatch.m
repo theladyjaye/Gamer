@@ -18,8 +18,6 @@
 #import <EventKit/EventKit.h>
 
 
-
-
 @implementation GMRMatch
 @synthesize platform, game, availability, scheduled_time, label, maxPlayers, mode, created_by, id, publicUrl, event;
 
@@ -65,7 +63,9 @@
 	}
 	else 
 	{
-		EKEventStore * eventStore = [[EKEventStore alloc] init];
+		if(!eventStore)
+			eventStore = [[EKEventStore alloc] init];
+		
 		EKEvent * newEvent        = [EKEvent eventWithEventStore:eventStore];
 		
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -111,6 +111,7 @@
 		ok = [eventStore saveEvent:newEvent span:EKSpanThisEvent error:&error];
 		
 		[eventStore release];
+		eventStore = nil;
 	}
 	
 	return ok;
@@ -119,16 +120,17 @@
 - (EKEvent *)event
 {
 	EKEvent * targetEvent     = nil;
-	EKEventStore * eventStore = [[EKEventStore alloc] init];
+	
+	if(!eventStore)
+		eventStore = [[EKEventStore alloc] init];
+	
 	NSArray * calendars       = [NSArray arrayWithObject:eventStore.defaultCalendarForNewEvents];
 	
 	NSPredicate * query = [eventStore predicateForEventsWithStartDate:self.scheduled_time 
-															  endDate:[self.scheduled_time dateByAddingTimeInterval:86400] // 1 day in the future in case the user changed it's end time
-															calendars:calendars];
+															   endDate:[self.scheduled_time dateByAddingTimeInterval:86400] // 1 day in the future in case the user changed it's end time
+															 calendars:calendars];
 	
 	NSArray * events              = [eventStore eventsMatchingPredicate:query];
-	
-	//NSLog(@"Events: %@", events);
 	
 	GMRCalendarIdentifierData current = {.location  = [GMRClient formalDisplayNameForPlatform:self.platform], 
 		                                 .title     = self.game.label, 
@@ -151,57 +153,29 @@
 		}
 	}
 	
-	[eventStore release];
+	if(targetEvent == nil)
+	{
+		[eventStore release];
+		eventStore = nil;
+	}
 	
 	return targetEvent;
 }
 
 - (BOOL)removeFromDefaultCalendar
 {
-	EKEventStore * eventStore = [[EKEventStore alloc] init];
 	EKEvent * targetEvent = self.event;
+	
 	BOOL ok = NO;
-	
-	/*NSArray * calendars  = [NSArray arrayWithObject:eventStore.defaultCalendarForNewEvents];
-	
-	// The user may have changed their default calender between adding and removing, so we search them all.
-	// first we are going to check the default calender.  If it's not there, we will check them all
-	NSPredicate * query = [eventStore predicateForEventsWithStartDate:self.scheduled_time 
-															  endDate:[self.scheduled_time dateByAddingTimeInterval:86400] // 1 day in the future in case the user changed it's end time
-															calendars:calendars];
-	
-	NSArray * events              = [eventStore eventsMatchingPredicate:query];
-	
-	
-	GMRCalendarIdentifierData current = {.location  = [GMRClient formalDisplayNameForPlatform:self.platform], 
-									     .title     = self.game.label, 
-									     .startDate = [self.scheduled_time timeIntervalSince1970]};
-	
-	NSString * currentDigest = [self calenderIdentifierWithData:current];
-	
-	
-	for(EKEvent * event in events)
-	{
-		GMRCalendarIdentifierData selected = {.location  = event.location,
-										      .title     = event.title,
-			                                  .startDate = [[event startDate] timeIntervalSince1970]};
-		
-		NSString * selectedDigest = [self calenderIdentifierWithData:selected];
-		
-		if([selectedDigest isEqualToString:currentDigest])
-		{
-			targetEvent = event;
-			break;
-		}
-	}*/
 	
 	if(targetEvent != nil)
 	{
 		NSError * error = nil;
-		 ok = [eventStore removeEvent:targetEvent span:EKSpanThisEvent error:&error];
+		ok = [eventStore removeEvent:targetEvent span:EKSpanThisEvent error:&error];
 	}
 	
 	[eventStore release];
+	eventStore = nil;
 	
 	return ok;
 }
@@ -219,6 +193,9 @@
 
 - (void)dealloc
 {
+	[eventStore release];
+	eventStore = nil;
+	
 	self.game           = nil;
 	self.scheduled_time = nil;
 	self.label          = nil;

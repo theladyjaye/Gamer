@@ -71,6 +71,8 @@
 		D755BAA412A764CA00390451 /* BackgroundPlayerCellCreator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */; };
 		D755BB0412A76C1900390451 /* ButtonSave.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BB0212A76C1900390451 /* ButtonSave.png */; };
 		D755BB0512A76C1900390451 /* ButtonSave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D755BB0312A76C1900390451 /* ButtonSave@2x.png */; };
+		D767AA6B12E397F600DDB925 /* ButtonMore.png in Resources */ = {isa = PBXBuildFile; fileRef = D767AA6912E397F600DDB925 /* ButtonMore.png */; };
+		D767AA6C12E397F600DDB925 /* ButtonMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D767AA6A12E397F600DDB925 /* ButtonMore@2x.png */; };
 		D76A0D2012B306F00027FDF6 /* ActivityViewPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = D76A0D1F12B306F00027FDF6 /* ActivityViewPattern.png */; };
 		D76C4A2012A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D76C4A1E12A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png */; };
 		D76C4A2112A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D76C4A1F12A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png */; };
@@ -464,6 +466,8 @@
 		D755BAA212A764CA00390451 /* BackgroundPlayerCellCreator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundPlayerCellCreator@2x.png"; path = "Images/Light/BackgroundPlayerCellCreator@2x.png"; sourceTree = "<group>"; };
 		D755BB0212A76C1900390451 /* ButtonSave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonSave.png; path = Images/Light/ButtonSave.png; sourceTree = "<group>"; };
 		D755BB0312A76C1900390451 /* ButtonSave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonSave@2x.png"; path = "Images/Light/ButtonSave@2x.png"; sourceTree = "<group>"; };
+		D767AA6912E397F600DDB925 /* ButtonMore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonMore.png; path = Images/Light/ButtonMore.png; sourceTree = "<group>"; };
+		D767AA6A12E397F600DDB925 /* ButtonMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonMore@2x.png"; path = "Images/Light/ButtonMore@2x.png"; sourceTree = "<group>"; };
 		D76A0D1F12B306F00027FDF6 /* ActivityViewPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ActivityViewPattern.png; path = Images/Light/ActivityViewPattern.png; sourceTree = "<group>"; };
 		D76C4A1E12A8B46E00A83206 /* BackgroundCreateMenuCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundCreateMenuCheckbox.png; path = Images/Light/BackgroundCreateMenuCheckbox.png; sourceTree = "<group>"; };
 		D76C4A1F12A8B46E00A83206 /* BackgroundCreateMenuCheckbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BackgroundCreateMenuCheckbox@2x.png"; path = "Images/Light/BackgroundCreateMenuCheckbox@2x.png"; sourceTree = "<group>"; };
@@ -946,6 +950,8 @@
 		D70B450812A1D40C00535D03 /* ImagesLight */ = {
 			isa = PBXGroup;
 			children = (
+				D767AA6912E397F600DDB925 /* ButtonMore.png */,
+				D767AA6A12E397F600DDB925 /* ButtonMore@2x.png */,
 				D7A1D23112D0153900D72C60 /* ActivityViewPattern@2x.png */,
 				D7E1706712C3B88400F6E060 /* ButtonFilters.png */,
 				D7E1706812C3B88400F6E060 /* ButtonFilters@2x.png */,
@@ -2005,6 +2011,8 @@
 				D7886D4812C65ECA001F2077 /* GMRChooseTimeInterval.xib in Resources */,
 				D7A1D23212D0153900D72C60 /* ActivityViewPattern@2x.png in Resources */,
 				D790EF9D12E34A2500BB2AD0 /* Settings.bundle in Resources */,
+				D767AA6B12E397F600DDB925 /* ButtonMore.png in Resources */,
+				D767AA6C12E397F600DDB925 /* ButtonMore@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
