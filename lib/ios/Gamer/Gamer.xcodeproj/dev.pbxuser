@@ -140,6 +140,16 @@
 			D767AA0012E355D400DDB925 /* PlistBookmark */ = D767AA0012E355D400DDB925 /* PlistBookmark */;
 			D767AA0112E355D400DDB925 /* PBXTextBookmark */ = D767AA0112E355D400DDB925 /* PBXTextBookmark */;
 			D767AA0212E355D400DDB925 /* PBXTextBookmark */ = D767AA0212E355D400DDB925 /* PBXTextBookmark */;
+			D767AA0F12E35E4100DDB925 /* PBXTextBookmark */ = D767AA0F12E35E4100DDB925 /* PBXTextBookmark */;
+			D767AA1012E35E8000DDB925 /* PBXTextBookmark */ = D767AA1012E35E8000DDB925 /* PBXTextBookmark */;
+			D767AA1112E35E8000DDB925 /* PBXTextBookmark */ = D767AA1112E35E8000DDB925 /* PBXTextBookmark */;
+			D767AA1412E35EF900DDB925 /* PBXTextBookmark */ = D767AA1412E35EF900DDB925 /* PBXTextBookmark */;
+			D767AA1912E3607E00DDB925 /* PBXTextBookmark */ = D767AA1912E3607E00DDB925 /* PBXTextBookmark */;
+			D767AA1A12E3608600DDB925 /* PBXTextBookmark */ = D767AA1A12E3608600DDB925 /* PBXTextBookmark */;
+			D767AA1B12E3609500DDB925 /* PBXTextBookmark */ = D767AA1B12E3609500DDB925 /* PBXTextBookmark */;
+			D767AA2212E3613200DDB925 /* PBXTextBookmark */ = D767AA2212E3613200DDB925 /* PBXTextBookmark */;
+			D767AA2312E361A900DDB925 /* PBXTextBookmark */ = D767AA2312E361A900DDB925 /* PBXTextBookmark */;
+			D767AA2412E361AB00DDB925 /* PBXTextBookmark */ = D767AA2412E361AB00DDB925 /* PBXTextBookmark */;
 			D769DEDF12DEC2CA00763E71 = D769DEDF12DEC2CA00763E71 /* PBXTextBookmark */;
 			D769DEE812DEC30C00763E71 = D769DEE812DEC30C00763E71 /* PBXTextBookmark */;
 			D772F00E12D0370F00C12E72 = D772F00E12D0370F00C12E72 /* PlistBookmark */;
@@ -301,9 +311,9 @@
 	};
 	D709BE211299BFBD0057EA4B /* GMRMatch.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1174, 2704}}";
-			sepNavSelRange = "{3466, 0}";
-			sepNavVisRange = "{136, 2398}";
+			sepNavIntBoundsRect = "{{0, 0}, {1174, 2951}}";
+			sepNavSelRange = "{1868, 0}";
+			sepNavVisRange = "{1085, 2194}";
 		};
 	};
 	D709BF06129A26AD0057EA4B /* GMRChooseGameAndMode.h */ = {
@@ -555,7 +565,7 @@
 		ignoreCount = 0;
 		lineNumber = 114;
 		location = HazGame;
-		modificationTime = 316888030.354083;
+		modificationTime = 316891447.717345;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -861,9 +871,9 @@
 	};
 	D75012DF1298CE860079EB44 /* GMRCreateGameController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1762, 5798}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1495, 6071}}";
 			sepNavSelRange = "{11191, 0}";
-			sepNavVisRange = "{8527, 2391}";
+			sepNavVisRange = "{9499, 1244}";
 		};
 	};
 	D7566FBA12D6185100880C42 /* PBXTextBookmark */ = {
@@ -900,7 +910,7 @@
 		ignoreCount = 0;
 		lineNumber = 238;
 		location = GamePop;
-		modificationTime = 316888030.355386;
+		modificationTime = 316891447.717847;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1003,7 +1013,7 @@
 		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
 		name = "GMRMatch.m: 66";
 		rLen = 0;
-		rLoc = 2304;
+		rLoc = 2690;
 		rType = 0;
 		vrLen = 2010;
 		vrLoc = 1656;
@@ -1094,7 +1104,7 @@
 		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
 		name = "GMRMatch.m: 66";
 		rLen = 0;
-		rLoc = 2304;
+		rLoc = 2690;
 		rType = 0;
 		vrLen = 1918;
 		vrLoc = 1656;
@@ -1104,10 +1114,110 @@
 		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
 		name = "GMRMatch.m: 98";
 		rLen = 0;
-		rLoc = 3466;
+		rLoc = 3852;
 		rType = 0;
 		vrLen = 2398;
 		vrLoc = 136;
+	};
+	D767AA0F12E35E4100DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 54";
+		rLen = 0;
+		rLoc = 2139;
+		rType = 0;
+		vrLen = 2485;
+		vrLoc = 522;
+	};
+	D767AA1012E35E8000DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D75012DF1298CE860079EB44 /* GMRCreateGameController.m */;
+		name = "GMRCreateGameController.m: 324";
+		rLen = 0;
+		rLoc = 11191;
+		rType = 0;
+		vrLen = 1244;
+		vrLoc = 9499;
+	};
+	D767AA1112E35E8000DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 54";
+		rLen = 0;
+		rLoc = 2139;
+		rType = 0;
+		vrLen = 858;
+		vrLoc = 1202;
+	};
+	D767AA1412E35EF900DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 53";
+		rLen = 0;
+		rLoc = 1767;
+		rType = 0;
+		vrLen = 2111;
+		vrLoc = 1492;
+	};
+	D767AA1912E3607E00DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 121";
+		rLen = 0;
+		rLoc = 4527;
+		rType = 0;
+		vrLen = 1179;
+		vrLoc = 3587;
+	};
+	D767AA1A12E3608600DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 52";
+		rLen = 0;
+		rLoc = 1765;
+		rType = 0;
+		vrLen = 2357;
+		vrLoc = 898;
+	};
+	D767AA1B12E3609500DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 52";
+		rLen = 0;
+		rLoc = 1765;
+		rType = 0;
+		vrLen = 1182;
+		vrLoc = 2073;
+	};
+	D767AA2212E3613200DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 15";
+		rLen = 0;
+		rLoc = 290;
+		rType = 0;
+		vrLen = 2349;
+		vrLoc = 923;
+	};
+	D767AA2312E361A900DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 57";
+		rLen = 0;
+		rLoc = 1868;
+		rType = 0;
+		vrLen = 765;
+		vrLoc = 1385;
+	};
+	D767AA2412E361AB00DDB925 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
+		name = "GMRMatch.m: 57";
+		rLen = 0;
+		rLoc = 1868;
+		rType = 0;
+		vrLen = 2194;
+		vrLoc = 1085;
 	};
 	D769DEDF12DEC2CA00763E71 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1752,7 +1862,7 @@
 		fRef = D709BE211299BFBD0057EA4B /* GMRMatch.m */;
 		name = "GMRMatch.m: 129";
 		rLen = 0;
-		rLoc = 4846;
+		rLoc = 5265;
 		rType = 0;
 		vrLen = 1612;
 		vrLoc = 2997;
@@ -2272,7 +2382,7 @@
 		ignoreCount = 0;
 		lineNumber = 111;
 		location = HazGame;
-		modificationTime = 316888030.354761;
+		modificationTime = 316891447.717711;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};

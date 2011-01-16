@@ -12,6 +12,7 @@
 #import "GMRClient.h"
 #import "GMRUtils.h"
 #import "NSDate+JSON.h"
+#import "GMRAlertView.h"
 
 #import "GMRHashing.h"
 #import <EventKit/EventKit.h>
@@ -50,7 +51,19 @@
 	BOOL ok         = NO;
 	NSError * error = nil;
 	
-	if(self.event == nil)
+	
+	if(self.event != nil)
+	{
+		GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+															 title:@"Already in Calendar" 
+														   message:@"This game is already scheduled in your calendar" 
+														  callback:^(GMRAlertView *alertView) {
+															  [alertView release];
+														  }];
+		
+		[alert show];
+	}
+	else 
 	{
 		EKEventStore * eventStore = [[EKEventStore alloc] init];
 		EKEvent * newEvent        = [EKEvent eventWithEventStore:eventStore];
@@ -115,6 +128,7 @@
 	
 	NSArray * events              = [eventStore eventsMatchingPredicate:query];
 	
+	//NSLog(@"Events: %@", events);
 	
 	GMRCalendarIdentifierData current = {.location  = [GMRClient formalDisplayNameForPlatform:self.platform], 
 		                                 .title     = self.game.label, 
@@ -136,6 +150,8 @@
 			break;
 		}
 	}
+	
+	[eventStore release];
 	
 	return targetEvent;
 }
