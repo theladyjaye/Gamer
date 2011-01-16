@@ -59,6 +59,8 @@
 		D745078812A9F93800034CD6 /* GMRGameListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D745078712A9F93800034CD6 /* GMRGameListCell.m */; };
 		D74507A712A9FBC700034CD6 /* GMRModeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D74507A612A9FBC700034CD6 /* GMRModeListCell.m */; };
 		D746BFBE12984E61003ADC09 /* GMRPlatformBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */; };
+		D749B72012E25B0A00F0537A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D749B71F12E25B0A00F0537A /* EventKit.framework */; };
+		D749B7FB12E2720600F0537A /* GMRHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = D749B7FA12E2720600F0537A /* GMRHashing.m */; };
 		D74C7BE512A94A400067F8F5 /* ButtonPodCheckboxTall.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */; };
 		D74C7BE612A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */; };
 		D75012921298A0990079EB44 /* GMRChoosePlatformController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75012901298A0990079EB44 /* GMRChoosePlatformController.m */; };
@@ -446,6 +448,9 @@
 		D74507A612A9FBC700034CD6 /* GMRModeListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRModeListCell.m; sourceTree = "<group>"; };
 		D746BFBC12984E61003ADC09 /* GMRPlatformBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRPlatformBanner.h; sourceTree = "<group>"; };
 		D746BFBD12984E61003ADC09 /* GMRPlatformBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRPlatformBanner.m; sourceTree = "<group>"; };
+		D749B71F12E25B0A00F0537A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		D749B7F912E2720600F0537A /* GMRHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRHashing.h; sourceTree = "<group>"; };
+		D749B7FA12E2720600F0537A /* GMRHashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRHashing.m; sourceTree = "<group>"; };
 		D74C7BE312A94A400067F8F5 /* ButtonPodCheckboxTall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ButtonPodCheckboxTall.png; path = Images/Light/ButtonPodCheckboxTall.png; sourceTree = "<group>"; };
 		D74C7BE412A94A400067F8F5 /* ButtonPodCheckboxTall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ButtonPodCheckboxTall@2x.png"; path = "Images/Light/ButtonPodCheckboxTall@2x.png"; sourceTree = "<group>"; };
 		D750128F1298A0990079EB44 /* GMRChoosePlatformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRChoosePlatformController.h; sourceTree = "<group>"; };
@@ -701,7 +706,7 @@
 		D7DB93321280B14000D6C442 /* GMRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRUtils.m; sourceTree = "<group>"; };
 		D7DDD793127FD3A100C29265 /* GamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamerTests-Info.plist"; sourceTree = "<group>"; };
-		D7DDD7A2127FD3BA00C29265 /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamerTesting.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD7AC127FD42400C29265 /* InitializationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializationTests.h; sourceTree = "<group>"; };
 		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
@@ -772,6 +777,7 @@
 				D78356B8128C9FB500E19528 /* AudioToolbox.framework in Frameworks */,
 				D7C0CD7312A6159700843E34 /* QuartzCore.framework in Frameworks */,
 				D78EA49912B488FD00D78651 /* MessageUI.framework in Frameworks */,
+				D749B72012E25B0A00F0537A /* EventKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +833,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libGamer.a */,
 				D7DDD793127FD3A100C29265 /* GamerTests.octest */,
-				D7DDD7A2127FD3BA00C29265 /* libGamer.a */,
+				D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */,
 				D7DB90901280832500D6C442 /* libASIHttp.a */,
 				D7B7280B128226E700419F60 /* libYAJL.a */,
 				D775C4B2128795A400C72E64 /* GamePop.app */,
@@ -864,6 +870,7 @@
 				D7B728161282271D00419F60 /* UIKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				D78EA49812B488FD00D78651 /* MessageUI.framework */,
+				D749B71F12E25B0A00F0537A /* EventKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1367,6 +1374,8 @@
 				D7C52E2F12BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.h */,
 				D7C52E3012BED5E700B9D73C /* MFMailComposeViewController+GMRComposeViewStyle.m */,
 				D78C7B3112C9840C0010649D /* GMRMatchListSource.h */,
+				D749B7F912E2720600F0537A /* GMRHashing.h */,
+				D749B7FA12E2720600F0537A /* GMRHashing.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -1820,7 +1829,7 @@
 			);
 			name = GamerTesting;
 			productName = Gamer;
-			productReference = D7DDD7A2127FD3BA00C29265 /* libGamer.a */;
+			productReference = D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -2109,6 +2118,7 @@
 				D7E1716912C3E99D00F6E060 /* GMRChooseGame+TableView.m in Sources */,
 				D7886D4712C65ECA001F2077 /* GMRChooseTimeInterval.m in Sources */,
 				D79AB89112C7BE7400F2E8AE /* GMRPlayer.m in Sources */,
+				D749B7FB12E2720600F0537A /* GMRHashing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

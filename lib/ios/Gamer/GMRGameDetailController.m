@@ -468,6 +468,8 @@ static BOOL isCancelOperation;
 			
 			insertIndex = insertIndex == -1 ? 0 : insertIndex + 1;
 			
+			[match addToDefaultCalendar];
+			
 			[kScheduledMatchesViewController willChange:NSKeyValueChangeInsertion 
 									valuesAtIndexes:[NSIndexSet indexSetWithIndex:insertIndex] 
 											 forKey:@"matches"];
@@ -517,6 +519,8 @@ static BOOL isCancelOperation;
 			return NO;
 		}];
 		
+		
+		
 		if(removeIndex != NSNotFound)
 		{
 			[self.matchesDataSourceController willChange:NSKeyValueChangeRemoval
@@ -530,7 +534,7 @@ static BOOL isCancelOperation;
 										  		 forKey:@"matches"];
 		}
 		
-		// rest the flag
+		// reset the flag
 		isCancelOperation = NO;
 	}
 	
@@ -541,6 +545,7 @@ static BOOL isCancelOperation;
 		GMRMatch * currentMatch = (GMRMatch *)obj;
 		if([currentMatch.id isEqualToString:match.id])
 		{
+			[currentMatch removeFromDefaultCalendar];
 			*stop = YES;
 			return YES;
 		}

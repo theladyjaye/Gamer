@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "GMRTypes.h"
+
+typedef struct GMRCalenderIdentifierData
+{
+	NSString * title;
+	NSString * location;
+	NSTimeInterval startDate;
+} GMRCalendarIdentifierData;
+
 
 @class GMRGame;
 @interface GMRMatch : NSObject 
@@ -36,4 +45,7 @@
 
 + (id)matchWithDicitonary:(NSDictionary *)dictionary;
 
+- (void)addToDefaultCalendar;
+- (void)removeFromDefaultCalendar;
+- (NSString *)calenderIdentifierWithData:(GMRCalendarIdentifierData)data;
 @end

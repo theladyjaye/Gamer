@@ -29,6 +29,7 @@
 #import "GMRClient.h"
 #import "OverviewController.h"
 
+
 GMRMatch * kCreateMatchProgress = nil;
 
 @implementation GMRCreateGameController
@@ -313,6 +314,8 @@ GMRMatch * kCreateMatchProgress = nil;
 											  // prime some values:
 											  kCreateMatchProgress.id = matchId;
 											  kCreateMatchProgress.created_by = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+											  
+											  [kCreateMatchProgress addToDefaultCalendar];
 											  
 											  if(kScheduledMatches) 
 											  {
