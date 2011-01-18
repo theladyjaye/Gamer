@@ -1,9 +1,9 @@
 // !$*UTF8*$!
 {
 	0867D690FE84028FC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = "Distribution App Store";
+		activeBuildConfigurationName = Debug;
 		activeExecutable = D775C4B3128795A400C72E64 /* GamePop */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = D775C4B1128795A400C72E64 /* GamePop */;
 		addToTargets = (
 			D775C4B1128795A400C72E64 /* GamePop */,
@@ -348,6 +348,11 @@
 			D7735B9312E5218000CD160F /* PBXTextBookmark */ = D7735B9312E5218000CD160F /* PBXTextBookmark */;
 			D7735B9412E5218B00CD160F /* PBXTextBookmark */ = D7735B9412E5218B00CD160F /* PBXTextBookmark */;
 			D7735BC012E5247000CD160F /* PBXTextBookmark */ = D7735BC012E5247000CD160F /* PBXTextBookmark */;
+			D7735BD512E5255F00CD160F /* PBXTextBookmark */ = D7735BD512E5255F00CD160F /* PBXTextBookmark */;
+			D7735BD812E5257800CD160F /* PBXTextBookmark */ = D7735BD812E5257800CD160F /* PBXTextBookmark */;
+			D7735BD912E5257800CD160F /* PBXTextBookmark */ = D7735BD912E5257800CD160F /* PBXTextBookmark */;
+			D7735BDB12E5258C00CD160F /* PBXTextBookmark */ = D7735BDB12E5258C00CD160F /* PBXTextBookmark */;
+			D7735BDC12E525BC00CD160F /* PBXTextBookmark */ = D7735BDC12E525BC00CD160F /* PBXTextBookmark */;
 			D779A57412D0E66300F00BD8 = D779A57412D0E66300F00BD8 /* PBXTextBookmark */;
 			D779A59612D0FA2D00F00BD8 = D779A59612D0FA2D00F00BD8 /* PBXTextBookmark */;
 			D779A5B012D10C6300F00BD8 = D779A5B012D10C6300F00BD8 /* PBXTextBookmark */;
@@ -770,7 +775,7 @@
 		ignoreCount = 0;
 		lineNumber = 114;
 		location = HazGame;
-		modificationTime = 317005205.098912;
+		modificationTime = 317007226.111283;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1026,7 +1031,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 164";
 		rLen = 0;
-		rLoc = 5106;
+		rLoc = 5108;
 		rType = 0;
 		vrLen = 2372;
 		vrLoc = 2906;
@@ -1036,7 +1041,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 174";
 		rLen = 0;
-		rLoc = 5106;
+		rLoc = 5108;
 		rType = 0;
 		vrLen = 1726;
 		vrLoc = 2906;
@@ -1046,7 +1051,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 174";
 		rLen = 0;
-		rLoc = 5106;
+		rLoc = 5108;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 2906;
@@ -1056,7 +1061,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 174";
 		rLen = 0;
-		rLoc = 5106;
+		rLoc = 5108;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 2906;
@@ -1076,7 +1081,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 174";
 		rLen = 0;
-		rLoc = 5106;
+		rLoc = 5108;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 3688;
@@ -1126,7 +1131,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 185";
 		rLen = 0;
-		rLoc = 6292;
+		rLoc = 6862;
 		rType = 0;
 		vrLen = 1740;
 		vrLoc = 4070;
@@ -1136,7 +1141,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 185";
 		rLen = 0;
-		rLoc = 6292;
+		rLoc = 6862;
 		rType = 0;
 		vrLen = 1689;
 		vrLoc = 4121;
@@ -1156,7 +1161,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 185";
 		rLen = 0;
-		rLoc = 6290;
+		rLoc = 6860;
 		rType = 0;
 		vrLen = 1788;
 		vrLoc = 4121;
@@ -1166,7 +1171,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 185";
 		rLen = 0;
-		rLoc = 6290;
+		rLoc = 6860;
 		rType = 0;
 		vrLen = 1720;
 		vrLoc = 4189;
@@ -1176,7 +1181,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 174";
 		rLen = 0;
-		rLoc = 5102;
+		rLoc = 5104;
 		rType = 0;
 		vrLen = 513;
 		vrLoc = 4454;
@@ -1186,7 +1191,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 188";
 		rLen = 0;
-		rLoc = 5950;
+		rLoc = 6520;
 		rType = 0;
 		vrLen = 2206;
 		vrLoc = 3718;
@@ -1196,7 +1201,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 190";
 		rLen = 0;
-		rLoc = 6076;
+		rLoc = 6646;
 		rType = 0;
 		vrLen = 2411;
 		vrLoc = 3718;
@@ -1206,7 +1211,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 190";
 		rLen = 0;
-		rLoc = 6076;
+		rLoc = 6646;
 		rType = 0;
 		vrLen = 2076;
 		vrLoc = 3718;
@@ -1216,7 +1221,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 194";
 		rLen = 0;
-		rLoc = 6203;
+		rLoc = 6773;
 		rType = 0;
 		vrLen = 608;
 		vrLoc = 4737;
@@ -1226,7 +1231,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 193";
 		rLen = 0;
-		rLoc = 6196;
+		rLoc = 6766;
 		rType = 0;
 		vrLen = 2145;
 		vrLoc = 3718;
@@ -1569,7 +1574,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 215";
 		rLen = 0;
-		rLoc = 6203;
+		rLoc = 6773;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 4355;
@@ -2353,7 +2358,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 190";
 		rLen = 0;
-		rLoc = 5098;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 1459;
@@ -2363,7 +2368,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 190";
 		rLen = 0;
-		rLoc = 5098;
+		rLoc = 5100;
 		rType = 0;
 		vrLen = 1301;
 		vrLoc = 1459;
@@ -2694,7 +2699,7 @@
 		ignoreCount = 0;
 		lineNumber = 238;
 		location = GamePop;
-		modificationTime = 317005205.099821;
+		modificationTime = 317007226.11298;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2892,7 +2897,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5563;
+		rLoc = 6133;
 		rType = 0;
 		vrLen = 542;
 		vrLoc = 5249;
@@ -2902,7 +2907,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 214";
 		rLen = 0;
-		rLoc = 5781;
+		rLoc = 6351;
 		rType = 0;
 		vrLen = 565;
 		vrLoc = 5410;
@@ -2912,7 +2917,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5547;
+		rLoc = 6117;
 		rType = 0;
 		vrLen = 1827;
 		vrLoc = 4484;
@@ -2922,7 +2927,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5547;
+		rLoc = 6117;
 		rType = 0;
 		vrLen = 1825;
 		vrLoc = 4484;
@@ -2932,7 +2937,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5547;
+		rLoc = 6117;
 		rType = 0;
 		vrLen = 595;
 		vrLoc = 5461;
@@ -2942,7 +2947,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5547;
+		rLoc = 6117;
 		rType = 0;
 		vrLen = 1825;
 		vrLoc = 4484;
@@ -2962,7 +2967,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 208";
 		rLen = 0;
-		rLoc = 5547;
+		rLoc = 6117;
 		rType = 0;
 		vrLen = 1728;
 		vrLoc = 4581;
@@ -2972,7 +2977,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 206";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 6064;
 		rType = 0;
 		vrLen = 2224;
 		vrLoc = 5015;
@@ -2982,7 +2987,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 206";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 6064;
 		rType = 0;
 		vrLen = 1889;
 		vrLoc = 5015;
@@ -2992,7 +2997,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 206";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 6064;
 		rType = 0;
 		vrLen = 2067;
 		vrLoc = 4739;
@@ -3002,7 +3007,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 206";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 6064;
 		rType = 0;
 		vrLen = 2067;
 		vrLoc = 4739;
@@ -3012,7 +3017,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 232";
 		rLen = 0;
-		rLoc = 6218;
+		rLoc = 6788;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 5885;
@@ -3022,7 +3027,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 217";
 		rLen = 0;
-		rLoc = 5784;
+		rLoc = 6354;
 		rType = 0;
 		vrLen = 2067;
 		vrLoc = 4739;
@@ -3032,7 +3037,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 203";
 		rLen = 0;
-		rLoc = 5363;
+		rLoc = 5933;
 		rType = 0;
 		vrLen = 1934;
 		vrLoc = 3951;
@@ -3062,7 +3067,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 203";
 		rLen = 0;
-		rLoc = 5292;
+		rLoc = 5862;
 		rType = 0;
 		vrLen = 539;
 		vrLoc = 5132;
@@ -3132,7 +3137,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 202";
 		rLen = 0;
-		rLoc = 5292;
+		rLoc = 5862;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 5105;
@@ -3382,7 +3387,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 222";
 		rLen = 0;
-		rLoc = 5931;
+		rLoc = 6501;
 		rType = 0;
 		vrLen = 1863;
 		vrLoc = 4357;
@@ -3392,7 +3397,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 202";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5841;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 4357;
@@ -3402,7 +3407,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 202";
 		rLen = 0;
-		rLoc = 5271;
+		rLoc = 5841;
 		rType = 0;
 		vrLen = 1847;
 		vrLoc = 4357;
@@ -3422,7 +3427,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 203";
 		rLen = 0;
-		rLoc = 5355;
+		rLoc = 5925;
 		rType = 0;
 		vrLen = 540;
 		vrLoc = 5099;
@@ -3432,7 +3437,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 214";
 		rLen = 0;
-		rLoc = 5675;
+		rLoc = 6245;
 		rType = 0;
 		vrLen = 1864;
 		vrLoc = 4357;
@@ -3446,6 +3451,56 @@
 		rType = 0;
 		vrLen = 1352;
 		vrLoc = 4357;
+	};
+	D7735BD512E5255F00CD160F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
+		name = "HazGame.m: 208";
+		rLen = 0;
+		rLoc = 5727;
+		rType = 0;
+		vrLen = 1356;
+		vrLoc = 4593;
+	};
+	D7735BD812E5257800CD160F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
+		name = "HazGame.m: 184";
+		rLen = 0;
+		rLoc = 5016;
+		rType = 0;
+		vrLen = 1356;
+		vrLoc = 4593;
+	};
+	D7735BD912E5257800CD160F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
+		name = "HazGame.m: 184";
+		rLen = 0;
+		rLoc = 5016;
+		rType = 0;
+		vrLen = 1302;
+		vrLoc = 4593;
+	};
+	D7735BDB12E5258C00CD160F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
+		name = "HazGame.m: 209";
+		rLen = 0;
+		rLoc = 5735;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 5109;
+	};
+	D7735BDC12E525BC00CD160F /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
+		name = "HazGame.m: 184";
+		rLen = 0;
+		rLoc = 5016;
+		rType = 0;
+		vrLen = 1310;
+		vrLoc = 4486;
 	};
 	D775C4B1128795A400C72E64 /* GamePop */ = {
 		activeExec = 0;
@@ -3502,9 +3557,9 @@
 	};
 	D775C4DF1287978700C72E64 /* HazGame.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1168, 3809}}";
-			sepNavSelRange = "{4908, 0}";
-			sepNavVisRange = "{4357, 1352}";
+			sepNavIntBoundsRect = "{{0, 0}, {1244, 4134}}";
+			sepNavSelRange = "{5016, 0}";
+			sepNavVisRange = "{4486, 1310}";
 		};
 	};
 	D775C4E41287981500C72E64 /* GamePop_Prefix.pch */ = {
@@ -3586,7 +3641,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 211";
 		rLen = 0;
-		rLoc = 5641;
+		rLoc = 6211;
 		rType = 0;
 		vrLen = 2081;
 		vrLoc = 4591;
@@ -3596,7 +3651,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 211";
 		rLen = 0;
-		rLoc = 5641;
+		rLoc = 6211;
 		rType = 0;
 		vrLen = 2081;
 		vrLoc = 4591;
@@ -3606,7 +3661,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 211";
 		rLen = 0;
-		rLoc = 5641;
+		rLoc = 6211;
 		rType = 0;
 		vrLen = 1931;
 		vrLoc = 4591;
@@ -4567,7 +4622,7 @@
 		ignoreCount = 0;
 		lineNumber = 111;
 		location = HazGame;
-		modificationTime = 317005205.099603;
+		modificationTime = 317007226.112278;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -5479,7 +5534,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 165";
 		rLen = 0;
-		rLoc = 5245;
+		rLoc = 5815;
 		rType = 0;
 		vrLen = 515;
 		vrLoc = 3726;
@@ -5489,7 +5544,7 @@
 		fRef = D775C4DF1287978700C72E64 /* HazGame.m */;
 		name = "HazGame.m: 165";
 		rLen = 0;
-		rLoc = 5245;
+		rLoc = 5815;
 		rType = 0;
 		vrLen = 1608;
 		vrLoc = 3440;

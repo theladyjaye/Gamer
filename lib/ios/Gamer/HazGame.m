@@ -184,7 +184,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 		
 			if(ok)
 			{
-				NSLog(@"Registered For Push Notifications");
+				//NSLog(@"Registered For Push Notifications");
 			}
 		}];
 		 
@@ -196,6 +196,23 @@ OverviewController * kScheduledMatchesViewController = nil;
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
+	
+	// TESTING ONLY!
+	/*
+	NSTimeZone * currentTimeZone = [NSTimeZone localTimeZone];
+	
+	NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+	NSDictionary * payload    = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"username"], @"alias", [currentTimeZone name], @"tz", nil];
+	
+	[kGamerApi registerForPushNotifictions:@"9d01ebbd939060b3cb77ecc62f9448029d9c32d6960ec76c672cd3a71abbe832" payload:payload withCallback:^(BOOL ok, NSDictionary * response){
+		
+		if(ok)
+		{
+			//NSLog(@"Registered For Push Notifications");
+		}
+	}];
+	 */
+	
 	NSLog(@"%@", error);
 }
 

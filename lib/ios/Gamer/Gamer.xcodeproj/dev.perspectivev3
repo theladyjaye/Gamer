@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -283,7 +281,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 210}, {305, 861}}</string>
+							<string>{{0, 0}, {305, 861}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -311,6 +309,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D7735BC012E5247000CD160F</string>
+										<string>D7735BDC12E525BC00CD160F</string>
 										<key>history</key>
 										<array>
 											<string>D7840F4012B12CE30049E3F4</string>
@@ -473,7 +473,7 @@
 											<string>D7735B6412E5177500CD160F</string>
 											<string>D7735B7C12E5182900CD160F</string>
 											<string>D7735B8612E51BD500CD160F</string>
-											<string>D7735B9312E5218000CD160F</string>
+											<string>D7735BDB12E5258C00CD160F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -790,6 +790,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D7735BDA12E5257800CD160F</string>
 		<string>D7735B3A12E505C000CD160F</string>
 		<string>D7735B3612E5057600CD160F</string>
 		<string>/Users/dev/Projects/APP_Gamer/lib/ios/Gamer/Gamer.xcodeproj</string>
