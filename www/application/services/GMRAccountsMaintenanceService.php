@@ -19,7 +19,14 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 		
 		$payload = json_decode(file_get_contents("php://input"));
 		
-		$client = new UAClient();
+		
+		$settings = GMRConfiguration::standardConfiguration();
+		$key      = $settings['urbanAirshipKey'];
+		$secret   = $settings['urbanAirshipSecret'];
+		$master   = $settings['urbanAirshipMasterSecret'];
+		
+		$client = new UAClient($key, $secret, $master);
+		
 		$data = $client->register($token, $payload);
 		
 		if($data != "OK")
@@ -43,7 +50,12 @@ class GMRAccountsMaintenanceService extends GMRAbstractService
 		$response     = new stdClass();
 		$response->ok = true;
 		
-		$client = new UAClient();
+		$settings = GMRConfiguration::standardConfiguration();
+		$key      = $settings['urbanAirshipKey'];
+		$secret   = $settings['urbanAirshipSecret'];
+		$master   = $settings['urbanAirshipMasterSecret'];
+		
+		$client = new UAClient($key, $secret, $master);
 		$data = $client->unregister($token);
 		
 		return $response;

@@ -10,9 +10,9 @@ class UAClient
 	private $api = null;
 	
 	
-	public function __construct()
+	public function __construct($key, $secret, $master)
 	{
-		$this->api = new UARequest();
+		$this->api = new UARequest($key, $secret, $master);
 	}
 	
 	

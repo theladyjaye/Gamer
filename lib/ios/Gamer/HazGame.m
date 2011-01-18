@@ -184,7 +184,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 		
 			if(ok)
 			{
-				//NSLog(@"Registered For Push Notifications");
+				NSLog(@"Registered For Push Notifications");
 			}
 		}];
 		 
@@ -208,10 +208,11 @@ OverviewController * kScheduledMatchesViewController = nil;
 		
 		if(ok)
 		{
-			//NSLog(@"Registered For Push Notifications");
+			NSLog(@"Registered For Push Notifications");
 		}
 	}];
 	 */
+	
 	
 	NSLog(@"%@", error);
 }

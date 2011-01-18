@@ -2,29 +2,25 @@
 final class UARequest
 {
 	private $options;
-	private $key;
-	private $masquerade;
+	private $apiKey;
+	private $apiSecret;
+	private $apiMasterSecret;
+	
 	const kDomain          = 'https://go.urbanairship.com/api';
-	const kApiKey          = 'EIzxhQs1QiG02hiQeBPY5Q';
-	const kApiSecret       = 'nZfaI7_iTuiVeGL82DchEA';
-	const kApiMasterSecret = 'sc5ANPYbQ3KnQ9qcspZFtg';
 	
-	//define('DEVICE_TOKEN_URL', BASE_URL . '/device_tokens/');
-	//define('PUSH_URL', BASE_URL . '/push/');
-	//define('BROADCAST_URL',  BASE_URL . '/push/broadcast/');
-	//define('FEEDBACK_URL', BASE_URL . '/device_tokens/feedback/');
-	
-	
-	public function __construct()
+	public function __construct($key, $secret, $master)
 	{
+		$this->apiKey          = $key;
+		$this->apiSecret       = $secret;
+		$this->apiMasterSecret = $master;
 	}
 	
 	public function execute($options)
 	{
 		// Master secret is required to send Push:
 		// http://urbanairship.com/docs/push.html#push
-		$secret  =$options['method'] == 'POST' ? UARequest::kApiMasterSecret : UARequest::kApiSecret;
-		$headers = array('Authorization: Basic '.base64_encode(UARequest::kApiKey.':'.$secret));
+		$secret  = $options['method'] == 'POST' ? $this->apiMasterSecret : $this->apiSecret;
+		$headers = array('Authorization: Basic '. base64_encode($this->apiKey.':'.$secret));
 		
 		$request = curl_init();
 		

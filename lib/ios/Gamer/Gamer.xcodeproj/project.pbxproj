@@ -2285,7 +2285,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../../Downloads\"",
@@ -2324,7 +2324,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2476,9 +2476,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Adam Venturella";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2504,7 +2504,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GamePop;
-				PROVISIONING_PROFILE = "ACE26A42-1D8A-4864-9917-B9C1B018B69F";
+				PROVISIONING_PROFILE = "99A13045-D229-411A-A0BA-A3F04661216C";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2632,7 +2632,7 @@
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Adam Venturella";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
