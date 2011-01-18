@@ -9,8 +9,17 @@ Notification.prototype.pushNotification = function(payload)
 	var domain       = "go.urbanairship.com"
 	var endpoint     = "/api/push/";
 
-	var apiKey       = "EIzxhQs1QiG02hiQeBPY5Q";
-	var masterSecret = "sc5ANPYbQ3KnQ9qcspZFtg";
+	// DEVELOPMENT
+	//var apiKey       = "EIzxhQs1QiG02hiQeBPY5Q";
+	//var masterSecret = "sc5ANPYbQ3KnQ9qcspZFtg";
+	
+	// PRODUCTION
+	var apiKey       = "zzbRuA9hSjCFD43zVasC5g";
+	var masterSecret = "kYzA25qyTbGflCtZjLnAog";
+	
+	
+	
+	
 	
 	var http         = require('http');
 	var ua           = http.createClient(443, domain, true);
