@@ -1,8 +1,54 @@
 <?php
 require GMRApplication::basePath()."/application/libs/gamer/GMRClient.php";
+require GMRApplication::basePath()."/application/libs/urbanairship/UAClient.php";
 
 class GMRAccountsMaintenanceService extends GMRAbstractService
 {
+	/**
+	 * Users platform aliases for their account.  Users can only have 1 alias per platform
+	 * PUT accounts/register/push/$platform/$token
+	 *
+	 * @param string $platform ios|android 
+	 * @return object
+	 * @author Adam Venturella
+	 */
+	public function registerForPushNotifications($platform, $token)
+	{
+		$response     = new stdClass();
+		$response->ok = true;
+		
+		$payload = json_decode(file_get_contents("php://input"));
+		
+		$client = new UAClient();
+		$data = $client->register($token, $payload);
+		
+		if($data != "OK")
+		{
+			$response->ok = false;
+		}
+		
+		return $response;
+	}
+	
+	/**
+	 * Users platform aliases for their account.  Users can only have 1 alias per platform
+	 * DELETE accounts/register/push/$platform/$token
+	 *
+	 * @param string $platform ios|android 
+	 * @return object
+	 * @author Adam Venturella
+	 */
+	public function unregisterForPushNotifications($platform, $token)
+	{
+		$response     = new stdClass();
+		$response->ok = true;
+		
+		$client = new UAClient();
+		$data = $client->unregister($token);
+		
+		return $response;
+	}
+	
 	/**
 	 * Users platform aliases for their account.  Users can only have 1 alias per platform
 	 * GET /accounts/users/$username/aliases

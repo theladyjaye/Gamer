@@ -16,6 +16,7 @@
 #import "GMRActivityView.h"
 #import "UIApplication+GamePop.h"
 #import "OverviewController.h"
+#import "GMRAlertView.h"
 
 GMRClient * kGamerApi = nil;
 NSMutableArray * kScheduledMatches = nil;
@@ -155,6 +156,84 @@ OverviewController * kScheduledMatchesViewController = nil;
 	return result;
 }
 
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+	
+	NSString * token = [[[[deviceToken description]
+						 stringByReplacingOccurrencesOfString: @"<" withString: @""] 
+						 stringByReplacingOccurrencesOfString: @">" withString: @""] 
+					     stringByReplacingOccurrencesOfString: @" " withString: @""];
+	
+	
+	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone) 
+	{
+		// should we unregister the token here?
+		NSLog(@"Notifications are disabled for this application. Not registering with Urban Airship");
+		return;
+	}
+	
+	else 
+	{
+		NSTimeZone * currentTimeZone = [NSTimeZone localTimeZone];
+		
+		NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+		NSDictionary * payload    = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"username"], @"alias", [currentTimeZone name], @"tz", nil];
+		
+		[kGamerApi registerForPushNotifictions:token payload:payload withCallback:^(BOOL ok, NSDictionary * response){
+		
+			if(ok)
+			{
+				NSLog(@"Registered For Push Notifications");
+			}
+		}];
+		 
+		
+	}
+
+	
+	
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+	NSLog(@"%@", error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+	NSDictionary * aps = [userInfo objectForKey:@"aps"];
+	
+	NSString * message = [aps objectForKey:@"alert"];
+	NSString * title   = @"GamePop";
+	
+	if([message rangeOfString:@"[Joined]"].location != NSNotFound) 
+	{
+		title = @"Player Joined";
+		message = [message substringFromIndex:8];
+	}
+	else if([message rangeOfString:@"[Left]"].location != NSNotFound)
+	{
+		title = @"Player Left";
+		message = [message substringFromIndex:6];
+	}
+	else if([message rangeOfString:@"[Cancelled]"].location != NSNotFound)
+	{
+		title = @"Game Cancelled";
+		message = [message substringFromIndex:11];
+	}
+	
+	
+	GMRAlertView * alert = [[GMRAlertView alloc] initWithStyle:GMRAlertViewStyleNotification 
+														 title:title 
+													   message:message 
+													  callback:^(GMRAlertView *alertView) {
+														  [alertView release];
+													  }];
+	
+	[alert show];
+	
+	//NSLog(@"Received notification: %@", [userInfo objectForKey:@"aps"]);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*

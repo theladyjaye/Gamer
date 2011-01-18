@@ -13,6 +13,8 @@
 #import "GMRUtils.h"
 #import "ASIHTTPRequest.h"
 #import "YAJLDocument.h"
+#import "yajl/yajl_common.h"
+#import "NSObject+YAJL.h"
 
 
 #define API_DOMAIN @"http://gamepopapp.com:7331"
@@ -84,6 +86,24 @@ static dispatch_queue_t jsonProcessingQueue;
 				[request addRequestHeader:@"Content-Type"    value:@"application/x-www-form-urlencoded"];
 				[request addRequestHeader:@"Content-Length"  value:[NSString stringWithFormat:@"%u", [postBody length]]];
 				[request setPostBody:postBody];
+			}
+			
+		}
+		
+		else if ([method isEqualToString:@"PUT"])
+		{
+			NSDictionary * data = [options objectForKey:@"data"];
+			
+			if(data)
+			{
+				NSString * json = [data yajl_JSONString];
+				
+				[request addRequestHeader:@"Content-Type"    value:@"application/json"];
+				[request addRequestHeader:@"Content-Length"  value:[NSString stringWithFormat:@"%u", [json length]]];
+				[request setPostBody:[NSMutableData dataWithData:[json dataUsingEncoding:NSUTF8StringEncoding]]];
+				
+				// appending the post body resets the request method to post, so we set it back to put
+				[request setRequestMethod:method];
 			}
 			
 		}

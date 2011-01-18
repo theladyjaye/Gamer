@@ -10,26 +10,41 @@
 	their notification to confirm if they would like to LEAVE. I like this
 	idea better. !!!
 */
+
+var Notification = require('./Notification'),
+    extends      = require('../utils/extends');
+
 var NotificationJoin = function()
 {
-	this.email_to      = null;
-	this.username_to   = null;
-	this.username_from = null
-	this.platform      = null;
-	this.game          = null;
-	this.date          = null;
-	this.type          = "notification";
+	Notification.call(this);
+}
+
+NotificationJoin.prototype             = extends(Notification.prototype);
+NotificationJoin.prototype.constructor = Notification;
+NotificationJoin.prototype.initialize  = function()
+{
+	this.creatorUsername = null;
+	this.platform        = null;
+	this.game            = null;
+	this.date            = null;
+	this.maxPlayers      = 0;
+	this.playerCount     = 0;
 }
 
 NotificationJoin.prototype.send = function()
 {
-	console.log("Join Notifying: "+this.username_to);
-	console.log("@email: "+this.email_to);
-	console.log("that: "+this.username_from);
-	console.log("has joined game: "+this.game);
-	console.log("on platform: "+this.platform);
-	console.log("@time: "+this.date);
-	console.log("\n\n");
+	var message = "[Joined] " + this.game + "\n" + 
+	this.player + "\n" + 
+	this.relativeTime(new Date(this.date)) + "\n" +  
+	"Players: " + this.playerCount + "/" + this.maxPlayers + "\n";
+	
+	var data = {};
+	data.aliases = [this.creatorUsername];
+	data.aps = {};
+	data.aps.alert = message;
+	data.aps.sound = "chime";
+	
+	this.pushNotification(data);
 }
 
 module.exports = NotificationJoin;

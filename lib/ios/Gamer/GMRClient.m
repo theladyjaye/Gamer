@@ -53,7 +53,7 @@ static NSArray * platformStrings;
 	switch(platform)
 	{
 		case GMRPlatformBattleNet:
-			result = @"BattleNet";
+			result = @"Battle.Net";
 			break;
 			
 		case GMRPlatformPlaystation2:
@@ -172,6 +172,26 @@ static NSArray * platformStrings;
 	NSDictionary * data   = [NSDictionary dictionaryWithObjectsAndKeys:email, @"email", name, @"username", password, @"password", passwordVerify, @"password_verify", nil];
 	
 	[apiRequest execute:[NSDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", data, @"data", nil]
+		   withCallback:^(BOOL ok, NSDictionary * response){
+			   callback(ok, response);
+		   }];
+}
+
+- (void)registerForPushNotifictions:(NSString*)token payload:(NSDictionary *)payload withCallback:(GMRCallback)callback
+{
+	NSString*      method = @"PUT";
+	NSString*      path   = @"http://gamepopapp.com/accounts/register/push/ios/";
+	
+	path = [path stringByAppendingString:token];
+	
+	NSMutableDictionary * request = [NSMutableDictionary dictionaryWithObjectsAndKeys:method, @"method", path, @"path", nil];
+	
+	if(payload != nil)
+		[request setValue:payload forKey:@"data"];
+	
+	
+	
+	[apiRequest execute:request
 		   withCallback:^(BOOL ok, NSDictionary * response){
 			   callback(ok, response);
 		   }];

@@ -27,12 +27,25 @@ RewriteRule accounts/verify/([a-z0-9]{32})$ /accountVerify.php?arguments[]=$1 [L
 # and it would be a waste to try as mod_rewrite can get us there, 
 # admittedly in a less pretty way, but why re-invent the wheel
 
+
+# Push Notifications
+RewriteCond %{REQUEST_METHOD} ^PUT [NC,OR]
+RewriteCond %{HTTP:X-HTTP-Method-Override} ^PUT [NC]
+RewriteRule accounts/register/push/(ios|android)/([a-f0-9]{64,})$ /application/services/endpoints/accounts-maintenance.php?action=registerForPushNotifications&arguments[]=$1&arguments[]=$2 [L] 
+
+# Push Notifications
+RewriteCond %{REQUEST_METHOD} ^DELETE [NC,OR]
+RewriteCond %{HTTP:X-HTTP-Method-Override} ^DELETE [NC]
+RewriteRule accounts/register/push/(ios|android)/([a-fA-F0-9]{64,})$ /application/services/endpoints/accounts-maintenance.php?action=unregisterForPushNotifications&arguments[]=$1&arguments[]=$2 [L] 
+
+
 RewriteCond %{REQUEST_METHOD} ^POST [NC,OR]
 RewriteCond %{HTTP:X-HTTP-Method-Override} ^POST [NC]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]
 RewriteRule accounts/users/([a-z0-9_-]+)/aliases/(wii|xbox360|pc|playstation[23]|battlenet)$ /application/services/endpoints/accounts-maintenance.php?action=linkPlatformAlias&arguments[]=$1&arguments[]=$2 [L] 
 RewriteRule accounts/(login|register)$ /application/services/endpoints/accounts-open.php?action=$1 [L] 
 RewriteRule accounts/reset/(.+) /application/services/endpoints/accounts-open.php?action=reset&arguments[]=$1 [L] 
+
 
 RewriteCond %{REQUEST_METHOD} ^GET [NC,OR]
 RewriteCond %{REQUEST_URI} ^/accounts [NC]

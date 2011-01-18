@@ -45,6 +45,11 @@
 			        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld 
 			        context:nil];
 	
+	
+	// Register for Push Notifications:
+	UIApplication * application = [UIApplication sharedApplication];
+	[application registerForRemoteNotificationTypes:UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert];
+	
 	[super viewDidLoad];
 }
 

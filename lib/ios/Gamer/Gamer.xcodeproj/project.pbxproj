@@ -197,7 +197,6 @@
 		D7B728721282287C00419F60 /* GHNSBundle+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7286D1282287C00419F60 /* GHNSBundle+Utils.m */; };
 		D7B728731282287C00419F60 /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = D7B7286F1282287C00419F60 /* GTMBase64.h */; };
 		D7B728741282287C00419F60 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B728701282287C00419F60 /* GTMBase64.m */; };
-		D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B7280B128226E700419F60 /* libYAJL.a */; };
 		D7B7CB85128909D400DC33F4 /* GMRMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B7CB83128909D400DC33F4 /* GMRMainController.m */; };
 		D7B7CB86128909D400DC33F4 /* GMRMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7B7CB84128909D400DC33F4 /* GMRMainController.xib */; };
 		D7BE3513129785A6008E84EB /* GMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BE3512129785A6008E84EB /* GMRViewController.m */; };
@@ -276,7 +275,6 @@
 		D7DB90B31280837D00D6C442 /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90A31280837D00D6C442 /* ASIProgressDelegate.h */; };
 		D7DB90BA128083C900D6C442 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DB90B8128083C900D6C442 /* Reachability.h */; };
 		D7DB90BB128083C900D6C442 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB90B9128083C900D6C442 /* Reachability.m */; };
-		D7DB90BE1280851D00D6C442 /* libASIHttp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90901280832500D6C442 /* libASIHttp.a */; };
 		D7DB91331280879200D6C442 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90D7128086B100D6C442 /* CFNetwork.framework */; };
 		D7DB91341280879C00D6C442 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DF128086DE00D6C442 /* MobileCoreServices.framework */; };
 		D7DB9135128087A500D6C442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DB90DB128086C800D6C442 /* SystemConfiguration.framework */; };
@@ -325,6 +323,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D733F8D912E4CEC2009452B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DB908F1280832500D6C442;
+			remoteInfo = ASIHttp;
+		};
 		D775C4BB128795D100C72E64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -332,26 +337,12 @@
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Gamer;
 		};
-		D77E1BD61288A0EA00B75D60 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7DB908F1280832500D6C442;
-			remoteInfo = ASIHttp;
-		};
 		D7CD224B1289E76400E26772 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D7B7280A128226E700419F60;
 			remoteInfo = YAJL;
-		};
-		D7DB93921280B91900D6C442 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7DB908F1280832500D6C442;
-			remoteInfo = ASIHttp;
 		};
 		D7DDD7F0127FD9F200C29265 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -712,7 +703,7 @@
 		D7DB93321280B14000D6C442 /* GMRUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMRUtils.m; sourceTree = "<group>"; };
 		D7DDD793127FD3A100C29265 /* GamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD794127FD3A100C29265 /* GamerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GamerTests-Info.plist"; sourceTree = "<group>"; };
-		D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamerTesting.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DDD7A2127FD3BA00C29265 /* libGamer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGamer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DDD7AC127FD42400C29265 /* InitializationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitializationTests.h; sourceTree = "<group>"; };
 		D7DDD7AD127FD42400C29265 /* InitializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitializationTests.m; sourceTree = "<group>"; };
 		D7DDD7B7127FD49100C29265 /* GMRClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMRClient.h; sourceTree = "<group>"; };
@@ -756,13 +747,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				D7DB90BE1280851D00D6C442 /* libASIHttp.a in Frameworks */,
 				D7DB91331280879200D6C442 /* CFNetwork.framework in Frameworks */,
 				D7DB91341280879C00D6C442 /* MobileCoreServices.framework in Frameworks */,
 				D7DB9135128087A500D6C442 /* SystemConfiguration.framework in Frameworks */,
 				D7DB9136128087B200D6C442 /* libz.1.2.3.dylib in Frameworks */,
 				D7DB9138128087BF00D6C442 /* CoreGraphics.framework in Frameworks */,
-				D7B7287D128229BE00419F60 /* libYAJL.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,7 +828,7 @@
 			children = (
 				D2AAC07E0554694100DB518D /* libGamer.a */,
 				D7DDD793127FD3A100C29265 /* GamerTests.octest */,
-				D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */,
+				D7DDD7A2127FD3BA00C29265 /* libGamer.a */,
 				D7DB90901280832500D6C442 /* libASIHttp.a */,
 				D7B7280B128226E700419F60 /* libYAJL.a */,
 				D775C4B2128795A400C72E64 /* GamePop.app */,
@@ -1743,7 +1732,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D7DB93931280B91900D6C442 /* PBXTargetDependency */,
 			);
 			name = Gamer;
 			productName = Gamer;
@@ -1761,7 +1749,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D77E1BD71288A0EA00B75D60 /* PBXTargetDependency */,
+				D733F8DA12E4CEC2009452B0 /* PBXTargetDependency */,
 				D7CD224C1289E76400E26772 /* PBXTargetDependency */,
 				D775C4BC128795D100C72E64 /* PBXTargetDependency */,
 			);
@@ -1838,7 +1826,7 @@
 			);
 			name = GamerTesting;
 			productName = Gamer;
-			productReference = D7DDD7A2127FD3BA00C29265 /* libGamerTesting.a */;
+			productReference = D7DDD7A2127FD3BA00C29265 /* libGamer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -2188,25 +2176,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D733F8DA12E4CEC2009452B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DB908F1280832500D6C442 /* ASIHttp */;
+			targetProxy = D733F8D912E4CEC2009452B0 /* PBXContainerItemProxy */;
+		};
 		D775C4BC128795D100C72E64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2AAC07D0554694100DB518D /* Gamer */;
 			targetProxy = D775C4BB128795D100C72E64 /* PBXContainerItemProxy */;
 		};
-		D77E1BD71288A0EA00B75D60 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7DB908F1280832500D6C442 /* ASIHttp */;
-			targetProxy = D77E1BD61288A0EA00B75D60 /* PBXContainerItemProxy */;
-		};
 		D7CD224C1289E76400E26772 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D7B7280A128226E700419F60 /* YAJL */;
 			targetProxy = D7CD224B1289E76400E26772 /* PBXContainerItemProxy */;
-		};
-		D7DB93931280B91900D6C442 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7DB908F1280832500D6C442 /* ASIHttp */;
-			targetProxy = D7DB93921280B91900D6C442 /* PBXContainerItemProxy */;
 		};
 		D7DDD7F1127FD9F200C29265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2236,6 +2219,10 @@
 				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = Gamer;
 				USER_HEADER_SEARCH_PATHS = "./yajl-1.0.11/**";
 			};
@@ -2251,6 +2238,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = Gamer;
 				USER_HEADER_SEARCH_PATHS = "./yajl-1.0.11/**";
 			};
@@ -2295,6 +2286,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Downloads\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2306,6 +2301,8 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2313,7 +2310,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GamePop;
-				PROVISIONING_PROFILE = "7E300C85-9DAC-43EB-9DBE-58E1FED85CC7";
+				PROVISIONING_PROFILE = "ACE26A42-1D8A-4864-9917-B9C1B018B69F";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2325,10 +2322,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Downloads\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2340,6 +2341,8 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2347,6 +2350,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GamePop;
+				PROVISIONING_PROFILE = "ACE26A42-1D8A-4864-9917-B9C1B018B69F";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2380,6 +2384,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = Gamer;
 				USER_HEADER_SEARCH_PATHS = "./yajl-1.0.11/**";
 			};
@@ -2437,6 +2445,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = ASIHttp;
 				SDKROOT = iphoneos;
@@ -2451,6 +2460,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = YAJL;
 				SDKROOT = iphoneos;
@@ -2463,10 +2476,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_ENTITLEMENTS = "~/Projects/APP_Gamer/lib/ios/Gamer/Entitlements.plist";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Adam Venturella";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Adam Venturella (8DT7YU97R4)";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Downloads\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2478,6 +2495,8 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2485,7 +2504,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GamePop;
-				PROVISIONING_PROFILE = "624B512B-EB7B-4E0C-BE0D-10CC96E680A6";
+				PROVISIONING_PROFILE = "ACE26A42-1D8A-4864-9917-B9C1B018B69F";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2519,6 +2538,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Gamer_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = Gamer;
 				USER_HEADER_SEARCH_PATHS = "./yajl-1.0.11/**";
 			};
@@ -2576,6 +2599,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = ASIHttp;
 				SDKROOT = iphoneos;
@@ -2590,6 +2614,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = YAJL;
 				SDKROOT = iphoneos;
@@ -2606,6 +2634,10 @@
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Downloads\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2617,6 +2649,8 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
 					"-framework",
 					Foundation,
 					"-framework",
@@ -2624,7 +2658,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = GamePop;
-				PROVISIONING_PROFILE = "E7488224-1F28-436D-84B7-86F53D3D266B";
+				PROVISIONING_PROFILE = "38117EA1-E750-4B0F-ABF6-8D76DB943AA2";
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -2639,6 +2673,10 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = YAJL;
 				SDKROOT = iphoneos;
@@ -2652,6 +2690,10 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PREBINDING = NO;
 				PRODUCT_NAME = YAJL;
 				SDKROOT = iphoneos;
@@ -2667,6 +2709,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = ASIHttp;
 				SDKROOT = iphoneos;
@@ -2680,6 +2723,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				PRODUCT_NAME = ASIHttp;
 				SDKROOT = iphoneos;

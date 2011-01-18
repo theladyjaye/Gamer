@@ -145,22 +145,30 @@ function leaveMatch(req, res, next)
 									next({"ok":true});
 									// should we notify the owner that someone has left?
 
-									/*var playersQuery  = new PlayersInArray([match.created_by, username]);
+									// get the contact information for the creator
+									var playersQuery  = new PlayersInArray([match.created_by]);
 									playersQuery.execute(function(err, rows, fields)
 									{
-										if(rows.length == 2)
+										if(rows.length == 1)
 										{
-											var Notification                  = require('../data/Notification');
-											var currentNotification           = new Notification();
-											currentNotification.email_to      = rows[0].email;
-											currentNotification.username_to   = rows[0].username
-											currentNotification.username_from = rows[1].username;
-											currentNotification.platform      = Platform[match.game.platform].label;
-											currentNotification.game          = match.game.label;
-											currentNotification.date          = match.scheduled_time;
-											currentNotification.send();
+											db.view("application", "matches-players", {"include_docs":false, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, data)
+											{
+												if(error == null)
+												{
+													var NotificationLeave               = require('../data/NotificationLeave');
+													var currentNotification             = new NotificationLeave();
+													currentNotification.creatorUsername = match.created_by;
+													currentNotification.player          = player.alias;
+													currentNotification.platform        = Platform[match.game.platform].label;
+													currentNotification.game            = match.game.label;
+													currentNotification.date            = match.scheduled_time;
+													currentNotification.maxPlayers      = match.maxPlayers;
+													currentNotification.playerCount     = data.rows.length;
+													currentNotification.send();
+												}
+											});
 										}
-									});*/
+									});
 									return;
 								}
 								else
@@ -253,25 +261,33 @@ function joinMatchAnonymously(req, res, next)
 							if(error == null)
 							{
 								next({"ok":true});
-								/*
-								// get the contact information for the creator and the user
-								var playersQuery  = new PlayersInArray([match.created_by, username]);
+								
+								// get the contact information for the creator
+								var playersQuery  = new PlayersInArray([match.created_by]);
 								playersQuery.execute(function(err, rows, fields)
 								{
-									if(rows.length == 2)
+									if(rows.length == 1)
 									{
-										var NotificationJoin              = require('../data/NotificationJoin');
-										var currentNotification           = new NotificationJoin();
-										currentNotification.email_to      = rows[0].email;
-										currentNotification.username_to   = rows[0].username
-										currentNotification.username_from = rows[1].username;
-										currentNotification.platform      = Platform[match.game.platform].label;
-										currentNotification.game          = match.game.label;
-										currentNotification.date          = match.scheduled_time;
-										currentNotification.send();
+										db.view("application", "matches-players", {"include_docs":false, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, data)
+										{
+											if(error == null)
+											{
+												var NotificationJoin                = require('../data/NotificationJoin');
+												var currentNotification             = new NotificationJoin();
+												//currentNotification.email_to      = rows[0].email;
+												//currentNotification.username_to   = rows[0].username
+												currentNotification.creatorUsername = match.created_by  
+												currentNotification.player          = player.alias;
+												currentNotification.platform        = Platform[match.game.platform].label;
+												currentNotification.game            = match.game.label;
+												currentNotification.date            = match.scheduled_time;
+												currentNotification.maxPlayers      = match.maxPlayers;
+												currentNotification.playerCount     = data.rows.length;
+												currentNotification.send();
+											}
+										});
 									}
 								});
-								*/
 							}
 							else
 							{
@@ -362,21 +378,30 @@ function joinMatch(req, res, next)
 								{
 									next({"ok":true});
 
-									// get the contact information for the creator and the user
-									var playersQuery  = new PlayersInArray([match.created_by, username]);
+									// get the contact information for the creator
+									var playersQuery  = new PlayersInArray([match.created_by]);
 									playersQuery.execute(function(err, rows, fields)
 									{
-										if(rows.length == 2)
+										if(rows.length == 1)
 										{
-											var NotificationJoin              = require('../data/NotificationJoin');
-											var currentNotification           = new NotificationJoin();
-											currentNotification.email_to      = rows[0].email;
-											currentNotification.username_to   = rows[0].username
-											currentNotification.username_from = rows[1].username;
-											currentNotification.platform      = Platform[match.game.platform].label;
-											currentNotification.game          = match.game.label;
-											currentNotification.date          = match.scheduled_time;
-											currentNotification.send();
+											db.view("application", "matches-players", {"include_docs":false, "startkey":[match_id, null], "endkey":[match_id, {}]}, function(error, data)
+											{
+												if(error == null)
+												{
+													var NotificationJoin                = require('../data/NotificationJoin');
+													var currentNotification             = new NotificationJoin();
+													//currentNotification.email_to      = rows[0].email;
+													//currentNotification.username_to   = rows[0].username
+													currentNotification.creatorUsername = match.created_by  
+													currentNotification.player          = player.alias;
+													currentNotification.platform        = Platform[match.game.platform].label;
+													currentNotification.game            = match.game.label;
+													currentNotification.date            = match.scheduled_time;
+													currentNotification.maxPlayers      = match.maxPlayers;
+													currentNotification.playerCount     = data.rows.length;
+													currentNotification.send();
+												}
+											});
 										}
 									});
 								}
@@ -788,15 +813,23 @@ function purgeAndNotifyPlayersForMatch(match, callback)
 		{
 			var targets = [];
 			var players = [];
+			var creatorAlias = "GamePop";
 			
 			data.rows.forEach(function(row)
 			{
 				row.doc._deleted = true;
 				targets.push(row.doc);
 				
-				if(row.doc.username != match.created_by)
+				if(row.doc.username != match.created_by && row.doc.username != "anonymous")
+				{
 					players.push(row.doc.username);
+				}
+				else
+				{
+					creatorAlias = row.doc.alias;
+				}
 			});
+			
 			
 			db.bulkDocs({"docs":targets}, function(err, data)
 			{
@@ -811,23 +844,35 @@ function purgeAndNotifyPlayersForMatch(match, callback)
 			});
 			
 			// notify the other players the match is cancelled.
-			if(players.length > 1)
+			if(players.length > 0)
 			{
-				var playersQuery  = new PlayersInArray(match.players.slice(1));
+				var playersQuery  = new PlayersInArray(players);
 				playersQuery.execute(function(err, rows, fields)
 				{
-					rows.forEach(function(player)
+					var validatedPlayers = [];
+					
+					if(rows.length != players.length)
 					{
-						var NotificationCancel            = require('../data/NotificationCancel');
-						var currentNotification           = new NotificationCancel();
-						currentNotification.email_to      = player.email;
-						currentNotification.username_to   = player.username
-						currentNotification.username_from = match.created_by;
-						currentNotification.platform      = Platform[match.game.platform].label;
-						currentNotification.game          = match.game.label;
-						currentNotification.date          = match.scheduled_time;
-						currentNotification.send();
-					});
+						rows.forEach(function(player)
+						{
+							validatedPlayers.push(player.username);
+						});
+					}
+					else
+					{
+						validatedPlayers = players
+					}
+					
+					var NotificationCancel            = require('../data/NotificationCancel');
+					var currentNotification           = new NotificationCancel();
+					currentNotification.players       = validatedPlayers; // usernames on the system (Urban airship has their names linked to their device IDs)
+					currentNotification.creator       = creatorAlias;
+					currentNotification.platform      = Platform[match.game.platform].label;
+					currentNotification.game          = match.game.label;
+					currentNotification.date          = match.scheduled_time;
+					currentNotification.send();
+					
+					
 				});
 			}
 		}

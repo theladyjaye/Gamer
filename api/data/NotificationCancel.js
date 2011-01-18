@@ -10,26 +10,39 @@
 	their notification to confirm if they would like to LEAVE. I like this
 	idea better. !!!
 */
+
+var Notification = require('./Notification'),
+    extends      = require('../utils/extends');
+
 var NotificationCancel = function()
 {
-	this.email_to      = null;
-	this.username_to   = null;
-	this.username_from = null
+	Notification.call(this);
+}
+
+NotificationCancel.prototype             = extends(Notification.prototype);
+NotificationCancel.prototype.constructor = Notification;
+NotificationCancel.prototype.initialize  = function()
+{
+	this.players       = null;
+	this.creator       = null;
 	this.platform      = null;
 	this.game          = null;
 	this.date          = null;
-	this.type          = "notification";
+	
 }
 
 NotificationCancel.prototype.send = function()
 {
-	console.log("Cancel Notifying: "+this.username_to);
-	console.log("@email: "+this.email_to);
-	console.log("that: "+this.username_from);
-	console.log("has canceled game: "+this.game);
-	console.log("on platform: "+this.platform);
-	console.log("@time: "+this.date);
-	console.log("\n\n");
+	var message = "[Cancelled] " + this.game + "\n\n" + 
+	this.creator + " cancelled the game\n";
+	
+	var data = {};
+	data.aliases = this.players;
+	data.aps = {};
+	data.aps.alert = message;
+	data.aps.sound = "chime";
+	
+	this.pushNotification(data);
 }
 
 module.exports = NotificationCancel;

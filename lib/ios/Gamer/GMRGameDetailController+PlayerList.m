@@ -97,7 +97,17 @@ typedef NSUInteger PlayerListCellStyle;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.playersForMatch == nil ? 0 : match.maxPlayers;
+	NSInteger count = 0;
+	
+	if(self.playersForMatch != nil)
+	{
+		count = MAX(match.maxPlayers, 4);
+		
+		if(count == 4)
+			tableView.scrollEnabled = NO;
+	}
+	
+    return count;
 }
 
 
@@ -107,11 +117,17 @@ typedef NSUInteger PlayerListCellStyle;
 	static NSString *CellIdentifier         = @"PlayerListCell";
 	static NSString *CellIdentifierCreator  = @"PlayerListCellCreator";
 	static NSString *CellIdentifierOpen     = @"PlayerListCellOpen";
+	NSString * alias                        = @"-- Open --";
 	
 	PlayerListCellStyle cellStyle = indexPath.row > ([self.playersForMatch count] -1 ) ? PlayerListCellStyleOpen : PlayerListCellStylePlayer;
 	
+	if(cellStyle == PlayerListCellStyleOpen && (indexPath.row + 1) > match.maxPlayers)
+	{
+		alias = @"-- Closed --";
+	}
+	
 	NSString * reusableId;
-	NSString * alias = @"-- Open --";
+	
 	NSString * username;
 	
 	if(cellStyle == PlayerListCellStylePlayer)

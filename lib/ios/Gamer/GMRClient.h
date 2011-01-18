@@ -35,6 +35,7 @@
 - (void)registerUser:(NSString *)email username:(NSString *)name password:(NSString *)password passwordVerify:(NSString *)passwordVerify withCallback:(GMRCallback)callback;
 
 - (void)registerAlias:(NSString*)alias platform:(GMRPlatform)platform withCallback:(GMRCallback)callback;
+- (void)registerForPushNotifictions:(NSString *)token payload:(NSDictionary *)payload withCallback:(GMRCallback)callback;
 - (void)aliases:(GMRCallback)callback;
 
 - (void)playersForMatch:(GMRPlatform)platform gameId:(NSString *)gameId matchId:(NSString *)matchId callback:(GMRCallback)callback;
