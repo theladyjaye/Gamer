@@ -165,6 +165,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 						 stringByReplacingOccurrencesOfString: @">" withString: @""] 
 					     stringByReplacingOccurrencesOfString: @" " withString: @""];
 	
+	//NSLog(@"%@", token);
 	
 	if ([application enabledRemoteNotificationTypes] == UIRemoteNotificationTypeNone) 
 	{
@@ -184,7 +185,7 @@ OverviewController * kScheduledMatchesViewController = nil;
 		
 			if(ok)
 			{
-				NSLog(@"Registered For Push Notifications");
+				//NSLog(@"Registered For Push Notifications");
 			}
 		}];
 		 

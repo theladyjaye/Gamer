@@ -81,7 +81,15 @@
 	
 	[fontColor set];
 	[gameString drawAtPoint:CGPointMake(38.0, 10.0)  withFont:gameFont];
-	[labelString drawAtPoint:CGPointMake(38.0, 26.0) withFont:matchFont];
+	
+	//[labelString drawAtPoint:CGPointMake(38.0, 26.0) withFont:matchFont];
+	
+	[labelString drawInRect:CGRectMake(38.0, 26.0, 240.0, 14.0) 
+			          withFont:matchFont 
+		         lineBreakMode:UILineBreakModeTailTruncation 
+			         alignment:UITextAlignmentLeft];
+	
+	
 	[dateString drawAtPoint:CGPointMake(38.0, 40.0)  withFont:timeFont];
 	
 	[platformColors drawAtPoint:CGPointMake(286, 54)];
