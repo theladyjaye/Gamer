@@ -59,7 +59,7 @@ class GMRAccountsOpenService extends GMRAbstractService
 	 * password
 	 * password_verify
 	 *
-	 * @return void
+	 * @return object
 	 * @author Adam Venturella
 	 */
 	public function register()

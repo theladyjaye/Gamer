@@ -37,7 +37,7 @@ $(function(){
 		for (key in page.server.errors)
 		{
 			var error = page.server.errors[key];
-			errorView.append("<p>" + error.message + "</p>");
+			errorView.append("<p class=\"error\">" + error.message + "</p>");
 		}
 		
 		jQuery.facebox({ div: '#errors' })

@@ -1,0 +1,7 @@
+p.error{
+	color:#c00;
+	padding:10px;
+	background:#fed4d5;
+	margin-bottom:1px;
+	@include rounded-corners;
+}
