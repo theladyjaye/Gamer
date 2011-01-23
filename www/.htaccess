@@ -18,11 +18,12 @@ RewriteBase /
 
 # WWW Routes
 RewriteRule ^$ /index.php [L]
-RewriteRule ^signup/complete$ /signup-success.php [L]
-RewriteRule ^signup$ /signup-form.php [L]
+RewriteRule ^signup/complete/?$ /signup-success.php [L]
+RewriteRule ^signup/?$ /signup-form.php [L]
 
 #/platform/game_id/match_id
 RewriteRule ^(battlenet|playstation2|playstation3|steam|wii|xbox360)/([a-z0-9_-]{2,})/([a-f0-9]{32}) /gameDetail.php?arguments[]=$1&arguments[]=$2&arguments[]=$3 [L]
+RewriteRule accounts/verify/?$ /accountVerify.php?arguments[]=$1 [L]
 RewriteRule accounts/verify/([a-z0-9]{32})$ /accountVerify.php?arguments[]=$1 [L]
 
 # API Routes

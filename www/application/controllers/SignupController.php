@@ -23,12 +23,16 @@ class SignupController extends DefaultController
 			require GMRApplication::basePath().'/application/services/GMRAbstractService.php';
 			require GMRApplication::basePath().'/application/services/GMRAccountsOpenService.php';
 			
+			// Environment for Services
+			require GMRApplication::basePath().'/application/system/GMRSecurity.php';
+			
 			$service = new GMRAccountsOpenService();
 			$response = $service->register(); // this handles grabbing $_POST and validation.
 			
 			if($response->ok)
 			{
-				print_r($response);
+				header("Location:/signup/complete");
+				exit;
 			}
 			else
 			{

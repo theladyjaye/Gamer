@@ -9,13 +9,6 @@ GMRPage::Controller('DefaultController.php');
 	<title>GamePop : Create an Account</title>
 	<link rel="stylesheet" href="/resources/css/gamepod.css" type="text/css" media="screen" charset="utf-8">
 	<link rel="stylesheet" href="/resources/css/facebox.css" type="text/css" media="screen" charset="utf-8">
-	<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/resources/js/libs/jquery/facebox.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/resources/js/utils/GMRDateTime.js"></script>
-	<script type="text/javascript" charset="utf-8" src="/resources/js/gameDetailController.js"></script>
-	<script type="text/javascript" charset="utf-8">
-		var page = { "server": <?php echo $page->formErrors()?> };
-	</script>
 </head>
 <body>
 	<div id="window" >
@@ -33,6 +26,7 @@ GMRPage::Controller('DefaultController.php');
 							<p>In order to complete the signup process you must verify your account.</p>
 							<p>It should be painless, just check the email account you just gave us for a verification email.</p>
 							<p>Visit the url in that email. That's all there is to it.</p>
+							<p>Lose the email? No worries it happens to the best of us, <a href="/accounts/verify">click here</a> to have it resent.</p>
 							<p class="special">*If you don't see the email in your inbox, be sure you look in your spam folder.</p>
 						</div>
 					</div>
